@@ -1,0 +1,20 @@
+---
+title: "Statistics for Psychologists"
+page-layout: article
+---
+
+To log in to the R server, first make sure that you have the VPN switched on, or you will need to be connected to the university network (Eduroam). To set up the VPN, follow ISS [instructions here](https://portal.lancaster.ac.uk/ask/digital/services/university-it-network/vpn/) or connecting to Eduroam [here](https://portal.lancaster.ac.uk/ask/digital/services/university-it-network/wi-fi/).
+
+When you are connected, navigate to [https://psy-rstudio.lancaster.ac.uk](https://psy-rstudio.lancaster.ac.uk), where you will be shown a login screen that looks like the below. Click the option that says "Sign in with SAML".
+
+![](/Includes/1LoginSAML.png) <!-- says no image but it's all about the include setup -->
+
+This will take you through to the University login screen, where you should enter your username (e.g. ivorym) and then your university password. This will then redirect you to the R server where you can start using RStudio!
+
+![](/Includes/2LoginUser.png)
+
+![](/Includes/3LoginPass.png)
+
+::: {.callout-note}
+If you have already logged in through the university login already, perhaps to get to the portal, then you may not see the username/password screen. When you click login, you will be redirected straight to RStudio. This is because the server shares the login information securely across the university.
+:::

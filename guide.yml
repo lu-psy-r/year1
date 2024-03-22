@@ -1,0 +1,118 @@
+- title: PSYC121
+  subtitle: Statistics for Psychologists I
+  links:
+    - text: "Week 1"
+      href: PSYC121/Week1.qmd
+    - text: "Week 2"
+      href: PSYC121/Week2.qmd
+    - text: "Week 3"
+      href: PSYC121/Week3.qmd
+    - text: "Week 4"
+      href: PSYC121/Week4.qmd
+    - text: "Week 6"
+      href: PSYC121/Week6.qmd
+    - text: "Week 7"
+      href: PSYC121/Week7.qmd
+    - text: "Week 8"
+      href: PSYC121/Week8.qmd
+    - text: "Week 9"
+      href: PSYC121/Week9.qmd
+- title: PSYC122
+  subtitle: Statistics for Psychologists II
+  links:
+    - text: "Introduction to Part 1"
+      href: PSYC122/Part1.qmd
+    - text: "Week 11"
+      href: PSYC122/Week11.qmd
+    - text: "Week 12"
+      href: PSYC122/Week12.qmd
+    - text: "Week 13"
+      href: PSYC122/Week13.qmd
+    - text: "Week 14"
+      href: PSYC122/Week14.qmd
+    - text: "Introduction to Part 2"
+      href: PSYC122/Part2.qmd
+    - text: "Week 16"
+      href: PSYC122/Week16.qmd
+    - text: "Week 17"
+      href: PSYC122/Week17.qmd
+    - text: "Week 18"
+      href: PSYC122/Week18.qmd
+    - text: "Week 19"
+      href: PSYC122/Week19.qmd
+# - title: PSYC214
+  subtitle: Statistics for group comparisons
+  links:
+    - text: "Week 1"
+      href: PSYC214/Week1.qmd
+    - text: "Week 2"
+      href: PSYC214/Week2.qmd
+    - text: "Week 3"
+      href: PSYC214/Week3.qmd
+    - text: "Week 4"
+      href: PSYC214/Week4.qmd
+    - text: "Week 6"
+      href: PSYC214/Week6.qmd
+    - text: "Week 7"
+      href: PSYC214/Week7.qmd
+    - text: "Week 8"
+      href: PSYC214/Week8.qmd
+    - text: "Week 9"
+      href: PSYC214/Week9.qmd
+# - title: PSYC234
+  subtitle: "Statistics: from association to modelling causality"
+  links:
+    - text: "Week 1"
+      href: PSYC234/Week1.qmd
+    - text: "Week 2"
+      href: PSYC234/Week2.qmd
+    - text: "Week 3"
+      href: PSYC234/Week3.qmd
+    - text: "Week 4"
+      href: PSYC234/Week4.qmd
+    - text: "Week 6"
+      href: PSYC234/Week6.qmd
+    - text: "Week 7"
+      href: PSYC234/Week7.qmd
+    - text: "Week 8"
+      href: PSYC234/Week8.qmd
+    - text: "Week 9"
+      href: PSYC234/Week9.qmd
+# - title: PSYC401
+  subtitle: Analysing and Interpreting Psychological Data I
+  links:
+    - text: "Week 1"
+      href: PSYC401/Week1.qmd
+    - text: "Week 2"
+      href: PSYC401/Week2.qmd
+    - text: "Week 3"
+      href: PSYC401/Week3.qmd
+    - text: "Week 4"
+      href: PSYC401/Week4.qmd
+    - text: "Week 6"
+      href: PSYC401/Week6.qmd
+    - text: "Week 7"
+      href: PSYC401/Week7.qmd
+    - text: "Week 8"
+      href: PSYC401/Week8.qmd
+    - text: "Week 9"
+      href: PSYC401/Week9.qmd
+# - title: PSYC402
+  subtitle: Analysing and Interpreting Psychological Data II
+  links:
+    - text: "Week 11"
+      href: PSYC402/Week11.qmd
+    - text: "Week 12"
+      href: PSYC402/Week12.qmd
+    - text: "Week 13"
+      href: PSYC402/Week13.qmd
+    - text: "Week 14"
+      href: PSYC402/Week14.qmd
+    - text: "Week 16"
+      href: PSYC402/Week16.qmd
+    - text: "Week 17"
+      href: PSYC402/Week17.qmd
+    - text: "Week 18"
+      href: PSYC402/Week18.qmd
+    - text: "Week 19"
+      href: PSYC402/Week19.qmd

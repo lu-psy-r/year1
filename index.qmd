@@ -1,0 +1,43 @@
+---
+title: "Statistics for Psychologists"
+page-layout: full
+anchor-sections: false
+image: "Images/icon.png"
+css: index.css
+filters: [remove_title.lua]
+sidebar: false
+back-to-top-navigation: false
+---
+
+![](Images/LUPsychology.svg){fig-alt="University Logo" fig-align="center"}
+
+::: callout-warning
+**This website is under construction.**
+:::
+
+```{r}
+#| echo: false
+
+#this will automate the current year content so it doesn't need manual changing each year
+date <- as.numeric(format(Sys.time(), "%Y"))
+```
+
+::: {.div style="font-size:2em;"}
+Welcome
+:::
+
+Here we have some filler text that explains the psyc121, psyc122 structure or whatever - maybe highlight who is the UG part 1 coordinator or something. Honestly though, right now this is filler text for an example. We don't even need it.
+
+```{=html}
+
+<div class="container">
+  <div class="row" style="display:flex;">
+    <a href="https://m1v0.github.io/">
+      <button type="button" class="btn btn-landing btn-lg btn-block">PSYC121</button>
+    </a>
+    <a href="https://m1v0.github.io/year_1/">
+      <button type="button" class="btn btn-landing btn-lg btn-block">PSYC122</button>
+    </a>
+  </div>
+</div>
+```

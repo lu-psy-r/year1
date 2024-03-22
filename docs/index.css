@@ -1,0 +1,21 @@
+
+/* Custom*/
+
+/*this removes the title on the page*/
+.quarto-title > h1.title {
+  opacity: 0 !important;
+}
+
+.btn-landing {
+  color: #fff;
+  background-color: #b20f11;
+  border-color: #b20f11;
+  border-radius: 5vw;
+  margin: 5px;
+  width:100%
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .accordion-button:hover, .accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #780b0c
+}

@@ -1,0 +1,22 @@
+---
+title: "Statistics for Psychologists"
+page-layout: article
+---
+
+Sometimes when uploading .zip files, you may get an "unexpected server error" which is less than helpful! The first thing to try is a different browser, but if this still happens then there is a workaround, but it requires a bit more effort. Basically, you can use code to do what the "upload" button should do.
+
+1. Find the link to the data in the worksheet, right-click this and copy the URL, it should end in something like: `data/Week_1/week_1.zip`. The important thing to note is that it finishes in a .zip, as it will only work with zip files.
+
+2. Next you run three lines of code as below and replace the appropriate line with the copied web address.
+
+```{r}
+#| eval: false
+
+download.file("web address in here", destfile = "temp") #download the zip
+
+unzip("temp") #unpack the zip folder into the directory
+
+unlink("temp") #remove the "temp" file
+```
+
+3. Your data should have been imported and unpacked into the directory of your choosing. If you're feeling confident, you can change the destination by altering "temp" to become a folder, e.g. "Folder/week1/temp", just make sure to change this in all three lines.
