@@ -1,0 +1,2636 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Statistics for Psychologists - 7. Week 18 – Developing the linear model</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../PSYC122/Week19.html" rel="next">
+<link href="../PSYC122/Week17.html" rel="prev">
+<link href="../Images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+<script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Statistics for Psychologists</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year1" rel="" target="">
+ <span class="menu-text">Year 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year2" rel="" target="">
+ <span class="menu-text">Year 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/msc" rel="" target="">
+ <span class="menu-text">MSc</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/more" rel="" target="">
+ <span class="menu-text">And More…</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC122/index.html">PSYC122</a></li><li class="breadcrumb-item"><a href="../PSYC122/Week18.html">7. Week 18 – Developing the linear model</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../PSYC121/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PSYC121</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC121/Week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Introduction to PSYC121</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC121/Week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Descriptive statistics in RStudio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC121/Week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. DVs and IVs in RStudio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC121/Week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Customisation of graphs, and z-scores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC121/Week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Class test</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC121/Week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Sampling, probability and binomial tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC121/Week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Filtering data and testing means (one-sample t-test)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC121/Week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Related-samples t-tests, plotting means and SE bars</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC121/Week9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Unrelated-samples t-test and Power</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../PSYC122/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PSYC122</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC122/Week11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Week 11 - Correlation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC122/Week12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Week 12 - Correlation Part 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC122/Week13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Week 13 - The Linear Model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC122/Week14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Week 14 - Chi-Square</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC122/Week16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Week 16 – Hypotheses, associations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC122/Week17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Week 17 – Better understanding the linear model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC122/Week18.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">7. Week 18 – Developing the linear model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC122/Week19.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Week 19 – Linear models – critical perspectives</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-wk18-introduction" id="toc-sec-wk18-introduction" class="nav-link active" data-scroll-target="#sec-wk18-introduction">Week 18: Introduction</a>
+  <ul class="collapse">
+  <li><a href="#our-learning-goals" id="toc-our-learning-goals" class="nav-link" data-scroll-target="#our-learning-goals">Our learning goals</a></li>
+  </ul></li>
+  <li><a href="#sec-wk18-lectures" id="toc-sec-wk18-lectures" class="nav-link" data-scroll-target="#sec-wk18-lectures">Lectures</a>
+  <ul class="collapse">
+  <li><a href="#sec-wk18-lectures-focus" id="toc-sec-wk18-lectures-focus" class="nav-link" data-scroll-target="#sec-wk18-lectures-focus">The lectures have three main areas of focus</a></li>
+  </ul></li>
+  <li><a href="#reading-links-to-other-classes" id="toc-reading-links-to-other-classes" class="nav-link" data-scroll-target="#reading-links-to-other-classes">Reading: Links to other classes</a></li>
+  <li><a href="#sec-wk18-prelab-activities" id="toc-sec-wk18-prelab-activities" class="nav-link" data-scroll-target="#sec-wk18-prelab-activities">Pre-lab activities</a>
+  <ul class="collapse">
+  <li><a href="#sec-wk18-prelab-activities-1" id="toc-sec-wk18-prelab-activities-1" class="nav-link" data-scroll-target="#sec-wk18-prelab-activities-1">Pre-lab activity 1</a></li>
+  <li><a href="#sec-wk18-prelab-activities-2" id="toc-sec-wk18-prelab-activities-2" class="nav-link" data-scroll-target="#sec-wk18-prelab-activities-2">Pre-lab activity alternative option</a></li>
+  </ul></li>
+  <li><a href="#sec-wk18-lab-activities" id="toc-sec-wk18-lab-activities" class="nav-link" data-scroll-target="#sec-wk18-lab-activities">Lab activities</a>
+  <ul class="collapse">
+  <li><a href="#sec-wk18-lab-activities-1-introduction" id="toc-sec-wk18-lab-activities-1-introduction" class="nav-link" data-scroll-target="#sec-wk18-lab-activities-1-introduction">Introduction</a></li>
+  <li><a href="#sec-wk18-prelab-activities-ready" id="toc-sec-wk18-prelab-activities-ready" class="nav-link" data-scroll-target="#sec-wk18-prelab-activities-ready">Get ready</a></li>
+  <li><a href="#sec-wk18-lab-activities-1" id="toc-sec-wk18-lab-activities-1" class="nav-link" data-scroll-target="#sec-wk18-lab-activities-1">Lab activity 1: Work with the <code>How-to</code> guide</a></li>
+  <li><a href="#sec-wk18-lab-activities-2" id="toc-sec-wk18-lab-activities-2" class="nav-link" data-scroll-target="#sec-wk18-lab-activities-2">Lab activity 2</a></li>
+  <li><a href="#ok-now-lets-do-it" id="toc-ok-now-lets-do-it" class="nav-link" data-scroll-target="#ok-now-lets-do-it">OK: now let’s do it!</a></li>
+  </ul></li>
+  <li><a href="#sec-wk18-lab-activities-answers" id="toc-sec-wk18-lab-activities-answers" class="nav-link" data-scroll-target="#sec-wk18-lab-activities-answers">Answers</a>
+  <ul class="collapse">
+  <li><a href="#sec-wk18-lab-activities-answers-information" id="toc-sec-wk18-lab-activities-answers-information" class="nav-link" data-scroll-target="#sec-wk18-lab-activities-answers-information">Answers</a></li>
+  </ul></li>
+  <li><a href="#sec-wk18-lab-Q-and-A" id="toc-sec-wk18-lab-Q-and-A" class="nav-link" data-scroll-target="#sec-wk18-lab-Q-and-A">Online Q&amp;A</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">7. Week 18 – Developing the linear model</h1>
+<p class="subtitle lead">Written by Rob Davies</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This page is now live for you to use: <strong>Welcome!</strong></p>
+<ul>
+<li>Here is a link to the sign-in page for <a href="https://psy-rstudio.lancaster.ac.uk/auth-sign-in?appUri=%2F">R-Studio Server</a></li>
+</ul>
+</div>
+</div>
+<section id="sec-wk18-introduction" class="level2">
+<h2 class="anchored" data-anchor-id="sec-wk18-introduction">Week 18: Introduction</h2>
+<p>Welcome to your overview of our work together in <strong>PSYC122 Week 18</strong>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Putting it all together</em></p>
+<ul>
+<li>We will complete four classes in <strong>weeks 16-19</strong>.</li>
+<li>These classes are designed to help you to revise and to put into practice some of the key ideas and skills you have been developing in the first year research methods modules <em>PSYC121, PSYC123 and PSYC124</em>.</li>
+<li>We will do this in the context of a live research project with potential real world impacts: the <strong>Clearly Understood</strong> project.</li>
+</ul>
+</div>
+</div>
+<section id="our-learning-goals" class="level3">
+<h3 class="anchored" data-anchor-id="our-learning-goals">Our learning goals</h3>
+<p>In Week 18, we aim to further develop skills in <em>analyzing</em> and in <em>visualizing</em> psychological data.</p>
+<p>We will do this in the context of the <strong>Clearly Understood</strong> project: our focus will be on what makes it easy or difficult for people to understand written health information.</p>
+<p>In the Week 18 class, we will aim to answer two research questions:</p>
+<ol type="1">
+<li>What person attributes predict success in understanding?</li>
+<li>Can people accurately evaluate whether they correctly understand written health information?</li>
+</ol>
+<p>We will use linear models to estimate the association between predictors and outcomes. What is <strong>new</strong>, here, is that we will explore the power and flexibility of the linear model analysis method in two important aspects.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>We will fit linear models including <em>multiple</em> predictors, this is why this form of analysis is also often called <em>multiple regression</em>.</li>
+<li>We will use linear models to estimate the effects of numeric and categorical or nominal predictor variables.</li>
+</ol>
+</div>
+</div>
+<p>When we do these analyses, we will need to adapt how we report the results:</p>
+<ul>
+<li>we need to report information about <strong>the model we specify</strong>, identifying <em>all</em> predictors;</li>
+<li>we will need to decide <strong>if the effects</strong> of one or more predictors <strong>are significant</strong>;</li>
+<li>we will report the model <strong>fit statistics</strong> (<code>F, R-squared</code>) as well as coefficient estimates;</li>
+<li>and we need to learn to write texts <strong>describing the impact</strong> of predictors.</li>
+</ul>
+<p>Usually, in describing the impacts of predictors, we are required to communicate:</p>
+<ul>
+<li>the <strong>direction</strong> of the effect – do values of the outcome variable <em>increase</em> or <em>decrease</em> given increasing values of the predictor?</li>
+<li>the <strong>size</strong> of the effect – <em>how much</em> do values of the outcome variable <em>increase</em> or <em>decrease</em> given increasing values of the predictor?</li>
+</ul>
+<p>This task of description is enabled by producing plots of the predictions we can make:</p>
+<ul>
+<li>plots to show we expect the outcome to change, given different values of a predictor.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We will aim to build skills in producing professional-looking plots for our audiences.</p>
+<ul>
+<li>We can produce plots showing the effects of predictors</li>
+<li>As predictions of change in outcome, given different values of the predictor variables.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-wk18-lectures" class="level2">
+<h2 class="anchored" data-anchor-id="sec-wk18-lectures">Lectures</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before you go on to the activities in <a href="#sec-wk18-lab-activities">Section&nbsp;5</a>, <strong>watch</strong> the lectures:</p>
+</div>
+</div>
+<p>The lecture for this week is presented in four short parts. You can view video recordings of the lectures using Panopto, by clicking on the video images shown following.</p>
+<ul>
+<li>Anybody who has the link should be able to view the video.</li>
+</ul>
+<ol type="1">
+<li><strong>Overview</strong> (19 minutes): What we are doing in Week 18 – Exploring the power of linear models, extending their application to use multiple variables to predict people.</li>
+</ol>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=7ae0e020-8dcc-436e-9d69-afb700ca1a52&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<ol start="2" type="1">
+<li><strong>Using linear models to predict people</strong> (13 minutes): Coding, thinking about, and reporting linear models with multiple predictors.</li>
+</ol>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=d2638334-4683-4543-8183-afb700cfbff0&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<ol start="3" type="1">
+<li><strong>Critical evaluation</strong> (15 minutes): Critically evaluating the results of analyses involving linear models.</li>
+</ol>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=68e5cba9-ea96-4788-9c21-afb700d3ba29&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<ol start="4" type="1">
+<li><strong>Everything is some kind of linear model</strong> (13 minutes): Understanding just how general and powerful this method for understanding people can be.</li>
+</ol>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0f6ba49d-f54d-41d0-ab30-afb700d84744&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The slides presented in the videos can be downloaded either as a web page or as a Word document.</p>
+</div>
+</div>
+<ul>
+<li><a href="data/week18/122-linear-model-develop.html">The slides</a> exactly as presented (6 MB).</li>
+<li><a href="data/week18/122-linear-model-develop-printable-edit.docx">The slides</a> converted to a Word .docx (1 MB).</li>
+</ul>
+<p>You can download the web page <code>.html</code> file and click on it to open it in any browser (e.g., Chrome, Edge or Safari). The slide images are high quality so the file is quite big and may take a few seconds to download.</p>
+<p>You can download the <code>.docx</code> file and click on it to open it as a Word document that you can then edit. Converting the slides to a .docx distorts some images but the benefit of the conversion is that it makes it easier for you to add your notes.</p>
+<section id="sec-wk18-lectures-focus" class="level3">
+<h3 class="anchored" data-anchor-id="sec-wk18-lectures-focus">The lectures have three main areas of focus</h3>
+<p><strong>1. Working with the linear model with multiple predictors</strong></p>
+<p>We focus in-depth on how you code linear models, how you identify critical information in the results summaries, and how you report the results: the language and the style you can use in your reports.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>A small change to <code>lm()</code> coding releases tremendous power and flexibility in how you use the analysis method.</li>
+</ul>
+</div>
+</div>
+<p><strong>2. Analyses are done in context so when we conduct analyses we <em>must</em> use contextual information</strong></p>
+<p>The power and flexibility of the linear model presents challenges. We must decide <em>which</em> predictor variables we specify in our model. This specification requires us to think about our theoretical assumptions and what they require us to include to make sense of the behaviours or the individual differences we observe when we do things like investigating what makes health information easy or difficult to understand.</p>
+<p><strong>3. Developing critical thinking</strong></p>
+<p>As we develop conceptual understanding and practical skills, we must learn to <em>reflect critically</em> on our analyses, and learn to critically evaluate the analyses we read about when we read research reports in the scientific literature.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><em>Critical analysis</em> can develop by considering</p>
+<ul>
+<li>validity</li>
+<li>measurement</li>
+<li>generalizability</li>
+</ul>
+</div>
+</div>
+<p>We are always working in the broader context of uncertainty:</p>
+<ul>
+<li>uncertainty about the predictions we may make concerning outcomes of interest;</li>
+<li>uncertainty given the possibility that predicted effects may vary between individuals or groups;</li>
+<li>uncertainty given the influence of sources of randomness in how specific responses are produced.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To work with the recordings:</p>
+<ul>
+<li>Watch the video parts right through.</li>
+<li>Use the printable versions of the slides (provided on Moodle) to make notes.</li>
+<li>Try out the coding exercises in the how-to guide and the acitivity tasks or questions (<a href="#sec-wk18-lab-activities">Section&nbsp;5</a>) to learn how to construct visualizations and do analyses.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="reading-links-to-other-classes" class="level2">
+<h2 class="anchored" data-anchor-id="reading-links-to-other-classes">Reading: Links to other classes</h2>
+<p>We do not provide further reading for this class but you will find it helpful to revise some of the key ideas you have been learning about PSYC122 and in other modules.</p>
+<ul>
+<li>The lectures in <em>PSYC123</em> on: the scientific method; reliability and validity; experimental design, especially between-subjects studies; hypothesis testing; and precise hypotheses.</li>
+<li>The lecture in <em>PSYC122</em> on linear models.</li>
+</ul>
+</section>
+<section id="sec-wk18-prelab-activities" class="level2">
+<h2 class="anchored" data-anchor-id="sec-wk18-prelab-activities">Pre-lab activities</h2>
+<section id="sec-wk18-prelab-activities-1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-wk18-prelab-activities-1">Pre-lab activity 1</h3>
+<p>In weeks 16-19, we will be working together on a research project to investigate how people vary in their response to health advice.</p>
+<p>Completing the project involves collecting responses from <em>PSYC122</em> students: <strong>you</strong>.</p>
+<p>To enter your responses, we invite you to complete a short survey.</p>
+<p>Complete the survey by clicking on the link <a href="https://lancasteruni.eu.qualtrics.com/jfe/form/SV_0qdj8TOZc18LR0q">here</a></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In our week 19 class activity, we will analyze the data we collect here.</p>
+</div>
+</div>
+<p>The survey should take about 20 minutes to complete.</p>
+<p>Taking part in the survey is <strong>completely voluntary</strong>. You can stop at any time without completing the survey if you do not want to finish it. If you do not want to do the survey, you can do an alternative activity (see below).</p>
+<p>All responses will be recorded completely anonymously.</p>
+</section>
+<section id="sec-wk18-prelab-activities-2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-wk18-prelab-activities-2">Pre-lab activity alternative option</h3>
+<p>If you do not want to complete the survey, we invite you to read the pre-registered research plan for the <em>PSYC122 health advice</em> research project.</p>
+<p><a href="https://osf.io/p6fsc/">Read the project pre-registration</a></p>
+</section>
+</section>
+<section id="sec-wk18-lab-activities" class="level2">
+<h2 class="anchored" data-anchor-id="sec-wk18-lab-activities">Lab activities</h2>
+<section id="sec-wk18-lab-activities-1-introduction" class="level3">
+<h3 class="anchored" data-anchor-id="sec-wk18-lab-activities-1-introduction">Introduction</h3>
+<p>We will do our practical lab work to develop your skills in the context of the <strong>Clearly Understood</strong> project.</p>
+<ul>
+<li>Our focus will be on what makes it easy or difficult for people to understand written health information.</li>
+</ul>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In these classes, we will complete a research project to answer the research questions:</p>
+<ol type="1">
+<li>What person attributes predict success in understanding health information?</li>
+<li>Can people accurately evaluate whether they correctly understand written health information?</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="sec-wk18-prelab-activities-ready" class="level3">
+<h3 class="anchored" data-anchor-id="sec-wk18-prelab-activities-ready">Get ready</h3>
+<section id="download-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="download-the-data">Download the data</h4>
+<p>Click on the link: <a href="data/week18/122-week18_for_students.zip">122-week18_for_students.zip</a> to download the data files folder. Then upload the contents to the new folder you created in RStudio Server.</p>
+<p>The downloadable .zip folder includes the data files:</p>
+<ul>
+<li><code>study-one-general-participants.csv</code></li>
+<li><code>study-two-general-participants.csv</code></li>
+</ul>
+<p>and the R Markdown <code>.Rmd</code>:</p>
+<ul>
+<li><code>2023-24-PSYC122-w18-how-to.Rmd</code></li>
+</ul>
+<p>If you can’t upload these files to the server – this affects some students – you can use some code to get R to do it for you: uncover the code box below to reveal the code to do this.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>You can use the code below to directly download the file you need in this lab activity to the server.</li>
+<li>Remember that you can copy the code to your clipboard by clicking on the ‘clipboard’ in the top right corner.</li>
+</ul>
+<ol type="1">
+<li>Get the <code>study-one-general-participants.csv</code> data</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week18/study-one-general-participants.csv?raw=true"</span>, <span class="at">destfile =</span> <span class="st">"study-one-general-participants.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>Get the <code>study-two-general-participants.csv</code> data</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week18/study-two-general-participants.csv?raw=true"</span>, <span class="at">destfile =</span> <span class="st">"study-two-general-participants.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>Get the <code>2023-24-PSYC122-w18-how-to.Rmd</code> how-to guide</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week18/2023-24-PSYC122-w18-how-to.Rmd?raw=true"</span>, <span class="at">destfile =</span> <span class="st">"2023-24-PSYC122-w18-how-to.Rmd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="sec-wk18-data-summary" class="level4">
+<h4 class="anchored" data-anchor-id="sec-wk18-data-summary">Check: What is in the data files?</h4>
+<p>Each of the data files we will work with has a similar structure, as you can see in this extract.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">participant_ID</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean.acc</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">mean.self</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">study</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">AGE</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">SHIPLEY</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">HLVA</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">FACTOR3</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">QRITOTAL</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">GENDER</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">EDUCATION</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">ETHNICITY</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">studytwo.1</td>
+<td style="text-align: right;">0.4107143</td>
+<td style="text-align: right;">6.071429</td>
+<td style="text-align: left;">studytwo</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">Higher</td>
+<td style="text-align: left;">Asian</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">studytwo.10</td>
+<td style="text-align: right;">0.6071429</td>
+<td style="text-align: right;">8.500000</td>
+<td style="text-align: left;">studytwo</td>
+<td style="text-align: right;">38</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">58</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">Secondary</td>
+<td style="text-align: left;">White</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">studytwo.100</td>
+<td style="text-align: right;">0.8750000</td>
+<td style="text-align: right;">8.928571</td>
+<td style="text-align: left;">studytwo</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">40</td>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">60</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">Higher</td>
+<td style="text-align: left;">White</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">studytwo.101</td>
+<td style="text-align: right;">0.9642857</td>
+<td style="text-align: right;">8.500000</td>
+<td style="text-align: left;">studytwo</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: left;">Female</td>
+<td style="text-align: left;">Higher</td>
+<td style="text-align: left;">White</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>You can use the <em>scroll bar</em> at the bottom of the data window to view different columns.</p>
+<p>You can see the columns:</p>
+<ul>
+<li><code>participant_ID</code> participant code;</li>
+<li><code>mean.acc</code> average accuracy of response to questions testing understanding of health guidance (varies between 0-1);</li>
+<li><code>mean.self</code> average self-rated accuracy of understanding of health guidance (varies between 1-9);</li>
+<li><code>study</code> variable coding for what study the data were collected in</li>
+<li><code>AGE</code> age in years;</li>
+<li><code>HLVA</code> health literacy test score (varies between 1-16);</li>
+<li><code>SHIPLEY</code> vocabulary knowledge test score (varies between 0-40);</li>
+<li><code>FACTOR3</code> reading strategy survey score (varies between 0-80);</li>
+<li><code>GENDER</code> gender code;</li>
+<li><code>EDUCATION</code> education level code;</li>
+<li><code>ETHNICITY</code> ethnicity (Office National Statistics categories) code.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It is always a good idea to view the dataset – click on the name of the dataset in the R-Studio <code>Environment</code> window, and check out the columns, scroll through the rows – to get a sense of what you are working with.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-wk18-lab-activities-1" class="level3">
+<h3 class="anchored" data-anchor-id="sec-wk18-lab-activities-1">Lab activity 1: Work with the <code>How-to</code> guide</h3>
+<p>The <code>how-to</code> guide comprises an .Rmd file:</p>
+<ul>
+<li><code>2023-24-PSYC122-w18-how-to.Rmd</code></li>
+</ul>
+<p>It is full of advice and example code.</p>
+<p>The code in the <code>how-to</code> guide was written to work with the data file:</p>
+<ul>
+<li><code>study-one-general-participants.csv</code>.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We show you how to do everything you need to do in the lab activity (<a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a>, next) in the <code>how-to</code> guide.</p>
+<ul>
+<li>Start by looking at the <code>how-to</code> guide to understand what steps you need to follow in the lab activity.</li>
+</ul>
+</div>
+</div>
+<p>We will take things <em>step-by-step</em>.</p>
+<p>We split .Rmd scripts by steps, tasks and questions:</p>
+<ul>
+<li>different steps for different phases of the analysis workflow;</li>
+<li>different tasks for different things you need to do;</li>
+<li>different questions to examine different ideas or coding challenges</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Make sure you start at the top of the <code>.Rmd</code> file and work your way, in order, through each task.</li>
+<li>Complete each task before you move on to the next task.</li>
+</ul>
+</div>
+</div>
+<p>In the activity <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a>, we are going to work through a sequence of steps and tasks that mirrors the sequence you find in the <code>how-to</code> guide.</p>
+<ul>
+<li>There is a little bit of variation, comparing the later steps in the <code>how-to</code> guide and the steps in <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a>, but that is designed to help you with your learning, in different places, when we think you will most need the support.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Notice that we are gradually building up our skills: consolidating what we know; revising important learning; and extending ourselves to acquire new skills.</li>
+<li>Over time, we will refer less and less to what we have learned before.</li>
+</ul>
+</div>
+</div>
+<p><strong>Step 1: Set-up</strong></p>
+<ol type="1">
+<li>Empty the R environment – using <code>rm(list=ls())</code></li>
+<li>Load relevant libraries – using <code>library()</code></li>
+</ol>
+<p><strong>Step 2: Load the data</strong></p>
+<ol start="3" type="1">
+<li>Read in the data file – using <code>read_csv()</code></li>
+<li>Inspect the data – using <code>head()</code> and <code>summary()</code></li>
+</ol>
+<p><strong>Step 3: Use a linear model to to answer the research questions – one predictor</strong></p>
+<ol start="5" type="1">
+<li>Use <code>lm()</code> to examine the relation between an outcome variable and one predictor variable</li>
+</ol>
+<p><strong>Step 4: Use a linear model to to answer the research questions – multiple predictors</strong></p>
+<ol start="6" type="1">
+<li>Use <code>lm()</code> to examine the relation between between an outcome variable and <em>multiple</em> predictors</li>
+</ol>
+<p><strong>Step 5: Plot predictions from linear models with multiple predictors</strong></p>
+<ol start="7" type="1">
+<li>Use <code>ggpredict()</code> to plot linear model predictions for one of the predictors</li>
+<li>Produce plots that show the predictions for all the predictor variables in a model</li>
+</ol>
+<p>In <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a>, you will see that we show you how you can understand what linear model estimates show by examining the predictions from one outcome-predictor relation.</p>
+<p><strong>Step 6: Draw boxplots to examine associations between variables</strong></p>
+<p>The <code>how-to</code> guide shows you how to produce boxplots. We do not include the task in the <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a> tasks sequence but you <em>will</em> find it useful to produce boxplots when you are examining the impact of categorical variables (next).</p>
+<ol start="9" type="1">
+<li>Create boxplots to examine the association between a continuous numeric outcome variable like <code>mean.acc</code> and a categorical variable like <code>ETHNICITY</code></li>
+</ol>
+<p><strong>Step 7: Estimate the effects of factors as well as numeric variables</strong></p>
+<p>We refer to categorical or nominal variables like <code>ETHNICITY</code> as <em>factors</em> in data analysis.</p>
+<ol start="10" type="1">
+<li>Fit a linear model including both numeric variables and categorical variables as predictors</li>
+<li>Fit a linear model including both numeric variables and categorical variables as predictors, and then plot the predicted effect of the factor (the categorical variable)</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you are unsure about what you need to do, look at the advice in <code>2023-24-PSYC122-w18-how-to.Rmd</code> on how to do the tasks, with examples on how to write the code.</p>
+</div>
+</div>
+<p>You will see that you can match a task in the activity <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a> to the same task in the <code>how-to</code> guide. The <code>how-to</code> shows you what function you need and how you should write the function code.</p>
+<p>This process of adapting demonstration code is a process critical to data literacy and to effective problem solving in modern psychological science.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Don’t forget: You will need to change the names of the dataset or the variables to complete the tasks in <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a>.</p>
+</div>
+</div>
+</section>
+<section id="sec-wk18-lab-activities-2" class="level3">
+<h3 class="anchored" data-anchor-id="sec-wk18-lab-activities-2">Lab activity 2</h3>
+</section>
+<section id="ok-now-lets-do-it" class="level3">
+<h3 class="anchored" data-anchor-id="ok-now-lets-do-it">OK: now let’s do it!</h3>
+<p>In the following, we will guide you through the tasks and questions step by step. <!-- You will learn more if you follow this advice: --></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>We will not <em>at first</em> give you the answers to questions about the data or about the results of analyses.</li>
+<li>An answers version of the workbook will be provided after the last lab session (check the answers then in <a href="#sec-wk18-lab-activities-answers">Section&nbsp;6</a>) so that you can check whether your independent work has been correct.</li>
+</ol>
+</div>
+</div>
+<section id="sec-wk18-lab-activities-1-questions" class="level4">
+<h4 class="anchored" data-anchor-id="sec-wk18-lab-activities-1-questions">Questions</h4>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Students have told us</strong> that it would be helpful to your learning if we reduce the information in the hints we provide you. <strong>We have done this</strong> in Week 18.</p>
+<p>The motivation for doing this is:</p>
+<ol type="1">
+<li>It will require you to do more <em>active</em> thinking to complete tasks or answer questions;</li>
+<li>Thus, you can check to see how your learning is developing – can you do the tasks, given what you know now?</li>
+<li>Plus, psychological research shows that <em>active</em> thinking is better for understanding and for learning.</li>
+</ol>
+<p>Where we do give you hints, we will sometimes replace the correct bit of code with a place-holder: <code>...</code></p>
+<ul>
+<li>Your task will therefore be to replace the place-holder <code>...</code> with the correct bit of code or the correct dataset or variable name.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="step-1-set-up" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-set-up">Step 1: Set-up</h4>
+<p>To begin, we set up our environment in R.</p>
+<section id="task-1-run-code-to-empty-the-r-environment" class="level5">
+<h5 class="anchored" data-anchor-id="task-1-run-code-to-empty-the-r-environment">Task 1 – Run code to empty the R environment</h5>
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- rm(list=ls()) -->
+<!-- ``` -->
+</section>
+<section id="task-2-run-code-to-load-relevant-libraries" class="level5">
+<h5 class="anchored" data-anchor-id="task-2-run-code-to-load-relevant-libraries">Task 2 – Run code to load relevant libraries</h5>
+<p>Notice that in Week 18, we need to work with the libraries <code>ggeffects</code> and <code>tidyverse</code>. Use the <code>library()</code> function to make these libraries available to you.</p>
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- library("ggeffects") -->
+<!-- library("tidyverse") -->
+<!-- ``` -->
+</section>
+</section>
+<section id="step-2-load-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-load-the-data">Step 2: Load the data</h4>
+<section id="task-3-read-in-the-data-file-we-will-be-using" class="level5">
+<h5 class="anchored" data-anchor-id="task-3-read-in-the-data-file-we-will-be-using">Task 3 – Read in the data file we will be using</h5>
+<p>The data file for <strong>Lab Activity 2</strong> is called:</p>
+<ul>
+<li><code>study-two-general-participants.csv</code></li>
+</ul>
+<p>Use the <code>read_csv()</code> function to read the data file into R.</p>
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ## Code -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- study.two.gen <- read_csv("study-two-general-participants.csv") -->
+<!-- ``` -->
+<!-- ::: -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>... <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"..."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<p>When you code this, you can choose your own file name, but be sure to give the data object you create a distinct name e.g.&nbsp;<code>study.two.gen</code>.</p>
+</section>
+<section id="task-4-inspect-the-data-file" class="level5">
+<h5 class="anchored" data-anchor-id="task-4-inspect-the-data-file">Task 4 – Inspect the data file</h5>
+<p>Use the <code>summary()</code> or <code>head()</code> functions to take a look.</p>
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ## Code -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- head(study.two.gen) -->
+<!-- summary(study.two.gen) -->
+<!-- ``` -->
+<!-- ::: -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Even though you have done this before, you will want to do it again, here, and pay particular attention to:</p>
+<ul>
+<li>summary information about the numeric variables;</li>
+<li>summary information about variables of class: <code>character</code>.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+<section id="step-3-use-a-linear-model-to-to-answer-the-research-questions-one-predictor" class="level4">
+<h4 class="anchored" data-anchor-id="step-3-use-a-linear-model-to-to-answer-the-research-questions-one-predictor">Step 3: Use a linear model to to answer the research questions – one predictor</h4>
+</section>
+<section id="revise-practice-to-strengthen-skills" class="level4">
+<h4 class="anchored" data-anchor-id="revise-practice-to-strengthen-skills">Revise: practice to strengthen skills</h4>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Revise: We start by revising how to use <code>lm()</code> with one predictor</li>
+</ul>
+</div>
+</div>
+<p>One of our research questions is:</p>
+<ol start="2" type="1">
+<li>Can people accurately evaluate whether they correctly understand written health information?</li>
+</ol>
+<p>We can address this question by examining whether someone’s rated evaluation of their own understanding matches their performance on a test of that understanding, and by investigating what variables predict variation in mean self-rated accuracy.</p>
+<ul>
+<li>For these data, participants were asked to respond to questions about health information to get <code>mean.acc</code> scores</li>
+<li>and they were then asked to rate their own understanding of the same information (ratings on a scale from 1-9) to get <code>mean.self</code> scores.</li>
+<li>Ratings of accuracy are ordinal data but, here, we choose to examine the average of participants’ ratings of their own understanding of health information to keep our analysis fairly simple.</li>
+</ul>
+<p>If you <em>can</em> evaluate your own understanding then ratings of understanding <em>should</em> be associated with performance on tests of understanding</p>
+<section id="task-5-estimate-the-relation-between-outcome-mean-self-rated-accuracy-mean.self-and-tested-accuracy-of-understanding-mean.acc" class="level5">
+<h5 class="anchored" data-anchor-id="task-5-estimate-the-relation-between-outcome-mean-self-rated-accuracy-mean.self-and-tested-accuracy-of-understanding-mean.acc">Task 5 – Estimate the relation between outcome mean self-rated accuracy (<code>mean.self</code>) and tested accuracy of understanding (<code>mean.acc</code>)</h5>
+<p>We can use <code>lm()</code> to estimate whether :</p>
+<ol type="1">
+<li>the <em>outcome</em> variable, participants’ ratings of the accuracy of their understanding (<code>mean.self</code>), can be predicted by</li>
+<li>the <em>predictor</em> variable, information about the same participants’ level of accuracy in direct tests of their understanding (<code>mean.acc</code>).</li>
+</ol>
+<p>Can you work out how to specify the model?</p>
+<!-- without looking at the code example? -->
+<!-- Click on the button to see the code example: compare it to the code you wrote. -->
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ## Code -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model <- lm(mean.self ~ mean.acc, data = study.two.gen) -->
+<!-- summary(model) -->
+<!-- ``` -->
+<!-- ::: -->
+<p>You can get more advice on how <code>lm()</code> code works if you click on the <code>Hint</code> box.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>In R analysis code, we normally write linear model analysis code like this:</p>
+<pre><code>model &lt;- lm(outcome ~ predictor, data)
+summary(model)</code></pre>
+<!-- ```{} -->
+<!-- model <- lm(mean.self ~ mean.acc, data = study.two.gen) -->
+<!-- summary(model) -->
+<!-- ``` -->
+<!-- - gets us an analysis of whether or how `mean.self` predicts variation in -->
+<!-- outcome `mean.acc`. -->
+</div>
+</div>
+</div>
+<p>If you first run the model, and then look at the model <code>summary</code> you can answer the following questions.</p>
+</section>
+</section>
+<section id="questions-task-5" class="level4">
+<h4 class="anchored" data-anchor-id="questions-task-5">Questions: Task 5</h4>
+<blockquote class="blockquote">
+<p><strong>Q.1.</strong> What is the estimate for the coefficient of the effect of the predictor <code>mean.acc</code> on the outcome <code>mean.self</code> in this model?</p>
+</blockquote>
+<!-- - A.1. 5.5670  -->
+<blockquote class="blockquote">
+<p><strong>Q.2.</strong> Is the effect significant?</p>
+</blockquote>
+<!-- - A.2. It is significant, p < .05 -->
+<blockquote class="blockquote">
+<p><strong>Q.3.</strong> What are the values for t and p for the significance test for the coefficient?</p>
+</blockquote>
+<!-- - A.3. t = 8.499, p = 9.36e-15 -->
+<blockquote class="blockquote">
+<p><strong>Q.4.</strong> What do you conclude is the answer to the research question, given the linear model results?</p>
+</blockquote>
+<!-- - A.4. The model slope estimate suggests that higher levels of tested understanding can predict higher levels of rated understanding so, yes: it does appear
+that people can evaluate their own understanding. -->
+<blockquote class="blockquote">
+<p><strong>Q.5.</strong> What is the F-statistic for the regression? Report F, DF and the p-value.</p>
+</blockquote>
+<!-- - A.5. F-statistic: 72.24 on 1 and 170 DF,  p-value: 9.356e-15 -->
+<blockquote class="blockquote">
+<p><strong>Q.6.</strong> Is the regression significant?</p>
+</blockquote>
+<!-- - A.6. Yes: the regression is significant. -->
+<blockquote class="blockquote">
+<p><strong>Q.7.</strong> What is the Adjusted R-squared?</p>
+</blockquote>
+<!-- - A.7. Adjusted R-squared:  0.2941 -->
+<blockquote class="blockquote">
+<p><strong>Q.8.</strong> Explain in words what this R-squared value indicates?</p>
+</blockquote>
+<!-- - A.8. The R-squared suggests that about 30% of outcome variance can be explained by the model -->
+</section>
+<section id="step-4-use-a-linear-model-to-to-answer-the-research-questions-multiple-predictors" class="level4">
+<h4 class="anchored" data-anchor-id="step-4-use-a-linear-model-to-to-answer-the-research-questions-multiple-predictors">Step 4: Use a linear model to to answer the research questions – multiple predictors</h4>
+</section>
+<section id="introduce-make-some-new-moves" class="level4">
+<h4 class="anchored" data-anchor-id="introduce-make-some-new-moves">Introduce: make some new moves</h4>
+<p>One of our research questions is:</p>
+<ol start="2" type="1">
+<li>Can people accurately evaluate whether they correctly understand written health information?</li>
+</ol>
+<p>We have already looked at this question by asking whether ratings of understanding are predicted by performance on tests of understanding.</p>
+<p>But there is a problem with that analysis – it leaves open the question:</p>
+<ul>
+<li>What <em>actually</em> predicts ratings of understanding?</li>
+</ul>
+<p>We can look at this follow-up question, next.</p>
+<section id="task-6-examine-the-relation-between-outcome-mean-self-rated-accuracy-mean.self-and-multiple-predictors" class="level5">
+<h5 class="anchored" data-anchor-id="task-6-examine-the-relation-between-outcome-mean-self-rated-accuracy-mean.self-and-multiple-predictors">Task 6 – Examine the relation between outcome mean self-rated accuracy (<code>mean.self</code>) and multiple predictors</h5>
+<p>Here, the predictors will include <em>all</em> of:</p>
+<ul>
+<li>health literacy (<code>HLVA</code>);</li>
+<li>vocabulary (<code>SHIPLEY</code>);</li>
+<li>age in years (<code>AGE</code>);</li>
+<li>reading strategy (<code>FACTOR3</code>);</li>
+<li>as well as average accuracy of the tested understanding of health information (<code>mean.acc</code>).</li>
+</ul>
+<p>We use <code>lm()</code>, as before, but now when we specify the model we write the code to include all of the <em>multiple</em> predictors in the same model at the same time.</p>
+<ul>
+<li>When you do this, specify all of the predictors we list.</li>
+<li>Specify each variable listed here by using the variable name.</li>
+</ul>
+<p>Can you write the code you need to do the linear model analysis?</p>
+<p>You can click on the button to see the hint. You can see example code, for a different model, for Step 4 in the <code>2023-24-PSYC122-w18-how-to.Rmd</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You can include multiple predictor variables in a model by:</p>
+<ul>
+<li>listing the predictors in series;</li>
+<li>specifying each predictor variable name;</li>
+<li>entering the names <code>...</code> separated by a <code>+</code>;</li>
+<li>one variable at a time <code>... + ...</code>;</li>
+<li>like this:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(outcome <span class="sc">~</span> ... <span class="sc">+</span> ... <span class="sc">+</span> ..., </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> study.two.gen)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>You will need to replace place-holder <code>...</code>s with the names of variables as they appear in the dataset. <!-- ## Code --> <!-- ```{r} --> <!-- #| eval: false --> <!-- model <- lm(mean.self ~ HLVA + SHIPLEY + FACTOR3 + AGE + mean.acc,  --> <!--             data = study.two.gen) --> <!-- summary(model) --> <!-- ``` --></p>
+</div>
+</div>
+</div>
+<p>If you look at the model summary you can answer the following questions.</p>
+<blockquote class="blockquote">
+<p><strong>Q.9.</strong> What predictors are significant in this model?</p>
+</blockquote>
+<!-- - A.9. Vocabulary (`SHIPLEY`), reading strategy (`FACTOR3`), `AGE`, and performance on tests of accuracy of understanding (`mean.acc`) all appear to significantly predict variation in mean ratings of understanding (`mean.self`). -->
+<blockquote class="blockquote">
+<p><strong>Q.10.</strong> What is the estimate for the coefficient of the effect of the predictor <code>mean.acc</code> in this model?</p>
+</blockquote>
+<!-- - A.10. 4.763278  -->
+<blockquote class="blockquote">
+<p><strong>Q.11.</strong> Is the effect significant?</p>
+</blockquote>
+<!-- - A.11. It is significant, p < .05 -->
+<blockquote class="blockquote">
+<p><strong>Q.12.</strong> What are the values for t and p for the significance test for the coefficient?</p>
+</blockquote>
+<!-- - A.12. t = 6.726, p = 2.69e-10 -->
+<blockquote class="blockquote">
+<p><strong>Q.13.</strong> What do you conclude is the answer to the follow-up question, what actually predicts ratings of understanding?</p>
+</blockquote>
+<!-- - A.13. Ratings of understanding appear to be predicted by performance on tests of accuracy of understanding, together with variation in age, vocabulary knowledge, health literacy and reading strategy -->
+</section>
+</section>
+<section id="step-5-understanding-linear-model-predictions-by-comparing-one-outcome-predictor-relation" class="level4">
+<h4 class="anchored" data-anchor-id="step-5-understanding-linear-model-predictions-by-comparing-one-outcome-predictor-relation">Step 5: Understanding linear model predictions by comparing one outcome-predictor relation</h4>
+</section>
+<section id="consolidate-your-learning" class="level4">
+<h4 class="anchored" data-anchor-id="consolidate-your-learning">Consolidate your learning</h4>
+<p>Next, we focus in on whether (1.) <code>mean.self</code> predicts <code>mean.acc</code> or, in reverse, whether (2.) <code>mean.acc</code> predicts <code>mean.self</code>?</p>
+<p>We are talking about two models here:</p>
+<ol type="1">
+<li>The model <code>mean.acc ~ mean.self</code></li>
+<li>The model <code>mean.self ~ mean.acc</code></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>A comparison between these models teaches us something important about <em>what</em> it is that linear models predict.</li>
+</ul>
+</div>
+</div>
+<p>You will learn something about how linear models work if you look closely at the <code>Estimate</code> value in the summary for each model.</p>
+<ul>
+<li>Where we reference model estimates, here, we are looking at the values in the<code>Estimate</code> column of the <code>lm()</code> model summary.</li>
+<li>These estimates give us the expected or predicted change in the outcome, given change in the predictor variable named on that row.</li>
+</ul>
+<p>Compare the <code>Estimate</code> value in the summary for each model. Then have a think about why these values are <em>different</em> even though the variables and the data are the same.</p>
+<p>Remember that:</p>
+<ul>
+<li><code>mean.acc</code> is scaled from 0 to 1 because it represents the average accuracy of the responses made by study participants to questions about health texts.</li>
+<li><code>mean.self</code> is scaled from 1 to 9 because it represents the average self-rated accuracy of understanding.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Q.14.</strong> Why do you think it appears that the slope coefficient estimate is different if you compare:</p>
+</blockquote>
+<ol type="1">
+<li>The model <code>mean.acc ~ mean.self</code> versus</li>
+<li>The model <code>mean.self ~ mean.acc</code>?</li>
+</ol>
+<p>You can fit these two simple models using the verbal description in the <strong>Q.14.</strong> information, plus what you have learned so far.</p>
+<ul>
+<li>Remember to give each model a <em>different</em> name.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Remember: you write model code with the outcome on the left of the tilde symbol <code>~</code> and the predictor (or predictors) on the right of the <code>~</code>.</li>
+<li>In the model information, we specify two different models.</li>
+</ol>
+<ul>
+<li>The variables and the data are the same.</li>
+<li>But <em>which</em> variable is the outcome, and <em>which</em> variable is the predictor, is different in the two models.</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Click on the `Code` button following, if you want to see the example code. -->
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ## Code -->
+<!-- If we want to compare two models: -->
+<!-- 1. The model `mean.acc ~ mean.self` versus  -->
+<!-- 2. The model `mean.self ~ mean.acc` -->
+<!-- Then we can specify each model as follows. -->
+<!-- **1. The model `mean.acc ~ mean.self`** -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model.1 <- lm(mean.acc ~ mean.self, data = study.two.gen) -->
+<!-- summary(model.1) -->
+<!-- ``` -->
+<!-- **2. The model `mean.self ~ mean.acc`** -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model.2 <- lm(mean.self ~ mean.acc, data = study.two.gen) -->
+<!-- summary(model.2) -->
+<!-- ``` -->
+<!-- ::: -->
+<p><strong>Do that</strong> then compare the <code>Estimate</code> of the predictor effect in the two models.</p>
+<ul>
+<li>Reflect on what the comparison shows about the <em>scale</em> of predicted effects.</li>
+<li>Have a think before clicking on the <code>Hint</code> button to see our information on the key learning we are talking about here.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>What does a comparison of the model predictor <code>Estimate</code> values show us?</p>
+<ul>
+<li>You may benefit by reflecting on the <a href="https://lu-psy-r.github.io/statistics_for_psychologists/PSYC122/Week17.html">lm-intro</a>) lecture and practical materials, especially where they concern predictions.</li>
+</ul>
+<p>The lesson to learn here is that:</p>
+<ol type="1">
+<li>If we have the model, <code>mean.acc ~ mean.self</code> then this means that the outcome is <code>mean.acc</code>.</li>
+</ol>
+<ul>
+<li>So if we are predicting change in outcome <code>mean.acc</code>, which is <strong>scaled 0-1</strong>, then we are looking at coefficients that will lie somewhere on the same scale (also 0-1).</li>
+<li>Here: the model estimate will show that each unit change in values of the variable <code>mean.self</code> predicts an increase of 0.053566 in <code>mean.acc</code>.</li>
+</ul>
+<ol start="2" type="1">
+<li>Whereas if we have the model, <code>mean.self ~ mean.acc</code> then this means that the outcome is <code>mean.self</code>.</li>
+</ol>
+<ul>
+<li>So if we are predicting change in outcome <code>mean.self</code>, which is <strong>scaled 1-9</strong>, then we are looking at coefficients that will lie somewhere on the same scale (also 1-9).</li>
+<li>Here: the model estimate will show that unit change in <code>mean.acc</code> predicts increase of 5.5670 in <code>mean.self</code>.</li>
+</ul>
+<p>Remember that:</p>
+<ul>
+<li><code>mean.acc</code> is scaled from 0 to 1 because it represents the average accuracy of the responses made by study participants to questions about health texts. This average <em>has</em> to have a minimum of 0 (no responses correct) and a maximum of 1 (all responses correct). The average is calculated by adding up all the correct answers and dividing by the number of questions answered by each participant.</li>
+<li><code>mean.self</code> is scaled from 1 to 9 bcause it represents the average self-rated accuracy of understanding. Participants are asked to rate on a scale form 1 (not all) to 9 (very well) how well they think they understand a health information text. The average is calculated by adding up all the ratings and dividing by the number of texts responded to by each participant.</li>
+</ul>
+<p>The <strong>important lesson</strong>, here, is that estimates of predictor effects are scaled in terms of predicted change in the outcome, so whatever scale the outcome measurement is in determines how big or small the predictor coefficient estimates can be.</p>
+</div>
+</div>
+</div>
+<!-- - A.14. Linear models are prediction models. We use them to predict variation in -->
+<!-- outcomes given some set of predictor variables. Predictions will necessarily be *scaled* -->
+<!-- in the same way as the outcome variable.  -->
+<p>We can visualize the predictions from each model to <em>visualize</em> the comparison. This will help your learning:</p>
+<ul>
+<li>Look at <em>how much</em> the outcome is predicted to change;</li>
+<li>Look at the values on the y-axis labels.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Q.15.</strong> Can you plot the predictions from each model?</p>
+</blockquote>
+<!-- - A.15. Here is the code to plot the predictions from both models. -->
+<p>Can you work out how to write the model prediction plotting code without looking at the code example?</p>
+<p>Click on the Hint button to see advice on what you need to do. You can see example code, for a different model, for Step 5 in the <code>2023-24-PSYC122-w18-how-to.Rmd</code>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>First</strong> fit the models like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(outcome <span class="sc">~</span> predictor, data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Remember to give each model object distinct names.</li>
+</ul>
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model.1 <- lm(mean.acc ~ mean.self,  -->
+<!--               data = study.two.gen) -->
+<!-- summary(model.1) -->
+<!-- model.2 <- lm(mean.self ~ mean.acc,  -->
+<!--             data = study.two.gen) -->
+<!-- summary(model.2) -->
+<!-- ``` -->
+<p><strong>Second</strong> get the predictions like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>model.predictions <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model<span class="fl">.1</span>, <span class="st">"..."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Replace <code>...</code> with the name of the predictor in <code>model.1</code>.</li>
+</ul>
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- dat.1 <- ggpredict(model.1, "mean.self") -->
+<!-- dat.2 <- ggpredict(model.2, "mean.acc") -->
+<!-- ``` -->
+<p><strong>Third</strong> make the prediction plots like this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model.predictions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<!-- 1. Predictions from the model `mean.acc ~ mean.self` -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- plot(dat.1) -->
+<!-- ``` -->
+<!-- 2. Predictions from the model `mean.self ~ mean.acc` -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- plot(dat.2) -->
+<!-- ``` -->
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.16.</strong> Look at the two plots: what do you see?</p>
+</blockquote>
+<p>Look at changes in height of the prediction line, given changes in predictor values.</p>
+<!-- - A.16. A side-by-side comparison shows that: -->
+<!-- 1. For model `mean.acc ~ mean.self` increases in `mean.self` from about 4 to 9 are  -->
+<!-- associated with a change in `mean.acc` from about .6 to about .85; -->
+<!-- 2. For model `mean.self ~ mean.acc` increases in `mean.acc` from about 0.4 to 1.0 are  -->
+<!-- associated with a change in `mean.self` from about 5 to about 9. -->
+</section>
+<section id="step-6-estimate-the-effects-of-factors-as-well-as-numeric-variables" class="level4">
+<h4 class="anchored" data-anchor-id="step-6-estimate-the-effects-of-factors-as-well-as-numeric-variables">Step 6: Estimate the effects of factors as well as numeric variables</h4>
+</section>
+<section id="consolidation-build-your-skills" class="level4">
+<h4 class="anchored" data-anchor-id="consolidation-build-your-skills">Consolidation: build your skills</h4>
+<p>We have not yet included any categorical or nominal variables as predictors but we can, and should: <code>lm()</code> can cope with any kind of variable as a predictor.</p>
+<p>There are different ways to do this, here we ask you to use the R default method.</p>
+<section id="task-7-fit-a-linear-model-to-examine-what-variables-predict-outcome-mean-self-rated-accuracy-of-mean.self" class="level5">
+<h5 class="anchored" data-anchor-id="task-7-fit-a-linear-model-to-examine-what-variables-predict-outcome-mean-self-rated-accuracy-of-mean.self">Task 7 – Fit a linear model to examine what variables predict outcome mean self-rated accuracy of <code>mean.self</code></h5>
+<p>Include as predictors both numeric variables and categorical variables.</p>
+<p>Here, our model includes predictors that are numeric like:</p>
+<ul>
+<li>health literacy (<code>HLVA</code>);</li>
+<li>vocabulary (<code>SHIPLEY</code>);</li>
+<li><code>AGE</code>;</li>
+<li>reading strategy (<code>FACTOR3</code>);</li>
+<li>accuracy <code>mean.acc</code>.</li>
+</ul>
+<p>As well as a categorical or nominal variable like:</p>
+<ul>
+<li><code>EDUCATION</code>.</li>
+</ul>
+<p>Note: <code>EDUCATION</code> is a categorical or nominal variable <em>because</em> participants are classified by what education category (<code>higher education, further education, secondary school</code>) they report themselves as having received.</p>
+<p>Can you write the code to complete the linear model analysis?</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Follow the same procedure for model specification that you have been learning to follow: the inclusion of a nominal variable does not affect how you specify the model.</p>
+</div>
+</div>
+</div>
+<!-- Check first if you can write the code you need to complete the linear model analysis. -->
+<!-- Click on the button to see the code example: compare it to the code you wrote. -->
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ## Code -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model <- lm(mean.self ~ HLVA + SHIPLEY + FACTOR3 + AGE + mean.acc + -->
+<!--                         EDUCATION,  -->
+<!--             data = study.two.gen) -->
+<!-- summary(model) -->
+<!-- ``` -->
+<!-- ::: -->
+<p>If you look at the model summary you can answer the following questions.</p>
+<blockquote class="blockquote">
+<p><strong>Q.17.</strong> Can you report the overall model and model fit statistics?</p>
+</blockquote>
+<!-- - A.17.  -->
+<!-- > We fitted a linear model with mean self-rated accuracy as the outcome and with the predictors:  -->
+<!-- health literacy (`HLVA`), vocabulary (`SHIPLEY`), reading strategy (`FACTOR3`), `AGE`, -->
+<!-- as well as mean accuracy (`mean.acc`) and education level (`EDUCATION`).  -->
+<!-- The model is significant overall, with F(7, 164) = 24.38, p < .001, and  -->
+<!-- explains 49% of variance (adjusted R2 = 0.489). -->
+<blockquote class="blockquote">
+<p><strong>Q.18.</strong> Can you plot the predicted effect of <code>EDUCATION</code> given your model?</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Follow the same procedure that you have been learning to follow.</p>
+<ol type="1">
+<li>Fit the model:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(outcome <span class="sc">~</span> predictors, data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Replace <code>outcome</code> with the outcome variable required for this analysis.</li>
+<li>Replace <code>predictor</code> with the predictor variable required for this analysis.</li>
+<li>Replace <code>data</code> with the name of the correct data set.</li>
+<li>Give the model a distinctive name.</li>
+</ul>
+<ol start="2" type="1">
+<li>Get the predictions:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>model.predictions <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model, <span class="st">"EDUCATION"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>Use the model name you assigned to the analysis you just did.</li>
+<li>Ask for predictions of the effect on outcomes of the nominal variable.</li>
+</ul>
+<ol start="3" type="1">
+<li>Plot the predictions:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(model.predictions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Check first if you can write the code produce the prediction plot. -->
+<!-- Click on the button to see the code example: compare it to the code you wrote. -->
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ##Hint and code -->
+<!-- 1. We first fit the model, including `EDUCATION`. -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model <- lm(mean.self ~ HLVA + SHIPLEY + FACTOR3 + AGE + mean.acc + -->
+<!--               EDUCATION,  -->
+<!--             data = study.two.gen) -->
+<!-- ``` -->
+<!-- 2. We then use the `ggpredict()` function to get the prediction for the effect of `EDUCATION` differences on outcome `mean.self`. -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- dat <- ggpredict(model, "EDUCATION") -->
+<!-- plot(dat) -->
+<!-- ``` -->
+<!-- ::: -->
+<blockquote class="blockquote">
+<p><strong>Q.19.</strong> The plot should give you dot-and-whisker representations of the estimated <code>mean.self</code> outcome for different levels of <code>EDUCATION</code>. What is the difference in the estimated <code>mean.self</code> between the groups?</p>
+</blockquote>
+<p>The effect or prediction plot will show you <strong>dot-and-whisker</strong> representations of predicted outcome <code>mean.self</code>. In these plots, the dots represent the estimated <code>mean.self</code> while the lines (whiskers) represent confidence intervals.</p>
+<!-- - A.19. The difference in the estimated `mean.self` between these groups is small: the groups vary between ratings of about 7, 7.10 and 7.5. -->
+<blockquote class="blockquote">
+<p><strong>Q.20.</strong> Compare the difference in the estimated <code>mean.self</code> between these groups, given the plot, with the coefficient estimate from the model summary: what do you see?</p>
+</blockquote>
+<!-- - A.20. The effect of `EDUCATION` is presented in the summary as two estimates: -->
+<!-- - `EDUCATIONHigher    -0.082217` -->
+<!-- - `EDUCATIONSecondary  0.346161` -->
+<!-- The reference level for `EDUCATION` is `Further`.  -->
+<!-- The estimates therefore show that people with `Higher` education have `mean.self`  -->
+<!-- scores about -.08 lower than `mean.self` for people with `Further` education.  -->
+<!-- People with `Secondary` education have `mean.self` scores about .35 higher than  -->
+<!-- `mean.self` for people with `Further` education. -->
+<p>We are learning some new things here so it is useful to explain them in a bit more detail:</p>
+<ol type="1">
+<li>Categorical variables or <strong>factors</strong> and reference levels.</li>
+</ol>
+<ul>
+<li>If you have a categorical variable like <code>EDUCATION</code> then when you use it in an analysis, R will look at the different categories (called <code>levels</code>) e.g., here, <code>higher education, further education, secondary school</code> and it will pick one level to be the <em>reference</em> or baseline level.</li>
+<li>The <em>reference</em> is the the level against which other levels are compared.</li>
+<li>Here, the reference level is <code>Further</code> (education) simply because, unless you tell R otherwise, it picks the level with a category name that begins earlier in the alphabet as the reference level.</li>
+</ul>
+<ol start="2" type="1">
+<li>Dot and whisker plots show estimates with confidence intervals.</li>
+</ol>
+<ul>
+<li>Dot and whisker plots are a nice way to present a concise visual summary about the estimates we get from prediction models.</li>
+<li>Here, the plots show the coefficient estimates from our model (the dots) plus confidence intervals (the lines or “whiskers”).</li>
+</ul>
+<ol start="3" type="1">
+<li>Confidence intervals are often misunderstood but they are helpful.</li>
+</ol>
+<ul>
+<li>Essentially, a confidence interval tells us about we might expect to see using our analysis procedure (Hoekstra et al., 2014).</li>
+</ul>
+<blockquote class="blockquote">
+<p>If we were to repeat the experiment over and over, then 95 % of the time the confidence intervals contain the true mean.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reading to grow your understanding
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>You can read more about this here:</li>
+</ul>
+<p>Hoekstra, R., Morey, R. D., Rouder, J. N., &amp; Wagenmakers, E. J. (2014). Robust misinterpretation of confidence intervals. <em>Psychonomic Bulletin &amp; Review</em>, 21, 1157-1164.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="you-have-now-completed-the-week-18-questions." class="level4">
+<h4 class="anchored" data-anchor-id="you-have-now-completed-the-week-18-questions.">You have now completed the Week 18 questions.</h4>
+<p>You have now extended the power of the linear models that you can deploy to predict people and their behaviour.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Models like the models you have been working with are used by:</p>
+<ul>
+<li>scientists to predict outcomes relevant to important research questions;</li>
+<li>businesses using <em>Artificial Intelligence</em> to predict client or customer outcomes.</li>
+</ul>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="sec-wk18-lab-activities-answers" class="level2">
+<h2 class="anchored" data-anchor-id="sec-wk18-lab-activities-answers">Answers</h2>
+<p>When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>.Rmd</code> script containing all code and all answers for each task and each question will be made available after the final lab session has taken place.</p>
+<ul>
+<li><p>You can download the script by clicking on the link: <a href="../PSYC122/data/week18/2023-24-PSYC122-w18-workbook-answers.html">2023-24-PSYC122-w18-workbook-answers.Rmd</a>.</p></li>
+<li><p>Or by copying the code into the R <code>Console</code> window and running it to get the <code>2023-24-PSYC122-w18-workbook-answers.Rmd</code> loaded directly into R:</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week18/2023-24-PSYC122-w18-workbook-answers.Rmd?raw=true"</span>, <span class="at">destfile =</span> <span class="st">"2023-24-PSYC122-w18-workbook-answers.Rmd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>We set out answers information the Week 18 <strong>Developing the linear model</strong> questions, below.</p>
+<ul>
+<li>We focus on the <strong>Lab activity 2</strong> questions where we ask you to interpret something or say something.</li>
+<li>We do not show questions where we have given example or target code in the foregoing lab activity <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a>.</li>
+</ul>
+<p>You can see all the code and all the answers in <code>2023-24-PSYC122-w18-workbook-answers.Rmd</code>.</p>
+<section id="sec-wk18-lab-activities-answers-information" class="level3">
+<h3 class="anchored" data-anchor-id="sec-wk18-lab-activities-answers-information">Answers</h3>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Click on a box to reveal the answer.</p>
+</div>
+</div>
+<section id="sec-wk18-lab-activities-2-questions-answers" class="level4">
+<h4 class="anchored" data-anchor-id="sec-wk18-lab-activities-2-questions-answers">Questions</h4>
+<blockquote class="blockquote">
+<p><strong>Q.1.</strong> What is the estimate for the coefficient of the effect of the predictor <code>mean.acc</code> on the outcome <code>mean.self</code> in this model?</p>
+</blockquote>
+<p>The model is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.self <span class="sc">~</span> mean.acc, <span class="at">data =</span> study.two.gen)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mean.self ~ mean.acc, data = study.two.gen)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.47926 -0.62782  0.02038  0.65403  2.37788 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)   2.8725     0.5037   5.703 5.12e-08 ***
+mean.acc      5.5670     0.6550   8.499 9.36e-15 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 1.032 on 170 degrees of freedom
+Multiple R-squared:  0.2982,    Adjusted R-squared:  0.2941 
+F-statistic: 72.24 on 1 and 170 DF,  p-value: 9.356e-15</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.1. 5.5670</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.2.</strong> Is the effect significant?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.2. It is significant, p &lt; .05</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.3.</strong> What are the values for t and p for the significance test for the coefficient?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.3. t = 8.499, p = 9.36e-15</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.4.</strong> What do you conclude is the answer to the research question, given the linear model results?</p>
+</blockquote>
+<p>The research questions is:</p>
+<ol start="2" type="1">
+<li>Can people accurately evaluate whether they correctly understand written health information?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.4. The model slope estimate suggests that higher levels of tested understanding can predict higher levels of rated understanding so, yes: it does appear that people can evaluate their own understanding.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.5.</strong> What is the F-statistic for the regression? Report F, DF and the p-value.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.5. F-statistic: 72.24 on 1 and 170 DF, p-value: 9.356e-15</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.6.</strong> Is the regression significant?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.6. Yes: the regression is significant.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.7.</strong> What is the Adjusted R-squared?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.7. Adjusted R-squared: 0.2941</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.8.</strong> Explain in words what this R-squared value indicates?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.8. The R-squared suggests that about 30% of outcome variance can be explained by the model</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.9.</strong> What predictors are significant in this model?</p>
+</blockquote>
+<p>The model is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.self <span class="sc">~</span> HLVA <span class="sc">+</span> SHIPLEY <span class="sc">+</span> FACTOR3 <span class="sc">+</span> AGE <span class="sc">+</span> mean.acc,</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> study.two.gen)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mean.self ~ HLVA + SHIPLEY + FACTOR3 + AGE + mean.acc, 
+    data = study.two.gen)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.72027 -0.49118 -0.00177  0.55561  2.00134 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)  0.561110   0.700632   0.801   0.4244    
+HLVA         0.041272   0.034833   1.185   0.2378    
+SHIPLEY     -0.046125   0.018701  -2.466   0.0147 *  
+FACTOR3      0.063689   0.010747   5.926 1.74e-08 ***
+AGE          0.025570   0.005472   4.673 6.12e-06 ***
+mean.acc     4.763278   0.708166   6.726 2.69e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.8805 on 166 degrees of freedom
+Multiple R-squared:  0.5014,    Adjusted R-squared:  0.4864 
+F-statistic: 33.39 on 5 and 166 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-44" class="callout-44-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.9. Vocabulary (<code>SHIPLEY</code>), reading strategy (<code>FACTOR3</code>), <code>AGE</code>, and performance on tests of accuracy of understanding (<code>mean.acc</code>) all appear to significantly predict variation in mean ratings of understanding (<code>mean.self</code>).</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.10.</strong> What is the estimate for the coefficient of the effect of the predictor <code>mean.acc</code> in this model?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-45" class="callout-45-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.10. 4.763278</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.11.</strong> Is the effect significant?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-46" class="callout-46-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.11. It is significant, p &lt; .05</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.12.</strong> What are the values for t and p for the significance test for the coefficient?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-47" class="callout-47-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.12. t = 6.726, p = 2.69e-10</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.13.</strong> What do you conclude is the answer to the follow-up question, what actually predicts ratings of understanding?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-48-contents" aria-controls="callout-48" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-48" class="callout-48-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.13. Ratings of understanding appear to be predicted by performance on tests of accuracy of understanding, together with variation in age, vocabulary knowledge, health literacy and reading strategy</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.14.</strong> Why do you think it appears that the slope coefficient estimate is different if you compare:</p>
+</blockquote>
+<ol type="1">
+<li>The model <code>mean.acc ~ mean.self</code> versus</li>
+<li>The model <code>mean.self ~ mean.acc</code>?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-49-contents" aria-controls="callout-49" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-49" class="callout-49-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.14. Linear models are prediction models. We use them to predict variation in outcomes given some set of predictor variables. Predictions will necessarily be <em>scaled</em> in the same way as the outcome variable.</li>
+</ul>
+<p>So, to expand on that explanation a bit more, to help understanding – the answer is:</p>
+<ol type="1">
+<li>If we have the model, <code>mean.acc ~ mean.self</code> then this means that the outcome is <code>mean.acc</code>.</li>
+</ol>
+<ul>
+<li>So if we are predicting change in outcome <code>mean.acc</code>, which is <strong>scaled 0-1</strong>, then we are looking at coefficients that will lie somewhere on the same scale (also 0-1).</li>
+<li>Here: the model estimate suggests that each unit change in values of the variable <code>mean.self</code> predicts an increase of 0.053566 in <code>mean.acc</code>.</li>
+</ul>
+<ol start="2" type="1">
+<li>Whereas if we have the model, <code>mean.self ~ mean.acc</code> then this means that the outcome is <code>mean.self</code>.</li>
+</ol>
+<ul>
+<li>So if we are predicting change in outcome <code>mean.self</code>, which is <strong>scaled 1-9</strong> , then we are looking at coefficients that will lie somewhere on the same scale (also 1-9).</li>
+<li>Here: the model estimate suggests that unit change in <code>mean.acc</code> predicts increase of 5.5670 in <code>mean.self</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.15.</strong> Can you plot the predictions from each model?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-50" class="callout-50-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.15. Here is the code to plot the predictions from both models.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-51" class="callout-51-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>First</strong> fit the models.</p>
+<ul>
+<li>Remember to give each model object distinct names.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> mean.self,</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> study.two.gen)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.1</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.self <span class="sc">~</span> mean.acc,</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> study.two.gen)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Second</strong> get the predictions:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>dat<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model<span class="fl">.1</span>, <span class="st">"mean.self"</span>)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>dat<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model<span class="fl">.2</span>, <span class="st">"mean.acc"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Third</strong> make the prediction plots:</p>
+<ol type="1">
+<li>Predictions from the model <code>mean.acc ~ mean.self</code></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="fl">.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>Predictions from the model <code>mean.self ~ mean.acc</code></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat<span class="fl">.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.16.</strong> Look at the two plots: what do you see?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-52-contents" aria-controls="callout-52" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-52" class="callout-52-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.16. A side-by-side comparison shows that:</li>
+</ul>
+<ol type="1">
+<li>For model <code>mean.acc ~ mean.self</code> increases in predictor <code>mean.self</code> from about 4 to 9 are associated with a change in outcome <code>mean.acc</code> from about .6 to about .85;</li>
+<li>For model <code>mean.self ~ mean.acc</code> increases in predictor <code>mean.acc</code> from about 0.4 to 1.0 are associated with a change in outcome <code>mean.self</code> from about 5 to about 9.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>After you have fitted a linear model to examine what variables predict outcome mean self-rated accuracy of <code>mean.self</code>:</p>
+<ul>
+<li>Including as predictors both numeric variables and categorical variables.</li>
+</ul>
+<p>Then if you look at the model summary you can answer the following questions.</p>
+<blockquote class="blockquote">
+<p><strong>Q.17.</strong> Can you report the overall model and model fit statistics?</p>
+</blockquote>
+<p>The model is:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.self <span class="sc">~</span> HLVA <span class="sc">+</span> SHIPLEY <span class="sc">+</span> FACTOR3 <span class="sc">+</span> AGE <span class="sc">+</span> mean.acc <span class="sc">+</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>                        EDUCATION,</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> study.two.gen)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mean.self ~ HLVA + SHIPLEY + FACTOR3 + AGE + mean.acc + 
+    EDUCATION, data = study.two.gen)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-2.70987 -0.50037  0.01988  0.55965  2.01412 
+
+Coefficients:
+                    Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)         0.487753   0.702049   0.695   0.4882    
+HLVA                0.047100   0.034915   1.349   0.1792    
+SHIPLEY            -0.044132   0.018719  -2.358   0.0196 *  
+FACTOR3             0.061918   0.010771   5.749 4.29e-08 ***
+AGE                 0.023997   0.005595   4.289 3.06e-05 ***
+mean.acc            4.912833   0.712381   6.896 1.10e-10 ***
+EDUCATIONHigher    -0.082217   0.146390  -0.562   0.5751    
+EDUCATIONSecondary  0.346161   0.266030   1.301   0.1950    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.8783 on 164 degrees of freedom
+Multiple R-squared:  0.5099,    Adjusted R-squared:  0.489 
+F-statistic: 24.38 on 7 and 164 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-53" class="callout-53-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.17.</li>
+</ul>
+<blockquote class="blockquote">
+<p>We fitted a linear model with mean self-rated accuracy as the outcome and with the predictors: health literacy (<code>HLVA</code>), vocabulary (<code>SHIPLEY</code>), reading strategy (<code>FACTOR3</code>), <code>AGE</code>, as well as mean accuracy (<code>mean.acc</code>) and education level (<code>EDUCATION</code>). The model is significant overall, with F(7, 164) = 24.38, p &lt; .001, and explains 49% of variance (adjusted R2 = 0.489).</p>
+</blockquote>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.18.</strong> Can you plot the predicted effect of <code>EDUCATION</code> given your model?</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint and code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-54" class="callout-54-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>We first fit the model, including <code>EDUCATION</code>.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.self <span class="sc">~</span> HLVA <span class="sc">+</span> SHIPLEY <span class="sc">+</span> FACTOR3 <span class="sc">+</span> AGE <span class="sc">+</span> mean.acc <span class="sc">+</span> EDUCATION,</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> study.two.gen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="2" type="1">
+<li>We then use the <code>ggpredict()</code> function to get the prediction for the effect of <code>EDUCATION</code> differences on outcome <code>mean.self</code>.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>dat <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model, <span class="st">"EDUCATION"</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.19.</strong> Q.19. The plot should give you dot-and-whisker representations of the estimated <code>mean.self</code> outcome for different levels of <code>EDUCATION</code>. What is the difference in the estimated <code>mean.self</code> between the groups?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-55-contents" aria-controls="callout-55" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-55" class="callout-55-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.19. The difference in the estimated <code>mean.self</code> between these groups is small: the groups vary between ratings of about 7, 7.10 and 7.5.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.20.</strong> Compare the difference in the estimated <code>mean.self</code> between these groups, given the plot, with the coefficient estimate from the model summary: what do you see?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-56-contents" aria-controls="callout-56" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-56" class="callout-56-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>A.20. The effect of <code>EDUCATION</code> is presented in the summary as two estimates:</p></li>
+<li><p><code>EDUCATIONHigher    -0.082217</code></p></li>
+<li><p><code>EDUCATIONSecondary  0.346161</code></p></li>
+</ul>
+<p>The reference level for <code>EDUCATION</code> is <code>Further</code>.</p>
+<p>The estimates therefore show that people with <code>Higher</code> education have <code>mean.self</code> scores about -.08 lower than <code>mean.self</code> for people with <code>Further</code> education.</p>
+<p>People with <code>Secondary</code> education have <code>mean.self</code> scores about .35 higher than <code>mean.self</code> for people with <code>Further</code> education.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="sec-wk18-lab-Q-and-A" class="level2">
+<h2 class="anchored" data-anchor-id="sec-wk18-lab-Q-and-A">Online Q&amp;A</h2>
+<p>You will find, below, a link to the video recording of the Week 18 online Q&amp;A after it has been completed.</p>
+<iframe src="https://livelancsac-my.sharepoint.com/personal/daviesra_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=95d5e34d-4425-4560-93a3-c76843b77ef7&amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;referrer=StreamWebApp&amp;referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen="" title="PSYC122 Online Seminar Fridays 9am wks 11-14 &amp; 16-19-20240308_090452-Meeting Recording.mp4"></iframe>
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../PSYC122/Week17.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">6. Week 17 – Better understanding the linear model</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../PSYC122/Week19.html" class="pagination-link">
+        <span class="nav-page-text">8. Week 19 – Linear models – critical perspectives</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Website developed by Matthew Ivory</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/M1V0/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

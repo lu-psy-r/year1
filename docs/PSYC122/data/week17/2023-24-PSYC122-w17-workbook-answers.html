@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Rob Davies">
+<meta name="dcterms.date" content="2024-02-26">
+
+<title>Statistics for Psychologists - 2023-24-PSYC122-w17-workbook-answers</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../Images/favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Statistics for Psychologists</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year1" rel="" target="">
+ <span class="menu-text">Year 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year2" rel="" target="">
+ <span class="menu-text">Year 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/msc" rel="" target="">
+ <span class="menu-text">MSc</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/more" rel="" target="">
+ <span class="menu-text">And More…</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">2023-24-PSYC122-w17-workbook-answers</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../PSYC121/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PSYC121</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Introduction to PSYC121</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Descriptive statistics in RStudio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. DVs and IVs in RStudio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Customisation of graphs, and z-scores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Class test</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Sampling, probability and binomial tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Filtering data and testing means (one-sample t-test)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Related-samples t-tests, plotting means and SE bars</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Unrelated-samples t-test and Power</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../PSYC122/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PSYC122</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Week 11 - Correlation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Week 12 - Correlation Part 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Week 13 - The Linear Model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Week 14 - Chi-Square</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Week 16 – Hypotheses, associations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Week 17 – Better understanding the linear model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week18.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Week 18 – Developing the linear model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week19.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Week 19 – Linear models – critical perspectives</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#naming-things" id="toc-naming-things" class="nav-link" data-scroll-target="#naming-things">Naming things</a></li>
+  <li><a href="#the-data-we-will-be-using" id="toc-the-data-we-will-be-using" class="nav-link" data-scroll-target="#the-data-we-will-be-using">The data we will be using</a></li>
+  </ul></li>
+  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a>
+  <ul class="collapse">
+  <li><a href="#step-1-set-up" id="toc-step-1-set-up" class="nav-link" data-scroll-target="#step-1-set-up">Step 1: Set-up</a>
+  <ul class="collapse">
+  <li><a href="#task-1-run-code-to-empty-the-r-environment" id="toc-task-1-run-code-to-empty-the-r-environment" class="nav-link" data-scroll-target="#task-1-run-code-to-empty-the-r-environment">Task 1 – Run code to empty the R environment</a></li>
+  <li><a href="#task-2-run-code-to-load-relevant-libraries" id="toc-task-2-run-code-to-load-relevant-libraries" class="nav-link" data-scroll-target="#task-2-run-code-to-load-relevant-libraries">Task 2 – Run code to load relevant libraries</a></li>
+  </ul></li>
+  <li><a href="#step-2-load-the-data" id="toc-step-2-load-the-data" class="nav-link" data-scroll-target="#step-2-load-the-data">Step 2: Load the data</a>
+  <ul class="collapse">
+  <li><a href="#task-3-read-in-the-data-file-we-will-be-using" id="toc-task-3-read-in-the-data-file-we-will-be-using" class="nav-link" data-scroll-target="#task-3-read-in-the-data-file-we-will-be-using">Task 3 – Read in the data file we will be using</a></li>
+  <li><a href="#task-4-inspect-the-data-file" id="toc-task-4-inspect-the-data-file" class="nav-link" data-scroll-target="#task-4-inspect-the-data-file">Task 4 – Inspect the data file</a></li>
+  </ul></li>
+  <li><a href="#step-3-use-histograms-to-examine-the-distributions-of-variables" id="toc-step-3-use-histograms-to-examine-the-distributions-of-variables" class="nav-link" data-scroll-target="#step-3-use-histograms-to-examine-the-distributions-of-variables">Step 3: Use histograms to examine the distributions of variables</a>
+  <ul class="collapse">
+  <li><a href="#revise-practice-to-strengthen-skills" id="toc-revise-practice-to-strengthen-skills" class="nav-link" data-scroll-target="#revise-practice-to-strengthen-skills">Revise: practice to strengthen skills</a></li>
+  <li><a href="#task-5-draw-histograms-to-examine-the-distributions-of-variables" id="toc-task-5-draw-histograms-to-examine-the-distributions-of-variables" class="nav-link" data-scroll-target="#task-5-draw-histograms-to-examine-the-distributions-of-variables">Task 5 – Draw histograms to examine the distributions of variables</a></li>
+  <li><a href="#hint-task-5" id="toc-hint-task-5" class="nav-link" data-scroll-target="#hint-task-5">hint: Task 5</a></li>
+  <li><a href="#revise-make-sure-you-are-confident-about-doing-these-things" id="toc-revise-make-sure-you-are-confident-about-doing-these-things" class="nav-link" data-scroll-target="#revise-make-sure-you-are-confident-about-doing-these-things">Revise: make sure you are confident about doing these things</a></li>
+  <li><a href="#task-6-practice-editing-the-appearance-of-a-histogram-plot-step-by-step" id="toc-task-6-practice-editing-the-appearance-of-a-histogram-plot-step-by-step" class="nav-link" data-scroll-target="#task-6-practice-editing-the-appearance-of-a-histogram-plot-step-by-step">Task 6 – Practice editing the appearance of a histogram plot step-by-step</a></li>
+  <li><a href="#introduce-make-some-new-moves" id="toc-introduce-make-some-new-moves" class="nav-link" data-scroll-target="#introduce-make-some-new-moves">Introduce: make some new moves</a></li>
+  </ul></li>
+  <li><a href="#step-4-now-draw-scatterplots-to-examine-associations-between-variables" id="toc-step-4-now-draw-scatterplots-to-examine-associations-between-variables" class="nav-link" data-scroll-target="#step-4-now-draw-scatterplots-to-examine-associations-between-variables">Step 4: Now draw scatterplots to examine associations between variables</a>
+  <ul class="collapse">
+  <li><a href="#consolidation-should-be-no-surprises-here" id="toc-consolidation-should-be-no-surprises-here" class="nav-link" data-scroll-target="#consolidation-should-be-no-surprises-here">Consolidation: should be no surprises here</a></li>
+  <li><a href="#task-7-create-a-scatterplot-to-examine-the-association-between-some-variables" id="toc-task-7-create-a-scatterplot-to-examine-the-association-between-some-variables" class="nav-link" data-scroll-target="#task-7-create-a-scatterplot-to-examine-the-association-between-some-variables">Task 7 – Create a scatterplot to examine the association between some variables</a></li>
+  <li><a href="#revise-make-sure-you-are-confident-about-doing-these-things-1" id="toc-revise-make-sure-you-are-confident-about-doing-these-things-1" class="nav-link" data-scroll-target="#revise-make-sure-you-are-confident-about-doing-these-things-1">Revise: make sure you are confident about doing these things</a></li>
+  <li><a href="#task-8-edit-the-appearance-of-each-plot-step-by-step" id="toc-task-8-edit-the-appearance-of-each-plot-step-by-step" class="nav-link" data-scroll-target="#task-8-edit-the-appearance-of-each-plot-step-by-step">Task 8 – Edit the appearance of <em>each</em> plot step-by-step</a></li>
+  <li><a href="#introduce-make-some-new-moves-1" id="toc-introduce-make-some-new-moves-1" class="nav-link" data-scroll-target="#introduce-make-some-new-moves-1">Introduce: make some new moves</a></li>
+  </ul></li>
+  <li><a href="#step-5-use-correlation-to-to-answer-the-research-questions" id="toc-step-5-use-correlation-to-to-answer-the-research-questions" class="nav-link" data-scroll-target="#step-5-use-correlation-to-to-answer-the-research-questions">Step 5: Use correlation to to answer the research questions</a>
+  <ul class="collapse">
+  <li><a href="#revise-make-sure-you-are-confident-about-doing-these-things-2" id="toc-revise-make-sure-you-are-confident-about-doing-these-things-2" class="nav-link" data-scroll-target="#revise-make-sure-you-are-confident-about-doing-these-things-2">Revise: make sure you are confident about doing these things</a></li>
+  <li><a href="#task-9-examine-the-correlations-between-the-outcome-variable-and-predictor-variables" id="toc-task-9-examine-the-correlations-between-the-outcome-variable-and-predictor-variables" class="nav-link" data-scroll-target="#task-9-examine-the-correlations-between-the-outcome-variable-and-predictor-variables">Task 9 – Examine the correlations between the outcome variable and predictor variables</a></li>
+  </ul></li>
+  <li><a href="#step-6-use-a-linear-model-to-to-answer-the-research-questions" id="toc-step-6-use-a-linear-model-to-to-answer-the-research-questions" class="nav-link" data-scroll-target="#step-6-use-a-linear-model-to-to-answer-the-research-questions">Step 6: Use a linear model to to answer the research questions</a>
+  <ul class="collapse">
+  <li><a href="#introduce-make-some-new-moves-2" id="toc-introduce-make-some-new-moves-2" class="nav-link" data-scroll-target="#introduce-make-some-new-moves-2">Introduce: Make some new moves</a></li>
+  <li><a href="#task-10-examine-the-relation-between-outcome-mean-accuracy-mean.acc" id="toc-task-10-examine-the-relation-between-outcome-mean-accuracy-mean.acc" class="nav-link" data-scroll-target="#task-10-examine-the-relation-between-outcome-mean-accuracy-mean.acc">Task 10 – Examine the relation between outcome mean accuracy (<code>mean.acc</code>)</a></li>
+  </ul></li>
+  <li><a href="#step-7-use-a-linear-model-to-generate-predictions" id="toc-step-7-use-a-linear-model-to-generate-predictions" class="nav-link" data-scroll-target="#step-7-use-a-linear-model-to-generate-predictions">Step 7: Use a linear model to generate predictions</a>
+  <ul class="collapse">
+  <li><a href="#introduce-make-some-new-moves-3" id="toc-introduce-make-some-new-moves-3" class="nav-link" data-scroll-target="#introduce-make-some-new-moves-3">Introduce: make some new moves</a></li>
+  <li><a href="#task-11-we-can-use-the-model-we-have-just-fitted-to-plot-the-model-predictions" id="toc-task-11-we-can-use-the-model-we-have-just-fitted-to-plot-the-model-predictions" class="nav-link" data-scroll-target="#task-11-we-can-use-the-model-we-have-just-fitted-to-plot-the-model-predictions">Task 11 – We can use the model we have just fitted to plot the model predictions</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">2023-24-PSYC122-w17-workbook-answers</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Rob Davies </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 26, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>In Week 17, we aim to <em>further</em> develop skills in visualizing and testing the associations between variables in psychological data.</p>
+<p>We do this to learn how to answer research questions like:</p>
+<ol type="1">
+<li>What person attributes predict success in understanding?</li>
+<li>Can people accurately evaluate whether they correctly understand written health information?</li>
+</ol>
+<p>These kinds of research questions can be answered using methods like the <strong>linear model</strong>.</p>
+<p>When we do these analyses, we need to think about how we report the results:</p>
+<ul>
+<li>we usually need to report information about the kind of model we specify;</li>
+<li>and we will need to report the nature of the association estimated in our model;</li>
+<li>we usually need to decide, is the association significant?</li>
+<li>does the association reflect a positive or negative relationship between outcome and predictor?</li>
+<li>and is the association we see in our sample data relatively strong or weak?</li>
+</ul>
+<p>We will consolidate and extend learning on data visualization:</p>
+<ul>
+<li>focusing on how we edit ggplot() code to produce professional looking plots.</li>
+</ul>
+<section id="naming-things" class="level2">
+<h2 class="anchored" data-anchor-id="naming-things">Naming things</h2>
+<p>I will format dataset names like this:</p>
+<ul>
+<li><code>study-two-general-participants.csv</code></li>
+</ul>
+<p>I will also format variable (data column) names like this: <code>variable</code></p>
+<p>I will also format value or other data object (e.g.&nbsp;cell value) names like this: <code>studyone</code></p>
+<p>I will format functions and library names like this: e.g.&nbsp;function <code>ggplot()</code> or e.g.&nbsp;library <code>{tidyverse}</code>.</p>
+</section>
+<section id="the-data-we-will-be-using" class="level2">
+<h2 class="anchored" data-anchor-id="the-data-we-will-be-using">The data we will be using</h2>
+<p>In this activity, we use data from <em>a second</em> 2020 study of the response of adults from a UK national sample to written health information:</p>
+<ul>
+<li><code>study-two-general-participants.csv</code></li>
+</ul>
+</section>
+</section>
+<section id="answers" class="level1">
+<h1>Answers</h1>
+<section id="step-1-set-up" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-set-up">Step 1: Set-up</h2>
+<p>To begin, we set up our environment in R.</p>
+<section id="task-1-run-code-to-empty-the-r-environment" class="level3">
+<h3 class="anchored" data-anchor-id="task-1-run-code-to-empty-the-r-environment">Task 1 – Run code to empty the R environment</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())                            </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="task-2-run-code-to-load-relevant-libraries" class="level3">
+<h3 class="anchored" data-anchor-id="task-2-run-code-to-load-relevant-libraries">Task 2 – Run code to load relevant libraries</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.4.4     ✔ purrr   1.0.2
+✔ tibble  3.2.1     ✔ dplyr   1.1.2
+✔ tidyr   1.3.0     ✔ stringr 1.5.0
+✔ readr   2.1.3     ✔ forcats 0.5.2
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="step-2-load-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-load-the-data">Step 2: Load the data</h2>
+<section id="task-3-read-in-the-data-file-we-will-be-using" class="level3">
+<h3 class="anchored" data-anchor-id="task-3-read-in-the-data-file-we-will-be-using">Task 3 – Read in the data file we will be using</h3>
+<p>The data file is called:</p>
+<ul>
+<li><code>study-two-general-participants.csv</code></li>
+</ul>
+<p>Use the <code>read_csv()</code> function to read the data file into R:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>study.two.gen <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"study-two-general-participants.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 172 Columns: 12
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (5): participant_ID, study, GENDER, EDUCATION, ETHNICITY
+dbl (7): mean.acc, mean.self, AGE, SHIPLEY, HLVA, FACTOR3, QRITOTAL
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+<p>When you read the data file in, give the data object you create a distinct name e.g.&nbsp;<code>study.two.gen</code>.</p>
+</section>
+<section id="task-4-inspect-the-data-file" class="level3">
+<h3 class="anchored" data-anchor-id="task-4-inspect-the-data-file">Task 4 – Inspect the data file</h3>
+<p>Use the <code>summary()</code> or <code>head()</code> functions to take a look.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(study.two.gen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 12
+  participant_ID mean.acc mean.self study     AGE SHIPLEY  HLVA FACTOR3 QRITOTAL
+  &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+1 studytwo.1        0.411      6.07 studyt…    26      27     6      50        9
+2 studytwo.10       0.607      8.5  studyt…    38      24     9      58       15
+3 studytwo.100      0.875      8.93 studyt…    66      40    13      60       20
+4 studytwo.101      0.964      8.5  studyt…    21      31    11      59       14
+5 studytwo.102      0.714      7.07 studyt…    74      35     7      52       18
+6 studytwo.103      0.768      5.07 studyt…    18      40    11      54       15
+# ℹ 3 more variables: GENDER &lt;chr&gt;, EDUCATION &lt;chr&gt;, ETHNICITY &lt;chr&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(study.two.gen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> participant_ID        mean.acc        mean.self        study          
+ Length:172         Min.   :0.4107   Min.   :3.786   Length:172        
+ Class :character   1st Qu.:0.6786   1st Qu.:6.411   Class :character  
+ Mode  :character   Median :0.7679   Median :7.321   Mode  :character  
+                    Mean   :0.7596   Mean   :7.101                     
+                    3rd Qu.:0.8393   3rd Qu.:7.946                     
+                    Max.   :0.9821   Max.   :9.000                     
+      AGE           SHIPLEY           HLVA           FACTOR3     
+ Min.   :18.00   Min.   :23.00   Min.   : 3.000   Min.   :29.00  
+ 1st Qu.:25.00   1st Qu.:32.75   1st Qu.: 7.750   1st Qu.:47.00  
+ Median :32.50   Median :36.00   Median : 9.000   Median :51.00  
+ Mean   :35.37   Mean   :35.13   Mean   : 9.064   Mean   :51.24  
+ 3rd Qu.:44.00   3rd Qu.:39.00   3rd Qu.:11.000   3rd Qu.:56.25  
+ Max.   :76.00   Max.   :40.00   Max.   :14.000   Max.   :63.00  
+    QRITOTAL        GENDER           EDUCATION          ETHNICITY        
+ Min.   : 6.00   Length:172         Length:172         Length:172        
+ 1st Qu.:12.00   Class :character   Class :character   Class :character  
+ Median :14.00   Mode  :character   Mode  :character   Mode  :character  
+ Mean   :13.88                                                           
+ 3rd Qu.:16.00                                                           
+ Max.   :20.00                                                           </code></pre>
+</div>
+</div>
+<p>Even though you have done this before, you will want to do it again, here, and pay particular attention to what you see, for the numeric variables, in the information about minimum (Min.) and maximum (Max.) values.</p>
+</section>
+</section>
+<section id="step-3-use-histograms-to-examine-the-distributions-of-variables" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-use-histograms-to-examine-the-distributions-of-variables">Step 3: Use histograms to examine the distributions of variables</h2>
+<section id="revise-practice-to-strengthen-skills" class="level3">
+<h3 class="anchored" data-anchor-id="revise-practice-to-strengthen-skills">Revise: practice to strengthen skills</h3>
+</section>
+<section id="task-5-draw-histograms-to-examine-the-distributions-of-variables" class="level3">
+<h3 class="anchored" data-anchor-id="task-5-draw-histograms-to-examine-the-distributions-of-variables">Task 5 – Draw histograms to examine the distributions of variables</h3>
+</section>
+<section id="hint-task-5" class="level3">
+<h3 class="anchored" data-anchor-id="hint-task-5">hint: Task 5</h3>
+<p>Use <code>ggplot()</code> with <code>geom_histogram()</code>.</p>
+<p>When we create a plot, we take things step-by-step.</p>
+<p>Here’s an example you have seen before: run the lines of code and see the result in the <code>Plots</code> window in <code>R-Studio</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.acc)) <span class="sc">+</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>These are the steps, set out one at a time:</p>
+<ol type="1">
+<li><code>ggplot(...)</code> you tell R you want to make a plot using the <code>ggplot()</code> function</li>
+<li><code>ggplot(data = study.two.gen ...)</code> you tell R you want to make a plot with the <code>study.two.gen</code> data</li>
+<li><code>ggplot(..., aes(x = mean.acc))</code> you tell R that you want to make a plot with the variable <code>mean.acc</code> – here, you specify the aesthetic mapping, <code>x = mean.acc</code></li>
+<li><code>ggplot(...) + geom_histogram()</code> you tell R you want to plot values of <code>mean.acc</code> as a histogram</li>
+</ol>
+<p>Notice that the code works the same whether we have the different bits of code on the same line or in a series of lines.</p>
+</section>
+<section id="revise-make-sure-you-are-confident-about-doing-these-things" class="level3">
+<h3 class="anchored" data-anchor-id="revise-make-sure-you-are-confident-about-doing-these-things">Revise: make sure you are confident about doing these things</h3>
+</section>
+<section id="task-6-practice-editing-the-appearance-of-a-histogram-plot-step-by-step" class="level3">
+<h3 class="anchored" data-anchor-id="task-6-practice-editing-the-appearance-of-a-histogram-plot-step-by-step">Task 6 – Practice editing the appearance of a histogram plot step-by-step</h3>
+<p>Start by constructing a basic histogram.</p>
+<section id="hint-task-6-choose-whichever-numeric-variable-from-the-study.two.gen-dataset-you-please" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-6-choose-whichever-numeric-variable-from-the-study.two.gen-dataset-you-please">hint: Task 6 – Choose whichever numeric variable from the <code>study.two.gen</code> dataset you please</h4>
+</section>
+<section id="hint-task-6-use-the-line-by-line-format-to-break-the-plot-code-into-steps" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-6-use-the-line-by-line-format-to-break-the-plot-code-into-steps">hint: Task 6 – Use the line-by-line format to break the plot code into steps</h4>
+<p>It will make it easier to read, and it will make it easier to add edits e.g.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> SHIPLEY)) <span class="sc">+</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>We are going to revise editing:</p>
+<ol type="1">
+<li>The appearance of the bars using <code>binwidth</code>;</li>
+<li>The colour of the background using <code>theme_bw()</code>;</li>
+<li>The appearance of the labels using `labs().</li>
+</ol>
+<p>Then we are going to try some new moves:</p>
+<ol start="4" type="1">
+<li>Setting the x-axis limits to reflect the full range of possible scores on the x-axis variable;</li>
+<li>Adding annotation – here, a vertical line – indicating the sample average for a variable.</li>
+</ol>
+</section>
+<section id="questions-task-6" class="level4">
+<h4 class="anchored" data-anchor-id="questions-task-6">Questions: Task 6</h4>
+<ul>
+<li>Q.1. Edit the appearance of the bars by specifying a <code>binwidth</code> value.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> SHIPLEY)) <span class="sc">+</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ul>
+<li>Q.2. Then add an edit to the appearance of the background using <code>theme_bw()</code>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> SHIPLEY)) <span class="sc">+</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ul>
+<li>Q.3. Then add an edit to the appearance of the labels using <code>labs()</code>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> SHIPLEY)) <span class="sc">+</span> </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"SHIPLEY"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="introduce-make-some-new-moves" class="level3">
+<h3 class="anchored" data-anchor-id="introduce-make-some-new-moves">Introduce: make some new moves</h3>
+<ul>
+<li>Q.4. Now add an edit by setting the x-axis limits using <code>x.lim()</code>.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> SHIPLEY)) <span class="sc">+</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Vocabulary (SHIPLEY)"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>) <span class="sc">+</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>,<span class="dv">40</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values (`geom_bar()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ul>
+<li>Q.5. Then add an edit to draw a vertical line to show the mean value of the variable you are plotting.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> SHIPLEY)) <span class="sc">+</span> </span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Vocabulary (SHIPLEY)"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>) <span class="sc">+</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>,<span class="dv">40</span>) <span class="sc">+</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="fu">mean</span>(study.two.gen<span class="sc">$</span>SHIPLEY), <span class="at">colour =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="fl">1.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+ℹ Please use `linewidth` instead.</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: Removed 2 rows containing missing values (`geom_bar()`).</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ul>
+<li><p>Q.6. Can you find information on how to define the limits on the x-axis and on the y-axis?</p></li>
+<li><p>hint: Q.6. You can see the information in this week’s how-to but try a search online for “ggplot reference xlim”.</p></li>
+<li><p>A.6. See ggplot reference information on setting limits here:</p></li>
+</ul>
+<p><a href="https://ggplot2.tidyverse.org/reference/lims.html" class="uri">https://ggplot2.tidyverse.org/reference/lims.html</a></p>
+<ul>
+<li><p>Q.7. Can you find information on how to a reference line?</p></li>
+<li><p>hint: Q.7. You can see the information in this week’s how-to but try a search online for “ggplot reference vline”.</p></li>
+<li><p>A.7. See ggplot reference information on setting limits here:</p></li>
+</ul>
+<p><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_abline.html</a></p>
+</section>
+</section>
+<section id="step-4-now-draw-scatterplots-to-examine-associations-between-variables" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-now-draw-scatterplots-to-examine-associations-between-variables">Step 4: Now draw scatterplots to examine associations between variables</h2>
+<section id="consolidation-should-be-no-surprises-here" class="level3">
+<h3 class="anchored" data-anchor-id="consolidation-should-be-no-surprises-here">Consolidation: should be no surprises here</h3>
+</section>
+<section id="task-7-create-a-scatterplot-to-examine-the-association-between-some-variables" class="level3">
+<h3 class="anchored" data-anchor-id="task-7-create-a-scatterplot-to-examine-the-association-between-some-variables">Task 7 – Create a scatterplot to examine the association between some variables</h3>
+<p>Between the outcome <code>mean.acc</code> and each of three numeric potential predictor variables <code>SHIPLEY</code>, <code>HLVA</code> and <code>AGE</code>.</p>
+<section id="hint-task-7-we-are-working-with-geom_point-and-you-need-x-and-y-aesthetic-mappings." class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-7-we-are-working-with-geom_point-and-you-need-x-and-y-aesthetic-mappings.">hint: Task 7 – We are working with <code>geom_point()</code> and you need x and y aesthetic mappings.</h4>
+</section>
+<section id="hint-task-7-the-outcome-variable-mean.acc-has-to-be-mapped-to-the-y-axis-using-...y-..." class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-7-the-outcome-variable-mean.acc-has-to-be-mapped-to-the-y-axis-using-...y-...">hint: Task 7 – The outcome variable <code>mean.acc</code> has to be mapped to the y-axis using <code>...y = ...</code></h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> SHIPLEY, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> HLVA, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> AGE, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="revise-make-sure-you-are-confident-about-doing-these-things-1" class="level3">
+<h3 class="anchored" data-anchor-id="revise-make-sure-you-are-confident-about-doing-these-things-1">Revise: make sure you are confident about doing these things</h3>
+</section>
+<section id="task-8-edit-the-appearance-of-each-plot-step-by-step" class="level3">
+<h3 class="anchored" data-anchor-id="task-8-edit-the-appearance-of-each-plot-step-by-step">Task 8 – Edit the appearance of <em>each</em> plot step-by-step</h3>
+<section id="hint-task-8-you-may-want-to-use-the-same-plot-appearance-choices-for-all-plots" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-8-you-may-want-to-use-the-same-plot-appearance-choices-for-all-plots">hint: Task 8 – You may want to use the same plot appearance choices for all plots</h4>
+<p>Because a consistent appearance is generally neater and easier for your audience to process.</p>
+</section>
+<section id="hint-task-8-you-can-find-links-to-reference-information-on-options-in-the-how-to-guide" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-8-you-can-find-links-to-reference-information-on-options-in-the-how-to-guide">hint: Task 8 – You can find links to reference information on options in the how-to guide</h4>
+<p>Use the information to make the plots pleasing in appearance to you.</p>
+</section>
+<section id="hint-task-8-do-not-be-afraid-to-copy-then-paste-code-you-re-use." class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-8-do-not-be-afraid-to-copy-then-paste-code-you-re-use.">hint: Task 8 – Do not be afraid to copy then paste code you re-use.</h4>
+<p>But be careful that things like axis values are sensible for each variable.</p>
+</section>
+<section id="questions-task-8" class="level4">
+<h4 class="anchored" data-anchor-id="questions-task-8">Questions: Task 8</h4>
+<ul>
+<li>Q.8. – First, edit the appearance of the points using <code>alpha</code>, <code>size</code>, <code>shape</code>, and <code>colour</code>:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> SHIPLEY, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> HLVA, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> AGE, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ul>
+<li>Q.9. – Then edit the colour of the background using <code>theme_bw()</code>:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> SHIPLEY, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)   <span class="sc">+</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> HLVA, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)   <span class="sc">+</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> AGE, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)   <span class="sc">+</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<ul>
+<li>Q.10. – Then edit the appearance of the labels using <code>labs()</code>:</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> SHIPLEY, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)   <span class="sc">+</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"SHIPLEY"</span>, <span class="at">y =</span> <span class="st">"mean accuracy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> HLVA, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)   <span class="sc">+</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"HLVA"</span>, <span class="at">y =</span> <span class="st">"mean accuracy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> AGE, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)   <span class="sc">+</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Age (Years)"</span>, <span class="at">y =</span> <span class="st">"mean accuracy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="introduce-make-some-new-moves-1" class="level3">
+<h3 class="anchored" data-anchor-id="introduce-make-some-new-moves-1">Introduce: make some new moves</h3>
+<ul>
+<li>Q.11. – Then set the x-axis and y-axis limits to the minimum-maximum ranges of the variables you are plotting</li>
+<li>hint: Q.11. – For these plots the y-axis limits will be the same because the outcome stays the same</li>
+<li>hint: Q.11. – But the x-axis limits will be different for each different predictor variable</li>
+<li>hint: Q.11. – The minimum value will always be 0</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> SHIPLEY, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)   <span class="sc">+</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"SHIPLEY"</span>, <span class="at">y =</span> <span class="st">"mean accuracy"</span>) <span class="sc">+</span></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">40</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-24-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> HLVA, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)   <span class="sc">+</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"HLVA"</span>, <span class="at">y =</span> <span class="st">"mean accuracy"</span>) <span class="sc">+</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">16</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> AGE, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)   <span class="sc">+</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Age (Years)"</span>, <span class="at">y =</span> <span class="st">"mean accuracy"</span>) <span class="sc">+</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">80</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+</section>
+<section id="step-5-use-correlation-to-to-answer-the-research-questions" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-use-correlation-to-to-answer-the-research-questions">Step 5: Use correlation to to answer the research questions</h2>
+<section id="revise-make-sure-you-are-confident-about-doing-these-things-2" class="level3">
+<h3 class="anchored" data-anchor-id="revise-make-sure-you-are-confident-about-doing-these-things-2">Revise: make sure you are confident about doing these things</h3>
+<p>One of our research questions is:</p>
+<ol type="1">
+<li>What person attributes predict success in understanding?</li>
+</ol>
+</section>
+<section id="task-9-examine-the-correlations-between-the-outcome-variable-and-predictor-variables" class="level3">
+<h3 class="anchored" data-anchor-id="task-9-examine-the-correlations-between-the-outcome-variable-and-predictor-variables">Task 9 – Examine the correlations between the outcome variable and predictor variables</h3>
+<section id="hint-task-9-we-use-cor.test" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-9-we-use-cor.test">hint: Task 9 – We use <code>cor.test()</code></h4>
+</section>
+<section id="hint-task-9-you-can-look-at-the-how-to-guide-for-more-advice" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-9-you-can-look-at-the-how-to-guide-for-more-advice">hint: Task 9 – You can look at the <code>how-to</code> guide for more advice</h4>
+<p>You need to run three separate correlations:</p>
+<ol type="1">
+<li>between mean accuracy and SHIPLEY</li>
+<li>between mean accuracy and HLVA and</li>
+<li>between mean accuracy and AGE</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(study.two.gen<span class="sc">$</span>SHIPLEY, study.two.gen<span class="sc">$</span>mean.acc, <span class="at">method =</span> <span class="st">"pearson"</span>,  <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  study.two.gen$SHIPLEY and study.two.gen$mean.acc
+t = 6.8493, df = 170, p-value = 1.299e-10
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.3390103 0.5746961
+sample estimates:
+      cor 
+0.4650537 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(study.two.gen<span class="sc">$</span>HLVA, study.two.gen<span class="sc">$</span>mean.acc, <span class="at">method =</span> <span class="st">"pearson"</span>,  <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  study.two.gen$HLVA and study.two.gen$mean.acc
+t = 7.5288, df = 170, p-value = 2.866e-12
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.3787626 0.6044611
+sample estimates:
+      cor 
+0.5000559 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(study.two.gen<span class="sc">$</span>AGE, study.two.gen<span class="sc">$</span>mean.acc, <span class="at">method =</span> <span class="st">"pearson"</span>,  <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  study.two.gen$AGE and study.two.gen$mean.acc
+t = 0.30121, df = 170, p-value = 0.7636
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ -0.1269774  0.1721354
+sample estimates:
+       cor 
+0.02309589 </code></pre>
+</div>
+</div>
+<p>Now use the results from the correlations to answer the following questions.</p>
+<ul>
+<li><p>Q.12. – What is <code>r</code>, the coefficient for the correlation between <code>mean.acc</code> and <code>SHIPLEY</code>?</p></li>
+<li><p>A.12. – r = 0.4650537</p></li>
+<li><p>Q.13. – Is the correlation between <code>mean.acc</code> and <code>HLVA</code> significant?</p></li>
+<li><p>A.13. – r is significant, p &lt; .05</p></li>
+<li><p>Q.14. – What are the values for t and p for the significance test for the correlation between <code>mean.acc</code> and <code>AGE</code>?</p></li>
+<li><p>A.14. – t = 0.30121, p = 0.7636</p></li>
+<li><p>Q.15. – For which pair of outcome-predictor variables is the correlation the largest?</p></li>
+<li><p>A.15. – The correlation is the largest between <code>mean.acc</code> and <code>HLVA</code>.</p></li>
+<li><p>Q.16. – What is the sign or direction of each of the correlations?</p></li>
+<li><p>A.16. – All the correlations are positive.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="step-6-use-a-linear-model-to-to-answer-the-research-questions" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-use-a-linear-model-to-to-answer-the-research-questions">Step 6: Use a linear model to to answer the research questions</h2>
+<section id="introduce-make-some-new-moves-2" class="level3">
+<h3 class="anchored" data-anchor-id="introduce-make-some-new-moves-2">Introduce: Make some new moves</h3>
+<p>One of our research questions is:</p>
+<ol type="1">
+<li>What person attributes predict success in understanding?</li>
+</ol>
+</section>
+<section id="task-10-examine-the-relation-between-outcome-mean-accuracy-mean.acc" class="level3">
+<h3 class="anchored" data-anchor-id="task-10-examine-the-relation-between-outcome-mean-accuracy-mean.acc">Task 10 – Examine the relation between outcome mean accuracy (<code>mean.acc</code>)</h3>
+<p>And each of the predictors: <code>SHIPLEY</code>, <code>HLVA</code> and <code>AGE</code></p>
+<section id="hint-task-10-use-lm" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-10-use-lm">hint: Task 10 – Use <code>lm()</code></h4>
+</section>
+<section id="hint-task-10-run-three-separate-lm-analyses" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-10-run-three-separate-lm-analyses">hint: Task 10 – Run three separate <code>lm()</code> analyses</h4>
+<p>All with <code>mean.acc</code> as the outcome but each with one predictor variable</p>
+</section>
+<section id="hint-task-10-see-the-how-to-guide-for-example-code" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-10-see-the-how-to-guide-for-example-code">hint: Task 10 – See the <code>how-to</code> guide for example code</h4>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> SHIPLEY, <span class="at">data =</span> study.two.gen)</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mean.acc ~ SHIPLEY, data = study.two.gen)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.285771 -0.076662  0.002099  0.079416  0.257793 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 0.308027   0.066426   4.637 7.01e-06 ***
+SHIPLEY     0.012854   0.001877   6.849 1.30e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.107 on 170 degrees of freedom
+Multiple R-squared:  0.2163,    Adjusted R-squared:  0.2117 
+F-statistic: 46.91 on 1 and 170 DF,  p-value: 1.299e-10</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> HLVA, <span class="at">data =</span> study.two.gen)</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mean.acc ~ HLVA, data = study.two.gen)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.27457 -0.06777  0.01474  0.08025  0.23146 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 0.522016   0.032544  16.040  &lt; 2e-16 ***
+HLVA        0.026207   0.003481   7.529 2.87e-12 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1047 on 170 degrees of freedom
+Multiple R-squared:  0.2501,    Adjusted R-squared:  0.2456 
+F-statistic: 56.68 on 1 and 170 DF,  p-value: 2.866e-12</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> AGE, <span class="at">data =</span> study.two.gen)</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mean.acc ~ AGE, data = study.two.gen)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.34684 -0.08464  0.01084  0.08323  0.21968 
+
+Coefficients:
+             Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 0.7519965  0.0267206  28.143   &lt;2e-16 ***
+AGE         0.0002136  0.0007092   0.301    0.764    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1208 on 170 degrees of freedom
+Multiple R-squared:  0.0005334, Adjusted R-squared:  -0.005346 
+F-statistic: 0.09073 on 1 and 170 DF,  p-value: 0.7636</code></pre>
+</div>
+</div>
+<p>Notice that we do the linear model in the steps:</p>
+<ol type="1">
+<li><code>model &lt;- lm(...)</code> fit the model using <code>lm(...)</code>, and give the model a name, here, we call it <code>model</code>;</li>
+<li><code>...lm(mean.acc ~ SHIPLEY...)</code> tell R you want a model of the outcome <code>mean.acc</code> predicted <code>~</code> by the predictor <code>SHIPLEY</code></li>
+<li><code>...data = study.two)</code> tell R that the variables you name in the formula live in the <code>study.two</code> dataset.</li>
+<li><code>summary(model)</code> ask R for a summary of the model you called <code>model</code>.</li>
+</ol>
+<p>Notice that R has a general formula syntax:</p>
+<p><code>outcome ~ predictor *or* y ~ x</code></p>
+<ul>
+<li>and uses the same format across a number of different functions;</li>
+<li>each time, the left of the tilde symbol <code>~</code> is some output or outcome;</li>
+<li>and the right of the tilde <code>~</code> is some input or predictor or set of predictors.</li>
+</ul>
+</section>
+<section id="questions-task-10" class="level4">
+<h4 class="anchored" data-anchor-id="questions-task-10">Questions: Task 10</h4>
+<p>If you look at the model summary you can answer the following questions.</p>
+<ul>
+<li><p>Q.17. What is the estimate for the coefficient of the effect of the predictor <code>HLVA</code> on <code>mean.acc</code>?</p></li>
+<li><p>A.17. 0.026207</p></li>
+<li><p>Q.18. Is the effect significant?</p></li>
+<li><p>A.18. It is significant, p &lt; .05</p></li>
+<li><p>Q.19. What are the values for t and p for the significance test for the coefficient?</p></li>
+<li><p>A.19. t = 7.529, p = 2.87e-12</p></li>
+<li><p>Q.20. How would you describe in words the shape or direction of the association between <code>HLVA</code> and <code>mean.acc</code>?</p></li>
+<li><p>A.20. The slope coefficient – and a scatterplot (draw it) – suggest that as HLVA scores increase so also do mean accuracy scores.</p></li>
+<li><p>Q.21. How how would you describe the relations apparent between the predictor and outcome in all three models?</p></li>
+<li><p>A.21. It is possible to see, given coefficient estimates, that the association between predictor and outcome is positive for each model: mean accuracy appears to increase for increasing values of SHIPLEY vocabulary, HLVA health literacy, and age.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="step-7-use-a-linear-model-to-generate-predictions" class="level2">
+<h2 class="anchored" data-anchor-id="step-7-use-a-linear-model-to-generate-predictions">Step 7: Use a linear model to generate predictions</h2>
+<section id="introduce-make-some-new-moves-3" class="level3">
+<h3 class="anchored" data-anchor-id="introduce-make-some-new-moves-3">Introduce: make some new moves</h3>
+</section>
+<section id="task-11-we-can-use-the-model-we-have-just-fitted-to-plot-the-model-predictions" class="level3">
+<h3 class="anchored" data-anchor-id="task-11-we-can-use-the-model-we-have-just-fitted-to-plot-the-model-predictions">Task 11 – We can use the model we have just fitted to plot the model predictions</h3>
+<section id="hint-task-11-we-are-going-to-draw-a-scatterplot-and-add-a-line" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-11-we-are-going-to-draw-a-scatterplot-and-add-a-line">hint: Task 11 – We are going to draw a scatterplot and add a line</h4>
+<p>The line will show the model predictions, given the model intercept and effect coefficient estimates.</p>
+<p>First fit a model and get a summary: model the relationship between <code>mean.acc</code> and <code>HLVA</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> HLVA, <span class="at">data =</span> study.two.gen)</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mean.acc ~ HLVA, data = study.two.gen)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.27457 -0.06777  0.01474  0.08025  0.23146 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 0.522016   0.032544  16.040  &lt; 2e-16 ***
+HLVA        0.026207   0.003481   7.529 2.87e-12 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1047 on 170 degrees of freedom
+Multiple R-squared:  0.2501,    Adjusted R-squared:  0.2456 
+F-statistic: 56.68 on 1 and 170 DF,  p-value: 2.866e-12</code></pre>
+</div>
+</div>
+<ul>
+<li><p>Q.22. What is the coefficient estimate for the intercept?</p></li>
+<li><p>A.22. 0.522016</p></li>
+<li><p>Q.23. What is the coefficient estimate for the slope of <code>HLVA</code> (see earlier)?</p></li>
+<li><p>A.23. 0.026207</p></li>
+</ul>
+<p>Second, use the <code>geom_point()</code> to draw a scatterplot and <code>geom_abline()</code> function to draw the prediction line representing the association between this outcome and predictor</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> HLVA, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)   <span class="sc">+</span></span>
+<span id="cb51-3"><a href="#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_abline</span>(<span class="at">intercept =</span> <span class="fl">0.522016</span>, <span class="at">slope =</span> <span class="fl">0.026207</span>, <span class="at">colour =</span> <span class="st">"red"</span>, <span class="at">size =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb51-4"><a href="#cb51-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb51-5"><a href="#cb51-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"HLVA"</span>, <span class="at">y =</span> <span class="st">"mean accuracy"</span>) <span class="sc">+</span></span>
+<span id="cb51-6"><a href="#cb51-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">15</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="2023-24-PSYC122-w17-workbook-answers_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>You can see reference information here:</p>
+<p><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_abline.html</a></p>
+
+
+</section>
+</section>
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">Website developed by Matthew Ivory</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/M1V0/">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+</body></html>

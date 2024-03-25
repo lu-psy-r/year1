@@ -1,0 +1,2049 @@
+﻿And I will post a link to the
+
+recording onto Moodle later on.
+
+OK, so that's step one.
+
+People keep everything seems to everybody
+
+seems to be joining as a guest,
+
+which is really confusing,
+
+but then they end up in the lobby
+
+and I have to manually admit him.
+
+So that's those beeps that you hear.
+
+Uh, and it might slightly distract me.
+
+There we go, another one.
+
+Um, right.
+
+So you can ask questions if you
+
+want to anonymously via slider.
+
+The instructions for that
+
+are on the slide as well.
+
+So just go to that web page and put
+
+in that event code and then you can
+
+ask a question and I will kind of go
+
+through those in in order so to say.
+
+Um, I checked this morning.
+
+There were no questions on
+
+the discussion forum yet,
+
+so otherwise I would.
+
+I might, you know,
+
+I might have come back to some
+
+of those here as well.
+
+Uh, if you are comfortable in just unmuting
+
+yourself and asking a question verbally,
+
+that is of course fine too.
+
+All right,
+
+Now let's um get started.
+
+Ohh yeah,
+
+the session codes on the slide as well.
+
+Alright,
+
+I will also put that into
+
+chat because people often are
+
+looking for that information.
+
+I have a suspicion that the
+
+way this meeting was set up
+
+is not ideal anyway. Um,
+
+ohh. Team has done something new where
+
+they just add everybody to the lobby.
+
+Some of my space to do this
+
+right. We're just going to start.
+
+I will stop sharing. Uh well
+
+stop sharing this slide And then
+
+we will go to the we'll we'll get started.
+
+Basically the chats. I wanted to put
+
+the session code in there which is.
+
+OK, so now I need that
+
+information is also in the chat.
+
+Hopefully that is all clear all right now.
+
+Of course, outside of this Q&amp;amp;A,
+
+you can also ask questions on the Moodle
+
+forum or on during your lab session.
+
+The answers to the questions in the
+
+lab activities etcetera are now all on
+
+the website and kind of at the bottom.
+
+So I will show you in a minute.
+
+And and there isn't a quiz,
+
+an unmarked quiz on on rudder.
+
+So I'll link to that somewhere you can
+
+check that you've understood it all. Um,
+
+right. Goodness me. If this goes on,
+
+it's just really distracting.
+
+Goodness. Ohh,
+
+Nope. Right. So let's see.
+
+We'll start with Slider and see
+
+whether there are any questions.
+
+Are there not at the moment.
+
+So please, if you have a question,
+
+doesn't matter what it is,
+
+you can ask it anonymously on Slider.
+
+You know, just get your questions
+
+in and we'll work through them.
+
+In the meantime,
+
+I will show you the website.
+
+I mean you know the website
+
+probably but and where is it
+
+that slide out, but the website
+
+is that's the link is here.
+
+So in the week 11 materials and the
+
+answers you will now find answers
+
+to each of the of the questions.
+
+So you can just kind of unfold the hair? Um,
+
+I hope that is helpful. No.
+
+Let's see Slide or do we?
+
+OK, first question is how do you
+
+know whether to report a P value
+
+as P is smaller than .001 or P is
+
+smaller than .05 or something else?
+
+OK, that's a really good question. So
+
+if so, before we get back in the day when
+
+you did calculations by hand and you looked
+
+things up in a table of significance,
+
+and I did go through that in the lecture.
+
+And then you would look in the right
+
+column and then see whether your team
+
+value would be closer to the column for
+
+PS smaller than .05 for PS smaller than
+
+pointer one or PS more than point O1, um.
+
+So that would kind of guide
+
+what you would be reporting.
+
+But nowadays where we use software
+
+like R Studio to calculate the P value,
+
+the guidelines,
+
+the APA guidelines that we used for
+
+and reporting things in psychology,
+
+they ask you to report exact
+
+P values where you can.
+
+So the P value comes out of the
+
+analysis in R Studio and that
+
+is the P value that you report.
+
+There's one exception and that is
+
+when MP is smaller than .01, so it's.
+
+So that's highly significant of course
+
+because P if P is smaller than .05,
+
+we consider it significant.
+
+But if P is almost zero, so you know,
+
+sometimes it's even reported as a
+
+number that in scientific notation,
+
+which might have a wall and an E
+
+to the minus something which means
+
+there is a lot of zeros,
+
+then you report it SP point smaller than .01.
+
+In all other cases,
+
+you would say P equals and then you go to.
+
+You report the number that comes
+
+out of the analysis.
+
+Um. So I don't.
+
+Let's see whether I can easily show you um.
+
+So for instance,
+
+no,
+
+I would have to go to the
+
+our markdown script.
+
+Hmm
+
+ohh
+
+so hey. In this example the
+
+P value was smaller than .001
+
+so that is why it says that.
+
+So that's liability 2, lab activity 3.
+
+Um, it is not. So it is.
+
+And then we report the exact value.
+
+So, um, let's see how we're doing on sliders.
+
+OK, We have a little bit of time to just go.
+
+I hope that answers your
+
+question wherever asked it,
+
+but I'll just show you where
+
+to look up that value, right?
+
+So then I will let's do this differently.
+
+Let's stop sharing that and I will
+
+start sharing my whole screen and
+
+then we can navigate it more easily
+
+between different bits and pieces.
+
+So, um, if let's see what I
+
+can just run this code on
+
+and
+
+reading the data
+
+and
+
+O, it's reading the data and so
+
+this is what you usually look for,
+
+right? Let's do a bigger plotting
+
+and then we'll do the analysis
+
+and I'll show you where.
+
+So when you conduct a correlation
+
+in that it says using the core dot
+
+test function, it will spit out.
+
+Well it will split and you then pipe
+
+the output of that function to some
+
+different function will tidy and this
+
+is what the output will look like.
+
+So there you have here you have the P
+
+value and you can see that this has a
+
+lot of zeros before any numbers appear.
+
+So this is smaller than .1,
+
+which is why you say P smaller than .01 in.
+
+In the other in this third line activity,
+
+P was .014, so this is where
+
+to to look for that.
+
+So here it reports that P value.
+
+Can you actually see my cursor?
+
+And I hope that clarifies things.
+
+Let's go to practise slider.
+
+Will we just using percents or
+
+also experiments rank correlation?
+
+We will be looking at experiments rank
+
+correlation as well in that kind of
+
+the upcoming weeks materials, yes.
+
+So we'll be using both and you
+
+will learn be learning about both.
+
+And there will be questions on the class
+
+test about what it could be questions.
+
+But on the class tests about either
+
+when will the content for
+
+next week be available,
+
+that is a very legitimate question.
+
+I was not very well on Tuesday and Wednesday,
+
+which is why it's been a little bit delayed.
+
+I will make it available today.
+
+So there's just a few things
+
+that I need to to amend and
+
+then I will make that available.
+
+So apologies for that.
+
+Yeah, because I wasn't very well.
+
+I didn't have the time to make
+
+those amendments and get it online
+
+earlier this week in following weeks.
+
+That should it should come
+
+and be available earlier.
+
+OK, so that is those questions. Um,
+
+let's see whether anybody has
+
+asked a question on the forum.
+
+So while I'm on the forum,
+
+you can see that anyway. Um,
+
+here is a guide with, um,
+
+some information on what the
+
+APA expects us to report when it
+
+comes to numbers and statistics.
+
+So if you're not sure how to write
+
+write up the results of an analysis,
+
+this is a helpful guide.
+
+This is a summary of the various
+
+statistical formulas that you encounter.
+
+And here is the Week 11 quiz.
+
+So that is what you can use as well.
+
+No, no questions on the forum.
+
+No questions on slide out.
+
+Let's see whether there's
+
+anything additional in the chat.
+
+So the session code is 318117.
+
+If you want to ask a
+
+question on Slido Um, it is
+
+449-8100. So yeah, ah, someone else
+
+hopefully pointed out there as well.
+
+Thank you. Um, right. So if you know,
+
+feel feel free to to to answer
+
+your questions if you've got any.
+
+If not, we can.
+
+I'll talk maybe through lab activity 3 and
+
+because I don't know whether everybody
+
+had the time during the lab session to,
+
+um, yeah, work your way through that.
+
+Before I do that, I'm actually talk,
+
+I'll talk about these issues with
+
+uploading things. So
+
+I've added some guidance to the
+
+website because in particular in the
+
+Monday session there were quite a
+
+few issues with uploading your files
+
+to the server and then the server.
+
+You know you thought you'd
+
+done it and it wasn't feasible.
+
+So if that happens,
+
+here are a few things you can do.
+
+You can close on the R Studio server,
+
+close your browser and start afresh,
+
+and you can open the Our Studio
+
+server in a different browser.
+
+So if you've been using Chrome,
+
+try Edge if you're on a Windows machine,
+
+or if you're on a Mac,
+
+and try Safari or something.
+
+Um, it it it's basically a browser
+
+issue and it's very unpredictable
+
+so it's it's difficult to have
+
+a have a clear fix for it.
+
+But try a different browser.
+
+If that doesn't work,
+
+then there is a kind of a workaround
+
+where you use a bit of code to download
+
+the file from the Internet directly
+
+to your folder on the server and
+
+that code I've kind of added that to
+
+where you needed in the lab activity.
+
+So if you go to lab activity 2
+
+No2 here. So if you have
+
+issues with uploading files,
+
+you can use this code which you can copy
+
+just by clicking on this little clipboard.
+
+Here you don't have to type down the line.
+
+You can't even see it all because
+
+it's too long and so you copy that,
+
+put that in your script,
+
+run that line of code,
+
+and then you will see the data
+
+file in your working directory.
+
+So hopefully that will, um, you know,
+
+prevent people losing too much time
+
+with trying to upload various files.
+
+So that was the first thing I wanted
+
+to kind of bring to your attention.
+
+And then I thought,
+
+maybe let's walk through
+
+lab Activity 3 together.
+
+Just check again when there's
+
+any other questions.
+
+No. Um, And we can,
+
+you know,
+
+I can talk you through the different
+
+bits and pieces of the code there,
+
+so OK. Um, umm.
+
+This is about hazardous
+
+alcohol use and impulsivity.
+
+It's a real study published.
+
+Well, some published somewhere,
+
+but these are kind of the
+
+measures that are being used.
+
+A questionnaire about alcohol use and
+
+A questionnaire about impulsivity.
+
+20 participants, and yeah, that's the
+
+date that we're going to work with.
+
+So what this assumes is that you have,
+
+uh, a markdown script open.
+
+Um, you know, you might.
+
+If you use one markdown script
+
+per lab session, for instance,
+
+then you should have already
+
+loaded the the right libraries.
+
+So if if it's all new,
+
+then obviously of course you would
+
+need to add code to to do that,
+
+and and if it's a new session,
+
+you would need to rerun that code
+
+chunk before you do anything else,
+
+because otherwise our doesn't
+
+know which functions to use.
+
+So just to maybe tell you a little bit
+
+about what on earth these libraries are,
+
+and they're basically a collection
+
+of code snippets, you could say,
+
+of functions.
+
+So a function in when you when
+
+you talk about programming is
+
+a set of instructions in code
+
+to do a particular thing,
+
+like reading a file or download a file.
+
+So if or make a histogram or whatever.
+
+And so somebody has written
+
+a a function to do something,
+
+and they put them in these little
+
+groups of uh, collections of of,
+
+of, of, of functions.
+
+And they are called libraries.
+
+And ohh has a lot of different libraries,
+
+always open source,
+
+so anybody can contribute to it,
+
+which nobody has to pay for it,
+
+which makes it very powerful.
+
+And you know,
+
+you never have to pay for a
+
+licence or anything like that.
+
+Um,
+
+but it also means that you know
+
+there will be that there's lots of
+
+different libraries that people have
+
+written to do very specific things.
+
+And so at the start of your session,
+
+you always have to tell our
+
+what libraries to use so that it
+
+knows basically where to look
+
+for the functions that you want
+
+to use in that session.
+
+So here we use brew and a
+
+library called tidyverse
+
+and I will just periodically check slider Ah,
+
+what does broom the broom library do
+
+and how is it different to tiny verse?
+
+So basically they have different sets
+
+of functions in them and and the
+
+tiny verse is so so if you want to
+
+know more about any of these things,
+
+um, if we say here, let's try this.
+
+Does it work for? This works with functions.
+
+So if we want to know more about
+
+the broom package,
+
+so I've in the console I've typed
+
+questionmark and then broom package
+
+in single quotation mark and if I um
+
+done press enter it will give me the
+
+help file for that particular library.
+
+So broom is all to do.
+
+So here you can see who's written
+
+it and it is all to do with
+
+how to work well with tables.
+
+So it just does a lot of so to Tidy for
+
+instance comes from the broom library.
+
+Tidy is a function that makes the
+
+output from core tasks look like
+
+this and if we run this code. Um,
+
+without tidy? So if I just
+
+delete that I want it.
+
+This is the output that you get.
+
+So now I just just used core tax
+
+that's the same function to do
+
+the actual correlation analysis.
+
+But this is what the output looks
+
+like and that's kind of how to
+
+read and kind of hard to use.
+
+So somebody thought that was a
+
+bit difficult to use and said OK,
+
+I'm going to write a function to tie
+
+that up and and then if we rerun it,
+
+it makes it looks like this.
+
+So and broom has, you know,
+
+has a kind of a lot of other
+
+functions like that where you know,
+
+there's a lot of contributors
+
+to broom as you can see.
+
+And if you go all the way down here,
+
+you know you can go to the
+
+website that explains more about
+
+this particular package,
+
+and if you discover any bugs in it,
+
+there's also a place to report them.
+
+And Tiny First is a,
+
+so we can do the same thing for Tiny Verse
+
+and
+
+see where it goes. This. Yeah.
+
+Um, so that is actually a bit
+
+unusual as a library because it is
+
+actually a collection of libraries.
+
+This name Hadley Wickham.
+
+He's one of the most important
+
+developers or programmers of our R&amp;amp;R
+
+studio and he's uh really kind of
+
+made some quite innovative changes
+
+in how we use our and our studio
+
+for statistics and tiny vertical
+
+cysts of of many different things.
+
+So if we go to this website,
+
+it has all of this on ggplot 2.
+
+For instance that you know it's a
+
+library that has the GD plot function
+
+in which we use for plotting things.
+
+And it has deep liar in which we use
+
+a lot to make to make new variables,
+
+select variables from a from
+
+a data frame to select rows,
+
+uh to philtre for for for rows, etc.
+
+So there is lot and there is more.
+
+So it is a whole collection of our
+
+packages and they will come back and back
+
+again and it's a really important one.
+
+Basically,
+
+it's one of the main things that we use.
+
+Um yeah,
+
+this is a really good book by the way,
+
+if you want to dive in deeper.
+
+So I hope that answers that question
+
+in the lab activities when it asks us
+
+to calculate how much variance can be
+
+come from and what does that show us?
+
+OK. That is also a very good
+
+question and let's go to that.
+
+Uh, what is the best way to illustrate it?
+
+Maybe we'll go to.
+
+Let's see when we can use this to shut up.
+
+So this was the one of the pre lamp
+
+activities and victory here and it's a
+
+bit all about visualising correlations.
+
+So here we have two measures X&amp;amp;Y and
+
+we can change this number here the
+
+correlation and see what it looks like.
+
+So if we increase this,
+
+let's say we will put it to.
+
+This is a bit too slow.
+
+Can I just do it like that here?
+
+So here we have a correlation of .5.
+
+You can see it's because it is a positive
+
+correlation and if one variable goes up,
+
+the other variable goes up.
+
+So we get a scatter plot like this
+
+and you can see there are some some
+
+sort of relationship between the
+
+two variables even though it's not,
+
+uh perfect right?
+
+If we would say .8 or something,
+
+then the dots fall much closer to the line.
+
+Now what? So what is this shared variance?
+
+It is basically a measure of
+
+effect size and you might have
+
+heard of measures of effect size.
+
+When you talk about
+
+tests to do at compare group
+
+means like a team test in.
+
+You did that in 1-2 one
+
+and so if if our is .5 we can calculate the
+
+the shared variance by squaring that number.
+
+So if you literally square R you get
+
+R-squared and that is .25 in this case.
+
+If you multiply that by 100,
+
+you get the shared variance and it
+
+basically means that the variation in.
+
+Why? So you know the variation in
+
+Y is how much each data point is
+
+removed from this line of best fit.
+
+So you know, here it is a little bit of buff.
+
+This one is a little bit below,
+
+This one is quite a lot of buff.
+
+This is even further above right?
+
+So this variance.
+
+So these these individual differences
+
+between these data points on why?
+
+Well, by calculating R-squared we
+
+can say that 25% of this variation
+
+is explained by variation in X.
+
+So we also have variation in
+
+X and we've got calculated the
+
+correlation between the two.
+
+Once we've calculated the correlation,
+
+from that we can derive R squares,
+
+also called to the
+
+coefficient of determination,
+
+and that tells us that 25% of the
+
+kind of the individual differences
+
+between all these data points.
+
+Uh, why?
+
+Is explained by or is accounted
+
+for by changes in X?
+
+Does that make sense? Maybe you can.
+
+Whoever asked that question can put
+
+up a follow up comment with yes or no
+
+and
+
+so that that is kind of what that
+
+what that means and and if we if we
+
+make it higher you know if you have
+
+a correlation of .9 we can see that
+
+81% of of the variance basically
+
+between these two variables is
+
+shared or is what you know fair
+
+variance in Y is accounted for by X.
+
+You know in a correlation it's you
+
+could choose to put if this was weight
+
+and that was height and you know you
+
+could choose to put to put weight
+
+here and height on the on the X axis.
+
+And so it's it's kind of about
+
+shared variance rather than one
+
+predicting the other in in regression
+
+that is a little bit different,
+
+right? I hope that helps. Thank you.
+
+Thank you for confirming UM.
+
+So let's go back to our uh ask right?
+
+Uh, we were trying to walk through.
+
+Um, no. I was going to do that.
+
+We were going to walk through
+
+a lot of Activity 3, right?
+
+So let's do that. Um,
+
+there we are. Lovely activity.
+
+Normal pre enough activity. Lab activity 3,
+
+right, So boom and tiny.
+
+First we talked about that step one,
+
+reading the data,
+
+and you should now see an object
+
+containing the data in the environment.
+
+OK, so let's just check that
+
+we have actually done that.
+
+So I'm just going to clean this
+
+environment by using this little broom
+
+on the on here in the top right.
+
+That just means that it's.
+
+I tend to do that between, you know,
+
+between two different analysis,
+
+because then you know we don't
+
+get confused by things that might
+
+have similar names or something.
+
+Um, so we want to first do reading the data.
+
+We use read underscore CSV to do that.
+
+So read underscore CSV is a function.
+
+We tell that function that we
+
+want to use this data file and
+
+we assign the output of that to
+
+a data frame called data.
+
+Or you could have called it alcohol,
+
+use slash impulsivity or a
+
+Lim or whatever you could have given it.
+
+Or data lab activity three. And the name
+
+of that data frame is is up to you.
+
+It is good actually to to use
+
+sensible names for it, and Data is
+
+actually not that much of A sensible.
+
+But there, you know,
+
+I really should have been a little
+
+bit more specific with that.
+
+So in the environment you now see the
+
+data file which I've called data.
+
+Uh. If you click on this little
+
+blue circle with the white triangle,
+
+you can have a look at what what's in there
+
+just here without having to kind of you know.
+
+You can also click on it of course
+
+and then you will see it here
+
+um in the in this in this pain.
+
+So we have 3 columns,
+
+participants as it is alcohol,
+
+use and impulsivity,
+
+and we have 20 participants.
+
+Always worth checking that what
+
+you expect the data to look
+
+like is actually in the file.
+
+You know,
+
+if it says that there should
+
+be 20 participants,
+
+you should be able to locate 20 participants.
+
+So that's um because I this is
+
+run in a code chunk and it doesn't
+
+say so if I would put echo as
+
+false here and here it wouldn't.
+
+It wouldn't give me these kind of bits here.
+
+So if I rerun this, that goes away.
+
+If you find that quite useful
+
+to actually see those things,
+
+you leave that out.
+
+And then and there you go, there they are.
+
+And so you can connect,
+
+you kind of have a preview of it in
+
+your our marketing document as well.
+
+So lots of different ways to
+
+look at the same thing.
+
+Now did ask us any questions about
+
+that How many variables does it have?
+
+So the hint was ohh yeah you need to do that.
+
+What we did that that's the code.
+
+How many variables does it have?
+
+It has three variables right?
+
+We we concluded that here 1 variable,
+
+2 variable, 3rd variable SO3 variables.
+
+Now then, you're asked to plot
+
+a relationship between hazard,
+
+alcohol use,
+
+and impulsivity using its
+
+catapult and a line of best fit.
+
+No, this is how we do that.
+
+We use G+,
+
+so that's the function that we need.
+
+And Gigi plot requires certain information,
+
+otherwise it can't plot anything.
+
+So it needs to you know what
+
+data we're using,
+
+so that's what we put there.
+
+And then it needs to know what we put on
+
+the Y axis and what we put on the X axis.
+
+So that's what happens here.
+
+Now ggplot is a little bit
+
+different from other functions,
+
+but what it does is that it
+
+builds a figure layer by layer.
+
+So first you tell it what data to use.
+
+You do that here,
+
+then you put a plus sign and then you say OK,
+
+please give me the data points.
+
+So if we only run
+
+this bit of code,
+
+um, would you like to just run that code?
+
+Should ensure run selected lines.
+
+I should run that without that plus,
+
+otherwise it will be waiting for more
+
+inputs. And let's try that again
+
+one selected lines.
+
+Umm, just something that it doesn't like.
+
+Why does it not look?
+
+Well, let's run the whole thing.
+
+I wanted to show you something specific,
+
+but it doesn't quite like to work with that.
+
+So if I only run this bit,
+
+for some reason it gives an error,
+
+but it shouldn't really.
+
+And then I would only get the black line,
+
+the black dots and in this line of code.
+
+So we give, we set,
+
+we add another plus and then say
+
+please add a line of best fit and
+
+for that we need do you have smooth?
+
+There's different methods to do it,
+
+but we also always use Allan linear model.
+
+We don't want a standard error, sorry.
+
+We could actually add a step in that
+
+area and show you what that looks like.
+
+Thank you that and we run it.
+
+We get this grey bar and it kind of adds
+
+a standard error around the best of it
+
+that becomes more important
+
+with more complex data.
+
+Basically so it adds the points,
+
+then it adds a line and then I've
+
+asked it to change the thing.
+
+There's lots of different things in
+
+in duty plots to make the figures
+
+look exactly like you wanted to.
+
+Basically you can explore that
+
+and we will be using, you know,
+
+different ones across the module.
+
+And then I ask it to use to add kind of
+
+different labels for the X axis and Y axis,
+
+and I know what it was.
+
+So I know that impulsivity here
+
+because I just talked with is is there.
+
+Now let's just check whether anymore
+
+questions have come in. No. Um.
+
+So hopefully that is all clear.
+
+What can you tell from Southport about
+
+the direction of the relationship?
+
+So we can tell that there is a positive
+
+relationship because of the line goes
+
+up from startup kind of the bottom
+
+left and goes up to the top right.
+
+And so there's there is a positive
+
+association between hazardous
+
+alcohol use and impulsivity.
+
+And that means that as a participant
+
+score or has this Elka use goes up,
+
+their score impulsivity also goes up.
+
+That is what we can tell
+
+from the scatterplot.
+
+You can actually tell more
+
+even from scatterplot.
+
+You can tell that there is somebody
+
+who schools really high on impulsivity
+
+and and somebody else who scores
+
+really low on impulsivity, right.
+
+Somebody.
+
+Some people score really low on hazardous
+
+alcohol use and others score quite
+
+high normally hazardous alcohol use.
+
+So there's other things that you can tell
+
+that the scatter plot is really useful for.
+
+And so,
+
+So if you know,
+
+let's say that somebody would
+
+have an impulsivity score of 900,
+
+then that is clearly a data entry mistake,
+
+right?
+
+Because that looks like not a possible score.
+
+So that's something else that
+
+you can see in the scatter plot.
+
+And there's other stuff that
+
+we will look at next week.
+
+So then in step three, you're asked
+
+to conduct a correlation analysis.
+
+So for that we use and the the the
+
+function called core dot test and in
+
+core dot test we need to tell it what
+
+is the the data and the and the X
+
+variable and what is the Y variable.
+
+What method won't do you want to use.
+
+So here we use person and whether you
+
+want it to be 1 sided or two sided.
+
+There's very few cases where you
+
+really want one sided test if you.
+
+So the difference between A1 sided
+
+and A2 sided correlation test
+
+is if you are you know,
+
+I guess you based on previous
+
+research you say,
+
+well I know that this correlation is
+
+going to be positive and I only wanted
+
+to test whether it is significantly.
+
+You know whether it is significantly
+
+different from zero,
+
+but I'm never going to expect
+
+a negative correlation.
+
+Then you could do A1 sided test or
+
+the other way around of course.
+
+So you could say OK,
+
+I'm gonna test whether it is and
+
+I I from all previous research
+
+suggests that we were expecting
+
+a negative correlation here.
+
+So I'm going to only test where
+
+it whether it is negative enough
+
+to be significant,
+
+then that's also a possibility.
+
+But you can't.
+
+With one side attached,
+
+you can't test both directions in one go.
+
+Basically so 99% of the cases
+
+you're just wanted two sided tests,
+
+so that's what's what is and specify to him.
+
+So what we do here?
+
+So here we have the the function name,
+
+then all the information that it needs,
+
+and then we assign that to
+
+something called results and that
+
+will appear in our environment.
+
+Once we've run that and as
+
+I showed you before,
+
+we take the output from this function
+
+and put it through another function
+
+called type from the broom package just
+
+to make the results eating more easily,
+
+more more easy to read.
+
+So if we run this I've actually
+
+done a lot of stuff in one go but
+
+so here we've got our results.
+
+So here you've this is just kind of,
+
+you know,
+
+we could click on this and it would open it.
+
+Here,
+
+um,
+
+it's just a table with the results where
+
+you estimate is the correlation coefficient,
+
+the statistic is the T statistic for
+
+that correlation coefficient that
+
+you that we don't typically report,
+
+but that's what it is.
+
+Here we have the P value parameter is
+
+the degrees of freedom and he would
+
+remind you what kind of test you've
+
+done and whether it was 1 sided or two sided.
+
+And this is the correlation,
+
+sorry,
+
+the confidence interval
+
+around the correlation.
+
+So this isn't a 90 percent,
+
+95% confidence interval around this number.
+
+So you know,
+
+we it is highly likely
+
+that based on these data,
+
+the correlation coefficient in full
+
+somewhere between points 13 and .79.
+
+So sometimes confidence in force around
+
+these estimates are very informative,
+
+but you don't need to
+
+worry about it right now.
+
+So just to kind of recap,
+
+if you look at output like this estimate,
+
+it's the correlation coefficient.
+
+So R P value is the P value
+
+and you report an exact P
+
+value up to three decimals.
+
+So you would say
+
+P = 0.014 in this case.
+
+That is what the APA wants us to do,
+
+and for the degrees of freedom
+
+you look at the parameter saying.
+
+And so that is that now.
+
+So you can just look at that in the table.
+
+You can also pull it out
+
+and using the pool function.
+
+So here all I've done is said OK,
+
+take the results,
+
+use the pull function and give me
+
+others in the estimate cell and
+
+round down to two decimals and
+
+assign that to something called R
+
+So we've got that here as a value.
+
+So here I can just.
+
+I could, I could.
+
+I could ask for it in the console because
+
+it was our because that's what I've
+
+decided to to .54 and and here it is.
+
+It's. You can see it here,
+
+you can see it here,
+
+and you can see it in the original table.
+
+And same for degrees of freedom.
+
+So I know that that is in the
+
+cell called parameter sizing.
+
+Pull out at #4 me and there you go.
+
+It's 18.
+
+I'm saying from P value and then
+
+you are asked to calculate R ^2
+
+coefficient of determination
+
+which shows you allows you to to
+
+calculate this shared variance
+
+or the variance accounted for by
+
+1 variable in another variable.
+
+So R-squared is literally squaring
+
+of Rs and multiplying R by itself.
+
+So we can just do that like this
+
+and and then ask where percent or
+
+this shared variance is r ^2 * 100.
+
+And then I asked it to round it to
+
+00 decimals so I get that I get kind
+
+of a number like that and not 29.2.
+
+So we typically around that to 0 decimals.
+
+So 29 percent is the answer
+
+here of the variance in and
+
+OHH impulsivity is accounted
+
+for by hazardous alcohol use.
+
+Now let me check sliders
+
+whether there's any slide out.
+
+No, I don't see any additional questions.
+
+And there we go.
+
+So that is has answered them
+
+of these question right?
+
+What is the correlation coefficient?
+
+This number? What is the P value?
+
+That number? Is it significant?
+
+Yes, it is significant.
+
+So you might wonder what this says.
+
+But if I knit this,
+
+it will look sensible
+
+and it's my markdown file.
+
+This symbol here between the team and
+
+the IT should knitted it, whatever.
+
+If it's still busy knitting,
+
+maybe it is a little bit too much
+
+to ask to be sharing my screen,
+
+have a teams meeting,
+
+recording and also asking. It is.
+
+It is doing some work here.
+
+It's going there.
+
+It's knitting the whole thing,
+
+which is why it's taking you off.
+
+So I've known. I've knitted my
+
+ARM markdown from and you can see
+
+all the output here right? And so
+
+this is not what we're doing here.
+
+This is the activity that we
+
+were concerned with. So umm
+
+is, it's. Is the correlation
+
+significant at the level people?
+
+At the smaller point of higher
+
+level, Yes, because it is
+
+.014. And what other degrees of freedom
+
+you need to report, so that is 18.
+
+You can also calculate that. Fine,
+
+just just doing the maths yourself
+
+because that is always and -2.
+
+So and what's 20?
+
+Because we had 20 participants in
+
+this particular data set and you
+
+subtract 2 because you have two
+
+variables in correlation, so it is 18.
+
+How much variance in impulsivity can be
+
+accounted for by hazard alcohol use?
+
+That is this R-squared thing, right?
+
+So that is was 29%.
+
+Now then, we're asking for 3 logical
+
+possible directions of causality,
+
+indicating for each direction whether
+
+it is possible explanation in light
+
+of the variables involved and why.
+
+So you know. Correlation, of course,
+
+does not infer causation, but it is.
+
+It is helpful to start thinking about OK,
+
+well, what does this actually mean?
+
+Why are these two things related?
+
+So here are just three examples.
+
+Being more impulsive may make
+
+people consume more alcohol and
+
+or consuming more alcohol may be
+
+may make people more impulsive.
+
+With the current data,
+
+we have no way of distinguishing
+
+between these options.
+
+A third one could be that an outgoing
+
+personality might influence both your
+
+level of impulsivity and you are more like,
+
+so you're more likely to be socialising
+
+in a pub and consuming alcohol.
+
+So in a way,
+
+personality having an outgoing personality
+
+might be a third factor that influence
+
+both of our variables of interest.
+
+So again, with just the correlation analysis,
+
+we can't tell these difference.
+
+That kind of, um, explanations for
+
+the relationship that we found apart.
+
+We would have to do further experiments
+
+to figure out which one is correct.
+
+Now finally,
+
+how do you report these results?
+
+Following the APA guidelines.
+
+So here is this kind of written up
+
+saying a Pearson correlation coefficient
+
+was used to assess the relationship
+
+between alcohol use and impulsivity.
+
+There was a significant positive correlation
+
+and then we report these numbers here.
+
+Actually this is wrong.
+
+This should be equal.
+
+So let's that's correct, that's.
+
+This should be equal.
+
+There we go ohh,
+
+there we go.
+
+There we go.
+
+So P equals
+
+.014 and APA requires, UM,
+
+statistical symbols like R&amp;amp;P to
+
+be Italian in italics in italics,
+
+SOCOM like that.
+
+And you can do that by placing
+
+them within these asterisks.
+
+So if I need this again,
+
+we should get,
+
+um, we should get that
+
+there we are, P = 0.014.
+
+So you can see R as in
+
+italics and P as in italics.
+
+And the way to do that in your market is
+
+by placing them within these two asterisks.
+
+That's kind of our marketing code,
+
+so let's have to report it.
+
+And then you give it to make it easy
+
+on the reader of your research report,
+
+you would say something like this.
+
+People who reported to consume more alcohol
+
+scored higher on the impressive skill.
+
+Explaining what this correlation means,
+
+right? So that was lab activity 3.
+
+Um, let's see whether
+
+there's any other questions.
+
+So no other questions on slide out,
+
+you don't see any other
+
+questions on in the chat either.
+
+So I think we will leave it at that.
+
+I hope you found this useful,
+
+and materials for next week
+
+will be available later today,
+
+and we'll be doing more work on
+
+correlation and thinking about the kind of
+
+assumptions that you need to be aware of.
+
+Um, looking at how to check those.
+
+We'll be looking at Pearson Rank,
+
+Spearman Rank and Coronation, Sorry.
+
+And when to use that, Yeah.
+
+And we'll be doing also a
+
+little bit of data practising,
+
+data wrangling to to get
+
+the data in the right shape.
+
+So thank you for attending today
+
+and I will see you all next week.
+
+Thank you.

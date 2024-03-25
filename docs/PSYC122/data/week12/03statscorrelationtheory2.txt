@@ -1,0 +1,995 @@
+﻿Hi, it is Margriet Groen here.
+
+Now, each statistical test or
+statistical model relies on
+
+assumptions. So, all claims made
+on the basis of that statistical
+
+test, such as correlation, are
+contingent on satisfying these
+
+assumptions to a reasonable
+
+degree. And that is the first
+thing that we will be talking
+
+about. The assumptions that
+underlie correlation analysis.
+
+Then there is also some issues
+with correlation analysis that
+
+you should be aware of and
+we will be talking about those.
+
+And about one possible way of
+overcoming some of these
+
+problems by using Spearman's rho
+
+rather than Pearson's r.
+
+And finally, we will be talking
+about intercorrelation, where you
+
+look at relationships between
+multiple variables at once.
+
+OK, the assumptions underlying
+correlation analysis. So in
+
+order to conduct a
+correlation analysis, you need
+
+to check that's the data meet
+pre-specified assumptions. And if
+
+any of these assumptions are
+violated, then Pearson's r may
+
+provide misleading information
+regarding the relationship
+
+between the variables of
+
+interest. So you need to
+check it.
+
+The first assumption is to do
+with the type of variables for
+
+which you can use
+
+Pearson's r.
+
+Sorry, lost my mouse.
+Here we are.
+
+So you have to think about
+what type the variables are.
+
+that you're
+interested in evaluating the
+
+relationship between.
+
+So both variables
+need to be at
+
+an interval level
+or a ratio level.
+
+If they are ordinal or
+nominal variables, then you
+
+cannot use Pearson's r.
+
+So if you would, for instance, be
+trying to correlate a continuous
+
+variable like the mean
+smelliness of cheese with the
+
+categorical variable, the
+type of cheese, then you could
+
+not use Pearson's r for that
+in a valid way.
+
+Now when evaluating this
+you don't need to do anything
+
+specific other than think
+about what the measurement levels
+
+of your variables are.
+
+The second assumption is that
+there is a data point for each
+
+participant, on both the
+
+variables. So.
+
+if we go back to the data from
+last week, we looked at this
+
+data table where we had
+participants here in rows and we
+
+had a number for each variable.
+
+So, each participant had a score
+on each of the variables.
+
+If that is not the case, these
+
+participants will usually
+automatically be excluded from
+
+the correlation
+analysis, but if you have these
+
+missing data, you might think
+that you are calculating your
+
+correlation coefficient on the
+basis of a large sample, but
+
+then discover that your
+degrees of freedom is
+
+lower so that it's actually only
+including the people who have
+
+kind of full data for
+
+the variables in your correlation.
+
+So something else that
+you need to check in your
+
+data before you go ahead.
+
+The third assumption is that the
+data should be normally
+
+distributed. So, the data,
+both variables should followed a
+
+normal distribution or at least
+approximate a normal
+
+distribution. So you might
+remember the normal
+
+distribution from last term.
+It is this kind of z,
+
+sorry, this type of Bell
+shaped curve.
+
+And you can check that with a
+with a histogram. So if you plot
+
+variables of interest, if you
+make histograms for those,
+
+then you can do a visual
+check to see whether that
+
+histogram approaches the
+normal distribution.
+
+Now, a second way to visually
+check that your data are
+
+normally distributed is by using
+what is called the 'normal
+
+quantile-quantile plot' or the 'QQ-
+plot' in short.
+
+What that does is that it
+
+puts things in quantiles
+
+and checks whether, whatever you
+
+plotting, comes from
+the same distribution.
+
+So if you use the normal
+QQ plot, it has this 45 degree
+
+angled line here, so this is a
+45 degree angle.
+
+And if the data of your variable
+comes from a normal
+
+distribution, then those data
+points should fall quite close
+
+to this line.
+
+Now it also gives you a
+confidence interval around
+
+that, so as long as the data
+points fall within.
+
+this range of the two striped
+
+lines then you would usually
+say that you're OK, your data
+
+are normal enough so to say.
+
+Now the 4th assumption is that
+the that correlation analysis
+
+using Pearson's r assumes that
+the relationship between the
+
+two variables is linear. So
+kind of follows
+
+A pattern of a straight line.
+
+It doesn't have to be an exact
+exact straight line and not all
+
+the data points have to fall
+exactly on that line, but the
+
+general pattern should be that
+
+of a straight line. So if
+you look at this example
+
+here, we have age
+on the X axis,
+
+and language competence on
+the Y axis and as age goes up,
+
+so does language competence, so
+it looks like a
+
+linear relationship. A positive
+relationship: when age increases,
+
+language competence increases.
+
+But there are other patterns in
+other relationships in
+
+development that do not quite
+follow that pattern.
+
+So just kind of looking at
+linear relationships wouldn't
+
+provide you a full picture.
+There are other relationships
+
+that are kind of grouped
+under the term curvilinear
+
+relationships. And you do see
+quite a few of those in
+
+in the language
+development. So, for instance,
+
+if we look at language
+development and we have age on
+
+the X axis,
+
+but for some aspects of language
+development, like vocabulary,
+
+it will start quite, it will
+grow very very fast but then
+
+flattens out. So that's one
+example of a curvilinear
+
+relationship.
+
+Yet in other domains of
+language, like
+
+to what extent children
+understand compound sentences,
+
+development kind of starts
+slowly and then there is a
+
+later growth spurt, so you get
+kind of a curvilinear
+
+relationship in the other
+direction.
+
+And in yet another kind
+of type of measure to do with
+
+with language development, you
+get what might look like quite a
+
+strange developmental pattern.
+Here we have age again on the X
+
+axis and errors in language use
+on the Y axis. So here you can
+
+see that at an early age
+children might make actually
+
+quite few mistakes, and then
+they start making more mistakes
+
+when they get older and then
+it drops off again. So kind of
+
+an inverted U shaped pattern of
+
+development. You might wonder
+why that is the case,
+
+but this is really a pattern
+that does that does occur and
+
+there is there a perfectly
+sensible explanation for
+
+explanations for it.
+
+So if you were to look at this
+with if you were to evaluate
+
+this particular these particular
+data with the Pearson's r
+
+correlation, you would find that
+there is a correlation
+
+coefficient of minus .18, and
+that it is not significant. But
+
+as you can see in the
+
+scatterplot, we can see a clear
+relationship between those
+
+variables, it's just not linear.
+
+So to check that you really need
+to look at the scatterplot.
+
+The 5th assumption to
+do with correlation is
+
+around the spread so different
+spread around the line of
+
+best fit. So that spread needs
+to kind of be
+
+evenly across the line
+of best fit. So in this example
+
+here on the left in orange, you
+see data points that kind of
+
+vary around this line of best
+fit in a similar fashion on all
+
+sides. So the spread here is
+similar to the spread here and
+
+similar to this right here.
+
+Now this: random clouds around
+the line of best fit, that is
+
+what we need. We would say
+this thread is homoscedastic.
+
+So that's good.
+
+Here is an example where
+That is not the case. You
+
+can see that the variance or the
+spread on
+
+the endpoint here and here is
+
+much wider then in the
+middle, so you have a kind
+
+of bow tie shaped pattern.
+
+And
+
+then a different type of
+heteroscedasticity is when
+
+the spread on one side is
+much wider and then kind of
+
+tapers off along the line of
+best fit. So these two are
+
+examples of patterns that
+are of the spread that that
+
+is called heteroscedastic.
+
+Again, you would look for
+this in your scatterplot.
+
+OK. So what to do if your data
+are not normally distributed?
+
+Now, instead of using Pearson's
+r you could use what
+
+is called a nonparametric
+equivalent of that. So a
+
+nonparametric correlation
+coefficient is Spearman's rho.
+
+There's another one, but today
+we'll just talk about Spearman's
+
+Rho, and that is based on the
+ranking of the scores. So what
+
+that does it takes all the
+scores on variable X.
+
+and ranks them from
+lowest to highest.
+
+And then it will check whether
+that participant also scored
+
+lowest on variable Y.
+
+ETC etc. But that won't. I
+mean, if that is the case,
+
+then you would have kind of a
+perfect correlation again, but
+
+it doesn't have to be the
+case. Of course it could be
+
+that participant one scores,
+Or here we have participant two
+
+who actually doesn't score
+second lowest on y
+
+So Spearman's rho can be
+used when the data is not
+
+normally distributed, when
+your when when your
+
+variable is is ordinal rather
+
+than on the interval or ratio
+level, and so it's it gives
+
+a solution to some of these
+issues.
+
+OK.
+
+Then there are some other issues
+with correlation that it is a
+
+good idea to be aware of.
+
+Um? So. A correlation
+analysis may be distorted by
+
+outliers with very extreme
+scores. So very extreme is for
+
+instance, more than three
+standard deviations deviations
+
+away from the mean.
+
+So if you look at the two graphs
+in on this slide, then here on
+
+the right, if we
+
+calculate Pearson's r for this
+scenario we would find that
+
+Pearson's r is .86.
+
+Now that suggests quite a strong
+
+positive correlation,
+but if you look
+
+at the scatterplot,
+you could find this:
+
+A set of data points here at the
+bottom left and there's one data
+
+point at the bottom right.
+
+And it is actually kind of
+
+trying to fit a line between
+these data points
+
+comes up with a positive
+positive line of best fit.
+
+Whereas once you look at at the
+scatterplot, you think like
+
+that can't be right. This
+score is clearly completely
+
+different from all the other
+scores, and if you look at just
+
+those scores, then a negative
+correlation is much more likely
+
+that this is a bit of an extreme
+example, but it is really
+
+important to look at your
+scatter plots to see whether you
+
+think that you know there might
+be outliers in the data that
+
+influence your correlation
+coefficient in an unduly
+
+fashion.
+
+Now the second issue that you
+that it is important to be aware
+
+of, is that the sample that you
+used may not represent the true
+
+variation present in the two
+variables in the population. So
+
+there is an example of it here.
+So if you think of kind of exam
+
+exam mark, for instance, you
+know you might say OK, let's
+
+look at the A level exam marks
+for a group of people.
+
+And if you were to
+
+look at people from from
+various walks of life and you
+
+would measure IQ and you would
+look at A level results,
+
+then you might find something
+like this. So a relatively
+
+strong positive correlation
+where if IQ goes up A level
+
+score goes up.
+
+But if you would
+only be looking at a sample
+
+of University students, then
+you might find a lot smaller
+
+correlation because
+
+by virtue of being at
+University, it is quite likely
+
+that people have a slightly
+higher IQ, so you would only
+
+be sampling from kind of
+This end of the of of of this
+
+variable, and you wouldn't
+have any data points here.
+
+So in this case, the correlation
+is a lot lower, but that is
+
+to do with the sample rather
+than the true relationship of
+
+these variables in the whole
+
+population. So it is really
+important to think about OK,
+
+how much variation is there
+in the score in the variables
+
+that I'm looking at in my
+correlation analysis. Is there
+
+enough variation for them to
+be able to correlate? And
+
+where does my sample come
+from? If there is a
+
+restricted
+
+amount of variance, or a
+restriction of range.
+
+But you need to think about OK,
+why is there not? Why do the
+
+people that I have sampled not
+vary on this particular
+
+variable to a larger degree?
+
+Now, this might also play out
+in in a different way, so if
+
+one range on one variable is
+unusually large.
+
+It is sometimes better to to
+look to look at that in a
+
+different way. So let's look at
+the variables. Here are math
+
+confidence or confidence in math
+and part one statistics mark.
+
+The variables are
+not that important, but the
+
+pattern is important so you
+can see kind of a cluster of
+
+scores here. So people who
+don't feel very
+
+confident about their
+maths also tend to
+
+score a bit lower on
+statistics. And then you have
+
+a cluster of scores here.
+
+And that of people who score a
+bit higher on maths
+
+also score higher on part I statistics.
+
+So it's
+basically two groups of
+
+scores. Now again, if you
+would run Pearson's
+
+correlation then it would
+would give you a positive
+
+correlation coefficient.
+
+But really, it might be more
+informative and better to create
+
+two different to to create two
+different groups and
+
+use a different statistical
+tests or look within these
+
+groups to see whether
+
+these variables are related.
+
+This happens quite a lot as well
+if you look at atypically
+
+developing children. So children
+who might do quite
+
+poorly on reading they,
+
+you know, they might all sit
+here at the bottom and you
+
+might be looking to explain
+their reading score with
+
+something else, whereas the
+typically developing children
+
+might sit up there and the
+relationship of these
+
+variables might be different
+in a group of typically
+
+developing children and a
+group of atypically
+
+developing children.
+
+So something else to be aware of
+
+and again, the scatterplot will tell you.
+
+Now intercorrelation.
+
+So, so far we've looked at
+correlation as something that
+
+tells you what the relationship
+is between two variables.
+
+But if you want to kind of look
+at how something like job
+
+performance is influenced you might,
+
+be interested in more than one
+variable, right? You could say
+
+OK, maybe your motivation will
+contribute to your job
+
+performance, but so will
+your IQ and your social support.
+
+You might also be interested in
+how these different variables
+
+are related to each other.
+
+So this suggests that you
+have really six different
+
+correlation coefficients
+that you're interested in.
+
+And that is what we what we can
+do, right? We can look, we can
+
+calculate Pearson's or for each
+of these relationships, and we
+
+already briefly looked at an APA
+correlation matrix
+
+last last time. So here you see
+one with more than two
+
+variables. So again you have
+
+the variables both at
+the top and at the side. So
+
+here they are just
+
+just numbers. These are used for
+convenience because otherwise
+
+the table would get very
+
+wide, but this one corresponds
+to this one, so we have
+
+performance, performance,
+motivation, motivation, etc. So
+
+this is how I would report that.
+
+This bit you can add, so
+this is the means and standard
+
+deviations for each of these
+variables. That is quite
+
+helpful for the reader, but
+it's not absolutely necessary.
+
+Now there is something to keep
+in mind.
+
+You can calculate multiple
+correlations between different
+
+variables. That is not a
+problem, but you have to double
+
+check that you are not inflating
+your type 1 error.
+
+Last term,
+
+Tom talked quite a bit about
+sampling and probability and
+
+type one errors and I believe
+in week six, so if you can't
+
+quite remember what a Type 1
+error is, please
+
+revisit that material.
+
+So what do we need to take into
+account here for when we do
+
+intercorrelation? So if you're
+conducting many correlations
+
+at once, that increases the
+chances of the type one error,
+
+and therefore you have to
+apply what is called the
+
+Bonferroni adjustment.
+
+Now what that does is that it
+can adjust the significance
+
+level of p. So usually you
+would say a correlation is
+
+significant if my P value is
+bigger. Sorry if my P value is
+
+smaller than .05 and that's
+called the Alpha, right? .05 is
+
+Alpha, so if the P value
+that goes with your correlation
+
+coefficient is smaller than
+Alpha, then you say,
+
+my correlation is significant.
+
+Now, if you conduct many
+correlations using the
+
+same data set,
+
+then you need to adjust that
+Alpha level using the Bonferroni
+
+adjustment. It's quite simple,
+it just works like this.
+
+So if you have three different
+variables, you need to divide
+
+that p = .05, so your Alpha, by
+three. So you divide it by the
+
+number of variables that are
+included in your
+
+intercorrelation analysis.
+Now if you divide .05 by 3,
+
+you get .016.
+
+Therefore, for a correlation
+coefficient to be significant in
+
+this particular analysis
+
+It needs to be smaller than .016
+
+If there happen to be 6 variables
+in your intercorrelation, then
+
+he would have to divide your
+Alpha level, that is p = .05
+
+by 6
+
+Any correlation in that
+particular analysis would have
+
+to be smaller than .05 / 6.
+
+OK, in summary.
+
+We reviewed the assumptions that
+are important to check when you
+
+do correlation analysis, so
+variables need to be at interval
+
+level at least and each participant
+needs to have a data point for
+
+each variable. Both variables
+need to be normally distributed
+
+and the relationship that you are looking
+
+at needs to be linear.
+
+And finally, the spread
+needs to be homoscedastic.
+
+Now then, we briefly looked at
+two issues to do with
+
+correlation analysis. So you
+have to check your scatter plot
+
+to see whether there are any
+outliers that influence your
+
+correlation unduly, and
+whether there is any range
+
+restrictions that is there is
+limited variation in one or the
+
+other variable that might
+influence your conclusions.
+
+Yeah, think about where the
+sample comes from or why there
+
+might be limited variation on
+this particular variable.
+
+And then we looked at doing
+intercorrelation or multiple
+
+correlations among variables in
+from the same data set.
+
+And a correlation matrix can
+show you multiple
+
+correlations between
+variables at once. But be
+
+aware of the multiple
+comparisons problem and the
+
+need to use the Bonferroni
+adjustment.
+
+Thank you, that is that
+that is it for now.

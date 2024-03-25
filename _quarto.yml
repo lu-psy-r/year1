@@ -2,9 +2,6 @@ project:
   type: website
   output-dir: docs
 
-language:
-  search-box-placeholder: "Search Year One"
-
 website:
   title: "Statistics for Psychologists"
   favicon: "Images/favicon.png"
@@ -13,30 +10,38 @@ website:
   search: 
     type: textbox
   
-  repo-url: https://github.com/M1V0/Statistics_for_PSYC
+  repo-url: https://github.com/lu-psy-r/
   #repo-actions: [edit, issue]
   
   navbar:
     #logo: "Images/icon.png"
     left:
       - text: Home
-        href: https://m1v0.github.io/Statistics_for_PSYC/
-        file: index.qmd
+        href: https://lu-psy-r.github.io/
       - text: Year 1
-        file: PSYC121/index.qmd
+        file: https://lu-psy-r.github.io/year1
       - text: Year 2
-        file: PSYC122/index.qmd
+        file: https://lu-psy-r.github.io/year2
       - text: MSc
-        file: PSYC121/index.qmd
+        file: https://lu-psy-r.github.io/msc
       - text: And More...
-        file: PSYC122/index.qmd
+        file: https://lu-psy-r.github.io/more
 
+  sidebar:
+    style: "floating"
+    search: true
+    collapse-level: 1
+    contents:
+      - section: "PSYC121"
+        contents: PSYC121/*
+      - section: "PSYC122"
+        contents: PSYC122/*
+          
   page-footer:
     left: "Website developed by Matthew Ivory"
     right:       
       - icon: github
-        href: https://github.com/M1V0/Statistics_for_PSYC
-
+        href: https://github.com/M1V0/
 
 format:
   html:
@@ -53,9 +58,7 @@ format:
     include-in-header:
       - text: |
           <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-          <script language="JavaScript" type="text/javascript" src="/function.js"></script>
           <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  
   
 editor: source
 
