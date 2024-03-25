@@ -1,0 +1,44 @@
+---
+title: Statistics for Psychologists I
+subtitle: "Course coordinators: Tom Beesley, John Towse"
+email-obfuscation: javascript
+order: 1
+
+#listing:
+#  id: links
+#  template: ../links.ejs
+#  contents: guide.yml
+---
+
+# Welcome
+
+Welcome to the PSYC121 lab material for 2023!
+
+In this module you will learn the basics of data handling, data processing and data visualisation. What that means is that, by the end of the this module (at Christmas time), you will be able to take a set of data, look at some basic statistics (e.g., the mean value), filter and process the data in order to answer basic questions about it, and present the data in an appealing way with different graphs. On top of this, you will be able to apply some of your knowledge of the basic "inferential" statistical tests that we will introduce in the lecture series (e.g., "t-test").
+
+In Week 1 we will introduce you to the software that we use to do all this useful work in statistics: "R" and "RStudio". This is a coding language, and you will be taught the basics of how to write code in order to do all of the above key steps in data analysis. This tuition will continue in Term 2, and in your statistics modules in Year 2. Coding is challenging, but we know from experience that those students who attend classes, who work through the exercises carefully, and who seek help when they need it, do very well on these modules.
+
+Most of all, it's important that you recognise that data analysis (statistics) is a critical aspect of the study of psychology. When we want to understand behaviour, we take measurements of that behaviour, which the majority of the time will result in quantitative (numerical) data. In order to understand the behaviour in a meaningful way, we need to conduct all of the above steps in our data analysis workflow. In summary, we cannot investigate psychological processes without the skills and toolbox of statistics and data analysis techniques.
+
+# Working at your own pace and seeking help
+
+We have carefully prepared and refined the lab materials in this course over several years, and we feel that the pace of the materials is just right for our students. Some students will complete them more quickly, and others more slowly - both of these scenarios are absolutely fine. You should work at the pace that suits you best, making sure you understand the materials before you move forward. 
+
+It is fairly inevitable that you will get stuck on the lab materials in this module at some point. This might be in Week 1, Week 2, or later. When you do, it's important you reach out for help:
+
+  - **Ask your friends on your table**. We've designed this teaching space to help collaborative work. You are encouraged to work with other students. Make sure you ask others to explain how they've solved an exercise. Make sure you help out others where you can. Always make sure you understand the code and the exercise; don't simply be satisfied that you've got the right answer.
+  - **Ask a GTA or Lecturer**. Our Graduate Teaching Assistants are there to help you. There are no "stupid questions" in statistics, so just ask the GTAs any question about what you're doing. Likewise, ask the Lecturer. 
+  - **Ask on the Discussion Forum**. On the PSYC121 moodle page you will find a [Discussion Forum](https://modules.lancaster.ac.uk/mod/forum/view.php?id=2211244). This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don't be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).
+  - **Ask on the module Q & A session**. Each week we hold a "Q&A" online session where we will try and resolve any general queries and problems. It's an ideal time to discuss things that students are struggling with or confused about, and can share ideas and answers. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but also you can ask in the session itself.
+  
+**Asking good questions** - it's really important that you give us as much information as you can when you ask your questions (in class and especially on the forum). It's so much harder to help respond to "I can't do Exercise 5 in Week 7" (because we don't know why it is that you can't do it) than for example "In Exercise 5 of Week 7, I've managed to read in the data, put the graph looks quite odd. Here is the code I'm using..."
+
+# Course Contacts
+
+If you have something that needs to be private, then please feel free to email the academic staff at the email addresses below:
+
+|             | Email Address                                                  |
+|-------------|----------------------------------------------------------------|
+| Tom Beesley (Coordinator) | [t.beesley\@lancaster.ac.uk](mailto:t.beesley@lancaster.ac.uk) |
+| John Towse  | [j.towse\@lancaster.ac.uk](mailto:j.towse@lancaster.ac.uk)     |
+|             |                                                                |

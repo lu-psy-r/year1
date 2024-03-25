@@ -1,0 +1,267 @@
+---
+title: 6. Sampling, probability and binomial tests
+subtitle: Written by Tom Beesley & John Towse
+order: 7
+editor_options: 
+  chunk_output_type: console
+---
+
+## Week 6 Lecture
+
+Watch Part 1
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=5676177e-7dcc-4c30-9e72-b0b500aa82d6&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+Watch Part 2
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=a6c7e439-077a-464d-ac43-b0b500aa8285&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+Watch Part 3
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=c62c74c2-4bb0-4c28-91b0-b0b500aa825d&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+Watch Part 4
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=350fbb75-e55d-47bf-8c41-b0b500aa8218&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+
+You can download the lecture slides [here](data/Week_6/PSYC121_wk6_slides_2023.pptx)
+
+## Reading 
+
+[Chapter 8](https://modules.lancaster.ac.uk/mod/url/view.php?id=2017199) of Howell
+
+## Pre-lab work
+
+-   Ensure you have watched the above lecture content for Week 6.
+
+-   Complete the short learnr tutorial which will introduce you to running the **binomial tests** in R. [You can find it here](https://ma-rconnect.lancs.ac.uk/PSYC121_2022_W6_prep/){target="_blank"}.
+
+- [link for the class record of sampling data](https://livelancsac-my.sharepoint.com/:x:/r/personal/beesleyt_lancaster_ac_uk/_layouts/15/Doc.aspx?sourcedoc=%7B60932BC9-9BD4-4DAF-AA64-BF0011A6F1BD%7D&file=PSYC121_Week6_lab.xlsx&action=default&mobileredirect=true&DefaultItemOpen=1&login_hint=beesleyt%40lancaster.ac.uk&ct=1699868170425&wdOrigin=OFFICECOM-WEB.MAIN.EDGEWORTH&cid=1a337b32-6b42-4478-b2e6-c266592295db&wdPreviousSessionSrc=HarmonyWeb&wdPreviousSession=411efc32-2cea-4713-9375-3f276715f400)
+
+## Some basic RMarkdown
+
+We introduced you to RMarkdown in Week 4. It's like a .R script, only a bit more fancy! Today we'll introduce a couple more features and use this in our tasks below. 
+
+1. Make sure you have a Week 6 folder
+
+2. Once in that folder in the files pane, click "more" and "set as working directory"
+
+3. Then click the new file button and select "R Markdown"
+
+![](images/wk6/new_rmd.png) 
+
+4. You'll be asked to name this file. Leave the other options as they are and click OK.
+
+5. When the new R Markdown file appears, try "knitting" it (the icon at the top with the ball of wool). You should get a nice output of the default R Markdown document.
+
+6. Note that in R Markdown documents you can freely type in text in the main body of the file - you did this last week. But see how you can also create a *"code chunk"* within the document. These are places where you put your R code you want to run. 
+
+::: {.callout-tip title=".Rmd and .R differences"}
+In a way, R Markdown files function in the opposite way to .R files: 
+
+- **.Rmd**: you write normal text in the main part (like you'd do in a word processor), but you create a special "code chunk" for your code.
+
+- **.R**: you write code in the main body, and use the "#" to write normal text as a comment
+:::
+
+7. Try running the first code chunk (click the green arrow on the right). This will run the code and display the output (in the document and in the console). 
+
+
+## Creating an R Markdown for your lab work
+
+1. Delete all of the script except the first title (## R Markdown)
+
+2. Change this title to something more relevant: (e.g., ## Task 1 - Card Sampling task)
+
+3. Knit your document to check it is still working!
+
+## Card sampling task
+
+![](images/wk6/cards.jpg)
+
+In the first task this week we will look at the sampling of events and we will apply the basic statistical test of the binomial test: `binom.test()`
+
+Each table has a set of cards. These will be 13 red cards and 13 black cards - please check your set to ensure you have the right number of each colour (it doesn't matter what suit the cards are).
+
+We are going to play a game in which one person chooses a set of these cards and biases the deck towards either red or black. The other members of the table have to try and work out which way the set is biased. To do this, they will draw samples from the deck.
+
+::: {.callout-important icon=true title="The Experiment"}
+
+Think of this as an experiment: there is something real out there in the world in our "population" (the cards). As an experimenter we are trying to estimate what is true about the world, and in order to do this we need to take samples. When you can only see the backs of the cards, that data is unobserved. But as we draw samples, we start to understand how the "world" is - whether it is biased towards red or black. 
+
+So each time you draw a card, you are observing one data point from the population, and based on the data you collect (your samples) you are going to draw an inference about what is true about the population.
+
+:::
+
+### Set up and instructions:
+
+1.  One person on each table should act as the "world" (the person who biases the cards). Congratulations, you are God! This person will determine what is true about the state of things in the world. This means they control what is contained in the deck of cards. 
+
+2. For each experiment, this person secretly looks at the cards, and removes some cards to use in the experiment. For example, from the set of 26 cards, they might choose to remove 4 black cards. The deck is now biased towards red (13 red; 9 black).
+
+3. It's important that no one sees what the cards are (the ones you've kept, or the ones removed). Shuffle the cards so they are ready to be sampled. 
+
+4.  The remaining people (1 or more) will act as the experimenters. Your job is to draw samples and work out whether you think the deck is biased or not towards either red or black. 
+
+5. Now copy the following text and code to your R Markdown document to record your work:
+
+````
+### Experiment 1
+
+Number of samples:
+Total red cards found:
+Total black cards found:
+Conclusion: 
+The true bias was: 
+
+
+```{{r}}
+
+binom.test(x, n) # x is the number or red or black; n is the sample size
+
+```
+
+````
+### Running each experiment 
+
+Do these steps for each experiment:
+
+1. The "World" removes some cards from the full deck (the number and colour of the cards removed is up to them). They shuffle the chosen cards ready to start the "experiment".
+
+2. The "Experimenters" **pre-register** their sample size. That is, they state how many cards they are going to draw.
+
+3. Draw samples one at a time (each experimenter can take one card, to speed things up). 
+
+::: {.callout-important icon=true title="Important!"}
+**Make sure you replace all the cards each time you draw samples.** The world/dealer should also give the pack a quick shuffle.
+:::
+
+4. Do step 3 until you have collect the sample size you chose
+
+5. Once you have all the samples, the experimenters should draw a conclusion based initially on their own "gut feeling" about the data. Do you think the deck was biased towards red, black, or was it unbiased?
+
+6. Change the `binom.test()` code to provide a statistical result. Note the "p value". Was this result unusual? How likely were the data given the null hypothesis? 
+
+7. The "world" can then reveal the hidden cards. Was the deck actually biased or not? How does this sit with a) your initial conclusions, and b) the result of the binomial test? 
+
+8. Complete your record log in the .Rmd file. Feel free to Write a short statement about what you found in this experiment. 
+
+Repeat all of the above steps (1-8) for a new experiment, **making sure that you try different parameters for the experiment**. So vary a) how many cards are removed from the deck, b) the combination of cards removed from the deck, and c) the pre-registered sample size. Feel free to swap the roles around.
+
+Once you've conducted a few experiments, discuss on your table the results you found. It might be useful to think about the following things:
+
+-   were there times when your intuitions were different to the statistical result? For example, you were sure there was a bias, but in fact the statistics told you this was not that unusual (p was \> .05)?
+
+-   were there times when the deck was actually biased, but you failed to prove this with your experiment (you failed to see p \< .05)? Do you remember what this type of error is called?
+
+-   were there times when the deck was *not* biased, but the test result suggested it was (p \< .05)? Do you remember what type of error this is called?
+
+```{r}
+#| eval: true
+#| echo: false
+#| output: false
+
+library(tidyverse)
+
+# d_raw <- read_csv("data/Week_6/PSYC121_teaching_data_2023.csv")
+# 
+# # get the relevant risky decision columns and wrangle
+# d <- 
+#   d_raw %>% 
+#   select("gain" = Q16, "loss" = Q17) %>% 
+#   dplyr::slice(3:n()) %>% 
+#   mutate(across(gain:loss, ~ (case_when(.x == "1" ~ "safe", .x == "2" ~ "risky"))))
+# write_csv(d, file = "data/Week_6/risky_decisions.csv")
+
+# risk_dec <- read_csv("data/Week_6/risky_decisions.csv")
+# 
+# count(risk_dec,gain)
+# 
+# binom.test(109,137)
+# 
+# count(risk_dec,loss)
+# 
+# binom.test(76,137)
+
+
+
+```
+
+## Risky and safe decisions
+
+For the second exercise today we will look at data from the survey on "risky and safe decisions". You may remember that you were asked the following question:
+
+::: {.callout-tip icon=false title="Gain"}
+Imagine you are on a game-show and you win £300. The presenter gives you have a choice: receive an additional £100 for sure, or take a gamble offering a 50% chance to gain £200 and a 50% chance to gain nothing. Which would you choose?
+
+- receive £100 for sure
+
+- take the gamble of a 50% chance to gain £200 and a 50% chance to gain nothing
+:::
+
+We then asked you a similar question:
+
+::: {.callout-important icon=false title="Loss"}
+Imagine you are on a different game-show and you win £500. Here you are given a choice between either losing £100 from your winnings for sure, or taking a gamble offering a 50% chance to lose nothing and a 50% chance to lose £200. Which would you choose?
+
+- lose £100 for sure
+
+- take the gamble of a 50% chance to lose nothing and a 50% chance to lose £200
+:::
+
+We've called these "gain" and "loss", because in the first scenario you're being asked about a chance to gain money, while in the second, it's about a chance to lose money. Note that the **"expected utility"** of the choices is equivalent:
+
+::: {.callout-note icon=false appearance="simple"}
+
+"The expected utility of an act is a weighted average of the utilities of each of its possible outcomes, where the utility of an outcome measures the extent to which that outcome is preferred, or preferable, to the alternatives. The utility of each outcome is weighted according to the probability that the act will lead to that outcome." [see here](https://plato.stanford.edu/entries/rationality-normative-utility/)
+:::
+
+That's to say, on average, you'll end up with +£100 for the two cases in the gain scenario, or -£100 for the two cases in the loss scenario.
+
+But what do people actually pick? Well people tend to be risk-averse, choosing the safe option overall. But interestingly, the safe option is picked far less when the scenario is presented as a loss. People seem to want to take the risk of potentially not losing anything (but maybe losing more).
+
+Let's look to see if you showed the same pattern!
+
+1. Create a new section of your markdown, giving it a suitable header
+
+2. Create a new code chunk by clicking the "Code" menu, then "Insert Chunk"
+
+3. You can download the data from [this link](data/Week_6/risky_decisions.csv), then upload it into the server.
+
+4. Add a `read_csv()` command to read the data into the environment. 
+
+::: {.callout-important title="Reading CSVs"}
+
+- Remember to set the working directory so R knows where the file is
+- Remember to assign (<-) to a new data object and give this a sensible name
+:::
+
+5. View the data, and see that the columns represent the gain and loss scenarios. The values represent the choices people made. 
+
+6. Use the `count()` function to count the number of "safe" and "risky" choices that were made for our sample
+
+```{r}
+#| eval: false
+count(my_data_object_name, gain)
+```
+
+7. We can now tell whether, in our sample, people tended to play it safe or take the risky choice. Did the sample have a meaningful bias towards one type of decision? If they didn't we'd expect it to be a 50/50 split between safe and risky (people might make their choice at random). Use the `binom.test()` to look at whether the result would be expected by chance, noting the p value that is found. 
+
+8. Write a sentence or two after your code to explain what this result means.
+
+9. Repeat for the data from the loss column. Was the p value < .05 here? Again, write a sentence or two to explain what this means. 
+
+## Week 6 Quiz
+
+You can access a set of quiz questions related to this week [here.](https://ma-rconnect.lancs.ac.uk/PSYC121_Week_6_Quiz/){target="_blank"}
+
+

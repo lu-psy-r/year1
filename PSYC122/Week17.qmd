@@ -1,0 +1,1244 @@
+---
+title: 6. Week 17 -- Better understanding the linear model
+subtitle: Written by Rob Davies
+order: 6
+---
+
+::: callout-warning
+This page is now live for you to use: **Welcome!**
+
+- Here is a link to the sign-in page for [R-Studio Server](https://psy-rstudio.lancaster.ac.uk/auth-sign-in?appUri=%2F)
+:::
+
+```{r}
+#| warning: false
+#| echo: false
+library(kableExtra)
+library(tidyverse)
+```
+
+```{r}
+#| warning: false
+#| echo: false
+study.one.gen <- read_csv("study-one-general-participants.csv")  
+study.two.gen <- read_csv("study-two-general-participants.csv")
+```
+
+## Week 17: Introduction {#sec-wk17-introduction}
+
+Welcome to your overview of our work together in **PSYC122 Week 17**.
+
+::: callout-tip
+*Putting it all together*
+
+- We will complete four classes in **weeks 16-19**.
+- These classes are designed to help you to revise and to put into practice some of the key ideas and skills you have been developing in the first year research methods modules *PSYC121, PSYC123 and PSYC124*.
+- We will do this in the context of a live research project with potential real world impacts: the **Clearly Understood** project.
+:::
+
+### Our learning goals
+
+In Week 17, we aim to further develop skills in *analyzing* and in *visualizing* psychological data.
+
+We will do this in the context of the **Clearly Understood** project: our focus will be on what makes it easy or difficult for people to understand written health information.
+
+::: callout-tip
+In the Week 17 class, we will aim to answer the research question:
+
+1. What person attributes predict success in understanding?
+
+In psychological science, research questions like our question can be examined **using linear models**.
+:::
+
+When we do these analyses, we will need to think about how we report the results:  
+
+- we usually need to report information about the kind of model we specify;
+- and we will need to report the nature of the association estimated in our model.
+
+This means we will usually need to decide:
+
+- is the association significant?
+- does the association reflect a positive or negative relationship between outcome and predictor?
+- is the association relatively strong or weak?
+
+Our thinking, and our decision-making, will be helped by developing our data visualization skills.
+At every stage, as we work, we will visualize the data to:
+
+- Understand the shape of the relationships we may observe or predict.
+
+::: callout-tip
+- We will aim to build skills in producing professional-looking plots for our audiences. 
+:::
+
+## Lectures {#sec-wk17-lectures}
+
+::: callout-tip
+Before you go on to the activities in @sec-wk17-lab-activities, **watch** the lectures:
+:::
+
+The lecture for this week is presented in four short parts.
+You can view video recordings of the lectures using Panopto, by clicking on the links shown following.
+
+1. **Overview** (19 minutes): What we are doing in Week 17 -- thinking critically about predicting people.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=5c751906-33d0-4ebd-a49d-afb000ec09ce&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+2. **Using linear models to do prediction** (11 minutes): How we answer live research questions by using linear models to predict behaviour.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=d9d5ade2-e10c-4e14-b938-afb000f2634c&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+3. **How linear models work** (9 minutes): How we can visualize and think about predictions, and about the difference between what we predict and what we observe when we study people.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=44dfb2c3-80d3-4fa6-8978-afb000f63c17&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+4. **Interpreting, reporting and visualizing** linear model results (15 minutes): Identifying, interpreting and communicating the key statistics.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=4a20cb70-618c-4bf3-999a-afb000f9bdcf&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+::: callout-tip
+The slides presented in the videos can be downloaded either as a web page or as a Word document.
+:::
+
+- [The slides](data/week17/122-linear-model-intro.html) exactly as presented (21 MB). 
+- [The slides](data/week17/122-linear-model-intro-printable-edit.docx) converted to a Word .docx (11 MB). 
+
+You can download the web page `.html` file and click on it to open it in any browser (e.g., Chrome, Edge or Safari). The slide images are high quality so the file is quite big and may take a few seconds to download.
+
+You can download the `.docx` file and click on it to open it as a Word document that you can then edit. 
+Converting the slides to a .docx distorts some images but the benefit of the conversion is that it makes it easier for you to add your notes.
+
+### The lectures have two main areas of focus {#sec-wk17-lectures-focus}
+
+**1. Understanding the scientific process**
+
+I outline the steps through which a psychological scientist may progress, in logic and practice, from research questions to hypotheses to analyses.
+
+We are learning data analysis methods.
+But the key point is that we use these methods in the context of a research project with concerns, aims, methodological assumptions, and choices.
+This is generally true so the aim is to present a concrete example of how research works.
+
+As part of the discussion, I raise questions you might want to consider.
+These questions are also part of the context for our data analysis, because they help to inform how you interpret or evaluate the results.
+These questions are examples of the **critical evaluation** that you will need to develop through your studies.
+
+**2. The linear model**
+
+We look at how the linear model can be used to address research questions in the context of the **Clearly understood** health comprehension project.
+But I aim to outline some general ideas about why we use the linear model technique, and how it works.
+
+I build on work you have done with Margriet Groen in earlier PSYC122 classes, so that we can *strengthen* understanding, and *extend skills*.
+
+The lectures end with a discussion of the critical information you must identify and extract when you view the summary of a linear model results.
+
+I then show you how to report the results.
+I give you examples of the conventional language you can use to report your results.
+
+::: callout-tip
+To work with the recordings:
+
+- Watch the video parts right through.
+- Use the printable versions of the slides (provided on Moodle) to make notes.
+- Try out the coding exercises in the how-to guide and the acitivity tasks or questions (@sec-wk17-lab-activities) to learn how to construct visualizations and do analyses.
+:::
+
+## Reading: Links to other classes
+
+We do not provide further reading for this class but you will find it helpful to revise some of the key ideas you have been learning about PSYC122 and in other modules.
+
+- The lectures in *PSYC123* on: the scientific method; reliability and validity; experimental design, especially between-subjects studies; hypothesis testing; and precise hypotheses.
+- The lecture in *PSYC122* on correlations. 
+
+## Pre-lab activities {#sec-wk17-prelab-activities}
+
+### Pre-lab activity 1 {#sec-wk17-prelab-activities-1}
+
+In weeks 16-19, we will be working together on a research project to investigate how people vary in their response to health advice.
+
+Completing the project involves collecting responses from *PSYC122* students: **you**.
+
+To enter your responses, we invite you to complete a short survey.
+
+Complete the survey by clicking on the link [here](https://lancasteruni.eu.qualtrics.com/jfe/form/SV_0qdj8TOZc18LR0q)
+
+::: callout-tip
+In our week 19 class activity, we will analyze the data we collect here.
+:::
+
+The survey should take about 20 minutes to complete.
+
+Taking part in the survey is **completely voluntary**.
+You can stop at any time without completing the survey if you do not want to finish it.
+If you do not want to do the survey, you can do an alternative activity (see below).
+
+All responses will be recorded completely anonymously.
+
+### Pre-lab activity alternative option {#sec-wk17-prelab-activities-2}
+
+If you do not want to complete the survey, we invite you to read the pre-registered research plan for the *PSYC122 health advice* research project.
+
+[Read the project pre-registration](https://osf.io/p6fsc/)
+
+## Lab activities {#sec-wk17-lab-activities}
+
+### Introduction {#sec-wk17-lab-activities-1-introduction}
+
+We will do our practical lab work to develop your skills in the context of the **Clearly Understood** project.
+
+- Our focus will be on what makes it easy or difficult for people to understand written health information.
+
+::: callout-important
+In these classes, we will complete a research project to answer the research questions:
+
+1. What person attributes predict success in understanding health information?
+2. Can people accurately evaluate whether they correctly understand written health information?
+:::
+
+### Get ready {#sec-wk17-prelab-activities-ready}
+
+#### Download the data
+
+Click on the link: [122_week17_for_students.zip](data/week17/122-week17_for_students.zip) to download the data files folder. Then upload the contents to the new folder you created in RStudio Server.
+
+The downloadable .zip folder includes the data files:
+
+- `study-one-general-participants.csv`
+- `study-two-general-participants.csv`
+
+and the R Markdown `.Rmd`:
+
+- `2023-24-PSYC122-w17-how-to.Rmd`
+
+If you can't upload these files to the server -- this affects some students -- you can use some code to get R to do it for you: uncover the code box below to reveal the code to do this.
+
+:::{.callout-tip collapse="true"}
+## Code
+- You can use the code below to directly download the file you need in this lab activity to the server.
+- Remember that you can copy the code to your clipboard by clicking on the 'clipboard' in the top right corner.
+
+1. Get the `study-one-general-participants.csv` data
+
+```{r eval=FALSE}
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week17/study-one-general-participants.csv?raw=true", destfile = "study-one-general-participants.csv")
+```
+
+2. Get the `study-two-general-participants.csv` data
+
+```{r eval=FALSE}
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week17/study-two-general-participants.csv?raw=true", destfile = "study-two-general-participants.csv")
+```
+
+3. Get the `2023-24-PSYC122-w17-how-to.Rmd` how-to guide
+
+```{r eval=FALSE}
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week17/2023-24-PSYC122-w17-how-to.Rmd?raw=true", destfile = "2023-24-PSYC122-w17-how-to.Rmd")
+```
+:::
+
+#### Check: What is in the data files? {#sec-wk17-data-summary}
+
+Each of the data files we will work with has a similar structure, as you can see in this extract.
+
+```{r}
+#| label: headcheck-wide
+#| echo: false
+# head(behaviour.rt)
+study.two.gen %>%
+  filter(participant_ID == c('studytwo.1', 'studytwo.10', 'studytwo.100', 'studytwo.101')) %>%
+  as.data.frame() %>%
+  kable() %>%
+  kable_styling()
+```
+
+You can use the *scroll bar* at the bottom of the data window to view different columns.
+
+You can see the columns:
+
+- `participant_ID` participant code;
+- `mean.acc` average accuracy of response to questions testing understanding of health guidance (varies between 0-1);
+- `mean.self` average self-rated accuracy of understanding of health guidance (varies between 1-9);
+- `study` variable coding for what study the data were collected in
+- `AGE` age in years;
+- `HLVA` health literacy test score (varies between 1-16);
+- `SHIPLEY` vocabulary knowledge test score (varies between 0-40);
+- `FACTOR3` reading strategy survey score (varies between 0-80);
+- `GENDER` gender code;
+- `EDUCATION` education level code;
+- `ETHNICITY` ethnicity (Office National Statistics categories) code.
+
+::: callout-tip
+It is always a good idea to view the dataset -- click on the name of the dataset in the R-Studio `Environment` window, and check out the columns, scroll through the rows -- to get a sense of what you are working with.
+:::
+
+### Lab activity 1: Work with the `How-to` guide {#sec-wk17-lab-activities-1}
+
+The `how-to` guide comprises an .Rmd file:
+
+- `2023-24-PSYC122-w17-how-to.Rmd`
+
+It is full of advice and example code.
+
+The code in the `how-to` guide was written to work with the data file:
+
+- `study-one-general-participants.csv`.
+
+::: callout-tip
+We show you how to do everything you need to do in the lab activity (@sec-wk17-lab-activities-2, next) in the `how-to` guide.
+
+- Start by looking at the `how-to` guide to understand what steps you need to follow in the lab activity.
+:::
+
+We will take things *step-by-step*.
+
+We split .Rmd scripts by steps, tasks and questions:
+
+- different steps for different phases of the analysis workflow;
+- different tasks for different things you need to do;
+- different questions to examine different ideas or coding challenges
+
+::: callout-tip
+- Make sure you start at the top of the `.Rmd` file and work your way, in order, through each task.
+- Complete each task before you move on to the next task.
+:::
+
+In the activity @sec-wk17-lab-activities-2, we are going to work through the following tasks.
+
+::: callout-tip
+- Notice that we are gradually building up our skills: consolidating what we know; revising important learning; and extending ourselves to acquire new skills.
+- Over time, we will refer less and less to what we have learned before.
+:::
+
+**Step 1: Set-up**
+
+1. Empty the R environment -- using `rm(list=ls())`
+2. Load relevant libraries -- using `library()`
+
+**Step 2: Load the data**
+
+3. Read in the data file -- using `read_csv()`
+4. Inspect the data -- using `head()` and `summary()`
+
+**Step 3: Use histograms to examine the distributions of variables**
+
+5. Draw histograms to examine the distributions of variables -- using `ggplot()` and `geom_histogram()`
+6. Practice editing the appearance of a histogram plot step-by-step
+
+**Step 4: Now draw scatterplots to examine associations between variables**
+
+7. Create scatterplots to examine the association between some variables 
+8. Edit the appearance of *each* plot step-by-step
+
+**Step 5: Use correlation to to answer the research questions **
+
+9. Examine the correlations between the outcome variable and predictor variables
+
+**Step 6: Use a linear model to to answer the research questions**
+
+10. Examine the relation between outcome mean accuracy (`mean.acc`) and each of the potential predictors: `SHIPLEY`, `HLVA` and `AGE`
+
+**Step 7: Use a linear model to generate predictions**
+
+11. Use a model we have fitted to plot model predictions
+
+::: callout-tip
+If you are unsure about what you need to do, look at the advice in `2023-24-PSYC122-w17-how-to.Rmd` on how to do the tasks, with examples on how to write the code.
+:::
+
+You will see that you can match a task in the activity @sec-wk17-lab-activities-2 to the same task in the `how-to` guide.
+The `how-to` shows you what function you need and how you should write the function code.
+
+This process of adapting demonstration code is a process critical to data literacy and to effective problem solving in modern psychological science.
+
+::: callout-warning
+Don't forget: You will need to change the names of the dataset or the variables to complete the tasks in the activity.
+:::
+
+### Lab activity 2 {#sec-wk17-lab-activities-2}
+
+### OK: now let's do it!
+
+In the following, we will guide you through the tasks and questions step by step.
+You will learn more if you follow this advice:
+
+::: callout-tip
+1. We will hide the code to do some tasks behind a drop-down button. Try to write and run the code for yourself first.
+2. We won't always give you the code required to do something: this gives you the chance to check what you have learned by trying out your code without the answer in front of you.
+3. We will not *at first* give you the answers to questions about the data or about the results of analyses.
+4. An answers version of the workbook will be provided after the last lab session (check the answers then in @sec-wk17-lab-activities-answers) so that you can check whether your independent work has been correct.
+:::
+
+#### Questions {#sec-wk17-lab-activities-1-questions}
+
+#### Step 1: Set-up
+
+To begin, we set up our environment in R.
+
+##### Task 1 -- Run code to empty the R environment
+
+```{r}
+#| eval: false
+rm(list=ls())
+```
+
+##### Task 2 -- Run code to load relevant libraries
+
+```{r}
+#| eval: false
+library("tidyverse")
+```
+
+#### Step 2: Load the data
+
+##### Task 3 -- Read in the data file we will be using
+
+The data file for the *workbook* is called:
+
+- `study-two-general-participants.csv`
+
+Use the `read_csv()` function to read the data file into R.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+study.two.gen <- read_csv("study-two-general-participants.csv")
+```
+:::
+
+When you code this, you can choose your own file name, but be sure to give the data object you create a distinct name e.g. `study.two.gen`.
+
+##### Task 4 -- Inspect the data file
+
+Use the `summary()` or `head()` functions to take a look
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+summary(study.two.gen)
+```
+:::
+
+::: callout-tip
+## Hint
+Even though you have done this before, you will want to do it 
+again, here.
+
+- Pay attention to what you see, for the numeric variables, in the information about minimum (Min.) and maximum (Max.) values.
+:::
+
+#### Step 3: Use histograms to examine the distributions of variables
+
+#### Revise: make sure you are confident about doing these things
+
+##### Task 5 -- Draw histograms to examine the distributions of variables
+
+:::{.callout-tip collapse="true"}
+## Hint
+Use `ggplot()` with `geom_histogram()`.
+
+When we create a plot, we take things step-by-step.
+
+Here's an example you have seen before: run the lines of code and see the result in the `Plots` window in `R-Studio`.
+
+```{r}
+ggplot(data = study.two.gen, aes(x = mean.acc)) + 
+  geom_histogram()
+```
+
+These are the steps, set out one at a time:
+
+1. `ggplot(...)` you tell R you want to make a plot using the `ggplot()` function
+2. `ggplot(data = study.two.gen ...)` you tell R you want to make a plot with the
+`study.two.gen` data
+3. `ggplot(..., aes(x = mean.acc))` you tell R that you want to make a plot with 
+the variable `mean.acc` -- here, you specify the aesthetic mapping, `x = mean.acc`
+4. `ggplot(...) + geom_histogram()` you tell R you want to plot values of `mean.acc` 
+as a histogram
+
+Notice that the code works the same whether we have the different bits of code on the same
+line or in a series of lines.
+:::
+
+##### Task 6 -- Practice editing the appearance of a histogram plot step-by-step
+
+Start by constructing a basic histogram.
+
+- Draw a histogram plot to visualize the distribution of whichever numeric variable from the `study.two.gen` dataset you please.
+
+:::{.callout-tip collapse="true"}
+## Hint
+- Use the line-by-line format to break the plot code into steps.
+- It will make it easier to read, and it will make it easier to add edit.
+::: 
+
+1. Pick numeric variable in the dataset.
+2. Run the code to produce a histogram of the variable values.
+
+Can you work out how to do it without looking at the code example?
+
+Click on the button to see the code example: compare it to the code you wrote.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + 
+  geom_histogram()
+```
+:::
+
+We are going to revise editing:
+
+1. The appearance of the bars using `binwidth`;
+2. The colour of the background using `theme_bw()`;
+3. The appearance of the labels using `labs().
+
+Then we are going to try some new moves:
+
+4. Setting the x-axis limits to reflect the full range of possible scores 
+on the x-axis variable;
+5. Adding annotation -- here, a vertical line -- indicating the sample average 
+for a variable.
+
+>**Q.1.** Edit the appearance of the bars by specifying a `binwidth` value.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + 
+  geom_histogram(binwidth = 2)
+```
+:::
+
+>**Q.2.** Then add an edit to the appearance of the background using `theme_bw()`.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + 
+  geom_histogram(binwidth = 2) +
+  theme_bw()
+```
+:::
+
+>**Q.3.** Then add an edit to the appearance of the labels using `labs()`.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + 
+  geom_histogram(binwidth = 2) +
+  theme_bw() +
+  labs(x = "SHIPLEY", y = "frequency count")
+```
+:::
+
+#### Introduce: make some new moves
+
+>**Q.4.** Now add an edit by setting the x-axis limits using `x.lim()`.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + 
+  geom_histogram(binwidth = 2) +
+  theme_bw() +
+  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count") +
+  xlim(0,40)
+```
+:::
+
+>**Q.5.** Then add an edit to draw a vertical line to show the mean value of 
+the variable you are plotting..
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + 
+  geom_histogram(binwidth = 2) +
+  theme_bw() +
+  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count") +
+  xlim(0,40) +
+  geom_vline(xintercept = mean(study.two.gen$SHIPLEY), colour = "red", size = 1.5)
+```
+:::
+
+>**Q.6.** Can you find information on how to define the limits on the x-axis 
+and on the y-axis?
+
+:::{.callout-tip collapse="true"}
+## Hint
+You can see the information in this week's `how-to` guide but try a search online for "ggplot reference xlim".
+:::
+
+<!-- - A.6. See ggplot reference information on setting limits here: -->
+
+<!-- <https://ggplot2.tidyverse.org/reference/lims.html> -->
+
+>**Q.7.** Can you find information on how to a reference line?
+
+:::{.callout-tip collapse="true"}
+## Hint
+You can see the information in this week's how-to but try a search online for "ggplot reference vline".
+:::
+
+<!-- - A.7. See ggplot reference information on adding lines here: -->
+
+<!-- <https://ggplot2.tidyverse.org/reference/geom_abline.html> -->
+
+#### Step 4: Now draw scatterplots to examine associations between variables
+
+#### Consolidation: should be no surprises here
+
+But if you want to remind yourself how to do things, click on the box to reveal hint information.
+
+:::{.callout-tip collapse="true"}
+## Hint
+- We are working with `geom_point()` and you need x and y aesthetic mappings.
+- The outcome variable `mean.acc` has to be mapped to the y-axis using `...y = ...`
+
+This is how the target scatterplot code works.
+
+```{r}
+#| eval: false
+ggplot(data = data.set, aes(x = predictor.variable, y = outcome.variable)) +
+  geom_point()
+```
+
+The plot code moves through the following steps:
+
+1. `ggplot(...)` make a plot;
+2. `ggplot(data = data.set, ...)` working with the `data.set`, using the name you gave the dataset you are working with;
+3. `ggplot(...aes(x = predictor.variable, y = outcome.variable))` using two aesthetic mappings
+
+- `x = predictor.variable` maps values of the `predictor.variable` (whatever it is called) to x-axis (horizontal, left to right) positions;
+- `y = outcome.variable` maps values of the `outcome.variable`(whatever it is called) to y-axis (vertical, bottom to top) positions;
+
+4. `geom_point()` show the mappings as points.
+:::
+
+##### Task 7 -- Create a scatterplot to examine the association between some variables
+
+Create three scatterplots to visualize the relationship between (1.) the outcome `mean.acc` and (2.) each of three numeric potential predictor variables `SHIPLEY`, `HLVA` and `AGE`.
+
+Check first if you can write the code you need to produce each scatterplot.
+Click on the button to see the code example: compare it to the code you wrote.
+
+- Notice that R will tolerate some variation in how code is written.
+- This is like any language where we can ask for the same thing in different ways.
+
+:::{.callout-tip collapse="true"}
+## Code
+
+Check out the example code for each of the scatterplots we are asking you to do.
+
+- Notice what changes and what stays the same.
+
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY, y = mean.acc)) +
+  geom_point()
+
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point()
+
+ggplot(data = study.two.gen, aes(x = AGE, y = mean.acc)) +
+  geom_point()
+```
+:::
+
+#### Revise: make sure you are confident about doing these things
+
+##### Task 8 -- Edit the appearance of *each* plot step-by-step
+
+1. You may want to use the same plot appearance choices for all plots.
+
+- Producing plots with a consistent appearance will make it easier for 
+your audience to read your plots.
+
+2. You can find links to reference information on options in the how-to guide.
+
+- Use the information to make the plots pleasing in appearance to you.
+
+:::{.callout-tip collapse="true"}
+## Hints
+- Do not be afraid to select, copy then paste code to re-use it and *save yourself* the effort of typing out the code over and over again.
+- But be careful to make sure that you change variable names, and that things like axis values are sensible for each variable.
+:::
+
+>**Q.8.** First, edit the appearance of the points using `alpha`, `size`, `shape`, and `colour`.
+
+:::{.callout-tip collapse="true"}
+## Code
+Check out the example code for each of the scatterplots.
+
+- Notice what changes and what stays the same.
+
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')
+
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')
+
+ggplot(data = study.two.gen, aes(x = AGE, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')
+```
+:::
+
+>**Q.9.** Then edit the colour of the background using `theme_bw()`.
+
+:::{.callout-tip collapse="true"}
+## Code
+Check out the example code for each of the scatterplots.
+
+- Notice what changes and what stays the same.
+
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw()
+
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw()
+
+ggplot(data = study.two.gen, aes(x = AGE, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw()
+```
+:::
+
+>**Q.10.** Then edit the appearance of the labels using `labs()`.
+
+:::{.callout-tip collapse="true"}
+## Code
+Check out the example code for each of the scatterplots.
+
+- Notice what changes and what stays the same.
+
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw() +
+  labs(x = "SHIPLEY", y = "mean accuracy")
+
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw() +
+  labs(x = "HLVA", y = "mean accuracy")
+
+ggplot(data = study.two.gen, aes(x = AGE, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw() +
+  labs(x = "Age (Years)", y = "mean accuracy")
+```
+:::
+
+#### Introduce: make some new moves
+
+>**Q.11.** Then set the x-axis and y-axis limits to the minimum-maximum ranges 
+of the variables you are plotting.
+
+You can set axis limits by adding the `xlim()` and `ylim()` function calls to
+the chunk of code you have written to produce each plot.
+
+- The task, here, is to work out *what* numeric values you should enter inside
+`xlim()` or `ylim()`.
+- The code works if you enter values like this: `xlim(minimum, maximum)` and `ylim(minimum, maximum)`.
+- Where `minimum, maximum` are the numbers representing the smallest possible (minimum) and largest possible (maximum) value for each variable.
+
+:::{.callout-tip collapse="true"}
+## Hint
+- For these plots the y-axis limits will be the same because the outcome stays the same.
+- But the x-axis limits will be different for each different predictor variable.
+- Check out the information in the `summary()` you got of the dataset.
+- The minimum values for the variables will often (not always) be 0 e.g. if you are looking at data from ability tests and people who do the tests can get 0 (because none of their responses are correct). However, if you are looking at e.g. ratings data then the minimim value could be 1 (e.g. because people are asked to rate something on a scale from 1-9).
+- The maximum values for the variables is not necessarily the largest value recorded for that variable in the sample data-set you are working with (e.g., because nobody in your sample got all test questions correct). Thus, you need to use information about measurement design, see @sec-wk17-data-summary.
+:::
+
+Check first if you can write the code you need to produce each scatterplot.
+Click on the button to see the code example: compare it to the code you wrote.
+
+:::{.callout-tip collapse="true"}
+## Code
+Check out the example code for each of the scatterplots.
+
+- Notice what changes and what stays the same.
+
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw() +
+  labs(x = "SHIPLEY", y = "mean accuracy") +
+  xlim(0, 40) + ylim(0, 1)
+
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw() +
+  labs(x = "HLVA", y = "mean accuracy") +
+  xlim(0, 16) + ylim(0, 1)
+
+ggplot(data = study.two.gen, aes(x = AGE, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw() +
+  labs(x = "Age (Years)", y = "mean accuracy") +
+  xlim(0, 80) + ylim(0, 1)
+```
+:::
+
+#### Step 5: Use correlation to to answer the research questions
+
+#### Revise: make sure you are confident about doing these things
+
+One of our research questions is:
+
+1. What person attributes predict success in understanding?
+
+##### Task 9 -- Examine the correlations between the outcome variable and predictor variables
+
+You need to run three separate correlations: 
+
+1. between mean accuracy and `SHIPLEY`;
+2. between mean accuracy and `HLVA`; 
+3. between mean accuracy and `AGE`.
+
+:::{.callout-tip collapse="true"}
+## Hints
+- Use `cor.test()` to do the correlation analysis.
+- You can look at the `how-to` guide or review previous materials (e.g. @sec-wk12-labactivities or @sec-wk16-lab-activities-1-questions) for more advice.
+:::
+
+Check first if you can write the code you need to complete each correlation analysis.
+Click on the button to see the code example: compare it to the code you wrote.
+
+:::{.callout-tip collapse="true"}
+## Code
+Check out the example code for doing each of the correlation analyses.
+
+- Notice what changes and what stays the same.
+
+```{r}
+#| eval: false
+cor.test(study.two.gen$SHIPLEY, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided")
+
+cor.test(study.two.gen$HLVA, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided")
+
+cor.test(study.two.gen$AGE, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided")
+```
+:::
+
+Now use the results from the correlations to answer the following questions.
+
+>**Q.12.** What is `r`, the coefficient for the correlation between `mean.acc` and `SHIPLEY`?
+
+<!-- - A.12. r = 0.4650537 -->
+
+>**Q.13.** Is the correlation between `mean.acc` and `HLVA`  significant?
+
+<!-- - A.13. -- r is significant, p < .05 -->
+
+>**Q.14.** What are the values for t and p for the significance test for the correlation between `mean.acc` and `AGE`?
+
+<!-- - A.14. t = 0.30121, p = 0.7636 -->
+
+>**Q.15.** For which pair of outcome-predictor variables is the correlation the largest?
+
+<!-- - A.15. -- The correlation is the largest between `mean.acc` and `HLVA`. -->
+
+>**Q.16.** What is the sign or direction of each of the correlations?
+
+<!-- - A.16. -- All the correlations are positive. -->
+
+#### Step 6: Use a linear model to to answer the research questions
+
+#### Introduce: Make some new moves
+
+One of our research questions is:
+
+1. What person attributes predict success in understanding?
+
+##### Task 10 -- Examine the relation between outcome mean accuracy (`mean.acc`) and each of the predictors: `SHIPLEY`, `HLVA` and `AGE`
+
+You need to run three separate `lm()` analyses:
+
+1. with mean accuracy as the outcome and `SHIPLEY` as the predictor;
+2. with mean accuracy as the outcome and `HLVA` as the predictor; 
+3. with mean accuracy as the outcome and `AGE` as the predictor.
+
+:::{.callout-tip collapse="true"}
+## Hints
+You need to use `lm()` to do the analyses.
+
+1. Be careful to identify the outcome and predictor variables correctly.
+2. Remember that analysis code is arranged like this:
+
+```{r}
+#| eval: false
+lm(outcome.variable ~ predictor.variable, data = data.set)
+```
+
+With:
+
+- `lm()` asking R to do the linear model analysis;
+- `outcome.variable ~ ...` specified on the *left* of the `~`;
+- the `predictor.variable ~ ...` specified on the *right* of the `~`;
+- and `data.set` identifying to R what dataset you are working with.
+
+Notice that R has a general formula syntax: 
+
+`outcome ~ predictor *or* y ~ x`
+
+- and uses the same format across a number of different functions;
+- each time, the left of the tilde symbol `~` is some output or outcome;
+- and the right of the tilde `~` is some input or predictor or set of predictors.
+:::
+
+Check first if you can write the code you need to complete each linear model analysis.
+Click on the button to see the code example: compare it to the code you wrote.
+
+:::{.callout-tip collapse="true"}
+## Code
+Check out the example code for each of the models.
+
+- Notice what changes and what stays the same.
+
+```{r}
+#| eval: false
+model.1 <- lm(mean.acc ~ SHIPLEY, data = study.two.gen)
+summary(model.1)
+
+model.2 <- lm(mean.acc ~ HLVA, data = study.two.gen)
+summary(model.2)
+
+model.3 <- lm(mean.acc ~ AGE, data = study.two.gen)
+summary(model.3)
+```
+:::
+
+If you look at the model summary you can answer the following questions.
+
+>**Q.17.** What is the estimate for the coefficient of the effect of the predictor `HLVA` on `mean.acc`?
+
+<!-- - A.17. 0.026207  -->
+
+>**Q.18.** Is the effect significant?
+
+<!-- - A.18. It is significant, p < .05 -->
+
+>**Q.19.** What are the values for t and p for the significance test for the coefficient?
+
+<!-- - A.19. t = 7.529, p = 2.87e-12 -->
+
+>**Q.20.** How would you describe in words the shape or direction of the association between `HLVA` and `mean.acc`?
+
+<!-- - A.20. The slope coefficient -- and a scatterplot (draw it) -- suggest that as HLVA scores increase so also do mean accuracy scores. -->
+
+>**Q.21.** How how would you describe the relations apparent between the predictor and outcome in all three models?
+
+<!-- - A.21. It is possible to see, given coefficient estimates, that the association between predictor and outcome is positive for each model: mean accuracy appears to increase for increasing values of SHIPLEY vocabulary, HLVA health literacy, and age. -->
+
+#### Step 7: Use a linear model to generate predictions
+
+#### Introduce: Make some new moves
+
+One of our research questions is:
+
+1. What person attributes predict success in understanding?
+
+##### Task 11 -- We can use the model we have just fitted to plot the model predictions
+
+We are going to draw a scatterplot and add a line.
+
+- The line will show the model predictions, given the model intercept and effect 
+coefficient estimates.
+
+:::{.callout-tip collapse="true"}
+## Hint
+You can see reference information here:  
+
+<https://ggplot2.tidyverse.org/reference/geom_abline.html>
+:::
+
+**First fit a model** and get the summary: model the relationship between `mean.acc` and `HLVA`.
+
+Check first if you can write the code you need to complete the linear model analysis.
+Click on the button to see the code example: compare it to the code you wrote.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+model <- lm(mean.acc ~ HLVA, data = study.two.gen)
+summary(model)
+```
+:::
+
+You will need to record some information from the model summary so you can use it next.
+
+>**Q.22.** What is the coefficient estimate for the intercept?
+
+<!-- - A.22. 0.522016 -->
+
+>**Q.23.** What is the coefficient estimate for the slope of `HLVA` (see earlier)?
+
+<!-- - A.23. 0.026207 -->
+
+**Second, draw a prediction plot**, using the `geom_point()` to draw a scatterplot and using the `geom_abline()` function to draw the prediction line representing the association between this outcome and predictor.
+
+Check first if you can write the code you need to produce the prediction plot.
+Click on the button to see the code example: compare it to the code you wrote.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  geom_abline(intercept = 0.522016, slope = 0.026207, 
+              colour = "red", size = 1.5) +
+  theme_bw() +
+  labs(x = "HLVA", y = "mean accuracy") +
+  xlim(0, 15) + ylim(0, 1)
+```
+:::
+
+#### You have now completed the Week 17 questions.
+
+::: callout-important
+Predicting human behaviour is at the heart of:
+
+- Psychological science, and our collective attempt to understand ourselves.
+- Behavioural analytics, and the ways businesses work with what we know about people.
+
+This is an important step in your developmental journey: **Well done!**
+
+- We will continue to deepen and extend your skills and understanding but everything builds on the key lessons we have been learning here.
+:::
+
+## Answers {#sec-wk17-lab-activities-answers}
+
+When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week.
+
+::: callout-tip
+The `.Rmd` script containing all code and all answers for each task and each question will be made available after the final lab session has taken place.
+
+- You can download the script by clicking on the link: [2023-24-PSYC122-w17-workbook-answers.Rmd](data/week17/2023-24-PSYC122-w17-workbook-answers.Rmd) when it is available.
+
+- Or by copying the code into the R `Console` window and running it to get the `2023-24-PSYC122-w17-workbook-answers.Rmd` loaded directly into R:
+
+```{r eval=FALSE}
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/2023-24-PSYC122-w17-workbook-answers.Rmd?raw=true", destfile = "2023-24-PSYC122-w17-workbook-answers.Rmd")
+```
+:::
+
+We set out answers information the Week 17 **Better understanding the linear model** questions, below.
+
+- We focus on the **Lab activity 2** questions where we ask you to interpret something or say something.
+- We do not show questions where we have given example or target code in the foregoing lab activity @sec-wk17-lab-activities-2.
+
+You can see all the code and all the answers in `2023-24-PSYC122-w17-workbook-answers.Rmd`.
+
+### Answers {#sec-wk17-lab-activities-answers-information}
+
+::: callout-tip
+Click on a box to reveal the answer.
+:::
+
+#### Questions {#sec-wk17-lab-activities-2-questions-answers}
+
+>**Q.6.** Can you find information on how to define the limits on the x-axis
+and on the y-axis?
+
+:::{.callout-tip collapse="true"}
+## Hint
+You can see the information in this week's `how-to` guide but try a search online for "ggplot reference xlim".
+:::
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.6. See ggplot reference information on setting limits here:
+
+<https://ggplot2.tidyverse.org/reference/lims.html>
+:::
+
+>**Q.7.** Can you find information on how to a reference line?
+
+:::{.callout-tip collapse="true"}
+## Hint
+You can see the information in this week's how-to but try a search online for "ggplot reference vline".
+:::
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.7. See ggplot reference information on adding lines here:
+
+<https://ggplot2.tidyverse.org/reference/geom_abline.html>
+:::
+
+One of our research questions is:
+
+1. What person attributes predict success in understanding?
+
+Examine the correlations between the outcome variable and predictor variables.
+
+You need to run three separate correlations:
+
+1. between mean accuracy and `SHIPLEY`;
+2. between mean accuracy and `HLVA`;
+3. between mean accuracy and `AGE`.
+
+Check out the example code for doing each of the correlation analyses.
+
+```{r}
+#| eval: false
+cor.test(study.two.gen$SHIPLEY, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided")
+
+cor.test(study.two.gen$HLVA, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided")
+
+cor.test(study.two.gen$AGE, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided")
+```
+
+Now use the results from the correlations to answer the following questions.
+
+>**Q.12.** What is `r`, the coefficient for the correlation between `mean.acc` and `SHIPLEY`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.12. r = 0.4650537
+:::
+
+>**Q.13.** Is the correlation between `mean.acc` and `HLVA`  significant?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.13. -- r is significant, p < .05
+:::
+
+>**Q.14.** What are the values for t and p for the significance test for the correlation between `mean.acc` and `AGE`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.14. t = 0.30121, p = 0.7636
+:::
+
+>**Q.15.** For which pair of outcome-predictor variables is the correlation the largest?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.15. -- The correlation is the largest between `mean.acc` and `HLVA`.
+:::
+
+>**Q.16.** What is the sign or direction of each of the correlations?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.16. -- All the correlations are positive.
+:::
+
+Examine the relation between outcome mean accuracy (`mean.acc`) and each of the predictors: `SHIPLEY`, `HLVA` and `AGE`
+
+You need to run three separate `lm()` analyses:
+
+1. with mean accuracy as the outcome and `SHIPLEY` as the predictor;
+2. with mean accuracy as the outcome and `HLVA` as the predictor;
+3. with mean accuracy as the outcome and `AGE` as the predictor.
+
+Check out the example code for each of the models.
+
+```{r}
+#| eval: false
+model.1 <- lm(mean.acc ~ SHIPLEY, data = study.two.gen)
+summary(model.1)
+
+model.2 <- lm(mean.acc ~ HLVA, data = study.two.gen)
+summary(model.2)
+
+model.3 <- lm(mean.acc ~ AGE, data = study.two.gen)
+summary(model.3)
+```
+
+If you look at the model summary you can answer the following questions.
+
+>**Q.17.** What is the estimate for the coefficient of the effect of the predictor `HLVA` on `mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.17. 0.026207
+:::
+
+>**Q.18.** Is the effect significant?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.18. It is significant, p < .05
+:::
+
+>**Q.19.** What are the values for t and p for the significance test for the coefficient?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.19. t = 7.529, p = 2.87e-12
+:::
+
+>**Q.20.** How would you describe in words the shape or direction of the association between `HLVA` and `mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.20. The slope coefficient -- and a scatterplot (draw it) -- suggest that as HLVA scores increase so also do mean accuracy scores.
+:::
+
+>**Q.21.** How how would you describe the relations apparent between the predictor and outcome in all three models?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.21. It is possible to see, given coefficient estimates, that the association between predictor and outcome is positive for each model: mean accuracy appears to increase for increasing values of SHIPLEY vocabulary, HLVA health literacy, and age.
+:::
+
+We are going to draw a scatterplot and add a line.
+
+- The line will show the model predictions, given the model intercept and effect
+coefficient estimates.
+
+**First fit a model** and get the summary: model the relationship between `mean.acc` and `HLVA`.
+
+You will need to record some information from the model summary so you can use it next.
+
+>**Q.22.** What is the coefficient estimate for the intercept?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.22. 0.522016
+:::
+
+>**Q.23.** What is the coefficient estimate for the slope of `HLVA` (see earlier)?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.23. 0.026207
+:::
+
+## Online Q&A {#sec-wk17-lab-Q-and-A}
+
+You will find, below, a link to the video recording of the Week 17 online Q&A after it has been completed.
+
+```{=html}
+<iframe src="https://livelancsac-my.sharepoint.com/personal/daviesra_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=b8ec6aca-6be9-4961-bccd-641c55848ba4&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="PSYC122 Online Seminar Fridays 9am wks 11-14 & 16-19-20240301_090557-Meeting Recording.mp4"></iframe>
+```

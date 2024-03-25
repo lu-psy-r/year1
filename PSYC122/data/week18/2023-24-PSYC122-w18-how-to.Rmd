@@ -1,0 +1,523 @@
+---
+title: "2023-24-PSYC122-w18-how-to"
+author: Rob Davies
+date: "2024-03-04"
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Introduction
+
+
+In Week 18, we aim to *further develop* skills in working with the linear model.
+
+We do this to learn how to answer research questions like:
+
+1. What person attributes predict success in understanding?
+2. Can people accurately evaluate whether they correctly understand written 
+health information?
+
+These kinds of research questions can be answered using methods like the **linear model**.
+
+When we do these analyses, we need to think about how we report the results:
+
+- we usually need to report information about the kind of model we specify;
+- and we will need to report the nature of the association estimated in our model.
+
+We usually need to decide:
+
+- is the association significant?
+- does the association reflect a positive or negative relationship between outcome 
+and predictor?
+- and is the association we see in our sample data relatively strong or weak?
+
+We will consolidate and extend learning on data visualization:
+
+- focusing on how we edit ggplot() code to produce professional looking plots.
+
+## Naming things
+
+I will format dataset names like this: 
+
+- `study-one-general-participants.csv`
+
+I will also format variable (data column) names like this: `variable` 
+
+I will also format value or other data object (e.g. cell value) names like this: `studyone`
+
+I will format functions and library names like this: e.g. function `ggplot()` or e.g. library `{tidyverse}`.
+
+## The data we will be using
+
+In this how-to guide, we use data from a 2020 study of the response of adults from a UK national sample to written health information:
+
+- `study-one-general-participants.csv`
+
+
+# Answers
+
+
+## Step 1: Set-up
+
+
+To begin, we set up our environment in R.
+
+
+### Task 1 -- Run code to empty the R environment
+
+```{r}
+rm(list=ls())                            
+```
+
+
+### Task 2 -- Run code to load relevant libraries
+
+```{r}
+library("ggeffects")
+library("tidyverse")
+```
+
+
+## Step 2: Load the data
+
+
+### Task 3 -- Read in the data file we will be using
+
+The data file is called:
+
+- `study-one-general-participants.csv`
+
+Use the `read_csv()` function to read the data file into R:
+
+```{r}
+study.one.gen <- read_csv("study-one-general-participants.csv")
+```
+
+When you read the data file in, give the data object you create a distinct name 
+e.g. `study.one.gen`.
+
+
+### Task 4 -- Inspect the data file
+
+Use the `summary()` or `head()` functions to take a look.
+
+```{r}
+head(study.one.gen)
+summary(study.one.gen)
+```
+
+Even though you have done this before, you will want to do it 
+again, here, and pay particular attention to:
+
+- summary information about the numeric variables;
+- summary information about variables of class: `character`.
+
+
+## Step 3: Use a linear model to to answer the research questions -- one predictor
+
+
+### Revise: Practice to strengthen skills
+
+
+We start by revising how to use lm() with one predictor.
+
+One of our research questions is:
+
+1. What person attributes predict success in understanding?
+
+
+### Task 5 -- Examine the relation between outcome mean accuracy (`mean.acc`) and health literacy (`HLVA`)
+
+### Hint: Task 5
+
+We can use `lm()` to estimate whether variation in health literacy (`HLVA`) predicts outcome mean accuracy (`mean.acc`) of understanding.
+
+```{r}
+model <- lm(mean.acc ~ HLVA, data = study.one.gen)
+summary(model)
+```
+
+In R analysis code, we write `method(outcome ~ predictor)` so:
+
+```{}
+lm(mean.acc ~ HLVA, data = study.one.gen)
+```
+
+- gets us an analysis of whether or how `HLVA` predicts variation in
+outcome `mean.acc`.
+
+If you look at the model `summary` you can answer the following questions.
+
+#### Questions: Task 5
+
+- Q.1. What is the estimate for the coefficient of the effect of the predictor, `HLVA`?
+
+- A.1. 0.02272 
+
+- Q.2. Is the effect significant?
+
+- A.2. It is significant, p < .05
+
+- Q.3. What are the values for t and p for the significance test for the coefficient?
+
+- A.3. t = 6.158, p = 5.31e-09
+
+- Q.4. What do you conclude is the answer to the research question, given the  linear model results?
+
+- A.4. The model slope estimate suggests that as HLVA scores increase so also do `mean.acc` scores
+
+- Q.5. What is the F-statistic for the regression? Report F, DF and the p-value.
+
+- A.5. F-statistic: 37.92 on 1 and 167 DF,  p-value: 5.307e-09
+
+- Q.6. Is the regression significant?
+
+- A.6. Yes: the regression is significant.
+
+- Q.7. What is the Adjusted R-squared?
+
+- A.7. Adjusted R-squared:  0.1802
+
+- Q.8. Explain in words what this R-squared value indicates?
+
+- A.8. The R-squared suggests that 18% of outcome variance can be explained by the model
+
+
+## Step 4: Use a linear model to to answer the research questions -- multiple predictors
+
+
+### Introduce: make some new moves
+
+
+### Task 6 -- Examine the relation between outcome mean accuracy (`mean.acc`) and *multiple* predictors
+
+Here, the predictors will include:
+
+- health literacy (`HLVA`); 
+- vocabulary (`SHIPLEY`); 
+- reading strategy (`FACTOR3`).
+
+#### Hint: Task 6
+
+We use `lm()`, as before, but now specify each variable listed here by variable name
+
+```{r}
+model <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.one.gen)
+
+summary(model)
+```
+
+Notice that we do the linear model in the steps:
+
+1. `model <- lm(...)` fit the model using `lm(...)`, giving the model a name; 
+here, we call it `model`;
+2. ` ...lm(mean.acc ~ HLVA...) ` tell R you want a model of the outcome `mean.acc` 
+predicted (`~`) by the predictors listed, `HLVA`, `SHIPLEY`, and `FACTOR3`.
+3. `...data = study.one.gen)` tell R that the variables you name in the formula are in the `study.one.gen` dataset.
+4. `summary(model)` ask R for a summary of the model you called `model`.
+
+Notice: that we use the variable names as they appear in the dataset, and that 
+each predictor variable is separated from the next by a plus (`+`) sign.
+
+Notice: R has a general formula syntax: `outcome ~ predictor` *or* `y ~ x`
+and uses the same format across a number of different analysis functions.
+
+- Each time, the left of the tilde symbol `~` is some output or outcome
+and the right of the tilde `~` is some input or predictor or set of predictors.
+
+#### Questions: Task 6
+
+If you look at the model summary you can answer the following questions  
+
+Q.9. What is the estimate for the coefficient of the effect of the predictor `HLVA` in *this* model?
+
+A.9. 0.017732 
+
+Q.10. Is the effect significant?
+
+A.10. It is significant, p < .05
+
+Q.11. What are the values for t and p for the significance test for the coefficient?
+
+A.11. t = 4.521, p = 1.17e-05
+
+Q.12. What do you conclude is the answer to the research question, given the linear model results?
+
+A.12. The model slope estimate 0.017732 suggests that as `HLVA` scores 
+increase so also do `mean.acc` scores.
+
+Q.13. How is the coefficient estimate for the `HLVA` slope similar or different,  comparing this model with multiple predictors to the previous model with one predictor?
+
+A.13. It can be seen that the `HLVA` estimate in the two models is different in that it is a bit smaller in the model with multiple predictors compared to the model with one predictor. The `HLVA` estimate is similar in that it remains positive, it is about the same size.
+
+Notice that:-
+
+- The estimate of the coefficient of any one predictor can be expected to vary depending on the presence of other predictors.
+- This is one reason why we need to be transparent about why we choose to use the predictors we include in our model.
+
+Q.14. Can you report the estimated effect of `SHIPLEY` (the measure of vocabulary) using the kind of language you are shown in lecture week 18?
+
+A.14. The answer to the question can be written like this:
+
+> The effect of vocabulary knowledge (`SHIPLEY`) on mean accuracy of understanding is significant (estimate = 0.005, t = 2.296, p < .001) indicating that increasing vocabulary knowledge is associated with increasing accuracy of understanding.
+
+Q.15. Can you report the model and the model fit statistics?
+
+A.15. The answer to the question can be written like this:
+
+> We fitted a linear model with mean comprehension accuracy as the outcome and health literacy (`HLVA`), reading strategy (`FACTOR3`), and vocabulary (`SHIPLEY`) as predictors. The model is significant overall, with F(3, 165) = 18.08, p< .001, and explains 23% of variance (adjusted R2 = 0.23).
+
+
+## Step 5: Plot predictions from linear models with multiple predictors
+
+
+### Introduce: make some new moves
+
+
+### Task 7 -- Plot linear model predictions for one of the predictors
+
+#### Hint: Task 7
+
+Previously, we used `geom_abline()`, specifying intercept and slope estimates, to draw model predictions.
+
+Here, we use functions that are very helpful when we need to plot model predictions, for models where we have multiple predictors
+
+We do this in four steps:
+
+1. We first fit a linear model of the outcome, given our predictors.
+2. We save information about the model.
+3. We use the `ggpredict()` function from the `{ggeffects}` library to take  the information about the model and create a set of predictions we can use for plotting.
+4. We plot the model prediction plots.
+
+These steps proceed as follows:
+
+1. We first fit a linear model of the outcome, given our predictors.
+
+Like this:
+
+```{r}
+model <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.one.gen)
+```
+
+The code involves these key bits:
+
+- `model <- lm(...)` we fit the model using `lm(...)`, giving the model a name; 
+here, we call it `model`.
+- `...lm(mean.acc ~ HLVA...)` we tell R we want a model of the outcome `mean.acc` predicted (`~`) by the predictors `HLVA`, `SHIPLEY`, and `FACTOR3`.
+
+Notice: when we use lm() to fit the model, R creates a set of information about the model, including estimates.
+
+We give that set of information a name `model`, and we use that name, next, to  access that information in the plotting step.
+
+2. We use the `ggpredict()` function from the `{ggeffects}` library to take the information about the model and create a set of predictions we can use for plotting.
+
+```{r}
+dat <- ggpredict(model, "HLVA")
+```
+
+Notice:
+
+- `dat <- ggpredict(...)` asks R to create a set of predictions, and we give that set of predictions a name `dat`.
+- `... ggpredict(model, "HLVA")` tells R what model information it should use (from `model`) *and* which predictor variable we need predictions for `"HLVA"`.
+
+3. We plot the model predictions with:
+
+```{r}
+plot(dat)
+```
+
+
+### Task 8 -- Now produce plots that show the predictions for all the predictor variables in the model
+
+
+## Step 6: Now draw boxplots to examine associations between variables
+
+
+### Consolidation: practice to strengthen skills
+
+
+### Task 9 -- Create boxplots to examine the association between a continuous numeric outcome variable like `mean.acc` and a categorical variable like `ETHNICITY`
+
+Here, we use `geom_boxplot()`.
+
+#### Hint: Task 9 -- We can see where variables are not numeric using `summary()`
+
+The boxplot can be produced using code like this:
+
+```{r}
+ggplot(data = study.one.gen, aes(x = ETHNICITY, y = mean.acc)) +
+  geom_boxplot() +
+  theme_bw() +
+  labs(x = "Ethnicity, ONS categories", 
+       y = "Mean accuracy of understanding ('mean.acc')") +
+  ylim(0, 1.1)
+```
+
+The plotting code works bit-by-bit, as described following.
+
+1. `ggplot(data = study.one.gen, aes(x = ETHNICITY, y = mean.acc))` defines two aesthetic mappings:
+
+- `x = ETHNICITY`, the x variable has to be categorical or nominal, a factor like 
+`ETHNICITY` with different levels.
+- `y = mean.acc`, the y variable has to be numeric, a set of numbers like `mean.acc` 
+ with different values.
+
+2. `geom_boxplot()` then uses that information about category `(x = ...)` and outcome `(y = ...)` to draw a box to represent the distribution of outcome scores for each group.
+
+Notice that when you draw the plot:
+
+- The middle line in each box represents the median outcome (here `mean.acc`) score for each group.
+- The shape of the box represents the distribution or spread of scores.
+- The top of the box represents the 75th percentile, what the score is for the people who are at the top 75% of the sample.
+- The bottom of the box represents the 25th percentile, what the score is for the 
+people at the 25% level of outcomes for the sample.
+
+More information about boxplots can be found here:
+
+<https://ggplot2.tidyverse.org/reference/geom_boxplot.html>
+
+Here is an edit of the plot to make it a bit more effective:
+
+```{r}
+ggplot(data = study.one.gen, aes(x = ETHNICITY, y = mean.acc)) +
+  geom_jitter(alpha = .5) +
+  geom_boxplot(outlier.shape = NA, colour = "red", alpha = .1) +
+  theme_bw() +
+  labs(x = "Ethnicity, ONS categories", 
+       y = "Mean accuracy of understanding ('mean.acc')") +
+  ylim(0, 1.1)
+```
+
+The plot shows:
+
+- boxplots to indicate the average (median) and spread (percentiles) in 
+`mean.acc` scores for each group;
+- plus, with points, individual `mean.acc` scores for the people in each group.
+
+#### Why are we learning how to do this?
+
+Drawing plots which show *both* summaries (like boxplots) and raw data (scores as points) is a common (advanced) professional visualization technique.
+
+- It is effective because these kinds of plots help you to see the pattern or trend *and* the nature of the underlying sample.
+
+Now you can use the plots to answer questions like the following
+
+#### Questions: Task 9
+
+Q.16. What do you notice about the distribution of scores in different groups?
+
+A.16. The average accuracy of understanding appears to be similar between groups.
+
+Q.17. Does anything in the plots give you reason to question the nature of the participant sample?
+
+A.17. This is a leading question: there is *plenty* in the plots to cause concern.
+
+- The scatter of points shows that we have many more `White` participants in the 
+sample than participants from other ethnicities.
+- Because we have very few people in the study from ethnic minority 
+(often classed as BAME) groups, we might be concerned about whether the results from our models are representative of what you would see in these groups, or whether the results are representative of the wider population in general.
+
+Q.18. Can you use the `ggplot()` reference information -- see the webpage link -- to see how and why I made the code edits I did?
+
+A.18. You can see example code for each edit in the webpage.
+
+Q.19. Do you understand what `geom_jitter()` is doing? -- and why I would use it?
+
+A.19. What the function does, and why I would use it can be found in the reference 
+information webpage:
+
+<https://ggplot2.tidyverse.org/reference/geom_jitter.html>
+
+
+## Step 6: Estimate the effects of factors as well as numeric variables
+
+
+### Introduce: make some new moves
+
+
+We have not yet included any categorical or nominal variables as predictors but we can, and should:
+
+- `lm()` can cope with any kind of variable as a predictor.
+
+
+### Task 10 -- Fit a linear model including both numeric variables and categorical variables as predictors
+
+#### Hint: Task 12
+
+We can inspect the data to check what variables are categorical or nominal variables -- factors -- using `summary()`.
+
+```{r}
+summary(study.one.gen)
+```
+
+Notice that R shows categorical variables in the summary as having:
+`Class: character`.
+
+- Q.20. Can you report the estimated effect of `ETHNICITY`: differences in outcome for people in different self-reported ethnicity groups?
+
+- Hint: Q.20. Include the factor `ETHNICITY` as a predictor:
+
+```{r}
+model <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3 + ETHNICITY, 
+            data = study.one.gen)
+summary(model)
+```
+
+- A.20. The effect of ethnicity (`ETHNICITY`) on mean accuracy of 
+understanding is not significant.
+
+- Q.21. Can you report the model and the model fit statistics?
+
+- A.21. You can report the model and model statistics like this.
+
+> We fitted a linear model with mean comprehension accuracy as the outcome and 
+health literacy (`HLVA`), vocabulary (`SHIPLEY`), reading strategy (`FACTOR3`),
+and ethnicity (`ETHNICITY`) as predictors. The model is significant overall, 
+with F(7, 161) = 7.72, p< .001, and explains 22% of variance (adjusted R2 = 0.22).
+
+- Q.22. What changes, when you compare the models with versus without `ETHNICITY`?
+
+- A.22. If you compare the summaries, for the last two models, you can see that
+the proportion of variance explained, `R-sq`, decreases slightly to 22% (Adjusted R-squared = 0.2188), suggesting that adding `ETHNICITY` as a predictor does
+*not* help to predict response accuracy in tests of comprehension of health advice.
+
+#### Why are we learning how to do this?
+  
+R handles factors, by default, by picking one level (here, `Asian`) as the reference level (or baseline) and comparing outcomes to that baseline, for each other factor level (here, `Other`).
+
+- Thus, in this model, the effect of `ETHNICITY` is estimated as the difference
+in `mean.acc` outcome for `Asian` compared to participants coded as `Black, Mixed, Other, White` (BAME).
+
+There are different ways to code factors for analysis.
+You will learn about these in second year classes.
+
+
+### Task 13 -- Fit a linear model including both numeric variables and categorical variables as predictors, and then plot the predicted effect of the factor (the categorical variable)
+
+#### Hint: Task 12 -- We first fit the model, including `ETHNICITY`, then use the `ggpredict()` function to get the predictions
+
+```{r}
+model <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3 + ETHNICITY, 
+            data = study.one.gen)
+
+dat <- ggpredict(model, "ETHNICITY")
+plot(dat)
+```
+
+- Q.23. Compare the model summary and the prediction plot: what do they show you about the effect of `ETHNICITY`?
+
+- A.23. If you compare the summary and the plot you can see that:
+
+- there are some differences in accuracy between people coded as belonging to different ethnic groups;
+- but these differences are very small and are not significant.
+
+Notice that the points in the plot represent model predictions of the average
+`mean.acc` accuracy of response for each group. 
+
+- The vertical lines on the point represent uncertainty about those estimates and that uncertainty can be seen to be substantial.
+- Longer lines represent more uncertainty.
+

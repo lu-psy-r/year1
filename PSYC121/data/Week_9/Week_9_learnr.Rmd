@@ -1,0 +1,277 @@
+---
+title: "PSYC121: Week 9 Lab"
+output: 
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE, exercise.startover = TRUE}
+library(tidyverse)
+library(learnr)
+library(kableExtra)
+load("tidy_data.RData")
+
+data <- 
+  data %>%
+  rowwise() %>% 
+  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),
+         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% 
+  ungroup() %>% 
+  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% 
+  drop_na() 
+
+
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Exploring the data
+
+For this week's online tutorial we have data on how much students use social media platforms and people's mean reading times from the stroop task. We will use these data to look at how we create new variables (columns) using `mutate()`. We will also expand what we have learnt about filtering data based on conditions, using the `filter()` function. Let's take a look at the data we have using the `summary()`, to get useful statistics. You can also use `head()` to look at the first few rows of data 
+
+```{r summary_example, exercise=TRUE}
+
+summary(data)
+head(data)
+
+
+```
+## "Mutating" new variables  
+In this data set, all of the variables are numerical. Sometimes we may want to recode a variable to turn it from a continuous numerical variable, to a categorical/nominal variable. For example, maybe we want to compare students who are *high users of facebook*, to those who are *low users of facebook*. We could do that in the following way using the `mutate()` function:
+
+```{r mutate_example, exercise=TRUE}
+
+data %>% 
+  mutate(facebook_use = facebook_days >= 4)
+
+```
+
+###
+When you run this code you'll see that `mutate()` has created a new column on the end, which tells us whether the person uses facebook for at least 4 days a week. Note that the new column is called "facebook_use" - this works in exactly the same way as the `summarise()` commands you have been practising, where you tell it the new variable name you want to create. The values "TRUE" and "FALSE" are not especially informative here - we probably want to be a bit clearer in the names we give to these *levels* of the new variable. To do that we can modify this code a little to use an `if_else()`, which checks **if the "conditional statement" (facebook_days >= 4) is TRUE or FALSE**, and specifies the values to use in each case:
+
+```{r ifelse_example, exercise=TRUE}
+
+data %>% 
+  mutate(facebook_use = if_else(facebook_days >= 4,true = "high",false = "low"))
+
+```
+
+###
+Just like with `summarise()`, we can have multiple new columns created within the one `mutate()` command. Each of these needs to be separated by a comma, and it's good practice to put each one on a new line. Try copying and pasting the if_else command, and then modifying it to make two new variables to code for "high" and "low" instagram and twitter use:
+
+```{r more_ifelse, exercise=TRUE}
+data <- 
+  data %>% 
+  mutate(facebook_use = if_else(facebook_days >= 4,true = "high",false = "low"),
+         instagram_use = ,
+         twitter_use = )
+
+data
+# because we are assigning (<-) the changes to update "data", 
+# we write it again here to display the results
+
+```
+
+```{r more_ifelse-solution}
+data <- 
+  data %>% 
+  mutate(facebook_use = if_else(facebook_days >= 4,true = "high",false = "low"),
+         instagram_use = if_else(instagram_days >= 4,true = "high",false = "low"),
+         twitter_use = if_else(twitter_days >= 4,true = "high",false = "low"))
+
+data
+# because we are assigning (<-) the changes to update "data", 
+# we write it again here to display the results
+
+```
+
+```{r update_data, include=FALSE}
+data <- 
+  data %>% 
+  mutate(facebook_use = if_else(facebook_days >= 4,true = "high",false = "low"),
+         instagram_use = if_else(instagram_days >= 4,true = "high",false = "low"),
+         twitter_use = if_else(twitter_days >= 4,true = "high",false = "low"))
+
+```
+
+###
+Let's now look at our *avg_stroop* variable, and first plot the data in a box and whisker plot:
+
+```{r stroop_boxplot, exercise=TRUE, exercise.setup = "update_data"}
+
+data %>% 
+  ggplot() +
+  geom_boxplot(aes(y = avg_stroop))
+
+```
+###
+We can see here that we have a number of points that lie outside the "whiskers" on the plot. One thing we can do to identify potential outliers is to create a new variable that transforms the data to a z distribution. This is easy to do in R using the `scale()` function:
+
+```{r z_score, exercise = TRUE, exercise.setup = "more_ifelse"}
+data <- 
+  data %>% 
+  mutate(z_stroop = scale(avg_stroop))
+
+data
+# because we are assigning (<-) the changes to update "data", 
+# we write it again here to display the results
+
+```
+
+
+```{r update_data_2, include=FALSE}
+data <- 
+  data %>% 
+  mutate(facebook_use = if_else(facebook_days >= 4,true = "high",false = "low"),
+         instagram_use = if_else(instagram_days >= 4,true = "high",false = "low"),
+         twitter_use = if_else(twitter_days >= 4,true = "high",false = "low"),
+         z_stroop = scale(avg_stroop))
+
+```
+
+
+###
+You may remember that a distribution of z scores has a mean of 0 and a standard deviation of 1. Let's check that here:
+
+```{r z_mean_sd, exercise = TRUE, exercise.setup = "update_data_2"}
+
+mean()
+sd()
+
+```
+```{r z_mean_sd-hint}
+
+mean(data_set$variable) # example
+sd(data_set$variable) # example
+
+```
+```{r z_mean_sd-solution}
+
+mean(data$z_stroop)
+sd(data$z_stroop)
+
+```
+
+You'll notice that the value for the mean is not quite 0 (but it is very very small!). This is probably due to a rounding of values in the `scale()` function. To get a value of 0 we could encolse the statement in the `round()` function, e.g. `round(mean(),digits = 2).
+
+###
+A good way to get a sense of the range of values in our z-scores is to use `arrange()` to sort them in order. We can then use `head()` and `tail()` to see the values at each end of the distribution (the first 'n' rows, and the last 'n' rows)
+
+```{r arrange, exercise = TRUE, exercise.setup = "update_data_2"}
+
+data <- 
+  data %>% 
+  arrange(desc(z_stroop)) # arrange in descending order
+
+head(data, n = 10)
+tail(data, n = 10)
+
+```
+
+```{r update_data_3, include=FALSE}
+data <- 
+  data %>% 
+  mutate(facebook_use = if_else(facebook_days >= 4,true = "high",false = "low"),
+         instagram_use = if_else(instagram_days >= 4,true = "high",false = "low"),
+         twitter_use = if_else(twitter_days >= 4,true = "high",false = "low"),
+         z_stroop = scale(avg_stroop)) %>% 
+  arrange(desc(z_stroop)) # arrange in descending order
+
+```
+
+
+You can see that we've got some quite extreme values here. First, we've got some very slow participants, showing average reading times of over 10 seconds. Secondly, we've got some extremely fast participants. The fastest participant of all is particularly unusual - perhaps they put in incorrect values into the survey?
+
+## Filtering data 
+
+As you can see, we quite often want to filter our data to select or remove some of the rows we are working with. To do this, we can use the `filter()` command.
+
+To use `filter()`, we simply specify the data first, and then we need to use an *expression* to state how we want the data to be filtered. For example:
+
+```{r filter_example, exercise = TRUE, exercise.setup = "update_data_3"}
+data %>% 
+  filter(z_stroop <= 2) 
+# find all those people who have z_stroop values lower than positive 2
+```
+
+### Common expressions
+
+The following table gives some examples of very common expressions used in filtering data:
+
+```{r}
+tibble(Operator = c("==", 
+                    "<", 
+                    ">", 
+                    "!=", 
+                    "&",
+                    "|"),
+       Meaning = c("is the same as",
+                   "is less than",
+                   "is greater than", 
+                   "is not equal to",
+                   "and",
+                   "or"),
+       Example = c("filter(dataQ, age==27)",
+                   "filter(dataQ, age<25)",
+                   "filter(dataQ, age>30)",
+                   "filter(dataQ, gender != 'female')",
+                   "filter(dataQ, age<30 & gender == 'female')",
+                   "filter(dataQ, gender == 'male' | gender == 'non-binary')")) %>% 
+  kable() %>% 
+  kable_styling(bootstrap_options = c("striped"))
+```
+
+It's particularly important to note the difference between "==" and "=" in R. "=" is used as an assignment operator - you've used it several times already inside functions (e.g., `na.rm = TRUE`, `mu = 29600`). You can think of "=" as meaning "set this to". In contrast the double equals operator, "==", asks a question: "is this thing the same as this other thing?" In the above example, `z_stroop <= 2`, it looks for all rows in the data where *z_stroop* is the same as, or less than, the value of 2. In programming terms, the expression returns a *boolean value*, which reports whether the statement is TRUE or FALSE (and when used in the filter, it finds all rows where it is TRUE). You can see this in the results of the following "conditional expressions":
+
+```{r binary_test, exercise = TRUE}
+2 == 3
+"blah" == "blah"
+"blah" == "BLAH"
+"John" == "rock star"
+mean(c(3,4,5,6)) == 4.5
+TRUE == FALSE # this is getting meta...
+
+```
+
+### Practice filtering
+
+Practice writing your own filter commands in the box below. Try to filter the data to match the following queries:
+
+1. Data for those people who are "high" facebook users (hint: facebook_use == )
+2. Data for those people who use instagram for 7 days, and have a *z_stroop* score of less than -1 (hint: use &)
+3. Data for those people who are "high" users of at least one social media platform (hint: this needs two "or": | )
+
+*[Each hint here gives the solution to each query]*
+
+```{r filter_play, exercise = TRUE, exercise.setup = "update_data_3"}
+data %>% 
+  filter()
+```
+```{r filter_play-hint-1}
+# Query 1 solution
+data %>% 
+  filter(facebook_use == "high")
+```
+```{r filter_play-hint-2}
+# Query 2 solution
+data %>% 
+  filter(instagram_days == 7 & z_stroop < -1)
+```
+```{r filter_play-hint-3}
+# Query 3 solution
+data %>% 
+  filter(facebook_use == "high" | instagram_use == "high" | twitter_use == "high")
+```
+
+
+##
+
+
+### End of tutorial
+
+This is now the end of the online tutorial on `filter()` and `mutate()`. Please return to the tasks in the lab worksheet.
+
+
+
+

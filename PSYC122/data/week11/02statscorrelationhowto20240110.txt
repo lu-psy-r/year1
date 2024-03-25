@@ -1,0 +1,480 @@
+﻿Hello it's Margriet Groen and in
+this video I would like to
+
+talk you through how to
+conduct a correlation
+
+analysis in R and how to
+report the results
+
+following APA
+guidelines.
+
+Now I'll first
+
+give you an overview, using a
+few slides of the steps and
+
+different functions to use
+
+So for this example, we'll use
+some data that are discussed in
+
+Miller and Haden Chapter 11
+about the correlations between
+
+ability, that is reading ability, IQ, how
+much children read at home, and
+
+how much they watch TV at home.
+
+In this particular example,
+we'll just look at the
+
+correlation between reading
+ability and IQ.
+
+So did the null hypothesis would be
+
+that there is no correlation between
+these two measures and our
+
+alternative hypothesis would be
+that there is a correlation
+
+between reading ability and IQ.
+
+And our expectation might
+be that if one goes up, the
+
+other one also goes up, so we
+would be looking for a kind of
+
+positive linear relationship.
+
+Before and we go further this example
+assumes that you have
+
+downloaded this data set and
+you've put it somewhere where
+
+R knows about it. So you've
+set your working directory to
+
+whatever folder you have stored
+that data file.
+
+So the next thing to do
+is to tell R which packages
+
+to use. So we're loading two
+libraries, these two and using
+
+these commands. You might have
+come across the Tidyverse
+
+library. We'll also use a
+library called Broom an it's
+
+really handy because it makes
+various outputs from analyses
+
+look a little bit more tidy
+and easy, easier to work.
+
+OK. So then we'll read in these
+data and will do that using the
+
+read underscore CSV command. In
+between the brackets we specify the
+
+name of the data file and we
+assign it to a dataframe called
+
+'mh'. I've called it 'mh', you could
+call it data or whatever you
+
+like. By just kind of
+calling that data frame, it
+
+prints it to the terminal.
+
+Well, you can have a little
+look to see what's in there.
+
+That's step one.
+
+Then, as discussed in the other
+video on correlation, kind of an
+
+important step in doing a
+correlation analysis is plotting
+
+the data using the scatter plot.
+So that is what we will do next.
+
+So here we use the ggplot
+function. We tell
+
+it to use the MH data frame and
+we ask it to map Abil.
+
+Which is the variable
+reading ability, to map that to the
+
+to the X axis and map the
+variable IQ to the Y axis.
+
+And then we tell it to use the
+geom point function to map the
+
+individual data points in the
+
+data set. And so this is what
+creates the actual scatter plot.
+
+Then we ask it to add a line
+of best fit using this geom smooth
+
+command.
+
+We tell it which methods to
+use. There's various options.
+
+I've changed the theme of
+what's the scatter plot looks
+
+like, you can play around with
+that, and rather than using
+
+this kind of abbreviation of Abil as a label for the for the
+
+X axis, I've decided to use
+'reading ability' to make it
+
+clear to whoever is looking at
+this scatter plot.
+
+So if you run that, this is what you get.
+
+Reading ability. IQ. The
+individual data points for each
+
+participant and a line of best fit.
+
+OK then we come to running the
+actual correlation analysis.
+
+So for that we use a function
+called cor.test and within
+
+the brackets here you can see
+what you need to specify. So we
+
+want to know what the
+correlation between reading
+
+ability and IQ is. So we tell it
+to look into data frame MH
+
+and then use the variable
+Abill and the variable IQ.
+
+Here we show it. Ask here to use
+the method for Pearson's R. There are
+
+various options and we'll talk a
+bit more about those next week
+
+And it is a 2 sided test.
+
+So that that is kind of the
+main function to do the
+
+correlation analysis. Now as I
+mentioned it, the output looks a
+
+bit neater if you ask broom, the
+package broom, to tidy it up. So
+
+remember, we've loaded the
+package broom, so we were piping,
+
+using this command, the
+output to a function called
+
+tidy, which will just make the
+output look a little bit neater.
+
+And we've assigned kind
+of this whole thing to a
+
+dataframe called results.
+
+Here I just ask it to print the results to the console to see
+
+what it looks like.
+
+And this is what
+it looks like so.
+
+This is what you get when
+you do that.
+
+We are looking at
+three most important bits which are
+
+Pearsons R, which is in this
+cell here for estimate.
+
+Then we need to know what
+the P value is, which is in
+
+this so called P dot value
+and we need to report what
+
+the degrees of freedom are
+an N -- 2 and that is stored
+
+in the parameter cell. As you might
+remember we had 25
+
+participants in this
+data set, so N -- 2 is 23
+
+and you need that bit of
+information to report
+
+the correlation analysis
+
+properly. And other things in
+this output you might be
+
+wondering about what it is and so
+here we have what is called the
+
+statistic. Correlation analysis
+using Pearson's correlation coefficient
+
+uses a T distribution, and
+this is that T value to kind of
+
+check whether it is significant
+or not. You don't need to
+
+report it, but that's what it
+
+is. And here we have the
+confidence interval around
+
+the correlation coefficient R that is sometimes
+useful to report
+
+actually. But it's not standard
+APA guidance guidance, so the
+
+confidence interval tells you
+how confident you are that this
+
+estimate that this Pearson's R
+falls in between these values.
+
+So here it this .07 and .72.
+
+Method
+
+here, it just reminds you
+what method it has used to
+
+calculate these things and
+that it is a 2 sided test.
+
+OK, but these three things
+you definitely need.
+
+And so yes, these are the things
+that we need to include. And you
+
+know, you could just read them
+off at that kind of output table
+
+that we discussed in the
+previous slide. Or if that output
+
+table is a little bit bigger and it's not so easy to
+
+kind of read it out, then you
+can use the pull command, the
+
+pull function to pull out these
+individual pieces of
+
+information. So here we do that
+by saying OK, take the data
+
+frame called results.
+
+and pipe that to the
+pull function to pull
+
+out whatever the number is
+for estimate.
+
+What is quite handy is then
+to pipe that outcome to a
+
+function called round and
+tell it to report that number
+
+to two decimals behind the
+decimal mark.
+
+Because that is the number of
+decimals we use to report a
+
+correlation coefficient.
+
+Similarly for the degrees of
+freedom you can
+
+say OK use the dataframe
+results, pipe that to the
+
+pull function and give me the
+number that is stored in
+
+parameter cell.
+
+And finally we need to know what
+the P value is. So again we say
+
+OK take that results dataframe,
+pipe it to the pull function and
+
+tell me what's the value is for P
+
+dot value. We can then pipe that
+to the round function and say
+
+OK, give me that number
+rounded to three decimals.
+
+Because that is how we.
+
+report P values and
+sometimes there's many
+
+more digits or decimals
+
+So if you then write up your
+reports, you would include
+
+something like this.
+Pearson's correlation
+
+coefficient was used to
+assess the relationship
+
+between reading ability and
+intelligence. There was a
+
+significant positive
+correlation.
+
+We've established that from the
+from the correlation coefficient
+
+and from the scatter plot of
+course, and then you give it
+
+here. So r, opening
+brackets. Here you have these
+
+degrees of freedom, 23 = .45
+comma, and then you report the P
+
+value equals .024.
+
+And then you give an
+interpretation of what that
+
+actually means. And so then you
+say in this case, as reading
+
+ability increased, intelligence
+
+increased. That helps the reader to get their head around
+
+how to actually
+interpret this number, right?
+
+Now another way to report a
+correlation analysis, and in
+
+particular, if you're reporting
+more than one correlation. So
+
+you might be looking at like 3
+different combinations in in a
+
+data set is a correlation matrix.
+
+So this is what that might look
+like. So you'd use a table for
+
+that and you have the variables
+of interest across.
+
+The columns here and also across
+
+the rows. And now we're not
+interested in the in the
+
+correlation between reading
+ability with itself, or
+
+in intelligence with itself, as
+that would just be one, right?
+
+But we are interested in these
+other cells, so for the correlation
+
+between reading ability and
+intelligence you would
+
+put Pearson's R for that
+
+in this cell.
+
+You then use a star. In this case
+one star to indicate that
+
+you found this to be significant
+at the at the point of five
+
+level and P
+
+Smaller than .25.
+
+You don't also then have to put
+it here, because the correlation
+
+between reading ability and
+intelligence is identical to the
+
+correlation between intelligence
+and reading ability. So he would
+
+just leave that cell open or put
+put a sign like that.
+
+So you only fill 1/2 of that
+table from below diagonal or
+
+above the diagonal.
+
+So that's useful in
+particular when you're
+
+reporting more than one
+correlation coefficient.

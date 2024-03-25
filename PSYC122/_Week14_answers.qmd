@@ -1,0 +1,166 @@
+---
+title: 4. Week 14 - Chi-Square
+subtitle: Written by Margriet Groen (partly adapted from materials developed by the PsyTeachR team at the University of Glasgow)
+order: 5
+---
+
+## Answers {#sec-wk14-answers}
+
+When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. **Remember**, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. **Actively engaging** with the material is the way to learn these analysis skills, not by looking at someone else's completed code...
+
+The answers to the questions and the script containing the code will be available after the final lab session has taken place.
+
+### Lab activity 1
+
+1.  How does Pearson's Chi-square differ from Pearson's correlation?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+**Pearson's Chi-square assesses whether there is a relationship between categorical (or nominal) variables. Pearson's correlation assesses whether there is a relationship between continuous (or interval/ratio) variables.**
+:::
+
+2.  Chi-square test of independence would be appropriate when testing the following questions:
+
+a.  What is the relationship between gender and soft drink preference?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+**True**
+:::
+
+b.  How do males and females compare in terms of wanting to be a psychologist when they leave school?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+**True**
+:::
+
+3.  Write the chi-square formula below.
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+![](images/wk4/122_week14_chiSquareFormula.png)
+:::
+
+
+4.  What were your answers to the pre-lab activity 1 questions? Please compare them with other students at your table.
+
+-
+
+    a.  Complete the Pearson's chi-square test by hand using the data above and fill in the blanks:
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+![](images/wk4/chisquare_dataLabAct1_answer.png)
+
+**First determine expected frequencies:** **Smoke/drink: (70 x 65) / 110 = 41.36** **Smoke/don't drink (70 x 45) / 110 = 28.63** **Don't smoke/drink (40 x 65) / 110 = 23.63** **Don't smoke/don't drink (40 x 45) / 110 = 16.36**
+
+**Then calculate chi-square:** **Smoke/drink: (50-41.36)2 / 41.36 = 1.80** **Smoke/don't drink: (20-28.63)2 / 28.63 = 2.60** **Don't smoke/drink: (15-23.63)2 / 23.63 = 3.15** **Don't smoke/don't drink: (25-16.36)2 / 16.36 = 4.56** **1.80+2.60+3.15+4.56 = 12.11**
+
+$\chi 2$ (1, *N* = 110) = 12.11, *p* \< .001
+
+Can you reject the null hypothesis? **Yes**
+:::
+
+5.  Why is it recommended to opt for multiple 2 x 2 chi-squares instead of chi-squares larger than 2 x 2?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+**It is easier to interpret and such a design requires a smaller sample size.**
+:::
+
+6.  How could you 'modify' the contingency table below for chi-square analysis to aid subsequent interpretation of the data/results?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+![](images/wk4/122_week14_labAc1_q6.png)
+
+**By combining 'interested' and 'somewhat interested' or by partitioning (doing multiple 2 x 2 chi-squares, while using Bonferroni correction to account for running multiple tests**
+
+:::
+
+### Lab activity 2
+
+>*Question 2a:* What do the numbers in the first row across the four columns refer to?
+
+:::{.callout-note icon=false collapse="true"}
+## Answer
+**condition = 1, intend = 1, actualdonate = 1 and id = 1 shows us that participant 1 was in the 'reminder-through-assocation' condition, reported that they intended to donate and also actually donated.**
+:::
+
+>*Question 3a:* How many participants were removed because they didn't intend to return the paper-clips?
+
+:::{.callout-note icon=false collapse="true"}
+## Answer
+**10 participants. The table 'intent_data' contains 87 observations, after we have applied the `filter()` function to include only those participants who did intend to return the paper-clips, the intent_recode table contains 77 observations.**
+:::
+
+>*Question 4a:* How many participants in the control condition didn’t donate?
+
+:::{.callout-note icon=false collapse="true"}
+## Answer
+**22**
+:::
+
+>*Question 4b:* How many participants in the control condition donated?
+
+:::{.callout-note icon=false collapse="true"}
+## Answer
+**16**
+:::
+
+>*Question 4c:* How many participants in the rta condition didn’t donate?
+
+:::{.callout-note icon=false collapse="true"}
+## Answer
+**10**
+:::
+
+>*Question 4d:*  How many participants in the rta condition donated?
+
+:::{.callout-note icon=false collapse="true"}
+## Answer
+**29**
+:::
+
+>*Question 5a:* What does `position = "dodge"` do?
+
+:::{.callout-note icon=false collapse="true"}
+## Answer
+**"dodge" places the bars next to each other, rather than on top of each other.**
+:::
+
+>*Question 6a:* What do you conclude from the output?
+
+:::{.callout-note icon=false collapse="true"}
+## Answer
+**There is a significnat association between the grouping variables.**
+:::
+
+>*Question 7a:* What do you conclude from the output?
+
+:::{.callout-note icon=false collapse="true"}
+## Answer
+**The expected frequencies in all cells are greater than 5.**
+:::
+
+>*Question 8a:* How large is the effect and how much variance is accounted for?
+
+:::{.callout-note icon=false collapse="true"}
+## Answer
+**The effect size (Cramer's V) = 0.33 and the percentage variance accounted for = 11%.**
+:::
+
+>*Question 9a:* What do you conclude from the output?
+
+:::{.callout-note icon=false collapse="true"}
+## Answer
+**The standardised residuals in the 4 cells are all of a roughly similar size (and below 1.96), which suggests that the statistically significant Chi-square tests is not driven by one or two cells, but reflects the pattern across all cells.**
+:::
+
+>*Write up:*
+
+:::{.callout-note icon=false collapse="true"}
+## Answer
+**Those in the reminder-through-association condition performed the intended behaviour at a significantly higher rate (74%, 29 out of 39) than did those in the control condition (42%, 16 out of 38)), *χ2*(1, N = 77) = 8.24, *p* = 0.004, *V* = 0.33. The analysis showed that 11% of variance in intended behaviour could be accounted for by condition (reminder-through-association vs. control).**
+:::

@@ -1,0 +1,14 @@
+name: week_9_learnr
+title: Week_9_learnr
+username: beesleyt
+account: beesleyt
+server: ma-rconnect.lancs.ac.uk
+hostUrl: https://ma-rconnect.lancs.ac.uk/__api__
+appId: 56
+bundleId: 158
+url: https://ma-rconnect.lancs.ac.uk/content/7596d3ad-277a-462b-bd90-622c9277ef17/
+when: 1701435323.90085
+lastSyncTime: 1701435323.90085
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: data_stroop_wk9.csv|data_wk9.csv|Lecture Week 9 vTB.pptx|week_9_script.R|Week_9_script_complete.R

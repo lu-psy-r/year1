@@ -1,0 +1,53 @@
+---
+title: Introduction to Part 2
+subtitle: Written by Rob Davies
+order: 6
+---
+
+Welcome to our overview of the materials and activities you will work with in **PSYC122 Part 2**.
+
+We will complete a series of four classes which will run in **weeks 16-19**.
+
+The classes are designed to help students to revise and put into practice some of the key ideas and skills you have been developing in the first year research methods modules *PSYC121, PSYC123 and PSYC124*.
+
+::: callout-tip
+We will reference lectures in these other modules where you may benefit from *connecting* ideas about research integrity and open science to your critical thinking on what we are doing.
+:::
+
+## A change in approach
+
+In weeks 16-20, we are going to focus on working in research in context (see Figure @fig-simple).
+
+```{dot fig-simple}
+//| fig-width: 5
+//| label: fig-simple
+//| fig-cap: This is a simple graphviz graph.
+graph G {
+  layout=neato
+  reading -- knowledge;
+  knowledge -- conventions;
+  knowledge -- concepts;
+  knowledge -- practices;
+}
+```
+
+You have been introduced to R. We know that some of you are new to R so we will practice the skills you are learning. We will consolidate, revise, and extend these skills.
+
+We will *build your understanding* of the linear model.
+
+The big change is this focus on the context. The reason is that *not* talking about the context risks limiting how you approach, do or think about data analysis.
+
+In traditional methods teaching, the schedule of classes will progress through a series of tests, one test a week, from simpler to more complex tests (e.g., from t-test to multiple regression at the undergraduate level). Textbooks often mirror this structure, presenting one test per chapter. 
+
+In this approach, the presentation is often brief about the context: the question the researchers are investigating; the methods they use to collect data, including the measurements; and the assumptions they make about how your reasoning can get you from the things you measure to the things you are trying to understand. In this approach, also, example data may be presented in a limited, partial, way.
+
+The reasons for this are understandable: methods are complex, technical, subjects for learning, and teachers and students do not also have time, perhaps, to think about statistics and about theoretical or measurement assumptions. 
+
+This is risky because it presents a misleading view of the challenge in learning methods: the misleading view is that the challenge is *just* the (difficult enough) challenge of learning about statistical methods, or dealing with numbers. It is risky, also, because it implies that if you learn the method, and can match the textbook example -- the variables, the state of the data -- when it is your turn to do an analysis, all will be well.
+
+A more productive approach -- this is the approach we will take -- is to expose, and talk about some of the real challenges that anybody who handles data, or quantitative evidence, in professional life. These challenges include:
+
+1.  Thinking about the mapping from our concerns to the research questions, to the things we measure, to analysis we do, and then the conclusions we make.
+2.  Selecting or constructing valid measures that can be assumed to measure the things they are supposed to measure.
+3.  Taking samples of observations, and making conclusions about the population.
+4.  Making estimates and linking these estimates to an account that is explicit about causes.

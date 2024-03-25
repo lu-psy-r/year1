@@ -1,0 +1,181 @@
+---
+title: "122_wk12_labActivity2"
+author: "Margriet Groen"
+date: "2024-01-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Lab activity 2 - Vaping data
+
+# Step 1. Loading the relevant libraries
+```{r libraries}
+library(broom)
+library(car)
+library(lsr)
+library(Hmisc)
+library(tidyverse)
+```
+# Step 2. Read in the data
+```{r read in Vaping data}
+dat <- read_csv("VapingData.csv")
+```
+
+*Question 2a:* For how many participants do we have data?
+
+There are 166 observations, so we have data for 166 participants. You can see this in the Environment window in the top right. This does not tell us whether any of these participants have any missing data.
+
+# Step 3. Data wrangling
+```{r wrangling}
+dat <- dat %>% 
+  filter(IAT_BLOCK3_Acc < 1) %>%                            # 1) only keep participants with accuracy scores equal to or smaller than 1 from block 3
+  filter(IAT_BLOCK5_Acc < 1) %>%                            # 1) only keep participants with accuracy scores equal to or smaller than 1 from block 5
+  mutate(IAT_ACC = (IAT_BLOCK3_Acc + IAT_BLOCK5_Acc)/2) %>% # 2) calculate an average IAT accuracy score across blocks 3 and 5
+  filter(IAT_ACC > .8) %>%                                  # 2) only keep participants with an average score greater than .8.
+  mutate(IAT_RT = IAT_BLOCK5_RT - IAT_BLOCK3_RT)            # 3) compute the IAT_RT score
+```
+
+*Question 3a:* For how many participants do we have data now that we have cleaned them up?
+
+104 participants.
+
+*Question 3b:* Use the information in the background description to understand how the scores relate to attitudes. What does a positive IAT_RT score reflect? What does a negative IAT_RT score reflect? What does a higher score on the 'VapingQuestionnaireScore' mean?
+
+People with a positive IAT_RT are considered to hold the implicit view that vaping is negative (i.e. congruent associations are quicker than incongruent associations).
+
+People with a negative IAT_RT are considered to hold the implicit view that vaping is positive (i.e. incongruent associations were quicker than congruent associations).
+
+Higher scores indicated a positive explicit attitude towards vaping.
+
+# Step 4: Calculating descriptive statistics
+
+```{r descriptives}
+descriptives <- dat %>%
+  summarise(n = n(),
+            mean_IAT_ACC = mean(IAT_ACC),
+            mean_IAT_RT = mean(IAT_RT),
+            mean_VPQ = mean(VapingQuestionnaireScore, na.rm = TRUE))
+descriptives
+```
+
+*Question 4a:* Why might these averages be useful? Why are averages not always useful in correlations?
+
+It is always worth thinking about which averages are informative and which are not. Knowing the average explicit attitude towards vaping could well be informative. In contrast, if you are using an ordinal scale and people use the whole of the scale then the average may just tell you the middle of the scale you are using - which you already know and really isn't that informative. So it is always worth thinking about what your descriptives are calculating.
+
+# Step 5: Check the assumptions
+
+## Variable types
+*Questions 5a:* What are the variable types for the implicit (IAT_RT) and the explicit (VapingQuestionnaireScore) attitude variables?
+
+Both can be considered continuous variables and at least at interval level.
+
+## Missing data
+```{r missing data}
+dat <- dat %>% 
+  filter(!is.na(VapingQuestionnaireScore)) %>% 
+  filter(!is.na(IAT_RT))
+```
+*Question 5b* How many people had missing data?
+
+Before we removed participants with missing data, we had 104 observations, now we have 96. So there must have been 8 participants without a score on one or the other variable.
+
+## Normality
+```{r normality plots}
+ggplot(dat, aes(x = VapingQuestionnaireScore)) + 
+  geom_histogram(binwidth = 10) +
+  theme_bw()
+
+qqPlot(x = dat$VapingQuestionnaireScore)
+
+ggplot(dat, aes(x = IAT_RT)) + 
+  geom_histogram(binwidth = 10) +
+  theme_bw()
+
+qqPlot(x = dat$IAT_RT)
+```
+
+*Question 5c* What do you conclude from the histograms and the qq-plots? Are the VapingQuestionnaireScore and the IAT_RT normally distributed?
+
+Yes. Both histograms resemble a normal distribution (bell curve) and the open circles in the qq-plots fall within the blue stripy lines.
+
+## Linearity and homoscedasticity
+```{r linearity and homoscedasticity}
+ggplot(dat, aes(x = IAT_RT, y = VapingQuestionnaireScore)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_bw() +
+  labs(x = "Implicit attitude", y = "Explicit attitude")
+```
+
+*Question 5d* What do you conclude from the scatterplot in terms of the homoscedasticity of the data and the linearity, direction and strength of the relationship? What does the scatterplot tell you about possible issues (outliers, range restrictions)?
+
+The data look like a cloud without a clear direction. This suggests the relationship might might be weak. In terms of linearity, the scatterplot doesn't suggest any curvilinear relationships. Variance seems quite constant, but there do seem to be few people with negative IAT_RT (Implicit attitude) scores, suggesting few people held the view that vaping is positive.
+
+# Step 6: Conduct a correlation analysis ----------------------------------
+
+*Question 6a* Do you need to calculate Pearson's r or Spearman's rho? Why?
+
+Pearson's *r* because the data do meet the assumptions.
+
+```{r correlation}
+results <- cor.test(dat$VapingQuestionnaireScore, 
+                    dat$IAT_RT, 
+                    method = "pearson") %>% 
+  tidy()
+
+results
+
+correlation <- results %>% 
+  pull(estimate) %>%
+  round(2)
+
+df <- results %>% 
+  pull(parameter) %>%
+  round(0)
+
+pvalue <- results %>% 
+  pull(p.value) %>%
+  round(3)
+```
+
+*Question 6b* Is the correlation significant?
+
+No, *p* = .822, which is larger than .05.
+
+# Step 7: Write up
+
+Testing the hypothesis of a relationship between implicit and explicit attitudes towards vaping, a Pearson correlation found no significant relationship between IAT reaction times (implicit attitude) and answers on a Vaping Questionnaire (explicit attitude), *r*(94) = -.02, *p* = .822. Overall this suggests that there is no direct relationship between implicit and explicit attitudes with regard to vaping and as such our hypothesis was not supported; we cannot reject the null hypothesis.
+
+# Step 8: Intercorrelations
+
+## Create a new data frame that only includes the relevant variables
+```{r new data frame}
+dat_matrix <- dat %>%
+  select(Age, IAT_RT, VapingQuestionnaireScore) %>%
+  as.data.frame() # Make sure tell R that dat is a data frame
+```
+
+## Create a matrix of scatterplots
+```{r matrix of scatterplots}
+pairs(dat_matrix)
+```
+
+*Question 8a* What do you conclude from the scatterplots?
+
+The scatterplots with age suggest that age is highly skewed with only a few participants older than 25. For now, let's say we'll therefore calculate Spearman's rho, rather than Pearson's *r*. That is ok for now, but if you were analysing these data for a research project, you'd want to have a closer look at the age variable (think histogram, qq-plot, and think about either collecting more data from older participants or transforming the variable (more about that next year).
+
+## Conduct intercorrelation (multiple correlations)
+```{r intercorrelation}
+intercor_results <- correlate(x = dat_matrix, # our data
+                          test = TRUE, # compute p-values
+                          corr.method = "spearman", # run a spearman test 
+                          p.adjust.method = "bonferroni") # use the bonferroni correction
+intercor_results
+```
+
+*Question 8b* What do you conclude from the results of the correlation analysis? 
+
+No significant correlation with age was found.

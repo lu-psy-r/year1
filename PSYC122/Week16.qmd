@@ -1,0 +1,1145 @@
+---
+title: 5. Week 16 -- Hypotheses, associations
+subtitle: Written by Rob Davies
+order: 5
+---
+
+::: callout-warning
+This page is now live for you to use: **Welcome!**
+
+- Here is a link to the sign-in page for [R-Studio Server](https://psy-rstudio.lancaster.ac.uk/auth-sign-in?appUri=%2F)
+:::
+
+```{r}
+#| warning: false
+#| echo: false
+library(kableExtra)
+library(tidyverse)
+```
+
+```{r}
+#| warning: false
+#| echo: false
+study.one.gen <- read_csv("study-one-general-participants.csv")  
+study.two.gen <- read_csv("study-two-general-participants.csv")
+```
+
+## Week 16: Introduction {#sec-wk16-introduction}
+
+Welcome to your overview of our work together.
+
+We will complete four classes in **weeks 16-19**.
+
+::: callout-tip
+*Putting it all together*
+
+- These classes are designed to help you to revise and to put into practice some of the key ideas and skills you have been developing in the first year research methods modules *PSYC121, PSYC123 and PSYC124*.
+- We will do this in the context of a live research project with potential real world impacts: the **Clearly Understood** project.
+:::
+
+We will present our PSYC122 lessons in the context of a real research project because we think that this *context* will help you to make sense of the data, and it will help you to see *why* we ask you to practice the skills we are teaching.
+
+We will be revisiting some of the ideas and techniques you have seen introduced in previous classes.
+This will give you the opportunity to *revise* and *consolidate* your learning.
+We will *extend* your development with some new ideas, to help you to strengthen your skills.
+
+We will observe real scientific findings using the data we will collect together.
+These new findings will ultimately show health providers how to communicate their advice more effectively.
+
+### Our learning goals
+
+::: callout-tip
+In Week 16, we will ask you to do three things.
+
+- *First* we will ask you to do a pre-lab activity that involves completing a survey.
+- *Second* we will ask you to do a set of practical tasks in the lab activity that are designed to consolidate your learning on data **visualization**.
+- *Third* we will ask you to **think critically** about potential associations between measures of individual differences and measures of how well people understand health information.
+:::
+
+Completing the survey will help you to understand the numbers you will be working with in the activities: where they come from, and what they show about the people tested.
+It will also help to teach you about the challenges of measurement: this is one of the key challenges in psychological science.
+
+We will build practice in using correlations to test predictions about associations and *thus* to answer research questions.
+
+## Lectures {#sec-wk16-lectures}
+
+::: callout-tip
+Before you go on to the activities, **watch** the lectures:
+:::
+
+The lecture for this week is presented in four short parts.
+You can view video recordings of the lectures using Panopto, by clicking on the links shown following.
+
+1. **Overview** (15 minutes): What we are doing in weeks 16-20, and *how* and *why* you will develop your critical thinking skills.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=219a5ba8-cce8-43e3-afea-afaa010f2d91&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&start=9&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+2. **Thinking critically** (11 minutes): A summary of the health communication project, and the ideas we assume to develop our hypotheses.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6fd6d7e9-7457-441d-a689-afaa0113f62d&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+3. **Thinking about associations** in research (22 minutes): How we visualize and think about distributions and associations.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=5bbbe88e-b701-4658-b484-afaa011819e3&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+4. **Interpreting, reporting and visualizing** correlations (11 minutes): How we use R to estimate and test correlations.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=ec9bbeb3-ad95-48e1-a03f-afaa012037f9&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+::: callout-tip
+The slides presented in the videos can be downloaded either as a web page or as a Word document.
+:::
+
+- [The slides](data/week16/122-hypotheses-assocations.html) exactly as presented (36 MB). 
+- [The slides](data/week16/122-hypotheses-associations-printable-edit.docx) converted to a Word .docx (24 MB). 
+
+You can download the web page `.html` file and click on it to open it in any browser (e.g., Chrome, Edge or Safari). The slide images are high quality so the file is quite big and may take a few seconds to download.
+
+You can download the `.docx` file and click on it to open it as a Word document that you can then edit. 
+Converting the slides to a .docx distorts some images but the benefit of the conversion is that it makes it easier for you to add your notes.
+
+## Reading: Links to other classes
+
+We do not provide further reading for this class but you will find it helpful to revise some of the key ideas you have been learning about PSYC122 and in other modules.
+
+- The lectures in *PSYC123* on: the scientific method; reliability and validity; experimental design, especially between-subjects studies; hypothesis testing; and precise hypotheses.
+- The lecture in *PSYC122* on correlations. 
+
+## Pre-lab activities {#sec-wk16-prelab-activities}
+
+### Pre-lab activity 1 {#sec-wk16-prelab-activities-1}
+
+In weeks 16-19, we will be working together on a research project to investigate how people vary in their response to health advice.
+
+Completing the project involves collecting responses from *PSYC122* students: **you**.
+
+To enter your responses, we invite you to complete a short survey.
+
+Complete the survey by clicking on the link [here](https://lancasteruni.eu.qualtrics.com/jfe/form/SV_0qdj8TOZc18LR0q)
+
+::: callout-tip
+In our week 19 class activity, we will analyze the data we collect here.
+:::
+
+The survey should take about 20 minutes to complete.
+
+Taking part in the survey is **completely voluntary**.
+You can stop at any time without completing the survey if you do not want to finish it.
+If you do not want to do the survey, you can do an alternative activity (see below).
+
+All responses will be recorded completely anonymously.
+
+### Pre-lab activity alternative option {#sec-wk16-prelab-activities-2}
+
+If you do not want to complete the survey, we invite you to read the pre-registered research plan for the *PSYC122 health advice* research project.
+
+[Read the project pre-registration](https://osf.io/p6fsc/)
+
+## Lab activities {#sec-wk16-lab-activities}
+
+### Introduction {#sec-wk16-lab-activities-1-introduction}
+
+We will do our practical lab work to develop your skills in the context of the **Clearly Understood** project.
+
+- Our focus will be on what makes it easy or difficult for people to understand written health information.
+
+**Why are we doing this?**
+
+We encounter written health information all the time: in warnings signs, on medication labels, in clinics when we go to see the doctor, and online when we research things we are worried about.
+It is not always easy to understand this information.
+The problem is that it is unclear how health information *should* be communicated: even this is important, there is not much evidence.
+
+As psychologists, **we can help**.
+
+::: callout-important
+In these classes, we will complete a research project to answer the research questions:
+
+1. What person attributes predict success in understanding health information?
+2. Can people accurately evaluate whether they correctly understand written health information?
+:::
+
+### Get ready {#sec-wk16-prelab-activities-ready}
+
+#### Download the data 
+
+Click on the link: [122_week16_for_students.zip](data/week16/122_week16_for_students.zip) to download the data files folder. Then upload the contents to the new folder you created in RStudio Server.
+
+The downloadable .zip folder includes the data files:
+
+- `study-one-general-participants.csv`
+- `study-two-general-participants.csv`
+
+and the R Markdown `.Rmd`:
+
+- `2023-24-PSYC122-w16-how-to.Rmd`
+
+If you can't upload these files to the server -- this affects some students -- you can use some code to get R to do it for you: uncover the code box below to reveal the code to do this.
+
+:::{.callout-tip collapse="true"}
+## Code
+- You can use the code below to directly download the file you need in this lab activity to the server. 
+- Remember that you can copy the code to your clipboard by clicking on the 'clipboard' in the top right corner.
+
+1. Get the `study-one-general-participants.csv` data
+
+```{r eval=FALSE}
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week16/study-one-general-participants.csv?raw=true", destfile = "study-one-general-participants.csv")
+```
+
+2. Get the `study-two-general-participants.csv` data
+
+```{r eval=FALSE}
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week16/study-two-general-participants.csv?raw=true", destfile = "study-two-general-participants.csv")
+```
+
+3. Get the `2023-24-PSYC122-w16-how-to.Rmd` how-to guide
+
+```{r eval=FALSE}
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week16/2023-24-PSYC122-w16-how-to.Rmd?raw=true", destfile = "2023-24-PSYC122-w16-how-to.Rmd")
+```
+:::
+
+#### Check: What is in the data files?
+
+Each of the data files we will work with has a similar structure, as you can see in this extract.
+
+```{r}
+#| label: headcheck-wide
+#| echo: false
+# head(behaviour.rt)
+study.two.gen %>%
+  filter(participant_ID == c('studytwo.1', 'studytwo.10', 'studytwo.100', 'studytwo.101')) %>%
+  as.data.frame() %>%
+  kable() %>%
+  kable_styling()
+```
+
+You can use the *scroll bar* at the bottom of the data window to view different columns.
+
+You can see the columns:
+
+- `participant_ID` participant code
+- `mean.acc` average accuracy of response to questions testing understanding of health guidance
+- `mean.self` average self-rated accuracy of understanding of health guidance
+- `study` variable coding for what study the data were collected in
+- `AGE` age in years
+- `HLVA` health literacy test score
+- `SHIPLEY` vocabulary knowledge test score
+- `FACTOR3` reading strategy survey score
+- `GENDER` gender code
+- `EDUCATION` education level code
+- `ETHNICITY` ethnicity (Office National Statistics categories) code
+
+::: callout-tip
+It is always a good idea to view the dataset -- click on the name of the dataset in the R-Studio `Environment` window, and check out the columns, scroll through the rows -- to get a sense of what you are working with.
+:::
+
+### Lab activity 1: Work with the `How-to` guide {#sec-wk16-lab-activities-1}
+
+The `how-to` guide comprises an .Rmd file:
+
+- `2023-24-PSYC122-w16-how-to.Rmd`
+
+It is full of advice and example code.
+
+The code in the `how-to` guide was written to work with the data file:
+
+- `study-one-general-participants.csv`.
+
+::: callout-tip
+We show you how to do everything you need to do in the lab activity (@sec-wk16-lab-activities-2, next) in the `how-to` guide.
+
+- Start by looking at the `how-to` guide to understand what steps you need to follow in the lab activity.
+:::
+
+We will take things *step-by-step*.
+
+We split .Rmd scripts by steps, tasks and questions:  
+
+- different steps for different phases of the analysis workflow;
+- different tasks for different things you need to do;
+- different questions to examine different ideas or coding challenges
+
+::: callout-tip
+- Make sure you start at the top of the `.Rmd` file and work your way, in order, through each task.
+- Complete each task before you move on to the next task.
+:::
+
+In the activity @sec-wk16-lab-activities-2, we are going to work through the following tasks.
+
+**Step 1: Set-up**
+
+1. Empty the R environment -- using `rm(list=ls())`
+2. Load relevant libraries -- using `library()`
+
+**Step 2: Load the data**
+
+3. Read in the data file -- using `read_csv()`
+4. Inspect the data -- using `head()` and `summary()`
+5. Change the type classification of a variable in the data -- using `as.factor()`
+
+**Step 3: Use histograms to examine the distributions of variables**
+
+6. Draw histograms to examine the distributions of variables -- using `ggplot()` and `geom_histogram()`
+
+**Step 4: Edit your plots to make them look good**
+
+7. Edit the appearance of one histogram plot step-by-step
+
+**Step 5: Now draw scatterplots to examine associations between variables**
+
+8. Draw scatterplots to examine the associations between some variables -- using `ggplot()` and `geom_point()`
+9. Draw scatterplots to examine different variables
+
+**Step 6: Edit the scatterplots to make them look good**
+
+10. Edit the appearance of a plot step-by-step
+
+**Step 7: Use correlation to to answer the research questions**
+
+11. Examine associations between variables using correlation.
+
+::: callout-tip
+If you are unsure about what you need to do, look at the advice in `2023-24-PSYC122-w16-how-to.Rmd` on how to do the tasks, with examples on how to write the code.
+:::
+
+You will see that you can match a task in the activity @sec-wk16-lab-activities-2 to the same task in the `how-to` guide.
+The `how-to` shows you what function you need and how you should write the function code.
+
+This process of adapting demonstration code is a process critical to data literacy and to effective problem solving in modern psychological science.
+
+::: callout-warning
+Don't forget: You will need to change the names of the dataset or the variables to complete the tasks in the activity.
+:::
+
+### Lab activity 2 {#sec-wk16-lab-activities-2}
+
+### OK: now let's do it!
+
+In the following, we will guide you through the tasks and questions step by step.
+You will learn more if you follow this advice:
+
+::: callout-tip
+1. We will hide the code to do some tasks behind a drop-down button. Try to write and run the code for yourself first.
+2. We won't always give you the code required to do something: this gives you the chance to check what you have learned by trying out your code without the answer in front of you.
+3. We will not *at first* give you the answers to questions about the data or about the results of analyses. 
+4. An answers version of the workbook will be provided after the last lab session (check the answers then in @sec-wk16-lab-activities-answers) so that you can check whether your independent work has been correct.
+:::
+
+#### Questions {#sec-wk16-lab-activities-1-questions}
+
+#### Step 1: Set-up
+
+To begin, we set up our environment in R.
+
+##### Task 1 -- Run code to empty the R environment
+
+```{r}
+#| eval: false
+rm(list=ls())                            
+```
+
+##### Task 2 -- Run code to load relevant libraries
+
+```{r}
+#| eval: false
+library("tidyverse")
+```
+
+#### Step 2: Load the data
+
+##### Task 3 -- Read in the data file we will be using
+
+The data file for the *workbook* is called:
+
+- `study-two-general-participants.csv`
+
+Use the `read_csv()` function to read the data file into R.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+study.two.gen <- read_csv("study-two-general-participants.csv")
+```
+:::
+
+When you code this, you can choose your own file name, but be sure to give the data object you create a distinct name e.g. `study.two.gen`.
+
+##### Task 4 -- Inspect the data file
+
+Use the `summary()` or `head()` functions to take a look
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+summary(study.two.gen)
+```
+:::
+
+>**Q.1.** What is the median of `AGE`?
+
+<!-- - A.1. 32.50   -->
+
+>**Q.2.** What class is the variable `ETHNICITY`?
+
+<!-- - A.2. character   -->
+
+>**Q.3.** Does the summary indicate if any variable has missing values (NAs)?
+
+<!-- - Q.3. No -->
+
+##### Task 5 -- Change the class or type of the variable `ETHNICITY` to factor
+
+You can use the `as.factor()` function you have used before: how do you write the code for these data?
+Try it for yourself before revealing the code.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+study.two.gen$ETHNICITY <- as.factor(study.two.gen$ETHNICITY)
+```
+:::
+
+>**Q.4.** After you have done this, what information does `summary()` give you 
+about the variable `ETHNICITY`?
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+summary(study.two.gen)
+```
+:::
+
+<!-- - A.4. We can see that ETHNICITY lists observations following UK Office National Statistics ethnicity grouping: -->
+
+<!-- - Asian: 15 -->
+<!-- - Black: 5 -->
+<!-- - Mixed: 7 -->
+<!-- - White: 145 -->
+
+#### Step 3: Use histograms to examine the distributions of variables
+
+##### Task 6 -- Draw histograms to examine the distributions of variables
+
+##### Hint: Task 6
+
+:::{.callout-tip collapse="true"}
+## Hint
+Use `ggplot()` with `geom_histogram()`.
+
+The first time we do this, we can take things one step at a time.
+
+Here's an example: run the line of code and see the result in the `Plots` window 
+in `R-Studio`.
+
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = mean.acc)) + geom_histogram()
+```
+
+These are the steps, set out one step at a time:
+
+1. `ggplot(...)` you tell R you want to make a plot using the `ggplot()` function
+2. `ggplot(data = study.two.gen ...)` you tell R you want to make a plot with the
+`study.two.gen` data
+3. `ggplot(..., aes(x = mean.acc))` you tell R that you want to make a plot with 
+the variable `mean.acc` -- here, you specify the aesthetic mapping, `x = mean.acc`
+4. `ggplot(...) + geom_histogram()` you tell R you want to plot values of `mean.acc` 
+as a histogram
+:::
+
+##### Questions: Task 6
+
+>**Q.5.** Did you get a message in the `Console` window in `R-Studio`: 
+what does it say?
+
+<!-- - A.5. The message says: -->
+
+<!-- - `stat_bin()` using `bins = 30`. Pick better value with `binwidth`. -->
+
+>**Q.6.** Draw two different histograms to examine the distributions of two 
+different variables: `SHIPLEY` and `HLVA`
+
+Try it for yourself before revealing the code: can you do it?
+
+Click on the button to see the code for drawing the histogram of `SHIPLEY` scores.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + geom_histogram()
+```
+:::
+
+@fig-hist-study-two-hlva shows you what you are aiming to produce for the second plot: a histogram of `HLVA` scores?
+What code do you need to write?
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| label: fig-hist-study-two-hlva
+#| fig-width: 5
+#| fig-height: 5
+#| fig-align: center
+#| fig-cap: "Histogram showing the distribution of HLVA scores in the Study Two dataset"
+#| fig-alt: "Histogram shows thin grey bars against a light grey background. The HLVA scores peak around 10, ranging from 2.5 to 14 in a symmetric distribution."
+ggplot(data = study.two.gen, aes(x = HLVA)) + geom_histogram()
+```
+
+>**Q.7.** Now edit the code for both plots: can you change the binwidth in `geom_histogram()` to make the bars wider?
+
+If you are going to change binwidth the number you use needs to be a number larger than
+the minimum and smaller than the maximum for the variable.
+
+Remember, min and max values are given for each numeric variable in `summary()`.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + geom_histogram(binwidth = 2)
+ggplot(data = study.two.gen, aes(x = HLVA)) + geom_histogram(binwidth = 2)
+```
+:::
+
+We adjust binwidth typically to improve the appearance of the plot.
+
+This is a bit subjective so try different numbers and see how you feel about the
+changes in appearance.
+
+We want histograms that show us enough detail about the frequency of occurrence
+of groupings (bins) of values for each variable.
+
+But we do not want histograms that show us so much detail it is difficult to see
+the pattern for the distribution.
+
+>**Q.8.** -- How would you describe the distributions -- in a sentence -- of the distributions of the
+`SHIPLEY` and `HLVA` variable values for our sample?
+
+<!-- - A.8. The `SHIPLEY` values lie between about 25 and 40, and are skewed towards high scores. -->
+<!-- - A.8. The `HLVA` values lie between 4 and about 14, and peak in the middle (near 7). -->
+
+#### Step 4: Edit your plots to make them look good
+
+##### Task 7 -- Edit the appearance of a histogram plot for *one numeric variable*
+
+Note that `ggplot()` code does not all have to be on the same line.
+
+You can create a new plot for each edit so you can see what difference your edits make.
+
+>**Q.9.** Edit the appearance of the bars using `binwidth`
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = HLVA)) +
+  geom_histogram(binwidth = 2)
+```
+:::
+
+>**Q.10.** Edit the colour of the background using `theme_bw()`
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = HLVA)) +
+  geom_histogram(binwidth = 2) +
+  theme_bw()
+```
+:::
+
+>**Q.11.** Edit the appearance of the labels using `labs()`
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = HLVA)) +
+  geom_histogram(binwidth = 2) +
+  theme_bw() +
+  labs(x = "HLVA", y = "count")
+```
+:::
+
+Notice how, if you are doing edits in steps, one line at a time, each line in your code **except the last one** ends in a `+`.
+
+What we are doing is telling R we want this `+` and this `+` and this ...
+Each line then adds an extra step.
+
+You can *break* this code by not adding a + at the end of each bit (except the last line).
+
+Notice that how to break the code, and how to figure out how to fix the break, are discussed in the `how-to` guide.
+
+#### Step 5: Now draw scatterplots to examine associations between variables
+
+##### Task 8 -- Create a scatterplot to examine the association between some variables
+
+We are working with `geom_point()` and you need x and y aesthetic mappings
+
+```{r}
+#| warning: false
+#| message: false
+#| label: fig-scatter-study-two-hlva-acc
+#| fig-width: 5
+#| fig-height: 5
+#| fig-align: center
+#| fig-cap: "Scatterplot showing the potential association between health literacy (HLVA) scores and how accurately people understand health information in the Study Two dataset"
+#| fig-alt: "The plot shows a scatter of black points against a light grey background. The points appear to trend upwards so that higher mean.acc scores are observed for higher HLVA scores"
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point()
+```
+
+This plot shows the possible association between x-axis variable `HLVA` and y-axis variable
+`mean.acc`.
+
+The plot code moves through the following steps:
+
+1. `ggplot(...)` make a plot
+2. `ggplot(data = study.two.gen, ...)` with the `study.two.gen` dataset
+3. `ggplot(...aes(x = HLVA, y = mean.acc))` using two aesthetic mappings:
+
+- `x = HLVA` map `HLVA` values to x-axis (horizontal, left to right) positions
+- `y = mean.acc` map `mean.acc` values to y-axis (vertical, bottom to top) positions
+
+4. `geom_point()` show the mappings as points
+
+##### Task 9 -- Now do scatterplots with *every* numeric predictor variable in the `study.two.gen` dataset
+
+You always want to use the outcome `mean.acc` as the y-axis variable so:
+
+- `y = mean.acc`
+
+Then you can use each numeric predictor variable as the x-axis variable so:
+
+- `x = mean.self`
+
+::: callout-tip
+Remember what we saw with `summary()`: not every variable consists of numbers
+
+If the `summary()` does not show you a mean for a variable, then R does not think
+that variable is numeric
+:::
+
+**It can be hard to decide what an association looks like so make a decision based on what you see**
+
+Right now, we are working to build your intuitions so: reflect, trust your intuition, and make a decision.
+
+##### Draw the plot, answer the question
+
+>**Q.12.** What is the shape (direction) of the association between `mean.self` and `mean.acc`?
+
+<!-- - A.12. Increase in `mean.self` is associated with increase in `mean.acc` -->
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = mean.self, y = mean.acc)) +
+  geom_point()
+```
+:::
+
+##### Draw the plot, answer the question
+
+>**Q.13.** What is the shape (direction) of the association between `AGE` and `mean.acc`?
+
+<!-- - A.13. There is no clear association between `AGE` and `mean.acc` -->
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = AGE, y = mean.acc)) +
+  geom_point()
+```
+:::
+
+##### Draw the plot, answer the question
+
+>**Q.14.** What is the shape (direction) of the association between `SHIPLEY`
+and `mean.acc`?
+
+<!-- - A.14. Increase in `SHIPLEY` is associated with increase in `mean.acc` -->
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY, y = mean.acc)) +
+  geom_point()
+```
+:::
+
+##### Draw the plot, answer the question
+
+>**Q.15.** What is the shape (direction) of the association between `HLVA`
+and `mean.acc`?
+
+<!-- - A.15. Increase in `HLVA` is associated with increase in `mean.acc` -->
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point()
+```
+:::
+
+##### Draw the plot, answer the question
+
+>**Q.16.** What is the shape (direction) of the association between `FACTOR3`
+and `mean.acc`?
+
+<!-- - A.16. Increase in `FACTOR3` is associated with increase in `mean.acc` -->
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = FACTOR3, y = mean.acc)) +
+  geom_point()
+```
+:::
+
+##### Draw the plot, answer the question
+
+>**Q.17.** What is the shape (direction) of the association between `QRITOTAL`
+and `mean.acc`?
+
+<!-- - A.17. Increase in `QRITOTAL` is associated with increase in `mean.acc` -->
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = QRITOTAL, y = mean.acc)) +
+  geom_point()
+```
+:::
+
+#### Step 6: Edit the scatterplots to make them look good
+
+##### Task 10 -- Edit the appearance of one plot step-by-step
+
+Learn how to edit your plotting code so that you can make plots with a 
+professional appearance.
+
+::: callout-tip
+- We teach this because we know that some of our alumni get jobs after they 
+develop pro visualization skills with us.
+- We will do this learning as part of *PSYC122*.
+:::
+
+In doing this work, you will learn about:
+
+- **coding** -- how to do the edits;
+- **visualization** -- how to look at and read plots;
+- **presentation** -- what works and what doesn't for your audience.
+
+We get started here.
+
+##### Hint: Task 10 -- We are going to edit a scatterplot to adjust
+
+1. the appearance of the points using `alpha`, `size` and `colour`;
+2. the colour of the background using `theme_bw()`;
+3. the appearance of the labels using `labs()`.
+
+In the following, we ask you to edit one plot element at a time.
+You can work out what to do.
+
+There is helpful `ggplot` reference information that you can use: [here](https://ggplot2.tidyverse.org/reference/geom_point.html).
+
+You can visit the find the `ggplot` reference webpages, find some example code,
+and come back here.
+
+You can click on the reveal button, for each question, to get our example code.
+
+::: callout-tip
+- You do not have to stick with our choices on colour, size etc.
+- **Experiment** change the options and see what happens.
+:::
+
+#### Questions: Task 10
+
+>**Q.18.** Change the appearance of the points using alpha, size and colour:
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "red")
+```
+:::
+
+>**Q.19.** Edit the colour of the background using `theme_bw()`
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "red")   +
+  theme_bw()
+```
+:::
+
+>**Q.20.** Edit the appearance of the labels using `labs()`
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "red")   +
+  theme_bw() +
+  labs(x = "HLVA", y = "mean accuracy")
+```
+:::
+
+>**Q.21.** Can you find the ggplot reference page?
+
+Try doing a search with the keywords: `ggplot reference geom_point`
+
+<!-- - A.21. -- It is here: -->
+
+<!-- <https://ggplot2.tidyverse.org/reference/geom_point.html> -->
+
+::: callout=tip
+Now it's your turn: experiment!
+
+- What about different colour words? Replace `"red"` with `"..."`?
+- What about a different size? Replace `size = 2` with `size =  ...` using a different number.
+- What about a different level of transparency (alpha)? Replace `alpha = 0.5` with `alpha =  ...` using a different fraction.
+:::
+
+#### Step 7: Use correlation to to answer the research questions
+
+##### Task 11 -- Examine the correlation between mean accuracy (mean.acc) and some numeric predictor variables
+
+We use `cor.test()` for the questions that follow.
+
+::: callout-tip
+- We take a slightly different approach to the approach you have seen in previous weeks [see here](https://lu-psy-r.github.io/statistics_for_psychologists/PSYC122/Week12.html)
+- You have seen the code before.
+- Here, we use `cor.test()` on its own because we want to focus your attention on the *statistics*
+:::
+
+>**Q.22.** What is r (given as `cor` in the output) for the correlation between `HLVA` and `mean.acc`?
+
+<!-- - A.22. r = 0.5000559 -->
+
+Can you figure out the code to do the calculation?
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+cor.test(study.two.gen$HLVA, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided")
+```
+:::
+
+>**Q.23.** Is the correlation significant?
+
+<!-- - A.23. r is significant -->
+
+>**Q.24.** What are the values for t and p for the significance test for the correlation?
+
+<!-- - A.24. t = 7.5288, p = 2.866e-12 -->
+
+>**Q.25.** What do you conclude, given the correlation results? 
+
+Maybe draw a scatterplot to examine the shape of the association.
+
+<!-- - A.25. HLVA and mean.acc are positively correlated suggesting that as HLVA scores increase so also do mean.acc scores -->
+
+>**Q.26.** What is r (given as `cor` in the output) for the correlation between `mean.self` and `mean.acc`?
+
+<!-- - A.26. r = 0.5460792 -->
+
+Can you figure out the code to do the calculation?
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+cor.test(study.two.gen$mean.self, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided")
+```
+:::
+
+>**Q.27.** Is the correlation between `AGE` and `mean.acc` significant?
+
+<!-- - A.27. r is not significant -->
+
+Can you figure out the code to do the calculation?
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+cor.test(study.two.gen$AGE, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided")
+```
+:::
+
+>**Q.28.** What are the values for t and p for the significance test for the correlation between `QRITOTAL` and `mean.acc`?
+
+<!-- - A.28. t = 6.4711, p = 9.993e-10 -->
+
+Can you figure out the code to do the calculation?
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+cor.test(study.two.gen$QRITOTAL, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided")
+```
+:::
+
+>**Q.29.** What do you conclude, given the correlation results, about the association between `SHIPLEY` and `mean.acc`?
+
+<!-- - A.29. `SHIPLEY` and `mean.acc` are positively correlated suggesting that as HLVA scores increase so also do mean.acc scores -->
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+cor.test(study.two.gen$SHIPLEY, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided")
+```
+:::
+
+## Answers {#sec-wk16-lab-activities-answers}
+
+When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week.
+
+::: callout-tip
+The `.Rmd` script containing all code and all answers for each task and each question will be made available after the final lab session has taken place.
+
+- You can download the script [2023-24-PSYC122-w16-workbook-answers.Rmd](data/week16/2023-24-PSYC122-w16-workbook-answers.Rmd) when it is available.
+:::
+
+We set out the Week 16 *Hypotheses, associations* questions below.
+We focus on the **Lab activity 2** questions where we ask you to interpret something or say something.
+
+You can see all the code and all the answers in `2023-24-PSYC122-w16-workbook-answers.Rmd`.
+
+### Answers {#sec-wk16-lab-activities-answers-information}
+
+::: callout-tip
+Click on a box to reveal the answer.
+:::
+
+#### Questions {#sec-wk16-lab-activities-1-questions-answers}
+
+>**Q.1.** What is the median of `AGE`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.1. 32.50
+:::
+
+>**Q.2.** What class is the variable `ETHNICITY`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.2. character
+:::
+
+>**Q.3.** Does the summary indicate if any variable has missing values (NAs)?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- Q.3. No
+:::
+
+>**Q.4.** After you have done this [change ETHNICITY to a factor], what information does `summary()` give you
+about the variable `ETHNICITY`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.4. We can see that ETHNICITY lists observations following UK Office National Statistics ethnicity grouping:
+
+- Asian: 15
+- Black: 5
+- Mixed: 7
+- White: 145
+:::
+
+>**Q.5.** Did you get a message in the `Console` window in `R-Studio` [when you produced a histogram]:
+what does it say?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.5. The message says:
+
+- `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+:::
+
+>**Q.6.** Draw two different histograms to examine the distributions of two
+different variables: `SHIPLEY` and `HLVA`
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + geom_histogram()
+ggplot(data = study.two.gen, aes(x = HLVA)) + geom_histogram()
+```
+:::
+
+>**Q.7.** Now edit the code for both plots: can you change the binwidth in `geom_histogram()` to make the bars wider?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + geom_histogram(binwidth = 2)
+ggplot(data = study.two.gen, aes(x = HLVA)) + geom_histogram(binwidth = 2)
+```
+:::
+
+>**Q.8.** -- How would you describe the distributions -- in a sentence -- of the distributions of the
+`SHIPLEY` and `HLVA` variable values for our sample?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.8. The `SHIPLEY` values lie between about 25 and 40, and are skewed towards high scores.
+- A.8. The `HLVA` values lie between 4 and about 14, and peak in the middle (near 7).
+:::
+
+>**Q.12.** What is the shape (direction) of the association between `mean.self` and `mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.12. Increase in `mean.self` is associated with increase in `mean.acc`
+:::
+
+>**Q.13.** What is the shape (direction) of the association between `AGE` and `mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.13. There is no clear association between `AGE` and `mean.acc`
+:::
+
+>**Q.14.** What is the shape (direction) of the association between `SHIPLEY`
+and `mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.14. Increase in `SHIPLEY` is associated with increase in `mean.acc`
+:::
+
+>**Q.15.** What is the shape (direction) of the association between `HLVA`
+and `mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.15. Increase in `HLVA` is associated with increase in `mean.acc`
+:::
+
+>**Q.16.** What is the shape (direction) of the association between `FACTOR3`
+and `mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.16. Increase in `FACTOR3` is associated with increase in `mean.acc`
+:::
+
+>**Q.17.** What is the shape (direction) of the association between `QRITOTAL`
+and `mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.17. Increase in `QRITOTAL` is associated with increase in `mean.acc`
+:::
+
+>**Q.21.** Can you find the ggplot reference page?
+
+Try doing a search with the keywords: `ggplot reference geom_point`
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.21. -- It is here:
+
+<https://ggplot2.tidyverse.org/reference/geom_point.html>
+:::
+
+>**Q.22.** What is r (given as `cor` in the output) for the correlation between `HLVA` and `mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.22. r = 0.5000559
+:::
+
+>**Q.23.** Is the correlation significant?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.23. r is significant
+:::
+
+>**Q.24.** What are the values for t and p for the significance test for the correlation?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.24. t = 7.5288, p = 2.866e-12
+:::
+
+>**Q.25.** What do you conclude, given the correlation results?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.25. HLVA and mean.acc are positively correlated suggesting that as HLVA scores increase so also do mean.acc scores
+:::
+
+>**Q.26.** What is r (given as `cor` in the output) for the correlation between `mean.self` and `mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.26. r = 0.5460792
+:::
+
+>**Q.27.** Is the correlation between `AGE` and `mean.acc` significant?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.27. r is not significant
+:::
+
+>**Q.28.** What are the values for t and p for the significance test for the correlation between `QRITOTAL` and `mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.28. t = 6.4711, p = 9.993e-10
+:::
+
+>**Q.29.** What do you conclude, given the correlation results, about the association between `SHIPLEY` and `mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.29. `SHIPLEY` and `mean.acc` are positively correlated suggesting that as HLVA scores increase so also do mean.acc scores
+:::
+
+## Online Q&A {#sec-wk16-lab-Q-and-A}
+
+You will find, below, a link to the video recording of the week 16 online Q&A after it has been completed.
+
+```{=html}
+<iframe src="https://livelancsac-my.sharepoint.com/personal/daviesra_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=5af9bf95-c82f-409b-a3b6-efcb4a1a0b73&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="PSYC122 Online Seminar Fridays 9am wks 11-14 & 16-19-20240223_090746-Meeting Recording.mp4"></iframe>
+```

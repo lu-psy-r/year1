@@ -1,0 +1,389 @@
+---
+title: 9. Unrelated-samples t-test and Power
+subtitle: Written by Tom Beesley & John Towse
+order: 9
+---
+
+# Lectures
+
+Watch Part 1
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=d6fc1d99-82c9-49d0-a462-b0b500aa7f7b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+Watch Part 2
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=76b6d658-128b-48c5-af04-b0ca010d180c&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+Watch Part 3
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=1164b9d4-1d9d-4345-b56b-b0b500aa7f30&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+Watch Part 4
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=b7d5832a-d88c-46dd-ae3b-b0b500aa7f0d&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+
+Download the lecture slides [here](data/Week_9/Lecture Week 9 vTB.pptx)
+
+## Reading
+
+[Chapter 14](https://modules.lancaster.ac.uk/mod/url/view.php?id=2023094) of Howell
+
+
+```{r eval=FALSE, include=FALSE}
+library(tidyverse)
+d_raw <- read_csv("data/Week_7/PSYC121_teaching_data_2023.csv")
+
+# set up the data for Task 3
+data_wk9 <- 
+  d_raw %>% 
+  dplyr::slice(3:n()) %>% 
+  select("home_location_in_UK" = Q8, 
+         "pop_est_christian" = Q54_1, 
+         "pop_est_muslim" = Q54_2,
+         "pop_est_age" = Q54_3,
+         "pop_est_immigrants" = Q53_1) %>% 
+  mutate(home_location_in_UK = case_when(str_detect(home_location_in_UK, "North West") ~ "North",
+                                         str_detect(home_location_in_UK, "North East") ~ "North",
+                                         str_detect(home_location_in_UK, "South West") ~ "South",
+                                         str_detect(home_location_in_UK, "South East") ~ "South")) %>% 
+  mutate(across(contains("pop"), as.numeric)) %>% 
+  drop_na()
+
+write_csv(data_wk9, file = "data/Week_7/data_wk9.csv")
+
+# d_stroop <- read_csv("data/Week_9/data_stroop_wk9.csv")
+# 
+# d_stroop <- 
+#   d_stroop %>% 
+#   filter(condition == "compatible" | condition == "incompatible")
+# 
+# write_csv(d_stroop, file = "data/Week_9/data_stroop_wk9.csv")
+
+```
+
+
+## Pre-lab work: online tutorial
+
+**Online tutorial**: You must make every attempt to complete this before the lab! To access the [**pre-lab tutorial click here**](https://ma-rconnect.lancs.ac.uk/Week_9_learnr){target="_blank"} (on campus, or VPN required)
+
+**Getting ready for the lab class**
+
+Create a folder for Week 9 and download the [Week_9 csv file](data/Week_9/data_wk9.csv) file and upload it into this new folder in RStudio Server.
+
+## RStudio tasks
+
+### Task 1 - Exploring the data
+
+In this class we will be exploring some data on people's estimations on aspects of the UK population. We asked people 4 different questions:
+
+> Out of every 100 people, about how many do you think are:
+
+> 1.  Christian?
+> 2.  Muslim?
+> 3.  Over the age of 65?
+
+We also asked a related question about immigration:
+
+> What percentage of the UK population do you think are immigrants to this country? (i.e. not born in UK)
+
+1. Create a new R Markdown document for Week 9. 
+
+2.  In the first chunk add `library(tidyverse)` and create a new data object by using `read_csv()` to read "data_wk9.csv".
+
+3. You can view the data by clicking on it in the environment. Note that in previous weeks we've used the `view()` command in our scripts (which does the same thing), but that can conflict with knitting the .Rmd file. 
+
+4. Take a look at the summary statistics for all of the columns in our data using `summary(your_data_object_name)`
+
+```{r}
+#| eval: false
+#| include: false
+
+summary(data_wk9)
+
+```
+
+To what extent are people's estimations of these population parameters related? Let's look at this by plotting these data as `geom_point()`. 
+
+5. Copy the following code. Edit it to map one of the numeric columns in the data to x and another numeric column to y. You can pick any of the columns you like, but it's important that you understand what research question you are asking with your choice. For example, you might be asking "Do people who estimate that there are more Christians in the population also think there are more Muslims in the population?"
+
+```{r}
+#| eval: false
+
+data_object_name %>% 
+  ggplot(aes()) + # map two of the columns to x and y
+  geom_point() # you can change the size or colour of the points if you wish
+
+```
+
+```{r}
+#| eval: false
+#| include: false
+
+data_wk9 %>% 
+  ggplot(aes(x = pop_est_muslim, y = pop_est_immigrants)) + # map two of the columns to x and y
+  geom_point() # you can change the size or colour of the points if you wish
+
+```
+
+6. Consider the graph, noting any general pattern/trend in the data. Is there a *postive relationship*: do people who give high estimations for one variable tend to give high estimations for the other variable? Or is there a *negative relationship*: do people who give high estimations for one variable tend to give lower estimations for the other variable? Or is there no discernible relationship at all?
+
+7. Write a statement after this code chunk to briefly make a comment about any pattern you see in the data (or absence of a pattern). 
+
+8. Copy this code into new chunks and explore relationships between the other numeric variables, each time noting the research question you are asking, and discussing with people on your table what kind of relationship you can see in the data. Write some comments in your R Markdown document to describe the patterns you are seeing. 
+
+### Task 2 - Using z-scores to remove outliers
+
+1.  You may have noticed that there are some fairly extreme values in some of these numeric estimations of the population. As we've discussed in previous weeks, these outlier values can be problematic when we run our statistical tests, so (like last week) we probably want to control their influence by removing them. As you saw in your online tutorial, we can convert the data to z scores, and then remove z values above and below certain values.
+
+2.  Let's create a "z-transform column" called *z_imm* for the estimates of the percentage of immigrants. Complete the code below by changing the data object names and adding the relevant variable (column) name. Note that you may want to assign the result (`<-`) to a new data object at this point.
+
+```{r}
+#| eval: false
+
+# use mutate and scale to create z-scores of immigration estimates
+new_data_object_name <- 
+  data_object_name %>% 
+  mutate(z_imm = scale(column_name))
+
+```
+
+```{r}
+#| eval: false
+#| include: false
+
+# use mutate and scale to create z-scores of immigration estimates
+data_wk9_z <- 
+  data_wk9 %>% 
+  mutate(z_imm = scale(pop_est_immigrants))
+
+```
+
+3.  View the new data object to check this column has been created correctly. Like in the online tutorial, it would be a good idea to calculate some descriptive statistics for this new column to check it conforms to what we know about z-scores (e.g., `mean()` = 0, give or take some rounding, and `sd()` = 1). 
+
+```{r}
+#| eval: false
+
+# check the mean and sd of the new column
+mean(data_object_name$column_name)
+sd(data_object_name$column_name)
+
+```
+
+```{r}
+#| eval: false
+#| include: false
+
+# check the mean of the new column
+mean(data_wk9_z$z_imm)
+sd(data_wk9_z$z_imm)
+
+```
+
+4.  We know from our earlier lectures on the z distribution that values of greater than 2 (or less than -2) reflect around 5% of the distribution, and values greater than 3 (or less than -3) represent less than 1% of the distribution:
+
+![](images/wk9/z_score_figure.png)
+
+5.  Let's consider an outlier any value that has a z of 2.5 (a conventional cutoff). Plot a histogram of the *z_imm* column in order to inspect whether there are data that are above 2.5 or below -2.5.
+
+```{r}
+#| eval: false
+
+# histogram of the z_imm column
+
+# eh, what, no code? Come on...you've got this!!! 
+# start with the data, pipe, then ggplot
+# if you get really stuck, look back at last week
+
+```
+
+```{r}
+#| eval: false
+#| include: false
+
+data_wk9_z %>% 
+  ggplot() +
+  geom_histogram(aes(x = z_imm),
+                 bins = 40)
+
+
+```
+
+
+6.  Add a filter command to remove the values in the *z_imm* column are greater than 2.5 or less than -2.5. That means you'll need two separate statements with an & in the middle
+
+```{r}
+#| eval: false
+
+# add a filter command
+data_object_filtered <- 
+  data_object_name %>% 
+  filter(first_expression_here & second_expression_here) 
+
+```
+
+7. You should have **removed 3 rows of data**. Make a note of this in your R markdown document. 
+
+```{r}
+#| eval: false
+#| include: false
+
+# add a filter command
+data_wk9_f <- 
+  data_wk9_z %>% 
+  filter(z_imm > -2.5 & z_imm < 2.5) 
+
+```
+
+## Task 3 - Unrelated samples t-test
+
+We have also included a categorical variable in our data this week, which is one you have seen before in our analysis classes: the home location in the UK of the respondent, `home_location_in_UK`. For this data object we have included only those responses from those people from the "North" (NW and NE) and those from the "South" (SW and SE). Other respondents from elsewhere have been removed from the data. We can therefore look at whether people's home location determines their population estimations.
+
+1.  First we will look at the mean population estimations, split by home location. To do this, copy and edit the code below and complete the `group_by()` and `summarise()` commands to give the `mean()` estimates of the *proportion of immigrants* in the population by home location. You don't need to edit the `N = n()` line - this provides the number of participants at each level of the *home_location_in_UK* variable.
+
+```{r}
+#| eval: false
+
+# summary statistics
+data_object_name %>% 
+  group_by(column_name) %>% 
+  summarise(mean_imm_est = complete_this_statement,
+            sample_size = n())
+
+
+```
+
+```{r}
+#| eval: false
+#| include: false
+
+# summary statistics
+data_wk9_f %>% 
+  group_by(home_location_in_UK) %>% 
+  summarise(mean_imm_est = mean(pop_est_immigrants),
+            sample_size = n())
+
+
+```
+
+2.  What do the means suggest? Do people in the North and South give different estimations? Write a statement in your .Rmd file to describe the difference.
+
+3.  Let's test if these differences are real. First, it is worth noting that many more respondents originate from the North than from the South (see the *N* column in the summary). We have unequal sample sizes, and potentially unequal variances. Copy the code below into your .Rmd. The first bit of code runs the `var.test()` to check if the variances of the two samples are similar (homogeneity of variance). If this test produces a p value less that .05, then the variances in the two samples are unequal. That will have consequences for how we run the `t-test()` in the next step.
+
+```{r}
+#| eval: false
+
+# check if variances are unequal (p < .05) - Q3
+var.test(pop_est_immigrants ~ home_location_in_UK, data = your_data_object_name)
+
+```
+
+4.  Now let's run the t-test. This week we are comparing data from different samples of participants (those who are from the North and South). We need to tell the t-test that the data are NOT paired (`paired = FALSE`). The result of the `var.test()` in the last step will tell you whether the `var.equal` value should be `TRUE` or `FALSE`. Set `var.equal = FALSE` or `var.equal = TRUE` depending on whether the variances are equal. When you're happy with the parameters, run the t-test. 
+
+```{r}
+#| eval: false
+
+# run unrelated samples t-test
+t.test(pop_est_immigrants ~ home_location_in_UK, data = your_data_object_name, 
+       paired = FALSE, 
+       var.equal = missing_value) # you'll need to set this to TRUE or FALSE depending on what you found in var.test
+
+```
+
+```{r}
+#| eval: false
+#| include: false
+
+# check if variances are unequal (p < .05) - Q3
+var.test(pop_est_immigrants ~ home_location_in_UK, data = data_wk9_f)
+
+# run unrelated samples t-test
+t.test(pop_est_immigrants ~ home_location_in_UK, 
+       data = data_wk9_f, 
+       paired = FALSE, 
+       var.equal = TRUE) # you'll need to set this to TRUE or FALSE depending on what you found in var.test
+
+```
+
+5. If you've done this correctly, you should have a **t-statistic = -1.2801**. Examine the p-value and discuss on your table what this means. Write a line in your .Rmd to formally state the result of the t-test (look at last week for the format). Describe what this result means in your own words.
+
+6.  In that t-test we looked at the *pop_est_immigrants* variable, but we can do this test for all of our population estimates. Copy the code to run another `var.test()` and `t.test()`, for the *pop_est_christian* variable. Document the result of the t-test in your .Rmd and describe the finding. What do these tell us about the relationship between home_location and estimates of the population (if anything)? Feel free to come back to this and run the other two tests on the other population estimations.
+
+## Task 4 - Power and effect size (d) calculations
+
+1.  We saw in last week's lab tasks that there was a significant effect in our Stroop task data: participants were faster to say the colour names of the compatible list compared to the incompatible list (there were significant differences with the control list too). We will now use these data to calculate an **effect size** (*Cohen's d*) for the t-statistic that we observed in that test.
+
+2.  Import the  [new stroop data csv file](data/Week_9/data_stroop_wk9.csv). We have reduced the data down to just the *compatible* and *incompatible* conditions.
+
+3.  Add the following code into a chunk and run it (edit the data object name) to calculate the  `cohens_d()` effect size, which is reported as *effsize*. You can ignore any negative sign, taking note of the absolute value.
+
+```{r}
+#| eval: false
+
+library(effectsize)
+library(pwr)
+
+# add code here to read in the stroop csv file
+
+cohens_d(time ~ condition, 
+         data = your_stroop_data_object,
+         paired = TRUE)
+
+```
+
+```{r}
+#| eval: false
+#| include: false
+
+library(effectsize)
+library(pwr)
+
+cohens_d(time ~ condition, 
+         data = d_stroop,
+         paired = TRUE)
+
+```
+
+4.  We already know that this large effect size was significant with our large sample of participants. What might we have expected with a much smaller sample size? Copy the code below and use the `pwr.t.test()` function to add in the effect size that you calculated (Cohen's d) in step 3. We can set the *N* to 20. What **power** would we have achieved with this sample size, to detect this large effect? Discuss with your table, or staff, what this power means.
+
+```{r}
+#| eval: false
+
+pwr.t.test(d = value_from_step_3, n = 20) #Q4
+
+```
+
+```{r}
+#| eval: false
+#| include: false
+
+pwr.t.test(d = .74, n = 20) #Q4
+
+```
+
+
+5.  Let's say we wanted our next experiment to have an 80% chance of finding an effect at least as large as the one we found. Copy the code you used in step 4, and edit it to run `pwr.t.test()` to work out the minimum sample size we would need to achieve **power of .8**, with the effect size you calculated in step 3. 
+
+6.  Let's say we are looking to run a new experiment in which we give people a stressful task to complete simultaneously. We will ask them to put their hands in a bucket of ice cold water while doing the Stroop task (this is a real "stressor task" people use!). We are unsure of what consequence this will have for our effect size, but we want to estimate the effect size that could be detected in our experiment. We decide to run 40 participants, and want to achieve a power of .90 (90% chance to find an effect at least this large). Copy the `pwr-t-test()` code and edit it to **find the minimum effect size** we could hope to detect under these conditions?
+
+## A note on saving your work
+
+**Scripts:** By now you are hopefully getting used to editing and working within the R Markdown script. As you know, to save a script, you simply click the save icon, or press ctrl+S (cmd+s on a mac).
+
+**Plots:** To save a graph you have produced, click the "Export" button in the plot window, then "Save as Image". You can resize the graph and give it an appropriate filename. If you've set the working directory correctly, then the new file should appear in the current folder.
+
+**Data:** The data objects you create (in the Environment) only exist within RStudio, and are temporary (with a script and the csv file, you can always redo the analysis). But what if you want to use the data elsewhere? For example you may want to share the data with your project (PEP?) supervisor. To do this, we need to write the data to a csv file (like those we use to import the data). You can do this with the following command: `write_csv(the_data_object, "the_filename.csv")`.
+
+**Exporting from RStudio:** The above save operations save files to a folder within RStudio Server. At some stage you will need to get these files out of RStudio Server, for example if you need a graph for your report, or you need to share the data or the scripts. Or maybe you want to make the csv file available to other researchers. To get files out of RStudio, simply select the files you want in the Files pane, click "More" and then "Export". Selecting multiple files will produce a ".zip" file, which will need to be "unzipped" on your computer to access the individual files ([instructions for Windows](https://support.microsoft.com/en-us/windows/zip-and-unzip-files-f6dde0a7-0fec-8294-e1d3-703ed85e7ebc){target="_blank"} and [instructions for Mac](https://support.apple.com/en-gb/guide/mac-help/mchlp2528/mac){target="_blank"})
+
+## Week 9 Quiz
+
+You can access a set of quiz questions related to this week [here.](https://ma-rconnect.lancs.ac.uk/PSYC121_2022_Week_9_quiz/){target="_blank"}

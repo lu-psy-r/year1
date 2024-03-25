@@ -1,0 +1,908 @@
+﻿Hi, in this video I would like
+to talk you through how to check
+
+your assumptions for correlation
+analysis in R. How to evaluate
+
+whether there are any issues
+with outliers or range
+
+restrictions. Then we'll talk
+about how to conduct Spearman's
+
+rho correlation analysis in R
+and finally, how to conduct
+
+multiple correlations or inter
+correlation in R.
+
+Now first the the assumptions.
+On the slide here, you see
+
+the questions that you need
+to answer to make sure that
+
+you meet the assumptions
+and pick the right type of
+
+analysis for your data.
+
+So the first question that you
+have to address is is the data
+
+at interval, ratio or ordinal level
+so that refers to the type or
+
+variable that you've got.
+
+So there's nothing to do with
+R for that. You need to think
+
+about at what measurement
+level your variable was
+
+measured. If they are measured
+at the interval or ratio
+
+variable, then
+
+you would use Pearson's
+R. If they are measured at the
+
+ordinal level, then you would
+use Spearman's rho.
+
+OK, so the second point is that
+you need to check whether there
+
+is a data point for each
+participant for both variables.
+
+Now that you can look at in
+R. So I will navigate here to
+
+my R studio window.
+
+And here you
+
+see my RStudio window, I hope.
+I've already set my working
+
+directory and I've loaded in the
+packages that we need and I've
+
+also read in here the data file,
+the Miller Haden data that we
+
+looked at last time.
+
+So you can see that's that
+the table is here.
+
+OK, so that's where we are now.
+We want to check whether
+
+there are any missing data
+
+in that file.
+
+Now, because that file isn't
+very big, it would be easy. You
+
+could do it by hand, but most
+data files are much much bigger
+
+and you cannot do this by hand.
+That would be awful and very
+
+prone to errors, so we can use
+some R functions to do that.
+
+And the thing to know is that if
+there is a missing data point
+
+R kind of write that down as:
+
+capital N capital A, 'not
+available\ so there is no data
+
+point in that cell.
+
+So if a participant doesn't have
+a score for reading ability,
+
+then there would be a big NA
+instead of a number.
+
+Now the way to check whether
+you have any missing values
+
+is to use the is.na function.
+
+S, that is basically
+
+asking so you tell it here. OK,
+look at this data frame for this
+
+variable. So look in the MH
+dataframe at this variable and
+
+tell me whether any of the
+cells have an NA.
+
+So if we do that. It tells you
+False false false false false
+
+false for each of the 25
+participants and false is good
+
+in this case because it tells
+you: I can't find any NAs
+
+for that particular variable.
+
+If there are no NAs,
+that means that there are
+
+numbers in that cell. That is
+excellent. We have a data
+
+point for each of the
+participants on this
+
+variable.
+
+Now we can use this function.
+
+I'm using this function here
+in the in the slightly kind of.
+
+Different way in that I'm saying
+OK, I'm going to combine it with
+
+filter because I want to use
+filter to only keep the people
+
+who don't have any NAs
+right? So I'm saying here by
+
+using this exclamation mark.
+
+Keep people who don't have any. So for anybody for whom
+
+an NA would be true, they
+
+wouldn't be kept in the next object
+and in this function.
+
+I'll say that so I've put that
+in a pipe, so what we're essentially
+
+doing is: take the table, mh and then.
+
+send that to the filter
+
+function, and within that
+filter function only keep
+
+the people who have
+
+no NAs for reading ability.
+
+And then, because correlation
+analysis is with two variables,
+
+you also want them to have a
+data point on that other
+
+variable. So then we use the same trick.
+
+To check whether they also have
+a value for IQ. So that's what
+
+happens in this line of code.
+
+So send it to the filter
+function again and we say OK
+
+only keep the people who don't
+
+have any NAs. So don't is
+the exclamation mark.
+
+Is there any not available in
+
+for that particular area?
+
+So that is a neat way of
+checking whether both variables
+
+have data points for your
+
+participants. So if you run
+that, we've got a new dataframe
+
+where that is the case where
+we've only kept those people now
+
+because there were no Na's in
+this particular toy kind of demo
+
+datasets, it has the same number
+of observations. Here. If in a
+
+real data set you would kind of
+see here, OK, there's fewer
+
+observations here. Then it
+Had in the original data frame, so
+
+it has thrown out a few people
+
+for not having data points
+on both variables.
+
+OK, so much about the missing
+
+data part. So the third
+assumption that you need to
+
+check is whether data on both
+variables are normally
+
+distributed. Again, we can do
+that. We can look at that in R
+
+by making a histogram.
+
+So a histogram plots how many
+observations each value of
+
+the scale for a particular value
+variable has in the sample. So we use GG plot for
+
+that here. We tell it
+which dataframe to used, ones
+
+we've checked for missing
+values and we say OK, we want
+
+you to plot reading ability.
+
+Histograms don't
+have a y value.
+
+Then be saying use the geom_histogram to do that and there
+
+we go, let's run that.
+
+So here we have. So there's one
+observation with 45 for
+
+instance, and there is 4
+observations where
+
+participants have a score of 60,
+and here you are looking for
+
+something that resembles a
+normal distribution. So more
+
+observations in the middle and
+fewer on both sides and
+
+hopefully roughly symmetrical.
+
+Now this probably looks about
+OK, but it's not always that
+
+easy to see and that is where the
+QQ plot comes in really handy.
+
+So for QQ plot we use this
+function. It's QQ Capital plot.
+
+Again we just say OK, please
+use the MH data set and that
+
+variable to make the QQ plot. So
+let's do that.
+
+OK, so here we have our QQ plot
+and remember all the
+
+observations need to be kind of
+around this line.
+
+The solid line.
+
+So that is good and all that,
+and as long as they kind of fall
+
+in between the
+
+dashed lines the blue dashed
+lines, here (I just noticed that
+
+you can't actually see my
+
+pointer here)
+
+It is in the bottom right
+corner. You can see the plot,
+
+so observations need to fall
+between these two blue dashed
+
+lines and ideally as close as
+possible to the solid blue
+
+line in the middle of that. If
+that's the case, then you can
+
+conclude from the QQ plot.
+That the variable is
+
+normally distributed.
+
+Now you would you would do the
+same thing for for IQ.
+
+Um? So let's just do that.
+
+We should use that
+one, it doesn't really matter in our
+
+case because we didn't have any
+missing values, but it is a bit neater.
+
+Here on the right we have the
+histogram. For IQ you can see a
+
+roughly. Yeah, it resembles
+resembles a normal distribution
+
+to an extent.
+
+I will make a QQ plot.
+
+And then we go and you can
+see actually in the top right
+
+corner of the QQ plots and
+in the bottom left corner of the
+
+QQ plot you can see some
+observations that are quite kind
+
+of just on the outside of the
+dashed line, blue line and which
+
+suggests that I would probably
+say OK, these data are still
+
+normally distributed, but well,
+these observations are something
+
+to watch and if they are further
+and would if there would be even
+
+further away from that dashed
+
+line then. It would
+have to reconsider.
+
+So if
+
+the data would clearly not be
+normally distributed, you would
+
+use Spearman's rho.
+
+OK, then we go on to
+the 4th an assumption.
+
+That's about linearity. So does
+the relationship between the
+
+variables appear linear. Now for
+that we can use a scatter plot.
+
+You already know scatter plots
+from last from the last session,
+
+so I'm not going to talk much
+about it. This is basically just
+
+using that. Again.
+
+This will make a scatter plot.
+
+Here we are. Here we have a
+scatter plot of reading ability
+
+and IQ. I'm not, this looks
+like it is a kind of linear
+
+relationship. We don't see
+kind of a pattern that has
+
+curves in it.
+
+If.
+
+You know we would have
+
+wanted to. If it would have
+
+decided it is. At any point.
+
+it is nonlinear. Then
+you would have to do different
+
+things. Spearman's Rho doesn't
+necessarily help there, so more about
+
+that will be covered next year.
+
+The other thing to check in the
+
+scatterplot is the spread
+
+around the line of best fit. An
+is the spread roughly kind of
+
+equal across the line, so is it.
+Is there as much spread over here as
+
+there is over here and
+
+that looks like that is
+the case.
+
+OK, so that is it about
+
+the assumptions. Let me just go
+back here and see what comes
+
+next. Yes, of course. The issues
+with outliers, an range
+
+restrictions. Again, you would
+look at your scatterplot to see
+
+whether there are any
+issues with that. So you would
+
+look at it at your scatterplot
+to see whether this correlation
+
+would be driven by, you know,
+one data point in case of
+
+outliers, or whether there would
+be very restricted variation. So
+
+maybe if we.
+
+I only had reading scores kind
+of 45 to 65, then the
+
+correlation would have been much
+smaller and so that would have
+
+been restricted range.
+
+OK, let's go back to the
+presentation.
+
+Intercorrelation Hold on before
+we go to intercorrelation. I
+
+just want to show you how to run
+Spearman's rho correlation
+
+analysis in the in R. So we go
+back to the old window and here
+
+we've got a code example to
+
+do that. Remember you
+would do this if you've got
+
+ordinal data or you have the
+data breach another
+
+assumption, so it's not.
+They're not normally
+
+distributed, for instance.
+
+That a correlation analysis
+using Spearman's Rho is very
+
+similar to the one using
+Pearson's r. It is basically
+
+displayed here that you change.
+It is what's called the method.
+
+So previously it's at Pearson's r
+here and now it says Spearman
+
+and that is the only difference.
+Other than that we can use this
+
+cor.test function as we did for
+
+Pearson's R. I'm telling it which data
+frame to use and which variable
+
+to use, and then we just change
+the method, so that's cool.
+
+It is complaining about this
+but never don't don't worry
+
+bout that this.
+
+So if we look at the results.
+
+It gives you quite a
+similar
+
+correlation so you can read
+this in the same way. This is
+
+where you have your Spearman's
+rho. This is where you
+
+have your P value and here it
+reminds you that it is
+
+Spearman's rho correlation
+rather than Pearson's R.
+
+OK, now to
+
+intercorrelation. So what we
+want to do is to construct a
+
+matrix of scatterplots because
+we want to look at multiple
+
+variables within a data set and
+the relationships between them
+
+and a matrix of scatterplots is
+then really good idea to get an
+
+overview. Um, and then we want
+to conduct multiple
+
+multiple correlations at once
+and correct for multiple comparisons using a
+
+Bonferroni correction,
+for any adjustment to make sure
+
+we don't have a problem with
+type one errors.
+
+So how do we do that?
+
+Let's go back to R.
+
+So again, we will
+use the MH data
+
+and I will use
+this function called pairs and
+
+what that does it basically
+creates a matrix, right?
+
+So.
+
+Technically, we should really be
+using that, alright? Because
+
+here we checked for missing
+values, so we have four very
+
+full variables and participant
+number. Now we don't want the
+
+correlation between the
+participant number and reading
+
+ability, because that would be
+meaningless. So before we use
+
+the pairs function to create a
+
+matrix. We say OK, we use select
+to say, get rid of
+
+that. T
+
+So I will say
+matrix.
+
+So what I'm doing is taking the
+
+table we checked
+for missing values and I'm piping
+
+that to the select function and
+I'm using here this minus sign
+
+to say OK keep everything except
+the participants variable and
+
+I'm sticking that in a new
+
+object called mh_matrix. So
+
+there we go.
+
+So here you can see I will
+
+click. But so this one you
+can see it has five variables
+
+because participants is still
+in there and this one now has
+
+four variables here, because
+a participant is not there
+
+anymore.
+
+OK, so then we can run
+the pairs function too.
+
+I create this matrix now. This
+is really tiny because my R
+
+window has to be quite small to
+fit into the window that I'm
+
+using to make the video
+recordings. So I would say try
+
+this code in your own screen and
+then you can actually see that
+
+it is quite helpful, but I'll
+talk you through it
+
+Oh, hold on.
+
+I think participant is still
+there. That is wrong, but
+
+that's because I'm using the
+wrong dataframe. There we
+
+go.
+
+So here we are. We've got
+ability, IQ, home and TV.
+
+This basically shows
+you the relationships between all the variables.
+
+This is the scatter plot for
+ability on one axis and IQ on
+
+the other axis and this one. I'm
+sorry I keep forgetting that you
+
+can't see my
+
+pointer so let me try and talk
+you through that without using
+
+my pointer. So you can see the
+different variables across the
+
+diagonal in this graph: ability,
+IQ, home and TV and then if you
+
+kind of go down from ability and
+then you are to the left of IQ
+
+that is the scatter plot that
+plots those two variables. So if
+
+you go down one more you have
+
+reading ability
+on one variable and home on
+
+the other variable.
+
+So to the left of home and kind
+of below IQ sits the scatter
+
+plot that plots IQ on one
+and home on the other
+
+axis, etc etc.
+
+So it is a bit small on
+
+this screen, but that's
+because of the recording, so try
+
+it on your own screen. Then you
+can see that you get a lot of
+
+scatterplots all in one go.
+
+That's the main thing I'm trying to
+
+say. So how do we then? So
+that's the scatter plots, but we
+
+want the correlation
+coefficient as well, of course.
+
+So how do you run that?
+
+Then you first have to tell
+
+it. That's well over writing it
+in this case.
+
+That you're treating this as a
+dataframe. Don't worry too much
+
+about it. Well, there's do that.
+
+And then. It's just, well, I can
+say something about it. So that
+
+you know what you're doing.
+
+Previously these functions store
+this as what is called a
+
+tibble. It's just a sort of type
+of specific type of table in
+
+R. But the function that we will
+be using in a minute needs it as
+
+a data frame, which is also a
+table, but it has slightly
+
+different properties. So that's
+what you're doing here. You just
+
+saying OK. In anticipation of
+
+this function we need
+
+the input as a dataframe. We say
+
+OK. Take my table and make it
+into a take my table here and
+
+make it into a data frame and
+we are just overwriting it.
+
+So we've done that. I think I'll
+just do it again.
+
+And then we use the function
+
+correlate to create this
+correlation matrix, so we have
+
+to tell it what data frame to
+use. I've been changing that
+
+during the video.
+
+So here is our data here we say
+
+yes, please compute P values.
+Here is the method.
+
+So quite similar to the cor.test
+function that we used
+
+previously. We're using Pearson's
+here. You could change that to
+
+Spearman if you need to. And
+here we have to adjustment
+
+method that we're using. So here
+we're using Bonferroni. There are
+
+ones that you can learn about at
+some point in time.
+
+So we're using that to create a
+correlation matrix and storing
+
+that in an object called interior results. So let's do that.
+
+So here we've got it. We can
+look at that that way, but we
+
+can also just do it
+here.
+
+So now in the console you've got
+this, you can have a look at the
+
+correlation matrix. So here we
+have this matrix setup again. So
+
+across the diagonal correlations
+
+with itself. So if I say here I
+mean in the console window at
+
+the bottom. So across the
+diagonal you have to correlation
+
+with itself, so they not interesting, that's why
+
+these cells are empty, and then
+we have the correlations between
+
+reading ability and IQ, reading
+ability and home, reading ability
+
+and TV and then the next
+column you have IQ and Home and
+
+IQ and TV.
+
+ETC etc here in the top half
+kind of above the diagonal
+
+you have the same values as
+we discussed previously. You
+
+only need to report 1/2 for
+that reason.
+
+So that's all the correlation
+coefficients And then
+
+here we have the P values.
+So if you're going to scroll
+
+down, you'll see the P
+values for all those
+
+combinations and these are
+adjusted for multiple
+
+comparisons using the
+
+Bonferroni correction. So
+here you can see which ones
+
+are significant and they
+have already been corrected.
+
+And finally, there is a table
+with the sample sizes where
+
+yeah, where you can just double
+check how many
+
+participants are there
+for each correlation.
+
+OK.
+
+And that is it for now.
+Thank you very much.

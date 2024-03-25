@@ -1,0 +1,1355 @@
+---
+title: 7. Week 18 -- Developing the linear model
+subtitle: Written by Rob Davies
+order: 7
+---
+
+::: callout-warning
+This page is now live for you to use: **Welcome!**
+
+- Here is a link to the sign-in page for [R-Studio Server](https://psy-rstudio.lancaster.ac.uk/auth-sign-in?appUri=%2F)
+:::
+
+```{r}
+#| warning: false
+#| echo: false
+library(kableExtra)
+library(tidyverse)
+```
+
+```{r}
+#| warning: false
+#| echo: false
+study.one.gen <- read_csv("study-one-general-participants.csv")  
+study.two.gen <- read_csv("study-two-general-participants.csv")
+```
+
+## Week 18: Introduction {#sec-wk18-introduction}
+
+Welcome to your overview of our work together in **PSYC122 Week 18**.
+
+::: callout-tip
+*Putting it all together*
+
+- We will complete four classes in **weeks 16-19**.
+- These classes are designed to help you to revise and to put into practice some of the key ideas and skills you have been developing in the first year research methods modules *PSYC121, PSYC123 and PSYC124*.
+- We will do this in the context of a live research project with potential real world impacts: the **Clearly Understood** project.
+:::
+
+### Our learning goals
+
+In Week 18, we aim to further develop skills in *analyzing* and in *visualizing* psychological data.
+
+We will do this in the context of the **Clearly Understood** project: our focus will be on what makes it easy or difficult for people to understand written health information.
+
+In the Week 18 class, we will aim to answer two research questions:
+
+1. What person attributes predict success in understanding?
+2. Can people accurately evaluate whether they correctly understand written health information?
+
+We will use linear models to estimate the association between predictors and outcomes.
+What is **new**, here, is that we will explore the power and flexibility of the linear model analysis method in two important aspects.
+
+::: callout-tip
+1. We will fit linear models including *multiple* predictors, this is why this form of analysis is also often called *multiple regression*.
+2. We will use linear models to estimate the effects of numeric and categorical or nominal predictor variables.
+:::
+
+When we do these analyses, we will need to adapt how we report the results:  
+
+- we need to report information about **the model we specify**, identifying *all* predictors;
+- we will need to decide **if the effects** of one or more predictors **are significant**;
+- we will report the model **fit statistics** (`F, R-squared`) as well as coefficient estimates;
+- and we need to learn to write texts **describing the impact** of predictors.
+
+Usually, in describing the impacts of predictors, we are required to communicate:
+
+- the **direction** of the effect -- do values of the outcome variable *increase* or *decrease* given increasing values of the predictor?
+- the **size** of the effect -- *how much* do values of the outcome variable *increase* or *decrease* given increasing values of the predictor?
+
+This task of description is enabled by producing plots of the predictions we can make:
+
+- plots to show we expect the outcome to change, given different values of a predictor.
+
+::: callout-tip
+We will aim to build skills in producing professional-looking plots for our audiences.
+
+- We can produce plots showing the effects of predictors
+- As predictions of change in outcome, given different values of the predictor variables.
+:::
+
+## Lectures {#sec-wk18-lectures}
+
+::: callout-tip
+Before you go on to the activities in @sec-wk18-lab-activities, **watch** the lectures:
+:::
+
+The lecture for this week is presented in four short parts.
+You can view video recordings of the lectures using Panopto, by clicking on the video images shown following.
+
+- Anybody who has the link should be able to view the video.
+
+1. **Overview** (19 minutes): What we are doing in Week 18 -- Exploring the power of linear models, extending their application to use multiple variables to predict people.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=7ae0e020-8dcc-436e-9d69-afb700ca1a52&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+2. **Using linear models to predict people** (13 minutes): Coding, thinking about, and reporting linear models with multiple predictors.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=d2638334-4683-4543-8183-afb700cfbff0&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+3. **Critical evaluation** (15 minutes): Critically evaluating the results of analyses involving linear models.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=68e5cba9-ea96-4788-9c21-afb700d3ba29&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+4. **Everything is some kind of linear model** (13 minutes): Understanding just how general and powerful this method for understanding people can be.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0f6ba49d-f54d-41d0-ab30-afb700d84744&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+::: callout-tip
+The slides presented in the videos can be downloaded either as a web page or as a Word document.
+:::
+
+- [The slides](data/week18/122-linear-model-develop.html) exactly as presented (6 MB). 
+- [The slides](data/week18/122-linear-model-develop-printable-edit.docx) converted to a Word .docx (1 MB). 
+
+You can download the web page `.html` file and click on it to open it in any browser (e.g., Chrome, Edge or Safari). The slide images are high quality so the file is quite big and may take a few seconds to download.
+
+You can download the `.docx` file and click on it to open it as a Word document that you can then edit. 
+Converting the slides to a .docx distorts some images but the benefit of the conversion is that it makes it easier for you to add your notes.
+
+### The lectures have three main areas of focus {#sec-wk18-lectures-focus}
+
+**1. Working with the linear model with multiple predictors**
+
+We focus in-depth on how you code linear models, how you identify critical information in the results summaries, and how you report the results: the language and the style you can use in your reports.
+
+::: callout-tip
+- A small change to `lm()` coding releases tremendous power and flexibility in how you use the analysis method.
+:::
+
+**2. Analyses are done in context so when we conduct analyses we *must* use contextual information**
+
+The power and flexibility of the linear model presents challenges.
+We must decide *which* predictor variables we specify in our model.
+This specification requires us to think about our theoretical assumptions and what they require us to include to make sense of the behaviours or the individual differences we observe when we do things like investigating what makes health information easy or difficult to understand.
+
+**3. Developing critical thinking**
+
+As we develop conceptual understanding and practical skills, we must learn to *reflect critically* on our analyses, and learn to critically evaluate the analyses we read about when we read research reports in the scientific literature.
+
+::: callout-tip
+*Critical analysis* can develop by considering
+
+- validity
+- measurement
+- generalizability
+:::
+
+We are always working in the broader context of uncertainty:
+
+- uncertainty about the predictions we may make concerning outcomes of interest;
+- uncertainty given the possibility that predicted effects may vary between individuals or groups;
+- uncertainty given the influence of sources of randomness in how specific responses are produced.
+
+::: callout-tip
+To work with the recordings:
+
+- Watch the video parts right through.
+- Use the printable versions of the slides (provided on Moodle) to make notes.
+- Try out the coding exercises in the how-to guide and the acitivity tasks or questions (@sec-wk18-lab-activities) to learn how to construct visualizations and do analyses.
+:::
+
+## Reading: Links to other classes
+
+We do not provide further reading for this class but you will find it helpful to revise some of the key ideas you have been learning about PSYC122 and in other modules.
+
+- The lectures in *PSYC123* on: the scientific method; reliability and validity; experimental design, especially between-subjects studies; hypothesis testing; and precise hypotheses.
+- The lecture in *PSYC122* on linear models. 
+
+## Pre-lab activities {#sec-wk18-prelab-activities}
+
+### Pre-lab activity 1 {#sec-wk18-prelab-activities-1}
+
+In weeks 16-19, we will be working together on a research project to investigate how people vary in their response to health advice.
+
+Completing the project involves collecting responses from *PSYC122* students: **you**.
+
+To enter your responses, we invite you to complete a short survey.
+
+Complete the survey by clicking on the link [here](https://lancasteruni.eu.qualtrics.com/jfe/form/SV_0qdj8TOZc18LR0q)
+
+::: callout-tip
+In our week 19 class activity, we will analyze the data we collect here.
+:::
+
+The survey should take about 20 minutes to complete.
+
+Taking part in the survey is **completely voluntary**.
+You can stop at any time without completing the survey if you do not want to finish it.
+If you do not want to do the survey, you can do an alternative activity (see below).
+
+All responses will be recorded completely anonymously.
+
+### Pre-lab activity alternative option {#sec-wk18-prelab-activities-2}
+
+If you do not want to complete the survey, we invite you to read the pre-registered research plan for the *PSYC122 health advice* research project.
+
+[Read the project pre-registration](https://osf.io/p6fsc/)
+
+## Lab activities {#sec-wk18-lab-activities}
+
+### Introduction {#sec-wk18-lab-activities-1-introduction}
+
+We will do our practical lab work to develop your skills in the context of the **Clearly Understood** project.
+
+- Our focus will be on what makes it easy or difficult for people to understand written health information.
+
+::: callout-important
+In these classes, we will complete a research project to answer the research questions:
+
+1. What person attributes predict success in understanding health information?
+2. Can people accurately evaluate whether they correctly understand written health information?
+:::
+
+### Get ready {#sec-wk18-prelab-activities-ready}
+
+#### Download the data
+
+Click on the link: [122-week18_for_students.zip](data/week18/122-week18_for_students.zip) to download the data files folder. Then upload the contents to the new folder you created in RStudio Server.
+
+The downloadable .zip folder includes the data files:
+
+- `study-one-general-participants.csv`
+- `study-two-general-participants.csv`
+
+and the R Markdown `.Rmd`:
+
+- `2023-24-PSYC122-w18-how-to.Rmd`
+
+If you can't upload these files to the server -- this affects some students -- you can use some code to get R to do it for you: uncover the code box below to reveal the code to do this.
+
+:::{.callout-tip collapse="true"}
+## Code
+- You can use the code below to directly download the file you need in this lab activity to the server.
+- Remember that you can copy the code to your clipboard by clicking on the 'clipboard' in the top right corner.
+
+1. Get the `study-one-general-participants.csv` data
+
+```{r eval=FALSE}
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week18/study-one-general-participants.csv?raw=true", destfile = "study-one-general-participants.csv")
+```
+
+2. Get the `study-two-general-participants.csv` data
+
+```{r eval=FALSE}
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week18/study-two-general-participants.csv?raw=true", destfile = "study-two-general-participants.csv")
+```
+
+3. Get the `2023-24-PSYC122-w18-how-to.Rmd` how-to guide
+
+```{r eval=FALSE}
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week18/2023-24-PSYC122-w18-how-to.Rmd?raw=true", destfile = "2023-24-PSYC122-w18-how-to.Rmd")
+```
+:::
+
+#### Check: What is in the data files? {#sec-wk18-data-summary}
+
+Each of the data files we will work with has a similar structure, as you can see in this extract.
+
+```{r}
+#| label: headcheck-wide
+#| echo: false
+# head(behaviour.rt)
+study.two.gen %>%
+  filter(participant_ID == c('studytwo.1', 'studytwo.10', 'studytwo.100', 'studytwo.101')) %>%
+  as.data.frame() %>%
+  kable() %>%
+  kable_styling()
+```
+
+You can use the *scroll bar* at the bottom of the data window to view different columns.
+
+You can see the columns:
+
+- `participant_ID` participant code;
+- `mean.acc` average accuracy of response to questions testing understanding of health guidance (varies between 0-1);
+- `mean.self` average self-rated accuracy of understanding of health guidance (varies between 1-9);
+- `study` variable coding for what study the data were collected in
+- `AGE` age in years;
+- `HLVA` health literacy test score (varies between 1-16);
+- `SHIPLEY` vocabulary knowledge test score (varies between 0-40);
+- `FACTOR3` reading strategy survey score (varies between 0-80);
+- `GENDER` gender code;
+- `EDUCATION` education level code;
+- `ETHNICITY` ethnicity (Office National Statistics categories) code.
+
+::: callout-tip
+It is always a good idea to view the dataset -- click on the name of the dataset in the R-Studio `Environment` window, and check out the columns, scroll through the rows -- to get a sense of what you are working with.
+:::
+
+### Lab activity 1: Work with the `How-to` guide {#sec-wk18-lab-activities-1}
+
+The `how-to` guide comprises an .Rmd file:
+
+- `2023-24-PSYC122-w18-how-to.Rmd`
+
+It is full of advice and example code.
+
+The code in the `how-to` guide was written to work with the data file:
+
+- `study-one-general-participants.csv`.
+
+::: callout-tip
+We show you how to do everything you need to do in the lab activity (@sec-wk18-lab-activities-2, next) in the `how-to` guide.
+
+- Start by looking at the `how-to` guide to understand what steps you need to follow in the lab activity.
+:::
+
+We will take things *step-by-step*.
+
+We split .Rmd scripts by steps, tasks and questions:
+
+- different steps for different phases of the analysis workflow;
+- different tasks for different things you need to do;
+- different questions to examine different ideas or coding challenges
+
+::: callout-tip
+- Make sure you start at the top of the `.Rmd` file and work your way, in order, through each task.
+- Complete each task before you move on to the next task.
+:::
+
+In the activity @sec-wk18-lab-activities-2, we are going to work through a sequence of steps and tasks that mirrors the sequence you find in the `how-to` guide.
+
+- There is a little bit of variation, comparing the later steps in the `how-to` guide and the steps in @sec-wk18-lab-activities-2, but that is designed to help you with your learning, in different places, when we think you will most need the support.
+
+::: callout-tip
+- Notice that we are gradually building up our skills: consolidating what we know; revising important learning; and extending ourselves to acquire new skills.
+- Over time, we will refer less and less to what we have learned before.
+:::
+
+**Step 1: Set-up**
+
+1. Empty the R environment -- using `rm(list=ls())`
+2. Load relevant libraries -- using `library()`
+
+**Step 2: Load the data**
+
+3. Read in the data file -- using `read_csv()`
+4. Inspect the data -- using `head()` and `summary()`
+
+**Step 3: Use a linear model to to answer the research questions -- one predictor**
+
+5. Use `lm()` to examine the relation between an outcome variable and one predictor variable
+
+**Step 4: Use a linear model to to answer the research questions -- multiple predictors**
+
+6. Use `lm()` to examine the relation between between an outcome variable and *multiple* predictors
+
+**Step 5: Plot predictions from linear models with multiple predictors**
+
+7. Use `ggpredict()` to plot linear model predictions for one of the predictors
+8. Produce plots that show the predictions for all the predictor variables in a model
+
+In @sec-wk18-lab-activities-2, you will see that we show you how you can understand what linear model estimates show by examining the predictions from one outcome-predictor relation.
+
+**Step 6: Draw boxplots to examine associations between variables**
+
+The `how-to` guide shows you how to produce boxplots. 
+We do not include the task in the @sec-wk18-lab-activities-2 tasks sequence but you *will* find it useful to produce boxplots when you are examining the impact of categorical variables (next).
+
+9. Create boxplots to examine the association between a continuous numeric outcome variable like `mean.acc` and a categorical variable like `ETHNICITY`
+
+**Step 7: Estimate the effects of factors as well as numeric variables**
+
+We refer to categorical or nominal variables like `ETHNICITY` as *factors* in data analysis.
+
+10. Fit a linear model including both numeric variables and categorical variables as predictors
+11. Fit a linear model including both numeric variables and categorical variables as predictors, and then plot the predicted effect of the factor (the categorical variable)
+
+::: callout-tip
+If you are unsure about what you need to do, look at the advice in `2023-24-PSYC122-w18-how-to.Rmd` on how to do the tasks, with examples on how to write the code.
+:::
+
+You will see that you can match a task in the activity @sec-wk18-lab-activities-2 to the same task in the `how-to` guide.
+The `how-to` shows you what function you need and how you should write the function code.
+
+This process of adapting demonstration code is a process critical to data literacy and to effective problem solving in modern psychological science.
+
+::: callout-warning
+Don't forget: You will need to change the names of the dataset or the variables to complete the tasks in @sec-wk18-lab-activities-2.
+:::
+
+### Lab activity 2 {#sec-wk18-lab-activities-2}
+
+### OK: now let's do it!
+
+In the following, we will guide you through the tasks and questions step by step.
+<!-- You will learn more if you follow this advice: -->
+
+::: callout-tip
+1. We will not *at first* give you the answers to questions about the data or about the results of analyses.
+2. An answers version of the workbook will be provided after the last lab session (check the answers then in @sec-wk18-lab-activities-answers) so that you can check whether your independent work has been correct.
+:::
+
+#### Questions {#sec-wk18-lab-activities-1-questions}
+
+::: callout-warning
+**Students have told us** that it would be helpful to your learning if we reduce the information in the hints we provide you. **We have done this** in Week 18.
+
+The motivation for doing this is:
+
+1. It will require you to do more *active* thinking to complete tasks or answer questions;
+2. Thus, you can check to see how your learning is developing -- can you do the tasks, given what you know now?
+3. Plus, psychological research shows that *active* thinking is better for understanding and for learning.
+
+Where we do give you hints, we will sometimes replace the correct bit of code with a place-holder: `...`
+
+- Your task will therefore be to replace the place-holder `...` with the correct bit of code or the correct dataset or variable name.
+:::
+
+#### Step 1: Set-up
+
+To begin, we set up our environment in R.
+
+##### Task 1 -- Run code to empty the R environment
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- rm(list=ls()) -->
+<!-- ``` -->
+
+##### Task 2 -- Run code to load relevant libraries
+
+Notice that in Week 18, we need to work with the libraries `ggeffects` and `tidyverse`.
+Use the `library()` function to make these libraries available to you.
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- library("ggeffects") -->
+<!-- library("tidyverse") -->
+<!-- ``` -->
+
+#### Step 2: Load the data
+
+##### Task 3 -- Read in the data file we will be using
+
+The data file for **Lab Activity 2** is called:
+
+- `study-two-general-participants.csv`
+
+Use the `read_csv()` function to read the data file into R.
+
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ## Code -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- study.two.gen <- read_csv("study-two-general-participants.csv") -->
+<!-- ``` -->
+<!-- ::: -->
+
+:::{.callout-tip collapse="true"}
+## Hint
+```{r}
+#| eval: false
+... <- read_csv("...")
+```
+:::
+
+When you code this, you can choose your own file name, but be sure to give the data object you create a distinct name e.g. `study.two.gen`.
+
+##### Task 4 -- Inspect the data file
+
+Use the `summary()` or `head()` functions to take a look.
+
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ## Code -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- head(study.two.gen) -->
+<!-- summary(study.two.gen) -->
+<!-- ``` -->
+<!-- ::: -->
+
+::: callout-tip
+## Hint
+Even though you have done this before, you will want to do it 
+again, here, and pay particular attention to:
+
+- summary information about the numeric variables;
+- summary information about variables of class: `character`.
+:::
+
+#### Step 3: Use a linear model to to answer the research questions -- one predictor
+
+#### Revise: practice to strengthen skills
+
+::: callout-tip
+- Revise: We start by revising how to use `lm()` with one predictor
+:::
+
+One of our research questions is:
+
+2. Can people accurately evaluate whether they correctly understand written health information?
+
+We can address this question by examining whether someone's rated evaluation of their own understanding matches their performance on a test of that understanding, and by investigating what variables predict variation in mean self-rated accuracy.
+
+- For these data, participants were asked to respond to questions about health information to get `mean.acc` scores
+- and they were then asked to rate their own understanding of the same information (ratings on a scale from 1-9) to get `mean.self` scores.
+- Ratings of accuracy are ordinal data but, here, we choose to examine the average of participants' ratings of their own understanding of health information to keep our analysis fairly simple.
+
+If you *can* evaluate your own understanding then ratings of understanding *should* be associated with performance on tests of understanding
+
+##### Task 5 -- Estimate the relation between outcome mean self-rated accuracy (`mean.self`) and tested accuracy of understanding (`mean.acc`)
+
+We can use `lm()` to estimate whether :
+
+1. the *outcome* variable, participants' ratings of the accuracy of their understanding (`mean.self`), can be predicted by 
+2. the *predictor* variable, information about the same participants' level of accuracy in direct tests of their understanding (`mean.acc`).
+
+Can you work out how to specify the model?
+
+<!-- without looking at the code example? -->
+
+<!-- Click on the button to see the code example: compare it to the code you wrote. -->
+
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ## Code -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model <- lm(mean.self ~ mean.acc, data = study.two.gen) -->
+<!-- summary(model) -->
+<!-- ``` -->
+<!-- ::: -->
+
+You can get more advice on how `lm()` code works if you click on the `Hint` box.
+
+:::{.callout-tip collapse="true"}
+## Hint
+In R analysis code, we normally write linear model analysis code like this: 
+
+```{}
+model <- lm(outcome ~ predictor, data)
+summary(model)
+```
+
+<!-- ```{} -->
+<!-- model <- lm(mean.self ~ mean.acc, data = study.two.gen) -->
+<!-- summary(model) -->
+<!-- ``` -->
+
+<!-- - gets us an analysis of whether or how `mean.self` predicts variation in -->
+<!-- outcome `mean.acc`. -->
+::: 
+
+If you first run the model, and then look at the model `summary` you can answer the following questions.
+
+#### Questions: Task 5
+
+>**Q.1.** What is the estimate for the coefficient of the effect of the predictor 
+`mean.acc` on the outcome `mean.self` in this model?
+
+<!-- - A.1. 5.5670  -->
+
+>**Q.2.** Is the effect significant?
+
+<!-- - A.2. It is significant, p < .05 -->
+
+>**Q.3.** What are the values for t and p for the significance test for the coefficient?
+
+<!-- - A.3. t = 8.499, p = 9.36e-15 -->
+
+>**Q.4.** What do you conclude is the answer to the research question, given the 
+linear model results?
+
+<!-- - A.4. The model slope estimate suggests that higher levels of tested understanding can predict higher levels of rated understanding so, yes: it does appear
+that people can evaluate their own understanding. -->
+
+>**Q.5.** What is the F-statistic for the regression? Report F, DF and the p-value.
+
+<!-- - A.5. F-statistic: 72.24 on 1 and 170 DF,  p-value: 9.356e-15 -->
+
+>**Q.6.** Is the regression significant?
+
+<!-- - A.6. Yes: the regression is significant. -->
+
+>**Q.7.** What is the Adjusted R-squared?
+
+<!-- - A.7. Adjusted R-squared:  0.2941 -->
+
+>**Q.8.** Explain in words what this R-squared value indicates?
+
+<!-- - A.8. The R-squared suggests that about 30% of outcome variance can be explained by the model -->
+
+#### Step 4: Use a linear model to to answer the research questions -- multiple predictors
+
+#### Introduce: make some new moves
+
+One of our research questions is:
+
+2. Can people accurately evaluate whether they correctly understand written health information?
+
+We have already looked at this question by asking whether ratings of understanding are predicted by performance on tests of understanding.
+
+But there is a problem with that analysis -- it leaves open the question: 
+
+- What *actually* predicts ratings of understanding?
+
+We can look at this follow-up question, next.
+
+##### Task 6 -- Examine the relation between outcome mean self-rated accuracy (`mean.self`) and  multiple predictors
+
+Here, the predictors will include *all* of:
+
+- health literacy (`HLVA`); 
+- vocabulary (`SHIPLEY`); 
+- age in years (`AGE`); 
+- reading strategy (`FACTOR3`);
+- as well as average accuracy of the tested understanding of health information (`mean.acc`).
+
+We use `lm()`, as before, but now when we specify the model we write the code to include all of the *multiple* predictors in the same model at the same time.
+
+- When you do this, specify all of the predictors we list.
+- Specify each variable listed here by using the variable name.
+
+Can you write the code you need to do the linear model analysis?
+
+You can click on the button to see the hint.
+You can see example code, for a different model, for Step 4 in the `2023-24-PSYC122-w18-how-to.Rmd`.
+
+:::{.callout-tip collapse="true"}
+## Hint
+You can include multiple predictor variables in a model by:
+
+- listing the predictors in series;
+- specifying each predictor variable name;
+- entering the names `...` separated by a `+`;
+- one variable at a time `... + ...`;
+- like this:
+
+```{r}
+#| eval: false
+model <- lm(outcome ~ ... + ... + ..., 
+            data = study.two.gen)
+summary(model)
+```
+
+You will need to replace place-holder `...`s with the names of variables as they appear in the dataset.
+<!-- ## Code -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model <- lm(mean.self ~ HLVA + SHIPLEY + FACTOR3 + AGE + mean.acc,  -->
+<!--             data = study.two.gen) -->
+<!-- summary(model) -->
+<!-- ``` -->
+:::
+
+If you look at the model summary you can answer the following questions.
+
+>**Q.9.** What predictors are significant in this model?
+
+<!-- - A.9. Vocabulary (`SHIPLEY`), reading strategy (`FACTOR3`), `AGE`, and performance on tests of accuracy of understanding (`mean.acc`) all appear to significantly predict variation in mean ratings of understanding (`mean.self`). -->
+
+>**Q.10.** What is the estimate for the coefficient of the effect of the predictor `mean.acc` in this model?
+
+<!-- - A.10. 4.763278  -->
+
+>**Q.11.** Is the effect significant?
+
+<!-- - A.11. It is significant, p < .05 -->
+
+>**Q.12.** What are the values for t and p for the significance test for the coefficient?
+
+<!-- - A.12. t = 6.726, p = 2.69e-10 -->
+
+>**Q.13.** What do you conclude is the answer to the follow-up question, what actually predicts ratings of understanding?
+
+<!-- - A.13. Ratings of understanding appear to be predicted by performance on tests of accuracy of understanding, together with variation in age, vocabulary knowledge, health literacy and reading strategy -->
+
+#### Step 5: Understanding linear model predictions by comparing one outcome-predictor relation
+
+#### Consolidate your learning
+
+Next, we focus in on whether (1.) `mean.self` predicts `mean.acc` or, in reverse, whether (2.) `mean.acc` predicts `mean.self`?
+
+We are talking about two models here:
+
+1. The model `mean.acc ~ mean.self`
+2. The model `mean.self ~ mean.acc`
+
+::: callout-tip
+## Important
+- A comparison between these models teaches us something important about *what* it is that linear models predict.
+:::
+  
+You will learn something about how linear models work if you look closely at the `Estimate` value in the summary for each model.
+
+- Where we reference model estimates, here, we are looking at the values in the`Estimate` column of the `lm()` model summary.
+- These estimates give us the expected or predicted change in the outcome, given change in the predictor variable named on that row.
+  
+Compare the `Estimate` value in the summary for each model. Then have a think about why these values are *different* even though the variables and the data are the same.
+  
+Remember that:
+
+- `mean.acc` is scaled from 0 to 1 because it represents the average accuracy of the responses made by study participants to questions about health texts.
+- `mean.self` is scaled from 1 to 9 because it represents the average self-rated accuracy of understanding.
+  
+>**Q.14.** Why do you think it appears that the slope coefficient estimate is different if you compare:
+
+1. The model `mean.acc ~ mean.self` versus 
+2. The model `mean.self ~ mean.acc`?
+
+You can fit these two simple models using the verbal description in the **Q.14.** information, plus what you have learned so far.
+
+- Remember to give each model a *different* name.
+
+:::{.callout-tip collapse="true"}
+## Hint
+1. Remember: you write model code with the outcome on the left of the tilde symbol `~` and the predictor (or predictors) on the right of the `~`.
+2. In the model information, we specify two different models.
+
+- The variables and the data are the same.
+- But *which* variable is the outcome, and *which* variable is the predictor, is different in the two models.
+:::
+
+<!-- Click on the `Code` button following, if you want to see the example code. -->
+
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ## Code -->
+<!-- If we want to compare two models: -->
+
+<!-- 1. The model `mean.acc ~ mean.self` versus  -->
+<!-- 2. The model `mean.self ~ mean.acc` -->
+
+<!-- Then we can specify each model as follows. -->
+
+<!-- **1. The model `mean.acc ~ mean.self`** -->
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model.1 <- lm(mean.acc ~ mean.self, data = study.two.gen) -->
+<!-- summary(model.1) -->
+<!-- ``` -->
+
+<!-- **2. The model `mean.self ~ mean.acc`** -->
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model.2 <- lm(mean.self ~ mean.acc, data = study.two.gen) -->
+<!-- summary(model.2) -->
+<!-- ``` -->
+<!-- ::: -->
+
+**Do that** then compare the `Estimate` of the predictor effect in the two models.
+
+- Reflect on what the comparison shows about the *scale* of predicted effects.
+- Have a think before clicking on the `Hint` button to see our information on the key learning we are talking about here.
+
+:::{.callout-tip collapse="true"}
+## Hint
+What does a comparison of the model predictor `Estimate` values show us?
+
+- You may benefit by reflecting on the [lm-intro](https://lu-psy-r.github.io/statistics_for_psychologists/PSYC122/Week17.html)) lecture and practical materials, especially where they concern predictions.
+
+The lesson to learn here is that:
+ 
+1. If we have the model, `mean.acc ~ mean.self` then this means that the outcome is `mean.acc`.
+
+- So if we are predicting change in outcome `mean.acc`, which is **scaled 0-1**, 
+then we are looking at coefficients that will lie somewhere on the same scale (also 0-1).
+- Here: the model estimate will show that each unit change in values of the variable `mean.self` predicts an increase of 0.053566 in `mean.acc`.
+
+2. Whereas if we have the model, `mean.self ~ mean.acc` then this means that the outcome is `mean.self`.
+
+- So if we are predicting change in outcome `mean.self`, which is **scaled 1-9**, then we are looking at coefficients that will lie somewhere on the same scale (also 1-9).
+- Here: the model estimate will show that unit change in `mean.acc` predicts increase of 5.5670 in `mean.self`.
+
+Remember that:
+
+- `mean.acc` is scaled from 0 to 1 because it represents the average accuracy of the responses made by study participants to questions about health texts. This average *has* to have a minimum of 0 (no responses correct) and a maximum of 1 (all responses correct). The average is calculated by adding up all the correct answers and dividing by the number of questions answered by each participant.
+- `mean.self` is scaled from 1 to 9 bcause it represents the average self-rated accuracy of understanding. Participants are asked to rate on a scale form 1 (not all) to 9 (very well) how well they think they understand a health information text. The average is calculated by adding up all the  ratings and dividing by the number of texts responded to by each participant.
+
+The **important lesson**, here, is that estimates of predictor effects are scaled in terms of predicted change in the outcome, so whatever scale the outcome measurement is in determines how big or small the predictor coefficient estimates can be.
+:::
+
+<!-- - A.14. Linear models are prediction models. We use them to predict variation in -->
+<!-- outcomes given some set of predictor variables. Predictions will necessarily be *scaled* -->
+<!-- in the same way as the outcome variable.  -->
+
+We can visualize the predictions from each model to *visualize* the comparison. This will help your learning:
+
+- Look at *how much* the outcome is predicted to change;
+- Look at the values on the y-axis labels.
+
+>**Q.15.** Can you plot the predictions from each model?
+
+<!-- - A.15. Here is the code to plot the predictions from both models. -->
+
+Can you work out how to write the model prediction plotting code without looking at the code example?
+
+Click on the Hint button to see advice on what you need to do. 
+You can see example code, for a different model, for Step 5 in the `2023-24-PSYC122-w18-how-to.Rmd`.
+
+:::{.callout-tip collapse="true"}
+## Hint
+**First** fit the models like this:
+
+```{r}
+#| eval: false
+model.1 <- lm(outcome ~ predictor, data)
+```
+
+- Remember to give each model object distinct names.
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model.1 <- lm(mean.acc ~ mean.self,  -->
+<!--               data = study.two.gen) -->
+<!-- summary(model.1) -->
+
+<!-- model.2 <- lm(mean.self ~ mean.acc,  -->
+<!--             data = study.two.gen) -->
+<!-- summary(model.2) -->
+<!-- ``` -->
+
+**Second** get the predictions like this:
+
+```{r}
+#| eval: false
+model.predictions <- ggpredict(model.1, "...")
+```
+
+- Replace `...` with the name of the predictor in `model.1`.
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- dat.1 <- ggpredict(model.1, "mean.self") -->
+<!-- dat.2 <- ggpredict(model.2, "mean.acc") -->
+<!-- ``` -->
+
+**Third** make the prediction plots like this:
+
+```{r}
+#| eval: false
+plot(model.predictions)
+```
+
+<!-- 1. Predictions from the model `mean.acc ~ mean.self` -->
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- plot(dat.1) -->
+<!-- ``` -->
+
+<!-- 2. Predictions from the model `mean.self ~ mean.acc` -->
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- plot(dat.2) -->
+<!-- ``` -->
+:::
+
+>**Q.16.** Look at the two plots: what do you see?
+
+Look at changes in height of the prediction line, given changes in predictor values.
+
+<!-- - A.16. A side-by-side comparison shows that: -->
+
+<!-- 1. For model `mean.acc ~ mean.self` increases in `mean.self` from about 4 to 9 are  -->
+<!-- associated with a change in `mean.acc` from about .6 to about .85; -->
+<!-- 2. For model `mean.self ~ mean.acc` increases in `mean.acc` from about 0.4 to 1.0 are  -->
+<!-- associated with a change in `mean.self` from about 5 to about 9. -->
+
+#### Step 6: Estimate the effects of factors as well as numeric variables
+
+#### Consolidation: build your skills
+
+We have not yet included any categorical or nominal variables as predictors but we can, and should: `lm()` can cope with any kind of variable as a predictor.
+
+There are different ways to do this, here we ask you to use the R default method.
+
+##### Task 7 -- Fit a linear model to examine what variables predict outcome mean self-rated accuracy of `mean.self`
+
+Include as predictors both numeric variables and categorical variables.
+
+Here, our model includes predictors that are numeric like:
+
+- health literacy (`HLVA`); 
+- vocabulary (`SHIPLEY`); 
+- `AGE`;
+- reading strategy (`FACTOR3`);
+- accuracy `mean.acc`.
+
+As well as a categorical or nominal variable like:
+
+- `EDUCATION`.
+
+Note: `EDUCATION` is a categorical or nominal variable *because* participants are classified by what education category (`higher education, further education, secondary school`) they report themselves as having received.
+
+Can you write the code to complete the linear model analysis?
+
+:::{.callout-tip collapse="true"}
+## Hint
+Follow the same procedure for model specification that you have been learning to follow: the inclusion of a nominal variable does not affect how you specify the model.
+:::
+
+<!-- Check first if you can write the code you need to complete the linear model analysis. -->
+
+<!-- Click on the button to see the code example: compare it to the code you wrote. -->
+
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ## Code -->
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model <- lm(mean.self ~ HLVA + SHIPLEY + FACTOR3 + AGE + mean.acc + -->
+<!--                         EDUCATION,  -->
+<!--             data = study.two.gen) -->
+<!-- summary(model) -->
+<!-- ``` -->
+<!-- ::: -->
+
+If you look at the model summary you can answer the following questions.
+
+>**Q.17.** Can you report the overall model and model fit statistics?
+
+<!-- - A.17.  -->
+
+<!-- > We fitted a linear model with mean self-rated accuracy as the outcome and with the predictors:  -->
+<!-- health literacy (`HLVA`), vocabulary (`SHIPLEY`), reading strategy (`FACTOR3`), `AGE`, -->
+<!-- as well as mean accuracy (`mean.acc`) and education level (`EDUCATION`).  -->
+<!-- The model is significant overall, with F(7, 164) = 24.38, p < .001, and  -->
+<!-- explains 49% of variance (adjusted R2 = 0.489). -->
+
+>**Q.18.** Can you plot the predicted effect of `EDUCATION` given your model?
+
+:::{.callout-tip collapse="true"}
+## Hint
+Follow the same procedure that you have been learning to follow.
+
+1. Fit the model:
+
+```{r}
+#| eval: false
+model <- lm(outcome ~ predictors, data)
+```
+
+- Replace `outcome` with the outcome variable required for this analysis.
+- Replace `predictor` with the predictor variable required for this analysis.
+- Replace `data` with the name of the correct data set.
+- Give the model a distinctive name.
+
+2. Get the predictions:
+
+```{r}
+#| eval: false
+model.predictions <- ggpredict(model, "EDUCATION")
+```
+
+- Use the model name you assigned to the analysis you just did.
+- Ask for predictions of the effect on outcomes of the nominal variable.
+
+3. Plot the predictions:
+
+```{r}
+#| eval: false
+plot(model.predictions)
+```
+:::
+
+<!-- Check first if you can write the code produce the prediction plot. -->
+
+<!-- Click on the button to see the code example: compare it to the code you wrote. -->
+
+<!-- :::{.callout-tip collapse="true"} -->
+<!-- ##Hint and code -->
+<!-- 1. We first fit the model, including `EDUCATION`. -->
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- model <- lm(mean.self ~ HLVA + SHIPLEY + FACTOR3 + AGE + mean.acc + -->
+<!--               EDUCATION,  -->
+<!--             data = study.two.gen) -->
+<!-- ``` -->
+
+<!-- 2. We then use the `ggpredict()` function to get the prediction for the effect of `EDUCATION` differences on outcome `mean.self`. -->
+
+<!-- ```{r} -->
+<!-- #| eval: false -->
+<!-- dat <- ggpredict(model, "EDUCATION") -->
+<!-- plot(dat) -->
+<!-- ``` -->
+<!-- ::: -->
+
+>**Q.19.** The plot should give you dot-and-whisker representations of the estimated `mean.self` outcome for different levels of `EDUCATION`. What is the difference in the estimated `mean.self` between the groups?
+
+The effect or prediction plot will show you **dot-and-whisker** representations of predicted outcome `mean.self`. In these plots, the dots represent the estimated `mean.self` while the lines (whiskers) represent confidence intervals.
+
+<!-- - A.19. The difference in the estimated `mean.self` between these groups is small: the groups vary between ratings of about 7, 7.10 and 7.5. -->
+
+>**Q.20.** Compare the difference in the estimated `mean.self` between these groups, given the plot, with the coefficient estimate from the model summary: what do you see?
+
+<!-- - A.20. The effect of `EDUCATION` is presented in the summary as two estimates: -->
+
+<!-- - `EDUCATIONHigher    -0.082217` -->
+<!-- - `EDUCATIONSecondary  0.346161` -->
+
+<!-- The reference level for `EDUCATION` is `Further`.  -->
+
+<!-- The estimates therefore show that people with `Higher` education have `mean.self`  -->
+<!-- scores about -.08 lower than `mean.self` for people with `Further` education.  -->
+
+<!-- People with `Secondary` education have `mean.self` scores about .35 higher than  -->
+<!-- `mean.self` for people with `Further` education. -->
+
+We are learning some new things here so it is useful to explain them in a bit more detail:
+
+1. Categorical variables or **factors** and reference levels.
+
+- If you have a categorical variable like `EDUCATION` then when you use it in an analysis, R will look at the different categories (called `levels`) e.g., here, `higher education, further education, secondary school` and it will pick one level to be the *reference* or baseline level. 
+- The *reference* is the the level against which other levels are compared. 
+- Here, the reference level is `Further` (education) simply because, unless
+you tell R otherwise, it picks the level with a category name that begins
+earlier in the alphabet as the reference level.
+
+2. Dot and whisker plots show estimates with confidence intervals.
+
+- Dot and whisker plots are a nice way to present a concise visual summary
+about the estimates we get from prediction models.
+- Here, the plots show the coefficient estimates from our model (the dots) plus 
+confidence intervals (the lines or "whiskers").
+
+3. Confidence intervals are often misunderstood but they are helpful.
+
+- Essentially, a confidence interval tells us about we might expect to see
+using our analysis procedure (Hoekstra et al., 2014).
+
+> If we were to repeat the experiment over and over, then 95 % of the time the 
+confidence intervals contain the true mean.
+
+::: callout-tip
+## Reading to grow your understanding
+- You can read more about this here:
+
+Hoekstra, R., Morey, R. D., Rouder, J. N., & Wagenmakers, E. J. (2014). Robust misinterpretation of confidence intervals. *Psychonomic Bulletin & Review*, 21, 1157-1164.
+:::
+
+#### You have now completed the Week 18 questions.
+
+You have now extended the power of the linear models that you can deploy to predict people and their behaviour.
+
+::: callout-tip
+Models like the models you have been working with are used by:
+
+- scientists to predict outcomes relevant to important research questions;
+- businesses using *Artificial Intelligence* to predict client or customer outcomes.
+:::
+
+## Answers {#sec-wk18-lab-activities-answers}
+
+When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week.
+
+::: callout-tip
+The `.Rmd` script containing all code and all answers for each task and each question will be made available after the final lab session has taken place.
+
+- You can download the script by clicking on the link:  [2023-24-PSYC122-w18-workbook-answers.Rmd](data/week18/2023-24-PSYC122-w18-workbook-answers.Rmd).
+
+- Or by copying the code into the R `Console` window and running it to get the `2023-24-PSYC122-w18-workbook-answers.Rmd` loaded directly into R:
+
+```{r eval=FALSE}
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week18/2023-24-PSYC122-w18-workbook-answers.Rmd?raw=true", destfile = "2023-24-PSYC122-w18-workbook-answers.Rmd")
+```
+:::
+
+We set out answers information the Week 18 **Developing the linear model** questions, below.
+
+- We focus on the **Lab activity 2** questions where we ask you to interpret something or say something.
+- We do not show questions where we have given example or target code in the foregoing lab activity @sec-wk18-lab-activities-2.
+
+You can see all the code and all the answers in `2023-24-PSYC122-w18-workbook-answers.Rmd`.
+
+### Answers {#sec-wk18-lab-activities-answers-information}
+
+::: callout-tip
+Click on a box to reveal the answer.
+:::
+
+#### Questions {#sec-wk18-lab-activities-2-questions-answers}
+
+>**Q.1.** What is the estimate for the coefficient of the effect of the predictor
+`mean.acc` on the outcome `mean.self` in this model?
+
+The model is:
+
+```{r}
+model <- lm(mean.self ~ mean.acc, data = study.two.gen)
+summary(model)
+```
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.1. 5.5670
+:::
+
+>**Q.2.** Is the effect significant?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.2. It is significant, p < .05
+:::
+
+>**Q.3.** What are the values for t and p for the significance test for the coefficient?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.3. t = 8.499, p = 9.36e-15
+:::
+
+>**Q.4.** What do you conclude is the answer to the research question, given the
+linear model results?
+
+The research questions is:
+
+2. Can people accurately evaluate whether they correctly understand written health information?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.4. The model slope estimate suggests that higher levels of tested understanding can predict higher levels of rated understanding so, yes: it does appear
+that people can evaluate their own understanding.
+:::
+
+>**Q.5.** What is the F-statistic for the regression? Report F, DF and the p-value.
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.5. F-statistic: 72.24 on 1 and 170 DF,  p-value: 9.356e-15
+:::
+
+>**Q.6.** Is the regression significant?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.6. Yes: the regression is significant.
+:::
+
+>**Q.7.** What is the Adjusted R-squared?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.7. Adjusted R-squared:  0.2941
+:::
+
+>**Q.8.** Explain in words what this R-squared value indicates?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.8. The R-squared suggests that about 30% of outcome variance can be explained by the model
+:::
+
+>**Q.9.** What predictors are significant in this model?
+
+The model is:
+
+```{r}
+model <- lm(mean.self ~ HLVA + SHIPLEY + FACTOR3 + AGE + mean.acc,
+            data = study.two.gen)
+summary(model)
+```
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.9. Vocabulary (`SHIPLEY`), reading strategy (`FACTOR3`), `AGE`, and performance on tests of accuracy of understanding (`mean.acc`) all appear to significantly predict variation in mean ratings of understanding (`mean.self`).
+:::
+
+>**Q.10.** What is the estimate for the coefficient of the effect of the predictor `mean.acc` in this model?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.10. 4.763278
+:::
+
+>**Q.11.** Is the effect significant?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.11. It is significant, p < .05
+:::
+
+>**Q.12.** What are the values for t and p for the significance test for the coefficient?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.12. t = 6.726, p = 2.69e-10
+:::
+
+>**Q.13.** What do you conclude is the answer to the follow-up question, what actually predicts ratings of understanding?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.13. Ratings of understanding appear to be predicted by performance on tests of accuracy of understanding, together with variation in age, vocabulary knowledge, health literacy and reading strategy
+:::
+
+>**Q.14.** Why do you think it appears that the slope coefficient estimate is different if you compare:
+
+1. The model `mean.acc ~ mean.self` versus
+2. The model `mean.self ~ mean.acc`?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.14. Linear models are prediction models. We use them to predict variation in outcomes given some set of predictor variables. Predictions will necessarily be *scaled* in the same way as the outcome variable.
+
+So, to expand on that explanation a bit more, to help understanding -- the answer is:
+
+1. If we have the model, `mean.acc ~ mean.self` then this means that the outcome is `mean.acc`.
+
+- So if we are predicting change in outcome `mean.acc`, which is **scaled 0-1**, then we are looking at coefficients that will lie somewhere on the same scale (also 0-1).
+- Here: the model estimate suggests that each unit change in values of the variable `mean.self` predicts an increase of 0.053566 in `mean.acc`.
+
+2. Whereas if we have the model, `mean.self ~ mean.acc` then this means that the outcome is `mean.self`.
+
+- So if we are predicting change in outcome `mean.self`, which is **scaled 1-9** , then we are looking at coefficients that will lie somewhere on the same scale (also 1-9).
+- Here: the model estimate suggests that unit change in `mean.acc` predicts increase of 5.5670 in `mean.self`.
+:::
+
+>**Q.15.** Can you plot the predictions from each model?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.15. Here is the code to plot the predictions from both models.
+:::
+
+:::{.callout-tip collapse="true"}
+## Code
+**First** fit the models.
+
+- Remember to give each model object distinct names.
+
+```{r}
+#| eval: false
+model.1 <- lm(mean.acc ~ mean.self,
+              data = study.two.gen)
+summary(model.1)
+
+model.2 <- lm(mean.self ~ mean.acc,
+            data = study.two.gen)
+summary(model.2)
+```
+
+**Second** get the predictions:
+
+```{r}
+#| eval: false
+dat.1 <- ggpredict(model.1, "mean.self")
+dat.2 <- ggpredict(model.2, "mean.acc")
+```
+
+**Third** make the prediction plots:
+
+1. Predictions from the model `mean.acc ~ mean.self`
+
+```{r}
+#| eval: false
+plot(dat.1)
+```
+
+2. Predictions from the model `mean.self ~ mean.acc`
+
+```{r}
+#| eval: false
+plot(dat.2)
+```
+:::
+
+>**Q.16.** Look at the two plots: what do you see?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.16. A side-by-side comparison shows that:
+
+1. For model `mean.acc ~ mean.self` increases in predictor `mean.self` from about 4 to 9 are associated with a change in outcome `mean.acc` from about .6 to about .85;
+2. For model `mean.self ~ mean.acc` increases in predictor `mean.acc` from about 0.4 to 1.0 are associated with a change in outcome `mean.self` from about 5 to about 9.
+:::
+
+After you have fitted a linear model to examine what variables predict outcome mean self-rated accuracy of `mean.self`:
+
+- Including as predictors both numeric variables and categorical variables.
+
+Then if you look at the model summary you can answer the following questions.
+
+>**Q.17.** Can you report the overall model and model fit statistics?
+
+The model is:
+
+```{r}
+model <- lm(mean.self ~ HLVA + SHIPLEY + FACTOR3 + AGE + mean.acc +
+                        EDUCATION,
+            data = study.two.gen)
+summary(model)
+```
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.17.
+
+> We fitted a linear model with mean self-rated accuracy as the outcome and with the predictors: health literacy (`HLVA`), vocabulary (`SHIPLEY`), reading strategy (`FACTOR3`), `AGE`, as well as mean accuracy (`mean.acc`) and education level (`EDUCATION`). The model is significant overall, with F(7, 164) = 24.38, p < .001, and explains 49% of variance (adjusted R2 = 0.489).
+:::
+
+>**Q.18.** Can you plot the predicted effect of `EDUCATION` given your model?
+
+:::{.callout-tip collapse="true"}
+## Hint and code
+1. We first fit the model, including `EDUCATION`.
+
+```{r}
+#| eval: false
+model <- lm(mean.self ~ HLVA + SHIPLEY + FACTOR3 + AGE + mean.acc + EDUCATION,
+            data = study.two.gen)
+```
+
+2. We then use the `ggpredict()` function to get the prediction for the effect of `EDUCATION` differences on outcome `mean.self`.
+
+```{r}
+#| eval: false
+dat <- ggpredict(model, "EDUCATION")
+plot(dat)
+```
+:::
+
+>**Q.19.** Q.19. The plot should give you dot-and-whisker representations of the estimated `mean.self` outcome for different levels of `EDUCATION`. What is the difference in the estimated `mean.self` between the groups?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.19. The difference in the estimated `mean.self` between these groups is small: the groups vary between ratings of about 7, 7.10 and 7.5.
+:::
+
+>**Q.20.** Compare the difference in the estimated `mean.self` between these groups, given the plot, with the coefficient estimate from the model summary: what do you see?
+
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.20. The effect of `EDUCATION` is presented in the summary as two estimates:
+
+- `EDUCATIONHigher    -0.082217`
+- `EDUCATIONSecondary  0.346161`
+
+The reference level for `EDUCATION` is `Further`.
+
+The estimates therefore show that people with `Higher` education have `mean.self`
+scores about -.08 lower than `mean.self` for people with `Further` education.
+
+People with `Secondary` education have `mean.self` scores about .35 higher than
+`mean.self` for people with `Further` education.
+:::
+
+## Online Q&A {#sec-wk18-lab-Q-and-A}
+
+You will find, below, a link to the video recording of the Week 18 online Q&A after it has been completed.
+
+```{=html}
+<iframe src="https://livelancsac-my.sharepoint.com/personal/daviesra_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=95d5e34d-4425-4560-93a3-c76843b77ef7&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="PSYC122 Online Seminar Fridays 9am wks 11-14 & 16-19-20240308_090452-Meeting Recording.mp4"></iframe>
+```

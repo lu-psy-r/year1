@@ -1,0 +1,1589 @@
+﻿Soon, so you should see on the slides
+
+the session code if you wanna log in and
+
+also um this slide out event code if
+
+you want to ask a question using slider.
+
+In the meantime, ohh visit the discussion
+
+forum, see whether anybody has asked
+
+any questions there. No, not so far.
+
+And I will also put this slider information.
+
+I'm in the chat.
+
+There we go. The kinds
+
+of people often ask for
+
+OK, I think all sets.
+
+So let's get started from us.
+
+So we've been looking at correlation
+
+in a bit more detail this week. Um,
+
+yeah. If you have any questions,
+
+you can ask them on Slider. Uh,
+
+let's see how we're getting on with that.
+
+Nothing as yet, but I will give
+
+people a little bit of time
+
+so it is all working and ready to
+
+go before we get yes. So what did?
+
+Um. So the other thing to say is
+
+that I have now made the answers. Um
+
+to this week's lab activities
+
+available on the website at Wilton.
+
+So week 12 lab activity answers
+
+are out on the on the website.
+
+The Moodle quiz is also available if you
+
+want to kind of check your understanding.
+
+Um, right, we haven't.
+
+We have a first question.
+
+It says this isn't related to this week,
+
+but is it normal if I'm finding
+
+statistics harder than everything else?
+
+For some people that is certainly the case,
+
+yes, I'm you know, there's of
+
+course everybody's a bit different.
+
+Some people come up with A level
+
+maths to sychology and they
+
+might not find it so difficult.
+
+Other people have not done that
+
+and might find it more difficult.
+
+I'm afraid it is a really
+
+important part of of psychology.
+
+But also it's yeah, it you know,
+
+it is um,
+
+most people will get to grips too with it,
+
+even if it is a bit of hard work.
+
+So I'd say you're definitely not alone
+
+in that there is quite a few people who
+
+didn't necessarily start studying psychology.
+
+With the view of getting into
+
+statistics really deeply.
+
+I'm afraid it's unavoidable.
+
+To understand the knowledge
+
+base of psychology,
+
+you're really also need some understanding
+
+of the statistics that are used.
+
+Otherwise there's no way of telling
+
+whether a study actually finds
+
+something that is that we that we can
+
+trust and that is reliable finding.
+
+Umm so yeah,
+
+trying to trying to stick with it.
+
+Do ask questions.
+
+Do and and don't feel like you
+
+know there might be a question.
+
+Do you feel like ohh you know
+
+it might be a stupid question or
+
+something really not the case at all.
+
+And that's that's whatever
+
+question you might have.
+
+There is at least thirty others
+
+who also have that question.
+
+So,
+
+yeah,
+
+I'd I'd say um that's that's I think that's
+
+probably all I can say about that I'm afraid.
+
+I hope that was helpful.
+
+Um, so looking at this week's
+
+lab activities, we might, uh,
+
+just go through some of them?
+
+If there are no specific questions,
+
+um, I'm just gonna
+
+open things up a bit. Let's get
+
+started. Um,
+
+so first of all,
+
+there were some questions right?
+
+About in the lab activities.
+
+Um, no, no. Let's go to the lab
+
+activity so we can have a look at them.
+
+Ohh, come on.
+
+So we had some questions about, um,
+
+kind of concepts in labour activity one.
+
+As I said, the answers are now here.
+
+Uh, correlation would be an appropriate
+
+form of analysis from researchers
+
+interested in the relationship between and.
+
+And these were the thinking about the the
+
+kind of different types of variables.
+
+And so the the answer would be
+
+B&amp;amp;C because, um, all of those
+
+variables are continuous.
+
+Dog breed and gender are
+
+categorical so that you can't use.
+
+Patients are also payments run as a.
+
+They can't use correlation in
+
+in that sense. Um, go back,
+
+go back and forth too. OK, much.
+
+And when would you use payments rather
+
+instead of patients are sorry when
+
+the data is not normally distributed?
+
+Is there that correct answer?
+
+And looking at these various
+
+histograms and QQ plots,
+
+which of the variables
+
+satisfy advantage assumption?
+
+So remember for just go to
+
+to this QQ plots uh I mean
+
+so here we have this is a QQ plot right?
+
+This is a histogram and in the histograms
+
+we're looking for quite a symmetrical
+
+bell shaped distribution and and in
+
+the QQ plots we are looking for a uh,
+
+we're looking where the data points fall
+
+in relation to this blue line and this kind
+
+of area between these dashed blue lines.
+
+So long as the data points are all
+
+these data points fall close to that
+
+blue line and say that it is the the
+
+variable is normally distributed.
+
+So as you can see that is not the case here.
+
+It's kind of all over the place and here
+
+you can tell from the histogram that it's
+
+not at all um normally distributed and
+
+and you see that in a QQ plot as well.
+
+UH vocabulary on the other hand
+
+is is quite nicely distributed.
+
+So this is,
+
+you would say that that does satisfy the
+
+assumption of normally distributed data.
+
+Um, why should correlation analysis
+
+not be conducted on variables
+
+with a curvilinear relationship?
+
+Um, because, um,
+
+you might conclude that there is a a
+
+relationship between the variables.
+
+Yeah, we we say there isn't because
+
+it is not a linear relationship.
+
+So correlation is as we have
+
+been using it is only for linear
+
+relationships between variables.
+
+So that means that you can
+
+fit a straight line to it.
+
+If it is not a straight line that fits the
+
+data or the then it don't use correlation.
+
+OK, so that's a lot of activity One line,
+
+activity two.
+
+Ohh, say that I haven't changed
+
+this to the market and script we um,
+
+that's actually in our script
+
+rather than a marked out script.
+
+So we can, I'll.
+
+I'll change that and we'll have
+
+a look at the markdown script.
+
+So, um, let's stop sharing this slide.
+
+I've just realised that that wasn't
+
+very helpful because you couldn't
+
+actually see my screen anyway.
+
+Um,
+
+so let's go to UH,
+
+Don't worry about my turn now
+
+let's go to Lab activity two.
+
+You should now be able to
+
+see my uh Ohh window.
+
+So this is the markdown script,
+
+and your markdown script that
+
+you've created might look
+
+a little bit like that.
+
+So first we do need to load the libraries,
+
+so let's just do that.
+
+Then we're gonna do some work with
+
+it's data on vaping.
+
+So we are going to read in those
+
+data and see what we've got.
+
+Doesn't work. Do not.
+
+Let's check the environment.
+
+Yes, it has credits,
+
+so I've called it that data.
+
+It's not massively informative.
+
+You might want to choose a better name.
+
+Um, so here we can see that
+
+we have 106 observations,
+
+so participants and 8 variables.
+
+So you can click on the blue circle
+
+with the little white triangle and
+
+then you can see what we've got there.
+
+So participants then block three
+
+response times, block 3 accuracy,
+
+block five response times,
+
+and block 5 accuracy.
+
+Now we have vaping questionnaire data.
+
+We have information on sex and on age,
+
+so there was a question for how
+
+many participants do we have data?
+
+As I mentioned,
+
+you can tell that from from
+
+here there's 166 observations.
+
+If you click on that data or on the name,
+
+it will put it into view and
+
+you can see that here as well.
+
+So the answer to question 2A
+
+is there are 166 participants.
+
+Then we do need to do a little
+
+bit of data wrangling because at
+
+the moment we don't have to write
+
+information in the OR we don't have
+
+the the information in the data
+
+frame that we can actually use to
+
+do our correlation analysis. Ohh so
+
+I'm just gonna go
+
+it is useful. It might you might
+
+think oh do I do have to read all
+
+of the background information.
+
+You're doing it. I would recommend
+
+reading it because it then the the data.
+
+This is real data from a real experiment
+
+and it starts making a lot more sense.
+
+So you need to know that block 3 in
+
+the So let's let's go back a bit.
+
+It's all about explicit attitudes and
+
+implicit attitudes towards the vaping.
+
+And explicit attitudes are we're
+
+measured with questionnaires.
+
+So that is, yeah,
+
+the vaping questionnaire,
+
+school and implicit attitudes were
+
+measured through something that's
+
+got an implicit association tests.
+
+So you use images of vaping in one
+
+condition and images of kitchen
+
+utensils in another condition,
+
+and you associate them with positive
+
+and negative words and depending on
+
+how what people's attitudes are and
+
+you should be quicker to respond to
+
+associations that you feel good together.
+
+So if um then then if they do
+
+not go together.
+
+So if you have positive a
+
+positive attitude towards vaping,
+
+you might associate might be
+
+quicker on positive words,
+
+whereas if you have negative
+
+attitude to vaping,
+
+you would be quicker on on in the
+
+condition where vaping images
+
+are paired with negative words.
+
+So you can read more about that
+
+Uh I'll uh there's a link to
+
+the notebook project there.
+
+Um,
+
+so you we need to know that block
+
+3 in the experiment they tested
+
+reaction times and accuracy
+
+towards congruent association.
+
+So pairing positive with kitchen
+
+and negative with vaping and block
+
+5 tested in concrete association so
+
+positive with vaping and negative
+
+with kitchen utensils.
+
+And so we are interested in the
+
+difference in reaction times
+
+to these two blocks.
+
+So if reaction times were longer block 5,
+
+then in block 3 then people are considered
+
+to hold the view that vaping is negative.
+
+Um.
+
+But if UM reaction times were
+
+quicker in block 5 than in block 3,
+
+then we considered them to hold
+
+the view that vaping is positive.
+
+So we need to the difference of UM,
+
+the reaction times.
+
+We also need to do a few other things.
+
+And so we've done all that and we
+
+wanted to do some data cleaning.
+
+So people, um, you know,
+
+accuracy should not go above one.
+
+And uh, you know,
+
+there might be some data entry errors
+
+that we don't want in our analysis.
+
+So we're going to remove
+
+participants who have an accuracy,
+
+created them all and in
+
+either block 3 or block 5.
+
+As we you know we don't.
+
+We can't quite know what's
+
+what's going on there.
+
+We also want data from people
+
+who are paying attention.
+
+So anybody who's average accuracy
+
+school across those two blocks was less
+
+than 80% and we're going to remove now
+
+that you know you could say why 80%.
+
+That is a decision that you make
+
+beforehand and and ideally you
+
+would pre register that so you
+
+would before you've seen the
+
+data you're going to say
+
+what you're how you're going
+
+to handle that cut off so
+
+that you can't be accused of.
+
+I'm kind of throwing out
+
+data that you don't like.
+
+OK, so and then the third thing
+
+that we have to do is, um,
+
+once we've cleaned up the data,
+
+we need to create a new variable with the
+
+kind of the IAT score that we that we want.
+
+So by subtracting block 3 reaction times,
+
+flock from block 5 reaction times.
+
+Now I will just check to see
+
+whether there are any questions.
+
+No. Um. So let's see.
+
+We can do that all in one pipe, right?
+
+Um. You might remember that um.
+
+So the pipe symbol is this thing, right?
+
+The percentage symbol?
+
+Um, a bigger than UH symbol and
+
+another percentage UH symbol, um.
+
+So we use our data frame that
+
+we've called that and here we
+
+are actually overwriting it.
+
+It's in I I tend not to do that,
+
+but I I clearly hear I have done that.
+
+So you might want to want to give
+
+this a different name than that one
+
+that you don't overwrite a data frame.
+
+So you know you might say debt
+
+clean or something.
+
+So we're using that this data
+
+frame and first of all we're going
+
+to philtre out and go only keep
+
+the participants with accuracy.
+
+Schools that are kind of below 1
+
+so that are actually possible um.
+
+So accuracy scores for block
+
+three are in this variable.
+
+So we say philtre and then keep the
+
+participants where accuracy is below 1.
+
+Um,
+
+then we do the same thing four block 5.
+
+Um. Then we compute a new variable here,
+
+and we calculate the average accuracy
+
+on the IT across block 3 and block 5.
+
+So you know this is just take that the
+
+accuracy from book three and the accuracy
+
+from block 5 and divide that by two.
+
+You could also have used the function
+
+to do that, just doing it by hand here,
+
+and that is going to be in a new variable.
+
+And then we say, OK, use that new
+
+variable and throw it to anybody who is.
+
+Or keep the people who have an
+
+accuracy above .8, so 80% UM.
+
+And then finally we calculate our
+
+new variable, here the I18RT.
+
+So here we subtract the reaction
+
+times before block three from
+
+the reaction times in block 5.
+
+So let's run that thing and
+
+let's see what it does there.
+
+And so now that has 104
+
+observations and 10 variables.
+
+So that does make sense, right?
+
+Because we added two variables and.
+
+You can see those here on the end.
+
+So here accuracy and I TRT which is
+
+the difference between reaction time
+
+look 5.3 UM and we kicked out a few
+
+UH participants right UH because they
+
+didn't quite fit these UH criteria.
+
+Um,
+
+keep your questions
+
+coming in if you have any.
+
+Umm just regularly check slider for that.
+
+So for how many participants do we have
+
+data now that we have cleaned them up?
+
+104 participants We could actually Yeah,
+
+I'm not gonna go into that.
+
+Let's stick with that for now.
+
+So Dan, question 3B used the information
+
+in the background description to understand
+
+how the schools related attitudes, right?
+
+So what does a positive score on the ITRT?
+
+Mean What does a negative score mean?
+
+Etcetera. So people with a positive IE
+
+TRT score are considered to hold to the
+
+implicit view that vaping is negative, right?
+
+Because they the quicker to respond to
+
+concurrent associations and then to
+
+incoherent associations and people with
+
+a negative ITRT score opportunity to hold
+
+the implicit views that vaping is positive.
+
+And then we have the questionnaire,
+
+So um higher scores indicated a positive
+
+explicit attitude towards vaping on
+
+and this other variable, this one,
+
+the vaping questionnaire school,
+
+which is kind of the explicit matches
+
+the explicit attitudes.
+
+Now we do want some descriptives for
+
+all of these, so let's do that here.
+
+Umm, I haven't called them here,
+
+so let's do that.
+
+I don't know, Daniel.
+
+I'd like to see in the console
+
+as well, but it doesn't do that.
+
+There we go. So the mean accuracy is .9,
+
+which is quite high of course,
+
+but we've thrown out anybody who
+
+was bad kind of worse than .8,
+
+so it's not that surprising.
+
+And on average people seem to have a
+
+positive score on the UH I TRT variable.
+
+So that suggests that Ohh average
+
+people have a negative implicit
+
+attitudes towards vaping.
+
+And the score on the explicit
+
+questionnaire is, um,
+
+62 points something.
+
+Um, so you know, just a question
+
+about why these things are useful.
+
+It is always worth worth
+
+thinking about the averages.
+
+So and some averages are are more
+
+informative than others, so the
+
+so did UM.
+
+I guess what I'm asking here is to think
+
+about what the numbers actually mean.
+
+And it depends on how the questions
+
+students are asked, right?
+
+So the the implicit measure we
+
+know how to how to interpret the
+
+explicit questionnaire score.
+
+It might be informative, but we don't,
+
+we don't have a lot of information about
+
+what that school actually is, right?
+
+So is that what is the maximum possible
+
+support said out of 100 or out of of 63?
+
+If it is, you know out of 63 than it
+
+is is very high that average word.
+
+If if it's out of 100 it's not so high.
+
+So we need a bit more information
+
+and we also don't know what kind
+
+of skill they were answering on.
+
+So it's this basically is the question
+
+is that to illustrate that we don't
+
+have all the information to interpret
+
+their means that we get at the moment.
+
+OK, so then we're gonna do
+
+some assumption checking. Um,
+
+so we need to think a little bit about
+
+our the types of comparables, right?
+
+So are they continuous?
+
+Well, the reaction time measure
+
+is certainly a continuous variable
+
+and and for now we're going to
+
+consider the vaping questionnaire
+
+score also a continuous variable.
+
+Now all the we we might want to check
+
+whether there's any missing data.
+
+So that's what we do next,
+
+and we can use.
+
+This is dot and a function,
+
+so it is not an A function basically. Um
+
+tells you whether there are
+
+values that are called NA not
+
+available in the data frame.
+
+And if you philtre for exclamation
+
+mark is not an, A is not a,
+
+then you keeping everybody who
+
+does not have missing data.
+
+So if we do that, we, you see,
+
+you can see here that we
+
+now have 96 participants.
+
+So there were some people in there with
+
+missing data who we've now thrown out.
+
+Um, ah, I can see your question here.
+
+Um, sorry, I missed that.
+
+What is the difference between using
+
+the pipe symbol and the plus symbol
+
+for continuing code in the new line?
+
+It's a really good question because
+
+they're highly similar and they're
+
+just used in different contexts.
+
+It might seem like why
+
+not be more consistent?
+
+That is in the nature of our being an
+
+open source code programming language,
+
+and people have contributed
+
+different packages.
+
+And for everything in reply,
+
+R or actually everything in the
+
+tiny verse uses this pipe symbol.
+
+And so it's actually not that one.
+
+It is and percentage sign rightward
+
+error or bigger than size percentage.
+
+So kind of slightly different from that.
+
+I'll type it in the chat,
+
+but it's meant to be.
+
+It will allow me
+
+teams not being very fast. So
+
+that symbol, um, that's in there,
+
+check now that is called the pipe and that is
+
+used in all functions that come from dplyr.
+
+The plus symbol is what you use
+
+when you create graphs in ggplot.
+
+I'm not 100% sure, but pretty sure
+
+that that 4th in particular what for
+
+the kind of functions that you use,
+
+that's the only place that
+
+you would use a plus sign.
+
+So when you create a figure,
+
+think of it as adding layers one at a time.
+
+So plus another layer plus
+
+another layer plus another layer.
+
+When you are cleaning data,
+
+working with data,
+
+it is the arrow kind of thing with
+
+the percentage signs around it where
+
+you link data from one function to
+
+another function to another function.
+
+So I hope that makes sense.
+
+Let me know if it doesn't.
+
+Right.
+
+So we were checking assumptions, right?
+
+So we've kicked out people who had
+
+missing data for one of the variables and
+
+then we are going to check normality,
+
+other variables normally distributed.
+
+So we can do that by creating some plots.
+
+Um, and we're doing that in
+
+the codes that comes next.
+
+So here we have a a histogram for
+
+the Vaping Questionnaire School that
+
+looks pretty nicely distributed, doesn't it?
+
+It's never going to be perfect in real life.
+
+And so if we look at the
+
+QQ plot for that variable,
+
+you can see that almost all,
+
+I mean this and that.
+
+There's two data points here that are
+
+little bit there's a lot in here,
+
+the extreme that are outside of
+
+this blue shaded area,
+
+but the rest is all kind of
+
+close to that blue line.
+
+So that umm,
+
+from those two graphs together,
+
+the histogram and QQ plot,
+
+we can conclude that the vaping
+
+questionnaire score variable is
+
+normally distributed and the same
+
+holds for the IATR variables.
+
+So here is the histogram.
+
+Again,
+
+it doesn't look perfect.
+
+Ideally you would have you know in the
+
+real real bell shaped form you might
+
+have that thing would be more in the middle,
+
+but it is close enough as you
+
+can tell from the Q plots,
+
+so that is uh,
+
+So yes,
+
+both histograms resembling normal
+
+distribution and the open source and QQ
+
+plot all within the blue striped lines.
+
+So yes,
+
+we're happy with the normality assumption,
+
+right?
+
+Then we will create a
+
+scatter plot um.
+
+This will tell us whether um,
+
+so two things. And we can,
+
+we can look at homoscedasticity
+
+of data and we can also look at
+
+the linearity and the direction
+
+and strength of the relationship.
+
+So if you look at this,
+
+here we have explicit attitude, right?
+
+And here we have implicit
+
+attitudes and and here we have it.
+
+It's basically a cloud of data, right?
+
+Um. We can see that the well that
+
+suggested the relationship might be weak.
+
+And in terms of linearity,
+
+this catapult doesn't suggest
+
+any curvilinear relationships,
+
+which is, you know,
+
+something like that
+
+in terms of variance or constant variance.
+
+Whether or not that is constant,
+
+that's the same thing as whether
+
+the data share almost capacity.
+
+It seems quite constant,
+
+but there there is a few there's fewer
+
+people with a negative ITT, right?
+
+So here we don't quite have the
+
+same range of people here on
+
+the left of the of the graph.
+
+So um, yeah, that it called.
+
+It's not perfect,
+
+but I would say it's OK for now.
+
+Let's check whether anybody has
+
+questions about assumptions, No.
+
+OK, then we're actually going
+
+to do the correlation analysis.
+
+So you might remember, you know,
+
+but this is the code to do
+
+that and then we can pull out
+
+those the numbers that we need.
+
+So let's do that.
+
+Um. And here we've got our SO correlation
+
+coefficient is in the estimate cell and
+
+as you can see it is awfully close to 0,
+
+so and and you can see that in the pin
+
+value as well that is way larger than .5,
+
+so it's not significant.
+
+So it suggests that there's not a significant
+
+correlation between these two variables.
+
+Now this is how you would write this up.
+
+Testing the hypothesis of
+
+relationship between implicit and
+
+explicit attitudes towards vaping,
+
+piercing correlation coefficient,
+
+The patient correlation found no
+
+significant relationship between IT.
+
+Reaction times implicit attitude and answers.
+
+All vaping questionnaire explicit
+
+attitudes and here you have that
+
+and this is how you write it.
+
+Uh, kind of the report,
+
+those, those numbers, right.
+
+So they all value it.
+
+This, you might wonder why this
+
+is an extra exists because I'm
+
+writing it in our lock down here
+
+and that makes it in italics.
+
+If I need this document in a minute we
+
+can see that the degrees of freedom
+
+you need to report here and then
+
+we'll report the actual value for it.
+
+And then here we have the P value.
+
+Overall,
+
+this suggests that there is no direct
+
+relationship between implicit and experts.
+
+Attitudes were forgotten safely and as
+
+such our hypothesis was not supported.
+
+We can not reject the null hypothesis.
+
+So there we go.
+
+So let's see what I can knit this.
+
+And then you can see that there's
+
+things that are in asterixis
+
+are actually turned into,
+
+um,
+
+things that are in italics.
+
+It's just getting there. Some 88%. No,
+
+there we go.
+
+I'm I'm not sure you can now
+
+see that, so let me share my
+
+full screen.
+
+There we go. So by knitting
+
+this ARM markdown document,
+
+you've got kind of a summary of of
+
+various things and the write up is just,
+
+you know, put in all the graphs.
+
+It puts in all the text
+
+that I've written there,
+
+and so any notes that you make. Um,
+
+and here we are. So this is what I
+
+wanted to show you here because that
+
+in our markdown I've put asterisks
+
+around that R it puts it in italics.
+
+That's what I I was trying to show you.
+
+So I've now knitted it to an HTML document,
+
+but I could also limit it to a
+
+Word document or to PDF document.
+
+And so you can write up and the result,
+
+you know the your analysis in our
+
+using an our markdown script and
+
+then knit it to a Word document and
+
+you've got everything you need for
+
+your report without having to copy and
+
+paste individual values or individual
+
+tables or figures or anything.
+
+OK. So any question about the
+
+correlation analysis here,
+
+it doesn't look like it.
+
+So we'll just continue.
+
+And then the last bit we've just looked
+
+at something called intercorrelation
+
+where you basically look at multiple
+
+correlations at the same time.
+
+So we made matrix of scatter plots.
+
+It's you know,
+
+you could have made them individually.
+
+This is quite a neat way of making
+
+multiple scatter plots at the same time.
+
+And the way to read this is.
+
+So we have 3 variables here.
+
+Um, this is the scatter plot we saw earlier,
+
+right? Between So yes,
+
+situation between implicit
+
+and explicit attitudes.
+
+But now we want to see whether either
+
+of them correlated with age as well.
+
+So if so,
+
+if you want to look at the scatter
+
+plots with age on one axis and the
+
+implicit attitudes on the other axis,
+
+then you would end up here and age and
+
+explicit aptitude is is over here and
+
+and above the diagonal it's the same,
+
+right?
+
+So H implicit attitudes H explicit attitude.
+
+So you can just kind of navigate like that.
+
+Um, so the scatterplot with age,
+
+it really suggests highly skewed,
+
+with only a few participants older than 25.
+
+Looks like they did this study
+
+with undergraduate students.
+
+And you know, we have one person
+
+who's quite a bit older than the rest,
+
+so we don't have a good
+
+spreads in high schools.
+
+So we'll therefore calculate experiments,
+
+right rather than pieces are
+
+right because this doesn't look,
+
+look normally distributed whatsoever.
+
+Yeah, you, you know,
+
+if you were analysing those things
+
+for a research project that you
+
+would look at it more closely and,
+
+you know, look at the histogram,
+
+look QQ plot, et cetera,
+
+or you would actually collect more data.
+
+This was really the question
+
+that you wanted to answer of
+
+different ages to have more data
+
+points of people older than 25.
+
+So here we have the code to um
+
+hmm it can't find something.
+
+Ohh, that's because I haven't run this.
+
+So we need to do a few things before
+
+you can do, uh, run this code.
+
+It needs the data frame in a
+
+particular way and and that's.
+
+Then it will all come out fine.
+
+So when you run this function
+
+correlate it will give you 3 tables,
+
+one with the correlations,
+
+one with the P values and one with the
+
+sample sizes from which you can the decide
+
+what the degrees of freedoms are right?
+
+So it's a little bit slightly different
+
+output from when you run 1 coronation.
+
+So here you can see the
+
+correlations with HR quite small.
+
+Um, and indeed not significant.
+
+So you've got significant correlation.
+
+Was found for with H for
+
+item measure of attitudes.
+
+OK, so that is the lab activities.
+
+Um, I will see whether there's
+
+any other questions anywhere.
+
+I don't see any.
+
+That's OK.
+
+If all is clear then and everybody
+
+is happy then that is great.
+
+So next week we will be working.
+
+Materials are all on the website.
+
+We'll be looking at linear regression.
+
+So simple linear regression,
+
+which is quite it,
+
+It's related to correlation,
+
+but it is kind of a stepping stone
+
+for more complex or aggressions
+
+that you'll do later on.
+
+So thank you everybody for attending
+
+today and good luck with that and I
+
+look forward to seeing you next week.
+
+All right. Bye. Bye.

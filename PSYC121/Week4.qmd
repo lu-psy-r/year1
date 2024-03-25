@@ -1,0 +1,144 @@
+---
+title: 4. Customisation of graphs, and z-scores
+subtitle: Written by John Towse & Tom Beesley
+order: 4
+---
+
+# Lectures
+
+Watch Part 1
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=06e885e1-ae61-48da-a526-b0a700903222&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+Watch Part 2
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=7cb0be2b-960e-49da-8b22-b0a700956f77&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+Watch Lecture Part 3
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=d4968f5c-e3c3-4ff9-8de5-b0a70099dbd5&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+Watch Lecture Part 4   
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0e49ce6f-fc0f-4c5e-ba3d-b0a7009efa33&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+Download the lecture slides [here](data/Week_4/week4_23_lecture_slides.pptx)
+
+
+## Pre-lab work
+
+-   Complete materials from sessions in previous week. Consolidate what we have already covered.
+
+-   This week - there's a new learnr tutorial to follow and help prep for what we are covering: [You can find it here](https://ma-rconnect.lancs.ac.uk/W4LabPrep/){target="_blank"}.
+
+-   Make sure you have access to the `week_4_2023.zip` file for the RStudio server. [You can get the file here](data/Week_4/week_4_2023.zip).
+
+-   If you create a folder and upload the file into RStudio before the lab class you'll be even more ready to follow along!
+
+## R Studio tasks
+
+Last week we introduced two different ways to get descriptive information about a variable / column of scores investigated as a function of a separate piece of information. In others words, describe the DV a function of an IV
+
+Students were generally very good at utilising each of these;
+
+`aggregate(x = DV, by = list(IV), FUN = mean)`
+
+and
+
+`dataframe %>% group_by(IV) %>% summarise(mean_estimate = mean(DV))`
+
+
+This week, we're focusing on how you can edit or customise a graph to be more useful to a viewer.
+
+## Section 1 - Customisation of data plots
+
+Step 1. Set up a folder for this week in the R Project that you created last week.
+
+Step 2. Bring the `week_4_2023.zip` file into R Studio server. Like last week, upload the zip file, and read in the data file. Launch the week_4 R script as before.
+
+{If you've done Step 1 &2 already as a pre-lab preparation, super, pat yourself on the back, skip these steps an move on)}
+
+Step 3. Once again, we're gong to be using commands from the tidyverse library (the pipe operator is one example) so we need to ensure that it's active. Run the command
+
+`library(tidyverse)`
+
+Step 4. Read in the datafiles that will be on the server. There's already a script line for this, you just need to change the file name (and we've done this in previous weeks)
+
+Step 5. We've provided a suggestion of how you can complete the visualisation challenge task from week 3.
+
+Step 6. Customize you graph work. We've provided some suggestions about adding titles and labels for your graph. Edit and play with the script lines to make them useful to you and to understand how they work. Note that the `ggplot` instructions have a similar structure / grammar to the `group_by()` instructions that we used: piping a data frame to a (here, plotting) function and piping that to an output or summarisation format.
+
+-   Try change the text, the colours, and so on of the graphs.
+-   Add comments for yourself about what the different commands do. The idea is to learn by trying different things out (changing values, taking out elements of the command, putting other is) and record for yourself.
+-   If you are struggling or not sure, try look at help files.
+
+## Section 2: z-scores
+
+> Hint / Reminder: Sketch a normal (z score) distribution and mark the mean/mode, and mark off the relevant parts of the question so you know what you are trying to achieve and how to interpret any calculations you make.
+
+> Hint/ Guide 2. For questions 6 & 7, typically in psychology we use the 5% level as a cutoff to decide, in broadly described terms, whether something is extreme or unlikely vs. at least somewhat plausible or likely.
+
+### z-scores 1
+
+z-score distributions
+
+Q1. What is the relationship between the sign of a z-score and its position in a distribution?
+
+Q2. If a distribution has a mean of 100 and a standard deviation of 10, what is the raw score equivalent to a z-score of 1.96?
+
+Q3. If a distribution has a mean of 157 and a standard deviation of 19, what is the raw score equivalent to a z-score of 1?
+
+### z-scores 2 Using z-score tables
+
+Q4. What proportion of scores lie between the mean and a z-score of 0.5?
+
+Q5. What is the combined proportion of scores lying between z=-1.2 and z=.85?
+
+### z-scores 3 Applying z-scores to inferential problems
+
+Q6. A Neuropsychologist has presented a test of face recognition to 200 neurotypical participants and finds that the scores are normally distributed with a mean of 85 and the standard deviation of 12. Two brain-damaged patients are also given the test. The one with right hemisphere brain damage scored 58 and the one with left hemisphere damage scored 67.
+
+1.  What is the z score of the right hemisphere patient when compared to the neurotypical group?
+
+2.  What proportion of neurotypical participants score lower that this patient?
+
+3.  Is this patient likely to belong to the population of neurotypical participants? (justify your answer)
+
+4.  What is the z score of the left hemisphere patient when compared to the neurotypical group?
+
+5.  What proportion of neurotypical participants score lower than this patient?
+
+6.  Is this patient likely to belong to the population of neurotypical participants? (justify your answer)
+
+### Final z-score challenge
+
+Come back to this afterwards for some extra practice if you want:
+
+Q7. Tom Bunion has completed a huge research study and measured the foot size of men and women and found each to be normally distributed. The men have a mean size of 55 with a standard deviation of 5 and the women a mean of 33 and a standard deviation of 5. Joanna Toes has foolishly measured two individuals but forgotten to note their gender. These have foot sizes of 37 and 47. To which gender is each more likely to belong? What evidence is there for this?
+
+### RStudio and stats humour
+
+For a bit of fun... The following are parody music videos about stats. Now that you have a few weeks' experience with R Studion and also, an introduction to hypothesis testing, you might appreciate the following
+
+The R Inferno Song (Teenage Dirtbag Parody) filmed largely on campus at Maynooth University, Ireland:
+```{=html}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nziSP3vELCk?si=9HG9waQaEagUeCXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+Hypothesis testing and p values (plus bunny rabbits and a dog)
+```{=html}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HTdo6xjfFHI?si=Z5Z4W5kggt5Ef0um" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+### Extra external R resources 
+
+Some students have asked for a pointer to additional R resources so they can structure some time exploring the R system. There are lots, but this is good and very compatible with the teaching we provide:
+[R for data science](https://r4ds.hadley.nz){target="_blank"}

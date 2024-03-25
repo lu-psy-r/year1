@@ -1,0 +1,155 @@
+---
+title: "122_wk11_labActivities2_3"
+author: "Margriet Groen"
+date: "2024-01-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Lab activity 2 - Miller and Haden data
+
+# Step 1. Loading the relevant libraries
+```{r libraries}
+library(broom)
+library(tidyverse)
+```
+# Step 2. Read in the data
+```{r read in Miller Hadend data}
+mh <- read_csv("MillerHadenData.csv")
+```
+
+# Step 3.  Construct a scatterplot of the relationship between 'Home' and 'TV'. Also add a line of best fit.
+
+```{r scatterplot Home and TV}
+ggplot(mh, aes(x = Home, y = TV)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_bw() +
+  labs(x = "Time spend reading at home", y = "Time spend watching TV at home")
+
+```
+
+Question 3a: What can you tell from the scatterplot about the direction of the relationship?
+
+# Step 4.  Conduct the correlation analysis.
+```{r correlation}
+results <- cor.test(mh$Home, 
+                    mh$TV, 
+                    method = "pearson", 
+                    alternative = "two.sided") %>%
+  tidy()
+
+results
+```
+```{r pull info}
+r <- results %>%
+  pull(estimate) %>%
+  round(2)
+r
+
+df <- results %>%
+  pull(parameter)
+df
+
+pvalue <- results %>%
+  pull(p.value) %>%
+  round(3)
+pvalue
+```
+
+Question 4a:  What is the correlation coefficient (Pearson's r)?
+
+Question 4b: What is the p value?
+
+Question 4c: Is the correlation significant at the p \< .05 level?
+
+Question 4d: What are the degrees of freedom you need to report?
+
+# Step 5. Calculate how much variance in 'time spent reading' can be accounted for by 'time spent watching TV'?
+
+```{r r-squared}
+rsquared <- r*r
+rsquared
+rsquaredPercent <- round(rsquared * 100, 0)
+rsquaredPercent
+```
+
+# Step 6. Write a few sentences in which you report this result, following APA guidelines.
+
+"A Pearson's correlation coefficient was used to assess the relationship between time spent reading at home and time spent watching TV at home. There was a significant negative correlation, *r*(23) = -.65, *p* \< .001. As time spent watching TV increased, time spent reading at home decreased."
+
+## Lab activity 3 - Hazardous alcohol use and impulsivity
+
+# Step 1. Read in the data
+```{r read in alcohol impulsivity data}
+data <- read_csv("alcoholUse_Impulsivity.csv")
+data
+```
+
+Question 1a:  How many variables does it have?
+
+# Step 2. Plot the relationship between hazard alcohol use and impulsivity using a scatterplot and a line of best fit
+```{r scatterplot hau imp}
+ggplot(data, aes(x = hau, y = imp)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_bw() +
+  labs(x = "Hazardous Alcohol Use", y = "Impulsivity")
+```
+
+Question 2a:  What can you tell from the scatterplot about the direction of the relationship?
+
+There is a positive association between 'hazardous alcohol use' and 'impulsivity'. This means that as a participant's score on 'hazardous alcohol use' goes up, their score on 'impulsivity' also goes up.
+
+# Step 3. Conduct a correlation analysis, using Pearson's r
+
+```{r correlation hau imp}
+results <- cor.test(data$hau, 
+                    data$imp, 
+                    method = "pearson", 
+                    alternative = "two.sided") %>% 
+  tidy()
+
+results
+
+# pull out Pearson's r, the degrees of freedom and the p-value for reporting the results
+r <- results %>%
+  pull(estimate) %>%
+  round(2)
+
+df <- results %>%
+  pull(parameter)
+
+pvalue <- results %>%
+  pull(p.value) %>%
+  round(3)
+
+rsquared <- r*r
+rsquaredPercent <- round(rsquared * 100, 0)
+```
+
+Question 3a:  What is the correlation coefficient (Pearson's r)?
+
+Question 3b:  What is the p value?
+
+Question 3c:  Is the correlation significant at the p \< .05 level?
+
+Question 3d:  What are the degrees of freedom you need to report?
+
+Question 3e: How much variance in 'impulsivity' can be accounted for by 'hazardous alcohol use'? 
+
+Question 3f: Give three logically possible directions of causality, indicating for each direction whether it is a plausible explanation in light of the variables involved (and why). No, this is not a trick question ----I know that correlation does not infer causation, but think critically! New studies/ideas are constructed by thinking what the previous study doesn't tell us about what could be happening with the variables of interest.
+
+Examples:
+
+1. Being more impulsive may make people consume more alcohol.
+2. Consuming more alcohol may make people more impulsive.
+3. An outgoing personality might influence both your level of impulsivity and you are more likely to be socialising in the pub and consuming alcohol. So the same 'third factor' may influence both our variables of interest.
+
+
+# Step 4. Write a few sentences in which you report this result, following APA guidelines.
+
+A Pearson's correlation coefficient was used to assess the relationship between alcohol use and impulsivity. There was a significant positive correlation, *r*(18) = .54, *p* = .014. People who reported to consume more alcohol, scored higher on the impulsivity scale.

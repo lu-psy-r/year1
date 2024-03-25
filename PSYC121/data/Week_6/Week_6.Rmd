@@ -1,0 +1,15 @@
+---
+title: "Week_6"
+output: html_document
+date: "2023-11-07"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Week 6 lab
+
+### Task 1 - card sampling
+
+
