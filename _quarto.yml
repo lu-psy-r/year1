@@ -23,7 +23,7 @@ website:
       - text: Year 2
         file: https://lu-psy-r.github.io/year2
       - text: MSc
-        file: https://lu-psy-r.github.io/msc
+        file: https://lu-psy-r.github.io/MSc
       - text: And More...
         file: https://lu-psy-r.github.io/more
 
@@ -39,9 +39,6 @@ website:
           
   page-footer:
     left: "Website developed by Matthew Ivory"
-    right:       
-      - icon: github
-        href: https://github.com/M1V0/
 
 format:
   html:
