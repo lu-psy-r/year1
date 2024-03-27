@@ -1,0 +1,56 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Statistics for Psychologists"
+  favicon: "Images/favicon.png"
+  page-navigation: true
+  back-to-top-navigation: true
+  search: 
+    type: textbox
+  
+  repo-url: https://github.com/lu-psy-r/lu-psy-r.github.io
+  #repo-actions: [edit, issue]
+  
+  navbar:
+    #logo: "Images/icon.png"
+    left:
+      - text: Home
+        file: index.qmd
+      - text: Year 1
+        file: year1/index.html
+      - text: Year 2
+        file: year2/index.html
+      - text: MSc
+        file: MSc/index.html
+      - text: And More...
+        file: more/index.qmd
+
+  page-footer:
+    left: "Website developed by Matthew Ivory"
+    right:       
+      - text: "Previous Content"
+        href: previous-content/index.html
+
+format:
+  html:
+    theme: 
+      - default
+      - "_core/theme.scss"
+    css: https://lu-psy-r.github.io/essentials/index.css
+    code-overflow: wrap
+    grid:
+      sidebar-width: 250px
+      body-width: 900px
+      margin-width: 300px
+    toc: true
+    include-in-header:
+      - text: |
+          <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+          <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  
+  
+editor: source
+
+validate-yaml: false

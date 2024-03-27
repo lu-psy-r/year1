@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Margriet Groen">
-<meta name="dcterms.date" content="2024-01-24">
+<meta name="dcterms.date" content="2024-01-11">
 
-<title>Statistics for Psychologists - 122_wk13_labActivity2</title>
+<title>Statistics for Psychologists - 122_wk11_labActivities2_3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -121,23 +121,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html" rel="" target="">
+    <a class="nav-link" href="https://lu-psy-r.github.io/" rel="" target="">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../year1/index.html" rel="" target="">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year1" rel="" target="">
  <span class="menu-text">Year 1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../year2/index.html" rel="" target="">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year2" rel="" target="">
  <span class="menu-text">Year 2</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../MSc/index.html" rel="" target="">
+    <a class="nav-link" href="https://lu-psy-r.github.io/MSc" rel="" target="">
  <span class="menu-text">MSc</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../more/index.qmd" rel="" target="">
+    <a class="nav-link" href="https://lu-psy-r.github.io/more" rel="" target="">
  <span class="menu-text">And More…</span></a>
   </li>  
 </ul>
@@ -151,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">122_wk13_labActivity2</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">122_wk11_labActivities2_3</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -305,17 +305,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lab-activity-2---reminders-through-association" id="toc-lab-activity-2---reminders-through-association" class="nav-link active" data-scroll-target="#lab-activity-2---reminders-through-association">Lab activity 2 - Reminders through association</a></li>
+  <li><a href="#lab-activity-2---miller-and-haden-data" id="toc-lab-activity-2---miller-and-haden-data" class="nav-link active" data-scroll-target="#lab-activity-2---miller-and-haden-data">Lab activity 2 - Miller and Haden data</a></li>
   <li><a href="#step-1.-loading-the-relevant-libraries" id="toc-step-1.-loading-the-relevant-libraries" class="nav-link" data-scroll-target="#step-1.-loading-the-relevant-libraries">Step 1. Loading the relevant libraries</a></li>
-  <li><a href="#step-2.-read-in-the-data-and-have-a-look-at-it" id="toc-step-2.-read-in-the-data-and-have-a-look-at-it" class="nav-link" data-scroll-target="#step-2.-read-in-the-data-and-have-a-look-at-it">Step 2. Read in the data and have a look at it</a></li>
-  <li><a href="#step-3.-getting-the-data-ready." id="toc-step-3.-getting-the-data-ready." class="nav-link" data-scroll-target="#step-3.-getting-the-data-ready.">Step 3. Getting the data ready.</a></li>
-  <li><a href="#step-4-calculating-descriptive-statistics" id="toc-step-4-calculating-descriptive-statistics" class="nav-link" data-scroll-target="#step-4-calculating-descriptive-statistics">Step 4: Calculating descriptive statistics</a></li>
-  <li><a href="#step-5-visualise-the-data" id="toc-step-5-visualise-the-data" class="nav-link" data-scroll-target="#step-5-visualise-the-data">Step 5: Visualise the data</a></li>
-  <li><a href="#step-6-run-chi-square-test--" id="toc-step-6-run-chi-square-test--" class="nav-link" data-scroll-target="#step-6-run-chi-square-test--">Step 6: Run Chi-square test ———————————-</a></li>
-  <li><a href="#step-7-checking-assumptions" id="toc-step-7-checking-assumptions" class="nav-link" data-scroll-target="#step-7-checking-assumptions">Step 7: Checking assumptions</a></li>
-  <li><a href="#step-8-effect-size" id="toc-step-8-effect-size" class="nav-link" data-scroll-target="#step-8-effect-size">Step 8: Effect size</a></li>
-  <li><a href="#step-9-standardised-residuals" id="toc-step-9-standardised-residuals" class="nav-link" data-scroll-target="#step-9-standardised-residuals">Step 9: Standardised residuals</a></li>
-  <li><a href="#step-10-write-up" id="toc-step-10-write-up" class="nav-link" data-scroll-target="#step-10-write-up">Step 10: Write up</a></li>
+  <li><a href="#step-2.-read-in-the-data" id="toc-step-2.-read-in-the-data" class="nav-link" data-scroll-target="#step-2.-read-in-the-data">Step 2. Read in the data</a></li>
+  <li><a href="#step-3.-construct-a-scatterplot-of-the-relationship-between-home-and-tv.-also-add-a-line-of-best-fit." id="toc-step-3.-construct-a-scatterplot-of-the-relationship-between-home-and-tv.-also-add-a-line-of-best-fit." class="nav-link" data-scroll-target="#step-3.-construct-a-scatterplot-of-the-relationship-between-home-and-tv.-also-add-a-line-of-best-fit.">Step 3. Construct a scatterplot of the relationship between ‘Home’ and ‘TV’. Also add a line of best fit.</a></li>
+  <li><a href="#step-4.-conduct-the-correlation-analysis." id="toc-step-4.-conduct-the-correlation-analysis." class="nav-link" data-scroll-target="#step-4.-conduct-the-correlation-analysis.">Step 4. Conduct the correlation analysis.</a></li>
+  <li><a href="#step-5.-calculate-how-much-variance-in-time-spent-reading-can-be-accounted-for-by-time-spent-watching-tv" id="toc-step-5.-calculate-how-much-variance-in-time-spent-reading-can-be-accounted-for-by-time-spent-watching-tv" class="nav-link" data-scroll-target="#step-5.-calculate-how-much-variance-in-time-spent-reading-can-be-accounted-for-by-time-spent-watching-tv">Step 5. Calculate how much variance in ‘time spent reading’ can be accounted for by ‘time spent watching TV’?</a></li>
+  <li><a href="#step-6.-write-a-few-sentences-in-which-you-report-this-result-following-apa-guidelines." id="toc-step-6.-write-a-few-sentences-in-which-you-report-this-result-following-apa-guidelines." class="nav-link" data-scroll-target="#step-6.-write-a-few-sentences-in-which-you-report-this-result-following-apa-guidelines.">Step 6. Write a few sentences in which you report this result, following APA guidelines.</a>
+  <ul class="collapse">
+  <li><a href="#lab-activity-3---hazardous-alcohol-use-and-impulsivity" id="toc-lab-activity-3---hazardous-alcohol-use-and-impulsivity" class="nav-link" data-scroll-target="#lab-activity-3---hazardous-alcohol-use-and-impulsivity">Lab activity 3 - Hazardous alcohol use and impulsivity</a></li>
+  </ul></li>
+  <li><a href="#step-1.-read-in-the-data" id="toc-step-1.-read-in-the-data" class="nav-link" data-scroll-target="#step-1.-read-in-the-data">Step 1. Read in the data</a></li>
+  <li><a href="#step-2.-plot-the-relationship-between-hazard-alcohol-use-and-impulsivity-using-a-scatterplot-and-a-line-of-best-fit" id="toc-step-2.-plot-the-relationship-between-hazard-alcohol-use-and-impulsivity-using-a-scatterplot-and-a-line-of-best-fit" class="nav-link" data-scroll-target="#step-2.-plot-the-relationship-between-hazard-alcohol-use-and-impulsivity-using-a-scatterplot-and-a-line-of-best-fit">Step 2. Plot the relationship between hazard alcohol use and impulsivity using a scatterplot and a line of best fit</a></li>
+  <li><a href="#step-3.-conduct-a-correlation-analysis-using-pearsons-r" id="toc-step-3.-conduct-a-correlation-analysis-using-pearsons-r" class="nav-link" data-scroll-target="#step-3.-conduct-a-correlation-analysis-using-pearsons-r">Step 3. Conduct a correlation analysis, using Pearson’s r</a></li>
+  <li><a href="#step-4.-write-a-few-sentences-in-which-you-report-this-result-following-apa-guidelines." id="toc-step-4.-write-a-few-sentences-in-which-you-report-this-result-following-apa-guidelines." class="nav-link" data-scroll-target="#step-4.-write-a-few-sentences-in-which-you-report-this-result-following-apa-guidelines.">Step 4. Write a few sentences in which you report this result, following APA guidelines.</a></li>
   </ul>
 </nav>
     </div>
@@ -324,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">122_wk13_labActivity2</h1>
+<h1 class="title">122_wk11_labActivities2_3</h1>
 </div>
 
 
@@ -341,7 +344,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 24, 2024</p>
+      <p class="date">January 11, 2024</p>
     </div>
   </div>
   
@@ -351,14 +354,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="lab-activity-2---reminders-through-association" class="level2">
-<h2 class="anchored" data-anchor-id="lab-activity-2---reminders-through-association">Lab activity 2 - Reminders through association</h2>
-<p><strong>Aim</strong>: What we want to do is to run a chi-square analysis to determine whether those in the RTA condition were more likely to remember to return the paper-clips than those in the control condition.</p>
+<section id="lab-activity-2---miller-and-haden-data" class="level2">
+<h2 class="anchored" data-anchor-id="lab-activity-2---miller-and-haden-data">Lab activity 2 - Miller and Haden data</h2>
 </section>
 <section id="step-1.-loading-the-relevant-libraries" class="level1">
 <h1>Step 1. Loading the relevant libraries</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lsr)</span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
@@ -372,226 +374,215 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
-<section id="step-2.-read-in-the-data-and-have-a-look-at-it" class="level1">
-<h1>Step 2. Read in the data and have a look at it</h1>
+<section id="step-2.-read-in-the-data" class="level1">
+<h1>Step 2. Read in the data</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>intent_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"RTA_study1.csv"</span>)                                 <span class="co"># Read in the data file</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mh <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"MillerHadenData.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Rows: 87 Columns: 4
+<pre><code>Rows: 25 Columns: 5
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
-dbl (4): condition, intend, actualdonate, id
+dbl (5): Participant, Abil, IQ, Home, TV
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(intent_data)                                                         <span class="co"># Look at the table</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 4
-  condition intend actualdonate    id
-      &lt;dbl&gt;  &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;
-1         1      1            1     1
-2         1      1            1     2
-3         1      1            1     3
-4         1      1            1     4
-5         1      1            1     5
-6         1      1            1     6</code></pre>
-</div>
-</div>
-<blockquote class="blockquote">
-<p><em>Question 2a:</em> What do the numbers in the first row across the four columns refer to?</p>
-</blockquote>
-<p><strong>condition = 1, intend = 1, actualdonate = 1 and id = 1 shows us that participant 1 was in the ‘reminder-through-assocation’ condition, reported that they intended to donate and also actually donated.</strong></p>
-</section>
-<section id="step-3.-getting-the-data-ready." class="level1">
-<h1>Step 3. Getting the data ready.</h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>intent_recode <span class="ot">&lt;-</span> intent_data <span class="sc">%&gt;%</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(intend <span class="sc">==</span> <span class="dv">1</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">condition =</span> <span class="fu">recode</span>(condition, <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"rta"</span>, <span class="st">"2"</span> <span class="ot">=</span> <span class="st">"control"</span>),</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">actualdonate =</span> <span class="fu">recode</span>(actualdonate, <span class="st">"1"</span> <span class="ot">=</span> <span class="st">"donated"</span>, <span class="st">"0"</span> <span class="ot">=</span> <span class="st">"no_donation"</span>))</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(intent_recode)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 4
-  condition intend actualdonate    id
-  &lt;chr&gt;      &lt;dbl&gt; &lt;chr&gt;        &lt;dbl&gt;
-1 rta            1 donated          1
-2 rta            1 donated          2
-3 rta            1 donated          3
-4 rta            1 donated          4
-5 rta            1 donated          5
-6 rta            1 donated          6</code></pre>
-</div>
-</div>
-<blockquote class="blockquote">
-<p><em>Question 3a:</em> How many participants were removed because they didn’t intend to return the paper-clips? <strong>10 participants. The table ‘intent_data’ contains 87 observations, after we have applied the <code>filter()</code> function to include only those participants who did intend to return the paper-clips, the intent_recode table contains 77 observations.</strong></p>
-</blockquote>
-</section>
-<section id="step-4-calculating-descriptive-statistics" class="level1">
-<h1>Step 4: Calculating descriptive statistics</h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>intent_counts <span class="ot">&lt;-</span> intent_recode <span class="sc">%&gt;%</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">group_by</span>(condition, actualdonate) <span class="sc">%&gt;%</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>()</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>intent_counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 3
-# Groups:   condition, actualdonate [4]
-  condition actualdonate     n
-  &lt;chr&gt;     &lt;chr&gt;        &lt;int&gt;
-1 control   donated         16
-2 control   no_donation     22
-3 rta       donated         29
-4 rta       no_donation     10</code></pre>
-</div>
-</div>
-<blockquote class="blockquote">
-<p><em>Question 4a:</em> How many participants in the control condition didn’t donate? <strong>22</strong></p>
-</blockquote>
-<blockquote class="blockquote">
-<p><em>Question 4b:</em> How many participants in the control condition donated? <strong>16</strong></p>
-</blockquote>
-<blockquote class="blockquote">
-<p><em>Question 4c:</em> How many participants in the rta condition didn’t donate? <strong>10</strong></p>
-</blockquote>
-<blockquote class="blockquote">
-<p><em>Question 4d:</em> How many participants in the rta condition donated? <strong>29</strong></p>
-</blockquote>
-<p>Percentages</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>intent_percent <span class="ot">&lt;-</span> intent_recode <span class="sc">%&gt;%</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(condition, actualdonate) <span class="sc">%&gt;%</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> <span class="co"># ungroups the data</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(condition) <span class="sc">%&gt;%</span> <span class="co"># then groups it again but just by condition</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent_condition =</span> n<span class="sc">/</span><span class="fu">sum</span>(n) <span class="sc">*</span> <span class="dv">100</span>)</span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>intent_percent</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 4 × 4
-# Groups:   condition [2]
-  condition actualdonate     n percent_condition
-  &lt;chr&gt;     &lt;chr&gt;        &lt;int&gt;             &lt;dbl&gt;
-1 control   donated         16              42.1
-2 control   no_donation     22              57.9
-3 rta       donated         29              74.4
-4 rta       no_donation     10              25.6</code></pre>
-</div>
 </div>
 </section>
-<section id="step-5-visualise-the-data" class="level1">
-<h1>Step 5: Visualise the data</h1>
+<section id="step-3.-construct-a-scatterplot-of-the-relationship-between-home-and-tv.-also-add-a-line-of-best-fit." class="level1">
+<h1>Step 3. Construct a scatterplot of the relationship between ‘Home’ and ‘TV’. Also add a line of best fit.</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> intent_recode, <span class="fu">aes</span>(<span class="at">x =</span> condition, <span class="at">fill =</span> actualdonate)) <span class="sc">+</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mh, <span class="fu">aes</span>(<span class="at">x =</span> Home, <span class="at">y =</span> TV)) <span class="sc">+</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Time spend reading at home"</span>, <span class="at">y =</span> <span class="st">"Time spend watching TV at home"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
 <div class="cell-output-display">
-<p><img src="122_wk14_labAct2_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
+<p><img src="122_wk11_labActivities2_3_files/figure-html/scatterplot Home and TV-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<blockquote class="blockquote">
-<p><em>Question 5a:</em> What does <code>position = "dodge"</code> do? Remove it and rerun the code to find out. <strong>“dodge” places the bars next to each other, rather than on top of each other.</strong></p>
-</blockquote>
+<p>Question 3a: What can you tell from the scatterplot about the direction of the relationship?</p>
+</section>
+<section id="step-4.-conduct-the-correlation-analysis." class="level1">
+<h1>Step 4. Conduct the correlation analysis.</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> intent_recode, <span class="fu">aes</span>(<span class="at">x =</span> condition, <span class="at">fill =</span> actualdonate)) <span class="sc">+</span> <span class="co"># sets up the base of the graph: the data to use and the aesthetics (what will go on the x</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># and y axis, how the plot will be grouped</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span> <span class="co"># places the bars next to each other, rather than on top of each other.</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">name =</span> <span class="st">"Condition"</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"RTA"</span>)) <span class="sc">+</span> <span class="co"># relabels categories on x axis</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">"Count"</span>) <span class="sc">+</span> <span class="co"># relabels y axis</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">name =</span> <span class="st">"Behaviour"</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Donated"</span>, <span class="st">"Did not donate"</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"grey"</span>))<span class="sc">+</span> <span class="co"># labels colour legend labels and uses colours blue and grey</span></span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="co">#changes the background</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<p><img src="122_wk14_labAct2_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(mh<span class="sc">$</span>Home, </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                    mh<span class="sc">$</span>TV, </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">method =</span> <span class="st">"pearson"</span>, </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">alternative =</span> <span class="st">"two.sided"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>()</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 8
+  estimate statistic  p.value parameter conf.low conf.high method    alternative
+     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;int&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;     &lt;chr&gt;      
+1   -0.648     -4.08 0.000465        23   -0.830    -0.339 Pearson'… two.sided  </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(estimate) <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">2</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>r</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  cor 
+-0.65 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(parameter)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>df 
+23 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>pvalue <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(p.value) <span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>pvalue</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0</code></pre>
+</div>
+</div>
+<p>Question 4a: What is the correlation coefficient (Pearson’s r)?</p>
+<p>Question 4b: What is the p value?</p>
+<p>Question 4c: Is the correlation significant at the p &lt; .05 level?</p>
+<p>Question 4d: What are the degrees of freedom you need to report?</p>
+</section>
+<section id="step-5.-calculate-how-much-variance-in-time-spent-reading-can-be-accounted-for-by-time-spent-watching-tv" class="level1">
+<h1>Step 5. Calculate how much variance in ‘time spent reading’ can be accounted for by ‘time spent watching TV’?</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>rsquared <span class="ot">&lt;-</span> r<span class="sc">*</span>r</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>rsquared</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   cor 
+0.4225 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>rsquaredPercent <span class="ot">&lt;-</span> <span class="fu">round</span>(rsquared <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">0</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>rsquaredPercent</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>cor 
+ 42 </code></pre>
 </div>
 </div>
 </section>
-<section id="step-6-run-chi-square-test--" class="level1">
-<h1>Step 6: Run Chi-square test ———————————-</h1>
+<section id="step-6.-write-a-few-sentences-in-which-you-report-this-result-following-apa-guidelines." class="level1">
+<h1>Step 6. Write a few sentences in which you report this result, following APA guidelines.</h1>
+<p>“A Pearson’s correlation coefficient was used to assess the relationship between time spent reading at home and time spent watching TV at home. There was a significant negative correlation, <em>r</em>(23) = -.65, <em>p</em> &lt; .001. As time spent watching TV increased, time spent reading at home decreased.”</p>
+<section id="lab-activity-3---hazardous-alcohol-use-and-impulsivity" class="level2">
+<h2 class="anchored" data-anchor-id="lab-activity-3---hazardous-alcohol-use-and-impulsivity">Lab activity 3 - Hazardous alcohol use and impulsivity</h2>
+</section>
+</section>
+<section id="step-1.-read-in-the-data" class="level1">
+<h1>Step 1. Read in the data</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(<span class="at">x =</span> intent_recode<span class="sc">$</span>condition,        <span class="co"># the first grouping variable</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">y =</span> intent_recode<span class="sc">$</span>actualdonate,     <span class="co"># the second grouping variable</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">correct =</span> <span class="cn">FALSE</span>)                    <span class="co"># whether we want to apply the continuity correction (use if any of the expected cell frequencies &lt; 10 in 2 x 2 table)</span></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's Chi-squared test
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"alcoholUse_Impulsivity.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 20 Columns: 3
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (3): participant, hau, imp
 
-data:  intent_recode$condition and intent_recode$actualdonate
-X-squared = 8.244, df = 1, p-value = 0.004089</code></pre>
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 20 × 3
+   participant   hau   imp
+         &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1           1     8    76
+ 2           2     8    64
+ 3           3    13    81
+ 4           4     0    59
+ 5           5     7    61
+ 6           6    11    71
+ 7           7     0    38
+ 8           8     7    67
+ 9           9    11    66
+10          10    12    59
+11          11     1    70
+12          12     9    74
+13          13     5    42
+14          14     2    53
+15          15    11    62
+16          16     8    64
+17          17     9    96
+18          18     7    65
+19          19     5    55
+20          20     4    58</code></pre>
 </div>
 </div>
-<blockquote class="blockquote">
-<p><em>Question 6a:</em> What do you conclude from the output? <strong>There is a significant association between the grouping variables.</strong></p>
-</blockquote>
+<p>Question 1a: How many variables does it have?</p>
 </section>
-<section id="step-7-checking-assumptions" class="level1">
-<h1>Step 7: Checking assumptions</h1>
-<p>The assumptions for chi-square are as follows:</p>
+<section id="step-2.-plot-the-relationship-between-hazard-alcohol-use-and-impulsivity-using-a-scatterplot-and-a-line-of-best-fit" class="level1">
+<h1>Step 2. Plot the relationship between hazard alcohol use and impulsivity using a scatterplot and a line of best fit</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(data, <span class="fu">aes</span>(<span class="at">x =</span> hau, <span class="at">y =</span> imp)) <span class="sc">+</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Hazardous Alcohol Use"</span>, <span class="at">y =</span> <span class="st">"Impulsivity"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<p><img src="122_wk11_labActivities2_3_files/figure-html/scatterplot hau imp-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Question 2a: What can you tell from the scatterplot about the direction of the relationship?</p>
+<p>There is a positive association between ‘hazardous alcohol use’ and ‘impulsivity’. This means that as a participant’s score on ‘hazardous alcohol use’ goes up, their score on ‘impulsivity’ also goes up.</p>
+</section>
+<section id="step-3.-conduct-a-correlation-analysis-using-pearsons-r" class="level1">
+<h1>Step 3. Conduct a correlation analysis, using Pearson’s r</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">cor.test</span>(data<span class="sc">$</span>hau, </span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>                    data<span class="sc">$</span>imp, </span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">method =</span> <span class="st">"pearson"</span>, </span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">alternative =</span> <span class="st">"two.sided"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tidy</span>()</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 8
+  estimate statistic p.value parameter conf.low conf.high method     alternative
+     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;int&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      
+1    0.539      2.71  0.0143        18    0.126     0.792 Pearson's… two.sided  </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pull out Pearson's r, the degrees of freedom and the p-value for reporting the results</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>r <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(estimate) <span class="sc">%&gt;%</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">2</span>)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(parameter)</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>pvalue <span class="ot">&lt;-</span> results <span class="sc">%&gt;%</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(p.value) <span class="sc">%&gt;%</span></span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="dv">3</span>)</span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a>rsquared <span class="ot">&lt;-</span> r<span class="sc">*</span>r</span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>rsquaredPercent <span class="ot">&lt;-</span> <span class="fu">round</span>(rsquared <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">0</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Question 3a: What is the correlation coefficient (Pearson’s r)?</p>
+<p>Question 3b: What is the p value?</p>
+<p>Question 3c: Is the correlation significant at the p &lt; .05 level?</p>
+<p>Question 3d: What are the degrees of freedom you need to report?</p>
+<p>Question 3e: How much variance in ‘impulsivity’ can be accounted for by ‘hazardous alcohol use’?</p>
+<p>Question 3f: Give three logically possible directions of causality, indicating for each direction whether it is a plausible explanation in light of the variables involved (and why). No, this is not a trick question —-I know that correlation does not infer causation, but think critically! New studies/ideas are constructed by thinking what the previous study doesn’t tell us about what could be happening with the variables of interest.</p>
+<p>Examples:</p>
 <ol type="1">
-<li>The data in the cells should be frequencies, or counts of cases rather than percentages. <strong>As long as you have used the correct data frame this assumption is satisfied.</strong></li>
-<li>The levels (or categories) of the variables are mutually exclusive. That is, a particular participant fits into one and only one group of each of the variables. <strong>This is true for this experiment.</strong></li>
-<li>Each participant may contribute data to one and only one cell. If, for example, the same participants are tested over time such that the comparisons are of the same subjects at Time 1, Time 2, Time 3, etc., then Chi-square may not be used. <strong>This is true for this experiment.</strong></li>
-<li>The study groups must be independent. This means that a different test must be used if the two groups are related. For example, a different test must be used if the researcher’s data consists of paired samples, such as in studies in which a parent is paired with his or her child. <strong>The groups in this experiment are independent.</strong></li>
-<li>There are 2 variables, and both are measured as categories, usually at the nominal level. While Chi-square has no rule about limiting the number of cells (by limiting the number of categories for each variable), a very large number of cells (over 20) can make it difficult to meet assumption #6 below, and to interpret the meaning of the results. <strong>This is true for this experiment.</strong></li>
-<li>The expected cell frequencies should be greater than 5.</li>
+<li>Being more impulsive may make people consume more alcohol.</li>
+<li>Consuming more alcohol may make people more impulsive.</li>
+<li>An outgoing personality might influence both your level of impulsivity and you are more likely to be socialising in the pub and consuming alcohol. So the same ‘third factor’ may influence both our variables of interest.</li>
 </ol>
-<p>Assumptions 1) to 5) should be evaluated by reviewing the design of the study. The only assumption that we need to check with R is whether all expected frequencies are greater than 5.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>results<span class="sc">$</span>expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                       intent_recode$actualdonate
-intent_recode$condition  donated no_donation
-                control 22.20779    15.79221
-                rta     22.79221    16.20779</code></pre>
-</div>
-</div>
-<blockquote class="blockquote">
-<p><em>Question 7a:</em> What do you conclude from the output? <strong>The expected frequencies in all cells are greater than 5.</strong></p>
-</blockquote>
 </section>
-<section id="step-8-effect-size" class="level1">
-<h1>Step 8: Effect size</h1>
-<p>Cramer’s V</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>eff_size <span class="ot">&lt;-</span> <span class="fu">cramersV</span>(<span class="at">x =</span> intent_recode<span class="sc">$</span>condition,     <span class="co"># the first grouping variable</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>                     <span class="at">y =</span> intent_recode<span class="sc">$</span>actualdonate,  <span class="co"># the second grouping variable</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                     <span class="at">correct =</span> <span class="cn">FALSE</span>)                  <span class="co"># whether we want to apply the continuity correction (use if any of the expected cell frequencies &lt; 10 in 2 x 2 table)</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>eff_size</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.327207</code></pre>
-</div>
-</div>
-<p>Percentage variance accounted for:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>percentageAccountedFor <span class="ot">&lt;-</span> eff_size <span class="sc">*</span> eff_size <span class="sc">*</span> <span class="dv">100</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>percentageAccountedFor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 10.70644</code></pre>
-</div>
-</div>
-<blockquote class="blockquote">
-<p><em>Question 8a:</em> How large is the effect and how much variance is accounted for? <strong>The effect size (Cramer’s V) = 0.33 and the percentage variance accounted for = 11%.</strong></p>
-</blockquote>
-</section>
-<section id="step-9-standardised-residuals" class="level1">
-<h1>Step 9: Standardised residuals</h1>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>results<span class="sc">$</span>residuals   <span class="co"># check the standardised residuals</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                       intent_recode$actualdonate
-intent_recode$condition   donated no_donation
-                control -1.317299    1.562125
-                rta      1.300301   -1.541968</code></pre>
-</div>
-</div>
-<blockquote class="blockquote">
-<p><em>Question 9a:</em> What do you conclude from the output? <strong>The standardised residuals in the 4 cells are all of a roughly similar size (and below 1.96), which suggests that the statistically significant Chi-square tests is not driven by one or two cells, but reflects the pattern across all cells.</strong></p>
-</blockquote>
-</section>
-<section id="step-10-write-up" class="level1">
-<h1>Step 10: Write up</h1>
-<p>Those in the reminder-through-association condition performed the intended behaviour at a significantly higher rate (74%, 29 out of 39) than did those in the control condition (42%, 16 out of 38)), <em>χ2</em>(1, N = 77) = 8.24, <em>p</em> = 0.004, <em>V</em> = 0.33. The analysis showed that 11% of variance in intended behaviour could be accounted for by condition (reminder-through-association vs.&nbsp;control).</p>
+<section id="step-4.-write-a-few-sentences-in-which-you-report-this-result-following-apa-guidelines." class="level1">
+<h1>Step 4. Write a few sentences in which you report this result, following APA guidelines.</h1>
+<p>A Pearson’s correlation coefficient was used to assess the relationship between alcohol use and impulsivity. There was a significant positive correlation, <em>r</em>(18) = .54, <em>p</em> = .014. People who reported to consume more alcohol, scored higher on the impulsivity scale.</p>
 
 
 </section>
@@ -838,11 +829,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       &nbsp;
     </div>
     <div class="nav-footer-right">
-      <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="../../../previous-content/index.html">Previous Content</a>
-  </li>  
-</ul>
+      &nbsp;
     </div>
   </div>
 </footer>
