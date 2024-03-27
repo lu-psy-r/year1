@@ -45,7 +45,7 @@ format:
     theme: 
       - default
       - custom.scss
-    #css: styles.css
+    css: https://lu-psy-r.github.io/essentials/index.css
     code-overflow: wrap
     grid:
       sidebar-width: 250px
