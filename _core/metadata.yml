@@ -17,15 +17,15 @@ website:
     #logo: "Images/icon.png"
     left:
       - text: Home
-        file: index.qmd
+        file: https://lu-psy-r.github.io/
       - text: Year 1
-        file: year1/index.html
+        file: https://lu-psy-r.github.io/year1/index.html
       - text: Year 2
-        file: year2/index.html
+        file: https://lu-psy-r.github.io/year2/index.html
       - text: MSc
-        file: MSc/index.html
+        file: https://lu-psy-r.github.io/MSc/index.html
       - text: And More...
-        file: more/index.qmd
+        file: https://lu-psy-r.github.io/more/index.qmd
 
   page-footer:
     left: "Website developed by Matthew Ivory"
