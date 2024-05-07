@@ -11,3 +11,9 @@ website:
         contents: PSYC121/*
       - section: "PSYC122"
         contents: PSYC122/*
+
+format:
+  html: 
+    include-in-header:
+      - text: |
+          <script>window.onload = function() {document.getElementById("autocomplete-0-input").placeholder = "Search Year 1";};</script>
