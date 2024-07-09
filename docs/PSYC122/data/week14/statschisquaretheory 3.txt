@@ -1,0 +1,871 @@
+﻿Hi, it's Margriet. So far we have spoken about relationships
+
+between the numerical variables.
+
+Today we will be looking at
+associations between categorical variables.
+
+So a categorical variable is
+something like snack preference,
+
+snack preference, as in some
+people might prefer chocolate over crips.
+
+And others prefer crips over chocolate.
+
+Another example is sex, biological sex,
+so male and female.
+
+So the plan for today is as
+follows. We will be looking
+
+at what is called a
+Pearson Chi-squared test.
+
+What is it and how do you apply it?
+
+We will be looking at how to
+carry it out by hand and in
+
+a separate video. Also show you
+how to do that in R.
+
+And then we will be looking
+at how to interpret the results.
+
+So, how to report them
+following APA guidelines.
+
+Now finally, there's also a few
+issues that need to be aware of
+
+when using Chi-Squared tests and we will be
+talking about those.
+
+So what is a Chi-Squared
+test? A Chi-Squared test is a
+
+non-parametric test of
+inference. Statistical inference
+
+for categorical data.
+
+So it measures the Pearson's
+Chi-Square, or test of
+
+independence, sometimes also
+called for a two-by-two design.
+
+That means two categorical
+variables with two levels each.
+
+That measures the
+relationship between two
+
+nominal or categorical
+variables.
+
+Nominal and categorical
+are just synonyms.
+
+They mean the same thing.
+
+Um? And you ask: are
+observations in one variable
+
+contingent upon another
+categorical variable.
+
+So it tests whether the
+frequency counts can be
+
+expected that you observe by
+chance, or whether there is
+
+some relationship between
+the categorical variables.
+
+So let's look at some examples.
+
+So, you could use as Chi-Square
+test of independence to assess whether
+
+gender is associated with
+preferred study subject at the University.
+
+Or whether dog ownership, as in "has a dog"
+
+and "does not have a dog", is
+associated with residence,
+
+countryside vs. city.
+
+Or is smoking associated with
+
+drinking? Now this last
+example is not how much
+
+somebody smokes or how
+much alcohol they drink.
+
+It is whether or not they
+smoke and whether or not
+
+they drink alcohol.
+That is the relationship
+
+between the sets with
+the Chi-Squared test.
+
+So the null hypothesis for a Chi-Squared
+test is that there is no association
+
+between the two variables.
+
+So you calculate the Chi-Squared
+statistic and you look up
+
+You look up in the significance
+table whether that number
+
+is bigger than what
+you need for a particular
+
+p-value to see whether that null
+hypothesis can be rejected.
+
+In which case the alternative
+hypothesis becomes relevant.
+
+And that is, the two
+variables are associated.
+
+OK, how do you do this by hand?
+
+The first thing to do is to
+construct what's called
+
+a contingency table.
+
+A contingency table represents
+the frequencies for both
+
+categorical variables in, in this way.
+So, here we have an example of researchers
+
+interested in assessing relationship between
+children's record of fighting in school.
+
+and their preference for violent
+or non violent TV programmes.
+
+So here we have one
+variable: fighting in school
+
+It has two levels. Has
+been involved in fighting in
+
+school or has not been
+involved in fighting in school.
+
+And here we have our other
+variable: TV programme preference
+
+Prefers a violent TV programme
+
+or prefers a non violent TV programme.
+
+So this number here means that 40
+children in this particular example
+
+were involved in fighting in school
+and also prefered a violent TV programme.
+
+So similarly, 15 children
+were not involved in
+
+fighting in school, and preferred
+a violent TV programme. Etc. etc.
+
+Now, the next thing we need to calculate
+Chi-Squared by hand is the formula.
+
+So, that we've got here in the middle.
+
+And what Chi-Squared does
+is that it looks at the observed
+
+frequencies and works out how
+unusual they are giving the
+
+expected frequencies. So, the observed
+frequencies are just the numbers
+
+that we have observed.
+
+In this example, there are
+40 children who fall in that
+
+category and 30 who fall in
+that category etc etc. So that
+
+that's the data, our observed frequencies.
+
+The expected frequencies, we
+need to calculate, and they
+
+are determined by.
+
+the formula here at the bottom,
+by the column and the row
+
+totals. And also, the total of
+other observations in the study.
+
+So how does that work?
+
+Here, we will be calculating our
+expected frequencies in the
+
+following way, so if you add
+40 and 30, you get a column total of 70.
+
+So for this particular
+cell, the column total is 70
+
+And here it is row total, so 40 plus 15 is
+55. So the row total for that cell is 55.
+
+Now we we calculate the expected
+frequency by multiplying the
+
+column total by row total and
+dividing that number by the
+
+total sample size.
+
+And then we get a number and
+that number is the
+
+expected frequency for this
+particular cell.
+
+We do that for all the
+different cells, right. So here
+
+in blue in brackets, you see the
+expected frequency we've calculated.
+
+For each particular cell.
+
+So given the sample size and.
+
+The number of, the total
+number of children who were
+
+involved in a fight, and who were not
+involved in a fight
+
+and who preferred a violent
+TV programme and who did not
+
+prefer a violent TV program.
+
+Given those
+numbers, those are the
+
+frequency counts that you would expect
+
+And.
+
+The Chi-Squared statistic expresses how big
+the difference between the observed numbers
+
+and the expected numbers
+are and whether the
+
+difference is big enough
+for it to be unlikely to
+
+happen by chance.
+
+So that's what we do next.
+
+So here we have our table from the
+previous slide. I've just put these numbers
+
+these numbers in a
+slightly different way of how
+
+it calculates the next bit.
+
+So we've got the observed numbers
+for all the four cells and we have our
+
+expected frequencies
+for all the four cells.
+
+And then we can.
+
+Do this bit were we have our
+observed minus our expected frequency
+
+and we square that
+number, and then we get this.
+
+And then you divide that by
+the expected frequency count for that cell.
+
+If you then add all these
+numbers up, you get your
+
+Chi-Squared statistic. So this
+case I'm not sure what the number
+
+is but is 26 point something.
+
+To look up in a significance
+table, whether or not that
+
+number is big enough for it to
+be statistically significant,
+
+you also need to know what the
+degrees of freedom are for your
+
+your particular study. And degrees
+of freedom are determined as follows.
+
+for a Pearson's Chi-Squared test. You
+need to know what the number of rows is.
+
+minus 1, multplied by the
+number of columns minus 1.
+
+Now we have two rows.
+
+violent and non violent TV programme
+preference and we had two columns.
+
+Been involved in fighting and
+not been involved in fighting.
+
+For example, it is
+2 minus 1 multiplied by 2 minus 1.
+
+which is 1 multiplied by 1, so
+we have 1 degrees of freedom.
+
+Just a quick reminder of what
+the degrees of freedom are. So they
+
+refer to the number of
+independent pieces of
+
+information and went into
+calculating the estimate.
+
+Or, expressed slighty
+different, the degrees of freedom
+
+are the number of values that
+are free to vary in that particular
+
+calculation. So what do you mean
+by that? If we say, OK, let's
+
+pick a set of numbers, numbers,
+3 numbers that have a mean of 10.
+
+Now, if the first person
+chooses nine and second
+
+person say OK the second
+number is going to be
+
+10 then the third number
+
+is given by these
+two numbers. Because for
+
+these three numbers to have a mean of
+
+10, has to be 11.
+
+Here, it has to be 12, right. 8 10 and
+12 divided by 3 is mean of 10.
+
+Here, it has to be 15.
+
+So. Just to illustrate that if
+you know a certain number of
+
+pieces of information for a
+particular population, others
+
+are going to be given because
+otherwise, the numbers don't add up.
+
+And that's the degrees
+of freedom that you've got.
+
+Now if you look at our
+significance table, then
+
+we can figure out whether or not our
+Chi-Squared that we've calculated here,
+
+it is 26.15 in our example,
+is big enough given the
+
+degrees of freedom we've
+got for it to be significant.
+
+Here you look in the
+degrees of freedom column
+
+So, we had 1 degrees of freedom
+
+So, here's for the 1-tailed test
+and here is for the 2-tailed test.
+
+The two-tailed test is much more common,
+so these arrows should really be down here.
+
+OK, we have 1 degrees of freedom. So for
+our results to be significant
+
+at the 5% level, it needs to be
+bigger than this number.
+
+This number is 3.841
+
+Our number is 26.15.
+So, this is beyond that.
+
+So, it is significant at the 5% level.
+
+And in this column on the right here,
+we have the numbers for the
+
+significance at the 1% level.
+
+So if our number 26.15 is bigger than
+this number.
+
+6.635, we can conclude that it
+is significant at the 0.01 level.
+
+Which is the case in this example.
+
+OK. Now I mentioned that a Pearson's
+Chi-Square is a non parametric test
+
+So, you don't need to worry about normally
+distributed variables or.
+
+homogenous variables. You do have graphs and
+assumptions there, but they are different.
+
+The first assumption is that the
+data cannot be related, so it is
+
+one participant can only
+contribute a score to one cell
+
+in your contingency table.
+
+The second assumption is
+that Chi-Squared has to be conducted on
+
+raw frequencies and raw counts. Not
+on percentages or anything like that.
+
+And Thirdly, you have to check
+that your expected cell
+
+frequencies that you've calculated are no
+less than 1, and no more than
+
+20% of the cells should be less than 5.
+
+Now, if you find that that
+actually that you don't meet
+
+this assumption, there are
+certain things you can do.
+
+For instance, if you had a
+study where you compare for
+
+instance recycling behaviour
+for meat-eaters, vegetarians and vegans.
+
+Do they recycle and do
+they not recycle, for instance.
+
+And it turned out that
+the expected frequencies
+
+would be lower than 5 in
+more than 20% of the cells.
+
+Then, you could say OK, I will
+combined these two categories to
+
+compare meat-eaters to non meat-eaters.
+
+Alternatively, you can report
+what is called Fisher's exact test.
+
+So just as an extra reminder, is in the
+Chi-Squared output. We will see that later.
+
+OK, now a few words about other
+things that you would want
+
+to report when you report
+Chi-Square analyses.
+
+Um? I said, Chi-Square
+should not, should be
+
+conducted on raw frequencies
+and not on percentages.
+
+That is true, but it is useful
+to report the percentages
+
+in addition to the raw frequencies.
+Just to kind of give people an idea
+
+of the percentage of children
+that are in a particular cell.
+
+The measure of effect size for a
+Pearson's Chi-Square is called a Cramer's V
+
+And in the other video,
+we will not ask how to get
+
+that from R.
+
+And in as done previously, it's
+useful to report to the variance
+
+accounted for. So by one
+variable. So you can get that
+
+by squaring the effect size. That
+will tell you how much variance in
+
+1 variable accounted for, or can
+be described by the other variable.
+
+And finally, what is useful to
+look at when you are interpreting
+
+your data is what
+are called the standardised
+
+residuals. So they help to
+determine which cells
+
+contribute to a significant association.
+
+Our Chi-Squared was significant but looking
+that's kind of an overall test.
+
+From that, we can't
+tell which of these cells
+
+contributes to that
+significant association.
+
+By looking at the standardised
+residuals, you can say something
+
+about that. So the standardised residuals
+basically are the size of these
+
+differences for each of the cells
+and then standardised in certain
+
+ways that you can compare them
+even though there might be many
+
+more observations in
+one cell than the other.
+
+So, they are z scores and they indicate how
+many standard deviations above
+
+or below the expected
+count, a particular observed count is.
+
+Indicating how much they differ.
+
+So if a standardised residual is
+bigger in plus or minus 1.96.
+
+We say that it is
+significant at the .05 level.
+
+If the standard residual is bigger
+than
+
+plus or minus 2.58, we would
+say it's significant at the 0.01 level.
+
+And if it's bigger than plus
+
+or minus 3.29, then we can conclude that
+
+that particular standardised residual
+
+is significant at the 0.001 level.
+
+And we don't gonna calculate
+this by hand. I'll show you
+
+where to look in the R output
+for the standardised residuals.
+
+OK, so how do we report this?
+
+This is an example how you could
+write up our particular example and there
+
+was a significant Association
+between school fighting and TV
+
+programme preference
+(violent vs. non-violent).
+
+And here you have the technical bit.
+This is the sign for Chi, so Chi-Squared
+
+Open brackets one, that's one degrees of
+freedom comma, and then the total sample size.
+
+Equals this, that's the
+number that we've calculated.
+
+And that's significant at the 0.001 level.
+
+Cramer's V. We didn't
+calculate that by hand but
+
+I will tell you what it
+is. That's our measure
+
+of effect size. So
+you report that as well.
+
+And then you go onto interpret,
+the kind of the different cells what this.
+
+What this significant
+relationship means. So
+
+above expectation 73% or 40 out of 55
+children who preferred violent TV programmes
+
+had also fought in school.
+
+This is then where you report
+your standardised residuals.
+
+We will see from the R output
+that our standardised residuals is this
+
+and that is significant at the 0.01 level.
+
+And significantly less than
+expected has not fought.
+
+Say something about that particular cell.
+
+Conversely, 70% of children who
+preferred non-violent TV programmes
+
+had not engaged in fighting. More than
+expected. And that was more than expected.
+
+And those who had fought
+were below expectations.
+
+It is below and above that you can
+see that in the standardised residuals
+
+because if it's below
+expectations it has a minus sign.
+
+Analysis showed 17% of
+variance in school fighting
+
+could be accounted for by
+TV programme preference.
+
+So, this is Cramer's V
+
+uhm squared.
+
+OK then finally a few
+issues that are important
+
+to be aware of.
+
+I mentioned before, you need to
+make sure that you conduct the
+
+Pearson's Chi Square on
+
+raw frequency counts and not on
+percentages. So this is what happens if
+
+you do that. So here you have
+uhm Chi Square
+
+calculated on the frequency counts. So
+that's waht you should do. And there
+
+you have your number. This
+is what you get out of that.
+
+On the right side here these
+are percentages, so 35% of
+
+male students preferred
+science as a subject.
+
+uhm so these two are related
+obviously because these
+
+are the percentages and
+these are the raw counts
+
+But if you do the Chi Square on the
+percentages, then that this would
+
+actually not be significant.
+
+So it's important to
+keep that in mind.
+
+Then a few words about how to
+handle larger contingency tables.
+
+If you have categories, you have more, your
+categorical variables have more than two
+
+levels. Um?
+
+You need to be careful with because
+they can be really difficult to interpret
+
+We can help on understand the associations
+in a few different ways. We can
+
+use the standardised residuals.
+
+This as mentioned before.
+
+Another way to do that, to interpret
+the bigger contingency table is to use
+
+what is called partitioning. Basically
+you're carrying out multiple
+
+two-by-two Chi Squares.
+
+So if we have an example here of
+TV program preferences,
+
+soap opera, crime, drama, and other
+
+in male and female students
+
+Now that would be a 3 by 2
+contingency table, which
+
+might be difficult to interpret
+
+So, instead we could do
+multiple 2 by 2 Chi Square tests.
+
+So, soap and crime, soap
+and other, crime and other.
+
+If you do that, you do
+need to use a Bonferroni
+
+correction for the
+significance levels to kind of
+
+take into account that you're doing
+multiple tests on the same data.
+
+The final alternative to deal
+with big contingency tables
+
+is to combine categories, so
+those need to be informed by
+
+the theory on and they
+need to make logical sense.
+
+So, we could combine soap
+opara and other or combine
+
+crime and another
+depending on your hypothesis.
+
+Which kind of would shape
+it into a two-by-two design.
+
+So in summary, we looked at
+Pearson's Chi Square or
+
+the test of independence
+and that investigates
+
+or tests whether there
+is an association between
+
+two categorical or nominal variables.
+
+Uhm. The assumptions for
+the Chi Square we talked about.
+
+Then to understand the association,
+we need to look at the Chi Square statistic
+
+the p-value, Cramer's V,
+and the standardised residuals
+
+If the assumption for the
+minimum frequencies is not met,
+
+you can use, you can
+report Fisher's exact test
+
+And we need to make sure that we
+always use raw frequencies
+
+rather than percentages to
+calculate the Chi Square because
+
+Otherwise, we get into trouble.
+
+And when you're dealing with larger
+contingency tables, it's better
+
+we can better understand
+our results using standardised
+
+residuals or using partitioning
+or combining categories.
+
+Thank you very much for
+your attention.

@@ -9,18 +9,7 @@ sidebar: true
 back-to-top-navigation: false
 ---
 
-::: callout-warning
-**This website is under construction.**
-:::
-
 ![](Images/LUPsychology.svg){fig-alt="University Logo" fig-align="center"}
-
-```{r}
-#| echo: false
-
-#this will automate the current year content so it doesn't need manual changing each year
-date <- as.numeric(format(Sys.time(), "%Y"))
-```
 
 ::: {.div style="font-size:2em;"}
 Welcome
@@ -35,10 +24,10 @@ Here we have some filler text that explains the psyc121, psyc122 structure or wh
     <div class="col">
 
     <a href="PSYC121/">
-      <button type="button" class="btn btn-landing btn-lg">PSYC121</button>
+      <button type="button" class="btn btn-landing btn-lg year-one">PSYC121</button>
     </a>
     <a href="PSYC122/">
-      <button type="button" class="btn btn-landing btn-lg">PSYC122</button>
+      <button type="button" class="btn btn-landing btn-lg year-one">PSYC122</button>
     </a>
     
     </div>
