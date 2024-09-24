@@ -4,11 +4,13 @@ subtitle: Written by Margriet Groen (some parts are adapted from materials devel
 order: 2
 ---
 
+This is a test.
+
 Today we will take a look at correlation as a measure of association between two numerical variables. We will create scatterplots to visualise correlations, we will run a correlation analysis and we will practise interpreting and reporting the results.
 
 ## Lectures {#sec-wk11-lectures}
 
-The lecture material comes in two parts.
+The lecture material comes in two parts. 
 
 1.  **Theory**(~30 minutes) 
 Watch this part before you complete the reading and the pre-lab activities. The video has captions, in case you find that helpful. You can download the slides and a transcript from the links below the video. Finally, if you open the video in 'eStream' by clicking on the green 'e' in the bottom right, you can navigate to separate sections of the video by clicking on the 'chapters' pane. This might be particularly useful if you quickly want to revisit a particular section.
