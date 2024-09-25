@@ -25,7 +25,7 @@ website:
       - text: Year 2
         file: https://lu-psy-r.github.io/year2/index.html
       - text: Year 3
-        file: year3/index.html
+        file: https://lu-psy-r.github.io/year3/index.html
       - text: MSc
         file: https://lu-psy-r.github.io/MSc/index.html
       - text: And More...
