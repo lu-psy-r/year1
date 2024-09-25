@@ -4,6 +4,11 @@ subtitle: Written by John Towse & Tom Beesley
 order: 3
 ---
 
+::: {.callout-caution}
+This page is under construction for 24/25 and may be subject to change before the teaching week.
+:::
+
+
 # Week 2 lecture
 
 Watch Part 1

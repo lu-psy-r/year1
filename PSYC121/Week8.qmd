@@ -6,6 +6,11 @@ editor_options:
   chunk_output_type: console
 ---
 
+::: {.callout-caution}
+This page is under construction for 24/25 and may be subject to change before the teaching week.
+:::
+
+
 # Lectures
 
 Watch Part 1
