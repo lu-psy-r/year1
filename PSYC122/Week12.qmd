@@ -4,6 +4,10 @@ subtitle: Written by Margriet Groen (partly adapted from materials developed by 
 order: 3
 ---
 
+::: {.callout-caution}
+This page is under construction for 24/25 and may be subject to change before the teaching week.
+:::
+
 Today we will continue to look at correlation as a measure of association between two numerical variables. We will review assumptions associated with correlation, discuss some issues important to be aware of when interpreting correlation results and finally, we'll talk about intercorrelation.
 
 ## Lectures {#sec-wk12-lectures}

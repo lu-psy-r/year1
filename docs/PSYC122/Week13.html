@@ -353,6 +353,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This page is under construction for 24/25 and may be subject to change before the teaching week.</p>
+</div>
+</div>
 <p>This week we will focus on the linear model and simple linear regression.</p>
 <section id="sec-wk13-lectures" class="level2">
 <h2 class="anchored" data-anchor-id="sec-wk13-lectures">Lectures</h2>
@@ -530,7 +543,7 @@ If you couldn’t upload files to the server, do this:
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week13/psess.csv?raw=true"</span>, <span class="at">destfile =</span> <span class="st">"psess.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -539,7 +552,7 @@ Cleaning the R environment
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>You can clean the R environment by clicking on the broom icon at the top right of the environment window, or you can use the code below.</p>
 <div class="cell">
@@ -549,7 +562,7 @@ Cleaning the R environment
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -558,7 +571,7 @@ Checking your working directory
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the code below to check what you working directory is currently set to. This is the folder that R will use to look for files. Is the file path that is written to the Console after you run the code snippet the one that contains the data file? You can check by nativating to the path you can see in the Console in the ‘Files’ pane on the right. Does it contain the data files?</p>
 <div class="cell">
@@ -572,7 +585,7 @@ Checking your working directory
 <p><strong>Step 1.</strong> Add the code to load the relevant libraries in a new code chunk. We need the following ones: <code>broom</code>, <code>car</code> and <code>tidyverse</code>. If you are unsure, you can look at the ‘Hint’ below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the ‘Code’ section below.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -581,14 +594,14 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>library()</code>function. Remember to put it inside a ‘code chunk’ in your R Markdown script.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -597,7 +610,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below.</p>
 <pre><code>library(broom)
@@ -610,7 +623,7 @@ library(tidyverse)</code></pre>
 <p><strong>Step 2.</strong> Read in both files, have a look at the layout of the data and familiarise yourself with it.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -619,14 +632,14 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>read_csv()</code>function to read in the data and the <code>head()</code> function to have a quick look at each data frame.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -635,7 +648,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below.</p>
 <pre><code>stars &lt;- read_csv("stars2.csv")
@@ -653,7 +666,7 @@ head(engage)</code></pre>
 <p><strong>Step 3.</strong> Getting the data ready. Now that we’ve read in both data files, the next step is to calculate the mean anxiety scores for each participant. At the moment we have scores on all questions separately for each participant in the <code>stars</code> table. Instead we need one mean anxiety score for each participant. Write the code to calculate mean anxiety scores.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -662,14 +675,14 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Remember that participant is identified by the <code>ID</code> variable. Use <code>group_by()</code> and <code>summarise()</code>. Store the resulting table in a variable named <code>stars_mean</code>. Also, remember to use <code>na.rm = TRUE</code> when calculating the mean scores to deal with participants who have missing data (NAs).</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -678,7 +691,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below:</p>
 <pre><code>stars_means &lt;- stars %&gt;%
@@ -695,7 +708,7 @@ Code
 <p><strong>TASK</strong>: Join the two tables, call the resulting table <code>joined</code>.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -704,14 +717,14 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>inner_join()</code> function (making use of the variable that is common across both tables) to join.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -720,7 +733,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below:</p>
 <pre><code>joined &lt;- inner_join(stars_means, engage, "ID")</code></pre>
@@ -731,7 +744,7 @@ Code
 <p><strong>Step 4.</strong> We now need descriptive statistics for both variables. Calculate the mean and standard deviations for the anxiety scores and the engagement data.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -740,14 +753,14 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>summarise()</code> function, in combination with the <code>mean()</code> and <code>sd()</code> functions to do this. Remember to use <code>na.rm = TRUE</code> when calculating the mean scores to deal with participants who have missing data (NAs).</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -756,7 +769,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below:</p>
 <pre><code>descriptives &lt;- joined %&gt;%
@@ -774,7 +787,7 @@ Code
 <p><strong>Step 5.</strong> Visualise the data. As always, it is a good idea to visualise your data. Now that we have all the variables in one place, make a scatterplot of anxiety as a function of engagement.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -783,14 +796,14 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>For this you’ll need the <code>ggplot() function together with</code>geom_point()<code>and</code>geom_smooth()<code>. Make sure to give your axes some sensible labels with the</code>labs()` function.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -799,7 +812,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below:</p>
 <pre><code>ggplot(joined, aes(x = mean_anxiety, y = n_weeks)) +
@@ -817,7 +830,7 @@ Code
 <p><strong>Step 6.</strong> With all the variables in place, we’re ready now to start building the regression model. Use the <code>lm()</code> function to run the regression model in which you model engagement (the outcome variable) as a function of anxiety (the predictor variable) and use the <code>summary()</code> function to look at the output.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -826,7 +839,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the template below. Replace the ‘outcome’, ‘predictor’ and ‘my_data’ parts with the relevant info.</p>
 <pre><code>mod &lt;-lm(outcome ~ predictor, data = my_data)
@@ -836,7 +849,7 @@ mod_summary</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -845,7 +858,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below:</p>
 <pre><code>mod &lt;- lm(n_weeks ~ mean_anxiety, data = joined)
@@ -876,7 +889,7 @@ mod_summary</code></pre>
 <p><strong>Step 7.</strong> Now that we’ve fitted a model, let’s check whether the model meets the assumptions of linearity, normality and homoscedasticity. Write the code to create the plots that allow you to check the assumptions.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -885,14 +898,14 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><code>crPlots()</code> to check linearity, <code>qqPlot()</code> to check normality of the residuals, and <code>residualPlot()</code> to check homoscedasticity of the residuals.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -901,7 +914,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below</p>
 <pre><code>crPlots(mod)            # Plot linear line and line that best fits the data to check the relationship between outcome and predictor is linear
@@ -925,7 +938,7 @@ residualPlot(mod)      # Create residual plot to check residual show homoscedast
 <p><strong>Step 8.</strong> Finally, it’s time to write up the results following APA guidelines. What would the results section look like if you wrote them up, following APA guidelines?</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -934,7 +947,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The <a href="https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_numbers_statistics.html"><strong>Purdue writing lab website</strong></a> is helpful for guidance on punctuating statistics.</p>
 </div>
@@ -953,25 +966,6 @@ Hint
 <li>What is the regression equation as discussed during the lecture and what does each letter represent?</li>
 </ol>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>Y = b0 + b1 * X + e</strong> <strong>Y = outcome variable</strong> <strong>b0 = intercept</strong> <strong>b1 = slope</strong> <strong>X = predictor variable</strong> <strong>e = error</strong></p>
-</div>
-</div>
-</div>
-<ol start="2" type="1">
-<li>What are residuals?</li>
-</ol>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
@@ -983,12 +977,12 @@ Answer
 </div>
 <div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Residuals reflect the discrepancy between the observed values and the fitted values and give an indication of how well the model ‘fits’ the data.</strong></p>
+<p><strong>Y = b0 + b1 * X + e</strong> <strong>Y = outcome variable</strong> <strong>b0 = intercept</strong> <strong>b1 = slope</strong> <strong>X = predictor variable</strong> <strong>e = error</strong></p>
 </div>
 </div>
 </div>
-<ol start="3" type="1">
-<li>Discuss the answers to the pre-lab activity questions. What did you find?</li>
+<ol start="2" type="1">
+<li>What are residuals?</li>
 </ol>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
@@ -1001,6 +995,25 @@ Answer
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Residuals reflect the discrepancy between the observed values and the fitted values and give an indication of how well the model ‘fits’ the data.</strong></p>
+</div>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Discuss the answers to the pre-lab activity questions. What did you find?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li>Change the slider for the intercept. How does it change the regression line? <strong>The value for y at x = 0 changes.</strong></li>
@@ -1016,23 +1029,6 @@ Answer
 <p>You can download the R Markdown-script that contains the code to complete lab activity 2 here: <a href="../PSYC122/data/week13/122_wk13_labAct2.html">122_wk13_labAct2.Rmd</a>.</p>
 <p>1a. If our hypothesis is correct, what type of correlation (if any) should we observe between students’ mean anxiety levels and the variable <code>n_weeks</code>?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-27" class="callout-27-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>A negative correlation</strong></p>
-</div>
-</div>
-</div>
-<p>2a. In the <code>stars</code> table, what do the numbers in the first row across the three columns refer to?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
@@ -1044,11 +1040,11 @@ Answer
 </div>
 <div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>ID = 3, Question = Q01 and Score = 1 shows us that participant 3 reported a score of 1 on question 1.</strong></p>
+<p><strong>A negative correlation</strong></p>
 </div>
 </div>
 </div>
-<p>3a. What is the mean anxiety score for participant 3?</p>
+<p>2a. In the <code>stars</code> table, what do the numbers in the first row across the three columns refer to?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1061,11 +1057,11 @@ Answer
 </div>
 <div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>1.058824</strong></p>
+<p><strong>ID = 3, Question = Q01 and Score = 1 shows us that participant 3 reported a score of 1 on question 1.</strong></p>
 </div>
 </div>
 </div>
-<p>4a. What are the means and standard deviation for anxiety and engagement with the statistics module?</p>
+<p>3a. What is the mean anxiety score for participant 3?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1078,11 +1074,11 @@ Answer
 </div>
 <div id="callout-30" class="callout-30-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Anxiety <em>M</em> = 2.08, <em>SD</em> = 0.56; Engagement <em>M</em> = 4.54, <em>SD</em> = 2.42.</strong></p>
+<p><strong>1.058824</strong></p>
 </div>
 </div>
 </div>
-<p>5a. What does the scatterplot suggest about the relationship between anxiety and engagement?</p>
+<p>4a. What are the means and standard deviation for anxiety and engagement with the statistics module?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1095,11 +1091,11 @@ Answer
 </div>
 <div id="callout-31" class="callout-31-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>That there might indeed be a relatively strong negative correlation between the two; students with more anxiety, engage less.</strong></p>
+<p><strong>Anxiety <em>M</em> = 2.08, <em>SD</em> = 0.56; Engagement <em>M</em> = 4.54, <em>SD</em> = 2.42.</strong></p>
 </div>
 </div>
 </div>
-<p>6a. What is the estimate of the y-intercept for the model, rounded to three decimal places?</p>
+<p>5a. What does the scatterplot suggest about the relationship between anxiety and engagement?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1112,11 +1108,11 @@ Answer
 </div>
 <div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>9.057. Explanation: In the summary table, this is the estimate of the intercept.</strong></p>
+<p><strong>That there might indeed be a relatively strong negative correlation between the two; students with more anxiety, engage less.</strong></p>
 </div>
 </div>
 </div>
-<p>6b. To three decimal places, if the General Linear Model for this model is <code>Y=beta0 + beta1X + e</code>, then the value of <code>beta1</code> is …</p>
+<p>6a. What is the estimate of the y-intercept for the model, rounded to three decimal places?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1129,11 +1125,11 @@ Answer
 </div>
 <div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>-2.173. Explanation: In the summary table, this is the estimate of mean_anxiety, i.e., the slope.</strong></p>
+<p><strong>9.057. Explanation: In the summary table, this is the estimate of the intercept.</strong></p>
 </div>
 </div>
 </div>
-<p>6c. To three decimal places, for each unit increase in anxiety, engagement decreases by …</p>
+<p>6b. To three decimal places, if the General Linear Model for this model is <code>Y=beta0 + beta1X + e</code>, then the value of <code>beta1</code> is …</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1146,11 +1142,11 @@ Answer
 </div>
 <div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>2.173. Explanation: In the summary table, this is also the estimate of mean_anxiety, the slope is how much it decreases so you just remove the - sign.</strong></p>
+<p><strong>-2.173. Explanation: In the summary table, this is the estimate of mean_anxiety, i.e., the slope.</strong></p>
 </div>
 </div>
 </div>
-<p>6d. To two decimal places, what is the overall F-ratio of the model?</p>
+<p>6c. To three decimal places, for each unit increase in anxiety, engagement decreases by …</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1163,11 +1159,11 @@ Answer
 </div>
 <div id="callout-35" class="callout-35-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>11.99. Explanation: In the summary table, the F-ratio is noted as the F-statistic.</strong></p>
+<p><strong>2.173. Explanation: In the summary table, this is also the estimate of mean_anxiety, the slope is how much it decreases so you just remove the - sign.</strong></p>
 </div>
 </div>
 </div>
-<p>6e. Is the overall model significant?</p>
+<p>6d. To two decimal places, what is the overall F-ratio of the model?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1180,11 +1176,11 @@ Answer
 </div>
 <div id="callout-36" class="callout-36-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Yes. Explanation: The overall model p-value is .001428 which is less than .05, therefore significant.</strong></p>
+<p><strong>11.99. Explanation: In the summary table, the F-ratio is noted as the F-statistic.</strong></p>
 </div>
 </div>
 </div>
-<p>6f. What proportion of the variance does the model explain?</p>
+<p>6e. Is the overall model significant?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1197,11 +1193,11 @@ Answer
 </div>
 <div id="callout-37" class="callout-37-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>25.52%. Explanation: The variance explained is determined by R-squared, you simply multiple it by 100 to get the percent.</strong></p>
+<p><strong>Yes. Explanation: The overall model p-value is .001428 which is less than .05, therefore significant.</strong></p>
 </div>
 </div>
 </div>
-<p>7a. Does the relationship appear to be linear?</p>
+<p>6f. What proportion of the variance does the model explain?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1214,11 +1210,11 @@ Answer
 </div>
 <div id="callout-38" class="callout-38-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Yes, the pink line roughly falls across the dashed blue line and looks mostly linear.</strong></p>
+<p><strong>25.52%. Explanation: The variance explained is determined by R-squared, you simply multiple it by 100 to get the percent.</strong></p>
 </div>
 </div>
 </div>
-<p>7b. Do the residuals show normality?</p>
+<p>7a. Does the relationship appear to be linear?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1231,11 +1227,11 @@ Answer
 </div>
 <div id="callout-39" class="callout-39-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Yes, in the qq-plot the open circles mostly assemble around the solid blue line, and fall mostly within the range of the dashed blue lines.</strong></p>
+<p><strong>Yes, the pink line roughly falls across the dashed blue line and looks mostly linear.</strong></p>
 </div>
 </div>
 </div>
-<p>7c. Do the residuals show homoscedasticity?</p>
+<p>7b. Do the residuals show normality?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1248,13 +1244,11 @@ Answer
 </div>
 <div id="callout-40" class="callout-40-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><strong>Yes, the residual plot shows that the spread of the residuals is roughly similar for different fitted values.</strong></p>
+<p><strong>Yes, in the qq-plot the open circles mostly assemble around the solid blue line, and fall mostly within the range of the dashed blue lines.</strong></p>
 </div>
 </div>
 </div>
-<ol start="8" type="1">
-<li>What would the results section look like if you wrote them up, following APA guidelines?</li>
-</ol>
+<p>7c. Do the residuals show homoscedasticity?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1266,6 +1260,25 @@ Answer
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Yes, the residual plot shows that the spread of the residuals is roughly similar for different fitted values.</strong></p>
+</div>
+</div>
+</div>
+<ol start="8" type="1">
+<li>What would the results section look like if you wrote them up, following APA guidelines?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><strong>A simple linear regression was performed with engagement (<em>M</em> = 4.54, <em>SD</em> = 0.56) as the outcome variable and statistics anxiety (<em>M</em> = 2.08, <em>SD</em> = 0.56) as the predictor variable. The results of the regression indicated that the model significantly predicted course engagement (<em>F</em>(1, 35) = 11.99, <em>p</em> &lt; .001, <em>R^2</em> = 0.25), accounting for 25% of the variance. Anxiety was a significant negative predictor (<em>beta</em> = -2.17, <em>p</em> &lt; 0.001): as anxiety increased, course engagement decreased.</strong></p>
 </div>

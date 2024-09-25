@@ -4,6 +4,10 @@ subtitle: Written by Margriet Groen (partly adapted from materials developed by 
 order: 4
 ---
 
+::: {.callout-caution}
+This page is under construction for 24/25 and may be subject to change before the teaching week.
+:::
+
 
 This week we will focus on the linear model and simple linear regression.
 

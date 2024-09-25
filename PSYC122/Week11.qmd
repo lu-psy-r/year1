@@ -4,6 +4,11 @@ subtitle: Written by Margriet Groen (some parts are adapted from materials devel
 order: 2
 ---
 
+::: {.callout-caution}
+This page is under construction for 24/25 and may be subject to change before the teaching week.
+:::
+
+
 Today we will take a look at correlation as a measure of association between two numerical variables. We will create scatterplots to visualise correlations, we will run a correlation analysis and we will practise interpreting and reporting the results.
 
 ## Lectures {#sec-wk11-lectures}
