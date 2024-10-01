@@ -1,12 +1,9 @@
 ---
-title: 1. Introduction to PSYC121 (2024)
-subtitle: Written by John Towse & Tom Beesley
+title: 1. Introduction to PSYC121
+subtitle: Written by John Towse & Tom Beesley (2024)
 order: 2
 ---
 
-::: callout-caution
-This page is under construction for 24/25 and may be subject to change before the teaching week.
-:::
 
 # 1. Lectures for week 1
 
