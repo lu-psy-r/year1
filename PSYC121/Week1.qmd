@@ -1,42 +1,38 @@
 ---
-title: 1. Introduction to PSYC121
+title: 1. Introduction to PSYC121 (2024)
 subtitle: Written by John Towse & Tom Beesley
 order: 2
 ---
 
-::: {.callout-caution}
+::: callout-caution
 This page is under construction for 24/25 and may be subject to change before the teaching week.
 :::
 
-# Lectures for week 1
+# 1. Lectures for week 1
 
 Watch the introduction: Lecture Part 1
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=be47e4bd-902a-4fcf-90d3-b0920087c849&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=15a82586-1f14-467f-95c0-b1fc008c9139&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="week 1(2024) part A" ></iframe>
 ```
-
 Watch Lecture Part 2
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=c05d4cbb-cf04-437e-8d98-b0920089f555&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0cf1e5a7-fc48-4b7e-8ba2-b1fc009120db&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 1 (2024) part 2" ></iframe>
 ```
-
 Watch Lecture Part 3
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=a177a0a9-67c5-4700-9a98-b092008e0cfc&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=3364ec5c-d02c-4774-9e1d-b1fc009709c1&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 1 (2024) part 3" ></iframe>
 ```
-
 Watch Lecture Part 4
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=237ed51b-aa37-4e10-9f3b-b0920091b16b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=30af9bcf-340f-4814-b386-b1fc009a676f&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 1 (2024) part D" ></iframe>
 ```
-
 Download the lecture slides [here](data/Week_1/week1_lecture_student_slides.pptx)
 
-# Analysis labs and 'pre-lab' activity
+# 2. Analysis labs and 'pre-lab' activity
 
 For each lab session that you have been scheduled to attend, please come "prepared'. By this we mean
 
@@ -50,19 +46,21 @@ The lecture is designed to deliver important ideas and procedures for learning a
 
 Want additional support? Keep in mind that the Department has endorsed and will use the Statistics textbook by David Howell called "**Fundamental statistics for the behavioral sciences**"
 
+![](images/Wk1/howell.png){fig-align="center" width="2in"}
+
 The book covers principles of statistics as well as some tutorials on using R. You can access a library copy [from the library pages](https://onesearch.lancaster-university.uk/permalink/f/cssk39/44LAN_ALMA_DS51180136050001221){target="_blank"}
 
-# Activities for this week
+# 3. Lab activities for this week
 
-## Task 1 - check-in with the University attendance register
+## Task 3.1 - check-in with the University attendance register
 
 When you arrive, make sure you have checked-in to your Analysis session in the Levy lab. All students are required by the University to [confirm attendance at taught session](https://www.lancaster.ac.uk/student-and-education-services/check-in/){target="_blank"}
 
 Staff will remind you of this in your class.
 
-## Task 2 - Getting dicy
+## Task 3.2 - Getting dicy
 
-![](images/Wk1/dice.png){width="3in"}
+![](images/Wk1/dice.png){fig-align="center" width="3in"}
 
 Here's a simple task for you to complete as a group around each of the workstations;
 
@@ -82,7 +80,7 @@ You will be given a pair of dice
 
 Are all your answers the same? Why / why not? If not, are they very different or very similar?
 
-## Task 3 - Using RStudio
+## Task 3.3 - Using RStudio
 
 ### Introducing R Studio
 
@@ -96,7 +94,7 @@ Therefore, we need to learn both about the concepts of statistical analysis on t
 
 ### Getting started with RStudio {#getting_started}
 
-For Lancaster University Psychology Students in 2023, we will be learning about R Studio through a simple but powerful web server architecture. That is, through the power of the internet, you can access and use R Studio by logging into a free account that we have provided and we will maintain for your use.
+For Lancaster University Psychology Students in 2024, we will be learning about R Studio through a simple but powerful web server architecture. That is, through the power of the internet, you can access and use R Studio by logging into a free account that we have provided and we will maintain for your use.
 
 > Here's a little secret: There are several different ways to access RStudio. For example, you can download a copy of the software onto your computer, or use a Virtual Machine set up to run a copy. There's nothing to stop you having your local copy, but please note - we can't support your own version through lab classes. We're using the web server to make sure everyone has the same, controlled experience.
 
@@ -188,7 +186,7 @@ This is just a bit of clever jiggery-pokery that gets the mode. What does R say 
 
 How can you get RStudio to verify / check the dice calculations that you attempted earlier? Think about how you might solve this problem, on the basis of what we have covered so far.
 
-We will discuss this in class and attempt to get RStudio to check your answers. In doing so, annotate the script (add notes for you - not RStudio) using the "#" command
+We will discuss this in class and attempt to get RStudio to check your answers. In doing so, annotate the script (add notes for you - not RStudio) using the "\#" command
 
 ## Before you finish
 
@@ -220,7 +218,7 @@ Throughout this year, we'll use the convention of the "underscore" to separate w
 
 ------------------------------------------------------------------------
 
-## Task 4 -- Review the learnr sample / practice questions
+## Task 3.4 -- Review the learnr sample / practice questions
 
 After every block of teaching in part-1 analysis (specifically, we mean in week 5, week 10, week 15 and week 20) there will be a class test. This will assess your knowledge and your understanding of the material that has been covered.
 
@@ -234,14 +232,14 @@ a)  We place a set of questions at the end of the learnr pages so that you can a
 
 b)  These are meant as *indicative questions*. There's no point in learning/ memorising these questions (they won't be on the quiz!) and our advice is to reflect on how the teaching and content links to the sorts of questions that get posed.
 
-## Task 5 -- Data collection exercise
+## Task 3.5 -- Data collection exercise
 
 In order to learn about psychology and data analysis techniques, we need data! Rather than rely too much on artificial data (certainly it is sometimes useful to say "Here are a bunch of numbers and this is what we can do with them" -- think about the R Studio example for this week's lab) for the most part, we prefer to draw on datasets that are a bit more engaging and meaningful that you have a stake in yourself! By using a common data set, that we can return to over the year, we can also build up familiarity and confidence in the data and remove a potential obstacle to thinking about the more important analysis part.
 
 So a key task will be for everyone to have a go at taking our online survey, and contribute to a dataset that can be used throughout the year.
 
-The survey runs [by following this link](https://lancasteruni.eu.qualtrics.com/jfe/form/SV_5cNHoTIRd5ZVYlE){target="_blank"}
+The survey runs [by following this link](https://lancasteruni.eu.qualtrics.com/jfe/form/SV_0rJaVFmYy6ppcUu){target="_blank"}
 
 ## Post - lab recap: The slides we used
 
-Want to see again the introduction slides that we used in the Levy lab? They are [available here](data/Week_1/week_1_levylab_slides.pptx)
+Want to see again the introduction slides that we used in the Levy lab? They will be made [available here](data/Week_1/to_be_updated.pptx)
