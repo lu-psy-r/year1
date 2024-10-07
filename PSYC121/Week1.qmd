@@ -35,7 +35,7 @@ For each lab session that you have been scheduled to attend, please come "prepar
 
 -   You have watched the lecture video, made notes, and developed questions where you have them.
 
--   You have worked through the online "prelab" preparation materials - [Here is the link for Week 1](https://ma-rconnect.lancs.ac.uk/W1_prelab24/){target="_blank"}
+-   You have worked through the online "prelab" preparation materials - [You can access the link for Week 1 here](https://ma-rconnect.lancs.ac.uk/W1_prelab24/){target="_blank"}
 
 -   You read the lab sheet (this one) to get a sense of what we're going to be doing, and you anticipate potential problems so that you can focus on these in the session.
 
