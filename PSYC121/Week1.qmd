@@ -239,4 +239,4 @@ The survey runs [by following this link](https://lancasteruni.eu.qualtrics.com/j
 
 ## Post - lab recap: The slides we used
 
-Want to see again the introduction slides that we used in the Levy lab? They will be made [available here](data/Week_1/to_be_updated.pptx)
+Want to see again the introduction slides that we used in the Levy lab? They are [available here](data/Week_1/week_1_lecture_student_slides.pptx)

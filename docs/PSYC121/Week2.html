@@ -310,22 +310,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#week-2-lecture" id="toc-week-2-lecture" class="nav-link active" data-scroll-target="#week-2-lecture">Week 2 lecture</a></li>
-  <li><a href="#pre-lab-work" id="toc-pre-lab-work" class="nav-link" data-scroll-target="#pre-lab-work">Pre-lab work</a>
+  <li><a href="#week-2-lecture" id="toc-week-2-lecture" class="nav-link active" data-scroll-target="#week-2-lecture">1. Week 2 lecture</a></li>
+  <li><a href="#pre-lab-work" id="toc-pre-lab-work" class="nav-link" data-scroll-target="#pre-lab-work">2. Pre-lab work</a></li>
+  <li><a href="#lab-activity" id="toc-lab-activity" class="nav-link" data-scroll-target="#lab-activity">3. Lab activity</a>
   <ul class="collapse">
-  <li><a href="#r-studio-tasks" id="toc-r-studio-tasks" class="nav-link" data-scroll-target="#r-studio-tasks">R Studio tasks</a></li>
-  <li><a href="#bringing-data-scripts-and-files-into-r-studio" id="toc-bringing-data-scripts-and-files-into-r-studio" class="nav-link" data-scroll-target="#bringing-data-scripts-and-files-into-r-studio">Bringing data, scripts and files into R Studio</a></li>
-  </ul></li>
-  <li><a href="#lab-exercises---descriptive-information-in-r-studio" id="toc-lab-exercises---descriptive-information-in-r-studio" class="nav-link" data-scroll-target="#lab-exercises---descriptive-information-in-r-studio">Lab exercises - descriptive information in R Studio</a>
+  <li><a href="#r-studio-tasks-recap" id="toc-r-studio-tasks-recap" class="nav-link" data-scroll-target="#r-studio-tasks-recap">3.1 R Studio tasks recap</a></li>
+  <li><a href="#bringing-data-scripts-and-files-into-r-studio" id="toc-bringing-data-scripts-and-files-into-r-studio" class="nav-link" data-scroll-target="#bringing-data-scripts-and-files-into-r-studio">3.2 Bringing data, scripts and files into R Studio</a></li>
+  <li><a href="#main-lab-exercise---descriptive-information-in-r-studio-penelope-the-cow" id="toc-main-lab-exercise---descriptive-information-in-r-studio-penelope-the-cow" class="nav-link" data-scroll-target="#main-lab-exercise---descriptive-information-in-r-studio-penelope-the-cow">3.3 Main lab exercise - descriptive information in R Studio (Penelope the cow)</a>
   <ul class="collapse">
   <li><a href="#step-1.-loading-the-data" id="toc-step-1.-loading-the-data" class="nav-link" data-scroll-target="#step-1.-loading-the-data">Step 1. Loading the data</a></li>
   <li><a href="#step-2.-using-the-r-script" id="toc-step-2.-using-the-r-script" class="nav-link" data-scroll-target="#step-2.-using-the-r-script">Step 2. Using the R script</a></li>
   <li><a href="#step-3.-finding-the-mean-and-median-estimates" id="toc-step-3.-finding-the-mean-and-median-estimates" class="nav-link" data-scroll-target="#step-3.-finding-the-mean-and-median-estimates">Step 3. Finding the mean and median estimates</a></li>
   <li><a href="#step-4.-calculations-from-a-range-of-columns" id="toc-step-4.-calculations-from-a-range-of-columns" class="nav-link" data-scroll-target="#step-4.-calculations-from-a-range-of-columns">Step 4. Calculations from a range of columns</a></li>
   <li><a href="#step-5.-simple-graphs" id="toc-step-5.-simple-graphs" class="nav-link" data-scroll-target="#step-5.-simple-graphs">Step 5. Simple graphs</a></li>
-  <li><a href="#step-6.-putting-it-all-together-apply-your-new-skils-to-a-different-dataset" id="toc-step-6.-putting-it-all-together-apply-your-new-skils-to-a-different-dataset" class="nav-link" data-scroll-target="#step-6.-putting-it-all-together-apply-your-new-skils-to-a-different-dataset">Step 6. Putting it all together! Apply your new skils to a different dataset</a></li>
-  <li><a href="#post---lab-recap-the-slides" id="toc-post---lab-recap-the-slides" class="nav-link" data-scroll-target="#post---lab-recap-the-slides">Post - lab recap: The slides</a></li>
   </ul></li>
+  <li><a href="#extension-and-practice.-apply-your-new-skils-to-a-different-dataset" id="toc-extension-and-practice.-apply-your-new-skils-to-a-different-dataset" class="nav-link" data-scroll-target="#extension-and-practice.-apply-your-new-skils-to-a-different-dataset">3.4. Extension and practice. Apply your new skils to a different dataset</a></li>
+  </ul></li>
+  <li><a href="#post---lab-recap-the-slides" id="toc-post---lab-recap-the-slides" class="nav-link" data-scroll-target="#post---lab-recap-the-slides">4. Post - lab recap: The slides</a></li>
   </ul>
 </nav>
     </div>
@@ -335,7 +336,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">2. Descriptive statistics in RStudio</h1>
-<p class="subtitle lead">Written by John Towse &amp; Tom Beesley</p>
+<p class="subtitle lead">Written by John Towse &amp; Tom Beesley (2024)</p>
 </div>
 
 
@@ -350,58 +351,49 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This page is under construction for 24/25 and may be subject to change before the teaching week.</p>
-</div>
-</div>
 <section id="week-2-lecture" class="level1">
-<h1>Week 2 lecture</h1>
+<h1>1. Week 2 lecture</h1>
+<p>Due to illness, we’re releasing some previously recorded lecture videos that explain the week 2 content. Unfortuantely I’m full of cold right now - and making a video recording is just creating a muffled and hard to hear version of the ideas :-(</p>
+<p>Also, just bear in mind - these lectures in PSYC121 are designed to provide an explanation of the conceptual and computational work involved in some core analytic material. The workshops are designed (a) to put these ideas into practice (b) to work with R Studio in practicing with data, as a tool that can help to explore data. So the lectures and lab complement each other, and we will continue to takle this approach across the module.</p>
 <p>Watch Part 1</p>
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=ab5e29c1-7406-4d58-95ec-b09900b31680&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
 <p>Watch Part 2</p>
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=4be02439-65f7-4455-ab10-b09900da0c87&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
 <p>Watch Part 3</p>
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=aa38ad8d-4bf9-4ecd-bd99-b09800a13e2e&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
-<p>Download the lecture slides <a href="data/Week_2/week 2 Analysis lecture 2023.pptx">here</a></p>
+<p>Download the lecture slides <a href="data/Week_2/week 2 Analysis lecture 2024.pptx">here</a></p>
 </section>
 <section id="pre-lab-work" class="level1">
-<h1>Pre-lab work</h1>
+<h1>2. Pre-lab work</h1>
 <p>Last week, among other things, we asked you to</p>
 <ul>
 <li>Roll some dice, carry out some (relatively) straightforward ‘hand’ calculations of central tendency</li>
-<li>Connect to the RStudio server and create a folder</li>
-<li>Within RStudio upload and run a script - a set of instructions, and explore annotations</li>
+<li>Connect to the RStudio server and ‘create a folder’look around’</li>
+<li>Within RStudio upload and run a script (a set of instructions), and explore annotations</li>
 <li>Adapt the script commands to perform calculations on the dice rolls within RStudio</li>
 <li>Complete a survey so that we can collect data for analysis teaching</li>
 </ul>
-<p>Your progress was great! We start with small steps and build up - but this is a nice start and we’re pleased how things went!</p>
-<p>Before the lab, make sure you have worked through the material in the week2 learnr tutorial. <a href="https://ma-rconnect.lancs.ac.uk/W2_prelab_23/" target="_blank">The link is here</a></p>
-<section id="r-studio-tasks" class="level3">
-<h3 class="anchored" data-anchor-id="r-studio-tasks">R Studio tasks</h3>
+<p>Your progress was great! We start with small steps and build up - but this is a nice start and as staff we’re pleased how things went!</p>
+<p>Before the lab, make sure you have worked through the material in the week2 learnr tutorial. <a href="https://ma-rconnect.lancs.ac.uk/W2_prelab_24/" target="_blank">The link is here</a></p>
+</section>
+<section id="lab-activity" class="level1">
+<h1>3. Lab activity</h1>
+<section id="r-studio-tasks-recap" class="level2">
+<h2 class="anchored" data-anchor-id="r-studio-tasks-recap">3.1 R Studio tasks recap</h2>
 <p>For a reminder of how to start RStudio, <a href="Week1.html#getting_started" target="_blank">see week 1’s instructions</a></p>
 <p>(remember: off campus, you will need to be on the VPN)</p>
 <blockquote class="blockquote">
 <p>A word of advice (from David Howell’s statistics book: One more word of advice I can’t resist adding what is perhaps the best advice I have. If there is something that you don’t understand, just remember that “Google is your friend.” She certainly is mine. (Well, maybe Google is getting a bit pushy, but there are many other search sites.) If you don’t understand what Fisher’s Exact Test is, or you don’t like my explanation, go to Google and type in Fisher’s Exact Test. I just did that and had 260,000 hits. You can’t tell me that there isn’t going to be something useful in there.)</p>
 </blockquote>
 </section>
-<section id="bringing-data-scripts-and-files-into-r-studio" class="level3">
-<h3 class="anchored" data-anchor-id="bringing-data-scripts-and-files-into-r-studio">Bringing data, scripts and files into R Studio</h3>
+<section id="bringing-data-scripts-and-files-into-r-studio" class="level2">
+<h2 class="anchored" data-anchor-id="bringing-data-scripts-and-files-into-r-studio">3.2 Bringing data, scripts and files into R Studio</h2>
 <p>In week 1, we had a tiny dataset (relatively speaking) that we entered into R through a script line. That worked for what is was. But it’s going to become painful and tedious when (a) we want to work with larger datasets (b) we have data more complex than a 1-dimensional list of numbers (think about some 2-dimensional data sheets you might have encountered in excel for example)</p>
 <p>R can handle data files, and this week we’re going to explore them. Within R, we can specify ‘data frames’ which can have, essentially, multiple columns of data, and we can link data files to data frames for processing</p>
 <p>To make things straightforward, each week we’ll provide students with a “zip” file that contains the script to start from (which you can expand and annotate etc, and save on your file space). We’ll also provide a data file or data files for you to use in the zip file. R can then <em>import</em> these files into the RStudio environment. So when you upload the zip file, you can import the data AND you can open up the script</p>
 </section>
-</section>
-<section id="lab-exercises---descriptive-information-in-r-studio" class="level1">
-<h1>Lab exercises - descriptive information in R Studio</h1>
+<section id="main-lab-exercise---descriptive-information-in-r-studio-penelope-the-cow" class="level2">
+<h2 class="anchored" data-anchor-id="main-lab-exercise---descriptive-information-in-r-studio-penelope-the-cow">3.3 Main lab exercise - descriptive information in R Studio (Penelope the cow)</h2>
 <p>Some years ago, a large group of participants gave an estimate of the weight of Penelope the cow. Just over 17,000 guesses. And the distribution of guesses was something like this: <img src="images/wk2/penelope.png" class="img-fluid"></p>
 <p>What we can see from this graph is that:</p>
 <ol type="1">
@@ -411,13 +403,10 @@ Caution
 <p>Let’s look at (a sample of) the PSYC121 student data collected on guessing the weight of Penelope, and ask whether it resembles the properties of this large dataset.</p>
 <section id="step-1.-loading-the-data" class="level3">
 <h3 class="anchored" data-anchor-id="step-1.-loading-the-data">Step 1. Loading the data</h3>
-<p>Using the instructions and advice given on Moodle, get the <code>week_2_2023.zip</code> file and bring the data and R script into R Studio. <a href="data/Week_2/week_2_2023.zip">The week 2 zip file is here</a></p>
+<p>Using the instructions and advice given on Moodle, get the <code>week_2_2024.zip</code> file and bring the data and R script into R Studio. <a href="data/Week_2/week_2_2024.zip">The week 2 zip file is here</a></p>
 </section>
 <section id="step-2.-using-the-r-script" class="level3">
 <h3 class="anchored" data-anchor-id="step-2.-using-the-r-script">Step 2. Using the R script</h3>
-<p>Step 1. Download the <code>week_2.zip</code> file (If you are using a mac, there is a video guide on Moodle to explain how to download the zip file as is)</p>
-<p>Step 2. Open the appropriate folder on the RStudio server</p>
-<p>Step 3. Upload the zip file</p>
 <p>Let’s start working with our data, by opening up (clicking on) the script “Week_2.R” file.</p>
 <p>The first command is to load a library of functions:</p>
 <div class="cell">
@@ -488,16 +477,17 @@ Caution
 <p>We can also create a “box and whisker plot”. Here’s a general simple description of a box-and-whisker plot as a graphical representation of data:</p>
 <p><img src="images/wk2/Box_and_whisker.png" class="img-fluid"></p>
 </section>
-<section id="step-6.-putting-it-all-together-apply-your-new-skils-to-a-different-dataset" class="level3">
-<h3 class="anchored" data-anchor-id="step-6.-putting-it-all-together-apply-your-new-skils-to-a-different-dataset">Step 6. Putting it all together! Apply your new skils to a different dataset</h3>
-<p>In the zip file, we also provide data on the estimates of the percentage of immigrants in the UK. This will allow you to explore this variable, create visualisations of the data and its spread. We’ll be looking at a version of this variable in week 3: can you apply the analysis of the penelope data to the immigration data (report descriptive statistics)? Write some new script lines to investigate this additional dataset, and annotate those new script lines.</p>
 </section>
-<section id="post---lab-recap-the-slides" class="level2">
-<h2 class="anchored" data-anchor-id="post---lab-recap-the-slides">Post - lab recap: The slides</h2>
-<p>Want to see the introduction slides that we used in the Levy lab? They are <a href="data/Week_2/week_2_levylab_slides.pptx">available here</a></p>
+<section id="extension-and-practice.-apply-your-new-skils-to-a-different-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="extension-and-practice.-apply-your-new-skils-to-a-different-dataset">3.4. Extension and practice. Apply your new skils to a different dataset</h2>
+<p>In the zip file, we also provide data on the estimates of the percentage of immigrants in the UK. This will allow you to explore this variable, create visualisations of the data and its spread. We’ll be looking at a version of this variable in week 3: but for now, can you apply the analysis of the penelope data to the immigration data (report descriptive statistics)? Write some new script lines to investigate this additional dataset, and annotate those new script lines.</p>
+</section>
+</section>
+<section id="post---lab-recap-the-slides" class="level1">
+<h1>4. Post - lab recap: The slides</h1>
+<p>Want to see the introduction slides that we used in the Levy lab? By the end of the week they will be <a href="data/Week_2/week_2_levylab_slides24.pptx">available here</a></p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
