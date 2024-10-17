@@ -324,7 +324,7 @@ ul.task-list li input[type="checkbox"] {
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0ce688c2-1057-4ad8-8048-b20c008e67dc&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3 (C)"></iframe>
 <p>Watch Lecture Part 4</p>
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6e02a27c-b909-4655-b07a-b20c0093d396&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3(D)"></iframe>
-<p>Download the lecture slides <a href="data/Week_3/week 3 slides2024.pptx">here</a></p>
+<p>Download the lecture slides <a href="data/Week_3/week_3_lecture_slides_2024.pptx">here</a></p>
 </section>
 <section id="pre-lab-work" class="level1">
 <h1>2. Pre-lab work</h1>
@@ -343,11 +343,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="task-1---more-with-the-penelope22-data" class="level2">
 <h2 class="anchored" data-anchor-id="task-1---more-with-the-penelope22-data">3.1 Task 1 - More with the <code>penelope22</code> data</h2>
 <p>Step 1. Create a project and a folder, and set the working directory. This is covered in the learnr tutorial so head over there if you need reminding.</p>
-<p>Step 2. Bring the <code>week3.zip</code> file into R Studio server. Like last week, upload the zip file, and launch the R script. <a href="data/Week_3/week_3_2024.zip">You can get the file here</a></p>
+<p>Step 2. Bring the <code>week3_2024.zip</code> file into R Studio server. Like last week, upload the zip file, and launch the R script. <a href="data/Week_3/week_3_2024.zip">You can get the file here</a></p>
 <p>Step 3. This week, we again want to explore commands from the tidyverse library (toolkit) which can help us do more powerful things more elegantly. So let’s get R to work again with the tidyverse library by running the code line</p>
 <p><code>library(tidyverse)</code></p>
 <p>Step 4. Explore help() commands. R can give you more information about how it works.</p>
-<p>Step 5. Read or load the penelope data into R. That is what line 16 of the code is designed to do</p>
+<p>Step 5. Read or load the penelope data into R. That is what line 18 of the code is designed to do</p>
 <p><code>data_object_name &lt;- read_csv("fill in") # use your own dataobject_name and specify the file you want to work with</code></p>
 <p>but note that you will need to edit this line -and ensure you are in the correct working directory- for this to be successful. Then have a look at it using the View() command in the script</p>
 <p>This time, let’s ask for the estimate data arranged by identity:</p>
@@ -375,7 +375,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="task-2---new-salary-data" class="level4">
 <h4 class="anchored" data-anchor-id="task-2---new-salary-data">Task 2 - New salary data</h4>
 <p>Using aggregate and summarise may not seem like much progress, because they are just replicating what we had already done with mean() is week 2. However (a) this emphasizes that there are often several ways to get at the same thing in R (b) now we know about grouping, about working with 2-dimensional data, we can start to do more efficient and informative things.</p>
-<p>Now, let’s turn to the guesses made about median salary in the UK. We can get the data from the file <code>wages2024.csv</code> (you will need to adapt the code we used above for the weight estimation file so that it will load in the wages data, and in what follows the assumption is your new variable name is called <code>wages</code>)</p>
+<p>Now, let’s turn to the guesses made about median salary in the UK. We can get the data, from you as a group of PSYC121 students, from the file <code>wages2024.csv</code> (you will need to adapt the code we used above for the weight estimation file so that it will load in the wages data, and in what follows the assumption is your new variable name is called <code>wages</code>)</p>
 <p>Let’s take a peek at the dataset with</p>
 <p><code>glimpse(wages)</code></p>
 <p>Glimpse pretty much does what you might think from the meaning of the word – it just gives us a data sample (handy because this is a much bigger dataset) and shows that we have 3 columns; uk_region (where someone lives, note ‘other’ probably equals Northern Ireland, Europe, China, etc), family_position (age relationship with siblings), and salary (estimate).</p>
@@ -392,7 +392,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="task-3.2---new-phone-use-data" class="level2">
 <h2 class="anchored" data-anchor-id="task-3.2---new-phone-use-data">Task 3.2 - New phone use data</h2>
 <ol start="5" type="A">
-<li><p>Dataset 3: Use the dataset of phone screen time usage, <code>screentime2023.csv</code> to further explore and consolidate the group_by() command (ie we’ll drop the aggregate command for this task to focus on group_by()). Use copy and paste to adapt the existing script lines from the above two tasks so that this time you read in and calculate screen time usage as a function of the type of phone. In other words, add line (and comments) to the scripts for this new task.</p></li>
+<li><p>Dataset 3: Use the dataset of phone screen time usage, <code>screentime2024.csv</code> to further explore and consolidate the group_by() command (ie we’ll drop the aggregate command for this task to focus on group_by()). Use copy and paste to adapt the existing script lines from the above two tasks so that this time you read in and calculate screen time usage as a function of the type of phone. In other words, add line (and comments) to the scripts for this new task.</p></li>
 <li><p>Use RStudio to figure out the overall mean screen time usage estimate and the standard deviation. Calculate by hand what usage estimate would have a z score of z=-1.5?</p></li>
 </ol>
 </section>

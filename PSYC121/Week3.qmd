@@ -48,7 +48,7 @@ However, in order to find the estimates separately for gender identity, we neede
 
 Step 1. Create a project and a folder, and set the working directory. This is covered in the learnr tutorial so head over there if you need reminding.
 
-Step 2. Bring the `week3.zip` file into R Studio server. Like last week, upload the zip file, and launch the R script. [You can get the file here](data/Week_3/week_3_2024.zip)
+Step 2. Bring the `week3_2024.zip` file into R Studio server. Like last week, upload the zip file, and launch the R script. [You can get the file here](data/Week_3/week_3_2024.zip)
 
 Step 3. This week, we again want to explore commands from the tidyverse library (toolkit) which can help us do more powerful things more elegantly. So let's get R to work again with the tidyverse library by running the code line
 
@@ -56,7 +56,7 @@ Step 3. This week, we again want to explore commands from the tidyverse library 
 
 Step 4. Explore help() commands. R can give you more information about how it works.
 
-Step 5. Read or load the penelope data into R. That is what line 16 of the code is designed to do
+Step 5. Read or load the penelope data into R. That is what line 18 of the code is designed to do
 
 `data_object_name <- read_csv("fill in") # use your own dataobject_name and specify the file you want to work with`
 
@@ -104,7 +104,7 @@ We could create any object name we wanted (within limits of names already known 
 
 Using aggregate and summarise may not seem like much progress, because they are just replicating what we had already done with mean() is week 2. However (a) this emphasizes that there are often several ways to get at the same thing in R (b) now we know about grouping, about working with 2-dimensional data, we can start to do more efficient and informative things.
 
-Now, let's turn to the guesses made about median salary in the UK. We can get the data from the file `wages2024.csv` (you will need to adapt the code we used above for the weight estimation file so that it will load in the wages data, and in what follows the assumption is your new variable name is called `wages`)
+Now, let's turn to the guesses made about median salary in the UK. We can get the data, from you as a group of PSYC121 students, from the file `wages2024.csv` (you will need to adapt the code we used above for the weight estimation file so that it will load in the wages data, and in what follows the assumption is your new variable name is called `wages`)
 
 Let's take a peek at the dataset with
 
