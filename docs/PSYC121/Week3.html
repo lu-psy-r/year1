@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistics for Psychologists - 3. DVs and IVs in RStudio</title>
+<title>Statistics for Psychologists - 3. DVs and IVs in RStudio (2024)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -122,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC121/index.html">PSYC121</a></li><li class="breadcrumb-item"><a href="../PSYC121/Week3.html">3. DVs and IVs in RStudio</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC121/index.html">PSYC121</a></li><li class="breadcrumb-item"><a href="../PSYC121/Week3.html">3. DVs and IVs in RStudio (2024)</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -166,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../PSYC121/Week3.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">3. DVs and IVs in RStudio</span></a>
+ <span class="menu-text">3. DVs and IVs in RStudio (2024)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -276,18 +276,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lectures" id="toc-lectures" class="nav-link active" data-scroll-target="#lectures">Lectures</a>
+  <li><a href="#pre-lab-work" id="toc-pre-lab-work" class="nav-link active" data-scroll-target="#pre-lab-work">2. Pre-lab work</a></li>
+  <li><a href="#r-studio-tasks" id="toc-r-studio-tasks" class="nav-link" data-scroll-target="#r-studio-tasks">3. R Studio tasks</a>
   <ul class="collapse">
-  <li><a href="#pre-lab-work" id="toc-pre-lab-work" class="nav-link" data-scroll-target="#pre-lab-work">Pre-lab work</a></li>
-  <li><a href="#r-studio-tasks" id="toc-r-studio-tasks" class="nav-link" data-scroll-target="#r-studio-tasks">R Studio tasks</a>
+  <li><a href="#task-1---more-with-the-penelope22-data" id="toc-task-1---more-with-the-penelope22-data" class="nav-link" data-scroll-target="#task-1---more-with-the-penelope22-data">3.1 Task 1 - More with the <code>penelope22</code> data</a>
   <ul class="collapse">
-  <li><a href="#task-1---more-with-the-penelope22-data" id="toc-task-1---more-with-the-penelope22-data" class="nav-link" data-scroll-target="#task-1---more-with-the-penelope22-data">Task 1 - More with the <code>penelope22</code> data</a></li>
-  <li><a href="#task-3---new-phone-use-data" id="toc-task-3---new-phone-use-data" class="nav-link" data-scroll-target="#task-3---new-phone-use-data">Task 3 - New phone use data</a></li>
-  <li><a href="#task-4---final-challenge-visualisation" id="toc-task-4---final-challenge-visualisation" class="nav-link" data-scroll-target="#task-4---final-challenge-visualisation">Task 4 - Final challenge: visualisation</a></li>
-  <li><a href="#now-youre-finished" id="toc-now-youre-finished" class="nav-link" data-scroll-target="#now-youre-finished">Now you’re finished …</a></li>
+  <li><a href="#group_by" id="toc-group_by" class="nav-link" data-scroll-target="#group_by">3.1.2 group_by()</a></li>
+  <li><a href="#the-assignment-operator" id="toc-the-assignment-operator" class="nav-link" data-scroll-target="#the-assignment-operator">3.1.3 The assignment operator</a></li>
   </ul></li>
-  <li><a href="#post---lab-recap-the-slides" id="toc-post---lab-recap-the-slides" class="nav-link" data-scroll-target="#post---lab-recap-the-slides">Post - lab recap: The slides</a></li>
+  <li><a href="#task-3.2---new-phone-use-data" id="toc-task-3.2---new-phone-use-data" class="nav-link" data-scroll-target="#task-3.2---new-phone-use-data">Task 3.2 - New phone use data</a></li>
+  <li><a href="#task-3.3---final-challenge-visualisation" id="toc-task-3.3---final-challenge-visualisation" class="nav-link" data-scroll-target="#task-3.3---final-challenge-visualisation">Task 3.3 - Final challenge: visualisation</a></li>
   </ul></li>
+  <li><a href="#now-youre-finished" id="toc-now-youre-finished" class="nav-link" data-scroll-target="#now-youre-finished">4. Now you’re finished …</a></li>
+  <li><a href="#post---lab-recap-the-slides" id="toc-post---lab-recap-the-slides" class="nav-link" data-scroll-target="#post---lab-recap-the-slides">5. Post - lab recap: The slides</a></li>
   </ul>
 </nav>
     </div>
@@ -296,7 +297,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">3. DVs and IVs in RStudio</h1>
+<h1 class="title">3. DVs and IVs in RStudio (2024)</h1>
 <p class="subtitle lead">Written by John Towse &amp; Tom Beesley</p>
 </div>
 
@@ -312,49 +313,33 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This page is under construction for 24/25 and may be subject to change before the teaching week.</p>
-</div>
-</div>
-<section id="lectures" class="level1">
-<h1>Lectures</h1>
-<p>Note: due to to Uni-based technical issues these are last year’s videos and cannot be edited. They will be updated once system fixes are in place)</p>
 <p>Watch Part 1</p>
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=3682fd2c-a4b3-4a56-bf06-b0a0010a09df&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;start=51&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=503a090b-69b5-4f55-a7be-b20c0085fb89&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3 (A)"></iframe>
 <p>Watch Part 2</p>
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=1484592f-d70d-44e9-a3d7-b0a000e2a302&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=8e761f7d-04f5-40f2-b862-b20c0089f1b8&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 Week 3(B)"></iframe>
 <p>Watch Lecture Part 3</p>
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0d1c4020-868c-4721-823e-b0a000ead4bc&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0ce688c2-1057-4ad8-8048-b20c008e67dc&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3 (C)"></iframe>
 <p>Watch Lecture Part 4</p>
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=1783efdd-6259-48d2-a160-b0a000eb1c7f&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
-<p>Download the lecture slides <a href="data/Week_3/week 3 slides2023.pptx">here</a></p>
-<section id="pre-lab-work" class="level2">
-<h2 class="anchored" data-anchor-id="pre-lab-work">Pre-lab work</h2>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6e02a27c-b909-4655-b07a-b20c0093d396&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3(D)"></iframe>
+<p>Download the lecture slides <a href="data/Week_3/week 3 slides2024.pptx">here</a></p>
+<section id="pre-lab-work" class="level1">
+<h1>2. Pre-lab work</h1>
 <p>Last week we asked you to</p>
 <ul>
 <li>Use a script to run instructions in RStudio</li>
 <li>Put data into RStudio form a data file and explore how to run descriptive stats</li>
 </ul>
-<p>This week - again, there’s a learnr tutorial to follow and help prep for this week’s activities. <a href="https://ma-rconnect.lancs.ac.uk//W3_prelab_23/" target="_blank">You can find it here</a></p>
+<p>This week - again, there’s a learnr tutorial to follow and help prep for this week’s activities. <a href="https://ma-rconnect.lancs.ac.uk//W3_prelab_24/" target="_blank">You can find it here</a></p>
 </section>
-<section id="r-studio-tasks" class="level2">
-<h2 class="anchored" data-anchor-id="r-studio-tasks">R Studio tasks</h2>
+<section id="r-studio-tasks" class="level1">
+<h1>3. R Studio tasks</h1>
 <p>For the weight of a cow data last week, we provided you with estimates data, and you were able to generate descriptive statistics for the estimates (if not, please go back and work through that part of the week 2 activity again). You also found the weight estimates for the female and non-female guesses, right?</p>
 <p>However, in order to find the estimates separately for gender identity, we needed to have a column for each gender category. Whilst that worked, it could get cumbersome over time always to work with data created like that.</p>
 <p><em>There is a better way…</em></p>
-<section id="task-1---more-with-the-penelope22-data" class="level3">
-<h3 class="anchored" data-anchor-id="task-1---more-with-the-penelope22-data">Task 1 - More with the <code>penelope22</code> data</h3>
+<section id="task-1---more-with-the-penelope22-data" class="level2">
+<h2 class="anchored" data-anchor-id="task-1---more-with-the-penelope22-data">3.1 Task 1 - More with the <code>penelope22</code> data</h2>
 <p>Step 1. Create a project and a folder, and set the working directory. This is covered in the learnr tutorial so head over there if you need reminding.</p>
-<p>Step 2. Bring the <code>week3.zip</code> file into R Studio server. Like last week, upload the zip file, and launch the R script. <a href="data/Week_3/week_3_2023.zip">You can get the file here</a></p>
+<p>Step 2. Bring the <code>week3.zip</code> file into R Studio server. Like last week, upload the zip file, and launch the R script. <a href="data/Week_3/week_3_2024.zip">You can get the file here</a></p>
 <p>Step 3. This week, we again want to explore commands from the tidyverse library (toolkit) which can help us do more powerful things more elegantly. So let’s get R to work again with the tidyverse library by running the code line</p>
 <p><code>library(tidyverse)</code></p>
 <p>Step 4. Explore help() commands. R can give you more information about how it works.</p>
@@ -369,29 +354,28 @@ Caution
 <p><code>x=</code> This defines what column we are analyzing</p>
 <p><code>by=list</code> Now we tell R how to group the estimate data, and which column does that</p>
 <p><code>FUN=mean</code> Specifies which descriptive function is being asked for Can you explore whether you can call on alternate measures?)</p>
-<section id="group_by" class="level4">
-<h4 class="anchored" data-anchor-id="group_by">group_by()</h4>
+<section id="group_by" class="level3">
+<h3 class="anchored" data-anchor-id="group_by">3.1.2 group_by()</h3>
 <p>There’s another way that also allows us to group scores by a (nominal) variable. This is explored in the learnr tutorial, which should help you create the command the get weight estimates broken down by gender identity. You need to define the data frame for the estimates data, and the gender IV and the estimates DV</p>
 <p><code>*MISSING* %&gt;% group_by(*MISSING*) %&gt;% summarise(mean_estimate = mean(*MISSING*))</code></p>
 <p>First, try this command and see what you get. If you run this command as entered, it won’t work. So now use your experience at skills from the above and the learnr tutorial to work out what is required.</p>
 <p>Note</p>
 <p><code>%&gt;%</code> This is called a “pipe operator”, basically take the output from the left and feed it into the requests on the right. <code>Summarise</code> Provide summary statistics information for the specified variable as specified (whether mean, median etc)</p>
 </section>
-<section id="the-assignment-operator" class="level4">
-<h4 class="anchored" data-anchor-id="the-assignment-operator">The assignment operator</h4>
+<section id="the-assignment-operator" class="level3">
+<h3 class="anchored" data-anchor-id="the-assignment-operator">3.1.3 The assignment operator</h3>
 <p>As well as learning about the pipe operator, we want to remind you /draw attention explicitly to another important element of the R command line syntax: the assignment operator. Uing a command such as</p>
 <p><code>cows &lt;- read_csv("penelope22.csv")</code></p>
 <p>looks for the csv datafile called ‘penelope22’, and assign it to an object or variable called ‘cows’</p>
 <p>We could create any object name we wanted (within limits of names already known to RStudio). It isn’t just for reading in data files, we can perform a whole range of functions and assign them to an object.</p>
-</section>
 <section id="task-2---new-salary-data" class="level4">
 <h4 class="anchored" data-anchor-id="task-2---new-salary-data">Task 2 - New salary data</h4>
 <p>Using aggregate and summarise may not seem like much progress, because they are just replicating what we had already done with mean() is week 2. However (a) this emphasizes that there are often several ways to get at the same thing in R (b) now we know about grouping, about working with 2-dimensional data, we can start to do more efficient and informative things.</p>
-<p>Now, let’s turn to the guesses made about median salary in the UK. We can get the data from the file <code>wages2023.csv</code> (you will need to adapt the code we used above for the weight estimation file so that it will load in the wages data, and in what follows the assumption is your new variable name is called <code>wages</code>)</p>
+<p>Now, let’s turn to the guesses made about median salary in the UK. We can get the data from the file <code>wages2024.csv</code> (you will need to adapt the code we used above for the weight estimation file so that it will load in the wages data, and in what follows the assumption is your new variable name is called <code>wages</code>)</p>
 <p>Let’s take a peek at the dataset with</p>
 <p><code>glimpse(wages)</code></p>
 <p>Glimpse pretty much does what you might think from the meaning of the word – it just gives us a data sample (handy because this is a much bigger dataset) and shows that we have 3 columns; uk_region (where someone lives, note ‘other’ probably equals Northern Ireland, Europe, China, etc), family_position (age relationship with siblings), and salary (estimate).</p>
-<p>By the way, the govt statistics say the actual median income in 2022 was approx. £32,300 <a href="https://www.ons.gov.uk/peoplepopulationandcommunity/personalandhouseholdfinances/incomeandwealth/bulletins/householddisposableincomeandinequality/financialyearending2022" target="_blank">see this link</a></p>
+<p>By the way, the govt statistics say the actual median income in 2023 was approx. £34,963 <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2023" target="_blank">see this link</a></p>
 <ol type="A">
 <li><p>Writing into your script, use the working “aggregate” commands from task 1 with the penelope weight data to find out the salary guesses as a function of where someone lives? That is, can you adapt that code for this problem? First, make sure you read in the data file into an R object.</p></li>
 <li><p>Can you use the aggregate command to find out salary guess as a function of family relationships? (if you are the youngest child maybe you have older siblings earning money that changes your evaluation?)</p></li>
@@ -400,28 +384,28 @@ Caution
 </ol>
 </section>
 </section>
-<section id="task-3---new-phone-use-data" class="level3">
-<h3 class="anchored" data-anchor-id="task-3---new-phone-use-data">Task 3 - New phone use data</h3>
+</section>
+<section id="task-3.2---new-phone-use-data" class="level2">
+<h2 class="anchored" data-anchor-id="task-3.2---new-phone-use-data">Task 3.2 - New phone use data</h2>
 <ol start="5" type="A">
 <li><p>Dataset 3: Use the dataset of phone screen time usage, <code>screentime2023.csv</code> to further explore and consolidate the group_by() command (ie we’ll drop the aggregate command for this task to focus on group_by()). Use copy and paste to adapt the existing script lines from the above two tasks so that this time you read in and calculate screen time usage as a function of the type of phone. In other words, add line (and comments) to the scripts for this new task.</p></li>
 <li><p>Use RStudio to figure out the overall mean screen time usage estimate and the standard deviation. Calculate by hand what usage estimate would have a z score of z=-1.5?</p></li>
 </ol>
 </section>
-<section id="task-4---final-challenge-visualisation" class="level3">
-<h3 class="anchored" data-anchor-id="task-4---final-challenge-visualisation">Task 4 - Final challenge: visualisation</h3>
+<section id="task-3.3---final-challenge-visualisation" class="level2">
+<h2 class="anchored" data-anchor-id="task-3.3---final-challenge-visualisation">Task 3.3 - Final challenge: visualisation</h2>
 <p>Can you find a way to visualise the screentime usage data that you have been working with above? The script provides two ways to consider doing this - boxplots (which we have looked at in script commands already) and ggplot, which we have spent less time with but is an extremely powerful engine for creating plots. We’ve provided the start of the code in each case, leaving you to work out the specifics. Remember to annotate your creations!</p>
 </section>
-<section id="now-youre-finished" class="level3">
-<h3 class="anchored" data-anchor-id="now-youre-finished">Now you’re finished …</h3>
+</section>
+<section id="now-youre-finished" class="level1">
+<h1>4. Now you’re finished …</h1>
 <p>Remember to complete your notes in the script, save the script file, and end the server session.</p>
 </section>
-</section>
-<section id="post---lab-recap-the-slides" class="level2">
-<h2 class="anchored" data-anchor-id="post---lab-recap-the-slides">Post - lab recap: The slides</h2>
-<p>Want to see the introduction slides used in the Levy lab? They are <a href="data/Week_3/week_3_levylab_slides.pptx">available here</a></p>
+<section id="post---lab-recap-the-slides" class="level1">
+<h1>5. Post - lab recap: The slides</h1>
+<p>Want to see the introduction slides used in the Levy lab? They are <a href="data/Week_3/week_3_levylab_slides24.pptx">going to be placed here by the end of the week</a></p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
