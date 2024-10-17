@@ -1,6 +1,6 @@
 ---
-title: 3. DVs and IVs in RStudio (2024)
-subtitle: Written by John Towse & Tom Beesley
+title: 3. DVs and IVs in RStudio
+subtitle: Written by John Towse & Tom Beesley (2024)
 order: 4
 ---
 # 1. Week 3 Lecture
@@ -25,7 +25,7 @@ Watch Lecture Part 4
 ```{=html}
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6e02a27c-b909-4655-b07a-b20c0093d396&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3(D)" ></iframe>
 ```
-Download the lecture slides [here](data/Week_3/week%203%20slides2024.pptx)
+Download the lecture slides [here](data/Week_3/week_3_lecture_slides_2024.pptx)
 
 # 2. Pre-lab work
 
@@ -124,7 +124,7 @@ D)  Can you use the `group by()` command to display salary guesses as a function
 
 ## Task 3.2 - New phone use data
 
-E)  Dataset 3: Use the dataset of phone screen time usage, `screentime2023.csv` to further explore and consolidate the group_by() command (ie we'll drop the aggregate command for this task to focus on group_by()). Use copy and paste to adapt the existing script lines from the above two tasks so that this time you read in and calculate screen time usage as a function of the type of phone. In other words, add line (and comments) to the scripts for this new task.
+E)  Dataset 3: Use the dataset of phone screen time usage, `screentime2024.csv` to further explore and consolidate the group_by() command (ie we'll drop the aggregate command for this task to focus on group_by()). Use copy and paste to adapt the existing script lines from the above two tasks so that this time you read in and calculate screen time usage as a function of the type of phone. In other words, add line (and comments) to the scripts for this new task.
 
 F)  Use RStudio to figure out the overall mean screen time usage estimate and the standard deviation. Calculate by hand what usage estimate would have a z score of z=-1.5?
 

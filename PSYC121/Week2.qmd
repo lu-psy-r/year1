@@ -182,5 +182,5 @@ In the zip file, we also provide data on the estimates of the percentage of immi
 
 # 4. Post - lab recap: The slides
 
-Want to see the introduction slides that we used in the Levy lab? By the end of the week they will be [available here](data/Week_2/week_2_levylab_slides24.pptx)
+Want to see the introduction slides that we used in the Levy lab? They are [available here](data/Week_2/week_2_levylab_slides24.pptx)
 
