@@ -58,13 +58,18 @@ Step 4. Explore help() commands. R can give you more information about how it wo
 
 Step 5. Read or load the penelope data into R. That is what line 18 of the code is designed to do
 
-`data_object_name <- read_csv("fill in") # use your own dataobject_name and specify the file you want to work with`
+```{r eval=FALSE}
+data_object_name <- read_csv("fill in") # use your own dataobject_name and specify the file you want to work with
+```
+
 
 but note that you will need to edit this line -and ensure you are in the correct working directory- for this to be successful. Then have a look at it using the View() command in the script
 
 This time, let's ask for the estimate data arranged by identity:
 
-`aggregate(x = *MISSING*$estimate, by = list(*MISSING*$identity), FUN = mean)`
+```{r eval=FALSE}
+aggregate(x = *MISSING*$estimate, by = list(*MISSING*$identity), FUN = mean)
+```
 
 First, let's try this (you will need to use your dataframe/variable name in place of MISSING). What do you get? Does this match what we did last week when we calculated the mean for the *female* and for the *other* (i.e., non-female) group?
 
@@ -82,7 +87,9 @@ Second, let's look at what is happening here:
 
 There's another way that also allows us to group scores by a (nominal) variable. This is explored in the learnr tutorial, which should help you create the command the get weight estimates broken down by gender identity. You need to define the data frame for the estimates data, and the gender IV and the estimates DV
 
-`*MISSING* %>% group_by(*MISSING*) %>% summarise(mean_estimate = mean(*MISSING*))`
+```{r eval=FALSE}
+*MISSING* %>% group_by(*MISSING*) %>% summarise(mean_estimate = mean(*MISSING*))
+```
 
 First, try this command and see what you get. If you run this command as entered, it won't work. So now use your experience at skills from the above and the learnr tutorial to work out what is required.
 
