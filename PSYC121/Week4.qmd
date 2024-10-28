@@ -26,7 +26,7 @@ Watch Lecture Part 3
 ```{=html}
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=e628ded3-4b68-416c-837c-b21300a497df&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week_4(Part_c)" ></iframe>```
 
-Watch Lecture Part 4   
+Watch Lecture Part 4
 
 ```{=html}
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=2f4b5c9f-bc1b-4ff5-a360-b21300ab1bd0&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week_4(part_d)" ></iframe>
