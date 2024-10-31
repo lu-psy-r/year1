@@ -145,4 +145,4 @@ Remember to complete your notes in the script, save the script file, and end the
 
 # 5. Post - lab recap: The slides
 
-Want to see the introduction slides used in the Levy lab? They are [going to be placed here by the end of the week](data/Week_3/week_3_levylab_slides24.pptx)
+Want to see the introduction slides used in the Levy lab? They are [here](data/Week_3/week_3_analysis_lab_24.pptx)
