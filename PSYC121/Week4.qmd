@@ -153,7 +153,7 @@ You can review all the lab handout material so far across this site. We've also 
 
 [Week 4 R script is here](data/Week_4/week_4_complete_24.R)
 
-[Information about the z-score questions are here](data/Week_4/Week_4_z-scores_answers.pdf)
+[Information about the z-score questions are here](data/Week_4/Week_4_z-scores_answers.pdf){target="_blank"}
 
 # 6. Extra external R resources 
 
