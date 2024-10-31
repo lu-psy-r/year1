@@ -140,7 +140,22 @@ Hypothesis testing and p values (plus bunny rabbits and a dog)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HTdo6xjfFHI?si=Z5Z4W5kggt5Ef0um" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-# 5. Extra external R resources 
+
+# 5. Summary for the first block of PSYC121 (week 1-5)
+
+Want to check the lab slides used for this week in the Levy Lab? They are [here](data/Week_4/week 4 analysis_lab24.pptx)
+
+You can review all the lab handout material so far across this site. We've also put together more-or-less completed scripts from this block of teaching so you can review what you have created:
+
+[Week 2 R script is here](data/Week_4/Week_2_complete_24.R)
+
+[Week 3 R script is here](data/Week_4/Week_3_complete_24.R)
+
+[Week 4 R script is here](data/Week_4/week_4_complete_24.R)
+
+[Information about the z-score questions are here](data/Week_4/Week_4_z-scores_answers.pdf)
+
+# 6. Extra external R resources 
 
 Some students have asked for a pointer to additional R resources so they can structure some time exploring the R system. There are lots, but this is good and very compatible with the teaching we provide:
 [R for data science](https://r4ds.hadley.nz){target="_blank"}
