@@ -809,48 +809,28 @@
     "href": "PSYC121/Week6.html",
     "title": "6. Sampling, probability and binomial tests",
     "section": "",
-    "text": "Watch Part 1\n\n\nWatch Part 2\n\n\nWatch Part 3\n\n\nWatch Part 4\n\n\nYou can download the lecture slides here",
-    "crumbs": [
-      "Home",
-      "PSYC121",
-      "6. Sampling, probability and binomial tests"
-    ]
+    "text": "Watch Part 1\n\n\nWatch Part 2\n\n\nWatch Part 3\n\n\nWatch Part 4\n\n\nYou can download the lecture slides here"
   },
   {
     "objectID": "PSYC121/Week6.html#week-6-lecture",
     "href": "PSYC121/Week6.html#week-6-lecture",
     "title": "6. Sampling, probability and binomial tests",
     "section": "",
-    "text": "Watch Part 1\n\n\nWatch Part 2\n\n\nWatch Part 3\n\n\nWatch Part 4\n\n\nYou can download the lecture slides here",
-    "crumbs": [
-      "Home",
-      "PSYC121",
-      "6. Sampling, probability and binomial tests"
-    ]
+    "text": "Watch Part 1\n\n\nWatch Part 2\n\n\nWatch Part 3\n\n\nWatch Part 4\n\n\nYou can download the lecture slides here"
   },
   {
     "objectID": "PSYC121/Week6.html#reading",
     "href": "PSYC121/Week6.html#reading",
     "title": "6. Sampling, probability and binomial tests",
     "section": "Reading",
-    "text": "Reading\nChapter 8 of Howell",
-    "crumbs": [
-      "Home",
-      "PSYC121",
-      "6. Sampling, probability and binomial tests"
-    ]
+    "text": "Reading\nChapter 8 of Howell"
   },
   {
     "objectID": "PSYC121/Week6.html#pre-lab-work",
     "href": "PSYC121/Week6.html#pre-lab-work",
     "title": "6. Sampling, probability and binomial tests",
     "section": "Pre-lab work",
-    "text": "Pre-lab work\n\nEnsure you have watched the above lecture content for Week 6.\nPLEASE NOTE! The learnr server is currently down - we are trying to fix this asap. Complete the short learnr tutorial which will introduce you to running the binomial tests in R. You can find it here.",
-    "crumbs": [
-      "Home",
-      "PSYC121",
-      "6. Sampling, probability and binomial tests"
-    ]
+    "text": "Pre-lab work\n\nEnsure you have watched the above lecture content for Week 6.\nPLEASE NOTE! The learnr server is currently down - we are trying to fix this asap. Complete the short learnr tutorial which will introduce you to running the binomial tests in R. You can find it here."
   },
   {
     "objectID": "PSYC121/Week6.html#some-basic-rmarkdown",
@@ -864,48 +844,28 @@
     "href": "PSYC121/Week6.html#creating-an-r-markdown-for-your-lab-work",
     "title": "6. Sampling, probability and binomial tests",
     "section": "Creating an R Markdown for your lab work",
-    "text": "Creating an R Markdown for your lab work\n\nDelete all of the script except the first title (## R Markdown)\nChange this title to something more relevant: (e.g., ## Task 1 - Card Sampling task)\nKnit your document to check it is still working!",
-    "crumbs": [
-      "Home",
-      "PSYC121",
-      "6. Sampling, probability and binomial tests"
-    ]
+    "text": "Creating an R Markdown for your lab work\n\nDelete all of the script except the first title (## R Markdown)\nChange this title to something more relevant: (e.g., ## Task 1 - Card Sampling task)\nKnit your document to check it is still working!"
   },
   {
     "objectID": "PSYC121/Week6.html#card-sampling-task",
     "href": "PSYC121/Week6.html#card-sampling-task",
     "title": "6. Sampling, probability and binomial tests",
     "section": "Card sampling task",
-    "text": "Card sampling task\n\nIn the first task this week we will look at the sampling of events and we will apply the basic statistical test of the binomial test: binom.test()\nEach table has a set of cards. These will be 13 red cards and 13 black cards - please check your set to ensure you have the right number of each colour (it doesn’t matter what suit the cards are).\nWe are going to play a game in which one person chooses a set of these cards and biases the deck towards either red or black. The other members of the table have to try and work out which way the set is biased. To do this, they will draw samples from the deck.\n\n\n\n\n\n\nThe Experiment\n\n\n\nThink of this as an experiment: there is something real out there in the world in our “population” (the cards). As an experimenter we are trying to estimate what is true about the world, and in order to do this we need to take samples. When you can only see the backs of the cards, that data is unobserved. But as we draw samples, we start to understand how the “world” is - whether it is biased towards red or black.\nSo each time you draw a card, you are observing one data point from the population, and based on the data you collect (your samples) you are going to draw an inference about what is true about the population.\n\n\n\nSet up and instructions:\n\nOne person on each table should act as the “world” (the person who biases the cards). Congratulations, you are God! This person will determine what is true about the state of things in the world. This means they control what is contained in the deck of cards.\nFor each experiment, this person secretly looks at the cards, and removes some cards to use in the experiment. For example, from the set of 26 cards, they might choose to remove 4 black cards. The deck is now biased towards red (13 red; 9 black).\nIt’s important that no one sees what the cards are (the ones you’ve kept, or the ones removed). Shuffle the cards so they are ready to be sampled.\nThe remaining people (1 or more) will act as the experimenters. Your job is to draw samples and work out whether you think the deck is biased or not towards either red or black.\nNow copy the following text and code to your R Markdown document to record your work:\n\n### Experiment 1\n\nNumber of samples:\nTotal red cards found:\nTotal black cards found:\nConclusion: \nThe true bias was: \n\n\n```{r}\n\nbinom.test(x, n) # x is the number or red or black; n is the sample size\n\n```\n\n\nRunning each experiment\nDo these steps for each experiment:\n\nThe “World” removes some cards from the full deck (the number and colour of the cards removed is up to them). They shuffle the chosen cards ready to start the “experiment”.\nThe “Experimenters” pre-register their sample size. That is, they state how many cards they are going to draw.\nDraw samples one at a time (each experimenter can take one card, to speed things up).\n\n\n\n\n\n\n\nImportant!\n\n\n\nMake sure you replace all the cards each time you draw samples. The world/dealer should also give the pack a quick shuffle.\n\n\n\nDo step 3 until you have collect the sample size you chose\nOnce you have all the samples, the experimenters should draw a conclusion based initially on their own “gut feeling” about the data. Do you think the deck was biased towards red, black, or was it unbiased?\nChange the binom.test() code to provide a statistical result. Note the “p value”. Was this result unusual? How likely were the data given the null hypothesis?\nThe “world” can then reveal the hidden cards. Was the deck actually biased or not? How does this sit with a) your initial conclusions, and b) the result of the binomial test?\nComplete your record log in the .Rmd file. Feel free to Write a short statement about what you found in this experiment.\n\nRepeat all of the above steps (1-8) for a new experiment, making sure that you try different parameters for the experiment. So vary a) how many cards are removed from the deck, b) the combination of cards removed from the deck, and c) the pre-registered sample size. Feel free to swap the roles around.\nOnce you’ve conducted a few experiments, discuss on your table the results you found. It might be useful to think about the following things:\n\nwere there times when your intuitions were different to the statistical result? For example, you were sure there was a bias, but in fact the statistics told you this was not that unusual (p was &gt; .05)?\nwere there times when the deck was actually biased, but you failed to prove this with your experiment (you failed to see p &lt; .05)? Do you remember what this type of error is called?\nwere there times when the deck was not biased, but the test result suggested it was (p &lt; .05)? Do you remember what type of error this is called?",
-    "crumbs": [
-      "Home",
-      "PSYC121",
-      "6. Sampling, probability and binomial tests"
-    ]
+    "text": "Card sampling task\n\nIn the first task this week we will look at the sampling of events and we will apply the basic statistical test of the binomial test: binom.test()\nEach table has a set of cards. These will be 13 red cards and 13 black cards - please check your set to ensure you have the right number of each colour (it doesn’t matter what suit the cards are).\nWe are going to play a game in which one person chooses a set of these cards and biases the deck towards either red or black. The other members of the table have to try and work out which way the set is biased. To do this, they will draw samples from the deck.\n\n\n\n\n\n\nThe Experiment\n\n\n\nThink of this as an experiment: there is something real out there in the world in our “population” (the cards). As an experimenter we are trying to estimate what is true about the world, and in order to do this we need to take samples. When you can only see the backs of the cards, that data is unobserved. But as we draw samples, we start to understand how the “world” is - whether it is biased towards red or black.\nSo each time you draw a card, you are observing one data point from the population, and based on the data you collect (your samples) you are going to draw an inference about what is true about the population.\n\n\n\nSet up and instructions:\n\nOne person on each table should act as the “world” (the person who biases the cards). Congratulations, you are God! This person will determine what is true about the state of things in the world. This means they control what is contained in the deck of cards.\nFor each experiment, this person secretly looks at the cards, and removes some cards to use in the experiment. For example, from the set of 26 cards, they might choose to remove 4 black cards. The deck is now biased towards red (13 red; 9 black).\nIt’s important that no one sees what the cards are (the ones you’ve kept, or the ones removed). Shuffle the cards so they are ready to be sampled.\nThe remaining people (1 or more) will act as the experimenters. Your job is to draw samples and work out whether you think the deck is biased or not towards either red or black.\nNow copy the following text and code to your R Markdown document to record your work:\n\n### Experiment 1\n\nNumber of samples:\nTotal red cards found:\nTotal black cards found:\nConclusion: \nThe true bias was: \n\n\n```{r}\n\nbinom.test(x, n) # x is the number or red or black; n is the sample size\n\n```\n\n\nRunning each experiment\nDo these steps for each experiment:\n\nThe “World” removes some cards from the full deck (the number and colour of the cards removed is up to them). They shuffle the chosen cards ready to start the “experiment”.\nThe “Experimenters” pre-register their sample size. That is, they state how many cards they are going to draw.\nDraw samples one at a time (each experimenter can take one card, to speed things up).\n\n\n\n\n\n\n\nImportant!\n\n\n\nMake sure you replace all the cards each time you draw samples. The world/dealer should also give the pack a quick shuffle.\n\n\n\nDo step 3 until you have collect the sample size you chose\nOnce you have all the samples, the experimenters should draw a conclusion based initially on their own “gut feeling” about the data. Do you think the deck was biased towards red, black, or was it unbiased?\nChange the binom.test() code to provide a statistical result. Note the “p value”. Was this result unusual? How likely were the data given the null hypothesis?\nThe “world” can then reveal the hidden cards. Was the deck actually biased or not? How does this sit with a) your initial conclusions, and b) the result of the binomial test?\nComplete your record log in the .Rmd file. Feel free to Write a short statement about what you found in this experiment.\n\nRepeat all of the above steps (1-8) for a new experiment, making sure that you try different parameters for the experiment. So vary a) how many cards are removed from the deck, b) the combination of cards removed from the deck, and c) the pre-registered sample size. Feel free to swap the roles around.\nOnce you’ve conducted a few experiments, discuss on your table the results you found. It might be useful to think about the following things:\n\nwere there times when your intuitions were different to the statistical result? For example, you were sure there was a bias, but in fact the statistics told you this was not that unusual (p was &gt; .05)?\nwere there times when the deck was actually biased, but you failed to prove this with your experiment (you failed to see p &lt; .05)? Do you remember what this type of error is called?\nwere there times when the deck was not biased, but the test result suggested it was (p &lt; .05)? Do you remember what type of error this is called?"
   },
   {
     "objectID": "PSYC121/Week6.html#risky-and-safe-decisions",
     "href": "PSYC121/Week6.html#risky-and-safe-decisions",
     "title": "6. Sampling, probability and binomial tests",
     "section": "Risky and safe decisions",
-    "text": "Risky and safe decisions\nFor the second exercise today we will look at data from the survey on “risky and safe decisions”. You may remember that you were asked the following question:\n\n\n\n\n\n\nGain\n\n\n\nImagine you are on a game-show and you win £300. The presenter gives you have a choice: receive an additional £100 for sure, or take a gamble offering a 50% chance to gain £200 and a 50% chance to gain nothing. Which would you choose?\n\nreceive £100 for sure\ntake the gamble of a 50% chance to gain £200 and a 50% chance to gain nothing\n\n\n\nWe then asked you a similar question:\n\n\n\n\n\n\nLoss\n\n\n\nImagine you are on a different game-show and you win £500. Here you are given a choice between either losing £100 from your winnings for sure, or taking a gamble offering a 50% chance to lose nothing and a 50% chance to lose £200. Which would you choose?\n\nlose £100 for sure\ntake the gamble of a 50% chance to lose nothing and a 50% chance to lose £200\n\n\n\nWe’ve called these “gain” and “loss”, because in the first scenario you’re being asked about a chance to gain money, while in the second, it’s about a chance to lose money. Note that the “expected utility” of the choices is equivalent:\n\n\n\n\n\n\n“The expected utility of an act is a weighted average of the utilities of each of its possible outcomes, where the utility of an outcome measures the extent to which that outcome is preferred, or preferable, to the alternatives. The utility of each outcome is weighted according to the probability that the act will lead to that outcome.” see here\n\n\n\nThat’s to say, on average, you’ll end up with +£100 for the two cases in the gain scenario, or -£100 for the two cases in the loss scenario.\nBut what do people actually pick? Well people tend to be risk-averse, choosing the safe option overall. But interestingly, the safe option is picked far less when the scenario is presented as a loss. People seem to want to take the risk of potentially not losing anything (but maybe losing more).\nLet’s look to see if you showed the same pattern!\n\nCreate a new section of your markdown, giving it a suitable header\nCreate a new code chunk by clicking the “Code” menu, then “Insert Chunk”\nYou can download the data from this link, then upload it into the server.\nAdd a read_csv() command to read the data into the environment.\n\n\n\n\n\n\n\nReading CSVs\n\n\n\n\nRemember to set the working directory so R knows where the file is\nRemember to assign (&lt;-) to a new data object and give this a sensible name\n\n\n\n\nView the data, and see that the columns represent the gain and loss scenarios. The values represent the choices people made.\nUse the count() function to count the number of “safe” and “risky” choices that were made for our sample\n\n\ncount(my_data_object_name, gain)\n\n\nWe can now tell whether, in our sample, people tended to play it safe or take the risky choice. Did the sample have a meaningful bias towards one type of decision? If they didn’t we’d expect it to be a 50/50 split between safe and risky (people might make their choice at random). Use the binom.test() to look at whether the result would be expected by chance, noting the p value that is found.\nWrite a sentence or two after your code to explain what this result means.\nRepeat for the data from the loss column. Was the p value &lt; .05 here? Again, write a sentence or two to explain what this means.",
-    "crumbs": [
-      "Home",
-      "PSYC121",
-      "6. Sampling, probability and binomial tests"
-    ]
+    "text": "Risky and safe decisions\nFor the second exercise today we will look at data from the survey on “risky and safe decisions”. You may remember that you were asked the following question:\n\n\n\n\n\n\nGain\n\n\n\nImagine you are on a game-show and you win £300. The presenter gives you have a choice: receive an additional £100 for sure, or take a gamble offering a 50% chance to gain £200 and a 50% chance to gain nothing. Which would you choose?\n\nreceive £100 for sure\ntake the gamble of a 50% chance to gain £200 and a 50% chance to gain nothing\n\n\n\nWe then asked you a similar question:\n\n\n\n\n\n\nLoss\n\n\n\nImagine you are on a different game-show and you win £500. Here you are given a choice between either losing £100 from your winnings for sure, or taking a gamble offering a 50% chance to lose nothing and a 50% chance to lose £200. Which would you choose?\n\nlose £100 for sure\ntake the gamble of a 50% chance to lose nothing and a 50% chance to lose £200\n\n\n\nWe’ve called these “gain” and “loss”, because in the first scenario you’re being asked about a chance to gain money, while in the second, it’s about a chance to lose money. Note that the “expected utility” of the choices is equivalent:\n\n\n\n\n\n\n“The expected utility of an act is a weighted average of the utilities of each of its possible outcomes, where the utility of an outcome measures the extent to which that outcome is preferred, or preferable, to the alternatives. The utility of each outcome is weighted according to the probability that the act will lead to that outcome.” see here\n\n\n\nThat’s to say, on average, you’ll end up with +£100 for the two cases in the gain scenario, or -£100 for the two cases in the loss scenario.\nBut what do people actually pick? Well people tend to be risk-averse, choosing the safe option overall. But interestingly, the safe option is picked far less when the scenario is presented as a loss. People seem to want to take the risk of potentially not losing anything (but maybe losing more).\nLet’s look to see if you showed the same pattern!\n\nCreate a new section of your markdown, giving it a suitable header\nCreate a new code chunk by clicking the “Code” menu, then “Insert Chunk”\nYou can download the data from this link, then upload it into the server.\nAdd a read_csv() command to read the data into the environment.\n\n\n\n\n\n\n\nReading CSVs\n\n\n\n\nRemember to set the working directory so R knows where the file is\nRemember to assign (&lt;-) to a new data object and give this a sensible name\n\n\n\n\nView the data, and see that the columns represent the gain and loss scenarios. The values represent the choices people made.\nUse the count() function to count the number of “safe” and “risky” choices that were made for our sample\n\n\ncount(my_data_object_name, gain)\n\n\nWe can now tell whether, in our sample, people tended to play it safe or take the risky choice. Did the sample have a meaningful bias towards one type of decision? If they didn’t we’d expect it to be a 50/50 split between safe and risky (people might make their choice at random). Use the binom.test() to look at whether the result would be expected by chance, noting the p value that is found.\nWrite a sentence or two after your code to explain what this result means.\nRepeat for the data from the loss column. Was the p value &lt; .05 here? Again, write a sentence or two to explain what this means."
   },
   {
     "objectID": "PSYC121/Week6.html#week-6-quiz",
     "href": "PSYC121/Week6.html#week-6-quiz",
     "title": "6. Sampling, probability and binomial tests",
     "section": "Week 6 Quiz",
-    "text": "Week 6 Quiz\nYou can access a set of quiz questions related to this week here.",
-    "crumbs": [
-      "Home",
-      "PSYC121",
-      "6. Sampling, probability and binomial tests"
-    ]
+    "text": "Week 6 Quiz\nYou can access a set of quiz questions related to this week here."
   },
   {
     "objectID": "PSYC121/Week5.html",
@@ -1556,35 +1516,20 @@
     "href": "PSYC121/Week6.html#working-with-r-markdown-documents-.rmd",
     "title": "6. Sampling, probability and binomial tests",
     "section": "Working with “R Markdown” documents (.Rmd)",
-    "text": "Working with “R Markdown” documents (.Rmd)\nToday we will take a look at a different type of document file called “R Markdown” (the filetype is .Rmd). It’s like a .R script, only a bit more fancy! Today we’ll introduce a couple of basic features of these files and use this document for our tasks below.\n\nMake sure you have a Week 6 folder\nOnce in that folder in the files pane, click “more” and “set as working directory”\nThen click the new file button and select “R Markdown”\n\n\n\n\nscreenshot of r markdown menu\n\n\n\nYou’ll be asked to name this file. Leave the other options as they are and click OK.\nWhen the new R Markdown file appears, try “knitting” it (the icon at the top with the ball of wool). You should get a nice output of the default R Markdown document.",
-    "crumbs": [
-      "Home",
-      "PSYC121",
-      "6. Sampling, probability and binomial tests"
-    ]
+    "text": "Working with “R Markdown” documents (.Rmd)\nToday we will take a look at a different type of document file called “R Markdown” (the filetype is .Rmd). It’s like a .R script, only a bit more fancy! Today we’ll introduce a couple of basic features of these files and use this document for our tasks below.\n\nMake sure you have a Week 6 folder\nOnce in that folder in the files pane, click “more” and “set as working directory”\nThen click the new file button and select “R Markdown”\n\n\n\n\nscreenshot of r markdown menu\n\n\n\nYou’ll be asked to name this file. Leave the other options as they are and click OK.\nWhen the new R Markdown file appears, try “knitting” it (the icon at the top with the ball of wool). You should get a nice output of the default R Markdown document."
   },
   {
     "objectID": "PSYC121/Week6.html#adding-code-chunks",
     "href": "PSYC121/Week6.html#adding-code-chunks",
     "title": "6. Sampling, probability and binomial tests",
     "section": "Adding Code chunks",
-    "text": "Adding Code chunks\nR Markdown documents allow you to freely type in text in the main body of the file. You are no longer restricted to putting comments after the “#” sign. Instead, when you want to put in R code you will need to create a “code chunk” within the document. These are places where you put your R code you want to run.\nTry running the first code chunk (click the green arrow on the right). This will run the code and display the output (in the document and in the console).\n\n\n\n\n\n\n.Rmd and .R differences\n\n\n\nIn a way, R Markdown files function in the opposite way to .R files:\n\n.Rmd: you write normal text in the main part (like you’d do in a word processor), but you create a special “code chunk” for your code.\n.R: you write code in the main body, and use the “#” to write normal text as a comment",
-    "crumbs": [
-      "Home",
-      "PSYC121",
-      "6. Sampling, probability and binomial tests"
-    ]
+    "text": "Adding Code chunks\nR Markdown documents allow you to freely type in text in the main body of the file. You are no longer restricted to putting comments after the “#” sign. Instead, when you want to put in R code you will need to create a “code chunk” within the document. These are places where you put your R code you want to run.\nTry running the first code chunk (click the green arrow on the right). This will run the code and display the output (in the document and in the console).\n\n\n\n\n\n\n.Rmd and .R differences\n\n\n\nIn a way, R Markdown files function in the opposite way to .R files:\n\n.Rmd: you write normal text in the main part (like you’d do in a word processor), but you create a special “code chunk” for your code.\n.R: you write code in the main body, and use the “#” to write normal text as a comment"
   },
   {
     "objectID": "PSYC121/Week6.html#source-mode-vs.-visual-mode",
     "href": "PSYC121/Week6.html#source-mode-vs.-visual-mode",
     "title": "6. Sampling, probability and binomial tests",
     "section": "Source mode vs. Visual mode",
-    "text": "Source mode vs. Visual mode\nOne of the nice things about working with R Markdown documents is that you can switch from the “coding” view (called “Source”) to something that is much more like a word processor (called “Visual”). You’ll see these two options in the top left corner of the document. Try flicking between them. Visual mode allows you to edit the document like a word-processor, making it easy to make formatting changes, add titles, insert images and tables, etc.",
-    "crumbs": [
-      "Home",
-      "PSYC121",
-      "6. Sampling, probability and binomial tests"
-    ]
+    "text": "Source mode vs. Visual mode\nOne of the nice things about working with R Markdown documents is that you can switch from the “coding” view (called “Source”) to something that is much more like a word processor (called “Visual”). You’ll see these two options in the top left corner of the document. Try flicking between them. Visual mode allows you to edit the document like a word-processor, making it easy to make formatting changes, add titles, insert images and tables, etc."
   }
 ]
