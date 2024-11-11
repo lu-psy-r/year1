@@ -10,19 +10,27 @@ editor_options:
 
 Watch Part 1
 
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=5676177e-7dcc-4c30-9e72-b0b500aa82d6&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=5676177e-7dcc-4c30-9e72-b0b500aa82d6&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player">
+
+</iframe>
 
 Watch Part 2
 
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=a6c7e439-077a-464d-ac43-b0b500aa8285&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=a6c7e439-077a-464d-ac43-b0b500aa8285&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player">
+
+</iframe>
 
 Watch Part 3
 
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=c62c74c2-4bb0-4c28-91b0-b0b500aa825d&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=c62c74c2-4bb0-4c28-91b0-b0b500aa825d&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player">
+
+</iframe>
 
 Watch Part 4
 
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=350fbb75-e55d-47bf-8c41-b0b500aa8218&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=350fbb75-e55d-47bf-8c41-b0b500aa8218&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player">
+
+</iframe>
 
 You can download the lecture slides [here](data/Week_6/PSYC121_wk6_slides_2023.pptx)
 
@@ -46,7 +54,7 @@ Today we will take a look at a different type of document file called "R Markdow
 
 3.  Then click the new file button and select "R Markdown"
 
-![screenshot of r markdown menu](images/wk6/new_rmd.png){fig-alt="screenshot of r markdown menu"}
+![](images/wk6/new_rmd.png){fig-alt="screenshot of r markdown menu"}
 
 4.  You'll be asked to name this file. Leave the other options as they are and click OK.
 
@@ -56,7 +64,11 @@ Today we will take a look at a different type of document file called "R Markdow
 
 R Markdown documents allow you to freely type in text in the main body of the file. You are no longer restricted to putting comments after the "\#" sign. Instead, when you want to put in R code you will need to create a *"code chunk"* within the document. These are places where you put your R code you want to run.
 
-Try running the first code chunk (click the green arrow on the right). This will run the code and display the output (in the document and in the console).
+The easiest way to add a code chunk is to use the dedicated button in the editor pane (the shortcut is ctrl+alt+i):
+
+![](images/wk6/add_chunk.png){fig-alt="adding a chunk to Rmarkdown"}
+
+Select "R" as that is the type of code you want to write. With your template document, try running the very first code chunk (click the green arrow on the right). This will run the code and display the output (in the document and in the console).
 
 ::: {.callout-tip title=".Rmd and .R differences"}
 In a way, R Markdown files function in the opposite way to .R files:
