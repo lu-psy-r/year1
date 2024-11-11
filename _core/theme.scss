@@ -68,22 +68,28 @@ $btn-font-family:             $font-family-sans-serif !default;
 $btn-font-size:               .875rem !default;
 $btn-font-size-sm:            .688rem !default;
 
-$btn-border-radius:           1.078em !default;
-$btn-border-radius-lg:        2.688em !default;
-$btn-border-radius-sm:        .844em !default;
+//$btn-border-radius:           1.078em !default;
+//$btn-border-radius-lg:        2.688em !default;
+//$btn-border-radius-sm:        .844em !default;
 
 // Forms
 
 $input-border-color:                    rgba(0, 0, 0, .1) !default;
 $input-group-addon-bg:                  $gray-200 !default !default;
 
+// link
+$link-color:                        $red !default;
+
 // Navbar
 
 $navbar-bg:                         $red !default;
-$navbar-dark-color:                 $red !default;
-$navbar-dark-hover-color:           $red !default;
-$navbar-light-hover-color:          $red !default;
-$navbar-light-active-color:         $red !default;
+$navbar-fg:                         $white !default;
+$navbar-hl:                         $white !default;
+$navbar-dark-color:                 $white !default;
+$navbar-dark-hover-color:           $white !default;
+$navbar-light-hover-color:          $white !default;
+$navbar-light-active-color:         $white !default;
+$navbar-dark-active-color:          $white !default;
 
 // Tooltips
 
@@ -102,6 +108,14 @@ $alert-border-width:                0 !default;
 
 
 /*-- scss:rules --*/
+
+#title-block-header a {
+  color: $red !important;
+}
+
+a.sidebar-item-text:hover {
+  color: $black;
+}
 
 // Navbar
 .navbar {
@@ -213,3 +227,61 @@ table,
   font-size: $font-size-sm;
 }
 
+/* Custom*/
+
+/*this removes the title on the page*/
+.quarto-title > h1.title {
+  opacity: 0 !important;
+}
+
+button.btn-landing {
+  color: #fff;
+  background-color: #D08585;
+  border-color: #D08585;
+  border-radius: 5vw !important;
+  margin: 5px;
+  width:100%
+}
+
+button.year-one {
+  background-color: #b20f11;
+  border-color: #b20f11;
+}
+
+button.year-two {
+  background-color: #B53737;
+  border-color: #B53737;
+}
+
+button.year-three {
+  background-color: #BE5151;
+  border-color: #BE5151;
+}
+
+button.year-msc {
+  background-color: #C76B6B;
+  border-color: #C76B6B;
+}
+
+button.btn:hover, .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .accordion-button:hover, .accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #780b0c
+}
+
+a.nav-link {
+  color: $white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a.nav-link:hover {
+  color: $gray-400;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a.link {
+  color: #780b0c;
+  background-color: transparent;
+  text-decoration: none;
+}
