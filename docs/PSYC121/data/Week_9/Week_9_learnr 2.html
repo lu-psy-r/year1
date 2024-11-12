@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.56">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>PSYC121: Week 9 Lab – Statistics for Psychologists</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../Images/favicon.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>window.onload = function() {document.getElementById("autocomplete-0-input").placeholder = "Search Year 1";};</script>
+<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://lu-psy-r.github.io/essentials/index_24.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="https://lu-psy-r.github.io/">
+    <span class="navbar-title">Statistics for Psychologists</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year1/index.html"> 
+<span class="menu-text">Year 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year2/index.html"> 
+<span class="menu-text">Year 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year3/index.html"> 
+<span class="menu-text">Year 3</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/MSc/index.html"> 
+<span class="menu-text">MSc</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/more/index.html"> 
+<span class="menu-text">And More…</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">PSYC121: Week 9 Lab</li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../PSYC121/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PSYC121</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Statistics for Psychologists</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Descriptive statistics in RStudio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. DVs and IVs in RStudio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Customisation of graphs, and z-scores</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Class test</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Sampling, probability and binomial tests</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Filtering data and testing means (one-sample t-test)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Related-samples t-tests, plotting means and SE bars</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC121/Week9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9. Unrelated-samples t-test and Power</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../PSYC122/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PSYC122</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week11.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Week 11 - Correlation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Week 12 - Correlation Part 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week13.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Week 13 - The Linear Model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week14.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Week 14 - Chi-Square</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week16.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Week 16 – Hypotheses, associations</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week17.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Week 17 – Better understanding the linear model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week18.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Week 18 – Developing the linear model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../PSYC122/Week19.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Week 19 – Linear models – critical perspectives</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#exploring-the-data" id="toc-exploring-the-data" class="nav-link active" data-scroll-target="#exploring-the-data">Exploring the data</a></li>
+  <li><a href="#mutating-new-variables" id="toc-mutating-new-variables" class="nav-link" data-scroll-target="#mutating-new-variables">“Mutating” new variables</a>
+  <ul class="collapse">
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"></a></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2"></a></li>
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3"></a></li>
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4"></a></li>
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5"></a></li>
+  </ul></li>
+  <li><a href="#filtering-data" id="toc-filtering-data" class="nav-link" data-scroll-target="#filtering-data">Filtering data</a>
+  <ul class="collapse">
+  <li><a href="#common-expressions" id="toc-common-expressions" class="nav-link" data-scroll-target="#common-expressions">Common expressions</a></li>
+  <li><a href="#practice-filtering" id="toc-practice-filtering" class="nav-link" data-scroll-target="#practice-filtering">Practice filtering</a></li>
+  </ul></li>
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6"></a>
+  <ul class="collapse">
+  <li><a href="#end-of-tutorial" id="toc-end-of-tutorial" class="nav-link" data-scroll-target="#end-of-tutorial">End of tutorial</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">PSYC121: Week 9 Lab</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="exploring-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="exploring-the-data">Exploring the data</h2>
+<p>For this week’s online tutorial we have data on how much students use social media platforms and people’s mean reading times from the stroop task. We will use these data to look at how we create new variables (columns) using <code>mutate()</code>. We will also expand what we have learnt about filtering data based on conditions, using the <code>filter()</code> function. Let’s take a look at the data we have using the <code>summary()</code>, to get useful statistics. You can also use <code>head()</code> to look at the first few rows of data</p>
+<div class="cell" data-exercise="true">
+<div class="tutorial-exercise" data-label="summary_example" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(data)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+</div>
+</section>
+<section id="mutating-new-variables" class="level2">
+<h2 class="anchored" data-anchor-id="mutating-new-variables">“Mutating” new variables</h2>
+<p>In this data set, all of the variables are numerical. Sometimes we may want to recode a variable to turn it from a continuous numerical variable, to a categorical/nominal variable. For example, maybe we want to compare students who are <em>high users of facebook</em>, to those who are <em>low users of facebook</em>. We could do that in the following way using the <code>mutate()</code> function:</p>
+<div class="cell" data-exercise="true">
+<div class="tutorial-exercise" data-label="mutate_example" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">facebook_use =</span> facebook_days <span class="sc">&gt;=</span> <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+</div>
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section"></h3>
+<p>When you run this code you’ll see that <code>mutate()</code> has created a new column on the end, which tells us whether the person uses facebook for at least 4 days a week. Note that the new column is called “facebook_use” - this works in exactly the same way as the <code>summarise()</code> commands you have been practising, where you tell it the new variable name you want to create. The values “TRUE” and “FALSE” are not especially informative here - we probably want to be a bit clearer in the names we give to these <em>levels</em> of the new variable. To do that we can modify this code a little to use an <code>if_else()</code>, which checks <strong>if the “conditional statement” (facebook_days &gt;= 4) is TRUE or FALSE</strong>, and specifies the values to use in each case:</p>
+<div class="cell" data-exercise="true">
+<div class="tutorial-exercise" data-label="ifelse_example" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">facebook_use =</span> <span class="fu">if_else</span>(facebook_days <span class="sc">&gt;=</span> <span class="dv">4</span>,<span class="at">true =</span> <span class="st">"high"</span>,<span class="at">false =</span> <span class="st">"low"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+</div>
+</section>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1"></h3>
+<p>Just like with <code>summarise()</code>, we can have multiple new columns created within the one <code>mutate()</code> command. Each of these needs to be separated by a comma, and it’s good practice to put each one on a new line. Try copying and pasting the if_else command, and then modifying it to make two new variables to code for “high” and “low” instagram and twitter use:</p>
+<div class="cell" data-exercise="true">
+<div class="tutorial-exercise" data-label="more_ifelse" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">facebook_use =</span> <span class="fu">if_else</span>(facebook_days <span class="sc">&gt;=</span> <span class="dv">4</span>,<span class="at">true =</span> <span class="st">"high"</span>,<span class="at">false =</span> <span class="st">"low"</span>),</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">instagram_use =</span> ,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">twitter_use =</span> )</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>data</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># because we are assigning (&lt;-) the changes to update "data", </span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># we write it again here to display the results</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+</div>
+<div class="cell">
+<div class="tutorial-exercise-support" data-label="more_ifelse-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">facebook_use =</span> <span class="fu">if_else</span>(facebook_days <span class="sc">&gt;=</span> <span class="dv">4</span>,<span class="at">true =</span> <span class="st">"high"</span>,<span class="at">false =</span> <span class="st">"low"</span>),</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">instagram_use =</span> <span class="fu">if_else</span>(instagram_days <span class="sc">&gt;=</span> <span class="dv">4</span>,<span class="at">true =</span> <span class="st">"high"</span>,<span class="at">false =</span> <span class="st">"low"</span>),</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>         <span class="at">twitter_use =</span> <span class="fu">if_else</span>(twitter_days <span class="sc">&gt;=</span> <span class="dv">4</span>,<span class="at">true =</span> <span class="st">"high"</span>,<span class="at">false =</span> <span class="st">"low"</span>))</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>data</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># because we are assigning (&lt;-) the changes to update "data", </span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># we write it again here to display the results</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2"></h3>
+<p>Let’s now look at our <em>avg_stroop</em> variable, and first plot the data in a box and whisker plot:</p>
+<div class="cell" data-exercise="true" data-exercise.setup="update_data">
+<div class="tutorial-exercise" data-label="stroop_boxplot" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> avg_stroop))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+</div>
+</section>
+<section id="section-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-3"></h3>
+<p>We can see here that we have a number of points that lie outside the “whiskers” on the plot. One thing we can do to identify potential outliers is to create a new variable that transforms the data to a z distribution. This is easy to do in R using the <code>scale()</code> function:</p>
+<div class="cell" data-exercise="true" data-exercise.setup="more_ifelse">
+<div class="tutorial-exercise" data-label="z_score" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">z_stroop =</span> <span class="fu">scale</span>(avg_stroop))</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>data</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># because we are assigning (&lt;-) the changes to update "data", </span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># we write it again here to display the results</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+</div>
+</section>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4"></h3>
+<p>You may remember that a distribution of z scores has a mean of 0 and a standard deviation of 1. Let’s check that here:</p>
+<div class="cell" data-exercise="true" data-exercise.setup="update_data_2">
+<div class="tutorial-exercise" data-label="z_mean_sd" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>()</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+</div>
+<div class="cell">
+<div class="tutorial-exercise-support" data-label="z_mean_sd-hint" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(data_set<span class="sc">$</span>variable) <span class="co"># example</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(data_set<span class="sc">$</span>variable) <span class="co"># example</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell">
+<div class="tutorial-exercise-support" data-label="z_mean_sd-solution" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(data<span class="sc">$</span>z_stroop)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(data<span class="sc">$</span>z_stroop)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<p>You’ll notice that the value for the mean is not quite 0 (but it is very very small!). This is probably due to a rounding of values in the <code>scale()</code> function. To get a value of 0 we could encolse the statement in the <code>round()</code> function, e.g.&nbsp;`round(mean(),digits = 2).</p>
+</section>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5"></h3>
+<p>A good way to get a sense of the range of values in our z-scores is to use <code>arrange()</code> to sort them in order. We can then use <code>head()</code> and <code>tail()</code> to see the values at each end of the distribution (the first ‘n’ rows, and the last ‘n’ rows)</p>
+<div class="cell" data-exercise="true" data-exercise.setup="update_data_2">
+<div class="tutorial-exercise" data-label="arrange" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  data <span class="sc">%&gt;%</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(z_stroop)) <span class="co"># arrange in descending order</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data, <span class="at">n =</span> <span class="dv">10</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="fu">tail</span>(data, <span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+</div>
+<p>You can see that we’ve got some quite extreme values here. First, we’ve got some very slow participants, showing average reading times of over 10 seconds. Secondly, we’ve got some extremely fast participants. The fastest participant of all is particularly unusual - perhaps they put in incorrect values into the survey?</p>
+</section>
+</section>
+<section id="filtering-data" class="level2">
+<h2 class="anchored" data-anchor-id="filtering-data">Filtering data</h2>
+<p>As you can see, we quite often want to filter our data to select or remove some of the rows we are working with. To do this, we can use the <code>filter()</code> command.</p>
+<p>To use <code>filter()</code>, we simply specify the data first, and then we need to use an <em>expression</em> to state how we want the data to be filtered. For example:</p>
+<div class="cell" data-exercise="true" data-exercise.setup="update_data_3">
+<div class="tutorial-exercise" data-label="filter_example" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(z_stroop <span class="sc">&lt;=</span> <span class="dv">2</span>) </span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># find all those people who have z_stroop values lower than positive 2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+</div>
+<section id="common-expressions" class="level3">
+<h3 class="anchored" data-anchor-id="common-expressions">Common expressions</h3>
+<p>The following table gives some examples of very common expressions used in filtering data:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-striped caption-top table-sm small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Operator</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Meaning</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">==</td>
+<td style="text-align: left;">is the same as</td>
+<td style="text-align: left;">filter(dataQ, age==27)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&lt;</td>
+<td style="text-align: left;">is less than</td>
+<td style="text-align: left;">filter(dataQ, age&lt;25)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&gt;</td>
+<td style="text-align: left;">is greater than</td>
+<td style="text-align: left;">filter(dataQ, age&gt;30)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">!=</td>
+<td style="text-align: left;">is not equal to</td>
+<td style="text-align: left;">filter(dataQ, gender != 'female')</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&amp;</td>
+<td style="text-align: left;">and</td>
+<td style="text-align: left;">filter(dataQ, age&lt;30 &amp; gender == 'female')</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">|</td>
+<td style="text-align: left;">or</td>
+<td style="text-align: left;">filter(dataQ, gender == 'male' | gender == 'non-binary')</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>It’s particularly important to note the difference between “==” and “=” in R. “=” is used as an assignment operator - you’ve used it several times already inside functions (e.g., <code>na.rm = TRUE</code>, <code>mu = 29600</code>). You can think of “=” as meaning “set this to”. In contrast the double equals operator, “==”, asks a question: “is this thing the same as this other thing?” In the above example, <code>z_stroop &lt;= 2</code>, it looks for all rows in the data where <em>z_stroop</em> is the same as, or less than, the value of 2. In programming terms, the expression returns a <em>boolean value</em>, which reports whether the statement is TRUE or FALSE (and when used in the filter, it finds all rows where it is TRUE). You can see this in the results of the following “conditional expressions”:</p>
+<div class="cell" data-exercise="true">
+<div class="tutorial-exercise" data-label="binary_test" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="sc">==</span> <span class="dv">3</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="st">"blah"</span> <span class="sc">==</span> <span class="st">"blah"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="st">"blah"</span> <span class="sc">==</span> <span class="st">"BLAH"</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="st">"John"</span> <span class="sc">==</span> <span class="st">"rock star"</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(<span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>)) <span class="sc">==</span> <span class="fl">4.5</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">==</span> <span class="cn">FALSE</span> <span class="co"># this is getting meta...</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+</div>
+</section>
+<section id="practice-filtering" class="level3">
+<h3 class="anchored" data-anchor-id="practice-filtering">Practice filtering</h3>
+<p>Practice writing your own filter commands in the box below. Try to filter the data to match the following queries:</p>
+<ol type="1">
+<li>Data for those people who are “high” facebook users (hint: facebook_use == )</li>
+<li>Data for those people who use instagram for 7 days, and have a <em>z_stroop</em> score of less than -1 (hint: use &amp;)</li>
+<li>Data for those people who are “high” users of at least one social media platform (hint: this needs two “or”: | )</li>
+</ol>
+<p><em>[Each hint here gives the solution to each query]</em></p>
+<div class="cell" data-exercise="true" data-exercise.setup="update_data_3">
+<div class="tutorial-exercise" data-label="filter_play" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<script type="application/json" data-ui-opts="1">{"engine":"r","has_checker":false,"caption":"<span data-i18n=\"text.enginecap\" data-i18n-opts=\"{&quot;engine&quot;:&quot;R&quot;}\">R Code<\/span>"}</script>
+</div>
+</div>
+<div class="cell">
+<div class="tutorial-exercise-support" data-label="filter_play-hint-1" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Query 1 solution</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(facebook_use <span class="sc">==</span> <span class="st">"high"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell">
+<div class="tutorial-exercise-support" data-label="filter_play-hint-2" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Query 2 solution</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(instagram_days <span class="sc">==</span> <span class="dv">7</span> <span class="sc">&amp;</span> z_stroop <span class="sc">&lt;</span> <span class="sc">-</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="cell">
+<div class="tutorial-exercise-support" data-label="filter_play-hint-3" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0" data-pipe="|>">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Query 3 solution</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>data <span class="sc">%&gt;%</span> </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(facebook_use <span class="sc">==</span> <span class="st">"high"</span> <span class="sc">|</span> instagram_use <span class="sc">==</span> <span class="st">"high"</span> <span class="sc">|</span> twitter_use <span class="sc">==</span> <span class="st">"high"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+</section>
+<section id="section-6" class="level2">
+<h2 class="anchored" data-anchor-id="section-6"></h2>
+<section id="end-of-tutorial" class="level3">
+<h3 class="anchored" data-anchor-id="end-of-tutorial">End of tutorial</h3>
+<p>This is now the end of the online tutorial on <code>filter()</code> and <code>mutate()</code>. Please return to the tasks in the lab worksheet.</p>
+<p>
+<script type="application/shiny-prerendered" data-context="server-start">
+library(tidyverse)
+library(learnr)
+library(kableExtra)
+load("tidy_data.RData")
+
+data <- 
+  data %>%
+  rowwise() %>% 
+  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),
+         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% 
+  ungroup() %>% 
+  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% 
+  drop_na() 
+
+
+knitr::opts_chunk$set(echo = FALSE)
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::register_http_handlers(session, metadata = NULL)
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::prepare_tutorial_state(session)
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::i18n_observe_tutorial_language(input, session)
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+session$onSessionEnded(function() {
+        learnr:::event_trigger(session, "session_stop")
+      })
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-summary_example-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-summary_example-code-editor`)), session)
+output$`tutorial-exercise-summary_example-output` <- renderUI({
+  `tutorial-exercise-summary_example-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache(structure(list(label = "summary_example", global_setup = structure(c("library(tidyverse)", 
+"library(learnr)", "library(kableExtra)", "load(\"tidy_data.RData\")", 
+"", "data <- ", "  data %>%", "  rowwise() %>% ", "  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),", 
+"         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% ", 
+"  ungroup() %>% ", "  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% ", 
+"  drop_na() ", "", "", "knitr::opts_chunk$set(echo = FALSE)"
+), chunk_opts = list(label = "setup", include = FALSE, exercise.startover = TRUE)), 
+    setup = NULL, chunks = list(list(label = "summary_example", 
+        code = "\nsummary(data)\nhead(data)\n\n", opts = list(
+            label = "\"summary_example\"", exercise = "TRUE"), 
+        engine = "r")), code_check = NULL, error_check = NULL, 
+    check = NULL, solution = NULL, tests = NULL, options = list(
+        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
+        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
+        highlight = FALSE, size = "normalsize", background = "#F7F7F7", 
+        strip.white = TRUE, cache = 0, cache.path = "Week_9_learnr_cache/html/", 
+        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
+        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
+        fig.show = "asis", fig.align = "default", fig.path = "Week_9_learnr_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 7L, fig.height = 5L, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 672L, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        fig.asp = NULL, fenced.echo = FALSE, ft.shadow = FALSE, 
+        label = "summary_example", exercise = TRUE, original.params.src = "r summary_example, exercise=TRUE", 
+        chunk.echo = FALSE, code = c("", "summary(data)", "head(data)", 
+        "", ""), out.width.px = 672L, out.height.px = 480L, params.src = "r summary_example, exercise=TRUE", 
+        fig.num = 0, exercise.df_print = "default", exercise.checker = "NULL"), 
+    engine = "r", version = "4"), class = c("r", "tutorial_exercise"
+)))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-mutate_example-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-mutate_example-code-editor`)), session)
+output$`tutorial-exercise-mutate_example-output` <- renderUI({
+  `tutorial-exercise-mutate_example-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache(structure(list(label = "mutate_example", global_setup = structure(c("library(tidyverse)", 
+"library(learnr)", "library(kableExtra)", "load(\"tidy_data.RData\")", 
+"", "data <- ", "  data %>%", "  rowwise() %>% ", "  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),", 
+"         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% ", 
+"  ungroup() %>% ", "  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% ", 
+"  drop_na() ", "", "", "knitr::opts_chunk$set(echo = FALSE)"
+), chunk_opts = list(label = "setup", include = FALSE, exercise.startover = TRUE)), 
+    setup = NULL, chunks = list(list(label = "mutate_example", 
+        code = "\ndata %>% \n  mutate(facebook_use = facebook_days >= 4)\n", 
+        opts = list(label = "\"mutate_example\"", exercise = "TRUE"), 
+        engine = "r")), code_check = NULL, error_check = NULL, 
+    check = NULL, solution = NULL, tests = NULL, options = list(
+        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
+        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
+        highlight = FALSE, size = "normalsize", background = "#F7F7F7", 
+        strip.white = TRUE, cache = 0, cache.path = "Week_9_learnr_cache/html/", 
+        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
+        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
+        fig.show = "asis", fig.align = "default", fig.path = "Week_9_learnr_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 7L, fig.height = 5L, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 672L, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        fig.asp = NULL, fenced.echo = FALSE, ft.shadow = FALSE, 
+        label = "mutate_example", exercise = TRUE, original.params.src = "r mutate_example, exercise=TRUE", 
+        chunk.echo = FALSE, code = c("", "data %>% ", "  mutate(facebook_use = facebook_days >= 4)", 
+        ""), out.width.px = 672L, out.height.px = 480L, params.src = "r mutate_example, exercise=TRUE", 
+        fig.num = 0, exercise.df_print = "default", exercise.checker = "NULL"), 
+    engine = "r", version = "4"), class = c("r", "tutorial_exercise"
+)))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-ifelse_example-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-ifelse_example-code-editor`)), session)
+output$`tutorial-exercise-ifelse_example-output` <- renderUI({
+  `tutorial-exercise-ifelse_example-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache(structure(list(label = "ifelse_example", global_setup = structure(c("library(tidyverse)", 
+"library(learnr)", "library(kableExtra)", "load(\"tidy_data.RData\")", 
+"", "data <- ", "  data %>%", "  rowwise() %>% ", "  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),", 
+"         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% ", 
+"  ungroup() %>% ", "  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% ", 
+"  drop_na() ", "", "", "knitr::opts_chunk$set(echo = FALSE)"
+), chunk_opts = list(label = "setup", include = FALSE, exercise.startover = TRUE)), 
+    setup = NULL, chunks = list(list(label = "ifelse_example", 
+        code = "\ndata %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"))\n", 
+        opts = list(label = "\"ifelse_example\"", exercise = "TRUE"), 
+        engine = "r")), code_check = NULL, error_check = NULL, 
+    check = NULL, solution = NULL, tests = NULL, options = list(
+        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
+        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
+        highlight = FALSE, size = "normalsize", background = "#F7F7F7", 
+        strip.white = TRUE, cache = 0, cache.path = "Week_9_learnr_cache/html/", 
+        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
+        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
+        fig.show = "asis", fig.align = "default", fig.path = "Week_9_learnr_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 7L, fig.height = 5L, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 672L, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        fig.asp = NULL, fenced.echo = FALSE, ft.shadow = FALSE, 
+        label = "ifelse_example", exercise = TRUE, original.params.src = "r ifelse_example, exercise=TRUE", 
+        chunk.echo = FALSE, code = c("", "data %>% ", "  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"))", 
+        ""), out.width.px = 672L, out.height.px = 480L, params.src = "r ifelse_example, exercise=TRUE", 
+        fig.num = 0, exercise.df_print = "default", exercise.checker = "NULL"), 
+    engine = "r", version = "4"), class = c("r", "tutorial_exercise"
+)))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-more_ifelse-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-more_ifelse-code-editor`)), session)
+output$`tutorial-exercise-more_ifelse-output` <- renderUI({
+  `tutorial-exercise-more_ifelse-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache(structure(list(label = "more_ifelse", global_setup = structure(c("library(tidyverse)", 
+"library(learnr)", "library(kableExtra)", "load(\"tidy_data.RData\")", 
+"", "data <- ", "  data %>%", "  rowwise() %>% ", "  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),", 
+"         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% ", 
+"  ungroup() %>% ", "  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% ", 
+"  drop_na() ", "", "", "knitr::opts_chunk$set(echo = FALSE)"
+), chunk_opts = list(label = "setup", include = FALSE, exercise.startover = TRUE)), 
+    setup = NULL, chunks = list(list(label = "more_ifelse", code = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = ,\n         twitter_use = )\n\ndata\n# because we are assigning (<-) the changes to update \"data\", \n# we write it again here to display the results\n", 
+        opts = list(label = "\"more_ifelse\"", exercise = "TRUE"), 
+        engine = "r")), code_check = NULL, error_check = NULL, 
+    check = NULL, solution = structure(c("data <- ", "  data %>% ", 
+    "  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),", 
+    "         instagram_use = if_else(instagram_days >= 4,true = \"high\",false = \"low\"),", 
+    "         twitter_use = if_else(twitter_days >= 4,true = \"high\",false = \"low\"))", 
+    "", "data", "# because we are assigning (<-) the changes to update \"data\", ", 
+    "# we write it again here to display the results", ""), chunk_opts = list(
+        label = "more_ifelse-solution")), tests = NULL, options = list(
+        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
+        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
+        highlight = FALSE, size = "normalsize", background = "#F7F7F7", 
+        strip.white = TRUE, cache = 0, cache.path = "Week_9_learnr_cache/html/", 
+        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
+        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
+        fig.show = "asis", fig.align = "default", fig.path = "Week_9_learnr_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 7L, fig.height = 5L, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 672L, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        fig.asp = NULL, fenced.echo = FALSE, ft.shadow = FALSE, 
+        label = "more_ifelse", exercise = TRUE, original.params.src = "r more_ifelse, exercise=TRUE", 
+        chunk.echo = FALSE, code = c("data <- ", "  data %>% ", 
+        "  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),", 
+        "         instagram_use = ,", "         twitter_use = )", 
+        "", "data", "# because we are assigning (<-) the changes to update \"data\", ", 
+        "# we write it again here to display the results", ""
+        ), out.width.px = 672L, out.height.px = 480L, params.src = "r more_ifelse, exercise=TRUE", 
+        fig.num = 0, exercise.df_print = "default", exercise.checker = "NULL"), 
+    engine = "r", version = "4"), class = c("r", "tutorial_exercise"
+)))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-stroop_boxplot-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-stroop_boxplot-code-editor`)), session)
+output$`tutorial-exercise-stroop_boxplot-output` <- renderUI({
+  `tutorial-exercise-stroop_boxplot-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache(structure(list(label = "stroop_boxplot", global_setup = structure(c("library(tidyverse)", 
+"library(learnr)", "library(kableExtra)", "load(\"tidy_data.RData\")", 
+"", "data <- ", "  data %>%", "  rowwise() %>% ", "  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),", 
+"         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% ", 
+"  ungroup() %>% ", "  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% ", 
+"  drop_na() ", "", "", "knitr::opts_chunk$set(echo = FALSE)"
+), chunk_opts = list(label = "setup", include = FALSE, exercise.startover = TRUE)), 
+    setup = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = if_else(instagram_days >= 4,true = \"high\",false = \"low\"),\n         twitter_use = if_else(twitter_days >= 4,true = \"high\",false = \"low\"))\n", 
+    chunks = list(list(label = "update_data", code = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = if_else(instagram_days >= 4,true = \"high\",false = \"low\"),\n         twitter_use = if_else(twitter_days >= 4,true = \"high\",false = \"low\"))\n", 
+        opts = list(label = "\"update_data\"", include = "FALSE"), 
+        engine = "r"), list(label = "stroop_boxplot", code = "\ndata %>% \n  ggplot() +\n  geom_boxplot(aes(y = avg_stroop))\n", 
+        opts = list(label = "\"stroop_boxplot\"", exercise = "TRUE", 
+            exercise.setup = "\"update_data\""), engine = "r")), 
+    code_check = NULL, error_check = NULL, check = NULL, solution = NULL, 
+    tests = NULL, options = list(eval = FALSE, echo = TRUE, results = "markup", 
+        tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
+        comment = NA, highlight = FALSE, size = "normalsize", 
+        background = "#F7F7F7", strip.white = TRUE, cache = 0, 
+        cache.path = "Week_9_learnr_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "Week_9_learnr_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 7L, fig.height = 5L, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 672L, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        fig.asp = NULL, fenced.echo = FALSE, ft.shadow = FALSE, 
+        label = "stroop_boxplot", exercise = TRUE, exercise.setup = "update_data", 
+        original.params.src = "r stroop_boxplot, exercise=TRUE, exercise.setup = \"update_data\"", 
+        chunk.echo = FALSE, code = c("", "data %>% ", "  ggplot() +", 
+        "  geom_boxplot(aes(y = avg_stroop))", ""), out.width.px = 672L, 
+        out.height.px = 480L, params.src = "r stroop_boxplot, exercise=TRUE, exercise.setup = \"update_data\"", 
+        fig.num = 0, exercise.df_print = "default", exercise.checker = "NULL"), 
+    engine = "r", version = "4"), class = c("r", "tutorial_exercise"
+)))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-z_score-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-z_score-code-editor`)), session)
+output$`tutorial-exercise-z_score-output` <- renderUI({
+  `tutorial-exercise-z_score-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache(structure(list(label = "z_score", global_setup = structure(c("library(tidyverse)", 
+"library(learnr)", "library(kableExtra)", "load(\"tidy_data.RData\")", 
+"", "data <- ", "  data %>%", "  rowwise() %>% ", "  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),", 
+"         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% ", 
+"  ungroup() %>% ", "  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% ", 
+"  drop_na() ", "", "", "knitr::opts_chunk$set(echo = FALSE)"
+), chunk_opts = list(label = "setup", include = FALSE, exercise.startover = TRUE)), 
+    setup = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = ,\n         twitter_use = )\n\ndata\n# because we are assigning (<-) the changes to update \"data\", \n# we write it again here to display the results\n", 
+    chunks = list(list(label = "more_ifelse", code = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = ,\n         twitter_use = )\n\ndata\n# because we are assigning (<-) the changes to update \"data\", \n# we write it again here to display the results\n", 
+        opts = list(label = "\"more_ifelse\"", exercise = "TRUE"), 
+        engine = "r"), list(label = "z_score", code = "data <- \n  data %>% \n  mutate(z_stroop = scale(avg_stroop))\n\ndata\n# because we are assigning (<-) the changes to update \"data\", \n# we write it again here to display the results\n", 
+        opts = list(label = "\"z_score\"", exercise = "TRUE", 
+            exercise.setup = "\"more_ifelse\""), engine = "r")), 
+    code_check = NULL, error_check = NULL, check = NULL, solution = NULL, 
+    tests = NULL, options = list(eval = FALSE, echo = TRUE, results = "markup", 
+        tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
+        comment = NA, highlight = FALSE, size = "normalsize", 
+        background = "#F7F7F7", strip.white = TRUE, cache = 0, 
+        cache.path = "Week_9_learnr_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "Week_9_learnr_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 7L, fig.height = 5L, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 672L, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        fig.asp = NULL, fenced.echo = FALSE, ft.shadow = FALSE, 
+        label = "z_score", exercise = TRUE, exercise.setup = "more_ifelse", 
+        original.params.src = "r z_score, exercise = TRUE, exercise.setup = \"more_ifelse\"", 
+        chunk.echo = FALSE, code = c("data <- ", "  data %>% ", 
+        "  mutate(z_stroop = scale(avg_stroop))", "", "data", 
+        "# because we are assigning (<-) the changes to update \"data\", ", 
+        "# we write it again here to display the results", ""
+        ), out.width.px = 672L, out.height.px = 480L, params.src = "r z_score, exercise = TRUE, exercise.setup = \"more_ifelse\"", 
+        fig.num = 0, exercise.df_print = "default", exercise.checker = "NULL"), 
+    engine = "r", version = "4"), class = c("r", "tutorial_exercise"
+)))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-z_mean_sd-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-z_mean_sd-code-editor`)), session)
+output$`tutorial-exercise-z_mean_sd-output` <- renderUI({
+  `tutorial-exercise-z_mean_sd-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache(structure(list(label = "z_mean_sd", global_setup = structure(c("library(tidyverse)", 
+"library(learnr)", "library(kableExtra)", "load(\"tidy_data.RData\")", 
+"", "data <- ", "  data %>%", "  rowwise() %>% ", "  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),", 
+"         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% ", 
+"  ungroup() %>% ", "  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% ", 
+"  drop_na() ", "", "", "knitr::opts_chunk$set(echo = FALSE)"
+), chunk_opts = list(label = "setup", include = FALSE, exercise.startover = TRUE)), 
+    setup = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = if_else(instagram_days >= 4,true = \"high\",false = \"low\"),\n         twitter_use = if_else(twitter_days >= 4,true = \"high\",false = \"low\"),\n         z_stroop = scale(avg_stroop))\n", 
+    chunks = list(list(label = "update_data_2", code = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = if_else(instagram_days >= 4,true = \"high\",false = \"low\"),\n         twitter_use = if_else(twitter_days >= 4,true = \"high\",false = \"low\"),\n         z_stroop = scale(avg_stroop))\n", 
+        opts = list(label = "\"update_data_2\"", include = "FALSE"), 
+        engine = "r"), list(label = "z_mean_sd", code = "\nmean()\nsd()\n", 
+        opts = list(label = "\"z_mean_sd\"", exercise = "TRUE", 
+            exercise.setup = "\"update_data_2\""), engine = "r")), 
+    code_check = NULL, error_check = NULL, check = NULL, solution = structure(c("", 
+    "mean(data$z_stroop)", "sd(data$z_stroop)", ""), chunk_opts = list(
+        label = "z_mean_sd-solution")), tests = NULL, options = list(
+        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
+        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
+        highlight = FALSE, size = "normalsize", background = "#F7F7F7", 
+        strip.white = TRUE, cache = 0, cache.path = "Week_9_learnr_cache/html/", 
+        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
+        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
+        fig.show = "asis", fig.align = "default", fig.path = "Week_9_learnr_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 7L, fig.height = 5L, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 672L, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        fig.asp = NULL, fenced.echo = FALSE, ft.shadow = FALSE, 
+        label = "z_mean_sd", exercise = TRUE, exercise.setup = "update_data_2", 
+        original.params.src = "r z_mean_sd, exercise = TRUE, exercise.setup = \"update_data_2\"", 
+        chunk.echo = FALSE, code = c("", "mean()", "sd()", ""
+        ), out.width.px = 672L, out.height.px = 480L, params.src = "r z_mean_sd, exercise = TRUE, exercise.setup = \"update_data_2\"", 
+        fig.num = 0, exercise.df_print = "default", exercise.checker = "NULL"), 
+    engine = "r", version = "4"), class = c("r", "tutorial_exercise"
+)))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-arrange-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-arrange-code-editor`)), session)
+output$`tutorial-exercise-arrange-output` <- renderUI({
+  `tutorial-exercise-arrange-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache(structure(list(label = "arrange", global_setup = structure(c("library(tidyverse)", 
+"library(learnr)", "library(kableExtra)", "load(\"tidy_data.RData\")", 
+"", "data <- ", "  data %>%", "  rowwise() %>% ", "  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),", 
+"         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% ", 
+"  ungroup() %>% ", "  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% ", 
+"  drop_na() ", "", "", "knitr::opts_chunk$set(echo = FALSE)"
+), chunk_opts = list(label = "setup", include = FALSE, exercise.startover = TRUE)), 
+    setup = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = if_else(instagram_days >= 4,true = \"high\",false = \"low\"),\n         twitter_use = if_else(twitter_days >= 4,true = \"high\",false = \"low\"),\n         z_stroop = scale(avg_stroop))\n", 
+    chunks = list(list(label = "update_data_2", code = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = if_else(instagram_days >= 4,true = \"high\",false = \"low\"),\n         twitter_use = if_else(twitter_days >= 4,true = \"high\",false = \"low\"),\n         z_stroop = scale(avg_stroop))\n", 
+        opts = list(label = "\"update_data_2\"", include = "FALSE"), 
+        engine = "r"), list(label = "arrange", code = "\ndata <- \n  data %>% \n  arrange(desc(z_stroop)) # arrange in descending order\n\nhead(data, n = 10)\ntail(data, n = 10)\n", 
+        opts = list(label = "\"arrange\"", exercise = "TRUE", 
+            exercise.setup = "\"update_data_2\""), engine = "r")), 
+    code_check = NULL, error_check = NULL, check = NULL, solution = NULL, 
+    tests = NULL, options = list(eval = FALSE, echo = TRUE, results = "markup", 
+        tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
+        comment = NA, highlight = FALSE, size = "normalsize", 
+        background = "#F7F7F7", strip.white = TRUE, cache = 0, 
+        cache.path = "Week_9_learnr_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "Week_9_learnr_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 7L, fig.height = 5L, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 672L, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        fig.asp = NULL, fenced.echo = FALSE, ft.shadow = FALSE, 
+        label = "arrange", exercise = TRUE, exercise.setup = "update_data_2", 
+        original.params.src = "r arrange, exercise = TRUE, exercise.setup = \"update_data_2\"", 
+        chunk.echo = FALSE, code = c("", "data <- ", "  data %>% ", 
+        "  arrange(desc(z_stroop)) # arrange in descending order", 
+        "", "head(data, n = 10)", "tail(data, n = 10)", ""), 
+        out.width.px = 672L, out.height.px = 480L, params.src = "r arrange, exercise = TRUE, exercise.setup = \"update_data_2\"", 
+        fig.num = 0, exercise.df_print = "default", exercise.checker = "NULL"), 
+    engine = "r", version = "4"), class = c("r", "tutorial_exercise"
+)))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-filter_example-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-filter_example-code-editor`)), session)
+output$`tutorial-exercise-filter_example-output` <- renderUI({
+  `tutorial-exercise-filter_example-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache(structure(list(label = "filter_example", global_setup = structure(c("library(tidyverse)", 
+"library(learnr)", "library(kableExtra)", "load(\"tidy_data.RData\")", 
+"", "data <- ", "  data %>%", "  rowwise() %>% ", "  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),", 
+"         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% ", 
+"  ungroup() %>% ", "  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% ", 
+"  drop_na() ", "", "", "knitr::opts_chunk$set(echo = FALSE)"
+), chunk_opts = list(label = "setup", include = FALSE, exercise.startover = TRUE)), 
+    setup = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = if_else(instagram_days >= 4,true = \"high\",false = \"low\"),\n         twitter_use = if_else(twitter_days >= 4,true = \"high\",false = \"low\"),\n         z_stroop = scale(avg_stroop)) %>% \n  arrange(desc(z_stroop)) # arrange in descending order\n", 
+    chunks = list(list(label = "update_data_3", code = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = if_else(instagram_days >= 4,true = \"high\",false = \"low\"),\n         twitter_use = if_else(twitter_days >= 4,true = \"high\",false = \"low\"),\n         z_stroop = scale(avg_stroop)) %>% \n  arrange(desc(z_stroop)) # arrange in descending order\n", 
+        opts = list(label = "\"update_data_3\"", include = "FALSE"), 
+        engine = "r"), list(label = "filter_example", code = "data %>% \n  filter(z_stroop <= 2) \n# find all those people who have z_stroop values lower than positive 2", 
+        opts = list(label = "\"filter_example\"", exercise = "TRUE", 
+            exercise.setup = "\"update_data_3\""), engine = "r")), 
+    code_check = NULL, error_check = NULL, check = NULL, solution = NULL, 
+    tests = NULL, options = list(eval = FALSE, echo = TRUE, results = "markup", 
+        tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
+        comment = NA, highlight = FALSE, size = "normalsize", 
+        background = "#F7F7F7", strip.white = TRUE, cache = 0, 
+        cache.path = "Week_9_learnr_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "Week_9_learnr_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 7L, fig.height = 5L, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 672L, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        fig.asp = NULL, fenced.echo = FALSE, ft.shadow = FALSE, 
+        label = "filter_example", exercise = TRUE, exercise.setup = "update_data_3", 
+        original.params.src = "r filter_example, exercise = TRUE, exercise.setup = \"update_data_3\"", 
+        chunk.echo = FALSE, code = c("data %>% ", "  filter(z_stroop <= 2) ", 
+        "# find all those people who have z_stroop values lower than positive 2"
+        ), out.width.px = 672L, out.height.px = 480L, params.src = "r filter_example, exercise = TRUE, exercise.setup = \"update_data_3\"", 
+        fig.num = 0, exercise.df_print = "default", exercise.checker = "NULL"), 
+    engine = "r", version = "4"), class = c("r", "tutorial_exercise"
+)))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-binary_test-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-binary_test-code-editor`)), session)
+output$`tutorial-exercise-binary_test-output` <- renderUI({
+  `tutorial-exercise-binary_test-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache(structure(list(label = "binary_test", global_setup = structure(c("library(tidyverse)", 
+"library(learnr)", "library(kableExtra)", "load(\"tidy_data.RData\")", 
+"", "data <- ", "  data %>%", "  rowwise() %>% ", "  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),", 
+"         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% ", 
+"  ungroup() %>% ", "  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% ", 
+"  drop_na() ", "", "", "knitr::opts_chunk$set(echo = FALSE)"
+), chunk_opts = list(label = "setup", include = FALSE, exercise.startover = TRUE)), 
+    setup = NULL, chunks = list(list(label = "binary_test", code = "2 == 3\n\"blah\" == \"blah\"\n\"blah\" == \"BLAH\"\n\"John\" == \"rock star\"\nmean(c(3,4,5,6)) == 4.5\nTRUE == FALSE # this is getting meta...\n", 
+        opts = list(label = "\"binary_test\"", exercise = "TRUE"), 
+        engine = "r")), code_check = NULL, error_check = NULL, 
+    check = NULL, solution = NULL, tests = NULL, options = list(
+        eval = FALSE, echo = TRUE, results = "markup", tidy = FALSE, 
+        tidy.opts = NULL, collapse = FALSE, prompt = FALSE, comment = NA, 
+        highlight = FALSE, size = "normalsize", background = "#F7F7F7", 
+        strip.white = TRUE, cache = 0, cache.path = "Week_9_learnr_cache/html/", 
+        cache.vars = NULL, cache.lazy = TRUE, dependson = NULL, 
+        autodep = FALSE, cache.rebuild = FALSE, fig.keep = "high", 
+        fig.show = "asis", fig.align = "default", fig.path = "Week_9_learnr_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 7L, fig.height = 5L, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 672L, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        fig.asp = NULL, fenced.echo = FALSE, ft.shadow = FALSE, 
+        label = "binary_test", exercise = TRUE, original.params.src = "r binary_test, exercise = TRUE", 
+        chunk.echo = FALSE, code = c("2 == 3", "\"blah\" == \"blah\"", 
+        "\"blah\" == \"BLAH\"", "\"John\" == \"rock star\"", 
+        "mean(c(3,4,5,6)) == 4.5", "TRUE == FALSE # this is getting meta...", 
+        ""), out.width.px = 672L, out.height.px = 480L, params.src = "r binary_test, exercise = TRUE", 
+        fig.num = 0, exercise.df_print = "default", exercise.checker = "NULL"), 
+    engine = "r", version = "4"), class = c("r", "tutorial_exercise"
+)))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+`tutorial-exercise-filter_play-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-filter_play-code-editor`)), session)
+output$`tutorial-exercise-filter_play-output` <- renderUI({
+  `tutorial-exercise-filter_play-result`()
+})
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server">
+learnr:::store_exercise_cache(structure(list(label = "filter_play", global_setup = structure(c("library(tidyverse)", 
+"library(learnr)", "library(kableExtra)", "load(\"tidy_data.RData\")", 
+"", "data <- ", "  data %>%", "  rowwise() %>% ", "  mutate(avg_stroop = round(mean(c(stroop_control,stroop_compatible,stroop_incompatible), na.rm = TRUE),2),", 
+"         across(facebook_days:twitter_days, ~str_sub(.x, 1,1))) %>% ", 
+"  ungroup() %>% ", "  select(facebook_days, instagram_days, twitter_days, avg_stroop) %>% ", 
+"  drop_na() ", "", "", "knitr::opts_chunk$set(echo = FALSE)"
+), chunk_opts = list(label = "setup", include = FALSE, exercise.startover = TRUE)), 
+    setup = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = if_else(instagram_days >= 4,true = \"high\",false = \"low\"),\n         twitter_use = if_else(twitter_days >= 4,true = \"high\",false = \"low\"),\n         z_stroop = scale(avg_stroop)) %>% \n  arrange(desc(z_stroop)) # arrange in descending order\n", 
+    chunks = list(list(label = "update_data_3", code = "data <- \n  data %>% \n  mutate(facebook_use = if_else(facebook_days >= 4,true = \"high\",false = \"low\"),\n         instagram_use = if_else(instagram_days >= 4,true = \"high\",false = \"low\"),\n         twitter_use = if_else(twitter_days >= 4,true = \"high\",false = \"low\"),\n         z_stroop = scale(avg_stroop)) %>% \n  arrange(desc(z_stroop)) # arrange in descending order\n", 
+        opts = list(label = "\"update_data_3\"", include = "FALSE"), 
+        engine = "r"), list(label = "filter_play", code = "data %>% \n  filter()", 
+        opts = list(label = "\"filter_play\"", exercise = "TRUE", 
+            exercise.setup = "\"update_data_3\""), engine = "r")), 
+    code_check = NULL, error_check = NULL, check = NULL, solution = NULL, 
+    tests = NULL, options = list(eval = FALSE, echo = TRUE, results = "markup", 
+        tidy = FALSE, tidy.opts = NULL, collapse = FALSE, prompt = FALSE, 
+        comment = NA, highlight = FALSE, size = "normalsize", 
+        background = "#F7F7F7", strip.white = TRUE, cache = 0, 
+        cache.path = "Week_9_learnr_cache/html/", cache.vars = NULL, 
+        cache.lazy = TRUE, dependson = NULL, autodep = FALSE, 
+        cache.rebuild = FALSE, fig.keep = "high", fig.show = "asis", 
+        fig.align = "default", fig.path = "Week_9_learnr_files/figure-html/", 
+        dev = "png", dev.args = NULL, dpi = 192, fig.ext = "png", 
+        fig.width = 7L, fig.height = 5L, fig.env = "figure", 
+        fig.cap = NULL, fig.scap = NULL, fig.lp = "fig:", fig.subcap = NULL, 
+        fig.pos = "", out.width = 672L, out.height = NULL, out.extra = NULL, 
+        fig.retina = 2, external = TRUE, sanitize = FALSE, interval = 1, 
+        aniopts = "controls,loop", warning = TRUE, error = FALSE, 
+        message = TRUE, render = NULL, ref.label = NULL, child = NULL, 
+        engine = "r", split = FALSE, include = TRUE, purl = TRUE, 
+        fig.asp = NULL, fenced.echo = FALSE, ft.shadow = FALSE, 
+        label = "filter_play", exercise = TRUE, exercise.setup = "update_data_3", 
+        original.params.src = "r filter_play, exercise = TRUE, exercise.setup = \"update_data_3\"", 
+        chunk.echo = FALSE, code = c("data %>% ", "  filter()"
+        ), out.width.px = 672L, out.height.px = 480L, params.src = "r filter_play, exercise = TRUE, exercise.setup = \"update_data_3\"", 
+        fig.num = 0, exercise.df_print = "default", exercise.checker = "NULL"), 
+    engine = "r", version = "4"), class = c("r", "tutorial_exercise"
+)))
+</script>
+ 
+<script type="application/shiny-prerendered" data-context="server-extras">
+ojs_define <- function(..., .session = shiny::getDefaultReactiveDomain()) {
+  quos <- rlang::enquos(...)
+  vars <- rlang::list2(...)
+  nm <- names(vars)
+  if (is.null(nm)) {
+    nm <- rep_len("", length(vars))
+  }
+  mapply(function(q, nm, val) {
+    # Infer name, if possible
+    if (nm == "") {
+      tryCatch({
+        nm <- rlang::as_name(q)
+      }, error = function(e) {
+        code <- paste(collapse = "\n", deparse(rlang::f_rhs(q)))
+        stop("ojs_define() could not create a name for the argument: ", code)
+      })
+    }
+    .session$output[[nm]] <- val
+    outputOptions(.session$output, nm, suspendWhenHidden = FALSE)
+    .session$sendCustomMessage("ojs-export", list(name = nm))
+    NULL
+  }, quos, nm, vars, SIMPLIFY = FALSE, USE.NAMES = FALSE)
+  invisible()
+}
+</script>
+</p>
+<!--html_preserve-->
+<script type="application/shiny-prerendered" data-context="dependencies">
+{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["jquery"]},{"type":"character","attributes":{},"value":["3.6.0"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/3.6.0"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["jquery-3.6.0.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["jquerylib"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.1.4"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["font-awesome"]},{"type":"character","attributes":{},"value":["6.4.0"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["fontawesome"]}]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["css/all.min.css","css/v4-shims.min.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["fontawesome"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.5.1"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["bootbox"]},{"type":"character","attributes":{},"value":["5.5.2"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/bootbox"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["bootbox.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["idb-keyvalue"]},{"type":"character","attributes":{},"value":["3.2.0"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/idb-keyval"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["idb-keyval-iife-compat.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[false]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["tutorial"]},{"type":"character","attributes":{},"value":["0.11.5"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/tutorial"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["tutorial.js"]},{"type":"character","attributes":{},"value":["tutorial.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ace"]},{"type":"character","attributes":{},"value":["1.10.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/ace"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["ace.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["clipboardjs"]},{"type":"character","attributes":{},"value":["2.0.10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/clipboardjs"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["clipboard.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ace"]},{"type":"character","attributes":{},"value":["1.10.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/ace"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["ace.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["clipboardjs"]},{"type":"character","attributes":{},"value":["2.0.10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/clipboardjs"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["clipboard.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ace"]},{"type":"character","attributes":{},"value":["1.10.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/ace"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["ace.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["clipboardjs"]},{"type":"character","attributes":{},"value":["2.0.10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/clipboardjs"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["clipboard.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ace"]},{"type":"character","attributes":{},"value":["1.10.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/ace"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["ace.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["clipboardjs"]},{"type":"character","attributes":{},"value":["2.0.10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/clipboardjs"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["clipboard.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ace"]},{"type":"character","attributes":{},"value":["1.10.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/ace"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["ace.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["clipboardjs"]},{"type":"character","attributes":{},"value":["2.0.10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/clipboardjs"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["clipboard.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ace"]},{"type":"character","attributes":{},"value":["1.10.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/ace"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["ace.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["clipboardjs"]},{"type":"character","attributes":{},"value":["2.0.10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/clipboardjs"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["clipboard.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ace"]},{"type":"character","attributes":{},"value":["1.10.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/ace"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["ace.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["clipboardjs"]},{"type":"character","attributes":{},"value":["2.0.10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/clipboardjs"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["clipboard.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ace"]},{"type":"character","attributes":{},"value":["1.10.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/ace"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["ace.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["clipboardjs"]},{"type":"character","attributes":{},"value":["2.0.10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/clipboardjs"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["clipboard.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ace"]},{"type":"character","attributes":{},"value":["1.10.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/ace"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["ace.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["clipboardjs"]},{"type":"character","attributes":{},"value":["2.0.10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/clipboardjs"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["clipboard.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["kePrint"]},{"type":"character","attributes":{},"value":["0.0.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["kePrint-0.0.1"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["kePrint.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["kableExtra"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.3.4"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["lightable"]},{"type":"character","attributes":{},"value":["0.0.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lightable-0.0.1"]}]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["lightable.css"]},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["kableExtra"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["1.3.4"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ace"]},{"type":"character","attributes":{},"value":["1.10.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/ace"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["ace.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["clipboardjs"]},{"type":"character","attributes":{},"value":["2.0.10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/clipboardjs"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["clipboard.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["ace"]},{"type":"character","attributes":{},"value":["1.10.1"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/ace"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["ace.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","version","src","meta","script","stylesheet","head","attachment","package","all_files","pkgVersion"]},"class":{"type":"character","attributes":{},"value":["html_dependency"]}},"value":[{"type":"character","attributes":{},"value":["clipboardjs"]},{"type":"character","attributes":{},"value":["2.0.10"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["file"]}},"value":[{"type":"character","attributes":{},"value":["lib/clipboardjs"]}]},{"type":"NULL"},{"type":"character","attributes":{},"value":["clipboard.min.js"]},{"type":"NULL"},{"type":"NULL"},{"type":"NULL"},{"type":"character","attributes":{},"value":["learnr"]},{"type":"logical","attributes":{},"value":[true]},{"type":"character","attributes":{},"value":["0.11.5"]}]}]}
+</script>
+<!--/html_preserve-->
+<!--html_preserve-->
+<script type="application/shiny-prerendered" data-context="execution_dependencies">
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["packages","version"]},"class":{"type":"character","attributes":{},"value":["data.frame"]},"row.names":{"type":"integer","attributes":{},"value":[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90]}},"value":[{"type":"character","attributes":{},"value":["assertthat","backports","base","broom","cellranger","cli","colorspace","compiler","crayon","datasets","DBI","dbplyr","digest","dplyr","ellipsis","evaluate","fansi","fastmap","fontawesome","forcats","fs","gargle","generics","ggplot2","glue","googledrive","googlesheets4","graphics","grDevices","grid","gtable","haven","highr","hms","htmltools","htmlwidgets","httpuv","httr","jquerylib","jsonlite","kableExtra","knitr","later","learnr","lifecycle","lubridate","magrittr","methods","mime","modelr","munsell","pillar","pkgconfig","promises","purrr","R6","Rcpp","readr","readxl","reprex","rlang","rmarkdown","rprojroot","rstudioapi","rvest","scales","shiny","stats","stringi","stringr","svglite","systemfonts","tibble","tidyr","tidyselect","tidyverse","timechange","tools","tzdb","utf8","utils","vctrs","viridisLite","webexercises","webshot","withr","xfun","xml2","xtable","yaml"]},{"type":"character","attributes":{},"value":["0.2.1","1.4.1","4.2.2","1.0.5","1.1.0","3.6.3","2.1-1","4.2.2","1.5.2","4.2.2","1.2.3","2.2.1","0.6.30","1.1.2","0.3.2","0.21","1.0.6","1.2.0","0.5.1","0.5.2","1.6.2","1.5.2","0.1.3","3.5.1","1.8.0","2.0.0","1.0.1","4.2.2","4.2.2","4.2.2","0.3.5","2.5.1","0.10","1.1.2","0.5.8.1","1.6.4","1.6.6","1.4.7","0.1.4","1.8.7","1.3.4","1.43","1.3.0","0.11.5","1.0.4","1.9.0","2.0.3","4.2.2","0.12","0.1.10","0.5.1","1.9.0","2.0.3","1.2.0.1","1.0.2","2.5.1","1.0.13","2.1.3","1.4.1","2.0.2","1.1.4","2.23","2.0.3","0.15.0","1.0.3","1.3.0","1.9.1","4.2.2","1.7.12","1.5.0","2.1.0","1.1.0","3.2.1","1.3.0","1.2.1","1.3.2","0.1.1","4.2.2","0.4.0","1.2.4","4.2.2","0.6.5","0.4.2","1.1.0","0.5.4","3.0.1","0.39","1.3.3","1.8-4","2.3.7"]}]}]}
+</script>
+<!--/html_preserve-->
+
+
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Website developed by Matthew Ivory</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../previous-content/index.html">
+<p>Previous Content</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

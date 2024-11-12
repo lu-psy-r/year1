@@ -1,0 +1,383 @@
+﻿Hi, it's Margriet here.
+
+I would like to talk to you
+about some data wrangling using
+
+the dplyr package, and I'm
+also going to explain a little
+
+bit more about what pipes are.
+
+So the dplyr package is
+part of the tidy verse, which is
+
+a collection of R packages
+that all share an underlying
+
+philosophy, grammar and data
+structures, and you've come
+
+across, or you've already come
+across many of the functions
+
+that we that that that I want to
+talk about in terms of data
+
+manipulation. So these are all
+used to kind of knock your data
+
+into the right shape
+
+to do your analysis on.
+So you might remember filter
+
+where you look for
+
+certain observations or select
+to look at variables.
+
+If you want to include certain
+variables in your data set and
+
+answer and summarize.
+
+On this slide you see, you see an
+overview of the six main
+
+functions in dplyr, so let's
+just briefly go through them.
+
+Select you use that to include
+or exclude certain variables or
+
+columns, and then there is
+filter to include or exclude
+
+certain observations or rows.
+
+Mutate creates a new variable,
+so add a new column. Arrange
+
+changes the order of the
+observations in a variable. So
+
+you change the order of the
+
+rows. And then there is group_by that organizes the
+
+observations into groups and
+finally summarize that derives
+
+aggregate variables for groups
+of observations that, for
+
+instance, to calculate the mean
+and the standard deviation of a
+
+certain measure. Now you will
+
+practice using these functions
+in the pre lab activity in the
+
+online tutorial. But here I
+just wanted to give you a
+
+brief overview.
+
+Next, I want to talk about pipes.
+Not actually this type of
+
+pipe, but this type of pipe.
+
+You will have seen them in
+various bits of code and I
+
+thought it would be a good idea
+to just pause and
+
+consider what they actually mean
+and what they're about.
+
+So the pipe is written as
+
+as this thing over here.
+
+So percentage sign, a rightward
+facing arrow, another
+
+percentage sign. Yes, you
+should read them as something
+
+something like 'and then'.
+
+So pipes allow you to string
+together sentences of code into
+
+paragraphs of codes so that
+you don't need to create
+
+intermediary objects all the
+
+time. Now, the reason that
+this function is called 'a pipe'
+
+is because it pipes the data
+through to the next function.
+
+So when you wrote the code
+previously, the first argument
+
+of each function was the data
+set you wanted to work on. Now
+
+when you use pipes, it will
+automatically take the data
+
+from the previous line of
+code, so you don't need to
+
+specify it again and again.
+
+Now let's look at
+it in an example.
+
+So here we have the results
+of the output table of a
+
+correlation analysis that
+might look familiar to you
+
+as we looked at that in
+the correlation video.
+
+And then we used the functions
+pull and round.
+
+To pull different
+bits of information out of this
+
+bigger table. So I would like to
+
+write that code
+both without pipes and
+
+with pipes to clarify what
+this is about.
+
+So. Here we have this
+situation where you don't use
+
+any pipes. So let's say we want
+to compute r.
+
+We want the computed r
+pulled that out of this data
+
+table. So we would say pull and
+then you would give the data so
+
+and then you say OK, pull out
+
+the estimate. And that we store
+in r_compute. Now you might
+
+remember that we also wanted to
+round that correlation
+
+coefficient to two decimals.
+
+So here it is free decimals, we
+wanted it with two decimals, so
+
+the next step on the next line
+of code would then be to say OK
+
+Now that we have pulled out our
+correlation coefficient, we're
+
+going to round that number. So
+we use the round function for
+
+that as we did in the
+
+correlation exercises. And so
+you would then say, OK.
+
+Round requires that you specify
+what needs to be rounded, so
+
+that is r_compute that's
+there and it says OK. I need to
+
+know to how many digits you
+want, how many decimals you
+
+want to round it too. So I
+did that and we store it in
+
+this knew object r_round.
+
+So that is when you don't use
+any pipes. Nothing wrong with
+
+it, but you can see that we have
+this kind of intermediary object
+
+here that we then use on the next line of code.
+
+Now with pipes you don't need to
+do that, so again we take the
+
+results and then we pipe those
+results to the pull function. We
+
+say, OK, I wanted to pull out
+
+this estimate
+because that's
+
+the correlation
+coefficient. And then I
+
+want to round that number
+to two decimals.
+
+And we store that. This does
+
+exactly the same thing as over
+there, except that you don't
+
+have to specify the kind of 'in
+
+between' data object.
+
+OK, now I also wanted to, so
+that is the difference between
+
+no pipes and pipes. I also
+wanted to explain
+
+why you sometimes see it written
+like this as data equals
+
+equals and sometimes you don't
+and digits equals. So you could
+
+simplify this bit of code even
+further and I say simplified
+
+because there's less
+code to write. But if you're not
+
+that familiar yet with
+this particular bit of code then
+
+it might not actually make
+things simpler because you you
+
+don't know about it here. But if
+you have a look here.
+
+So. Let me just talk you through
+it.
+
+So the first bit is
+pretty much the same, so we have
+
+our results and then we pipe that to our
+
+pull function. Now R doesn't
+actually need you to tell
+
+it that this. And tha
+doesn't need this var equals
+
+here, so you can just leave that
+out. You can just say estimate
+
+because it knows that you want
+to pull something and it will
+
+just figure out by itself that
+that that that that this
+
+estimate refers to that
+something. Similarly, you can
+
+then pipe it to the round
+function. It doesn't need you to
+
+tell it that it that these two
+refers to the digits input
+
+because. It knows that that
+that that is what you mean, so
+
+you can leave those things out
+and the same actually holds for
+
+data you don't need to say that
+that is data. There's nothing
+
+wrong with doing it, it is just
+that it's more typing, so
+
+that's why people who become
+more and more familiar with
+
+with writing R-code tend not to
+write it. And yeah, that makes
+
+your life easier if you're, you
+know, a little bit further
+
+along.
+
+So if you ever want to know
+
+what input a
+particular function needs? So
+
+you might have noticed that if
+you type this in your script or
+
+in the console, doesn't matter,
+it will kind of recognize what
+
+function this might be and it
+pulls up a kind of a
+
+little bit of help for you to
+say OK. If you do, you want to
+
+use round OK, then I need X and
+I need digits, so X we provided
+
+here as. Right, OK, yeah, I do
+think that you want the number
+
+that you want rounding round it
+and the digits is the number of
+
+decimals so it gives you a bit
+of a clue of what it wants there.
+
+And it's really helpful to use
+that and you know, think your
+
+way through what it's trying to
+show you, because then it will
+
+be... you'll become more fluent in
+mapping the different bits of
+
+information onto the different
+bits of a function.
+
+This is just a little bit of
+help that is available to you
+
+automatically in R Studio.
+
+OK, that is it for now.
+Thank you.
