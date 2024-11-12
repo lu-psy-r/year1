@@ -40,9 +40,9 @@ website:
 format:
   html:
     theme: 
-      - default
       - "_core/theme.scss"
-    css: https://lu-psy-r.github.io/essentials/index.css
+      - default
+    css: _core/index.css
     code-overflow: wrap
     grid:
       sidebar-width: 250px

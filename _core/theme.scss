@@ -68,17 +68,10 @@ $btn-font-family:             $font-family-sans-serif !default;
 $btn-font-size:               .875rem !default;
 $btn-font-size-sm:            .688rem !default;
 
-//$btn-border-radius:           1.078em !default;
-//$btn-border-radius-lg:        2.688em !default;
-//$btn-border-radius-sm:        .844em !default;
-
 // Forms
 
 $input-border-color:                    rgba(0, 0, 0, .1) !default;
 $input-group-addon-bg:                  $gray-200 !default !default;
-
-// link
-$link-color:                        $red !default;
 
 // Navbar
 
@@ -109,7 +102,7 @@ $alert-border-width:                0 !default;
 
 /*-- scss:rules --*/
 
-#title-block-header a {
+#title-block-header {
   color: $red !important;
 }
 
@@ -229,10 +222,10 @@ table,
 
 /* Custom*/
 
-/*this removes the title on the page*/
-.quarto-title > h1.title {
-  opacity: 0 !important;
-}
+///*this removes the title on the page*/
+//.quarto-title > h1.title {
+//  opacity: 0 !important;
+//}
 
 button.btn-landing {
   color: #fff;
@@ -274,14 +267,8 @@ a.nav-link {
   text-decoration: none;
 }
 
-a.nav-link:hover {
+a.nav-link:hover, a.nav-link:active  {
   color: $gray-400;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a.link {
-  color: #780b0c;
   background-color: transparent;
   text-decoration: none;
 }
