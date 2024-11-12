@@ -42,7 +42,7 @@ format:
     theme: 
       - "_core/theme.scss"
       - default
-    css: _core/index.css
+    css: https://lu-psy-r.github.io/essentials/index_24.css
     code-overflow: wrap
     grid:
       sidebar-width: 250px
