@@ -64,7 +64,7 @@ Today we will take a look at a different type of document file called "R Markdow
 
 R Markdown documents allow you to freely type in text in the main body of the file. You are no longer restricted to putting comments after the "\#" sign. Instead, when you want to put in R code you will need to create a *"code chunk"* within the document. These are places where you put your R code you want to run.
 
-The easiest way to add a code chunk is to use the dedicated button in the editor pane (the shortcut is ctrl + alt + i):
+The easiest way to add a code chunk is to use the dedicated button in the editor pane (the shortcut is ctrl+alt+i):
 
 ![](images/wk6/add_chunk.png){fig-alt="adding a chunk to Rmarkdown"}
 
