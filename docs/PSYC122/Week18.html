@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.56">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Statistics for Psychologists - 7. Week 18 – Developing the linear model</title>
+<title>7. Week 18 – Developing the linear model – Statistics for Psychologists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +22,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -82,7 +82,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -91,12 +96,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
-
 <script src="../site_libs/kePrint-0.0.1/kePrint.js"></script>
 <link href="../site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <script>window.onload = function() {document.getElementById("autocomplete-0-input").placeholder = "Search Year 1";};</script>
@@ -104,65 +109,65 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
-<link rel="stylesheet" href="https://lu-psy-r.github.io/essentials/index.css">
+<link rel="stylesheet" href="../_core/index.css">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="https://lu-psy-r.github.io/">
     <span class="navbar-title">Statistics for Psychologists</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="https://lu-psy-r.github.io/" rel="" target="">
- <span class="menu-text">Home</span></a>
+    <a class="nav-link" href="https://lu-psy-r.github.io/"> 
+<span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://lu-psy-r.github.io/year1/index.html" rel="" target="">
- <span class="menu-text">Year 1</span></a>
+    <a class="nav-link" href="https://lu-psy-r.github.io/year1/index.html"> 
+<span class="menu-text">Year 1</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://lu-psy-r.github.io/year2/index.html" rel="" target="">
- <span class="menu-text">Year 2</span></a>
+    <a class="nav-link" href="https://lu-psy-r.github.io/year2/index.html"> 
+<span class="menu-text">Year 2</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://lu-psy-r.github.io/year3/index.html" rel="" target="">
- <span class="menu-text">Year 3</span></a>
+    <a class="nav-link" href="https://lu-psy-r.github.io/year3/index.html"> 
+<span class="menu-text">Year 3</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://lu-psy-r.github.io/MSc/index.html" rel="" target="">
- <span class="menu-text">MSc</span></a>
+    <a class="nav-link" href="https://lu-psy-r.github.io/MSc/index.html"> 
+<span class="menu-text">MSc</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="https://lu-psy-r.github.io/more/index.html" rel="" target="">
- <span class="menu-text">And More…</span></a>
+    <a class="nav-link" href="https://lu-psy-r.github.io/more/index.html"> 
+<span class="menu-text">And More…</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools ms-auto">
-</div>
           </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC122/index.html">PSYC122</a></li><li class="breadcrumb-item"><a href="../PSYC122/Week18.html">7. Week 18 – Developing the linear model</a></li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC122/index.html">PSYC122</a></li><li class="breadcrumb-item"><a href="../PSYC122/Week18.html">7. Week 18 – Developing the linear model</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -171,7 +176,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
         <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
         <div id="quarto-search" class="" title="Search"></div>
@@ -183,7 +188,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../PSYC121/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PSYC121</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -191,7 +196,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../PSYC121/Week1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. Introduction to PSYC121</span></a>
+ <span class="menu-text">Statistics for Psychologists</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -248,7 +253,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../PSYC122/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PSYC122</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -306,7 +311,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </ul>
     </div>
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
@@ -346,7 +351,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC122/index.html">PSYC122</a></li><li class="breadcrumb-item"><a href="../PSYC122/Week18.html">7. Week 18 – Developing the linear model</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">7. Week 18 – Developing the linear model</h1>
 <p class="subtitle lead">Written by Rob Davies</p>
@@ -362,7 +367,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <div class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -486,7 +493,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Before you go on to the activities in <a href="#sec-wk18-lab-activities">Section&nbsp;5</a>, <strong>watch</strong> the lectures:</p>
+<p>Before you go on to the activities in <a href="#sec-wk18-lab-activities" class="quarto-xref">Section&nbsp;5</a>, <strong>watch</strong> the lectures:</p>
 </div>
 </div>
 <p>The lecture for this week is presented in four short parts. You can view video recordings of the lectures using Panopto, by clicking on the video images shown following.</p>
@@ -589,7 +596,7 @@ Tip
 <ul>
 <li>Watch the video parts right through.</li>
 <li>Use the printable versions of the slides (provided on Moodle) to make notes.</li>
-<li>Try out the coding exercises in the how-to guide and the acitivity tasks or questions (<a href="#sec-wk18-lab-activities">Section&nbsp;5</a>) to learn how to construct visualizations and do analyses.</li>
+<li>Try out the coding exercises in the how-to guide and the acitivity tasks or questions (<a href="#sec-wk18-lab-activities" class="quarto-xref">Section&nbsp;5</a>) to learn how to construct visualizations and do analyses.</li>
 </ul>
 </div>
 </div>
@@ -718,7 +725,7 @@ Code
 <p>Each of the data files we will work with has a similar structure, as you can see in this extract.</p>
 <div class="cell">
 <div class="cell-output-display">
-<table class="table table-sm table-striped small" data-quarto-postprocess="true">
+<table class="table caption-top table-sm table-striped small" data-quarto-postprocess="true">
 <thead>
 <tr class="header">
 <th style="text-align: left;" data-quarto-table-cell-role="th">participant_ID</th>
@@ -849,7 +856,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We show you how to do everything you need to do in the lab activity (<a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a>, next) in the <code>how-to</code> guide.</p>
+<p>We show you how to do everything you need to do in the lab activity (<a href="#sec-wk18-lab-activities-2" class="quarto-xref">Section&nbsp;5.4</a>, next) in the <code>how-to</code> guide.</p>
 <ul>
 <li>Start by looking at the <code>how-to</code> guide to understand what steps you need to follow in the lab activity.</li>
 </ul>
@@ -878,9 +885,9 @@ Tip
 </ul>
 </div>
 </div>
-<p>In the activity <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a>, we are going to work through a sequence of steps and tasks that mirrors the sequence you find in the <code>how-to</code> guide.</p>
+<p>In the activity <a href="#sec-wk18-lab-activities-2" class="quarto-xref">Section&nbsp;5.4</a>, we are going to work through a sequence of steps and tasks that mirrors the sequence you find in the <code>how-to</code> guide.</p>
 <ul>
-<li>There is a little bit of variation, comparing the later steps in the <code>how-to</code> guide and the steps in <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a>, but that is designed to help you with your learning, in different places, when we think you will most need the support.</li>
+<li>There is a little bit of variation, comparing the later steps in the <code>how-to</code> guide and the steps in <a href="#sec-wk18-lab-activities-2" class="quarto-xref">Section&nbsp;5.4</a>, but that is designed to help you with your learning, in different places, when we think you will most need the support.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -921,9 +928,9 @@ Tip
 <li>Use <code>ggpredict()</code> to plot linear model predictions for one of the predictors</li>
 <li>Produce plots that show the predictions for all the predictor variables in a model</li>
 </ol>
-<p>In <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a>, you will see that we show you how you can understand what linear model estimates show by examining the predictions from one outcome-predictor relation.</p>
+<p>In <a href="#sec-wk18-lab-activities-2" class="quarto-xref">Section&nbsp;5.4</a>, you will see that we show you how you can understand what linear model estimates show by examining the predictions from one outcome-predictor relation.</p>
 <p><strong>Step 6: Draw boxplots to examine associations between variables</strong></p>
-<p>The <code>how-to</code> guide shows you how to produce boxplots. We do not include the task in the <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a> tasks sequence but you <em>will</em> find it useful to produce boxplots when you are examining the impact of categorical variables (next).</p>
+<p>The <code>how-to</code> guide shows you how to produce boxplots. We do not include the task in the <a href="#sec-wk18-lab-activities-2" class="quarto-xref">Section&nbsp;5.4</a> tasks sequence but you <em>will</em> find it useful to produce boxplots when you are examining the impact of categorical variables (next).</p>
 <ol start="9" type="1">
 <li>Create boxplots to examine the association between a continuous numeric outcome variable like <code>mean.acc</code> and a categorical variable like <code>ETHNICITY</code></li>
 </ol>
@@ -946,7 +953,7 @@ Tip
 <p>If you are unsure about what you need to do, look at the advice in <code>2023-24-PSYC122-w18-how-to.Rmd</code> on how to do the tasks, with examples on how to write the code.</p>
 </div>
 </div>
-<p>You will see that you can match a task in the activity <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a> to the same task in the <code>how-to</code> guide. The <code>how-to</code> shows you what function you need and how you should write the function code.</p>
+<p>You will see that you can match a task in the activity <a href="#sec-wk18-lab-activities-2" class="quarto-xref">Section&nbsp;5.4</a> to the same task in the <code>how-to</code> guide. The <code>how-to</code> shows you what function you need and how you should write the function code.</p>
 <p>This process of adapting demonstration code is a process critical to data literacy and to effective problem solving in modern psychological science.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -958,7 +965,7 @@ Warning
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Don’t forget: You will need to change the names of the dataset or the variables to complete the tasks in <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a>.</p>
+<p>Don’t forget: You will need to change the names of the dataset or the variables to complete the tasks in <a href="#sec-wk18-lab-activities-2" class="quarto-xref">Section&nbsp;5.4</a>.</p>
 </div>
 </div>
 </section>
@@ -980,7 +987,7 @@ Tip
 <div class="callout-body-container callout-body">
 <ol type="1">
 <li>We will not <em>at first</em> give you the answers to questions about the data or about the results of analyses.</li>
-<li>An answers version of the workbook will be provided after the last lab session (check the answers then in <a href="#sec-wk18-lab-activities-answers">Section&nbsp;6</a>) so that you can check whether your independent work has been correct.</li>
+<li>An answers version of the workbook will be provided after the last lab session (check the answers then in <a href="#sec-wk18-lab-activities-answers" class="quarto-xref">Section&nbsp;6</a>) so that you can check whether your independent work has been correct.</li>
 </ol>
 </div>
 </div>
@@ -1745,7 +1752,7 @@ Tip
 <p>We set out answers information the Week 18 <strong>Developing the linear model</strong> questions, below.</p>
 <ul>
 <li>We focus on the <strong>Lab activity 2</strong> questions where we ask you to interpret something or say something.</li>
-<li>We do not show questions where we have given example or target code in the foregoing lab activity <a href="#sec-wk18-lab-activities-2">Section&nbsp;5.4</a>.</li>
+<li>We do not show questions where we have given example or target code in the foregoing lab activity <a href="#sec-wk18-lab-activities-2" class="quarto-xref">Section&nbsp;5.4</a>.</li>
 </ul>
 <p>You can see all the code and all the answers in <code>2023-24-PSYC122-w18-workbook-answers.Rmd</code>.</p>
 <section id="sec-wk18-lab-activities-answers-information" class="level3">
@@ -2419,18 +2426,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -2462,11 +2458,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2476,8 +2511,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2489,7 +2533,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -2533,6 +2700,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -2558,6 +2726,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2619,12 +2813,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../PSYC122/Week17.html" class="pagination-link">
+      <a href="../PSYC122/Week17.html" class="pagination-link" aria-label="6. Week 17 -- Better understanding the linear model">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">6. Week 17 – Better understanding the linear model</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../PSYC122/Week19.html" class="pagination-link">
+      <a href="../PSYC122/Week19.html" class="pagination-link" aria-label="8. Week 19 -- Linear models -- critical perspectives">
         <span class="nav-page-text">8. Week 19 – Linear models – critical perspectives</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
@@ -2632,19 +2826,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
-    <div class="nav-footer-left">Website developed by Matthew Ivory</div>   
+    <div class="nav-footer-left">
+<p>Website developed by Matthew Ivory</p>
+</div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../previous-content/index.html">Previous Content</a>
+    <a class="nav-link" href="../previous-content/index.html">
+<p>Previous Content</p>
+</a>
   </li>  
 </ul>
     </div>
   </div>
 </footer>
+
 
 
 

@@ -1,0 +1,579 @@
+﻿Hello, it's Margriet here.
+
+In today's video,
+
+I would like to talk you through
+
+how to build a linear model in R.
+
+To do that, we will use some data
+
+from Miller and Haden, which you
+
+might remember from a previous video.
+
+It contains information from 25 participants,
+
+25 children on their reading ability,
+
+their IQ, how often they read books at
+
+home and how often they watch TV at home.
+
+And here you just see the scores
+
+of the first six participants.
+
+Now, the usual thing about,
+
+um, building a linear model,
+
+is that it allows you to figure out
+
+whether you can say something sensible
+
+sensible about the dependent variable,
+
+which in our example is
+
+going to be reading ability.
+
+So can you say something sensible about
+
+reading ability based on IQ as a predictor?
+
+So we're going to fit a linear model
+
+to see whether if we know a child's IQ,
+
+whether we can reliably say
+
+something or predict something
+
+about their reading ability.
+
+Now to start off with,
+
+it is always useful to visualise your data,
+
+and for that we can use a scatterplot (which
+
+you have encountered in previous lectures).
+
+So here we go, a scatter plot with reading
+
+ability on the Y axis and IQ on the X axis.
+
+Here and here we have one
+
+data point for each child.
+
+So this child here has an IQ of 100 and a
+
+reading score of something like 46 or 47,
+
+something like that.
+
+So one data point for each child.
+
+And then what the process of fitting
+
+the model does is that it estimates
+
+this line of best fit and,
+
+if it then test whether the predictor
+
+(IQ) allows you to say something
+
+sensible about the dependent
+
+variable (reading ability).
+
+Now you might remember this
+
+formula from the previous
+
+lecture and it defines a line.
+
+So here we have the dependent variable Y.
+
+And so here we have Y which
+
+is the dependent variable.
+
+So reading ability in our case.
+
+We have the predictor
+
+X (IQ in our case).
+
+And what linear regression does is that
+
+it estimates these parameters so that it
+
+allows you to define this line of best fit.
+
+We have beta zero. The intercept,
+
+that is where the line crosses the Y
+
+axis at X is 0 and we have beta one
+
+which is the weight for the predictor
+
+which defines the slope of the line.
+
+And of course there is also
+
+some error in the data,
+
+so that's the the E here that we
+
+don't need to do anything about that.
+
+Now the way you build the
+
+model in R is somewhat similar to this.
+
+Um, so here you can see the function.
+
+So we used the function lm().
+
+Uh, and then you need to tell lm() a
+
+few things so that it can do its job.
+
+First of all,
+
+you need to tell it which data to use.
+
+So here we say data equals 'mh'
+
+because that's what I've called
+
+the Miller Haden data frame.
+
+And then here, before the comma,
+
+you tell it what you want to model.
+
+And um, you do that as follows.
+
+So here we have a little squiggle in the
+
+middle and the dependent variable sits
+
+to the left of the squiggle.
+
+So here reading ability and the
+
+predictor or predictor in case of
+
+multiple regression sits on the
+
+right of that squiggle and you
+
+can read that as follows.
+
+You can say model reading
+
+ability as a function of IQ.
+
+Now the next thing you
+
+would do is that um ohh.
+
+So here we have that function and we
+
+assign the output of that function to
+
+an object called 'mod' for model.
+
+It could have called that something else now.
+
+Then we used a second function called
+
+summary() to pull out the relevant
+
+information from the output.
+
+So we say run summary(),
+
+give us a summary of our model and
+
+assign it to a new object which I
+
+have just called mod underscore
+
+summary and then I just call that
+
+and and then uh we get the output.
+
+So this is what the output looks like.
+
+This is what you will see in the
+
+console if you've typed that and
+
+pressed enter or if you've run that
+
+line of code of your in your script.
+
+First of all, in the output it helpfully
+
+reminds you what you've actually modelled.
+
+So here you can see what data you've
+
+used and what model you've asked for.
+
+Always helpful to check.
+
+And then let's first look at the bottom.
+
+So here you have the statistics that give
+
+you information about the overall model.
+
+So overall, the overall model
+
+statistics,
+
+is the F statistic and and that has a
+
+certain number of degrees of freedom.
+
+And here we have a P value
+
+for the overall model.
+
+Actually you can see this P value is
+
+smaller than .05, which means that
+
+the model as a whole is significant.
+
+So, um, all the predictors that you've put
+
+in your model together say something, um,
+
+sensible about your dependent variable.
+
+In that case, we only have one predictor,
+
+but you could have more predictors.
+
+Um, the other useful thing that it gives
+
+you here at the bottom is multiple
+
+R-squared or adjusted R-squared.
+
+And it is in most cases,
+
+it is better to look at the adjusted squared,
+
+which tells you how much variance
+
+the model as a whole explains.
+
+So how much of the variance in
+
+your dependent variable.
+
+So in our case,
+
+how much of the variance in reading
+
+ability is explained by whatever we've
+
+put in our model. So in our case, IQ.
+
+So you can see that it is .1689,
+
+similar to what we saw for correlation,
+
+you can multiply it by 100 and then you
+
+have the percent variance accounted for.
+
+So here that would be about 17%
+
+of the variance.
+
+The final bit that I want to talk
+
+about today is this coefficients table.
+
+So here you have the
+
+estimates of the coefficients
+
+to specify the line.
+
+So here you have to intercept,
+
+so this is where the line of best
+
+fit crosses the Y axis at X is 0,
+
+so this is beta zero.
+
+And here you have the beta one.
+
+So you can see that's
+
+for IQ that is
+
+.3036. Sorry about 3.
+
+You can also see it's positive,
+
+which suggests that there is a positive
+
+relationship between IQ and our
+
+dependent variable reading ability.
+
+Um, it gives you more information.
+
+It also gives you the standard error
+
+of that estimate and the T value
+
+associated with it and the probability
+
+that the T value is significant.
+
+So this is the significance of our predictor.
+
+And as you can see, it has a little star,
+
+which means that it is significant
+
+at the .05 level.
+
+We can see that because it is .0236,
+
+so clearly smaller than
+
+.5 so this significant.
+
+So from that you can conclude that IQ is a
+
+significant predictor of reading ability.
+
+Now, if you would have more than
+
+one predictor in this model,
+
+some of the predictors might be
+
+significant and others might not.
+
+OK, so that's what the output looks like,
+
+and that gives you all the information
+
+that you need to report as well.
+
+Um, now it's also important
+
+to check a few assumptions
+
+when you've fitted your model. So
+
+previously with with correlation and stuff,
+
+we checked the assumptions beforehand.
+
+With fitting model,
+
+you first fit the model and then check
+
+whether it meets the assumptions.
+
+So the first assumption is that
+
+there is a linear relationship
+
+between IQ and reading ability,
+
+and this CR plot tells you as much.
+
+So as long as this pink line sits
+
+close enough to the dashed blue line,
+
+it suggests that that the relationship
+
+between the two is linear.
+
+The second assumption asks you whether
+
+the residuals are normally distributed.
+
+Now this is an important one to get right.
+
+When it comes to linear regression,
+
+we don't care so much about the
+
+distribution of the variable we
+
+or variables, we care about the
+
+distribution of the residuals.
+
+So you can do that by creating a QQ
+
+plot and and the residuals are actually
+
+also stored in this object that we
+
+created when we ran the 'lm' function.
+
+So we say, OK, take that object,
+
+go to the residuals and use that to
+
+create a quantile-quantile, or QQ plot.
+
+So QQ plot is the function to do that.
+
+And mind the capital P here.
+
+This is what you get.
+
+So as long as these data points fall
+
+quite closely to this blue line and
+
+kind of within this shaded blue area,
+
+you can conclude that the residuals
+
+are normally distributed.
+
+Now finally we want to check whether
+
+the residuals, again the residuals,
+
+show constant variance, or also
+
+referred to as homoscedasticity.
+
+That basically means that the variance.
+
+So if we look kind of in the middle here,
+
+the variance here is between this
+
+and bottom value and this top value.
+
+So here we we we have this amount
+
+of variance and we basically
+
+want to know whether across all
+
+the values that we have fitted.
+
+So between just under 50 and just above 60,
+
+the variance is roughly similar.
+
+So you know the data points fall similarly
+
+far from this midline um and that's
+
+also indicated kind of by this,
+
+this, this blue line.
+
+And you can see that the variance
+
+at the extremes is not quite
+
+the same as in the middle.
+
+But overall from this plot you would
+
+still conclude that this is close enough,
+
+so that the residuals show
+
+homoscedasticity or constant variance.
+
+So from this you can conclude that
+
+it meets all the assumptions of
+
+a linear regression model so that
+
+your model is valid. Here you
+
+have the code to do that.
+
+So again we take our object that
+
+we've called 'mod', which is the
+
+output of the linear regression and
+
+we say residualPlot with a capital
+
+P and then you get this, this plot.
+
+Now finally, um, how would you report that,
+
+um, this is how you would report it.
+
+So you would say something along the
+
+lines of "A simple linear regression
+
+was performed with reading ability
+
+as the outcome variable and IQ
+
+as the predictor variable."
+
+And here you can see that our report
+
+the means and standard deviations
+
+of each of these variables.
+
+"The results of the regression indicated
+
+that the model significantly predicted
+
+the reading ability ..." and then you
+
+give the overall model statistics,
+
+so the F value with the 1 and 23 degrees of
+
+freedom, and then the exact P value of .024.
+
+And here I've reported the R-squared
+
+rather than the adjusted R square because
+
+there's only one predictor that was .2,
+
+accounting for 20% of the variance.
+
+"IQ was a significant positive predictor ...",
+
+so than a report the estimate
+
+of beta one and its P value.
+
+So this is the way that the APA would
+
+like you to report a regression.
+
+OK. Thank you very much.
