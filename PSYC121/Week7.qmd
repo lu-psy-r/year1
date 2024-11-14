@@ -74,7 +74,7 @@ d <-
                                        .default = "fail")) %>% 
   mutate(salary_estimate = as.numeric(salary_estimate)) %>% 
   drop_na(salary_estimate)  %>% 
-    write_csv("data/Week_7/salary_data_wk7.csv")
+  write_csv("data/Week_7/salary_data_wk7.csv")
 
 d %>% 
   ggplot(aes(salary_estimate)) +
@@ -92,7 +92,7 @@ Today we will look in a bit more detail at people's estimates of the average UK 
 
 -   Create a folder for Week 7
 
--   Download the [csv file for Week 7](data/Week_7/salary_data_wk7.csv) and upload it into this new folder in RStudio Server.
+-   Download the [csv file for Week 7](data/Week_7/salary_data_wk7_2024.csv) and upload it into this new folder in RStudio Server.
 
 # RStudio tasks
 
@@ -107,17 +107,17 @@ Today we will look in a bit more detail at people's estimates of the average UK 
 
 ### Task 1 - Plotting and filtering
 
-1. Below the title, insert a code chunk. Click on the menu "Code" -> "Insert Chunk".
+1. Below the title, insert a code chunk using either the code chunk button, or via the menu ("Code" -> "Insert Chunk").
 
 2. Add in the code `library(tidyverse)`
 
 3. Next, add a `read_csv()` command to get the data - you've done this every week, so this should be familiar. Remember when reading in the data, you need to assign it to a new data object.
 
-4. Let's draw a histogram of the salary estimates:
+4. Let's draw a histogram of the salary estimates. Copy the code below and edit the name of the data object and column:
 
 ```{r}
 #| eval: false
-name_of_the_data_object %>% 
+name_of_the_data_object %>% # the pipe sends the data to the next command (ggplot)
   ggplot() +
   geom_histogram(aes(name_of_the_column), bins = 3)
 
