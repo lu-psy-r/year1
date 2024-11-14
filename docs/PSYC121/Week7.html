@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.6.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-86be405356afa2e2e0c843f0d4897448.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -194,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../PSYC121/Week1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">1. Introduction to PSYC121</span></a>
+ <span class="menu-text">Statistics for Psychologists</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -393,7 +393,7 @@ Caution
 <ul>
 <li><p>There is an <a href="https://ma-rconnect.lancs.ac.uk/PSYC121_Week_7_labprep/" target="_blank">online tutorial</a>. Please make every attempt to complete this before the lab!</p></li>
 <li><p>Create a folder for Week 7</p></li>
-<li><p>Download the <a href="data/Week_7/salary_data_wk7.csv">csv file for Week 7</a> and upload it into this new folder in RStudio Server.</p></li>
+<li><p>Download the <a href="data/Week_7/salary_data_wk7_2024.csv">csv file for Week 7</a> and upload it into this new folder in RStudio Server.</p></li>
 </ul>
 </section>
 <section id="rstudio-tasks" class="level1">
@@ -409,13 +409,13 @@ Caution
 <section id="task-1---plotting-and-filtering" class="level3">
 <h3 class="anchored" data-anchor-id="task-1---plotting-and-filtering">Task 1 - Plotting and filtering</h3>
 <ol type="1">
-<li><p>Below the title, insert a code chunk. Click on the menu “Code” -&gt; “Insert Chunk”.</p></li>
+<li><p>Below the title, insert a code chunk using either the code chunk button, or via the menu (“Code” -&gt; “Insert Chunk”).</p></li>
 <li><p>Add in the code <code>library(tidyverse)</code></p></li>
 <li><p>Next, add a <code>read_csv()</code> command to get the data - you’ve done this every week, so this should be familiar. Remember when reading in the data, you need to assign it to a new data object.</p></li>
-<li><p>Let’s draw a histogram of the salary estimates:</p></li>
+<li><p>Let’s draw a histogram of the salary estimates. Copy the code below and edit the name of the data object and column:</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>name_of_the_data_object <span class="sc">%&gt;%</span> </span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>name_of_the_data_object <span class="sc">%&gt;%</span> <span class="co"># the pipe sends the data to the next command (ggplot)</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(name_of_the_column), <span class="at">bins =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
