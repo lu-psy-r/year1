@@ -50,7 +50,7 @@ library(tidyverse)
 options(scipen = 999) # this stops numbers appearing as scientific notation
 
 
-d_raw <- read_csv("data/Week_7/PSYC121_teaching_data_2023.csv")
+d_raw <- read_csv("data/Week_6/PSYC121_survey_data.csv")
 
 d <- 
   d_raw %>% 
@@ -73,7 +73,7 @@ d <-
            attention_check = case_when(str_detect(attention_check, "strongly agree") ~ "pass",
                                        .default = "fail")) %>% 
   mutate(salary_estimate = as.numeric(salary_estimate)) %>% 
-  drop_na(salary_estimate) %>% 
+  drop_na(salary_estimate)  %>% 
     write_csv("data/Week_7/salary_data_wk7.csv")
 
 d %>% 
