@@ -740,7 +740,7 @@
     "href": "PSYC121/Week7.html",
     "title": "7. Filtering data and testing means (one-sample t-test)",
     "section": "",
-    "text": "Caution\n\n\n\nThis page is under construction for 24/25 and may be subject to change before the teaching week.",
+    "text": "Watch Part 1\n\nWatch Part 2\n\nWatch Part 3\n\nWatch Part 4\n\nDownload the lecture slides here\n\n\nChapter 12 of Howell\nToday we will look in a bit more detail at people’s estimates of the average UK salary. We will first plot this data using geom_histogram() and also geom_boxplot(). When we do this, we’ll see that there are some unusual values, and we’ll need to do a bit of data wrangling to remove them, using the filter() command. We’ll then turn to the conceptual ideas of the lecture - how can we tell if the mean of our sample is unusual, or whether we would actually expect this mean value under the null hypothesis? Finally, we’ll continue to develop our skills in data visualisation by exploring geom_density() plots.",
     "crumbs": [
       "Home",
       "PSYC121",
@@ -751,8 +751,8 @@
     "objectID": "PSYC121/Week7.html#reading",
     "href": "PSYC121/Week7.html#reading",
     "title": "7. Filtering data and testing means (one-sample t-test)",
-    "section": "Reading",
-    "text": "Reading\nChapter 12 of Howell\nToday we will look in a bit more detail at people’s estimates of the average UK salary. We will first plot this data using geom_histogram() and also geom_boxplot(). When we do this, we’ll see that there are some unusual values, and we’ll need to do a bit of data wrangling to remove them, using the filter() command. We’ll then turn to the conceptual ideas of the lecture - how can we tell if the mean of our sample is unusual, or whether we would actually expect this mean value under the null hypothesis? Finally, we’ll continue to develop our skills in data visualisation by exploring geom_density() plots.",
+    "section": "",
+    "text": "Chapter 12 of Howell\nToday we will look in a bit more detail at people’s estimates of the average UK salary. We will first plot this data using geom_histogram() and also geom_boxplot(). When we do this, we’ll see that there are some unusual values, and we’ll need to do a bit of data wrangling to remove them, using the filter() command. We’ll then turn to the conceptual ideas of the lecture - how can we tell if the mean of our sample is unusual, or whether we would actually expect this mean value under the null hypothesis? Finally, we’ll continue to develop our skills in data visualisation by exploring geom_density() plots.",
     "crumbs": [
       "Home",
       "PSYC121",
