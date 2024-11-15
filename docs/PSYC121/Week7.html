@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.33">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>7. Filtering data and testing means (one-sample t-test) – Statistics for Psychologists</title>
+<title>Statistics for Psychologists - 7. Filtering data and testing means (one-sample t-test)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -72,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-86be405356afa2e2e0c843f0d4897448.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -122,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -153,19 +153,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+          <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC121/index.html">PSYC121</a></li><li class="breadcrumb-item"><a href="../PSYC121/Week7.html">7. Filtering data and testing means (one-sample t-test)</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -186,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../PSYC121/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PSYC121</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -194,7 +194,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../PSYC121/Week1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Statistics for Psychologists</span></a>
+ <span class="menu-text">1. Introduction to PSYC121</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -251,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../PSYC122/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PSYC122</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -419,16 +419,29 @@ Caution
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(name_of_the_column), <span class="at">bins =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="callout callout-style-default callout-important callout-titled" title="Outputs from code chunks">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Outputs from code chunks
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When you run code in a .Rmd file, it appears under the code chunk in the file. If you’d prefer to see the output appear in the console or the plots window (for plots) then you can set this in the options. Click the little cog icon at the top of the .Rmd and select “Chunk output in console”</p>
+</div>
+</div>
 <ol start="5" type="1">
 <li><p>Once you’ve got the code to run, you’ll realise that the setting <code>bins = 3</code> is not a good setting to see the distribution of data. Play around with the number of bins for the histogram until you are happy that you can see the distribution of the scores more clearly, including some of the more extreme values.</p></li>
-<li><p>You will see that we’ve got some quite unusual values here. For example, some people think the average salary is less than £10,000 and some people think it’s more than £70,000! It’s unclear what to make of these values. For example, maybe the £5,000 estimates meant to put £50,000? Quite often when we get our “raw” data, it contains extreme values like this, and we need to consider removing them. Let’s run these two lines of code, using <code>arrange()</code>, to see what exactly those high values are:</p></li>
+<li><p>You will see that we’ve got some quite unusual values here. There are a few people that think that the average salary is less than £10,000. It’s unclear what to make of these low values. For example, maybe the £5,000 estimates meant to put £50,000? Quite often when we get our “raw” data, it contains extreme values like this, and we need to consider removing them. Let’s run these two lines of code, using <code>arrange()</code>, to view the lowest and highest values:</p></li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(name_of_the_data_object, name_of_the_column) <span class="co"># order by lowest first</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(name_of_the_data_object, <span class="fu">desc</span>(name_of_the_column)) <span class="co"># order by highest first</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="7" type="1">
-<li>We’ll need to remove these high values to get a better sense of the distribution. Let’s use a <code>filter()</code> command to do this. We need to make a decision about what values to exclude. In later labs we’ll look at a more systematic process of removing <em>outliers</em>, but for now, let’s just remove any that are over £50,000. Edit the <code>filter()</code> command to keep only those estimates that are <em>below</em> £50,000 (&lt;). Remember that the filter command <em>keeps</em> the data that is <em>TRUE</em> according to the expression.</li>
+<li>We’ll first just remove the low values in the data in order to get a better sense of the distribution. Let’s use a <code>filter()</code> command to do this. We need to make a decision about what values to exclude. In later labs we’ll look at a more systematic process of removing <em>outliers</em>, but for now, let’s just remove any that are below £10,000. Edit the <code>filter()</code> command to <strong>keep</strong> only those estimates that are <em>above</em> £10,000 (&gt;). Remember that the filter command <strong><em>keeps</em></strong> the data that are <em>TRUE</em> according to the expression.</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>name_of_the_data_object <span class="sc">%&gt;%</span> </span>
@@ -444,15 +457,15 @@ Assigning the result!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you completed that last step correctly you’ll see an output in the console (or in your .Rmd) showing a data object which has 128 rows and 5 columns. However, your data object has not actually changed in the environment. This will still be showing as 137 observations (rows). So while the filter command will take out those large estimations, we haven’t actually changed the data object at all. To do this we need to assign (<code>&lt;-</code>) the result of our filter command to the object.</p>
+<p>If you completed that last step correctly you’ll see an output in the console (or in your .Rmd) showing a data object which has 121 rows and 5 columns. However, your data object has not actually changed in the environment. This will still be showing as 128 observations (rows). So while the filter command will take out those small estimations, we haven’t actually changed the data object at all. To do this we need to assign (<code>&lt;-</code>) the result of our filter command to the object.</p>
 </div>
 </div>
 <ol start="8" type="1">
-<li><p>Think about what you need to do to assign the result of the filter to a data object. You assign the result to the same object name you’ve been using (that is, overwrite it), OR you can assign the result to a new data object (e.g., my_object_filtered). It’s up to you.</p></li>
-<li><p>We also want to filter out the very low estimates. Let’s keep all those values greater than (&gt;) £6,000 (again, this is arbitrary, but we are just doing this so we can learn how to use <code>filter()</code>). You can copy and edit the code above to run another filter command.</p></li>
-<li><p>When you’ve done both filter commands, the (new) object should have 122 rows. We can now plot the data again as a histogram. To do this, copy the earlier code for the histogram and edit it as necessary (if you’re using a new object for the filtered data, you’ll need to edit the code to reflect that).</p></li>
-<li><p>And as you know, we can also look at the distribution as a boxplot, a violin, or a density plot. Feel free to add in your own code for other visualisations you might like to try.</p></li>
-<li><p>It’s worth pausing at this point and documenting each of these steps you’ve done. Between each of your code chunks, you’ll want to write a sentence or two, describing the analysis you’ve done and what it produces.</p></li>
+<li><p>Think about what you need to do to <strong>assign</strong> the result of the filter to a data object. You can assign the result to the same object name you’ve been using (that is, overwrite it), OR you can assign the result to a new data object (e.g., my_object_filtered). <strong>It’s up to you</strong>.</p></li>
+<li><p>We may also want to filter out the very high estimates. Let’s keep all those values less than (&lt;) £60,000 (again, this is arbitrary, but we are just doing this so we can learn how to use the <code>filter()</code> command). You can copy and edit the code above to run another filter command. Remember, you’ll need to think about which data is going IN to the calculation, and what you will assign the result to.</p></li>
+<li><p>When you’ve done both filter commands, the (new) object should have 120 rows. We can now plot the data again as a histogram. To do this, <strong>copy the earlier code for the histogram</strong> and edit it as necessary (if you’re using a new object for the filtered data, you’ll need to edit the code to reflect that).</p></li>
+<li><p>And as you know, we can also look at the distribution as a boxplot (<code>geom_boxplot()</code>), a violin (<code>geom_violin()</code>), or a density plot (<code>geom_density()</code>). Go ahead and try some of these different visualisations.</p></li>
+<li><p>It’s worth pausing at this point and documenting each of these steps you’ve done. Between each of your code chunks, you’ll want to write a sentence or two, describing the analysis you’ve done and what it produces. Try using the “Visual” mode at this stage, which might help you to make your document look even nicer. Try knitting the document to html or pdf format.</p></li>
 </ol>
 </section>
 <section id="task-2---one-sample-t-test" class="level3">
@@ -512,12 +525,12 @@ Assigning the result!
 </ul>
 <p>Gain some skills in filtering by trying to complete the following filters. Use the filtered data object that has 130 rows. We’ve put in <strong>()</strong> the number of rows you should see in the resulting object, after the filter.</p>
 <ol start="2" type="1">
-<li><p>Just those people who come from the North East (15 rows)</p></li>
-<li><p>Those people who come from South East and are an only child within their siblings (7 rows)</p></li>
-<li><p>Those people who failed the attention check (17 rows)</p></li>
-<li><p>Those people passed the attention check, are from the UK, and are the oldest child (30 rows)</p></li>
-<li><p>Those people who are NOT from the North West (hint: you’ll need to use <code>!=</code>) (64 rows)</p></li>
-<li><p>Those people who are from the South East or (<code>|</code>) the South West (33 rows)</p></li>
+<li><p>Just those people who come from the North East (11 rows)</p></li>
+<li><p>Those people who come from South East and are the oldest child within their siblings (10 rows)</p></li>
+<li><p>Those people who failed the attention check (16 rows)</p></li>
+<li><p>Those people passed the attention check, are from the UK, and are the youngest child (35 rows)</p></li>
+<li><p>Those people who are NOT from the North West (hint: you’ll need to use <code>!=</code>) (49 rows)</p></li>
+<li><p>Those people who are from the South East or (<code>|</code>) the South West (25 rows)</p></li>
 </ol>
 </section>
 </section>
@@ -565,7 +578,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -597,29 +621,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -627,7 +629,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {

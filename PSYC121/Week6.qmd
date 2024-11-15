@@ -42,7 +42,7 @@ You can download the lecture slides [here](data/Week_6/PSYC121_wk6_slides_2023.p
 
 -   Ensure you have watched the above lecture content for Week 6.
 
--   **PLEASE NOTE! The learnr server is currently down - we are trying to fix this asap.** Complete the short learnr tutorial which will introduce you to running the **binomial tests** in R. [You can find it here](https://ma-rconnect.lancs.ac.uk/PSYC121_2022_W6_prep/){target="_blank"}.
+-   Complete the short learnr tutorial which will introduce you to running the **binomial tests** in R. [You can find it here](https://ma-rconnect.lancs.ac.uk/PSYC121_W6_prep/){target="_blank"}.
 
 ## Working with "R Markdown" documents (.Rmd)
 
