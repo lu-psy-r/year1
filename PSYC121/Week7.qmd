@@ -223,7 +223,7 @@ Things to try:
 
 [**Click here for the one-sample t-test application**](https://ma-rconnect.lancs.ac.uk/one_sample_t){target="_blank"}
 
-### Task 4 - Practising filtering
+## Task 4 - Practising filtering
 
 1.  Filtering is very useful for selecting certain sub-sets of our data. Here we have given you an example of how we select a sub-set of data based on two conditions from two different columns:
 
