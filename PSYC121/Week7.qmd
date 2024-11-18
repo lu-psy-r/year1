@@ -242,7 +242,7 @@ We have given you a few different columns to look at and to use in practicing yo
 -   `home_location_in_UK`: NW, NE, etc (NA is non-UK residents)
 -   `attention_check`: respondents were asked "click strongly agree to show you are paying attention" - some people failed this!!!
 
-Gain some skills in filtering by trying to complete the following filters. Use the filtered data object that has 130 rows. We've put in **()** the number of rows you should see in the resulting object, after the filter.
+Gain some skills in filtering by trying to complete the following filters. Use the filtered data object that has 120 rows. We've put in **()** the number of rows you should see in the resulting object, after the filter.
 
 2.  Just those people who come from the North East (11 rows)
 
