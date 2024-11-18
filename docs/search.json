@@ -1986,5 +1986,17 @@
       "PSYC122",
       "6. Week 17 -- Better understanding the linear model"
     ]
+  },
+  {
+    "objectID": "PSYC121/Week7.html#extra-content",
+    "href": "PSYC121/Week7.html#extra-content",
+    "title": "7. Filtering data and testing means (one-sample t-test)",
+    "section": "Extra content!",
+    "text": "Extra content!\nIn the data for this week, we used a one-sample t-test to see if the salary estimations were significantly different from the median salary of £34,963. You will have found that they are a significant underestimate. But maybe this is because there were quite a few people who weren’t paying attention. Maybe those people gave low estimations, and this is driving the “underestimation effect”. Use a filter command to remove those participants who failed the attention check, and run another one-sample t-test on this new subset of the data.",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "7. Filtering data and testing means (one-sample t-test)"
+    ]
   }
 ]

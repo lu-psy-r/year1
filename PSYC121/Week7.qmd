@@ -280,6 +280,10 @@ d_f %>%
   filter(home_location_in_UK == "SE" | home_location_in_UK == "SW")
 ```
 
+## Extra content!
+
+In the data for this week, we used a one-sample t-test to see if the salary estimations were significantly different from the median salary of £34,963. You will have found that they are a significant underestimate. But maybe this is because there were quite a few people who weren't paying attention. Maybe those people gave low estimations, and this is driving the "underestimation effect". Use a filter command to remove those participants who failed the attention check, and run another one-sample t-test on this new subset of the data. 
+
 ## Week 7 Quiz
 
 You can access a set of quiz questions related to this week [here.](https://ma-rconnect.lancs.ac.uk/PSYC121_2022_Week_7_quiz/){target="_blank"}
