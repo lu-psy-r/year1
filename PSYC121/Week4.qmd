@@ -41,7 +41,7 @@ Download the lecture slides [here](data/Week_4/week4_24_lecture_slides.pptx)
 
 -   This week - there's a new learnr tutorial to follow and help prep for what we are covering: [You can find it here](https://ma-rconnect.lancs.ac.uk/W4LabPrep24/){target="_blank"}.
 
--   Make sure you have access to the `week_4_2024.zip` file for the RStudio server. [You can get the file here](data/Week_4/week_4_2024.zip).
+-   Make sure you have access to the `week_4_2024.zip` file for the RStudio server. [You can get the file here](data/Week_4/week_4_2024v2.zip).
 
 -   If you create a new peoject / folder and upload the file into RStudio before the lab class you'll be even more ready to follow along!
 

@@ -74,7 +74,7 @@ Let's look at (a sample of) the PSYC121 student data collected on guessing the w
 
 ### Step 1. Loading the data
 
-Using the instructions and advice given on Moodle, get the `week_2_2024.zip` file and bring the data and R script into R Studio. [The week 2 zip file is here](data/Week_2/week_2_2024.zip)
+Using the instructions and advice given on Moodle, get the `week_2_2024.zip` file and bring the data and R script into R Studio. [The week 2 zip file is here](data/Week_2/week_2_2024v2.zip)
 
 ### Step 2. Using the R script
 
