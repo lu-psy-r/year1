@@ -48,7 +48,7 @@ Download the lecture slides [here](data/Week_8/Lecture Week 8.pptx)
 ```{r eval=FALSE, include=FALSE}
 library(tidyverse)
 
-d_raw <- read_csv("data/Week_7/PSYC121_teaching_data_2023.csv")
+d_raw <- read_csv("data/Week_6/PSYC121_survey_data.csv")
 
 # set up the data for Task 3
 d <- 
@@ -69,7 +69,7 @@ d <-
   mutate(avg_time = round(mean(time),2))
   
 
-write_csv(d, file = "data/Week_8/stroop_wk8.csv")
+write_csv(d, file = "data/Week_8/stroop_wk8_2024.csv")
 
 
 
@@ -84,7 +84,7 @@ Today we will take a look at summarising means and standard errors (SEs) from ou
 
 **Getting ready for the lab class**
 
-- Create a folder for Week 8 and download the [Week_8 csv file](data/Week_8/stroop_wk8.csv) file and upload it into this new folder in RStudio Server.
+- Create a folder for Week 8 and download the [Week_8 csv file](data/Week_8/stroop_wk8_2024.csv) file and upload it into this new folder in RStudio Server.
 
 ## RStudio Tasks
 
@@ -153,7 +153,7 @@ d %>%
 
 ```
 
-7.  Let's use the filter command we learned last week to remove these high values. Like last week, we will do this (for now) in a fairly unprincipled manner, by "eyeballing" the data (next week we'll consider something a bit more "scientific"). Complete the filter command so that it keeps only the responses for people that had an `avg_time` less than 12 seconds. Remember that you need to think about how you are storing the result of this filter process. Do you want to create a new object, or overwrite the existing object? 
+7.  Let's use the filter command we learned last week to remove these high values. Like last week, we will do this (for now) in a fairly unprincipled manner, by "eyeballing" the data (next week we'll consider something a bit more "scientific"). Complete the filter command so that it keeps only the responses for people that had an `avg_time` less than 10 seconds. Remember that you need to think about how you are storing the result of this filter process. Do you want to create a new object, or overwrite the existing object? 
 
 ```{r}
 #| eval: false
@@ -165,7 +165,7 @@ new_data_object <- # create a new object (or overwrite)
 ```
 
 ::: {.callout-important icon=true title="Check your result!"}
-If you've done this correctly, you should now have a data object that has **360 rows** (data for 120 participants, with 3 responses each). 
+If you've done this correctly, you should now have a data object that has **348 rows** (data for 116 participants, with 3 responses each). 
 :::
 
 8. Add and edit the following code to plot a histogram of the *filtered* data.
@@ -192,7 +192,7 @@ new_data_object %>%
 # filter out the high values
 d_f <- # create a new object (or overwrite)
   d %>% # original data object 
-  filter(avg_time < 12)
+  filter(avg_time < 10)
 
 # draw a new 
 d_f %>% 
