@@ -6,11 +6,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-::: {.callout-caution}
-This page is under construction for 24/25 and may be subject to change before the teaching week.
-:::
-
-
 # Lectures
 
 Watch Part 1
@@ -80,7 +75,7 @@ Today we will take a look at summarising means and standard errors (SEs) from ou
 
 ## Pre-lab work: online tutorial
 
-**Online tutorial**: You must make every attempt to complete this before the lab! To access the [**pre-lab tutorial click here**](https://ma-rconnect.lancs.ac.uk/PSYC121_Week_8/){target="_blank"} (on campus, or VPN required)
+**Online tutorial**: You must make every attempt to complete this before the lab! To access the [**pre-lab tutorial click here**](https://ma-rconnect.lancs.ac.uk/PSYC121_Week_8_2024/){target="_blank"} (on campus, or VPN required)
 
 **Getting ready for the lab class**
 
@@ -165,7 +160,7 @@ new_data_object <- # create a new object (or overwrite)
 ```
 
 ::: {.callout-important icon=true title="Check your result!"}
-If you've done this correctly, you should now have a data object that has **348 rows** (data for 116 participants, with 3 responses each). 
+If you've done this correctly, you should now have a data object that has **327 rows** (data for 109 participants, with 3 responses each). 
 :::
 
 8. Add and edit the following code to plot a histogram of the *filtered* data.
@@ -225,25 +220,73 @@ name_of_data_object %>%
 
 ```
 
+```{r}
+#| eval: false
+#| include: false
+
+d_f %>%
+  group_by(condition) %>% # you need to EDIT this for Q1
+  summarise(stroop_mean = mean(time)) # you need to EDIT this for Q1
+
+```
+
 ::: {.callout-important icon=true title="Check your result!"}
-- You should have 3 values: 4.22, 5.69, 7.28
+- You should have 3 values: 4.63, 5.92, 7.25
 - If all of your values are the same, you've analysed the wrong column.
 :::
 
 2.  Next we need to test if these differences between our means are real. To do that, we can run a related samples t-test. We use this test because each level of the IV in this experiment came from the same person. First though, we must use a `filter()` to restrict the data to just two levels of the IV. The IV is the *condition* column/variable in the data. The related samples t-test looks at the difference between two means (and only two), so the column we use for the t-test needs to have just two levels of the IV (two of the conditions).
 
-3.  Copy the code below into your R Markdown. The filter command is already set up to restrict the data to two of the conditions. Note that the filter uses an "\|" symbol, which means "or", because we want the data that **is the same as** (==) one condition OR **is the same as** (==) the other condition. You'll need to edit the name of the data object to get this to run. 
+3.  Copy the code below into your R Markdown. Edit the first filter command to select the data for the compatible condition, and the second filter command to get the data for the control condition. HINT: you'll want to use a "==" here - this allows us to select the data that **is the same as** (==) a particular value (i.e., the name of that condition).  
 
 ```{r}
 #| eval: false
 
 # use filter to select two levels of the IV - Q3-5
-stroop_comparison <-
+stroop_compatible <-
   name_of_data_object %>% # Edit this for the name of YOUR data object
-  filter(condition == "compatible" | condition == "incompatible")
+  filter(*MISSING*)
+
+# use filter to select two levels of the IV - Q3-5
+stroop_control <-
+  name_of_data_object %>% # Edit this for the name of YOUR data object
+  filter(*MISSING*)
+
+# use filter to select two levels of the IV - Q3-5
+stroop_incompatible <-
+  name_of_data_object %>% # Edit this for the name of YOUR data object
+  filter(*MISSING*)
 
 # run the t-test comparing the means of these two levels
-t.test(data = stroop_comparison, time ~ condition, paired = TRUE)
+t.test(x = stroop_compatible$time, y = stroop_control$time, paired = TRUE)
+
+# add two more t-tests for the other two comparisions
+
+```
+
+```{r}
+#| eval: false
+#| include: false
+
+# use filter to select two levels of the IV - Q3-5
+stroop_compatible <-
+  d_f %>% # Edit this for the name of YOUR data object
+  filter(condition == "compatible")
+
+# use filter to select two levels of the IV - Q3-5
+stroop_control <-
+  d_f %>% # Edit this for the name of YOUR data object
+  filter(condition == "control")
+
+# use filter to select two levels of the IV - Q3-5
+stroop_incompatible <-
+  d_f %>% # Edit this for the name of YOUR data object
+  filter(condition == "incompatible")
+
+# run the t-test comparing the means of these two levels
+t.test(x = stroop_compatible$time, y = stroop_control$time, paired = TRUE)
+t.test(x = stroop_incompatible$time, y = stroop_control$time, paired = TRUE)
+t.test(x = stroop_compatible$time, y = stroop_incompatible$time, paired = TRUE)
 
 ```
 
@@ -253,10 +296,10 @@ t.test(data = stroop_comparison, time ~ condition, paired = TRUE)
 
 > "There \[was a / was no\] significant difference between the \[describe the variables that were compared\], t(\[degrees of freedom here\]) = \[t value here\], p \< \[p value here\]."
 
-6.  With 3 levels to the IV *condition* there are 3 possible comparisons we can make (L1 vs. L2; L1 vs. L3; L2 vs. L3). Complete all three tests, by copying and pasting the code chunk twice more, editing each to make a different filter selection, and then running the t-test. Write out a reporting statement (Q5) for each of your comparisons.
+6.  With 3 levels (L1,L2,L3) to the IV *condition* there are 3 possible comparisons we can make (L1 vs. L2; L1 vs. L3; L2 vs. L3). Complete all three tests, by copying and pasting the code chunk twice more, editing each filter expression to select the relevant data. For each pair of conditions/levels, run the t-test. Write out a reporting statement (Q5) for each of your comparisons.
 
-::: {.callout-important icon=true title="Check your result!"}
-- Using the filtered data (360 rows) you should get the following t statistics: -18.257, -11.754, -10.258
+::: {.callout-important icon=true title="Check your results!"}
+- Using the filtered data (327 rows) you should get the following t statistics: -9.7648, -7.7069, -14.844
 - Remember that it's the magnitude that's important, not whether it's positive or negative. The sign simply depends which way round they are compared in the t calculations (mean_1 - mean_2 or mean_2 - mean_1)
 :::
 
@@ -279,12 +322,25 @@ stroop_summary <-
 
 ```
 
+```{r}
+#| eval: false
+#| include: false
+
+stroop_summary <- 
+  d_f %>%
+  group_by(condition) %>% # you need to EDIT this for Q2
+  summarise(stroop_mean = mean(time),
+            stroop_SE = sd(time)/sqrt(n())) # you need to EDIT this for Q1
+
+```
+
+
 3. Add this code to your document and the correct column (DV) to both the `sd()` and the `mean()` commands. Note that you don't need to put anything in `n()`, as this simply calculates how many rows there are.
 
 4.  View the new summary object you have created. Check that the means and SEs are different for the 3 conditions. If they are the same, you probably summarised the wrong column!
 
 ::: {.callout-important icon=true title="Check your result!"}
-- The SE values should be: 0.117, 0.170, 0.208
+- The SE values should be: 0.137, 0.136, 0.168
 :::
 
 5.  We will now plot these 3 mean values in a figure. Let's use `geom_point()` so that our means and SEs look a bit like the figure above. Complete the ggplot command to plot our summarised value called *stroop_mean* (y), as a function of the IV, *condition* (x):
@@ -318,6 +374,22 @@ name_of_data_object %>%
                     ymax = missing_equation), # edit this for Q5
                 width = .2) 
 
+
+
+```
+
+```{r}
+#| eval: false
+#| include: false
+
+# let's first plot the means
+stroop_summary %>%
+  ggplot(aes(x = condition, y = stroop_mean)) + # map variables to x and y for Q5
+  geom_point(size = 5) +
+  geom_errorbar(aes(ymin = stroop_mean - stroop_SE, # edit this for Q5
+                    ymax = stroop_mean + stroop_SE), # edit this for Q5
+                width = .2) 
+
 ```
 
 ::: {.callout-important icon=true title="Check your result!"}
@@ -329,11 +401,26 @@ EXTRA: These next steps can be completed to practice customising your plot
 
 6.  Add a `labs()` layer to the plot to change the axis titles, and the title of the plot.
 
-7.  Change the theme of the plot (e.g., `theme_classic()`)
+7.  Change the theme of the plot (e.g., `theme_classic()` or `theme_dark()`)
 
 8.  Map the *colour* aesthetic to the variable *condition*. You can do this for `geom_point` or `geom_errorbar` or both at once by putting it in the `aes()` within the `ggplot()` command.
 
 9. Try changing your `geom_point()` to `geom_col`.
+
+```{r}
+#| eval: false
+#| include: false
+
+# let's first plot the means
+stroop_summary %>%
+  ggplot(aes(x = condition, y = stroop_mean)) + # map variables to x and y for Q5
+  geom_col(size = 5) +
+  geom_errorbar(aes(ymin = stroop_mean - stroop_SE, # edit this for Q5
+                    ymax = stroop_mean + stroop_SE), # edit this for Q5
+                width = .2) 
+
+```
+
 
 ### Task 4 - Knit the document
 
@@ -351,7 +438,7 @@ When you knit the document, you will probably see the code you have written in t
 
 Click the cog, then select the type of output you want each code to produce. 
 
-Knitting the document is a great way to see how your work functions as an actual report. Go back and add more description between your code chunks to describe all the steps you have performed in your analysis. 
+Knitting the document is a great way to see how your work looks as an actual report. Go back and add more description between your code chunks to describe all the steps you have performed in your analysis. 
 
 
 ## Week 8 Quiz

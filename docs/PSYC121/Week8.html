@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.56">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8. Related-samples t-tests, plotting means and SE bars – Statistics for Psychologists</title>
+<title>Statistics for Psychologists - 8. Related-samples t-tests, plotting means and SE bars</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -122,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -153,19 +153,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-            <div class="quarto-navbar-tools">
+          <div class="quarto-navbar-tools">
 </div>
       </div> <!-- /container-fluid -->
     </nav>
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC121/index.html">PSYC121</a></li><li class="breadcrumb-item"><a href="../PSYC121/Week8.html">8. Related-samples t-tests, plotting means and SE bars</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -186,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../PSYC121/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PSYC121</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -251,7 +251,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../PSYC122/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PSYC122</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -355,19 +355,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This page is under construction for 24/25 and may be subject to change before the teaching week.</p>
-</div>
-</div>
 <section id="lectures" class="level1">
 <h1>Lectures</h1>
 <p>Watch Part 1</p>
@@ -386,10 +373,10 @@ Caution
 </section>
 <section id="pre-lab-work-online-tutorial" class="level2">
 <h2 class="anchored" data-anchor-id="pre-lab-work-online-tutorial">Pre-lab work: online tutorial</h2>
-<p><strong>Online tutorial</strong>: You must make every attempt to complete this before the lab! To access the <a href="https://ma-rconnect.lancs.ac.uk/PSYC121_Week_8/" target="_blank"><strong>pre-lab tutorial click here</strong></a> (on campus, or VPN required)</p>
+<p><strong>Online tutorial</strong>: You must make every attempt to complete this before the lab! To access the <a href="https://ma-rconnect.lancs.ac.uk/PSYC121_Week_8_2024/" target="_blank"><strong>pre-lab tutorial click here</strong></a> (on campus, or VPN required)</p>
 <p><strong>Getting ready for the lab class</strong></p>
 <ul>
-<li>Create a folder for Week 8 and download the <a href="data/Week_8/stroop_wk8.csv">Week_8 csv file</a> file and upload it into this new folder in RStudio Server.</li>
+<li>Create a folder for Week 8 and download the <a href="data/Week_8/stroop_wk8_2024.csv">Week_8 csv file</a> file and upload it into this new folder in RStudio Server.</li>
 </ul>
 </section>
 <section id="rstudio-tasks" class="level2">
@@ -423,7 +410,7 @@ Caution
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="7" type="1">
-<li>Let’s use the filter command we learned last week to remove these high values. Like last week, we will do this (for now) in a fairly unprincipled manner, by “eyeballing” the data (next week we’ll consider something a bit more “scientific”). Complete the filter command so that it keeps only the responses for people that had an <code>avg_time</code> less than 12 seconds. Remember that you need to think about how you are storing the result of this filter process. Do you want to create a new object, or overwrite the existing object?</li>
+<li>Let’s use the filter command we learned last week to remove these high values. Like last week, we will do this (for now) in a fairly unprincipled manner, by “eyeballing” the data (next week we’ll consider something a bit more “scientific”). Complete the filter command so that it keeps only the responses for people that had an <code>avg_time</code> less than 10 seconds. Remember that you need to think about how you are storing the result of this filter process. Do you want to create a new object, or overwrite the existing object?</li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># filter out the high values</span></span>
@@ -441,7 +428,7 @@ Check your result!
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you’ve done this correctly, you should now have a data object that has <strong>360 rows</strong> (data for 120 participants, with 3 responses each).</p>
+<p>If you’ve done this correctly, you should now have a data object that has <strong>327 rows</strong> (data for 109 participants, with 3 responses each).</p>
 </div>
 </div>
 <ol start="8" type="1">
@@ -485,23 +472,35 @@ Check your result!
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>You should have 3 values: 4.22, 5.69, 7.28</li>
+<li>You should have 3 values: 4.63, 5.92, 7.25</li>
 <li>If all of your values are the same, you’ve analysed the wrong column.</li>
 </ul>
 </div>
 </div>
 <ol start="2" type="1">
 <li><p>Next we need to test if these differences between our means are real. To do that, we can run a related samples t-test. We use this test because each level of the IV in this experiment came from the same person. First though, we must use a <code>filter()</code> to restrict the data to just two levels of the IV. The IV is the <em>condition</em> column/variable in the data. The related samples t-test looks at the difference between two means (and only two), so the column we use for the t-test needs to have just two levels of the IV (two of the conditions).</p></li>
-<li><p>Copy the code below into your R Markdown. The filter command is already set up to restrict the data to two of the conditions. Note that the filter uses an “|” symbol, which means “or”, because we want the data that <strong>is the same as</strong> (==) one condition OR <strong>is the same as</strong> (==) the other condition. You’ll need to edit the name of the data object to get this to run.</p></li>
+<li><p>Copy the code below into your R Markdown. Edit the first filter command to select the data for the compatible condition, and the second filter command to get the data for the control condition. HINT: you’ll want to use a “==” here - this allows us to select the data that <strong>is the same as</strong> (==) a particular value (i.e., the name of that condition).</p></li>
 </ol>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use filter to select two levels of the IV - Q3-5</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>stroop_comparison <span class="ot">&lt;-</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>stroop_compatible <span class="ot">&lt;-</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  name_of_data_object <span class="sc">%&gt;%</span> <span class="co"># Edit this for the name of YOUR data object</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(condition <span class="sc">==</span> <span class="st">"compatible"</span> <span class="sc">|</span> condition <span class="sc">==</span> <span class="st">"incompatible"</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">*</span>MISSING<span class="sc">*</span>)</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># run the t-test comparing the means of these two levels</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">data =</span> stroop_comparison, time <span class="sc">~</span> condition, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># use filter to select two levels of the IV - Q3-5</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>stroop_control <span class="ot">&lt;-</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  name_of_data_object <span class="sc">%&gt;%</span> <span class="co"># Edit this for the name of YOUR data object</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">*</span>MISSING<span class="sc">*</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># use filter to select two levels of the IV - Q3-5</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>stroop_incompatible <span class="ot">&lt;-</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  name_of_data_object <span class="sc">%&gt;%</span> <span class="co"># Edit this for the name of YOUR data object</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">*</span>MISSING<span class="sc">*</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a><span class="co"># run the t-test comparing the means of these two levels</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> stroop_compatible<span class="sc">$</span>time, <span class="at">y =</span> stroop_control<span class="sc">$</span>time, <span class="at">paired =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co"># add two more t-tests for the other two comparisions</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="4" type="1">
 <li><p>Run the t-test on this selection of data to compare the means from these two levels of the IV. Is the result significant? Note the t-value and the p-value.</p></li>
@@ -511,20 +510,20 @@ Check your result!
 <p>“There [was a / was no] significant difference between the [describe the variables that were compared], t([degrees of freedom here]) = [t value here], p &lt; [p value here].”</p>
 </blockquote>
 <ol start="6" type="1">
-<li>With 3 levels to the IV <em>condition</em> there are 3 possible comparisons we can make (L1 vs.&nbsp;L2; L1 vs.&nbsp;L3; L2 vs.&nbsp;L3). Complete all three tests, by copying and pasting the code chunk twice more, editing each to make a different filter selection, and then running the t-test. Write out a reporting statement (Q5) for each of your comparisons.</li>
+<li>With 3 levels (L1,L2,L3) to the IV <em>condition</em> there are 3 possible comparisons we can make (L1 vs.&nbsp;L2; L1 vs.&nbsp;L3; L2 vs.&nbsp;L3). Complete all three tests, by copying and pasting the code chunk twice more, editing each filter expression to select the relevant data. For each pair of conditions/levels, run the t-test. Write out a reporting statement (Q5) for each of your comparisons.</li>
 </ol>
-<div class="callout callout-style-default callout-important callout-titled" title="Check your result!">
+<div class="callout callout-style-default callout-important callout-titled" title="Check your results!">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Check your result!
+Check your results!
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Using the filtered data (360 rows) you should get the following t statistics: -18.257, -11.754, -10.258</li>
+<li>Using the filtered data (327 rows) you should get the following t statistics: -9.7648, -7.7069, -14.844</li>
 <li>Remember that it’s the magnitude that’s important, not whether it’s positive or negative. The sign simply depends which way round they are compared in the t calculations (mean_1 - mean_2 or mean_2 - mean_1)</li>
 </ul>
 </div>
@@ -561,7 +560,7 @@ Check your result!
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>The SE values should be: 0.117, 0.170, 0.208</li>
+<li>The SE values should be: 0.137, 0.136, 0.168</li>
 </ul>
 </div>
 </div>
@@ -617,7 +616,7 @@ Check your result!
 <p>EXTRA: These next steps can be completed to practice customising your plot</p>
 <ol start="6" type="1">
 <li><p>Add a <code>labs()</code> layer to the plot to change the axis titles, and the title of the plot.</p></li>
-<li><p>Change the theme of the plot (e.g., <code>theme_classic()</code>)</p></li>
+<li><p>Change the theme of the plot (e.g., <code>theme_classic()</code> or <code>theme_dark()</code>)</p></li>
 <li><p>Map the <em>colour</em> aesthetic to the variable <em>condition</em>. You can do this for <code>geom_point</code> or <code>geom_errorbar</code> or both at once by putting it in the <code>aes()</code> within the <code>ggplot()</code> command.</p></li>
 <li><p>Try changing your <code>geom_point()</code> to <code>geom_col</code>.</p></li>
 </ol>
@@ -633,7 +632,7 @@ Check your result!
 <p>When you knit the document, you will probably see the code you have written in the output. You can decide whether you want to present the code or not using the options for each code chunk:</p>
 <p><img src="images/wk8/chunk_options.png" class="img-fluid"></p>
 <p>Click the cog, then select the type of output you want each code to produce.</p>
-<p>Knitting the document is a great way to see how your work functions as an actual report. Go back and add more description between your code chunks to describe all the steps you have performed in your analysis.</p>
+<p>Knitting the document is a great way to see how your work looks as an actual report. Go back and add more description between your code chunks to describe all the steps you have performed in your analysis.</p>
 </section>
 </section>
 <section id="week-8-quiz" class="level2">
@@ -680,7 +679,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -712,29 +722,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -742,7 +730,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
