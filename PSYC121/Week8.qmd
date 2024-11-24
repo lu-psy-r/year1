@@ -35,12 +35,17 @@ Watch Part 4
 
 Download the lecture slides [here](data/Week_8/Lecture Week 8.pptx)
 
+To play around with the t distribution simulator that Tom uses in the lecture, [**go here:**](https://ma-rconnect.lancs.ac.uk/t_distribution/){target="_blank"} (on campus, or VPN required)
+
 ## Reading
 
 [Chapter 13](https://modules.lancaster.ac.uk/mod/url/view.php?id=2020663) of Howell
 
 
-```{r eval=FALSE, include=FALSE}
+```{r}
+#| eval: false
+#| include: false
+
 library(tidyverse)
 
 d_raw <- read_csv("data/Week_6/PSYC121_survey_data.csv")
