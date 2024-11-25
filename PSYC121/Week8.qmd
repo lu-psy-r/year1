@@ -247,22 +247,22 @@ d_f %>%
 ```{r}
 #| eval: false
 
-# use filter to select two levels of the IV - Q3-5
+# use filter to select the compatible level of the IV
 stroop_compatible <-
   name_of_data_object %>% # Edit this for the name of YOUR data object
   filter(*MISSING*)
 
-# use filter to select two levels of the IV - Q3-5
+# use filter to select the control level of the IV
 stroop_control <-
   name_of_data_object %>% # Edit this for the name of YOUR data object
   filter(*MISSING*)
 
-# use filter to select two levels of the IV - Q3-5
+# use filter to select the incompatible level of the IV
 stroop_incompatible <-
   name_of_data_object %>% # Edit this for the name of YOUR data object
   filter(*MISSING*)
 
-# run the t-test comparing the means of these two levels
+# run the t-test comparing the means of two of the levels
 t.test(x = stroop_compatible$time, y = stroop_control$time, paired = TRUE)
 
 # add two more t-tests for the other two comparisions
