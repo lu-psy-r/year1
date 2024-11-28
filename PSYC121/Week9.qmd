@@ -45,7 +45,7 @@ Download the lecture slides [here](data/Week_9/Lecture Week 9 vTB.pptx)
 
 ```{r eval=FALSE, include=FALSE}
 library(tidyverse)
-d_raw <- read_csv("data/Week_7/PSYC121_teaching_data_2023.csv")
+d_raw <- read_csv("data/Week_6/PSYC121_survey_data.csv")
 
 # set up the data for Task 3
 data_wk9 <- 
@@ -63,14 +63,14 @@ data_wk9 <-
   mutate(across(contains("pop"), as.numeric)) %>% 
   drop_na()
 
-write_csv(data_wk9, file = "data/Week_7/data_wk9.csv")
+write_csv(data_wk9, file = "data/Week_9/data_wk9.csv")
 
-# d_stroop <- read_csv("data/Week_9/data_stroop_wk9.csv")
-# 
-# d_stroop <- 
-#   d_stroop %>% 
-#   filter(condition == "compatible" | condition == "incompatible")
-# 
+# d_stroop <- read_csv("data/Week_8/stroop_wk8_2024.csv")
+
+d_stroop <-
+  d_stroop %>%
+  filter(condition == "compatible" | condition == "incompatible")
+
 # write_csv(d_stroop, file = "data/Week_9/data_stroop_wk9.csv")
 
 ```
@@ -102,7 +102,7 @@ We also asked a related question about immigration:
 
 1. Create a new R Markdown document for Week 9. 
 
-2.  In the first chunk add `library(tidyverse)` and create a new data object by using `read_csv()` to read "data_wk9.csv".
+2. In the first chunk add `library(tidyverse)` and create a new data object by using `read_csv()` to read "data_wk9.csv".
 
 3. You can view the data by clicking on it in the environment. Note that in previous weeks we've used the `view()` command in our scripts (which does the same thing), but that can conflict with knitting the .Rmd file. 
 
