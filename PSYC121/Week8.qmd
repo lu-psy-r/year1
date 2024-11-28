@@ -39,7 +39,7 @@ To play around with the t distribution simulator that Tom uses in the lecture, [
 
 ## Reading
 
-[Chapter 13](https://modules.lancaster.ac.uk/mod/url/view.php?id=2020663) of Howell
+[Chapter 13 of Howell](https://onesearch.lancaster-university.uk/permalink/44LAN_INST/1438dph/alma9930907993701221)
 
 
 ```{r}

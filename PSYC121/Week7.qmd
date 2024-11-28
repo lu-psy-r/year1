@@ -32,7 +32,7 @@ Download the lecture slides [here](data/Week_7/PSYC121%20Week%207.pptx)
 
 ## Reading
 
-[Chapter 12](https://modules.lancaster.ac.uk/mod/url/view.php?id=2017198) of Howell
+[Chapter 12 of Howell](https://onesearch.lancaster-university.uk/permalink/44LAN_INST/1438dph/alma9930907993701221)
 
 ```{r eval=FALSE, include=FALSE}
 library(tidyverse)

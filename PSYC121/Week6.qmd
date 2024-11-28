@@ -36,13 +36,13 @@ You can download the lecture slides [here](data/Week_6/PSYC121_wk6_slides_2023.p
 
 ## Reading
 
-[Chapter 8](https://modules.lancaster.ac.uk/mod/url/view.php?id=2017199) of Howell
+[Chapter 8 of Howell](https://modules.lancaster.ac.uk/mod/url/view.php?id=2017199) 
 
 ## Pre-lab work
 
 -   Ensure you have watched the above lecture content for Week 6.
 
--   Complete the short learnr tutorial which will introduce you to running the **binomial tests** in R. [You can find it here](https://ma-rconnect.lancs.ac.uk/PSYC121_W6_prep/){target="_blank"}.
+-   Complete the short learnr tutorial which will introduce you to running the **binomial tests** in R. [You can find it here](https://onesearch.lancaster-university.uk/permalink/44LAN_INST/1438dph/alma9930907993701221){target="_blank"}.
 
 ## Working with "R Markdown" documents (.Rmd)
 

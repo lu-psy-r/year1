@@ -40,7 +40,7 @@ Download the lecture slides [here](data/Week_9/Lecture Week 9 vTB.pptx)
 
 ## Reading
 
-[Chapter 14](https://modules.lancaster.ac.uk/mod/url/view.php?id=2023094) of Howell
+[Chapter 14 of Howell](https://onesearch.lancaster-university.uk/permalink/44LAN_INST/1438dph/alma9930907993701221)
 
 
 ```{r eval=FALSE, include=FALSE}
