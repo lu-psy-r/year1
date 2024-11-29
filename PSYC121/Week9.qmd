@@ -83,7 +83,7 @@ d_stroop <- read_csv("data/Week_9/data_stroop_wk9.csv")
 
 **Getting ready for the lab class**
 
-Create a folder for Week 9 and download the [Week_9 csv file](data/Week_9/data_wk9.csv) file and upload it into this new folder in RStudio Server.
+Create a folder for Week 9, download the [Week_9 csv file](data/Week_9/data_wk9.csv) and upload it into this new folder in RStudio Server.
 
 ## RStudio tasks
 
