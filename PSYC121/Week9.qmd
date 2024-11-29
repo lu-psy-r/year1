@@ -2,12 +2,9 @@
 title: 9. Unrelated-samples t-test and Power
 subtitle: Written by Tom Beesley & John Towse
 order: 9
+editor_options: 
+  chunk_output_type: console
 ---
-
-::: {.callout-caution}
-This page is under construction for 24/25 and may be subject to change before the teaching week.
-:::
-
 
 # Lectures
 
@@ -45,31 +42,35 @@ Download the lecture slides [here](data/Week_9/Lecture Week 9 vTB.pptx)
 
 ```{r eval=FALSE, include=FALSE}
 library(tidyverse)
-d_raw <- read_csv("data/Week_6/PSYC121_survey_data.csv")
-
-# set up the data for Task 3
-data_wk9 <- 
-  d_raw %>% 
-  dplyr::slice(3:n()) %>% 
-  select("home_location_in_UK" = Q8, 
-         "pop_est_christian" = Q54_1, 
-         "pop_est_muslim" = Q54_2,
-         "pop_est_age" = Q54_3,
-         "pop_est_immigrants" = Q53_1) %>% 
-  mutate(home_location_in_UK = case_when(str_detect(home_location_in_UK, "North West") ~ "North",
-                                         str_detect(home_location_in_UK, "North East") ~ "North",
-                                         str_detect(home_location_in_UK, "South West") ~ "South",
-                                         str_detect(home_location_in_UK, "South East") ~ "South")) %>% 
-  mutate(across(contains("pop"), as.numeric)) %>% 
-  drop_na()
-
-write_csv(data_wk9, file = "data/Week_9/data_wk9.csv")
+# d_raw <- read_csv("data/Week_6/PSYC121_survey_data.csv")
+# 
+# # set up the data for Task 3
+# data_wk9 <- 
+#   d_raw %>% 
+#   dplyr::slice(3:n()) %>% 
+#   select("home_location_in_UK" = Q8, 
+#          "pop_est_christian" = Q54_1, 
+#          "pop_est_muslim" = Q54_2,
+#          "pop_est_age" = Q54_3,
+#          "pop_est_immigrants" = Q53_1) %>% 
+#   mutate(home_location_in_UK = case_when(str_detect(home_location_in_UK, "North West") ~ "North",
+#                                          str_detect(home_location_in_UK, "North East") ~ "North",
+#                                          str_detect(home_location_in_UK, "South West") ~ "South",
+#                                          str_detect(home_location_in_UK, "South East") ~ "South")) %>% 
+#   mutate(across(contains("pop"), as.numeric)) %>% 
+#   drop_na()
+# 
+# write_csv(data_wk9, file = "data/Week_9/data_wk9.csv")
 
 # d_stroop <- read_csv("data/Week_8/stroop_wk8_2024.csv")
 
-d_stroop <-
-  d_stroop %>%
-  filter(condition == "compatible" | condition == "incompatible")
+data_wk9 <- read_csv("data/Week_9/data_wk9.csv")
+
+d_stroop <- read_csv("data/Week_9/data_stroop_wk9.csv")
+
+# d_stroop <-
+#   d_stroop %>%
+#   filter(condition == "compatible" | condition == "incompatible")
 
 # write_csv(d_stroop, file = "data/Week_9/data_stroop_wk9.csv")
 
@@ -159,6 +160,11 @@ new_data_object_name <-
   data_object_name %>% 
   mutate(z_imm = scale(column_name))
 
+# N.B. the z_imm column has a slightly odd format after this calculation
+# If you want, you can replace the last line here with this:
+# mutate(z_imm = scale(column_name)[,1])
+# ...but this isn't essential for the next steps
+
 ```
 
 ```{r}
@@ -168,7 +174,7 @@ new_data_object_name <-
 # use mutate and scale to create z-scores of immigration estimates
 data_wk9_z <- 
   data_wk9 %>% 
-  mutate(z_imm = scale(pop_est_immigrants))
+  mutate(z_imm = scale(pop_est_immigrants)[,1])
 
 ```
 
@@ -235,7 +241,7 @@ data_object_filtered <-
 
 ```
 
-7. You should have **removed 3 rows of data**. Make a note of this in your R markdown document. 
+7. You should have **removed 1 row of data** to make an object with 102 rows. Make a note of this in your R markdown document. 
 
 ```{r}
 #| eval: false
@@ -291,6 +297,7 @@ var.test(pop_est_immigrants ~ home_location_in_UK, data = your_data_object_name)
 
 ```
 
+
 4.  Now let's run the t-test. This week we are comparing data from different samples of participants (those who are from the North and South). We need to tell the t-test that the data are NOT paired (`paired = FALSE`). The result of the `var.test()` in the last step will tell you whether the `var.equal` value should be `TRUE` or `FALSE`. Set `var.equal = FALSE` or `var.equal = TRUE` depending on whether the variances are equal. When you're happy with the parameters, run the t-test. 
 
 ```{r}
@@ -313,14 +320,28 @@ var.test(pop_est_immigrants ~ home_location_in_UK, data = data_wk9_f)
 # run unrelated samples t-test
 t.test(pop_est_immigrants ~ home_location_in_UK, 
        data = data_wk9_f, 
-       paired = FALSE, 
        var.equal = TRUE) # you'll need to set this to TRUE or FALSE depending on what you found in var.test
 
 ```
 
-5. If you've done this correctly, you should have a **t-statistic = -1.2801**. Examine the p-value and discuss on your table what this means. Write a line in your .Rmd to formally state the result of the t-test (look at last week for the format). Describe what this result means in your own words.
+5. If you've done this correctly, you should have a **t-statistic = --0.04763**. Examine the p-value and discuss on your table what this means. Write a line in your .Rmd to formally state the result of the t-test (look at last week for the format). Describe what this result means in your own words.
 
-6.  In that t-test we looked at the *pop_est_immigrants* variable, but we can do this test for all of our population estimates. Copy the code to run another `var.test()` and `t.test()`, for the *pop_est_christian* variable. Document the result of the t-test in your .Rmd and describe the finding. What do these tell us about the relationship between home_location and estimates of the population (if anything)? Feel free to come back to this and run the other two tests on the other population estimations.
+6.  In that t-test we looked at the *pop_est_immigrants* variable, but we can do this test for all of our population estimates. Copy the code to run another `var.test()` and `t.test()`, for the *pop_est_age* variable. Document the result of the t-test in your .Rmd and describe the finding. What do these tell us about the relationship between home_location and estimates of the population (if anything)? Feel free to come back to this and run the other two tests on the other population estimations.
+
+```{r}
+#| eval: false
+#| include: false
+
+# check if variances are unequal (p < .05) - Q3
+var.test(pop_est_age ~ home_location_in_UK, data = data_wk9_f)
+
+# run unrelated samples t-test
+t.test(pop_est_age ~ home_location_in_UK, 
+       data = data_wk9_f, 
+       var.equal = TRUE) # you'll need to set this to TRUE or FALSE depending on what you found in var.test
+
+```
+
 
 ## Task 4 - Power and effect size (d) calculations
 
@@ -338,8 +359,16 @@ library(pwr)
 
 # add code here to read in the stroop csv file
 
-cohens_d(time ~ condition, 
-         data = your_stroop_data_object,
+compatible_condition <- 
+  your_stroop_data_object %>% # rename
+  filter(condition == "compatible")
+
+incompatible_condition <- 
+  your_stroop_data_object %>% # rename
+  filter(condition == "incompatible")
+
+cohens_d(x = compatible_condition$time,
+         y = incompatible_condition$time,
          paired = TRUE)
 
 ```
@@ -351,8 +380,16 @@ cohens_d(time ~ condition,
 library(effectsize)
 library(pwr)
 
-cohens_d(time ~ condition, 
-         data = d_stroop,
+compatible_condition <- 
+  d_stroop %>% 
+  filter(condition == "compatible")
+
+incompatible_condition <- 
+  d_stroop %>% 
+  filter(condition == "incompatible")
+
+cohens_d(x = compatible_condition$time,
+         y = incompatible_condition$time,
          paired = TRUE)
 
 ```
@@ -362,7 +399,7 @@ cohens_d(time ~ condition,
 ```{r}
 #| eval: false
 
-pwr.t.test(d = value_from_step_3, n = 20) #Q4
+pwr.t.test(d = value_from_step_3, n = 20, type = "paired") #Q4
 
 ```
 
@@ -370,7 +407,11 @@ pwr.t.test(d = value_from_step_3, n = 20) #Q4
 #| eval: false
 #| include: false
 
-pwr.t.test(d = .74, n = 20) #Q4
+pwr.t.test(d = 1.27, n = 20, type = "paired") #Q4
+
+pwr.t.test(d = 1.27, power = .8, type = "paired") #Q4
+
+pwr.t.test(power = .8, n = 40, type = "paired") #Q5
 
 ```
 
@@ -391,4 +432,4 @@ pwr.t.test(d = .74, n = 20) #Q4
 
 ## Week 9 Quiz
 
-You can access a set of quiz questions related to this week [here.](https://ma-rconnect.lancs.ac.uk/PSYC121_2022_Week_9_quiz/){target="_blank"}
+You can access a set of quiz questions related to this week [here.](https://ma-rconnect.lancs.ac.uk/PSYC121_Week_9_quiz/){target="_blank"}
