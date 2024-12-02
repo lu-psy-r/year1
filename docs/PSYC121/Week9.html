@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.6.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-052754da5edda02e8295a3d9f31723fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-86be405356afa2e2e0c843f0d4897448.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -485,22 +485,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <ol start="2" type="1">
 <li><p>What do the means suggest? Do people in the North and South give different estimations? Write a statement in your .Rmd file to describe the difference.</p></li>
-<li><p>Let’s test if these differences are real. First, it is worth noting that many more respondents originate from the North than from the South (see the <em>N</em> column in the summary). We have unequal sample sizes, and potentially unequal variances. Copy the code below into your .Rmd. The first bit of code runs the <code>var.test()</code> to check if the variances of the two samples are similar (homogeneity of variance). If this test produces a p value less that .05, then the variances in the two samples are unequal. That will have consequences for how we run the <code>t-test()</code> in the next step.</p></li>
+<li><p>In order to do a t-test (and variance test) we will need to split the data into two conditions. Complete the following filter code to first get only the participants from the North, then all the participants from the South:</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check if variances are unequal (p &lt; .05) - Q3</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">var.test</span>(pop_est_immigrants <span class="sc">~</span> home_location_in_UK, <span class="at">data =</span> your_data_object_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>north_condition <span class="ot">&lt;-</span> data_object_name <span class="sc">%&gt;%</span> <span class="fu">filter</span>(home_location_in_UK <span class="sc">==</span> <span class="er">*</span>MISSING<span class="sc">*</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>south_condition <span class="ot">&lt;-</span> data_object_name <span class="sc">%&gt;%</span> <span class="fu">filter</span>(home_location_in_UK <span class="sc">==</span> <span class="er">*</span>MISSING<span class="sc">*</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="4" type="1">
+<li>Now we can test whether the means of these two conditions are different. First, it is worth noting that many more respondents originate from the North than from the South (see the <em>N</em> column in the summary). We have unequal sample sizes, and potentially unequal variances. Copy the code below into your .Rmd. This code runs the <code>var.test()</code> to check if the variances of the two samples are similar (homogeneity of variance). If this test produces a p value less that .05, then the variances in the two samples are unequal. That will have consequences for how we run the <code>t-test()</code> in the next step.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># check if variances are unequal (p &lt; .05) - Q4</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">var.test</span>(<span class="at">x =</span> north_condition<span class="sc">$</span>pop_est_immigrants, </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> south_condition<span class="sc">$</span>pop_est_immigrants)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="5" type="1">
 <li>Now let’s run the t-test. This week we are comparing data from different samples of participants (those who are from the North and South). We need to tell the t-test that the data are NOT paired (<code>paired = FALSE</code>). The result of the <code>var.test()</code> in the last step will tell you whether the <code>var.equal</code> value should be <code>TRUE</code> or <code>FALSE</code>. Set <code>var.equal = FALSE</code> or <code>var.equal = TRUE</code> depending on whether the variances are equal. When you’re happy with the parameters, run the t-test.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># run unrelated samples t-test</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(pop_est_immigrants <span class="sc">~</span> home_location_in_UK, <span class="at">data =</span> your_data_object_name, </span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">paired =</span> <span class="cn">FALSE</span>, </span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal =</span> missing_value) <span class="co"># you'll need to set this to TRUE or FALSE depending on what you found in var.test</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># run unrelated samples t-test</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> north_condition<span class="sc">$</span>pop_est_immigrants, <span class="at">y =</span> south_condition<span class="sc">$</span>pop_est_immigrants, </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>       <span class="at">paired =</span> missing, <span class="co"># is this a paired or unpaired t-test? </span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">var.equal =</span> missing_value) <span class="co"># you'll need to set this to TRUE or FALSE depending on what you found in var.test</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ol start="5" type="1">
+<ol start="6" type="1">
 <li><p>If you’ve done this correctly, you should have a <strong>t-statistic = –0.04763</strong>. Examine the p-value and discuss on your table what this means. Write a line in your .Rmd to formally state the result of the t-test (look at last week for the format). Describe what this result means in your own words.</p></li>
 <li><p>In that t-test we looked at the <em>pop_est_immigrants</em> variable, but we can do this test for all of our population estimates. Copy the code to run another <code>var.test()</code> and <code>t.test()</code>, for the <em>pop_est_age</em> variable. Document the result of the t-test in your .Rmd and describe the finding. What do these tell us about the relationship between home_location and estimates of the population (if anything)? Feel free to come back to this and run the other two tests on the other population estimations.</p></li>
 </ol>
@@ -513,28 +521,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Add the following code into a chunk and run it (edit the data object name) to calculate the <code>cohens_d()</code> effect size, which is reported as <em>effsize</em>. You can ignore any negative sign, taking note of the absolute value.</p></li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(effectsize)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pwr)</span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here to read in the stroop csv file</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>compatible_condition <span class="ot">&lt;-</span> </span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  your_stroop_data_object <span class="sc">%&gt;%</span> <span class="co"># rename</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(condition <span class="sc">==</span> <span class="st">"compatible"</span>)</span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>incompatible_condition <span class="ot">&lt;-</span> </span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  your_stroop_data_object <span class="sc">%&gt;%</span> <span class="co"># rename</span></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(condition <span class="sc">==</span> <span class="st">"incompatible"</span>)</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="fu">cohens_d</span>(<span class="at">x =</span> compatible_condition<span class="sc">$</span>time,</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> incompatible_condition<span class="sc">$</span>time,</span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>         <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(effectsize)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(pwr)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co"># add code here to read in the stroop csv file</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>compatible_condition <span class="ot">&lt;-</span> </span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  your_stroop_data_object <span class="sc">%&gt;%</span> <span class="co"># rename</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(condition <span class="sc">==</span> <span class="st">"compatible"</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>incompatible_condition <span class="ot">&lt;-</span> </span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  your_stroop_data_object <span class="sc">%&gt;%</span> <span class="co"># rename</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(condition <span class="sc">==</span> <span class="st">"incompatible"</span>)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="fu">cohens_d</span>(<span class="at">x =</span> compatible_condition<span class="sc">$</span>time,</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> incompatible_condition<span class="sc">$</span>time,</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>         <span class="at">paired =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="4" type="1">
 <li>We already know that this large effect size was significant with our large sample of participants. What might we have expected with a much smaller sample size? Copy the code below and use the <code>pwr.t.test()</code> function to add in the effect size that you calculated (Cohen’s d) in step 3. We can set the <em>N</em> to 20. What <strong>power</strong> would we have achieved with this sample size, to detect this large effect? Discuss with your table, or staff, what this power means.</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.t.test</span>(<span class="at">d =</span> value_from_step_3, <span class="at">n =</span> <span class="dv">20</span>, <span class="at">type =</span> <span class="st">"paired"</span>) <span class="co">#Q4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">pwr.t.test</span>(<span class="at">d =</span> value_from_step_3, <span class="at">n =</span> <span class="dv">20</span>, <span class="at">type =</span> <span class="st">"paired"</span>) <span class="co">#Q4</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="5" type="1">
 <li><p>Let’s say we wanted our next experiment to have an 80% chance of finding an effect at least as large as the one we found. Copy the code you used in step 4, and edit it to run <code>pwr.t.test()</code> to work out the minimum sample size we would need to achieve <strong>power of .8</strong>, with the effect size you calculated in step 3.</p></li>
@@ -639,6 +647,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -749,6 +759,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {

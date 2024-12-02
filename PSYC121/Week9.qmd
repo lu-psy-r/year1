@@ -287,25 +287,35 @@ data_wk9_f %>%
 
 2.  What do the means suggest? Do people in the North and South give different estimations? Write a statement in your .Rmd file to describe the difference.
 
-3.  Let's test if these differences are real. First, it is worth noting that many more respondents originate from the North than from the South (see the *N* column in the summary). We have unequal sample sizes, and potentially unequal variances. Copy the code below into your .Rmd. The first bit of code runs the `var.test()` to check if the variances of the two samples are similar (homogeneity of variance). If this test produces a p value less that .05, then the variances in the two samples are unequal. That will have consequences for how we run the `t-test()` in the next step.
+3. In order to do a t-test (and variance test) we will need to split the data into two conditions. Complete the following filter code to first get only the participants from the North, then all the participants from the South:
 
 ```{r}
 #| eval: false
 
-# check if variances are unequal (p < .05) - Q3
-var.test(pop_est_immigrants ~ home_location_in_UK, data = your_data_object_name)
+north_condition <- data_object_name %>% filter(home_location_in_UK == *MISSING*)
+south_condition <- data_object_name %>% filter(home_location_in_UK == *MISSING*)
 
 ```
 
+4.  Now we can test whether the means of these two conditions are different. First, it is worth noting that many more respondents originate from the North than from the South (see the *N* column in the summary). We have unequal sample sizes, and potentially unequal variances. Copy the code below into your .Rmd. This code runs the `var.test()` to check if the variances of the two samples are similar (homogeneity of variance). If this test produces a p value less that .05, then the variances in the two samples are unequal. That will have consequences for how we run the `t-test()` in the next step.
 
-4.  Now let's run the t-test. This week we are comparing data from different samples of participants (those who are from the North and South). We need to tell the t-test that the data are NOT paired (`paired = FALSE`). The result of the `var.test()` in the last step will tell you whether the `var.equal` value should be `TRUE` or `FALSE`. Set `var.equal = FALSE` or `var.equal = TRUE` depending on whether the variances are equal. When you're happy with the parameters, run the t-test. 
+```{r}
+#| eval: false
+
+# check if variances are unequal (p < .05) - Q4
+var.test(x = north_condition$pop_est_immigrants, 
+         y = south_condition$pop_est_immigrants)
+
+```
+
+5.  Now let's run the t-test. This week we are comparing data from different samples of participants (those who are from the North and South). We need to tell the t-test that the data are NOT paired (`paired = FALSE`). The result of the `var.test()` in the last step will tell you whether the `var.equal` value should be `TRUE` or `FALSE`. Set `var.equal = FALSE` or `var.equal = TRUE` depending on whether the variances are equal. When you're happy with the parameters, run the t-test. 
 
 ```{r}
 #| eval: false
 
 # run unrelated samples t-test
-t.test(pop_est_immigrants ~ home_location_in_UK, data = your_data_object_name, 
-       paired = FALSE, 
+t.test(x = north_condition$pop_est_immigrants, y = south_condition$pop_est_immigrants, 
+       paired = missing, # is this a paired or unpaired t-test? 
        var.equal = missing_value) # you'll need to set this to TRUE or FALSE depending on what you found in var.test
 
 ```
@@ -314,33 +324,22 @@ t.test(pop_est_immigrants ~ home_location_in_UK, data = your_data_object_name,
 #| eval: false
 #| include: false
 
+north_condition <- data_wk9_z %>% filter(home_location_in_UK == "North")
+south_condition <- data_wk9_z %>%filter(home_location_in_UK == "South")
+
 # check if variances are unequal (p < .05) - Q3
-var.test(pop_est_immigrants ~ home_location_in_UK, data = data_wk9_f)
+var.test(x = north_condition$z_imm, y = south_condition$z_imm, data = data_wk9_f)
 
 # run unrelated samples t-test
-t.test(pop_est_immigrants ~ home_location_in_UK, 
-       data = data_wk9_f, 
+t.test(x = north_condition$z_imm, y = south_condition$z_imm, 
+       paired = FALSE,
        var.equal = TRUE) # you'll need to set this to TRUE or FALSE depending on what you found in var.test
 
 ```
 
-5. If you've done this correctly, you should have a **t-statistic = --0.04763**. Examine the p-value and discuss on your table what this means. Write a line in your .Rmd to formally state the result of the t-test (look at last week for the format). Describe what this result means in your own words.
+6. If you've done this correctly, you should have a **t-statistic = --0.04763**. Examine the p-value and discuss on your table what this means. Write a line in your .Rmd to formally state the result of the t-test (look at last week for the format). Describe what this result means in your own words.
 
-6.  In that t-test we looked at the *pop_est_immigrants* variable, but we can do this test for all of our population estimates. Copy the code to run another `var.test()` and `t.test()`, for the *pop_est_age* variable. Document the result of the t-test in your .Rmd and describe the finding. What do these tell us about the relationship between home_location and estimates of the population (if anything)? Feel free to come back to this and run the other two tests on the other population estimations.
-
-```{r}
-#| eval: false
-#| include: false
-
-# check if variances are unequal (p < .05) - Q3
-var.test(pop_est_age ~ home_location_in_UK, data = data_wk9_f)
-
-# run unrelated samples t-test
-t.test(pop_est_age ~ home_location_in_UK, 
-       data = data_wk9_f, 
-       var.equal = TRUE) # you'll need to set this to TRUE or FALSE depending on what you found in var.test
-
-```
+7.  In that t-test we looked at the *pop_est_immigrants* variable, but we can do this test for all of our population estimates. Copy the code to run another `var.test()` and `t.test()`, for the *pop_est_age* variable. Document the result of the t-test in your .Rmd and describe the finding. What do these tell us about the relationship between home_location and estimates of the population (if anything)? Feel free to come back to this and run the other two tests on the other population estimations.
 
 
 ## Task 4 - Power and effect size (d) calculations
