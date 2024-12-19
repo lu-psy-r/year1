@@ -288,13 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#sec-wk11-lab-miller-haden" id="toc-sec-wk11-lab-miller-haden" class="nav-link" data-scroll-target="#sec-wk11-lab-miller-haden">Lab activity 2: Visualising, calculating and reporting correlations</a></li>
   <li><a href="#sec-wk11-lab-alcohol-impulsivity" id="toc-sec-wk11-lab-alcohol-impulsivity" class="nav-link" data-scroll-target="#sec-wk11-lab-alcohol-impulsivity">Lab activity 3: Hazardous alcohol use and impulsivity</a></li>
   </ul></li>
-  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a>
-  <ul class="collapse">
-  <li><a href="#lab-activity-1-interpreting-correlation" id="toc-lab-activity-1-interpreting-correlation" class="nav-link" data-scroll-target="#lab-activity-1-interpreting-correlation">Lab activity 1: Interpreting correlation</a></li>
-  <li><a href="#lab-activity-2-constructing-scatterplots-and-calculating-correlations" id="toc-lab-activity-2-constructing-scatterplots-and-calculating-correlations" class="nav-link" data-scroll-target="#lab-activity-2-constructing-scatterplots-and-calculating-correlations">Lab activity 2: Constructing scatterplots and calculating correlations</a></li>
-  <li><a href="#lab-activity-3-hazardous-alcohol-use-and-impulsivity" id="toc-lab-activity-3-hazardous-alcohol-use-and-impulsivity" class="nav-link" data-scroll-target="#lab-activity-3-hazardous-alcohol-use-and-impulsivity">Lab activity 3: Hazardous alcohol use and impulsivity</a></li>
-  </ul></li>
-  <li><a href="#online-qa" id="toc-online-qa" class="nav-link" data-scroll-target="#online-qa">Online Q&amp;A</a></li>
+  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a></li>
   </ul>
 </nav>
     </div>
@@ -321,19 +315,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<div class="callout callout-style-default callout-caution callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Caution
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This page is under construction for 24/25 and may be subject to change before the teaching week.</p>
-</div>
-</div>
+<!-- ::: {.callout-caution} -->
+<!-- This page is under construction for 24/25 and may be subject to change before the teaching week. -->
+<!-- ::: -->
 <p>Today we will take a look at correlation as a measure of association between two numerical variables. We will create scatterplots to visualise correlations, we will run a correlation analysis and we will practise interpreting and reporting the results.</p>
 <section id="sec-wk11-lectures" class="level2">
 <h2 class="anchored" data-anchor-id="sec-wk11-lectures">Lectures</h2>
@@ -544,7 +528,7 @@ New R Markdown script
 <p><strong>Step 1.</strong> Add the code to load the <code>broom</code> and the <code>tidyverse</code> libraries in a new code chunk. If you are unsure, you can look at the ‘Hint’ below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the ‘Code’ section below.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -553,14 +537,14 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>library()</code>function. Remember to put it inside a ‘code chunk’ in your R Markdown script.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -569,7 +553,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below.</p>
 <pre><code>library(broom)
@@ -581,7 +565,7 @@ library(tidyverse)</code></pre>
 <p><strong>Step 2.</strong> Read in the data. You should now see a dataframe with 25 observations and 5 variables in the ‘Environment’. Click on it to view it.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -590,14 +574,14 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>read_csv()</code>function.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -606,7 +590,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below.</p>
 <pre><code>mh &lt;- read_csv("MillerHadenData.csv")</code></pre>
@@ -617,7 +601,7 @@ Code
 <p><strong>Step 3.</strong> Construct a scatterplot of the relationship between ‘Home’ and ‘TV’. Also add a line of best fit and make sure you use clear labels for your axes.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -626,14 +610,14 @@ Hint 1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>ggplot()</code>function in combination with <code>geom_point()</code> and <code>geom_smooth()</code>. Make sure you use clear labels for your axes by using <code>labs()</code>.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -642,7 +626,7 @@ Hint 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Below is a template of the code, make sure to add the data frame and the relevant variable names. Also add clear labels for your axes.</p>
 <pre><code>ggplot(DATA, aes(x = , y = )) + 
@@ -654,7 +638,7 @@ Hint 2
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -663,7 +647,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below.</p>
 <pre><code>ggplot(mh, aes(x = Home, y = TV)) + 
@@ -679,7 +663,7 @@ Code
 <p><strong>Step 4.</strong> Conduct the correlation analysis.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -688,14 +672,14 @@ Hint 1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>cor.test()</code>function in combination with <code>tidy()</code>.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -704,7 +688,7 @@ Hint 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Below is a template of the code, make sure to add the data frame and the relevant variables names.</p>
 <pre><code>results &lt;- cor.test(DATA$X, 
@@ -717,7 +701,7 @@ results</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -726,7 +710,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below.</p>
 <pre><code>results &lt;- cor.test(mh$Home, 
@@ -791,7 +775,7 @@ Do this if you couldn’t upload files to the server
 </blockquote>
 <p><em>Question 1a:</em> How many variables does it have?</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -800,14 +784,14 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>read_csv()</code>function.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -816,7 +800,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below.</p>
 <pre><code>data &lt;- read_csv("alcoholUse_Impulsivity.csv")</code></pre>
@@ -827,7 +811,7 @@ Code
 <p><strong>Step 2.</strong> Plot the relationship between hazard alcohol use and impulsivity using a scatterplot and a line of best fit</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -836,14 +820,14 @@ Hint 1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>ggplot()</code>function in combination with <code>geom_point()</code> and <code>geom_smooth()</code>. Make sure you use clear labels for your axes by using <code>labs()</code>.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -852,7 +836,7 @@ Hint 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use this code template and add the name of the data frame and the variables. Also add informative labels for your axes.</p>
 <pre><code>ggplot(, aes(x = , y = )) + 
@@ -864,7 +848,7 @@ Hint 2
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -873,7 +857,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below</p>
 <pre><code>ggplot(data, aes(x = hau, y = imp)) + 
@@ -889,7 +873,7 @@ Code
 <p><strong>Step 3.</strong> Conduct the correlation analysis.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -898,14 +882,14 @@ Hint 1
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>cor.test()</code>function in combination with <code>tidy()</code>.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -914,7 +898,7 @@ Hint 2
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Below is a template of the code, make sure to add the data frame and the relevant variables names.</p>
 <pre><code>results &lt;- cor.test(DATA$X, 
@@ -927,7 +911,7 @@ results</code></pre>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -936,7 +920,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below.</p>
 <pre><code>results &lt;- cor.test(data$hau, 
@@ -963,383 +947,125 @@ results</code></pre>
 </section>
 <section id="answers" class="level2">
 <h2 class="anchored" data-anchor-id="answers">Answers</h2>
-<p>When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. <strong>Remember</strong>, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. <strong>Actively engaging</strong> with the material is the way to learn these analysis skills, not by looking at code written by someone else…</p>
-<!-- The answers to the questions and the script containing the code will be available after the final lab session has taken place. -->
-<section id="lab-activity-1-interpreting-correlation" class="level3">
-<h3 class="anchored" data-anchor-id="lab-activity-1-interpreting-correlation">Lab activity 1: Interpreting correlation</h3>
-<ol type="1">
-<li>Below are scatterplots that show the relationship between ‘how much you know about correlation and how attractive you appear to members of the opposite (&amp;/or same) sex’. Choose the type of correlation (strength and direction) displayed in each graph.</li>
-</ol>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<ol type="a">
-<li>strong positive correlation</li>
-<li>null correlation</li>
-<li>moderate positive correlation</li>
-<li>perfect negative correlation</li>
-</ol>
-</div>
-</div>
-</div>
-<ol start="2" type="1">
-<li>Suppose it was observed that there is a correlation of <em>r</em> = -.81 between a driver’s age and the cost of car insurance. This correlation would mean that, in general, older people pay more for car insurance.</li>
-</ol>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-29" class="callout-29-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>FALSE Explanation: The correlation coefficient is negative and therefore infers a negative correlation. As such, older people pay less for car insurance: as age increases, car insurance costs decrease.</p>
-</div>
-</div>
-</div>
-<ol start="3" type="1">
-<li>Suppose that there is a correlation of <em>r</em> = .87 between the length of time a person is in prison and the amount of aggression the person displays on a psychological inventory administered at release. This means that spending a longer amount of time in prison <em>causes</em> people to become more aggressive.</li>
-</ol>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>FALSE Explanation: This is a bit of trick question as it has the sneaky ‘cause’ word in. The correlation coefficient is a positive number, suggesting a positive relationship between length of time in prison and aggression. However, causation cannot be inferred from correlation and therefore we cannot know whether time spent in prison CAUSES aggression, and rather we suggest a relationship between the two: as length of time in prison increases, aggression increases.</p>
-</div>
-</div>
-</div>
-<ol start="4" type="1">
-<li>A significant correlation was found between having great hair and performance in correlation labs. The correlation coefficient was .7. How much variance in correlation lab performance can the ‘greatness’ of your hair explain?</li>
-</ol>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>c 49% The ‘coefficient of determination’ or ‘R-squared’ tells us the proportion or variance in one variable that can be predicted if we know the other variable. We can determine this by squaring the <em>r</em>. Therefore, .7<sup>2</sup> = .49, <em>R<sup>2</sup></em> = .49.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="lab-activity-2-constructing-scatterplots-and-calculating-correlations" class="level3">
-<h3 class="anchored" data-anchor-id="lab-activity-2-constructing-scatterplots-and-calculating-correlations">Lab activity 2: Constructing scatterplots and calculating correlations</h3>
-<p>You can download the RMd-script that contains the code to complete lab activities 2 and 3 here: <a href="../PSYC122/data/week11/122_wk11_labActivities2_3.html">122_wk11_labActivities2_3.Rmd</a>.</p>
-<p><em>Question 3a:</em> What can you tell from the scatterplot about the direction of the relationship?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-32" class="callout-32-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>There is a negative association between ‘Home’ and ‘TV’. This means that the longer a child spends watching TV, the shorter they will read at home.</p>
-</div>
-</div>
-</div>
-<p><em>Question 4a:</em> What is the correlation coefficient (Pearson’s r)?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-33" class="callout-33-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong><em>r</em></strong> <strong>= -.65</strong></p>
-</div>
-</div>
-</div>
-<p><em>Question 4b:</em> What is the p value?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-34" class="callout-34-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong><em>p</em></strong> <strong>&lt; .001</strong></p>
-</div>
-</div>
-</div>
-<p><em>Question 4c:</em> Is the correlation significant at the p &lt; .05 level?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-35" class="callout-35-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>Yes, because the p-value is smaller than .005</strong></p>
-</div>
-</div>
-</div>
-<p><em>Question 4d:</em> What are the degrees of freedom you need to report?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-36" class="callout-36-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>23</strong></p>
-</div>
-</div>
-</div>
-<p>Step 5. How much variance in ‘time spent reading’ can be accounted for by ‘time spent watching TV’?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-37" class="callout-37-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>42%</strong></p>
-</div>
-</div>
-</div>
-<p>Step 6. Write a few sentences in which you report this result, following APA guidelines.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-38" class="callout-38-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>Something along the lines of: A Pearson’s correlation coefficient was used to assess the relationship between time spent reading at home and time spent watching TV at home. There was a significant negative correlation, <em>r</em>(23) = -.65, <em>p</em> &lt; .001. As time spent watching TV increased, time spent reading at home decreased.</strong></p>
-</div>
-</div>
-</div>
-</section>
-<section id="lab-activity-3-hazardous-alcohol-use-and-impulsivity" class="level3">
-<h3 class="anchored" data-anchor-id="lab-activity-3-hazardous-alcohol-use-and-impulsivity">Lab activity 3: Hazardous alcohol use and impulsivity</h3>
-<p><em>Question 1a:</em> How many variables does it have?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-39" class="callout-39-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>3</strong></p>
-</div>
-</div>
-</div>
-<p><em>Question 2a:</em> What can you tell from the scatterplot about the direction of the relationship?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-40" class="callout-40-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>There is a positive association between ‘hazardous alcohol use’ and ‘impulsivity’. This means that as a participant’s score on ‘hazardous alcohol use’ goes up, their score on ‘impulsivity’ also goes up.</strong></p>
-</div>
-</div>
-</div>
-<p><em>Question 3a:</em> What is the correlation coefficient (Pearson’s r)?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-41" class="callout-41-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong><em>r</em></strong> <strong>= .54</strong></p>
-</div>
-</div>
-</div>
-<p><em>Question 3b:</em> What is the p value?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-42" class="callout-42-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong><em>p</em></strong> <strong>= .014</strong></p>
-</div>
-</div>
-</div>
-<p><em>Question 3c:</em> Is the correlation significant at the p &lt; .05 level?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-43" class="callout-43-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>Yes</strong></p>
-</div>
-</div>
-</div>
-<p><em>Question 3d:</em> What are the degrees of freedom you need to report?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-44-contents" aria-controls="callout-44" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-44" class="callout-44-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>18</strong></p>
-</div>
-</div>
-</div>
-<p><em>Question 3e:</em> How much variance in ‘impulsivity’ can be accounted for by ‘hazardous alcohol use’?</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-45-contents" aria-controls="callout-45" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-45" class="callout-45-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>29%</strong></p>
-</div>
-</div>
-</div>
-<p><em>Question 3f:</em>. Give three logically possible directions of causality, indicating for each direction whether it is a plausible explanation in light of the variables involved (and why). No, this is not a trick question —-I know that correlation does not infer causation, but think critically! New studies/ideas are constructed by thinking what the previous study doesn’t tell us about what could be happening with the variables of interest.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-46-contents" aria-controls="callout-46" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-46" class="callout-46-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>Just really looking for reasoning here.</strong></p>
-<p><strong>Examples:</strong></p>
-<ul>
-<li><strong>Being more impulsive may make people consume more alcohol.</strong></li>
-<li><strong>Consuming more alcohol may make people more impulsive.</strong></li>
-<li><strong>An outgoing personality might influence both your level of impulsivity and you are more likely to be socialising in the pub and consuming alcohol. So the same ‘third factor’ may influence both our variables of interest.</strong></li>
-</ul>
-</div>
-</div>
-</div>
-<p><strong>Step 4.</strong> Write a few sentences in which you report this result, following APA guidelines.</p>
-<div class="callout callout-style-default callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-47-contents" aria-controls="callout-47" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Answer
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-47" class="callout-47-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p><strong>Something along the lines of: A Pearson’s correlation coefficient was used to assess the relationship between alcohol use and impulsivity. There was a significant positive correlation, <em>r</em>(18) = .54, <em>p</em> &lt; .014. People who reported to consume more alcohol, scored higher on the impulsivity scale.</strong></p>
-</div>
-</div>
-</div>
-</section>
-</section>
-<section id="online-qa" class="level2">
-<h2 class="anchored" data-anchor-id="online-qa">Online Q&amp;A</h2>
-<p>Below is the recording of this week’s online Q&amp;A.</p>
-<iframe allow="autoplay; fullscreen" height="282" width="500" src="https://estream.lancaster.ac.uk/Embed.aspx?id=72319&amp;code=dP~jZkwq4v0klUnlgKrIvDSs5WshMmxph&amp;cc=1" frameborder="0" allowfullscreen=""></iframe>
-<p><a href="data/week11/PSYC122OnlineQampA19thJanuary2024.txt">Transcript</a></p>
+<!-- When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. **Remember**, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. **Actively engaging** with the material is the way to learn these analysis skills, not by looking at code written by someone else... -->
+<p>The answers to the questions and the script containing the code will be available after the final lab session has taken place.</p>
+<!-- ### Lab activity 1: Interpreting correlation -->
+<!-- 1.  Below are scatterplots that show the relationship between 'how much you know about correlation and how attractive you appear to members of the opposite (&/or same) sex'. Choose the type of correlation (strength and direction) displayed in each graph. -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- a.  strong positive correlation -->
+<!-- b.  null correlation -->
+<!-- c.  moderate positive correlation -->
+<!-- d.  perfect negative correlation -->
+<!-- ::: -->
+<!-- 2. Suppose it was observed that there is a correlation of *r* = -.81 between a driver's age and the cost of car insurance. This correlation would mean that, in general, older people pay more for car insurance. -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- FALSE Explanation: The correlation coefficient is negative and therefore infers a negative correlation. As such, older people pay less for car insurance: as age increases, car insurance costs decrease. -->
+<!-- ::: -->
+<!-- 3. Suppose that there is a correlation of *r* = .87 between the length of time a person is in prison and the amount of aggression the person displays on a psychological inventory administered at release. This means that spending a longer amount of time in prison *causes* people to become more aggressive. -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- FALSE Explanation: This is a bit of trick question as it has the sneaky 'cause' word in. The correlation coefficient is a positive number, suggesting a positive relationship between length of time in prison and aggression. However, causation cannot be inferred from correlation and therefore we cannot know whether time spent in prison CAUSES aggression, and rather we suggest a relationship between the two: as length of time in prison increases, aggression increases. -->
+<!-- ::: -->
+<!-- 4. A significant correlation was found between having great hair and performance in correlation labs. The correlation coefficient was .7. How much variance in correlation lab performance can the 'greatness' of your hair explain? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- c 49% The 'coefficient of determination' or 'R-squared' tells us the proportion or variance in one variable that can be predicted if we know the other variable. We can determine this by squaring the *r*. Therefore, .7^2^ = .49, *R^2^* = .49. -->
+<!-- ::: -->
+<!-- ### Lab activity 2: Constructing scatterplots and calculating correlations -->
+<!-- You can download the RMd-script that contains the code to complete lab activities 2 and 3 here: [122_wk11_labActivities2_3.Rmd](data/week11/122_wk11_labActivities2_3.Rmd). -->
+<!-- *Question 3a:*  What can you tell from the scatterplot about the direction of the relationship? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- There is a negative association between 'Home' and 'TV'. This means that the longer a child spends watching TV, the shorter they will read at home. -->
+<!-- ::: -->
+<!-- *Question 4a:*  What is the correlation coefficient (Pearson's r)? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- ***r*** **= -.65** -->
+<!-- ::: -->
+<!-- *Question 4b:*  What is the p value? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- ***p*** **\< .001** -->
+<!-- ::: -->
+<!-- *Question 4c:*  Is the correlation significant at the p \< .05 level? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **Yes, because the p-value is smaller than .005** -->
+<!-- ::: -->
+<!-- *Question 4d:*  What are the degrees of freedom you need to report? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **23** -->
+<!-- ::: -->
+<!-- Step 5. How much variance in 'time spent reading' can be accounted for by 'time spent watching TV'? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **42%** -->
+<!-- ::: -->
+<!-- Step 6. Write a few sentences in which you report this result, following APA guidelines. -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **Something along the lines of: A Pearson's correlation coefficient was used to assess the relationship between time spent reading at home and time spent watching TV at home. There was a significant negative correlation, *r*(23) = -.65, *p* \< .001. As time spent watching TV increased, time spent reading at home decreased.** -->
+<!-- ::: -->
+<!-- ### Lab activity 3: Hazardous alcohol use and impulsivity -->
+<!-- *Question 1a:*  How many variables does it have? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **3** -->
+<!-- ::: -->
+<!-- *Question 2a:*  What can you tell from the scatterplot about the direction of the relationship? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **There is a positive association between 'hazardous alcohol use' and 'impulsivity'. This means that as a participant's score on 'hazardous alcohol use' goes up, their score on 'impulsivity' also goes up.** -->
+<!-- ::: -->
+<!-- *Question 3a:*  What is the correlation coefficient (Pearson's r)? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- ***r*** **= .54** -->
+<!-- ::: -->
+<!-- *Question 3b:*  What is the p value? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- ***p*** **= .014** -->
+<!-- ::: -->
+<!-- *Question 3c:*  Is the correlation significant at the p \< .05 level? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **Yes** -->
+<!-- ::: -->
+<!-- *Question 3d:*  What are the degrees of freedom you need to report? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **18** -->
+<!-- ::: -->
+<!-- *Question 3e:* How much variance in 'impulsivity' can be accounted for by 'hazardous alcohol use'? -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **29%** -->
+<!-- ::: -->
+<!-- *Question 3f:*. Give three logically possible directions of causality, indicating for each direction whether it is a plausible explanation in light of the variables involved (and why). No, this is not a trick question ----I know that correlation does not infer causation, but think critically! New studies/ideas are constructed by thinking what the previous study doesn't tell us about what could be happening with the variables of interest. -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **Just really looking for reasoning here.** -->
+<!-- **Examples:** -->
+<!-- -   **Being more impulsive may make people consume more alcohol.** -->
+<!-- -   **Consuming more alcohol may make people more impulsive.** -->
+<!-- -   **An outgoing personality might influence both your level of impulsivity and you are more likely to be socialising in the pub and consuming alcohol. So the same 'third factor' may influence both our variables of interest.** -->
+<!-- ::: -->
+<!-- **Step 4.** Write a few sentences in which you report this result, following APA guidelines. -->
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **Something along the lines of: A Pearson's correlation coefficient was used to assess the relationship between alcohol use and impulsivity. There was a significant positive correlation, *r*(18) = .54, *p* \< .014. People who reported to consume more alcohol, scored higher on the impulsivity scale.** -->
+<!-- ::: -->
+<!-- ## Online Q&A -->
+<!-- Below is the recording of this week's online Q&A. -->
+<!-- ```{=html} -->
+<!-- <iframe allow="autoplay; fullscreen" height="282" width="500" src="https://estream.lancaster.ac.uk/Embed.aspx?id=72319&amp;code=dP~jZkwq4v0klUnlgKrIvDSs5WshMmxph&amp;cc=1" frameborder="0" allowfullscreen></iframe> -->
+<!-- ``` -->
+<!-- [Transcript](data/week11/PSYC122OnlineQampA19thJanuary2024.txt) -->
 
 
 </section>
