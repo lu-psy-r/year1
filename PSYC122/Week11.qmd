@@ -1,7 +1,7 @@
 ---
 title: 1. Week 11 - Correlation
 subtitle: Written by Margriet Groen (some parts are adapted from materials developed by the PsyTeachR team at the University of Glasgow School of Psychology and Neuroscience; see [here](https://psyteachr.github.io/analysis-v2/correlations.html))
-order: 11
+order: 2
 ---
 
 <!-- ::: {.callout-caution} -->
@@ -87,7 +87,7 @@ If you get error messages when attempting to upload a file or a folder with file
 :::
 
 ```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week11/122_week11_forStudents/exams.csv?raw=true", destfile = "exams.csv")
+download.file("https://github.com/lu-psy-r/year1/blob/main/PSYC122/data/week11/122_week11_forStudents/exams.csv?raw=true", destfile = "exams.csv")
 ```
 
 ## Lab activities {#sec-wk11-labactivities}
@@ -179,7 +179,7 @@ If you experienced difficulties with uploading a folder or a file to the server,
 :::
 
 ```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week11/MillerHadenData.csv?raw=true", destfile = "MillerHadenData.csv")
+download.file("https://github.com/lu-psy-r/year1/blob/main/PSYC122/data/week11/MillerHadenData.csv?raw=true", destfile = "MillerHadenData.csv")
 ```
 
 ::: {.callout-warning} 
@@ -321,7 +321,7 @@ If you experienced difficulties with uploading a folder or a file to the server,
 :::
 
 ```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week11/122_week11_forStudents/alcoholUse_Impulsivity.csv?raw=true", destfile = "alcoholUse_Impulsivity.csv")
+download.file("https://github.com/lu-psy-r/year1/blob/main/PSYC122/data/week11/122_week11_forStudents/alcoholUse_Impulsivity.csv?raw=true", destfile = "alcoholUse_Impulsivity.csv")
 ```
 
 >**Step 1.**  Read in the data. You should now see an object containing the data in the 'Environment'.
