@@ -112,7 +112,7 @@ ggplot(dat, aes(x = IAT_RT, y = VapingQuestionnaireScore)) +
 
 *Question 5d* What do you conclude from the scatterplot in terms of the homoscedasticity of the data and the linearity, direction and strength of the relationship? What does the scatterplot tell you about possible issues (outliers, range restrictions)?
 
-The data look like a cloud without a clear direction. This suggests the relationship might might be weak. In terms of linearity, the scatterplot doesn't suggest any curvilinear relationships. Variance seems quite constant, but there do seem to be few people with negative IAT_RT (Implicit attitude) scores, suggesting few people held the view that vaping is positive.
+The data look like a cloud without a clear direction. This suggests the relationship might be weak. In terms of linearity, the scatterplot doesn't suggest any curvilinear relationships. Variance seems quite constant, but there do seem to be few people with negative IAT_RT (Implicit attitude) scores, suggesting few people held the view that vaping is positive.
 
 # Step 6: Conduct a correlation analysis ----------------------------------
 

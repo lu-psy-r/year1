@@ -1,0 +1,116 @@
+---
+title: "wk11"
+output: html_document
+date: "2025-01-13"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Lab activity 2
+
+# Step 1: Load libraries
+```{r}
+library(broom)
+library(tidyverse)
+```
+
+# Step 2: Read in the data
+```{r}
+mh <- read_csv("MillerHadenData.csv")
+mh #just to have a quick look at the data
+```
+
+# Step 3: Make a scatterplot
+```{r}
+ggplot (mh, aes (x = TV, y = Home)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_bw() +
+  labs(x = "Time spend reading at home", y = "Time spend watching TV at home")
+```
+
+# Step 4: Conduct a correlation analysis
+```{r}
+results <- cor.test(mh$Home, 
+                    mh$TV, 
+                    method = "pearson", 
+                    alternative = "two.sided") %>% 
+  tidy()
+results
+
+
+r <- results %>%
+  pull(estimate) %>%
+  round(2)
+
+p <- results %>%
+  pull(p.value) %>%
+  round(3)
+
+df <- results %>%
+  pull(parameter)
+
+```
+# Step 5: Calculate the coefficient of determination (also called R-squared)
+
+```{r}
+rsquared <- r*r
+rsquaredPercent <- round(rsquared * 100, 0)
+```
+
+# Step 6: Write up the results.
+
+A Pearson’s correlation coefficient was used to assess the relationship between time spent watching TV and time spent reading at home. There was a significant negative correlation, r(23) = -.65, p < .001. As time spent watching TV increased, time spent reading at home decreased.
+
+## Lab activity 3: Hazardours alcohol use and impulsivity.
+
+# Step 1: Read in the data
+```{r}
+data <- read_csv("alcoholUse_Impulsivity.csv")
+data
+```
+
+# Step 2: Plot the relationship between hazard alcohol use and impulsivity using a scatterplot and a line of best fit
+```{r}
+ggplot(data, aes(x = hau, y = imp)) + 
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_bw() +
+  labs(x = "Hazardous Alcohol Use", y = "Impulsivity")
+```
+
+# Step 3: Conduct a correlation analysis, using Pearson's r
+```{r}
+results <- cor.test(data$hau, 
+                    data$imp, 
+                    method = "pearson", 
+                    alternative = "two.sided") %>% 
+  tidy()
+
+results
+```
+
+Pull out Pearson's r, the degrees of freedom and the p-value for reporting the results
+
+```{r}
+r <- results %>%
+  pull(estimate) %>%
+  round(2)
+
+df <- results %>%
+  pull(parameter)
+
+pvalue <- results %>%
+  pull(p.value) %>%
+  round(3)
+
+rsquared <- r*r
+rsquaredPercent <- round(rsquared * 100, 0)
+```
+
+## Step 4: Write up the results
+A Pearson’s correlation coefficient was used to assess the relationship alcohol use and impulsivity. There was a significant positive correlation, r(18) = .54, p < .014. As alcohol use increased, impulsivity also increased.
+
+
