@@ -61,7 +61,7 @@ Pre-lab activity questions:
 
 We've mostly been using the `ggplot2` package for visualising data. You can read a great overview of the `ggplot2` package [here](https://ggplot2.tidyverse.org). It also links to a 'cheatsheet' that you can download as a .pdf document. Lots of useful info on there!
 
-With regard to visualising relations between continuous variables, the `geom_point()` function in combination with the `geom_line()` function is important. Also remember that it always a good idea to make sure you've given you axes informative labels (using the `labs()` function). You've used these functions before, but the following 'recipes' summarise what each one does and how to use it.
+With regard to visualising relations between continuous variables, the `geom_point()` function in combination with the `geom_line()` function is important. Also remember that is it always a good idea to make sure you've given you axes informative labels (using the `labs()` function). You've used these functions before, but the following 'recipes' summarise what each one does and how to use it.
 
 > **TASK** Have a look at each 'recipe' and read through it. Try to understand each step.
 
@@ -144,7 +144,7 @@ Cruise, R. J., Cash, R. W., & Bolton, D. L. (1985). Development and validation o
 
 As a measure of engagement in the course, we will use data from Moodle usage analytics. Over the course of the term, there were eight optional weekly on-line sessions that students could attend for extra support. The variable `n_weeks` in the `psess.csv` file tells you how many (out of eight) a given student attended.
 
-Our hypothesis was that greater anxiety would be reflected in lower engagement. Answer the following question.
+Our hypothesis is that greater anxiety would be reflected in lower engagement. Answer the following question.
 
 >*Question 1a:* If our hypothesis is correct, what type of correlation (if any) should we observe between students' mean anxiety levels and the variable `n_weeks`?
 
