@@ -4,9 +4,9 @@ subtitle: Written by Margriet Groen (partly adapted from materials developed by 
 order: 4
 ---
 
-::: {.callout-caution}
-This page is under construction for 24/25 and may be subject to change before the teaching week.
-:::
+<!-- ::: {.callout-caution} -->
+<!-- This page is under construction for 24/25 and may be subject to change before the teaching week. -->
+<!-- ::: -->
 
 
 This week we will focus on the linear model and simple linear regression.
@@ -378,146 +378,146 @@ The [**Purdue writing lab website**](https://owl.purdue.edu/owl/research_and_cit
 
 When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. **Remember**, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. **Actively engaging** with the material is the way to learn these analysis skills, not by looking at someone else's completed code...
 
-<!-- The answers to the questions and the script containing the code will be available after the final lab session has taken place. -->
+The answers to the questions and the script containing the code will be available after the final lab session has taken place.
 
-### Lab activity 1
+<!-- ### Lab activity 1 -->
 
-1.  What is the regression equation as discussed during the lecture and what does each letter represent?
+<!-- 1.  What is the regression equation as discussed during the lecture and what does each letter represent? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**Y = b0 + b1 \* X + e** **Y = outcome variable** **b0 = intercept** **b1 = slope** **X = predictor variable** **e = error**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **Y = b0 + b1 \* X + e** **Y = outcome variable** **b0 = intercept** **b1 = slope** **X = predictor variable** **e = error** -->
+<!-- ::: -->
 
-2.  What are residuals?
+<!-- 2.  What are residuals? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**Residuals reflect the discrepancy between the observed values and the fitted values and give an indication of how well the model 'fits' the data.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **Residuals reflect the discrepancy between the observed values and the fitted values and give an indication of how well the model 'fits' the data.** -->
+<!-- ::: -->
 
-3.  Discuss the answers to the pre-lab activity questions. What did you find?
+<!-- 3.  Discuss the answers to the pre-lab activity questions. What did you find? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-a)  Change the slider for the intercept. How does it change the regression line? **The value for y at x = 0 changes.**
-b)  Change the slider for the slope. How does it change the regression line? **The steepness of the line changes.**
-c)  What happens to the residuals (the red dashed lines) when you change the slope and the intercept of the regression line? **The distance between the fitted values (the line) and the observed values (the dots) increases. Therefore, the red dashed lines become longer suggesting that the residuals increase. The model therefore fits the data less well.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- a)  Change the slider for the intercept. How does it change the regression line? **The value for y at x = 0 changes.** -->
+<!-- b)  Change the slider for the slope. How does it change the regression line? **The steepness of the line changes.** -->
+<!-- c)  What happens to the residuals (the red dashed lines) when you change the slope and the intercept of the regression line? **The distance between the fitted values (the line) and the observed values (the dots) increases. Therefore, the red dashed lines become longer suggesting that the residuals increase. The model therefore fits the data less well.** -->
+<!-- ::: -->
 
-### Lab activity 2
+<!-- ### Lab activity 2 -->
 
-You can download the R Markdown-script that contains the code to complete lab activity 2 here: [122_wk13_labAct2.Rmd](data/week13/122_wk13_labAct2.Rmd).
+<!-- You can download the R Markdown-script that contains the code to complete lab activity 2 here: [122_wk13_labAct2.Rmd](data/week13/122_wk13_labAct2.Rmd). -->
 
-1a.  If our hypothesis is correct, what type of correlation (if any) should we observe between students' mean anxiety levels and the variable `n_weeks`?
+<!-- 1a.  If our hypothesis is correct, what type of correlation (if any) should we observe between students' mean anxiety levels and the variable `n_weeks`? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**A negative correlation**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **A negative correlation** -->
+<!-- ::: -->
 
-2a.  In the `stars` table, what do the numbers in the first row across the three columns refer to?
+<!-- 2a.  In the `stars` table, what do the numbers in the first row across the three columns refer to? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**ID = 3, Question = Q01 and Score = 1 shows us that participant 3 reported a score of 1 on question 1.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **ID = 3, Question = Q01 and Score = 1 shows us that participant 3 reported a score of 1 on question 1.** -->
+<!-- ::: -->
 
-3a.  What is the mean anxiety score for participant 3?
+<!-- 3a.  What is the mean anxiety score for participant 3? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**1.058824**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **1.058824** -->
+<!-- ::: -->
 
-4a.  What are the means and standard deviation for anxiety and engagement with the statistics module?
+<!-- 4a.  What are the means and standard deviation for anxiety and engagement with the statistics module? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**Anxiety *M* = 2.08, *SD* = 0.56; Engagement *M* = 4.54, *SD* = 2.42.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **Anxiety *M* = 2.08, *SD* = 0.56; Engagement *M* = 4.54, *SD* = 2.42.** -->
+<!-- ::: -->
 
-5a.  What does the scatterplot suggest about the relationship between anxiety and engagement?
+<!-- 5a.  What does the scatterplot suggest about the relationship between anxiety and engagement? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**That there might indeed be a relatively strong negative correlation between the two; students with more anxiety, engage less.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **That there might indeed be a relatively strong negative correlation between the two; students with more anxiety, engage less.** -->
+<!-- ::: -->
 
-6a.  What is the estimate of the y-intercept for the model, rounded to three decimal places?
+<!-- 6a.  What is the estimate of the y-intercept for the model, rounded to three decimal places? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**9.057. Explanation: In the summary table, this is the estimate of the intercept.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **9.057. Explanation: In the summary table, this is the estimate of the intercept.** -->
+<!-- ::: -->
 
-6b.  To three decimal places, if the General Linear Model for this model is `Y=beta0 + beta1X + e`, then the value of `beta1` is ...
+<!-- 6b.  To three decimal places, if the General Linear Model for this model is `Y=beta0 + beta1X + e`, then the value of `beta1` is ... -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**-2.173. Explanation: In the summary table, this is the estimate of mean_anxiety, i.e., the slope.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **-2.173. Explanation: In the summary table, this is the estimate of mean_anxiety, i.e., the slope.** -->
+<!-- ::: -->
 
-6c.  To three decimal places, for each unit increase in anxiety, engagement decreases by ...
+<!-- 6c.  To three decimal places, for each unit increase in anxiety, engagement decreases by ... -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**2.173. Explanation: In the summary table, this is also the estimate of mean_anxiety, the slope is how much it decreases so you just remove the - sign.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **2.173. Explanation: In the summary table, this is also the estimate of mean_anxiety, the slope is how much it decreases so you just remove the - sign.** -->
+<!-- ::: -->
 
-6d.  To two decimal places, what is the overall F-ratio of the model?
+<!-- 6d.  To two decimal places, what is the overall F-ratio of the model? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**11.99. Explanation: In the summary table, the F-ratio is noted as the F-statistic.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **11.99. Explanation: In the summary table, the F-ratio is noted as the F-statistic.** -->
+<!-- ::: -->
 
-6e. Is the overall model significant?
+<!-- 6e. Is the overall model significant? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**Yes. Explanation: The overall model p-value is .001428 which is less than .05, therefore significant.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **Yes. Explanation: The overall model p-value is .001428 which is less than .05, therefore significant.** -->
+<!-- ::: -->
 
-6f. What proportion of the variance does the model explain?
+<!-- 6f. What proportion of the variance does the model explain? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**25.52%. Explanation: The variance explained is determined by R-squared, you simply multiple it by 100 to get the percent.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **25.52%. Explanation: The variance explained is determined by R-squared, you simply multiple it by 100 to get the percent.** -->
+<!-- ::: -->
 
-7a. Does the relationship appear to be linear?
+<!-- 7a. Does the relationship appear to be linear? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**Yes, the pink line roughly falls across the dashed blue line and looks mostly linear.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **Yes, the pink line roughly falls across the dashed blue line and looks mostly linear.** -->
+<!-- ::: -->
 
-7b. Do the residuals show normality?
+<!-- 7b. Do the residuals show normality? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**Yes, in the qq-plot the open circles mostly assemble around the solid blue line, and fall mostly within the range of the dashed blue lines.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **Yes, in the qq-plot the open circles mostly assemble around the solid blue line, and fall mostly within the range of the dashed blue lines.** -->
+<!-- ::: -->
 
-7c. Do the residuals show homoscedasticity?
+<!-- 7c. Do the residuals show homoscedasticity? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**Yes, the residual plot shows that the spread of the residuals is roughly similar for different fitted values.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **Yes, the residual plot shows that the spread of the residuals is roughly similar for different fitted values.** -->
+<!-- ::: -->
 
-8. What would the results section look like if you wrote them up, following APA guidelines?
+<!-- 8. What would the results section look like if you wrote them up, following APA guidelines? -->
 
-::: {.callout-note icon=false collapse="true"}
-## Answer
-**A simple linear regression was performed with engagement (*M* = 4.54, *SD* = 0.56) as the outcome variable and statistics anxiety (*M* = 2.08, *SD* = 0.56) as the predictor variable. The results of the regression indicated that the model significantly predicted course engagement (*F*(1, 35) = 11.99, *p* \< .001, *R\^2* = 0.25), accounting for 25% of the variance. Anxiety was a significant negative predictor (*beta* = -2.17, *p* \< 0.001): as anxiety increased, course engagement decreased.**
-:::
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- **A simple linear regression was performed with engagement (*M* = 4.54, *SD* = 0.56) as the outcome variable and statistics anxiety (*M* = 2.08, *SD* = 0.56) as the predictor variable. The results of the regression indicated that the model significantly predicted course engagement (*F*(1, 35) = 11.99, *p* \< .001, *R\^2* = 0.25), accounting for 25% of the variance. Anxiety was a significant negative predictor (*beta* = -2.17, *p* \< 0.001): as anxiety increased, course engagement decreased.** -->
+<!-- ::: -->
 
-## Online Q&A
+<!-- ## Online Q&A -->
 
-Below is the recording of this week's online Q&A.
+<!-- Below is the recording of this week's online Q&A. -->
 
-```{=html}
-<iframe allow="autoplay; fullscreen" height="282" width="500" src="https://estream.lancaster.ac.uk/Embed.aspx?id=73847&amp;code=dH~atT7LQKAF0UOHrJGJ5GzxNJnIkdNKt&amp;cc=1" frameborder="0" allowfullscreen></iframe>
-```
+<!-- ```{=html} -->
+<!-- <iframe allow="autoplay; fullscreen" height="282" width="500" src="https://estream.lancaster.ac.uk/Embed.aspx?id=73847&amp;code=dH~atT7LQKAF0UOHrJGJ5GzxNJnIkdNKt&amp;cc=1" frameborder="0" allowfullscreen></iframe> -->
+<!-- ``` -->

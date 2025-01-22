@@ -495,7 +495,7 @@ There is a negative association between 'Home' and 'TV'. This means that the lon
 
 ::: {.callout-note icon=false collapse="true"}
 ## Answer
-**Yes, because the p-value is smaller than .005**
+**Yes, because the p-value is smaller than .05**
 :::
 
 *Question 4d:*  What are the degrees of freedom you need to report?
@@ -587,7 +587,7 @@ Step 6. Write a few sentences in which you report this result, following APA gui
 
 ::: {.callout-note icon=false collapse="true"}
 ## Answer
-**Something along the lines of: A Pearson's correlation coefficient was used to assess the relationship between alcohol use and impulsivity. There was a significant positive correlation, *r*(18) = .54, *p* \< .014. People who reported to consume more alcohol, scored higher on the impulsivity scale.**
+**Something along the lines of: A Pearson's correlation coefficient was used to assess the relationship between alcohol use and impulsivity. There was a significant positive correlation, *r*(18) = .54, *p* =? .014. People who reported to consume more alcohol, scored higher on the impulsivity scale.**
 :::
 
 <!-- ## Online Q&A -->
