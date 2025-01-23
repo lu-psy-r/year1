@@ -590,12 +590,6 @@ Step 6. Write a few sentences in which you report this result, following APA gui
 **Something along the lines of: A Pearson's correlation coefficient was used to assess the relationship between alcohol use and impulsivity. There was a significant positive correlation, *r*(18) = .54, *p* =? .014. People who reported to consume more alcohol, scored higher on the impulsivity scale.**
 :::
 
-<!-- ## Online Q&A -->
+## Online Q&A
 
-<!-- Below is the recording of this week's online Q&A. -->
-
-<!-- ```{=html} -->
-<!-- <iframe allow="autoplay; fullscreen" height="282" width="500" src="https://estream.lancaster.ac.uk/Embed.aspx?id=72319&amp;code=dP~jZkwq4v0klUnlgKrIvDSs5WshMmxph&amp;cc=1" frameborder="0" allowfullscreen></iframe> -->
-<!-- ``` -->
-<!-- [Transcript](data/week11/PSYC122OnlineQampA19thJanuary2024.txt) -->
-
+Due to technical issues the Q&A was not very informative. I've provided written answers to key questions via the [**Moodle Discussion forum**](https://modules.lancaster.ac.uk/mod/forum/view.php?id=2553170) instead.

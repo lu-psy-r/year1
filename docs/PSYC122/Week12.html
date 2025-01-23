@@ -298,7 +298,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#lab-activity-1-assumptions-of-correlation-analysis" id="toc-lab-activity-1-assumptions-of-correlation-analysis" class="nav-link" data-scroll-target="#lab-activity-1-assumptions-of-correlation-analysis">Lab activity 1: Assumptions of Correlation Analysis</a></li>
   <li><a href="#lab-activity-2-attitudes-towards-vaping" id="toc-lab-activity-2-attitudes-towards-vaping" class="nav-link" data-scroll-target="#lab-activity-2-attitudes-towards-vaping">Lab activity 2: Attitudes towards vaping</a></li>
   </ul></li>
-  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a></li>
+  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a>
+  <ul class="collapse">
+  <li><a href="#lab-activity-1" id="toc-lab-activity-1" class="nav-link" data-scroll-target="#lab-activity-1">Lab activity 1</a></li>
+  <li><a href="#lab-activity-2" id="toc-lab-activity-2" class="nav-link" data-scroll-target="#lab-activity-2">Lab activity 2</a></li>
+  </ul></li>
+  <li><a href="#online-qa" id="toc-online-qa" class="nav-link" data-scroll-target="#online-qa">Online Q&amp;A</a></li>
   </ul>
 </nav>
     </div>
@@ -970,118 +975,343 @@ Code
 <section id="answers" class="level2">
 <h2 class="anchored" data-anchor-id="answers">Answers</h2>
 <p>When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. <strong>Remember</strong>, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. <strong>Actively engaging</strong> with the material is the way to learn these analysis skills, not by looking at someone else’s completed code…</p>
-<p>The answers to the questions and the script containing the code will be available after the final lab session has taken place.</p>
-<!-- ### Lab activity 1 -->
-<!-- 1.  Correlation would be an appropriate form on analysis for researchers interested in the relationship between -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- a.  Dog (breed) and height (cm) of owner -->
-<!-- b.  Speed of swimming (mph) and area of tank (cm) -->
-<!-- c.  Number of cows sitting and rain fall (mm) -->
-<!-- d.  Total llama saliva (ml) expelled and gender of visitors -->
-<!-- e.  b and d -->
-<!-- **f. b and c** **All variables in b anc c are continuous. Dog breed and gender are categorical.** -->
-<!-- ::: -->
-<!-- 2.  When would you use Spearman's rho analysis instead of Pearson's r? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **b. When the data is not normally distributed** -->
-<!-- ::: -->
-<!-- 3.  Using the histograms and qq-plots below, which of these variables satisfies the normality assumption? Explain your answers. -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Vocabulary. Only for vocabulary does the histogram resemble a bell curve and do the data-points in the qq-plot fall within the dashed blue lines.** -->
-<!-- ::: -->
-<!-- 4.  Why should correlation analysis not be conducted on variables with a curvilinear relationship? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **May be subject to a type 2 error - there actually is a relationship between variables yet we reject the null hypothesis. As the relationship is not linear, correlation analysis will not identify this.** -->
-<!-- ::: -->
-<!-- ### Lab activity 2 -->
-<!-- You can download the R-Markdown script that contains the code to complete lab activity 2 here: [122_wk12_labAct2.R](data/week12/122_wk12_labAct2.Rmd). -->
-<!-- Question 2a.  For how many participants do we have data? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **There are 166 observations, so we have data for 166 participants. You can see this in the Environment window in the top right. This does not tell us whether any of these participants have any missing data.** -->
-<!-- ::: -->
-<!-- Question 3a.  For how many participants do we have data now that we have cleaned them up? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **104 participants** -->
-<!-- ::: -->
-<!-- Question 3b.  Use the information in the background description to understand how the scores relate to attitudes. What does a positive IAT_RT score reflect? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **People with a positive IAT_RT are considered to hold the implicit view that vaping is negative (i.e. congruent associations are quicker than incongruent associations).** -->
-<!-- ::: -->
-<!-- What does a negative IAT_RT score reflect? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- ::: -->
-<!--  **People with a negative IAT_RT are considered to hold the implicit view that vaping is positive (i.e. incongruent associations were quicker than congruent associations).** -->
-<!--  ::: -->
-<!--  What does a higher score on the 'VapingQuestionnaireScore' mean? -->
-<!--  ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- ::: -->
-<!-- **Higher scores indicated a positive explicit attitude towards vaping.** -->
-<!-- ::: -->
-<!-- Question 4a.  Why might these averages be useful? Why are averages not always useful in correlations? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **It is always worth thinking about which averages are informative and which are not. Knowing the average explicit attitude towards vaping could well be informative. In contrast, if you are using an ordinal scale and people use the whole of the scale then the average may just tell you the middle of the scale you are using - which you already know and really isn't that informative. So it is always worth thinking about what your descriptives are calculating.** -->
-<!-- ::: -->
-<!-- Question 5a.  What are the variable types for the implicit (IAT_RT) and the explicit (VapingQuestionnaireScore) attitude variables? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Both can be considered continuous variables and at least at interval level.** -->
-<!-- ::: -->
-<!-- Question 5b.  How many people had missing data? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Before we removed participants with missing data, we had 104 observations, now we have 96. So there must have been 8 participants without a score on one or the other variable.** -->
-<!-- ::: -->
-<!-- Question 5c.  What do you conclude from the histograms and the qq-plots? Are the VapingQuestionnaireScore and the IAT_RT normally distributed? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Yes. Both histograms resemble a normal distribution (bell curve) and the open circles in the qq-plots fall within the blue stripy lines.** -->
-<!-- ::: -->
-<!-- Question 5d.  What do you conclude from the scatterplot in terms of the homoscedasticity of the data and the linearity, direction and strength of the relationship? What does the scatterplot tell you about possible issues (outliers, range restrictions)? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **The data look like a cloud without a clear direction. This suggests the relationship might might be weak. In terms of linearity, the scatterplot doesn't suggest any curvilinear relationships. Variance seems quite constant, but there do seem to be few people with negative IAT_RT (Implicit attitude) scores, suggesting few people held the view that vaping is positive.** -->
-<!-- ::: -->
-<!-- Question 6a.  Do you need to calculate Pearson's *r* or Spearman's *rho*? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Pearson's *r* because the data do meet the assumptions.** -->
-<!-- ::: -->
-<!-- Question 6b.  Is the correlation significant? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **No, *p* = .822, which is larger than .05.** -->
-<!-- ::: -->
-<!-- Write a few sentences in which you report this result, following APA guidelines. Make sure to include the *r*, df, p-value and an interpretation. -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Testing the hypothesis of a relationship between implicit and explicit attitudes towards vaping, a Pearson correlation found no significant relationship between IAT reaction times (implicit attitude) and answers on a Vaping Questionnaire (explicit attitude), *r*(94) = -.02, *p* = .822. Overall this suggests that there is no direct relationship between implicit and explicit attitudes with regard to vaping and as such our hypothesis was not supported; we cannot reject the null hypothesis.** -->
-<!-- ::: -->
-<!-- Question 8a. What do you conclude from the scatterplots? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **The scatterplots with age suggest that age is highly skewed with only a few participants older than 25. For now, let's say we'll therefore calculate Spearman's rho, rather than Pearson's *r*. That is ok for now, but if you were analysing these data for a research project, you'd want to have a closer look at the age variable (think histogram, qq-plot, and think about either collecting more data from older participants or transforming the variable (more about that next year).** -->
-<!-- ::: -->
-<!-- Question 8b. What do you conclude from the results of the correlation analysis? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **No significant correlation with age was found.** -->
-<!-- ::: -->
-<!-- ## Online Q&A -->
-<!-- Below is the recording of this week's online Q&A. -->
-<!-- ```{=html} -->
-<!-- <iframe allow="autoplay; fullscreen" height="282" width="500" src="https://estream.lancaster.ac.uk/Embed.aspx?id=72519&amp;code=e0~6wwC9yNzirzLhrkQaCGYxEAwLC7M9j&amp;cc=1" frameborder="0" allowfullscreen></iframe> -->
-<!-- ``` -->
-<!-- [Transcript](data/week12/PSYC122OnlineQampA26thJanuary2024.txt) -->
+<!-- The answers to the questions and the script containing the code will be available after the final lab session has taken place. -->
+<section id="lab-activity-1" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-1">Lab activity 1</h3>
+<ol type="1">
+<li>Correlation would be an appropriate form on analysis for researchers interested in the relationship between</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Dog (breed) and height (cm) of owner</li>
+<li>Speed of swimming (mph) and area of tank (cm)</li>
+<li>Number of cows sitting and rain fall (mm)</li>
+<li>Total llama saliva (ml) expelled and gender of visitors</li>
+<li>b and d</li>
+</ol>
+<p><strong>f.&nbsp;b and c</strong> <strong>All variables in b anc c are continuous. Dog breed and gender are categorical.</strong></p>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li>When would you use Spearman’s rho analysis instead of Pearson’s r?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>b. When the data is not normally distributed</strong></p>
+</div>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Using the histograms and qq-plots below, which of these variables satisfies the normality assumption? Explain your answers.</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Vocabulary. Only for vocabulary does the histogram resemble a bell curve and do the data-points in the qq-plot fall within the dashed blue lines.</strong></p>
+</div>
+</div>
+</div>
+<ol start="4" type="1">
+<li>Why should correlation analysis not be conducted on variables with a curvilinear relationship?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>May be subject to a type 2 error - there actually is a relationship between variables yet we reject the null hypothesis. As the relationship is not linear, correlation analysis will not identify this.</strong></p>
+</div>
+</div>
+</div>
+</section>
+<section id="lab-activity-2" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-2">Lab activity 2</h3>
+<p>You can download the R-Markdown script that contains the code to complete lab activity 2 here: <a href="../PSYC122/data/week12/122_wk12_labAct2.html">122_wk12_labAct2.R</a>.</p>
+<p>Question 2a. For how many participants do we have data?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>There are 166 observations, so we have data for 166 participants. You can see this in the Environment window in the top right. This does not tell us whether any of these participants have any missing data.</strong></p>
+</div>
+</div>
+</div>
+<p>Question 3a. For how many participants do we have data now that we have cleaned them up?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>104 participants</strong></p>
+</div>
+</div>
+</div>
+<p>Question 3b. Use the information in the background description to understand how the scores relate to attitudes. What does a positive IAT_RT score reflect?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>People with a positive IAT_RT are considered to hold the implicit view that vaping is negative (i.e.&nbsp;congruent associations are quicker than incongruent associations).</strong></p>
+</div>
+</div>
+</div>
+<p>What does a negative IAT_RT score reflect?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</div>
+<p><strong>People with a negative IAT_RT are considered to hold the implicit view that vaping is positive (i.e.&nbsp;incongruent associations were quicker than congruent associations).</strong> :::</p>
+<p>What does a higher score on the ‘VapingQuestionnaireScore’ mean?</p>
+<p>::: {.callout-note icon=false collapse=“true”} ## Answer ::: <strong>Higher scores indicated a positive explicit attitude towards vaping.</strong> :::</p>
+<p>Question 4a. Why might these averages be useful? Why are averages not always useful in correlations?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>It is always worth thinking about which averages are informative and which are not. Knowing the average explicit attitude towards vaping could well be informative. In contrast, if you are using an ordinal scale and people use the whole of the scale then the average may just tell you the middle of the scale you are using - which you already know and really isn’t that informative. So it is always worth thinking about what your descriptives are calculating.</strong></p>
+</div>
+</div>
+</div>
+<p>Question 5a. What are the variable types for the implicit (IAT_RT) and the explicit (VapingQuestionnaireScore) attitude variables?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Both can be considered continuous variables and at least at interval level.</strong></p>
+</div>
+</div>
+</div>
+<p>Question 5b. How many people had missing data?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Before we removed participants with missing data, we had 104 observations, now we have 96. So there must have been 8 participants without a score on one or the other variable.</strong></p>
+</div>
+</div>
+</div>
+<p>Question 5c. What do you conclude from the histograms and the qq-plots? Are the VapingQuestionnaireScore and the IAT_RT normally distributed?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Yes. Both histograms resemble a normal distribution (bell curve) and the open circles in the qq-plots fall within the blue stripy lines.</strong></p>
+</div>
+</div>
+</div>
+<p>Question 5d. What do you conclude from the scatterplot in terms of the homoscedasticity of the data and the linearity, direction and strength of the relationship? What does the scatterplot tell you about possible issues (outliers, range restrictions)?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>The data look like a cloud without a clear direction. This suggests the relationship might might be weak. In terms of linearity, the scatterplot doesn’t suggest any curvilinear relationships. Variance seems quite constant, but there do seem to be few people with negative IAT_RT (Implicit attitude) scores, suggesting few people held the view that vaping is positive.</strong></p>
+</div>
+</div>
+</div>
+<p>Question 6a. Do you need to calculate Pearson’s <em>r</em> or Spearman’s <em>rho</em>?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Pearson’s <em>r</em> because the data do meet the assumptions.</strong></p>
+</div>
+</div>
+</div>
+<p>Question 6b. Is the correlation significant?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>No, <em>p</em> = .822, which is larger than .05.</strong></p>
+</div>
+</div>
+</div>
+<p>Write a few sentences in which you report this result, following APA guidelines. Make sure to include the <em>r</em>, df, p-value and an interpretation.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Testing the hypothesis of a relationship between implicit and explicit attitudes towards vaping, a Pearson correlation found no significant relationship between IAT reaction times (implicit attitude) and answers on a Vaping Questionnaire (explicit attitude), <em>r</em>(94) = -.02, <em>p</em> = .822. Overall this suggests that there is no direct relationship between implicit and explicit attitudes with regard to vaping and as such our hypothesis was not supported; we cannot reject the null hypothesis.</strong></p>
+</div>
+</div>
+</div>
+<p>Question 8a. What do you conclude from the scatterplots?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>The scatterplots with age suggest that age is highly skewed with only a few participants older than 25. For now, let’s say we’ll therefore calculate Spearman’s rho, rather than Pearson’s <em>r</em>. That is ok for now, but if you were analysing these data for a research project, you’d want to have a closer look at the age variable (think histogram, qq-plot, and think about either collecting more data from older participants or transforming the variable (more about that next year).</strong></p>
+</div>
+</div>
+</div>
+<p>Question 8b. What do you conclude from the results of the correlation analysis?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>No significant correlation with age was found.</strong></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="online-qa" class="level2">
+<h2 class="anchored" data-anchor-id="online-qa">Online Q&amp;A</h2>
+<p>Below is the recording of this week’s online Q&amp;A.</p>
+<iframe src="https://livelancsac-my.sharepoint.com/personal/shawej1_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=2a79d2c0-09e2-4ded-a704-8f9e521e60f5&amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;referrer=StreamWebApp&amp;referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen="" title="PSYC122 Online Q&amp;A Week 11-14 &amp; 16 -19-20250123_140407-Meeting Recording.mp4"></iframe>
 
 
 </section>
