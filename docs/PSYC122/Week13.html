@@ -305,7 +305,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#lab-activity-1-the-regression-line" id="toc-lab-activity-1-the-regression-line" class="nav-link" data-scroll-target="#lab-activity-1-the-regression-line">Lab activity 1: The regression line</a></li>
   <li><a href="#lab-activity-2-statistics-anxiety-and-engagement-in-module-activities" id="toc-lab-activity-2-statistics-anxiety-and-engagement-in-module-activities" class="nav-link" data-scroll-target="#lab-activity-2-statistics-anxiety-and-engagement-in-module-activities">Lab activity 2: Statistics anxiety and engagement in module activities</a></li>
   </ul></li>
-  <li><a href="#sec-wk13-answers" id="toc-sec-wk13-answers" class="nav-link" data-scroll-target="#sec-wk13-answers">Answers</a></li>
+  <li><a href="#sec-wk13-answers" id="toc-sec-wk13-answers" class="nav-link" data-scroll-target="#sec-wk13-answers">Answers</a>
+  <ul class="collapse">
+  <li><a href="#lab-activity-1" id="toc-lab-activity-1" class="nav-link" data-scroll-target="#lab-activity-1">Lab activity 1</a></li>
+  <li><a href="#lab-activity-2" id="toc-lab-activity-2" class="nav-link" data-scroll-target="#lab-activity-2">Lab activity 2</a></li>
+  </ul></li>
+  <li><a href="#online-qa" id="toc-online-qa" class="nav-link" data-scroll-target="#online-qa">Online Q&amp;A</a></li>
   </ul>
 </nav>
     </div>
@@ -928,107 +933,337 @@ Hint
 <section id="sec-wk13-answers" class="level2">
 <h2 class="anchored" data-anchor-id="sec-wk13-answers">Answers</h2>
 <p>When you have completed all of the lab content, you may want to check your answers with our completed version of the script for this week. <strong>Remember</strong>, looking at this script (studying/revising it) does not replace the process of working through the lab activities, trying them out for yourself, getting stuck, asking questions, finding solutions, adding your own comments, etc. <strong>Actively engaging</strong> with the material is the way to learn these analysis skills, not by looking at someone else’s completed code…</p>
-<p>The answers to the questions and the script containing the code will be available after the final lab session has taken place.</p>
-<!-- ### Lab activity 1 -->
-<!-- 1.  What is the regression equation as discussed during the lecture and what does each letter represent? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Y = b0 + b1 \* X + e** **Y = outcome variable** **b0 = intercept** **b1 = slope** **X = predictor variable** **e = error** -->
-<!-- ::: -->
-<!-- 2.  What are residuals? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Residuals reflect the discrepancy between the observed values and the fitted values and give an indication of how well the model 'fits' the data.** -->
-<!-- ::: -->
-<!-- 3.  Discuss the answers to the pre-lab activity questions. What did you find? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- a)  Change the slider for the intercept. How does it change the regression line? **The value for y at x = 0 changes.** -->
-<!-- b)  Change the slider for the slope. How does it change the regression line? **The steepness of the line changes.** -->
-<!-- c)  What happens to the residuals (the red dashed lines) when you change the slope and the intercept of the regression line? **The distance between the fitted values (the line) and the observed values (the dots) increases. Therefore, the red dashed lines become longer suggesting that the residuals increase. The model therefore fits the data less well.** -->
-<!-- ::: -->
-<!-- ### Lab activity 2 -->
-<!-- You can download the R Markdown-script that contains the code to complete lab activity 2 here: [122_wk13_labAct2.Rmd](data/week13/122_wk13_labAct2.Rmd). -->
-<!-- 1a.  If our hypothesis is correct, what type of correlation (if any) should we observe between students' mean anxiety levels and the variable `n_weeks`? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **A negative correlation** -->
-<!-- ::: -->
-<!-- 2a.  In the `stars` table, what do the numbers in the first row across the three columns refer to? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **ID = 3, Question = Q01 and Score = 1 shows us that participant 3 reported a score of 1 on question 1.** -->
-<!-- ::: -->
-<!-- 3a.  What is the mean anxiety score for participant 3? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **1.058824** -->
-<!-- ::: -->
-<!-- 4a.  What are the means and standard deviation for anxiety and engagement with the statistics module? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Anxiety *M* = 2.08, *SD* = 0.56; Engagement *M* = 4.54, *SD* = 2.42.** -->
-<!-- ::: -->
-<!-- 5a.  What does the scatterplot suggest about the relationship between anxiety and engagement? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **That there might indeed be a relatively strong negative correlation between the two; students with more anxiety, engage less.** -->
-<!-- ::: -->
-<!-- 6a.  What is the estimate of the y-intercept for the model, rounded to three decimal places? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **9.057. Explanation: In the summary table, this is the estimate of the intercept.** -->
-<!-- ::: -->
-<!-- 6b.  To three decimal places, if the General Linear Model for this model is `Y=beta0 + beta1X + e`, then the value of `beta1` is ... -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **-2.173. Explanation: In the summary table, this is the estimate of mean_anxiety, i.e., the slope.** -->
-<!-- ::: -->
-<!-- 6c.  To three decimal places, for each unit increase in anxiety, engagement decreases by ... -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **2.173. Explanation: In the summary table, this is also the estimate of mean_anxiety, the slope is how much it decreases so you just remove the - sign.** -->
-<!-- ::: -->
-<!-- 6d.  To two decimal places, what is the overall F-ratio of the model? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **11.99. Explanation: In the summary table, the F-ratio is noted as the F-statistic.** -->
-<!-- ::: -->
-<!-- 6e. Is the overall model significant? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Yes. Explanation: The overall model p-value is .001428 which is less than .05, therefore significant.** -->
-<!-- ::: -->
-<!-- 6f. What proportion of the variance does the model explain? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **25.52%. Explanation: The variance explained is determined by R-squared, you simply multiple it by 100 to get the percent.** -->
-<!-- ::: -->
-<!-- 7a. Does the relationship appear to be linear? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Yes, the pink line roughly falls across the dashed blue line and looks mostly linear.** -->
-<!-- ::: -->
-<!-- 7b. Do the residuals show normality? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Yes, in the qq-plot the open circles mostly assemble around the solid blue line, and fall mostly within the range of the dashed blue lines.** -->
-<!-- ::: -->
-<!-- 7c. Do the residuals show homoscedasticity? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **Yes, the residual plot shows that the spread of the residuals is roughly similar for different fitted values.** -->
-<!-- ::: -->
-<!-- 8. What would the results section look like if you wrote them up, following APA guidelines? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- **A simple linear regression was performed with engagement (*M* = 4.54, *SD* = 0.56) as the outcome variable and statistics anxiety (*M* = 2.08, *SD* = 0.56) as the predictor variable. The results of the regression indicated that the model significantly predicted course engagement (*F*(1, 35) = 11.99, *p* \< .001, *R\^2* = 0.25), accounting for 25% of the variance. Anxiety was a significant negative predictor (*beta* = -2.17, *p* \< 0.001): as anxiety increased, course engagement decreased.** -->
-<!-- ::: -->
-<!-- ## Online Q&A -->
-<!-- Below is the recording of this week's online Q&A. -->
-<!-- ```{=html} -->
-<!-- <iframe allow="autoplay; fullscreen" height="282" width="500" src="https://estream.lancaster.ac.uk/Embed.aspx?id=73847&amp;code=dH~atT7LQKAF0UOHrJGJ5GzxNJnIkdNKt&amp;cc=1" frameborder="0" allowfullscreen></iframe> -->
-<!-- ``` -->
+<!-- The answers to the questions and the script containing the code will be available after the final lab session has taken place. -->
+<section id="lab-activity-1" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-1">Lab activity 1</h3>
+<ol type="1">
+<li>What is the regression equation as discussed during the lecture and what does each letter represent?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Y = b0 + b1 * X + e</strong> <strong>Y = outcome variable</strong> <strong>b0 = intercept</strong> <strong>b1 = slope</strong> <strong>X = predictor variable</strong> <strong>e = error</strong></p>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li>What are residuals?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Residuals reflect the discrepancy between the observed values and the fitted values and give an indication of how well the model ‘fits’ the data.</strong></p>
+</div>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Discuss the answers to the pre-lab activity questions. What did you find?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Change the slider for the intercept. How does it change the regression line? <strong>The value for y at x = 0 changes.</strong></li>
+<li>Change the slider for the slope. How does it change the regression line? <strong>The steepness of the line changes.</strong></li>
+<li>What happens to the residuals (the red dashed lines) when you change the slope and the intercept of the regression line? <strong>The distance between the fitted values (the line) and the observed values (the dots) increases. Therefore, the red dashed lines become longer suggesting that the residuals increase. The model therefore fits the data less well.</strong></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="lab-activity-2" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-2">Lab activity 2</h3>
+<p>You can download the R Markdown-script that contains the code to complete lab activity 2 here: <a href="../PSYC122/data/week13/122_wk13_labAct2.html">122_wk13_labAct2.Rmd</a>.</p>
+<p>1a. If our hypothesis is correct, what type of correlation (if any) should we observe between students’ mean anxiety levels and the variable <code>n_weeks</code>?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>A negative correlation</strong></p>
+</div>
+</div>
+</div>
+<p>2a. In the <code>stars</code> table, what do the numbers in the first row across the three columns refer to?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>ID = 3, Question = Q01 and Score = 1 shows us that participant 3 reported a score of 1 on question 1.</strong></p>
+</div>
+</div>
+</div>
+<p>3a. What is the mean anxiety score for participant 3?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>1.058824</strong></p>
+</div>
+</div>
+</div>
+<p>4a. What are the means and standard deviation for anxiety and engagement with the statistics module?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Anxiety <em>M</em> = 2.08, <em>SD</em> = 0.56; Engagement <em>M</em> = 4.54, <em>SD</em> = 2.42.</strong></p>
+</div>
+</div>
+</div>
+<p>5a. What does the scatterplot suggest about the relationship between anxiety and engagement?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>That there might indeed be a relatively strong negative correlation between the two; students with more anxiety, engage less.</strong></p>
+</div>
+</div>
+</div>
+<p>6a. What is the estimate of the y-intercept for the model, rounded to three decimal places?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>9.057. Explanation: In the summary table, this is the estimate of the intercept.</strong></p>
+</div>
+</div>
+</div>
+<p>6b. To three decimal places, if the General Linear Model for this model is <code>Y=beta0 + beta1X + e</code>, then the value of <code>beta1</code> is …</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>-2.173. Explanation: In the summary table, this is the estimate of mean_anxiety, i.e., the slope.</strong></p>
+</div>
+</div>
+</div>
+<p>6c. To three decimal places, for each unit increase in anxiety, engagement decreases by …</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>2.173. Explanation: In the summary table, this is also the estimate of mean_anxiety, the slope is how much it decreases so you just remove the - sign.</strong></p>
+</div>
+</div>
+</div>
+<p>6d. To two decimal places, what is the overall F-ratio of the model?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>11.99. Explanation: In the summary table, the F-ratio is noted as the F-statistic.</strong></p>
+</div>
+</div>
+</div>
+<p>6e. Is the overall model significant?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Yes. Explanation: The overall model p-value is .001428 which is less than .05, therefore significant.</strong></p>
+</div>
+</div>
+</div>
+<p>6f. What proportion of the variance does the model explain?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>25.52%. Explanation: The variance explained is determined by R-squared, you simply multiple it by 100 to get the percent.</strong></p>
+</div>
+</div>
+</div>
+<p>7a. Does the relationship appear to be linear?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Yes, the pink line roughly falls across the dashed blue line and looks mostly linear.</strong></p>
+</div>
+</div>
+</div>
+<p>7b. Do the residuals show normality?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Yes, in the qq-plot the open circles mostly assemble around the solid blue line, and fall mostly within the range of the dashed blue lines.</strong></p>
+</div>
+</div>
+</div>
+<p>7c. Do the residuals show homoscedasticity?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>Yes, the residual plot shows that the spread of the residuals is roughly similar for different fitted values.</strong></p>
+</div>
+</div>
+</div>
+<ol start="8" type="1">
+<li>What would the results section look like if you wrote them up, following APA guidelines?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>A simple linear regression was performed with engagement (<em>M</em> = 4.54, <em>SD</em> = 0.56) as the outcome variable and statistics anxiety (<em>M</em> = 2.08, <em>SD</em> = 0.56) as the predictor variable. The results of the regression indicated that the model significantly predicted course engagement (<em>F</em>(1, 35) = 11.99, <em>p</em> &lt; .001, <em>R^2</em> = 0.25), accounting for 25% of the variance. Anxiety was a significant negative predictor (<em>beta</em> = -2.17, <em>p</em> &lt; 0.001): as anxiety increased, course engagement decreased.</strong></p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="online-qa" class="level2">
+<h2 class="anchored" data-anchor-id="online-qa">Online Q&amp;A</h2>
+<p>Below is the recording of this week’s online Q&amp;A.</p>
+<iframe src="https://livelancsac-my.sharepoint.com/personal/shawej1_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=99c9fce9-e311-4969-bafb-acd904142712&amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;referrer=StreamWebApp&amp;referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen="" title="PSYC122 Online Q&amp;A Week 11-14 &amp; 16 -19 -20250130_140512-Meeting Recording.mp4"></iframe>
 
 
 </section>
