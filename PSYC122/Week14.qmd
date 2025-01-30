@@ -42,7 +42,7 @@ After having watched the lectures and read the textbook chapter you'll be in a g
 
 ### Pre-lab activity 1: Calculating Chi-square by hand and interpreting the results
 
-Is there a relationship between the number of people who smoke and the number of people who drink? Please note that the question is the number of people (frequency) and not how much people drink/smoke. Also not that these are fictitious data. You'll need a table of critical values for Chi-square. This can be found in the 'Week 14 -- resources' folder on Moodle.
+Is there a relationship between the number of people who smoke and the number of people who drink? Please note that the question is the number of people (frequency) and not how much people drink/smoke. Also note that these are fictitious data. You'll need a table of critical values for Chi-square. This can be found [**here**](data/week14/PSYC122_statisticalFormulae.pdf), and also in the '122_week14_forStudents.zip' folder you'll be asked to download in the a later pre-lab activity.
 
 ![](images/wk4/chisquare_dataLabAct1.png) 
 
