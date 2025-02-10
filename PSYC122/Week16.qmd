@@ -1,0 +1,9 @@
+---
+title: 5. Week 16 -- Hypotheses, associations
+subtitle: Written by Rob Davies
+order: 6
+---
+
+::: {.callout-caution}
+This page is currently under construction for 24/25 and will be subject to change before the teaching week.
+:::
