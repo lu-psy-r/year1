@@ -1,7 +1,7 @@
 ---
 title: 5. Week 16 -- Hypotheses, associations
 subtitle: Written by Rob Davies
-order: 5
+order: 6
 ---
 
 ::: {.callout-caution}

@@ -1,7 +1,7 @@
 ---
 title: 7. Week 18 -- Developing the linear model
 subtitle: Written by Rob Davies
-order: 7
+order: 8
 ---
 
 ::: {.callout-caution}

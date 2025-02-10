@@ -1,7 +1,7 @@
 ---
 title: 8. Week 19 -- Linear models -- critical perspectives
 subtitle: Written by Rob Davies
-order: 8
+order: 9
 ---
 
 ::: {.callout-caution}

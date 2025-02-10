@@ -1,7 +1,7 @@
 ---
 title: 6. Week 17 -- Better understanding the linear model
 subtitle: Written by Rob Davies
-order: 6
+order: 7
 ---
 
 ::: {.callout-caution}
