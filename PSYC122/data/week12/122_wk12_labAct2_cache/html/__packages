@@ -2,9 +2,12 @@ broom
 carData
 car
 lsr
+lattice
+survival
+Formula
+ggplot2
 Hmisc
 tidyverse
-ggplot2
 tibble
 tidyr
 readr
