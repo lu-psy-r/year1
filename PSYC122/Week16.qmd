@@ -183,7 +183,7 @@ and the R Markdown `.Rmd`:
 
 - `PSYC122-w16-how-to.Rmd`
 
-If you can't upload these files to the server -- this affects some students -- you can use some code to get R to do it for you: uncover the code box below to reveal the code to do this.
+If you can't upload the `.csv` data files to the server -- this affects some students -- you can use some code to get R to do it for you: uncover the code box below to reveal the code to do this.
 
 :::{.callout-tip collapse="true"}
 ## Code
@@ -201,8 +201,13 @@ download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/mai
 ```{r eval=FALSE}
 download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week16/study-two-general-participants.csv?raw=true", destfile = "study-two-general-participants.csv")
 ```
+:::
 
-3. Get the `PSYC122-w16-how-to.Rmd` how-to guide
+If you need to get the `how-to` guide, you can do that by clicking on the link in the box below. **Warning**: if you click on the link, the how-to guide might be shown to you (in some browsers) as a new webpage tab.
+
+:::{.callout-tip collapse="true"}
+## Link to the how-to guide
+Get the `PSYC122-w16-how-to.Rmd` how-to guide
 
 Click on the link: [PSYC122-w16-how-to.Rmd](data/week16/PSYC122-w16-how-to.Rmd) to download the `PSYC122-w16-how-to.Rmd` guide.
 :::
