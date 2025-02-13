@@ -204,9 +204,7 @@ download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/mai
 
 3. Get the `PSYC122-w16-how-to.Rmd` how-to guide
 
-```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week16/PSYC122-w16-how-to.Rmd?raw=true", destfile = "PSYC122-w16-how-to.Rmd")
-```
+Click on the link: [PSYC122-w16-how-to.Rmd](data/week16/PSYC122-w16-how-to.Rmd) to download the `PSYC122-w16-how-to.Rmd` guide.
 :::
 
 #### Check: What is in the data files?
