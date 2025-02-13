@@ -157,7 +157,7 @@ We will do our practical lab work to develop your skills in the context of the *
 
 We encounter written health information all the time: in warnings signs, on medication labels, in clinics when we go to see the doctor, and online when we research things we are worried about.
 It is not always easy to understand this information.
-The problem is that it is unclear how health information *should* be communicated: even this is important, there is not much evidence.
+The problem is that it is unclear how health information *should* be communicated: even though this is important, there is not much evidence.
 
 As psychologists, **we can help**.
 
