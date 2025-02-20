@@ -936,7 +936,7 @@ When you have completed all of the lab content, you may want to check your answe
 ::: callout-tip
 The `.Rmd` script containing all code and all answers for each task and each question will be made available after the final lab session has taken place.
 
-<!-- - You can download the script [PSYC122-w16-workbook-answers.Rmd](data/week16/PSYC122-w16-workbook-answers.Rmd) when it is available. -->
+- You can download the script [PSYC122-w16-workbook-answers.Rmd](data/week16/PSYC122-w16-workbook-answers.Rmd) when it is available.
 :::
 
 We set out the Week 16 *Hypotheses, associations* questions below.
@@ -946,205 +946,205 @@ You can see all the code and all the answers in `PSYC122-w16-workbook-answers.Rm
 
 ### Answers {#sec-wk16-lab-activities-answers-information}
 
-<!-- ::: callout-tip -->
-<!-- Click on a box to reveal the answer. -->
-<!-- ::: -->
+::: callout-tip
+Click on a box to reveal the answer.
+:::
 
-<!-- #### Questions {#sec-wk16-lab-activities-1-questions-answers} -->
+#### Questions {#sec-wk16-lab-activities-1-questions-answers}
 
-<!-- >**Q.1.** What is the median of `AGE`? -->
+>**Q.1.** What is the median of `AGE`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.1. 32.50 -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.1. 32.50
+:::
 
-<!-- >**Q.2.** What class is the variable `ETHNICITY`? -->
+>**Q.2.** What class is the variable `ETHNICITY`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.2. character -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.2. character
+:::
 
-<!-- >**Q.3.** Does the summary indicate if any variable has missing values (NAs)? -->
+>**Q.3.** Does the summary indicate if any variable has missing values (NAs)?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - Q.3. No -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- Q.3. No
+:::
 
-<!-- >**Q.4.** After you have done this [change ETHNICITY to a factor], what information does `summary()` give you -->
-<!-- about the variable `ETHNICITY`? -->
+>**Q.4.** After you have done this [change ETHNICITY to a factor], what information does `summary()` give you
+about the variable `ETHNICITY`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.4. We can see that ETHNICITY lists observations following UK Office National Statistics ethnicity grouping: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.4. We can see that ETHNICITY lists observations following UK Office National Statistics ethnicity grouping:
 
-<!-- - Asian: 15 -->
-<!-- - Black: 5 -->
-<!-- - Mixed: 7 -->
-<!-- - White: 145 -->
-<!-- ::: -->
+- Asian: 15
+- Black: 5
+- Mixed: 7
+- White: 145
+:::
 
-<!-- >**Q.5.** Did you get a message in the `Console` window in `R-Studio` [when you produced a histogram]: -->
-<!-- what does it say? -->
+>**Q.5.** Did you get a message in the `Console` window in `R-Studio` [when you produced a histogram]:
+what does it say?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.5. The message says: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.5. The message says:
 
-<!-- - `stat_bin()` using `bins = 30`. Pick better value with `binwidth`. -->
-<!-- ::: -->
+- `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+:::
 
-<!-- >**Q.6.** Draw two different histograms to examine the distributions of two -->
-<!-- different variables: `SHIPLEY` and `HLVA` -->
+>**Q.6.** Draw two different histograms to examine the distributions of two
+different variables: `SHIPLEY` and `HLVA`
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- ```{r} -->
-<!-- #| eval: false -->
-<!-- ggplot(data = study.two.gen, aes(x = SHIPLEY)) + geom_histogram() -->
-<!-- ggplot(data = study.two.gen, aes(x = HLVA)) + geom_histogram() -->
-<!-- ``` -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + geom_histogram()
+ggplot(data = study.two.gen, aes(x = HLVA)) + geom_histogram()
+```
+:::
 
-<!-- >**Q.7.** Now edit the code for both plots: can you change the binwidth in `geom_histogram()` to make the bars wider? -->
+>**Q.7.** Now edit the code for both plots: can you change the binwidth in `geom_histogram()` to make the bars wider?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- ```{r} -->
-<!-- #| eval: false -->
-<!-- ggplot(data = study.two.gen, aes(x = SHIPLEY)) + geom_histogram(binwidth = 2) -->
-<!-- ggplot(data = study.two.gen, aes(x = HLVA)) + geom_histogram(binwidth = 2) -->
-<!-- ``` -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+```{r}
+#| eval: false
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + geom_histogram(binwidth = 2)
+ggplot(data = study.two.gen, aes(x = HLVA)) + geom_histogram(binwidth = 2)
+```
+:::
 
-<!-- >**Q.8.** -- How would you describe the distributions -- in a sentence -- of the distributions of the -->
-<!-- `SHIPLEY` and `HLVA` variable values for our sample? -->
+>**Q.8.** -- How would you describe the distributions -- in a sentence -- of the distributions of the
+`SHIPLEY` and `HLVA` variable values for our sample?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.8. The `SHIPLEY` values lie between about 25 and 40, and are skewed towards high scores. -->
-<!-- - A.8. The `HLVA` values lie between 4 and about 14, and peak in the middle (near 7). -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.8. The `SHIPLEY` values lie between about 25 and 40, and are skewed towards high scores.
+- A.8. The `HLVA` values lie between 4 and about 14, and peak in the middle (near 7).
+:::
 
-<!-- >**Q.12.** What is the shape (direction) of the association between `mean.self` and `mean.acc`? -->
+>**Q.12.** What is the shape (direction) of the association between `mean.self` and `mean.acc`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.12. Increase in `mean.self` is associated with increase in `mean.acc` -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.12. Increase in `mean.self` is associated with increase in `mean.acc`
+:::
 
-<!-- >**Q.13.** What is the shape (direction) of the association between `AGE` and `mean.acc`? -->
+>**Q.13.** What is the shape (direction) of the association between `AGE` and `mean.acc`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.13. There is no clear association between `AGE` and `mean.acc` -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.13. There is no clear association between `AGE` and `mean.acc`
+:::
 
-<!-- >**Q.14.** What is the shape (direction) of the association between `SHIPLEY` -->
-<!-- and `mean.acc`? -->
+>**Q.14.** What is the shape (direction) of the association between `SHIPLEY`
+and `mean.acc`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.14. Increase in `SHIPLEY` is associated with increase in `mean.acc` -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.14. Increase in `SHIPLEY` is associated with increase in `mean.acc`
+:::
 
-<!-- >**Q.15.** What is the shape (direction) of the association between `HLVA` -->
-<!-- and `mean.acc`? -->
+>**Q.15.** What is the shape (direction) of the association between `HLVA`
+and `mean.acc`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.15. Increase in `HLVA` is associated with increase in `mean.acc` -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.15. Increase in `HLVA` is associated with increase in `mean.acc`
+:::
 
-<!-- >**Q.16.** What is the shape (direction) of the association between `FACTOR3` -->
-<!-- and `mean.acc`? -->
+>**Q.16.** What is the shape (direction) of the association between `FACTOR3`
+and `mean.acc`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.16. Increase in `FACTOR3` is associated with increase in `mean.acc` -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.16. Increase in `FACTOR3` is associated with increase in `mean.acc`
+:::
 
-<!-- >**Q.17.** What is the shape (direction) of the association between `QRITOTAL` -->
-<!-- and `mean.acc`? -->
+>**Q.17.** What is the shape (direction) of the association between `QRITOTAL`
+and `mean.acc`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.17. Increase in `QRITOTAL` is associated with increase in `mean.acc` -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.17. Increase in `QRITOTAL` is associated with increase in `mean.acc`
+:::
 
-<!-- >**Q.21.** Can you find the ggplot reference page? -->
+>**Q.21.** Can you find the ggplot reference page?
 
-<!-- Try doing a search with the keywords: `ggplot reference geom_point` -->
+Try doing a search with the keywords: `ggplot reference geom_point`
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.21. -- It is here: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.21. -- It is here:
 
-<!-- <https://ggplot2.tidyverse.org/reference/geom_point.html> -->
-<!-- ::: -->
+<https://ggplot2.tidyverse.org/reference/geom_point.html>
+:::
 
-<!-- >**Q.22.** What is r (given as `cor` in the output) for the correlation between `HLVA` and `mean.acc`? -->
+>**Q.22.** What is r (given as `cor` in the output) for the correlation between `HLVA` and `mean.acc`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.22. r = 0.5000559 -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.22. r = 0.5000559
+:::
 
-<!-- >**Q.23.** Is the correlation significant? -->
+>**Q.23.** Is the correlation significant?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.23. r is significant -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.23. r is significant
+:::
 
-<!-- >**Q.24.** What are the values for t and p for the significance test for the correlation? -->
+>**Q.24.** What are the values for t and p for the significance test for the correlation?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.24. t = 7.5288, p = 2.866e-12 -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.24. t = 7.5288, p = 2.866e-12
+:::
 
-<!-- >**Q.25.** What do you conclude, given the correlation results? -->
+>**Q.25.** What do you conclude, given the correlation results?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.25. HLVA and mean.acc are positively correlated suggesting that as HLVA scores increase so also do mean.acc scores -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.25. HLVA and mean.acc are positively correlated suggesting that as HLVA scores increase so also do mean.acc scores
+:::
 
-<!-- >**Q.26.** What is r (given as `cor` in the output) for the correlation between `mean.self` and `mean.acc`? -->
+>**Q.26.** What is r (given as `cor` in the output) for the correlation between `mean.self` and `mean.acc`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.26. r = 0.5460792 -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.26. r = 0.5460792
+:::
 
-<!-- >**Q.27.** Is the correlation between `AGE` and `mean.acc` significant? -->
+>**Q.27.** Is the correlation between `AGE` and `mean.acc` significant?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.27. r is not significant -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.27. r is not significant
+:::
 
-<!-- >**Q.28.** What are the values for t and p for the significance test for the correlation between `QRITOTAL` and `mean.acc`? -->
+>**Q.28.** What are the values for t and p for the significance test for the correlation between `QRITOTAL` and `mean.acc`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.28. t = 6.4711, p = 9.993e-10 -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.28. t = 6.4711, p = 9.993e-10
+:::
 
-<!-- >**Q.29.** What do you conclude, given the correlation results, about the association between `SHIPLEY` and `mean.acc`? -->
+>**Q.29.** What do you conclude, given the correlation results, about the association between `SHIPLEY` and `mean.acc`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.29. `SHIPLEY` and `mean.acc` are positively correlated suggesting that as HLVA scores increase so also do mean.acc scores -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+- A.29. `SHIPLEY` and `mean.acc` are positively correlated suggesting that as HLVA scores increase so also do mean.acc scores
+:::
 
 ## Online Q&A {#sec-wk16-lab-Q-and-A}
 
 You will find, below, a link to the video recording of the week 16 online Q&A after it has been completed.
 
-<!-- ```{=html} -->
-<!-- <iframe src="https://livelancsac-my.sharepoint.com/personal/daviesra_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=5af9bf95-c82f-409b-a3b6-efcb4a1a0b73&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="PSYC122 Online Seminar Fridays 9am wks 11-14 & 16-19-20240223_090746-Meeting Recording.mp4"></iframe> -->
-<!-- ``` -->
+```{=html}
+<iframe src="https://livelancsac-my.sharepoint.com/personal/shawej1_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=1d6b0b1d-2abc-4730-ace4-d8c280c77144&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="PSYC122 Online Q&A Week 11-14 & 16 -19-20250220_140122-Meeting Recording.mp4"></iframe>
+```
