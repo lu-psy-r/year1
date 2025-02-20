@@ -826,7 +826,7 @@ You need to run three separate correlations:
 :::{.callout-tip collapse="true"}
 ## Hints
 - Use `cor.test()` to do the correlation analysis.
-- You can look at the `how-to` guide or review previous materials (e.g. @sec-wk12-labactivities or @sec-wk16-lab-activities-1-questions) for more advice.
+- You can look at the `how-to` guide or review previous materials from previous weeks for more advice.
 :::
 
 Check first if you can write the code you need to complete each correlation analysis.
