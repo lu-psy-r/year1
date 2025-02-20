@@ -236,12 +236,13 @@ download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/mai
 ```{r eval=FALSE}
 download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week17/study-two-general-participants.csv?raw=true", destfile = "study-two-general-participants.csv")
 ```
+:::
 
-3. Get the `PSYC122-w17-how-to.Rmd` how-to guide
+:::{.callout-tip collapse="true"}
+## Link to the how-to guide
+Get the `PSYC122-w17-how-to.Rmd` how-to guide
 
-```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week17/PSYC122-w17-how-to.Rmd?raw=true", destfile = "PSYC122-w17-how-to.Rmd")
-```
+Click on the link: [PSYC122-w17-how-to.Rmd](data/week17/PSYC122-w17-how-to.Rmd) to download the `PSYC122-w17-how-to.Rmd` guide.
 :::
 
 #### Check: What is in the data files? {#sec-wk17-data-summary}
