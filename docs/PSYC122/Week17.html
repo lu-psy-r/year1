@@ -1911,11 +1911,9 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <p>The <code>.Rmd</code> script containing all code and all answers for each task and each question will be made available after the final lab session has taken place.</p>
-<!-- - You can download the script by clicking on the link: [PSYC122-w17-workbook-answers.Rmd](data/week17/PSYC122-w17-workbook-answers.Rmd) when it is available. -->
-<!-- - Or by copying the code into the R `Console` window and running it to get the `PSYC122-w17-workbook-answers.Rmd` loaded directly into R: -->
-<!-- ```{r eval=FALSE} -->
-<!-- download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/PSYC122-w17-workbook-answers.Rmd?raw=true", destfile = "PSYC122-w17-workbook-answers.Rmd") -->
-<!-- ``` -->
+<ul>
+<li>You can download the script by clicking on the link: <a href="../PSYC122/data/week17/PSYC122-w17-workbook-answers.html">PSYC122-w17-workbook-answers.Rmd</a>.</li>
+</ul>
 </div>
 </div>
 <p>We set out answers information the Week 17 <strong>Better understanding the linear model</strong> questions, below.</p>
@@ -1926,135 +1924,401 @@ Tip
 <p>You can see all the code and all the answers in <code>PSYC122-w17-workbook-answers.Rmd</code>.</p>
 <section id="sec-wk17-lab-activities-answers-information" class="level3">
 <h3 class="anchored" data-anchor-id="sec-wk17-lab-activities-answers-information">Answers</h3>
-<!-- ::: callout-tip -->
-<!-- Click on a box to reveal the answer. -->
-<!-- ::: -->
-<!-- #### Questions {#sec-wk17-lab-activities-2-questions-answers} -->
-<!-- >**Q.6.** Can you find information on how to define the limits on the x-axis -->
-<!-- and on the y-axis? -->
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Hint -->
-<!-- You can see the information in this week's `how-to` guide but try a search online for "ggplot reference xlim". -->
-<!-- ::: -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.6. See ggplot reference information on setting limits here: -->
-<!-- <https://ggplot2.tidyverse.org/reference/lims.html> -->
-<!-- ::: -->
-<!-- >**Q.7.** Can you find information on how to a reference line? -->
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Hint -->
-<!-- You can see the information in this week's how-to but try a search online for "ggplot reference vline". -->
-<!-- ::: -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.7. See ggplot reference information on adding lines here: -->
-<!-- <https://ggplot2.tidyverse.org/reference/geom_abline.html> -->
-<!-- ::: -->
-<!-- One of our research questions is: -->
-<!-- 1. What person attributes predict success in understanding? -->
-<!-- Examine the correlations between the outcome variable and predictor variables. -->
-<!-- You need to run three separate correlations: -->
-<!-- 1. between mean accuracy and `SHIPLEY`; -->
-<!-- 2. between mean accuracy and `HLVA`; -->
-<!-- 3. between mean accuracy and `AGE`. -->
-<!-- Check out the example code for doing each of the correlation analyses. -->
-<!-- ```{r} -->
-<!-- #| eval: false -->
-<!-- cor.test(study.two.gen$SHIPLEY, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided") -->
-<!-- cor.test(study.two.gen$HLVA, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided") -->
-<!-- cor.test(study.two.gen$AGE, study.two.gen$mean.acc, method = "pearson",  alternative = "two.sided") -->
-<!-- ``` -->
-<!-- Now use the results from the correlations to answer the following questions. -->
-<!-- >**Q.12.** What is `r`, the coefficient for the correlation between `mean.acc` and `SHIPLEY`? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.12. r = 0.4650537 -->
-<!-- ::: -->
-<!-- >**Q.13.** Is the correlation between `mean.acc` and `HLVA`  significant? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.13. -- r is significant, p < .05 -->
-<!-- ::: -->
-<!-- >**Q.14.** What are the values for t and p for the significance test for the correlation between `mean.acc` and `AGE`? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.14. t = 0.30121, p = 0.7636 -->
-<!-- ::: -->
-<!-- >**Q.15.** For which pair of outcome-predictor variables is the correlation the largest? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.15. -- The correlation is the largest between `mean.acc` and `HLVA`. -->
-<!-- ::: -->
-<!-- >**Q.16.** What is the sign or direction of each of the correlations? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.16. -- All the correlations are positive. -->
-<!-- ::: -->
-<!-- Examine the relation between outcome mean accuracy (`mean.acc`) and each of the predictors: `SHIPLEY`, `HLVA` and `AGE` -->
-<!-- You need to run three separate `lm()` analyses: -->
-<!-- 1. with mean accuracy as the outcome and `SHIPLEY` as the predictor; -->
-<!-- 2. with mean accuracy as the outcome and `HLVA` as the predictor; -->
-<!-- 3. with mean accuracy as the outcome and `AGE` as the predictor. -->
-<!-- Check out the example code for each of the models. -->
-<!-- ```{r} -->
-<!-- #| eval: false -->
-<!-- model.1 <- lm(mean.acc ~ SHIPLEY, data = study.two.gen) -->
-<!-- summary(model.1) -->
-<!-- model.2 <- lm(mean.acc ~ HLVA, data = study.two.gen) -->
-<!-- summary(model.2) -->
-<!-- model.3 <- lm(mean.acc ~ AGE, data = study.two.gen) -->
-<!-- summary(model.3) -->
-<!-- ``` -->
-<!-- If you look at the model summary you can answer the following questions. -->
-<!-- >**Q.17.** What is the estimate for the coefficient of the effect of the predictor `HLVA` on `mean.acc`? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.17. 0.026207 -->
-<!-- ::: -->
-<!-- >**Q.18.** Is the effect significant? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.18. It is significant, p < .05 -->
-<!-- ::: -->
-<!-- >**Q.19.** What are the values for t and p for the significance test for the coefficient? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.19. t = 7.529, p = 2.87e-12 -->
-<!-- ::: -->
-<!-- >**Q.20.** How would you describe in words the shape or direction of the association between `HLVA` and `mean.acc`? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.20. The slope coefficient -- and a scatterplot (draw it) -- suggest that as HLVA scores increase so also do mean accuracy scores. -->
-<!-- ::: -->
-<!-- >**Q.21.** How how would you describe the relations apparent between the predictor and outcome in all three models? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.21. It is possible to see, given coefficient estimates, that the association between predictor and outcome is positive for each model: mean accuracy appears to increase for increasing values of SHIPLEY vocabulary, HLVA health literacy, and age. -->
-<!-- ::: -->
-<!-- We are going to draw a scatterplot and add a line. -->
-<!-- - The line will show the model predictions, given the model intercept and effect -->
-<!-- coefficient estimates. -->
-<!-- **First fit a model** and get the summary: model the relationship between `mean.acc` and `HLVA`. -->
-<!-- You will need to record some information from the model summary so you can use it next. -->
-<!-- >**Q.22.** What is the coefficient estimate for the intercept? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.22. 0.522016 -->
-<!-- ::: -->
-<!-- >**Q.23.** What is the coefficient estimate for the slope of `HLVA` (see earlier)? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- - A.23. 0.026207 -->
-<!-- ::: -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Click on a box to reveal the answer.</p>
+</div>
+</div>
+<section id="sec-wk17-lab-activities-2-questions-answers" class="level4">
+<h4 class="anchored" data-anchor-id="sec-wk17-lab-activities-2-questions-answers">Questions</h4>
+<blockquote class="blockquote">
+<p><strong>Q.6.</strong> Can you find information on how to define the limits on the x-axis and on the y-axis?</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-50-contents" aria-controls="callout-50" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-50" class="callout-50-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You can see the information in this week’s <code>how-to</code> guide but try a search online for “ggplot reference xlim”.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-51-contents" aria-controls="callout-51" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-51" class="callout-51-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.6. See ggplot reference information on setting limits here:</li>
+</ul>
+<p><a href="https://ggplot2.tidyverse.org/reference/lims.html" class="uri">https://ggplot2.tidyverse.org/reference/lims.html</a></p>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.7.</strong> Can you find information on how to a reference line?</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-52-contents" aria-controls="callout-52" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-52" class="callout-52-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>You can see the information in this week’s how-to but try a search online for “ggplot reference vline”.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-53" class="callout-53-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.7. See ggplot reference information on adding lines here:</li>
+</ul>
+<p><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_abline.html</a></p>
+</div>
+</div>
+</div>
+<p>One of our research questions is:</p>
+<ol type="1">
+<li>What person attributes predict success in understanding?</li>
+</ol>
+<p>Examine the correlations between the outcome variable and predictor variables.</p>
+<p>You need to run three separate correlations:</p>
+<ol type="1">
+<li>between mean accuracy and <code>SHIPLEY</code>;</li>
+<li>between mean accuracy and <code>HLVA</code>;</li>
+<li>between mean accuracy and <code>AGE</code>.</li>
+</ol>
+<p>Check out the example code for doing each of the correlation analyses.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(study.two.gen<span class="sc">$</span>SHIPLEY, study.two.gen<span class="sc">$</span>mean.acc, <span class="at">method =</span> <span class="st">"pearson"</span>,  <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(study.two.gen<span class="sc">$</span>HLVA, study.two.gen<span class="sc">$</span>mean.acc, <span class="at">method =</span> <span class="st">"pearson"</span>,  <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(study.two.gen<span class="sc">$</span>AGE, study.two.gen<span class="sc">$</span>mean.acc, <span class="at">method =</span> <span class="st">"pearson"</span>,  <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now use the results from the correlations to answer the following questions.</p>
+<blockquote class="blockquote">
+<p><strong>Q.12.</strong> What is <code>r</code>, the coefficient for the correlation between <code>mean.acc</code> and <code>SHIPLEY</code>?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-54" class="callout-54-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.12. r = 0.4650537</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.13.</strong> Is the correlation between <code>mean.acc</code> and <code>HLVA</code> significant?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-55-contents" aria-controls="callout-55" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-55" class="callout-55-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.13. – r is significant, p &lt; .05</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.14.</strong> What are the values for t and p for the significance test for the correlation between <code>mean.acc</code> and <code>AGE</code>?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-56-contents" aria-controls="callout-56" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-56" class="callout-56-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.14. t = 0.30121, p = 0.7636</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.15.</strong> For which pair of outcome-predictor variables is the correlation the largest?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-57-contents" aria-controls="callout-57" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-57" class="callout-57-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.15. – The correlation is the largest between <code>mean.acc</code> and <code>HLVA</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.16.</strong> What is the sign or direction of each of the correlations?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-58-contents" aria-controls="callout-58" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-58" class="callout-58-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.16. – All the correlations are positive.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>Examine the relation between outcome mean accuracy (<code>mean.acc</code>) and each of the predictors: <code>SHIPLEY</code>, <code>HLVA</code> and <code>AGE</code></p>
+<p>You need to run three separate <code>lm()</code> analyses:</p>
+<ol type="1">
+<li>with mean accuracy as the outcome and <code>SHIPLEY</code> as the predictor;</li>
+<li>with mean accuracy as the outcome and <code>HLVA</code> as the predictor;</li>
+<li>with mean accuracy as the outcome and <code>AGE</code> as the predictor.</li>
+</ol>
+<p>Check out the example code for each of the models.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> SHIPLEY, <span class="at">data =</span> study.two.gen)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.1</span>)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> HLVA, <span class="at">data =</span> study.two.gen)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.2</span>)</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.3</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> AGE, <span class="at">data =</span> study.two.gen)</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you look at the model summary you can answer the following questions.</p>
+<blockquote class="blockquote">
+<p><strong>Q.17.</strong> What is the estimate for the coefficient of the effect of the predictor <code>HLVA</code> on <code>mean.acc</code>?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-59-contents" aria-controls="callout-59" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-59" class="callout-59-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.17. 0.026207</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.18.</strong> Is the effect significant?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-60-contents" aria-controls="callout-60" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-60" class="callout-60-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.18. It is significant, p &lt; .05</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.19.</strong> What are the values for t and p for the significance test for the coefficient?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-61-contents" aria-controls="callout-61" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-61" class="callout-61-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.19. t = 7.529, p = 2.87e-12</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.20.</strong> How would you describe in words the shape or direction of the association between <code>HLVA</code> and <code>mean.acc</code>?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-62-contents" aria-controls="callout-62" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-62" class="callout-62-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.20. The slope coefficient – and a scatterplot (draw it) – suggest that as HLVA scores increase so also do mean accuracy scores.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.21.</strong> How how would you describe the relations apparent between the predictor and outcome in all three models?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-63-contents" aria-controls="callout-63" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-63" class="callout-63-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.21. It is possible to see, given coefficient estimates, that the association between predictor and outcome is positive for each model: mean accuracy appears to increase for increasing values of SHIPLEY vocabulary, HLVA health literacy, and age.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>We are going to draw a scatterplot and add a line.</p>
+<ul>
+<li>The line will show the model predictions, given the model intercept and effect coefficient estimates.</li>
+</ul>
+<p><strong>First fit a model</strong> and get the summary: model the relationship between <code>mean.acc</code> and <code>HLVA</code>.</p>
+<p>You will need to record some information from the model summary so you can use it next.</p>
+<blockquote class="blockquote">
+<p><strong>Q.22.</strong> What is the coefficient estimate for the intercept?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-64-contents" aria-controls="callout-64" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-64" class="callout-64-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.22. 0.522016</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.23.</strong> What is the coefficient estimate for the slope of <code>HLVA</code> (see earlier)?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-65-contents" aria-controls="callout-65" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-65" class="callout-65-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.23. 0.026207</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 <section id="sec-wk17-lab-Q-and-A" class="level2">
 <h2 class="anchored" data-anchor-id="sec-wk17-lab-Q-and-A">Online Q&amp;A</h2>
 <p>You will find, below, a link to the video recording of the Week 17 online Q&amp;A after it has been completed.</p>
-<!-- ```{=html} -->
-<!-- <iframe src="https://livelancsac-my.sharepoint.com/personal/daviesra_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=b8ec6aca-6be9-4961-bccd-641c55848ba4&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="PSYC122 Online Seminar Fridays 9am wks 11-14 & 16-19-20240301_090557-Meeting Recording.mp4"></iframe> -->
-<!-- ``` -->
+<iframe src="https://livelancsac-my.sharepoint.com/personal/shawej1_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=88ab07fc-c128-4087-91b5-efcec59a8b09&amp;embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&amp;referrer=StreamWebApp&amp;referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen="" title="PSYC122 Online Q&amp;A Week 11-14 &amp; 16 -19-20250227_140113-Meeting Recording.mp4"></iframe>
 
 
 </section>
