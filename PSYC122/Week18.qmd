@@ -4,9 +4,9 @@ subtitle: Written by Rob Davies
 order: 8
 ---
 
-::: {.callout-caution}
-This page is under construction for 24/25 and may be subject to change before the teaching week.
-:::
+<!-- ::: {.callout-caution} -->
+<!-- This page is under construction for 24/25 and may be subject to change before the teaching week. -->
+<!-- ::: -->
 
 ::: callout-tip
 - Here is a link to the sign-in page for [R-Studio Server](https://psy-rstudio.lancaster.ac.uk/auth-sign-in?appUri=%2F)
@@ -254,12 +254,15 @@ download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/mai
 ```{r eval=FALSE}
 download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week18/study-two-general-participants.csv?raw=true", destfile = "study-two-general-participants.csv")
 ```
+:::
 
-3. Get the `PSYC122-w18-how-to.Rmd` how-to guide
+If you need to get the `how-to` guide, you can do that by clicking on the link in the box below. **Warning**: if you click on the link, the how-to guide might be shown to you (in some browsers) as a new webpage tab.
 
-```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week18/PSYC122-w18-how-to.Rmd?raw=true", destfile = "PSYC122-w18-how-to.Rmd")
-```
+:::{.callout-tip collapse="true"}
+## Link to the how-to guide
+Get the `PSYC122-w18-how-to.Rmd` how-to guide
+
+Click on the link: [PSYC122-w18-how-to.Rmd](data/week18/PSYC122-w18-how-to.Rmd) to download the `PSYC122-w18-how-to.Rmd` guide.
 :::
 
 #### Check: What is in the data files? {#sec-wk18-data-summary}
@@ -505,7 +508,7 @@ We can address this question by examining whether someone's rated evaluation of 
 
 - For these data, participants were asked to respond to questions about health information to get `mean.acc` scores
 - and they were then asked to rate their own understanding of the same information (ratings on a scale from 1-9) to get `mean.self` scores.
-- Ratings of accuracy are ordinal data but, here, we choose to examine the average of participants' ratings of their own understanding of health information to keep our analysis fairly simple.
+- Ratings of accuracy are ordinal (ordered categorical) data but, here, we choose to examine the average of participants' ratings of their own understanding of health information to keep our analysis fairly simple.
 
 If you *can* evaluate your own understanding then ratings of understanding *should* be associated with performance on tests of understanding
 
@@ -721,33 +724,33 @@ You can fit these two simple models using the verbal description in the **Q.14.*
 - But *which* variable is the outcome, and *which* variable is the predictor, is different in the two models.
 :::
 
-<!-- Click on the `Code` button following, if you want to see the example code. -->
+Click on the `Code` button following, if you want to see the example code.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- If we want to compare two models: -->
+:::{.callout-tip collapse="true"}
+## Code
+If we want to compare two models:
 
-<!-- 1. The model `mean.acc ~ mean.self` versus  -->
-<!-- 2. The model `mean.self ~ mean.acc` -->
+1. The model `mean.acc ~ mean.self` versus
+2. The model `mean.self ~ mean.acc`
 
-<!-- Then we can specify each model as follows. -->
+Then we can specify each model as follows.
 
-<!-- **1. The model `mean.acc ~ mean.self`** -->
+**1. The model `mean.acc ~ mean.self`**
 
-<!-- ```{r} -->
-<!-- #| eval: false -->
-<!-- model.1 <- lm(mean.acc ~ mean.self, data = study.two.gen) -->
-<!-- summary(model.1) -->
-<!-- ``` -->
+```{r}
+#| eval: false
+model.1 <- lm(mean.acc ~ mean.self, data = study.two.gen)
+summary(model.1)
+```
 
-<!-- **2. The model `mean.self ~ mean.acc`** -->
+**2. The model `mean.self ~ mean.acc`**
 
-<!-- ```{r} -->
-<!-- #| eval: false -->
-<!-- model.2 <- lm(mean.self ~ mean.acc, data = study.two.gen) -->
-<!-- summary(model.2) -->
-<!-- ``` -->
-<!-- ::: -->
+```{r}
+#| eval: false
+model.2 <- lm(mean.self ~ mean.acc, data = study.two.gen)
+summary(model.2)
+```
+:::
 
 **Do that** then compare the `Estimate` of the predictor effect in the two models.
 
