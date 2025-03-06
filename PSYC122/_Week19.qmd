@@ -296,7 +296,7 @@ download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/mai
 download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/study-two-general-participants.csv?raw=true", destfile = "study-two-general-participants.csv")
 ```
 
-3. Get the 2023-24 PSYC122 `2024-25_PSYC122-participants.csv` data
+3. Get the 2024-25 PSYC122 `2024-25_PSYC122-participants.csv` data
 
 ```{r eval=FALSE}
 download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/2024-25_PSYC122-participants.csv?raw=true", destfile = "2024-25_PSYC122-participants.csv")
@@ -696,7 +696,7 @@ Second produce the plots for viewing, side-by-side, by *naming* them: `plot.1.na
 
 ##### Task 8 -- Draw scatterplots to compare the potential association between `mean.acc` and `mean.self` in both `study.two.gen` and `study.122` datasets
 
-> Hint: Task 8 -- The plotting steps are explained in some detail in `2023-24-PSYC122-w17-how-to.Rmd` and you can see example code in `PSYC122-w19-how-to.Rmd`
+> Hint: Task 8 -- The plotting steps are explained in some detail in `PSYC122-w17-how-to.Rmd` and you can see example code in `PSYC122-w19-how-to.Rmd`
 
 <!-- :::{.callout-tip collapse="true"} -->
 <!-- ## Code -->
@@ -777,7 +777,7 @@ We are now in a position to answer one of our research questions:
 
 ##### Task 10 --  Can you estimate the association between `mean.acc` and `mean.self` in both datasets?
 
-> Hint: Task 10 -- We use `cor.test()` as you have been shown how to do e.g. in `2023-24-PSYC122-w16-how-to.Rmd`
+> Hint: Task 10 -- We use `cor.test()` as you have been shown how to do e.g. in `PSYC122-w16-how-to.Rmd`
 
 Do the correlation for both datasets.
 
@@ -875,7 +875,7 @@ You will then see a list of results including the link to the `{patchwork}` info
 
 ##### Task 12 -- Examine the relation between outcome mean accuracy (`mean.acc`) and multiple predictors 
 
-> Hint: Task 12 -- We use `lm()`, as we have been doing before, see e.g. `2023-24-PSYC122-w18-how-to.R`
+> Hint: Task 12 -- We use `lm()`, as we have been doing before, see e.g. `PSYC122-w18-how-to.R`
 
 > Examine the predictors of mean accuracy (`mean.acc`), first, for the `study.two.gen` data.
 
@@ -1114,12 +1114,12 @@ When you have completed all of the lab content, you may want to check your answe
 ::: callout-tip
 The `.Rmd` script containing all code and all answers for each task and each question will be made available after the final lab session has taken place.
 
-- You can download the script by clicking on the link:  [2023-24-PSYC122-w19-workbook-answers.Rmd](data/week19/2023-24-PSYC122-w19-workbook-answers.Rmd).
+- You can download the script by clicking on the link:  [PSYC122-w19-workbook-answers.Rmd](data/week19/PSYC122-w19-workbook-answers.Rmd).
 
-- Or by copying the code into the R `Console` window and running it to get the `2023-24-PSYC122-w19-workbook-answers.Rmd` loaded directly into R:
+- Or by copying the code into the R `Console` window and running it to get the `PSYC122-w19-workbook-answers.Rmd` loaded directly into R:
 
 ```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/2023-24-PSYC122-w19-workbook-answers.Rmd?raw=true", destfile = "2023-24-PSYC122-w19-workbook-answers.Rmd")
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/PSYC122-w19-workbook-answers.Rmd?raw=true", destfile = "PSYC122-w19-workbook-answers.Rmd")
 ```
 :::
 
@@ -1128,7 +1128,7 @@ We set out answers information the Week 19 **Critical perspectives** questions, 
 - We focus on the **Lab activity 2** questions where we ask you to interpret something or say something.
 - We do not show questions where we have given example or target code in the foregoing lab activity @sec-wk19-lab-activities-2.
 
-You can see all the code and all the answers in `2023-24-PSYC122-w19-workbook-answers.Rmd`.
+You can see all the code and all the answers in `PSYC122-w19-workbook-answers.Rmd`.
 
 ### Answers {#sec-wk19-lab-activities-answers-information}
 
@@ -1229,7 +1229,7 @@ If people *can* accurately evaluate whether they correctly understand written he
 
 Can you estimate the association between `mean.acc` and `mean.self` in both datasets?
 
-- We use `cor.test()` as you have been shown how to do e.g. in `2023-24-PSYC122-w16-how-to.Rmd`.
+- We use `cor.test()` as you have been shown how to do e.g. in `PSYC122-w16-how-to.Rmd`.
 - Do the correlation for both datasets.
 
 First calculate the correlation between `mean.acc` and `mean.self` in `study.two`.
@@ -1302,7 +1302,7 @@ This may suggest that the association observed in `study.two.gen` is different f
 
 Examine the relation between outcome mean accuracy (`mean.acc`) and multiple predictors.
 
-We use `lm()`, as we have been doing before, see e.g. `2023-24-PSYC122-w18-how-to.R`
+We use `lm()`, as we have been doing before, see e.g. `PSYC122-w18-how-to.R`
 
 Examine the predictors of mean accuracy (`mean.acc`), first, for the `study.two.gen` data.
 
