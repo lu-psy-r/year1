@@ -88,8 +88,8 @@ Usually, in describing the impacts of predictors, we are required to communicate
 ::: callout-tip
 In assessing **reproducibility**, therefore, we may focus here on:
 
-1. Whether an effect is or is not significant in the datasets we are comparing;
-2. Whether the estimate of the coefficient for the slope of an effect of interest has similar sign (positive or negative) or size (the value of the coefficient) in the datasets we are comparing.
+1. Whether an effect is or is not significant in the data-sets we are comparing;
+2. Whether the estimate of the coefficient for the slope of an effect of interest has similar sign (positive or negative) or size (the value of the coefficient) in the data-sets we are comparing.
 :::
 
 ## Lectures {#sec-wk19-lectures}
@@ -341,7 +341,7 @@ You can see the columns:
 - `ETHNICITY` ethnicity (Office National Statistics categories) code.
 
 ::: callout-tip
-It is always a good idea to view the dataset -- click on the name of the dataset in the R-Studio `Environment` window, and check out the columns, scroll through the rows -- to get a sense of what you are working with.
+Note that the data we collected comprise responses from 2024-25 PSYC122 students --- **you** --- as well as from samples of participants recruited by Psychology third year undergraduate researchers.
 :::
 
 ### Lab activity 1: Work with the `How-to` guide {#sec-wk19-lab-activities-1}
@@ -394,7 +394,7 @@ In the activity @sec-wk19-lab-activities-2, we are going to work through a seque
 **Step 2: Load the data**
 
 3. Read in the data files -- using `read_csv()`
-4. Inspect both datasets -- using `head()` and `summary()`
+4. Inspect both data-sets -- using `head()` and `summary()`
 
 **Step 3: Compare the data from the different studies**
 
@@ -404,13 +404,13 @@ In the activity @sec-wk19-lab-activities-2, we are going to work through a seque
 **Step 4: Use scatterplots and correlation to examine associations between variables**
 
 8. Draw scatterplots to compare the potential association between variables
-9. Create grids of plots to make side-by-side comparisons of associations in different datasets
+9. Create grids of plots to make side-by-side comparisons of associations in different data-sets
 10. Estimate the associations between pairs of variables and compare the estimates
 
 **Step 5: Use a linear model to to answer the research questions -- models with multiple predictors**
 
 11. Examine the relation between one outcome and multiple predictors
-12. Do this in comparable datasets, and compare summaries or plots
+12. Do this in different -- but similar -- study data-sets, and compare summaries or plots
 
 ::: callout-tip
 If you are unsure about what you need to do, look at the advice in `PSYC122-w19-how-to.Rmd` on how to do the tasks, with examples on how to write the code.
@@ -422,7 +422,7 @@ The `how-to` shows you what function you need and how you should write the funct
 This process of adapting demonstration code is a process critical to data literacy and to effective problem solving in modern psychological science.
 
 ::: callout-warning
-Don't forget: You will need to change the names of the dataset or the variables to complete the tasks in @sec-wk19-lab-activities-2.
+Don't forget: You will need to change the names of the data-set or the variables to complete the tasks in @sec-wk19-lab-activities-2.
 :::
 
 ### Lab activity 2 {#sec-wk19-lab-activities-2}
@@ -449,7 +449,7 @@ The motivation for doing this is:
 
 Where we do give you hints, we will sometimes replace the correct bit of code with a place-holder: `...`
 
-- Your task will therefore be to replace the place-holder `...` with the correct bit of code or the correct dataset or variable name.
+- Your task will therefore be to replace the place-holder `...` with the correct bit of code or the correct data-set or variable name.
 :::
 
 #### Step 1: Set-up
@@ -504,7 +504,7 @@ e.g. `study.two.gen` versus `study.122`.
 
 ##### Task 4 -- Inspect the data file
 
-Use the `summary()` or `head()` functions to take a look at both datasets.
+Use the `summary()` or `head()` functions to take a look at both data-sets.
 
 <!-- :::{.callout-tip collapse="true"} -->
 <!-- ## Code -->
@@ -531,11 +531,11 @@ Use the `summary()` or `head()` functions to take a look at both datasets.
 <!-- - study two -- `mean.acc`: mean = 0.7596 -->
 <!-- - study two -- `SHIPLEY`: mean = 35.13 -->
 <!-- - study PSYC122 -- `mean.acc`: mean = 0.8231 -->
-<!-- - study PSYC122 -- `SHIPLEY`: mean = 32.31 -->
+<!-- - study PSYC122 -- `SHIPLEY`: mean = 32.61 -->
 
 >**Q.2.** Draw histograms of both mean.acc and mean.self for both studies.
 
-<!-- - A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing dataset and variable names to get the right plots: -->
+<!-- - A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing data-set and variable names to get the right plots: -->
 
 <!-- ```{r} -->
 <!-- ggplot(data = study.two.gen, aes(x = mean.acc)) +  -->
@@ -569,7 +569,7 @@ Use the `summary()` or `head()` functions to take a look at both datasets.
 
 ##### Task 6 --  Create grids of plots to make the comparison easier to do
 
-> Hint: Task 6 -- What we are going to do is to create two histograms of `mean.acc` (one plot for each study dataset) and then present the plots side by side to allow easy comparison of variable distributions
+> Hint: Task 6 -- What we are going to do is to create two histograms of `mean.acc` (one plot for each study data-set) and then present the plots side by side to allow easy comparison of variable distributions
 
 We need to make two changes to the coding approach you have been using until now.
 
@@ -625,7 +625,7 @@ This is what you need to: check out the process, step-by-step.
 
 9. `xlim(0, 1)` adjust the x-axis limits to show the full range of possible score values on this variable.
 
-Do this process twice, once for each dataset, creating two plots so that you can compare the distribution of `mean.acc` scores between the studies.
+Do this process twice, once for each data-set, creating two plots so that you can compare the distribution of `mean.acc` scores between the studies.
 
 Finally, having created the two plots, produce them for viewing:
   
@@ -686,7 +686,7 @@ Second produce the plots for viewing, side-by-side, by *naming* them: `plot.1.na
 
 >**Q.4.** Is the visual impression you get from comparing the distributions consistent with the statistics you see in the summary?
 
-<!-- - A.4. Yes: If you go back to the summary of `SHIPLEY`, comparing the two studies datasets, then you can see that the median and mean are higher in `study.122` than in `study.two.gen`. -->
+<!-- - A.4. Yes: If you go back to the summary of `SHIPLEY`, comparing the two studies datasets, then you can see that the median and mean are higher in `study.two.gen` than in `study.122`. -->
 
 #### Step 4: Now use scatterplots and correlation to examine associations between variables
 
@@ -694,7 +694,7 @@ Second produce the plots for viewing, side-by-side, by *naming* them: `plot.1.na
 ## Revise: practice to strengthen skills
 :::
 
-##### Task 8 -- Draw scatterplots to compare the potential association between `mean.acc` and `mean.self` in both `study.two.gen` and `study.122` datasets
+##### Task 8 -- Draw scatterplots to compare the potential association between `mean.acc` and `mean.self` in both `study.two.gen` and `study.122` data-sets
 
 > Hint: Task 8 -- The plotting steps are explained in some detail in `PSYC122-w17-how-to.Rmd` and you can see example code in `PSYC122-w19-how-to.Rmd`
 
@@ -775,11 +775,11 @@ We are now in a position to answer one of our research questions:
 ## Revise: practice to strengthen skills
 :::
 
-##### Task 10 --  Can you estimate the association between `mean.acc` and `mean.self` in both datasets?
+##### Task 10 --  Can you estimate the association between `mean.acc` and `mean.self` in both data-sets?
 
 > Hint: Task 10 -- We use `cor.test()` as you have been shown how to do e.g. in `PSYC122-w16-how-to.Rmd`
 
-Do the correlation for both datasets.
+Do the correlation for both data-sets.
 
 First calculate the correlation between `mean.acc` and `mean.self` in `study.two`.
 
@@ -817,7 +817,7 @@ Then answer the following questions.
 
 >**Q.9.** What is r, the correlation coefficient?
 
-<!-- - A.9. r = 0.4027438 -->
+<!-- - A.9. r = 0.3474471 -->
 
 >**Q.10.** Is the correlation significant?
 
@@ -825,7 +825,7 @@ Then answer the following questions.
 
 >**Q.11.** What are the values for t and p for the significance test for the correlation?
 
-<!-- - A.11. t = 3.4924, p = 0.0008808 -->
+<!-- - A.11. t = 5.1742, p-value = 5.664e-07 -->
 
 Now we can answer the research question:
 
@@ -837,7 +837,7 @@ Now we can answer the research question:
 
 <!-- > The correlations are positive and significant, indicating that higher `mean.self` (evaluations) are associated with higher `mean.acc` (understanding), suggesting that people *can* judge their accuracy of understanding. -->
 
->**Q.13.**  Can you compare the estimates, given the two datasets, to evaluate if the result in `study.two.gen` is *replicated* in `study.122`?
+>**Q.13.**  Can you compare the estimates, given the two data-sets, to evaluate if the result in `study.two.gen` is *replicated* in `study.122`?
 >**hint: Q.13.** We can judge if the result in a study is replicated in another study by examining if -- here -- the correlation coefficient is significant in both studies *and* if the coefficient has the same size and sign in both studies.
 
 <!-- - A.13. If you compare the correlation estimates from both `study.two.gen` and `study.122` you can see: -->
@@ -845,7 +845,7 @@ Now we can answer the research question:
 <!-- - first, the correlation is significant in both `study.two.gen` and `study.122`; -->
 <!-- - second, the correlation is positive in both studies. -->
 
-<!-- But, if you compare the correlation estimates, you can see that the coefficient estimate is smaller in `study.122` (where r = .40) than in `study.two.gen` (where r = .55). -->
+<!-- But, if you compare the correlation estimates, you can see that the coefficient estimate is smaller in `study.122` (where r = .35) than in `study.two.gen` (where r = .55). -->
 
 <!-- This may suggest that the association observed in `study.two.gen` is different from the association in `study.122`, for some reason. -->
 
@@ -955,15 +955,15 @@ Inspect the model summary, then answer the following questions:
 
 >**Q.18.** What is the estimate for the coefficient of the effect of the predictor, `HLVA`, in *this* model?
 
-<!-- - A.18. 0.0335342  -->
+<!-- - A.18. 0.018850  -->
 
 >**Q.19.** Is the effect significant?
 
-<!-- - A.19. It is significant, p > .05 because p = 1.52e-05 -->
+<!-- - A.19. It is significant, p > .05 because p = 1.01e-05 -->
 
 >**Q.20.** What are the values for t and p for the significance test for the coefficient?
 
-<!-- - A.20. t = 4.701, p < .001 -->
+<!-- - A.20. 4.536, p < .001 -->
 
 >**Q.21.** Now consider the estimates for all the variables, what do you conclude is the answer to the research question -- given the `study.122` data:
 
@@ -973,7 +973,7 @@ Inspect the model summary, then answer the following questions:
 
 <!-- - A.21.  -->
 
-<!-- > We fitted a linear model with mean comprehension accuracy as the outcome and health literacy (`HLVA`),  reading strategy (`FACTOR3`), and vocabulary (`SHIPLEY)` as predictors. The model is significant overall, with F(3, 61) = 14.47, p < .001, and explains 39% of variance (adjusted R2 = .387). Mean accuracy was predicted to be higher given higher scores in health literacy (`HLVA` estimate = .034, t = 4.70, p < .001). There were non-significant effects of individual differences in vocabulary knowledge (`SHIPLEY` estimate = .006, t = 1.80, p = .077) and reading strategy (`FACTOR3` estimate = .001, t = .25, p = .800).  -->
+<!-- > We fitted a linear model with mean comprehension accuracy as the outcome and health literacy (`HLVA`),  reading strategy (`FACTOR3`), and vocabulary (`SHIPLEY)` as predictors. The model is significant overall, with F(3, 193) = 19.77, p < .001, and explains 22% of variance (adjusted R2 = .2232). Mean accuracy was predicted to be higher given higher scores in health literacy (`HLVA` estimate = .019, t = 4.54, p < .001) and vocabulary knowledge (`SHIPLEY` estimate = .007, t = 3.63, p < .001). There was a non-significant effect of individual differences in reading strategy (`FACTOR3` estimate = .001, t = .99, p = .325).  -->
 
 At this point, we can evaluate the evidence from the PSYC122 sample -- based on your responses -- to assess if the patterns, the estimates, we saw previously are repeated in analyses of PSYC122 responses.
 
@@ -983,18 +983,18 @@ At this point, we can evaluate the evidence from the PSYC122 sample -- based on 
 
 <!-- - A.22. If you compare the linear model coefficient estimates from both the `study.two.gen` and `study.122` models, you can see: -->
 
-<!-- - first, that the `HLVA` effect estimate is significant in both `study.two.gen` and `study.122`; -->
-<!-- - second, that the estimates of the `HLVA` effect have the same sign -- positive -- in both studies while the estimated coefficient is a bit bigger in the `study.122` data (implying a stronger effect); -->
-<!-- - but, third that the estimates of the effects of variation in vocabulary knowledge (`SHIPLEY`) and reading strategy (`FACTOR3`) are significant in `study.two.gen` but not in `study.122`.   -->
+<!-- - first, that the `HLVA` and `SHIPLEY` effects are significant in both `study.two.gen` and `study.122`; -->
+<!-- - second, that the estimates of the `HLVA` and `SHIPLEY` effects have the same sign -- positive -- and similar magnitudes in both studies (implying similar effects); -->
+<!-- - but, third that the estimate of the effect of variation in reading strategy (`FACTOR3`) is significant in `study.two.gen` but not in `study.122`.   -->
 
-<!-- This suggests that the attributes -- the set of abilities -- that predict comprehension accuracy are similar but not the same in the `study.two.gen` participants compared to `study.122` participants. -->
+<!-- This suggests that the attributes -- the set of abilities -- that predict comprehension accuracy are similar but not the same in the `study.two.gen` participants compared to the `study.122` participants. -->
 
 >**Q.23.** How would you describe the outstanding difference between the results of the two studies?
 
 >**hint: Q.23.** We can look at the estimates but we can also use model prediction plotting code to *visualize* the results. You can build on the code you used before, see:
 
-- `2022-23-PSYC122-w18-how-to.R`
-- `2022-23-PSYC122-w19-how-to.R`
+- `PSYC122-w18-how-to.R`
+- `PSYC122-w19-how-to.R`
 
 >**hint: Q.23.** Let's focus on comparing the `study.two.gen` and `study.122` estimates for the effect of `HLVA` in both models: we can plot model predictions, for comparison:
 
@@ -1037,13 +1037,11 @@ Then use your *visualization* of the model results to describe the outstanding d
 
 <!-- 1. The health literacy `HLVA` effect is significant in both `study.two.gen` and `study.122`. -->
 <!-- 2. The effect trends positive in both studies. -->
-<!-- 3. The coefficient estimate is bigger in `study.122` than in `study.two.gen`. -->
-<!-- 4. The prediction plots suggest the prediction line slope is steeper in `study.122`. -->
-<!-- 5. The grey shaded area around the trend line (indicating our uncertainty about the estimated trend) is wider for `study.two.gen` than for `study.122`, suggesting we are more uncertain about the association for the `study.two.gen` data.  -->
+<!-- 3. The coefficient estimate is similar in `study.122` and in `study.two.gen`. -->
+<!-- 4. The prediction plots suggest the prediction line slope is similar in `study.122`. -->
+<!-- 5. The grey shaded area around the trend line (indicating our uncertainty about the estimated trend) is also similar for `study.two.gen` and for `study.122`.  -->
 
 <!-- - The breadth of the grey shaded area around the trend line is hard to compare between the two plots. You have to look carefully at the y-axis scale information to make a judgment about the relative width of these uncertainty ellipses. -->
-
-<!-- The visualizations plus the model summaries suggests that the estimates of the effect of health literacy are different in the `study.122` compared to the `study.two.gen` data. Why is that? -->
 
 ::: callout-tip
 - We can redraw the prediction plots -- next -- to add in more information about our samples. This change, see following, will help us to interpret the results of the analyses we have done.
@@ -1095,7 +1093,7 @@ It is often useful to compare model estimates -- here, the slopes -- with the ra
 
 <!-- - A.24. Adding points allow us to see: -->
 
-<!-- 1. There are far fewer observations in the `study.122` dataset than in the `study.two.gen` data: this means that our estimate of the effect will be *more uncertain* because we have *less information* when we look at the `study.122` data. -->
+<!-- 1. There are far fewer observations in the `study.122` data-set than in the `study.two.gen` data: this means that our estimate of the effect will be *more uncertain* because we have *less information* when we look at the `study.122` data. -->
 <!-- 2. But it is also clear that the effect of `HLVA` appears to be stronger in the  `study.122` data because observed scores are *closer* to model predictions: the `HLVA` effect *explains more variation* in the `study.122` data than in the `study.two.gen` data. -->
 
 #### You have now completed the Week 19 questions.
@@ -1146,13 +1144,13 @@ Click on a box to reveal the answer.
 - study two -- `mean.acc`: mean = 0.7596
 - study two -- `SHIPLEY`: mean = 35.13
 - study PSYC122 -- `mean.acc`: mean = 0.8231
-- study PSYC122 -- `SHIPLEY`: mean = 32.31
+- study PSYC122 -- `SHIPLEY`: mean = 32.61
 :::
 
 >**Q.2.** Draw histograms of both mean.acc and mean.self for both studies.
 
 ::: {.callout-note icon=false collapse="true"}
-- A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing dataset and variable names to get the right plots:
+- A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing data-set and variable names to get the right plots:
 
 ```{r}
 ggplot(data = study.two.gen, aes(x = mean.acc)) +
@@ -1200,10 +1198,10 @@ But you can also see striking differences:
 >**Q.4.** Is the visual impression you get from comparing the distributions consistent with the statistics you see in the summary?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.4. Yes: If you go back to the summary of `SHIPLEY`, comparing the two studies datasets, then you can see that the median and mean are higher in `study.122` than in `study.two.gen`.
+- A.4. Yes: If you go back to the summary of `SHIPLEY`, comparing the two studies datasets, then you can see that the median and mean are higher in `study.two.gen` than in `study.122`.
 :::
 
-Draw scatterplots to compare the potential association between `mean.acc` and `mean.self` in both the `study.two.gen` and the `study.122` datasets.
+Draw scatterplots to compare the potential association between `mean.acc` and `mean.self` in both the `study.two.gen` and the `study.122` data-sets.
 
 We again:
 
@@ -1227,10 +1225,10 @@ We are now in a position to answer one of our research questions:
 If people *can* accurately evaluate whether they correctly understand written health information then `mean.self` (a score representing their evaluation) should be associated with `mean.acc` (a score representing their accuracy of understanding) for each person.
 :::
 
-Can you estimate the association between `mean.acc` and `mean.self` in both datasets?
+Can you estimate the association between `mean.acc` and `mean.self` in both data-sets?
 
 - We use `cor.test()` as you have been shown how to do e.g. in `PSYC122-w16-how-to.Rmd`.
-- Do the correlation for both datasets.
+- Do the correlation for both data-sets.
 
 First calculate the correlation between `mean.acc` and `mean.self` in `study.two`.
 Then answer the following questions.
@@ -1259,7 +1257,7 @@ Then answer the following questions.
 >**Q.9.** What is r, the correlation coefficient?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.9. r = 0.4027438
+- A.9. r = 0.3474471
 :::
 
 >**Q.10.** Is the correlation significant?
@@ -1271,7 +1269,7 @@ Then answer the following questions.
 >**Q.11.** What are the values for t and p for the significance test for the correlation?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.11. t = 3.4924, p = 0.0008808
+- A.11. t = 5.1742, p-value = 5.664e-07
 :::
 
 Now we can answer the research question:
@@ -1286,7 +1284,7 @@ Now we can answer the research question:
 > The correlations are positive and significant, indicating that higher `mean.self` (evaluations) are associated with higher `mean.acc` (understanding), suggesting that people *can* judge their accuracy of understanding.
 :::
 
->**Q.13.**  Can you compare the estimates, given the two datasets, to evaluate if the result in `study.two.gen` is *replicated* in `study.122`?
+>**Q.13.**  Can you compare the estimates, given the two data-sets, to evaluate if the result in `study.two.gen` is *replicated* in `study.122`?
 >**hint: Q.13.** We can judge if the result in a study is replicated in another study by examining if -- here -- the correlation coefficient is significant in both studies *and* if the coefficient has the same size and sign in both studies.
 
 ::: {.callout-note icon=false collapse="true"}
@@ -1295,7 +1293,7 @@ Now we can answer the research question:
 - first, the correlation is significant in both `study.two.gen` and `study.122`;
 - second, the correlation is positive in both studies.
 
-But, if you compare the correlation estimates, you can see that the coefficient estimate is smaller in `study.122` (where r = .40) than in `study.two.gen` (where r = .55).
+But, if you compare the correlation estimates, you can see that the coefficient estimate is smaller in `study.122` (where r = .35) than in `study.two.gen` (where r = .55).
 
 This may suggest that the association observed in `study.two.gen` is different from the association in `study.122`, for some reason.
 :::
@@ -1389,19 +1387,19 @@ Inspect the model summary, then answer the following questions:
 >**Q.18.** What is the estimate for the coefficient of the effect of the predictor, `HLVA`, in *this* model?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.18. 0.0335342
+- A.18. 0.018850
 :::
 
 >**Q.19.** Is the effect significant?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.19. It is significant, p > .05 because p = 1.52e-05
+- A.19. It is significant, p > .05 because p = 1.01e-05
 :::
 
 >**Q.20.** What are the values for t and p for the significance test for the coefficient?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.20. t = 4.701, p < .001
+- A.20. 4.536, p < .001
 :::
 
 >**Q.21.** Now consider the estimates for all the variables, what do you conclude is the answer to the research question -- given the `study.122` data:
@@ -1413,7 +1411,7 @@ Inspect the model summary, then answer the following questions:
 ::: {.callout-note icon=false collapse="true"}
 - A.21.
 
-> We fitted a linear model with mean comprehension accuracy as the outcome and health literacy (`HLVA`),  reading strategy (`FACTOR3`), and vocabulary (`SHIPLEY)` as predictors. The model is significant overall, with F(3, 61) = 14.47, p < .001, and explains 39% of variance (adjusted R2 = .387). Mean accuracy was predicted to be higher given higher scores in health literacy (`HLVA` estimate = .034, t = 4.70, p < .001). There were non-significant effects of individual differences in vocabulary knowledge (`SHIPLEY` estimate = .006, t = 1.80, p = .077) and reading strategy (`FACTOR3` estimate = .001, t = .25, p = .800).
+> We fitted a linear model with mean comprehension accuracy as the outcome and health literacy (`HLVA`),  reading strategy (`FACTOR3`), and vocabulary (`SHIPLEY)` as predictors. The model is significant overall, with F(3, 193) = 19.77, p < .001, and explains 22% of variance (adjusted R2 = .2232). Mean accuracy was predicted to be higher given higher scores in health literacy (`HLVA` estimate = .019, t = 4.54, p < .001) and vocabulary knowledge (`SHIPLEY` estimate = .007, t = 3.63, p < .001). There was a non-significant effect of individual differences in reading strategy (`FACTOR3` estimate = .001, t = .99, p = .325). 
 :::
 
 At this point, we can evaluate the evidence from the PSYC122 sample -- based on your responses -- to assess if the patterns, the estimates, we saw previously are repeated in analyses of PSYC122 responses.
@@ -1424,18 +1422,18 @@ At this point, we can evaluate the evidence from the PSYC122 sample -- based on 
 ::: {.callout-note icon=false collapse="true"}
 - A.22. If you compare the linear model coefficient estimates from both the `study.two.gen` and `study.122` models, you can see:
 
-- first, that the `HLVA` effect estimate is significant in both `study.two.gen` and `study.122`;
-- second, that the estimates of the `HLVA` effect have the same sign -- positive -- in both studies while the estimated coefficient is a bit bigger in the `study.122` data (implying a stronger effect);
-- but, third that the estimates of the effects of variation in vocabulary knowledge (`SHIPLEY`) and reading strategy (`FACTOR3`) are significant in `study.two.gen` but not in `study.122`.
-
-This suggests that the attributes -- the set of abilities -- that predict comprehension accuracy are similar but not the same in the `study.two.gen` participants compared to `study.122` participants.
+- first, that the `HLVA` and `SHIPLEY` effects are significant in both `study.two.gen` and `study.122`;
+- second, that the estimates of the `HLVA` and `SHIPLEY` effects have the same sign -- positive -- and similar magnitudes in both studies (implying similar effects);
+- but, third that the estimate of the effect of variation in reading strategy (`FACTOR3`) is significant in `study.two.gen` but not in `study.122`.  
+  
+This suggests that the attributes -- the set of abilities -- that predict comprehension accuracy are similar but not the same in the `study.two.gen` participants compared to the `study.122` participants.
 :::
 
 >**Q.23.** How would you describe the outstanding difference between the results of the two studies?
 >**hint: Q.23.** We can look at the estimates but we can also use model prediction plotting code to *visualize* the results. You can build on the code you used before, see:
 
-- `2022-23-PSYC122-w18-how-to.R`
-- `2022-23-PSYC122-w19-how-to.R`
+- `PSYC122-w18-how-to.R`
+- `PSYC122-w19-how-to.R`
 
 >**hint: Q.23.** Let's focus on comparing the `study.two.gen` and `study.122` estimates for the effect of `HLVA` in both models: we can plot model predictions, for comparison:
 
@@ -1479,13 +1477,11 @@ Then use your *visualization* of the model results to describe the outstanding d
 
 1. The health literacy `HLVA` effect is significant in both `study.two.gen` and `study.122`.
 2. The effect trends positive in both studies.
-3. The coefficient estimate is bigger in `study.122` than in `study.two.gen`.
-4. The prediction plots suggest the prediction line slope is steeper in `study.122`.
-5. The grey shaded area around the trend line (indicating our uncertainty about the estimated trend) is wider for `study.two.gen` than for `study.122`, suggesting we are more uncertain about the association for the `study.two.gen` data.
+3. The coefficient estimate is similar in `study.122` and in `study.two.gen`.
+4. The prediction plots suggest the prediction line slope is similar in `study.122`.
+5. The grey shaded area around the trend line (indicating our uncertainty about the estimated trend) is also similar for `study.two.gen` and for `study.122`. 
 
 - The breadth of the grey shaded area around the trend line is hard to compare between the two plots. You have to look carefully at the y-axis scale information to make a judgment about the relative width of these uncertainty ellipses.
-
-The visualizations plus the model summaries suggests that the estimates of the effect of health literacy are different in the `study.122` compared to the `study.two.gen` data. Why is that?
 :::
 
 We can redraw the prediction plots to add in more information about our samples. This change, see following, will help us to interpret the results of the analyses we have done.
@@ -1526,8 +1522,8 @@ It is often useful to compare model estimates -- here, the slopes -- with the ra
 ::: {.callout-note icon=false collapse="true"}
 - A.24. Adding points allow us to see:
 
-1. There are far fewer observations in the `study.122` dataset than in the `study.two.gen` data: this means that our estimate of the effect will be *more uncertain* because we have *less information* when we look at the `study.122` data.
-2. But it is also clear that the effect of `HLVA` appears to be stronger in the  `study.122` data because observed scores are *closer* to model predictions: the `HLVA` effect *explains more variation* in the `study.122` data than in the `study.two.gen` data.
+1. There are fewer observations in the `study.two.gen` dataset than in the `study.122` data: this means that our estimate of the effect will be *a bit more uncertain* because we have *less information* when we look at the `study.two.gen` data.
+2. But it is also clear that the effect of `HLVA` appears to be similar in the two data-sets.
 :::
 
 ## Online Q&A {#sec-wk19-lab-Q-and-A}
