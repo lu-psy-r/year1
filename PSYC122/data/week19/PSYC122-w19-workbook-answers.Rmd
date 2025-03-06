@@ -510,11 +510,11 @@ Inspect the model summary, then answer the following questions:
 - hint: Q.22. We can judge if the results in an earlier study are replicated in another study by examining if -- here -- the linear model estimates are significant in both studies *and* if the coefficient estimates have the same size and sign in both studies.
 - A.22. If you compare the linear model coefficient estimates from both the `study.two.gen` and `study.122` models, you can see:
 
-- first, that the `HLVA` effect estimate is significant in both `study.two.gen` and `study.122`;
-- second, that the estimates of the `HLVA` effect have the same sign -- positive -- in both studies while the estimated coefficient is a bit bigger in the `study.122` data (implying a stronger effect);
-- but, third that the estimates of the effects of variation in vocabulary knowledge (`SHIPLEY`) and reading strategy (`FACTOR3`) are significant in `study.two.gen` but not in `study.122`.  
+- first, that the `HLVA` and `SHIPLEY` effects are significant in both `study.two.gen` and `study.122`;
+- second, that the estimates of the `HLVA` and `SHIPLEY` effects have the same sign -- positive -- and similar magnitudes in both studies (implying similar effects);
+- but, third that the estimate of the effect of variation in reading strategy (`FACTOR3`) is significant in `study.two.gen` but not in `study.122`.  
   
-This suggests that the attributes -- the set of abilities -- that predict comprehension accuracy are similar but not the same in the `study.two.gen` participants compared to `study.122` participants.
+This suggests that the attributes -- the set of abilities -- that predict comprehension accuracy are similar but not the same in the `study.two.gen` participants compared to the `study.122` participants.
 
 - Q.23. How would you describe the outstanding difference between the results of the two studies?
 - hint: Q.23. We can look at the estimates but we can also use the model prediction plotting code you used before, see:
@@ -558,8 +558,6 @@ plot.two + plot.122
 
 - The breadth of the grey shaded area around the trend line is hard to compare between the two plots. You have to look carefully at the y-axis scale information to make a judgment about the relative width of these uncertainty ellipses.
 
-The visualizations plus the model summaries suggests that the estimates of the effect of health literacy are different in the `study.122` compared to the `study.two.gen` data. Why is that?
-
 - We can redraw the prediction plots to add in more information about our samples. This change, see following, will help us to interpret the results of the analyses we have done.
 - And *that* will help you to see why data visualization and data analysis work well together.
 
@@ -590,9 +588,9 @@ Then show the plots:
 plot.two + plot.122
 ```
 
-- Q.24. Given the information in the adjusted plots, can you explain what is different about the `HLVA` effect estimate in the `study.122` data compared to the ?
+- Q.24. Given the information in the adjusted plots, can you explain what is different about the `HLVA` effect estimate in the two data-sets?
 - A.24. Adding points allow us to see:
 
-1. There are fewer observations in the `study.two.gen` dataset than in the `study.122` data: this means that our estimate of the effect will be *more uncertain* because we have *less information* when we look at the `study.two.gen` data.
+1. There are fewer observations in the `study.two.gen` dataset than in the `study.122` data: this means that our estimate of the effect will be *a bit more uncertain* because we have *less information* when we look at the `study.two.gen` data.
 2. But it is also clear that the effect of `HLVA` appears to be similar in the two data-sets.
 
