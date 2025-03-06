@@ -275,7 +275,7 @@ The downloadable .zip folder includes the data files:
 
 and the R Markdown `.Rmd`:
 
-- `2023-24-PSYC122-w19-how-to.Rmd`
+- `PSYC122-w19-how-to.Rmd`
 
 If you can't upload these files to the server -- this affects some students -- you can use some code to get R to do it for you: uncover the code box below to reveal the code to do this.
 
@@ -302,10 +302,10 @@ download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/mai
 download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/2024-25_PSYC122-participants.csv?raw=true", destfile = "2024-25_PSYC122-participants.csv")
 ```
 
-4. Get the `2023-24-PSYC122-w19-how-to.Rmd` how-to guide
+4. Get the `PSYC122-w19-how-to.Rmd` how-to guide
 
 ```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/2023-24-PSYC122-w19-how-to.Rmd?raw=true", destfile = "2023-24-PSYC122-w19-how-to.Rmd")
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/PSYC122-w19-how-to.Rmd?raw=true", destfile = "PSYC122-w19-how-to.Rmd")
 ```
 :::
 
@@ -348,7 +348,7 @@ It is always a good idea to view the dataset -- click on the name of the dataset
 
 The `how-to` guide comprises an .Rmd file:
 
-- `2023-24-PSYC122-w19-how-to.Rmd`
+- `PSYC122-w19-how-to.Rmd`
 
 It is full of advice and example code.
 
@@ -413,7 +413,7 @@ In the activity @sec-wk19-lab-activities-2, we are going to work through a seque
 12. Do this in comparable datasets, and compare summaries or plots
 
 ::: callout-tip
-If you are unsure about what you need to do, look at the advice in `2023-24-PSYC122-w19-how-to.Rmd` on how to do the tasks, with examples on how to write the code.
+If you are unsure about what you need to do, look at the advice in `PSYC122-w19-how-to.Rmd` on how to do the tasks, with examples on how to write the code.
 :::
 
 You will see that you can match a task in the activity @sec-wk19-lab-activities-2 to the same task in the `how-to` guide.
@@ -535,7 +535,7 @@ Use the `summary()` or `head()` functions to take a look at both datasets.
 
 >**Q.2.** Draw histograms of both mean.acc and mean.self for both studies.
 
-<!-- - A.2. You can write the code using the same code structure you have been shown e.g. in `2023-24-PSYC122-w19-how-to.Rmd` but changing dataset and variable names to get the right plots: -->
+<!-- - A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing dataset and variable names to get the right plots: -->
 
 <!-- ```{r} -->
 <!-- ggplot(data = study.two.gen, aes(x = mean.acc)) +  -->
@@ -573,7 +573,7 @@ Use the `summary()` or `head()` functions to take a look at both datasets.
 
 We need to make two changes to the coding approach you have been using until now.
 
-- Remember, you can find what you need to do in `2023-24-PSYC122-w19-how-to.Rmd`.
+- Remember, you can find what you need to do in `PSYC122-w19-how-to.Rmd`.
 
 First, create plot objects, assign the plot objects distinct names.
 
@@ -696,7 +696,7 @@ Second produce the plots for viewing, side-by-side, by *naming* them: `plot.1.na
 
 ##### Task 8 -- Draw scatterplots to compare the potential association between `mean.acc` and `mean.self` in both `study.two.gen` and `study.122` datasets
 
-> Hint: Task 8 -- The plotting steps are explained in some detail in `2023-24-PSYC122-w17-how-to.Rmd` and you can see example code in `2023-24-PSYC122-w19-how-to.Rmd`
+> Hint: Task 8 -- The plotting steps are explained in some detail in `2023-24-PSYC122-w17-how-to.Rmd` and you can see example code in `PSYC122-w19-how-to.Rmd`
 
 <!-- :::{.callout-tip collapse="true"} -->
 <!-- ## Code -->
@@ -1152,7 +1152,7 @@ Click on a box to reveal the answer.
 >**Q.2.** Draw histograms of both mean.acc and mean.self for both studies.
 
 ::: {.callout-note icon=false collapse="true"}
-- A.2. You can write the code using the same code structure you have been shown e.g. in `2023-24-PSYC122-w19-how-to.Rmd` but changing dataset and variable names to get the right plots:
+- A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing dataset and variable names to get the right plots:
 
 ```{r}
 ggplot(data = study.two.gen, aes(x = mean.acc)) +
