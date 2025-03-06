@@ -1,7 +1,6 @@
 ---
-title: "2023-24-PSYC122-w19-how-to"
+title: "PSYC122-w19-how-to"
 author: Rob Davies
-date: "2024-03-12"
 output: word_document
 ---
 
@@ -131,7 +130,7 @@ Notice that `study.two.gen` was designed to be a replication of `study.one.gen`.
 - study two -- mean.self -- mean = 7.101
 
 - Q.2. Draw histograms of both mean.acc and mean.self for both studies.
-- A.2. You can write the code as you have been shown to do e.g. in `2023-24-PSYC122-w17-how-to.Rmd`:
+- A.2. You can write the code as you have been shown to do e.g. in week 17:
 
 ```{r}
 ggplot(data = study.one.gen, aes(x = mean.acc)) + 
@@ -275,7 +274,7 @@ plot.one + plot.two
 
 ### Task 8 -- Draw scatterplots to compare the potential association between `mean.acc` and `mean.self` in both `study.one.gen` and `study.two.gen` datasets
 
-### hint: Task 8 -- The plotting steps are explained in some detail in `2023-24-PSYC122-w17-how-to.Rmd`
+### hint: Task 8 -- The plotting steps are explained in some detail in `PSYC122-w17-how-to.Rmd`
 
 ```{r}  
 ggplot(data = study.one.gen, aes(x = mean.self, y = mean.acc)) +
@@ -496,7 +495,7 @@ Inspect the model summary, then answer the following questions:
 This suggests that the results we see in `study.one.gen` *are* replicated in `study.two.gen`.
 
 - Q.23. Are there any important differences between the results of the two studies?
-- hint: Q.23. You can look at the estimates but you can also use the model prediction plotting code you used before, see example code in `2022-23-PSYC122-w18-how-to.R`.
+- hint: Q.23. You can look at the estimates but you can also use the model prediction plotting code you used before, see example code in `PSYC122-w18-how-to.R`.
 - hint: Q.23. -- Let's focus on comparing the `study.one.gen` and `study.two.gen` estimates for the effect of vocabulary knowledge in both models: we can plot model predictions for comparison:
 
 First: fit the models -- using different names for the different models:

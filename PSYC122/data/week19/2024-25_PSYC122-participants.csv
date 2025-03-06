@@ -1,0 +1,198 @@
+ResponseId,DECISION,Progress,StartDate,DURATION,AGE,GENDER,EDUCATION,ETHNICITY,NATIVE.LANGUAGE,OTHER.LANGUAGE,ENGLISH.PROFICIENCY,OCCUPATION,OCCUPATION_1_TEXT,chronic-pain,SHIPLEY,HLVA,FACTOR3,mean.acc,mean.self
+R_8jSZdRgu4oq4QyD,FALSE,100,2025-02-13T11:21:16Z,1630,18,Male,Further,White,English,NA,NA,Student,NA,5,37,10,50,0.65,5.4
+R_2NqF1TrXQirFymd,FALSE,100,2025-02-17T03:46:20Z,1036,18,Male,Further,White,English,NA,NA,Student,NA,5,34,7,51,0.9,6.8
+R_8JIQtnrUWv3Br22,FALSE,100,2025-02-17T05:00:24Z,2761,18,Female,Further,White,English,NA,NA,Student,NA,2,33,10,49,0.9,4.4
+R_8NUou5ejGRwepeB,FALSE,100,2025-02-17T08:13:14Z,2545,19,Female,Further,Mixed,English,NA,NA,Student,NA,5,30,8,44,1,7.2
+R_2kZklLrEsDUqCHb,FALSE,100,2025-02-18T01:51:58Z,1547,18,Male,Further,White,English,NA,NA,Student,NA,2,34,10,55,1,7.6
+R_200lw6RwJKRZfwO,FALSE,100,2025-02-18T02:17:17Z,1506,19,Female,Further,White,English,NA,NA,23,NA,5,32,10,53,0.9,7.2
+R_2ETWokoxjElq5jz,FALSE,100,2025-02-18T04:24:02Z,2999,18,Female,Further,Asian,English,NA,NA,23,NA,2,31,7,53,0.75,6.2
+R_8VO4yHqrwOzghjU,FALSE,100,2025-02-18T12:09:09Z,1578,18,Female,Further,White,English,NA,NA,23,NA,4,34,9,49,0.6,5.4
+R_2xLx8Rfv5zNNFul,FALSE,100,2025-02-19T06:17:24Z,923,19,Male,Further,White,English,NA,NA,34,NA,5,31,8,56,0.85,6.8
+R_2l9ucl8AJRKSPGc,FALSE,100,2025-02-19T05:47:57Z,2819,19,Female,Further,White,English,NA,NA,23,NA,1,36,12,41,0.85,7
+R_8XrKMMqQDhSktvX,FALSE,100,2025-02-19T09:09:01Z,2135,19,Female,Further,White,English,NA,NA,Student,NA,5,32,7,57,0.75,7
+R_8NlYu9NmGXTEAM2,FALSE,100,2025-02-19T13:18:24Z,1062,19,Male,Further,White,English,NA,NA,Student,NA,5,39,6,50,0.75,6.6
+R_2r6uXvoPG6Qej4d,FALSE,100,2025-02-19T16:30:45Z,1763,18,Female,Further,White,English,NA,NA,Student,NA,4,31,6,56,0.85,7
+R_8IbkfmliPbHqxPO,FALSE,100,2025-02-20T03:08:28Z,2641,18,Female,Further,White,English,NA,NA,Student,NA,2,32,10,47,0.55,8.25
+R_28Jo5csKNXjF03f,FALSE,100,2025-02-20T03:02:36Z,4281,19,Prefer-not-say,Further,White,English,NA,NA,Student,NA,2,29,5,49,0.55,5.8
+R_8DP9kF6z45zhmiJ,FALSE,100,2025-02-20T03:05:14Z,4184,19,Female,Further,White,English,NA,NA,Unemployed,NA,4,31,9,50,0.8,5.8
+R_2zYXQo8IvGs91s8,FALSE,100,2025-02-20T05:04:25Z,1165,18,Female,Further,White,English,NA,NA,Student,NA,5,27,5,42,0.55,4.5
+R_8kboAjRoJXsT60D,FALSE,100,2025-02-20T05:16:25Z,662,18,Non-Binary,Further,White,English,NA,NA,Student,NA,1,36,7,57,0.8,7.2
+R_2EShZZxK8wsR9m1,FALSE,100,2025-02-20T06:48:41Z,2140,18,Female,Further,Asian,English,NA,NA,Student,NA,4,30,12,42,0.8,7.4
+R_8vAAfwkRsfhM5ON,FALSE,100,2025-02-23T06:48:31Z,15866,18,Male,Further,White,English,NA,NA,Student,NA,4,34,9,53,0.95,6.6
+R_2itdgVe1XBC0Vip,FALSE,100,2025-02-17T06:32:42Z,603255,18,Female,Further,White,English,NA,NA,34,NA,1,29,11,52,0.6,6.2
+R_2NDJnyNtAQ94QOd,FALSE,100,2025-02-17T07:09:11Z,602723,19,Female,Further,Asian,English,NA,NA,Student,NA,1,33,9,47,0.9,7.4
+R_2ONUYNp8Vt8TQdP,FALSE,100,2025-02-20T05:02:15Z,370448,18,Female,Further,White,Other,Romanian,3,Part.time,NA,4,33,9,55,0.85,9
+R_2IaGhNrNISMveRU,FALSE,100,2025-02-27T04:01:23Z,1794,19,Male,Further,White,English,NA,NA,Student,NA,2,31,11,56,0.7,7.6
+R_24JdQYV1tzw0tkR,FALSE,100,2025-01-23T05:04:04Z,1140,19,Female,Further,Asian,English,NA,NA,Student,NA,1,25,9,54,0.8,7.4
+R_8UawnTOYkcLOCr0,FALSE,100,2025-01-23T12:36:36Z,12056,21,Female,Further,White,English,NA,NA,13,UX Designer,1,34,10,44,0.85,5.8
+R_2fhketuZkNSCh33,FALSE,100,2025-01-24T00:37:11Z,991,21,Female,Further,Mixed,English,NA,NA,Student,NA,1,36,8,46,0.85,9
+R_2f2a38e4yQwS2mA,FALSE,100,2025-01-24T03:02:13Z,1797,45,Female,Higher,Asian,English,NA,NA,Full.time,DIRECTOR,2,37,9,55,0.95,4
+R_2ea6wyFaR7RxrDb,FALSE,100,2025-01-24T17:32:20Z,1712,21,Female,Further,Asian,English,NA,NA,Student,NA,3,40,6,57,0.65,7.6
+R_2YaIa8Wtvzele4S,FALSE,100,2025-01-25T05:02:47Z,2643,19,Female,Secondary,White,Other,hungarian,2,Student,NA,3,22,6,54,0.85,5.2
+R_2CKtALOvUFCu3XK,FALSE,100,2025-01-25T06:12:44Z,1701,18,Female,Higher,Other,English,NA,NA,Unemployed,NA,3,31,7,48,0.7,6.6
+R_8VaQ7RAOlk2alB7,FALSE,100,2025-01-25T06:22:13Z,6623,19,Female,Secondary,White,Other,Hungarian,3,Student,NA,2,31,10,50,0.9,8.4
+R_8qDBWO8N7eQjxAG,FALSE,100,2025-01-25T06:57:07Z,6533,20,Female,Further,Asian,English,NA,NA,Student,NA,3,35,11,54,0.95,6.6
+R_2DN5IrwR0EfwxNM,FALSE,100,2025-01-25T12:13:27Z,2241,50,Male,Higher,Asian,Other,Tamil,3,Full.time,Occupational therapist,3,33,10,51,0.7,7.6
+R_2pXKy9CxmvSCJSI,FALSE,100,2025-02-05T07:03:37Z,2088,26,Female,Higher,Asian,Other,Malayalam,3,23,NA,1,30,11,53,0.8,7.8
+R_2zpikIRIJ12wk7H,FALSE,100,2025-01-23T08:47:19Z,1153,20,Female,Higher,White,English,NA,NA,Student,NA,2,22,5,47,0.55,7.5
+R_2NaX8iVZEtxyxSp,FALSE,100,2025-01-23T11:20:38Z,976,20,Female,Further,White,English,NA,NA,123,Placement as support staff at school,2,23,6,49,0.65,8
+R_2MgtC80NhbYD29C,FALSE,100,2025-01-23T12:56:33Z,4110,57,Female,Further,White,English,NA,NA,Part.time,NA,1,30,10,55,0.8,8.2
+R_8CEKfOpyAiutnDp,FALSE,100,2025-01-24T01:19:12Z,2230,56,Female,Further,White,English,NA,NA,Unemployed,NA,3,36,7,50,0.9,7.25
+R_8OoIiKPhdiob0NW,FALSE,100,2025-01-24T02:10:27Z,1129,21,Female,Further,White,English,NA,NA,Student,NA,2,26,6,47,0.85,5.2
+R_2zuUI4170VH4Dtd,FALSE,100,2025-01-24T03:28:20Z,5278,58,Female,Further,White,English,NA,NA,Part.time,NA,1,39,8,62,0.85,8.2
+R_2HdSFehqW6nsKQw,FALSE,100,2025-01-24T07:28:02Z,1635,52,Female,Secondary,White,English,NA,NA,Part.time,NA,2,38,9,43,0.9,7.6
+R_89KtzGFVL6Q1YEV,FALSE,100,2025-01-24T08:25:56Z,2395,60,Female,Further,White,English,NA,NA,Unemployed,NA,1,35,7,55,0.95,7.4
+R_7weQAtZ3vw71YZP,FALSE,100,2025-01-24T14:06:59Z,938,20,Female,Higher,White,English,NA,NA,Student,NA,1,29,6,43,0.75,6.4
+R_2rOjLPL4UQoRLmK,FALSE,100,2025-01-24T15:15:41Z,1666,24,Female,Further,White,English,NA,NA,Student,NA,2,30,12,51,0.95,9
+R_8IVkM0KJnm9sFYR,FALSE,100,2025-01-26T12:27:20Z,2677,35,Male,Higher,White,English,NA,NA,Full.time,Local Government Officer,2,40,8,49,0.95,6.6
+R_2X08mrR2TMi3eQM,FALSE,100,2025-01-27T06:47:43Z,3319,24,Female,Higher,White,English,NA,NA,Full.time,Civil Servant,3,33,9,49,0.8,7.2
+R_8rVtzFsmW5oO3KH,FALSE,100,2025-01-27T09:02:45Z,2544,29,Female,Higher,White,English,NA,NA,Full.time,Intervention Facilitator,1,39,8,48,0.85,8.25
+R_4AWT1cHtIAZu82l,FALSE,100,2025-01-27T23:37:01Z,1071,41,Female,Higher,White,English,NA,NA,Retired,NA,1,34,9,54,0.8,7.4
+R_2XdOxnCp6MhOWo4,FALSE,100,2025-01-28T13:56:07Z,1890,21,Female,Further,White,English,NA,NA,Student,NA,2,31,7,54,0.9,8.4
+R_2imPVr6vuFbhEVr,FALSE,100,2025-01-29T03:41:46Z,5038,25,Female,Higher,White,English,NA,NA,Full.time,NA,2,36,7,47,0.9,7.2
+R_87I0rFIkg63MY2h,FALSE,100,2025-01-30T04:50:58Z,2626,62,Female,Higher,White,English,NA,NA,Part.time,NA,1,39,11,57,0.85,9
+R_8k6wwx633EgVsvD,FALSE,100,2025-01-31T00:42:59Z,1973,49,Female,Higher,White,English,NA,NA,Full.time,Social Worker,3,39,10,54,0.95,8.5
+R_8LIihnayhDmQKO6,FALSE,100,2025-01-31T07:56:47Z,2266,54,Female,Secondary,White,English,NA,NA,Full.time,Dental nurse,3,29,6,46,0.75,7.4
+R_2g5Xi95De6aucdD,FALSE,100,2025-02-02T14:22:43Z,3102,21,Male,Higher,White,English,NA,NA,Student,NA,2,31,7,40,0.95,7.4
+R_7v06Owvf8jmqFko,FALSE,100,2025-02-03T22:50:41Z,2075,30,Female,Higher,Mixed,English,NA,NA,Unemployed,NA,1,30,9,49,0.75,6.4
+R_8VptsinETRK2m30,FALSE,100,2025-02-04T02:49:15Z,915,46,Male,Higher,White,English,NA,NA,Student,NA,1,35,12,45,0.9,7.75
+R_3Ng2rYVR7s6eNdC,FALSE,100,2025-02-05T11:54:54Z,1462,51,Female,Further,White,English,NA,NA,Retired,NA,1,33,7,52,0.95,9
+R_7rVnjnyroj4QMpx,FALSE,100,2025-02-05T13:16:28Z,2152,73,Female,Higher,White,English,NA,NA,Retired,NA,1,38,11,58,0.8,8.4
+R_3rfVJucE1v32oUx,FALSE,100,2025-02-05T14:03:45Z,2704,55,Female,Secondary,White,English,NA,NA,Retired,NA,1,39,9,58,0.9,7.8
+R_7eUngYTL74ueC9B,FALSE,100,2025-02-05T19:28:03Z,1622,29,Female,Further,White,English,NA,NA,Full.time,NA,1,21,4,33,0.4,6.6
+R_5tLHqdWIUtOCZt2,FALSE,100,2025-02-07T08:13:57Z,2198,53,Female,Further,White,English,NA,NA,Retired,NA,1,30,8,48,0.75,9
+R_25LTtcuJg4N4Rgw,FALSE,100,2025-02-20T06:48:34Z,3255,56,Male,Higher,White,English,NA,NA,Unemployed,NA,1,39,9,56,0.8,8.6
+R_8kFWRxOaPexUu2W,FALSE,100,2025-01-29T06:17:17Z,925,18,Female,Further,White,English,NA,NA,23,NA,3,32,10,41,0.85,5.75
+R_2gwQwIAmdQWt3Xr,FALSE,100,2025-01-29T08:11:50Z,1089,28,Male,Higher,White,English,NA,NA,Unemployed,NA,3,35,7,56,1,6.2
+R_2qgxHNx5yjV0hSv,FALSE,100,2025-01-29T09:49:02Z,2692,27,Male,Higher,White,English,NA,NA,Full.time,Product owner,2,34,11,53,0.9,8.2
+R_8rHZQq3aKEQYs6J,FALSE,100,2025-01-29T14:38:12Z,1287,18,Female,Further,White,English,NA,NA,Student,NA,4,31,6,51,0.9,7.2
+R_2YhTzuWQn17x1Dj,FALSE,100,2025-01-30T04:06:12Z,3065,45,Male,Higher,White,English,NA,NA,123,Trainee Nursing Associate,2,35,12,55,0.8,9
+R_2KP4LapGfTotnYR,FALSE,100,2025-01-30T09:54:52Z,993,19,Female,Further,White,English,NA,NA,Student,NA,4,26,7,37,0.55,4.2
+R_8w6t1TjKeVDV1jX,FALSE,100,2025-01-31T05:15:37Z,543,19,Female,Higher,White,English,NA,NA,Part.time,NA,3,26,5,43,0.55,3.8
+R_2GVvE8SF1SBByan,FALSE,100,2025-02-01T10:17:36Z,1717,18,Female,Higher,White,English,NA,NA,Student,NA,4,35,10,42,0.6,2.25
+R_8S6i2NdP23fIwbT,FALSE,100,2025-02-02T05:38:19Z,3517,27,Male,Further,White,English,NA,NA,Full.time,Customer assistant - Halifax,3,38,5,54,0.95,6.6
+R_2gLXPWwpOTSOjhI,FALSE,100,2025-02-02T07:36:07Z,842,19,Female,Further,White,English,NA,NA,Part.time,NA,2,28,9,52,0.65,5.25
+R_8Dvh76MzngvKGh8,FALSE,100,2025-02-05T09:05:23Z,1410,27,Female,Higher,White,English,NA,NA,Part.time,NA,4,32,7,57,0.7,8.6
+R_8wFXFwTQCSANquo,FALSE,100,2025-02-08T09:40:27Z,746,18,Female,Further,White,English,NA,NA,Student,NA,4,32,9,44,0.85,6.8
+R_2urdT1sKJq5De78,FALSE,100,2025-02-11T09:05:24Z,2112,19,Male,Further,White,English,NA,NA,34,NA,3,34,10,54,0.8,6.8
+R_8MrXdvmCFLlInVn,FALSE,100,2025-02-11T14:57:46Z,3444,27,Male,Higher,Black,Other,Arabic,3,13,Health Care Assistant,2,39,12,52,0.95,8.2
+R_2QoidVr4TdliHyc,FALSE,100,2025-02-21T08:21:38Z,1105,18,Male,Further,White,English,NA,NA,Student,NA,2,33,7,53,0.75,7.2
+R_27rIiF9ccnuqI6l,FALSE,100,2025-02-26T06:28:06Z,2454,20,Female,Further,White,Other,Romanian,3,Student,NA,3,40,9,56,0.9,9
+R_2IQuI9Cx3dHtRcA,FALSE,100,2025-02-28T04:05:44Z,1579,18,Female,Further,White,English,NA,NA,Student,NA,3,30,12,59,0.9,7.6
+R_4jZGHmZEMcnqjJj,FALSE,100,2025-01-22T19:45:39Z,3554,22,Male,Higher,Asian,Other,Chinese,2,Student,NA,2,35,2,50,0.5,4.6
+R_4q2xjG9vEwMtGVK,FALSE,100,2025-01-22T23:22:52Z,4302,45,Female,Further,Asian,Other,Cantonese,2,Full.time,Supervisor,1,20,11,47,0.8,3.8
+R_42PIJOafwZZjBzC,FALSE,100,2025-01-22T23:22:53Z,4655,55,Male,Further,Asian,Other,Cantonese,2,Full.time,Inspector,1,19,9,53,0.6,3.8
+R_81axVXvHsS6TYhr,FALSE,100,2025-01-24T06:17:54Z,964,22,Male,Further,Asian,Other,Cantonese,2,Student,NA,3,19,2,36,0.9,6
+R_4qqdwUsIVtuURWE,FALSE,100,2025-01-25T01:16:21Z,2865,46,Female,Higher,Asian,Other,Chinese,2,Full.time,Officer,1,35,9,60,0.75,8.5
+R_2F4LA8C2kGgTHyq,FALSE,100,2025-01-30T11:58:28Z,1668,21,Male,Higher,Asian,Other,Cantonese,3,Unemployed,NA,3,24,7,47,0.75,6.8
+R_2dDDfPnloZvJF29,FALSE,100,2025-02-01T10:22:37Z,1560,18,Female,Further,White,English,NA,NA,Student,NA,4,29,7,47,0.75,7
+R_8It22WuFvbf9z6v,FALSE,100,2025-02-02T11:26:44Z,883,18,Female,Further,White,English,NA,NA,34,NA,4,36,4,40,0.5,6.2
+R_2Ug9xciCU04hKZ6,FALSE,100,2025-02-03T09:57:38Z,1766,18,Female,Further,White,English,NA,NA,Student,NA,3,31,7,45,0.95,6.2
+R_8saxjQlXwfFLyW8,FALSE,100,2025-02-03T18:16:30Z,2059,19,Female,Further,White,English,NA,NA,Student,NA,4,31,6,38,0.75,8.2
+R_2SkkqJgOHHaRyrR,FALSE,100,2025-02-05T04:27:16Z,1514,18,Female,Further,White,English,NA,NA,Student,NA,4,28,6,43,0.75,5.8
+R_4FkC7AbiHXTyGGQ,FALSE,100,2025-02-08T11:42:21Z,33354,57,Female,Higher,Asian,Other,Chinese,3,NA,NA,1,38,11,42,0.85,7
+R_8sYZusUMqhrtu6v,FALSE,100,2025-02-09T07:54:28Z,863,18,Female,Further,White,English,NA,NA,Student,NA,3,31,7,50,0.8,7.6
+R_26adKXTX4J9q7fP,FALSE,100,2025-03-01T05:35:52Z,1148,22,Female,Further,White,English,NA,NA,23,NA,2,33,6,46,0.85,7.2
+R_2g0BiO3cwSbEjBw,FALSE,100,2025-01-25T10:44:41Z,3572,20,Female,Further,Asian,Other,Cantonese,3,Student,NA,4,33,8,43,0.85,7.6
+R_2Okn0ODZAHQsw6t,FALSE,100,2025-01-25T12:08:54Z,1000,20,Non-Binary,Further,White,Other,Polish,3,Student,NA,3,35,13,54,1,8.8
+R_8P5M0rvGuwZ5L2N,FALSE,100,2025-01-25T13:59:56Z,1276,22,Male,Higher,White,Other,Italian,3,Student,NA,2,38,10,54,1,9
+R_8bWCFLBkkIOxP4R,FALSE,100,2025-01-25T13:52:45Z,2209,20,Female,Higher,White,English,NA,NA,Student,NA,3,28,12,53,0.8,9
+R_2RatyT9Jw4kHEtG,FALSE,100,2025-01-25T16:36:09Z,2187,21,Male,Further,White,English,NA,NA,Student,NA,1,34,10,34,0.85,4.4
+R_8PCjf17NgYZNV9T,FALSE,100,2025-01-25T16:56:43Z,3319,25,Non-Binary,Further,White,English,NA,NA,23,NA,1,40,10,56,0.9,6.4
+R_8zoQwl3gT10cypj,FALSE,100,2025-01-26T12:46:19Z,3012,67,Male,Higher,White,English,NA,NA,Full.time,Tax manager,3,37,10,54,0.95,4.6
+R_8YlVKLM65jq7juy,FALSE,100,2025-01-30T17:43:30Z,518186,20,Female,Higher,Black,English,NA,NA,Student,NA,2,39,12,48,0.95,7.8
+R_2rIqj1K2q4X7ROm,FALSE,100,2025-01-22T16:09:57Z,3051,18,Male,Further,White,English,NA,NA,NA,NA,4,30,9,41,0.75,5.4
+R_22EbaqMJljKTOks,FALSE,100,2025-01-23T13:28:01Z,2746,51,Male,Higher,White,English,NA,NA,Full.time,Managing Director,1,34,8,52,1,5.6
+R_8ttklROTpxUAL5w,FALSE,100,2025-01-23T15:16:13Z,1569,52,Male,Higher,White,English,NA,NA,Full.time,IT Consultant,1,37,9,42,0.9,4.8
+R_8poV40ItXyUSAOl,FALSE,100,2025-01-27T09:06:16Z,2813,33,Female,Higher,Asian,Other,Telugu,2,Full.time,QA Engineer,4,39,8,57,0.7,6
+R_8OUR19ivLlc3spY,FALSE,100,2025-01-28T06:55:15Z,5808,55,Female,Higher,White,English,NA,NA,Part.time,NA,1,38,9,47,1,6
+R_85AsobpNitsQT94,FALSE,100,2025-01-29T04:22:08Z,8585,50,Female,Higher,White,English,NA,NA,Full.time,Data Manager,4,38,11,48,0.95,7.6
+R_2j6DMfjQiUWWCQe,FALSE,100,2025-02-05T02:28:40Z,4831,40,Male,Higher,White,Other,Polish,3,Full.time,"IT Consultant, team leader",4,39,8,48,0.9,5.4
+R_6lJmjswirwQHinf,FALSE,100,2025-02-06T15:17:55Z,1196,44,Female,Higher,White,Other,Norwegian,3,Full.time,Accountant/Office Adminstrator,2,40,11,51,0.85,8.6
+R_3EpgcW3rSFhoko4,FALSE,100,2025-02-06T16:53:13Z,3038,44,Male,Higher,White,English,NA,NA,Full.time,Channel Development Manager,3,34,10,52,0.95,7.5
+R_6SJEOl8TxFoDFrC,FALSE,100,2025-02-07T10:18:24Z,3409,48,Female,Further,White,English,NA,NA,Full.time,NA,2,40,12,56,0.9,7.75
+R_7QoNk4OSrdm7V8U,FALSE,100,2025-02-10T13:26:03Z,2155,42,Female,Higher,White,English,NA,NA,Full.time,software consultant,3,34,10,48,1,9
+R_2HjhjMKG0NZQtFo,FALSE,100,2025-02-28T10:16:39Z,10553,25,Female,Higher,White,English,NA,NA,Full.time,Youth programme manager,2,37,8,47,0.95,7.6
+R_2I45Oj7tTbHY7DH,FALSE,100,2025-02-13T10:13:27Z,826,18,Female,Further,White,English,NA,NA,Student,NA,1,24,5,36,0.75,7.25
+R_8hCcMVmCoqRdmU1,FALSE,100,2025-02-16T11:28:35Z,1048,18,Female,Further,Black,English,NA,NA,Student,NA,5,34,9,48,0.85,6.4
+R_8VZuz28rHOd4cUx,FALSE,100,2025-02-17T04:18:09Z,1213,20,Male,Further,Mixed,English,NA,NA,Student,NA,4,35,9,51,0.9,6.5
+R_8svLlAd2fL7rhbk,FALSE,100,2025-02-17T04:47:51Z,1862,19,Female,Further,White,English,NA,NA,Part.time,NA,2,29,8,54,0.8,8.4
+R_8Ase9EAfVMUsr3b,FALSE,100,2025-02-17T05:26:33Z,1585,18,Female,Further,White,English,NA,NA,Student,NA,5,38,8,46,0.8,7
+R_2uNEnPXJ3HXwki4,FALSE,100,2025-02-17T05:39:12Z,8636,21,Female,Further,White,English,NA,NA,Student,NA,1,40,12,48,0.9,6.75
+R_8VDfa42OFEG4NYz,FALSE,100,2025-02-16T08:19:00Z,162652,18,Female,Higher,Asian,English,NA,NA,Student,NA,4,29,8,44,1,5.6
+R_2RtOegdmmjCl2Ux,FALSE,100,2025-02-19T04:50:42Z,7029,18,Female,Further,White,English,NA,NA,23,NA,4,37,10,41,0.95,8
+R_2m8HVjCaXTyP4l3,FALSE,100,2025-02-19T08:31:33Z,870,18,Male,Secondary,White,English,NA,NA,Student,NA,2,32,9,38,0.8,7
+R_8ER0XMKx2lUN9ys,FALSE,100,2025-02-19T09:44:00Z,1514,19,Female,Further,White,English,NA,NA,Student,NA,5,29,7,35,0.6,4
+R_2lY4jWaSvPjOl78,FALSE,100,2025-02-19T15:42:41Z,1943,19,Female,Further,Mixed,English,NA,NA,Student,NA,1,39,10,48,0.9,7.25
+R_2zMnta7YD4RVhv3,FALSE,100,2025-02-20T03:06:04Z,2276,18,Female,Further,White,English,NA,NA,23,NA,4,32,4,47,0.75,6.2
+R_2es0GWVupJxREc1,FALSE,100,2025-02-20T03:36:43Z,1114,19,Female,Further,White,English,NA,NA,23,NA,4,29,5,43,0.85,7.4
+R_20jXAL5JWx1cnf4,FALSE,100,2025-02-20T03:27:05Z,3550,19,Female,Further,White,English,NA,NA,23,NA,2,30,6,54,0.6,6.6
+R_8l8Acvb7lUMsIcp,FALSE,100,2025-02-20T05:06:43Z,1718,18,Female,Further,White,English,NA,NA,Student,NA,4,31,7,47,0.8,6.6
+R_8K44okIHSbj4JHn,FALSE,100,2025-02-20T05:14:08Z,1972,19,Female,Further,White,English,NA,NA,Student,NA,4,33,8,46,0.85,7.4
+R_2jcx8wQKCMrwqRc,FALSE,100,2025-02-23T07:13:57Z,2151,18,Female,Further,White,English,NA,NA,Student,NA,4,33,11,55,0.9,8.4
+R_2bQyNEGc1sEhtyF,FALSE,100,2025-02-25T13:40:00Z,2492,19,Female,Further,Asian,Other,Chinese,3,Student,NA,4,37,11,38,1,8.75
+R_2Mbz5fAe3as473N,FALSE,100,2025-03-03T04:52:59Z,1027,19,Male,Further,White,English,NA,NA,34,NA,2,28,8,40,0.9,7
+R_894CwsylgIm3kzG,FALSE,100,2025-01-23T05:32:14Z,1384,20,Female,Further,Asian,English,NA,NA,23,NA,2,28,7,55,0.95,5.75
+R_2EcuOTDLHwU40D9,FALSE,100,2025-01-24T01:45:38Z,2227,20,Male,Further,White,English,NA,NA,23,NA,2,33,11,56,0.8,7.6
+R_2lvhlf63wK5akmJ,FALSE,100,2025-01-25T05:59:41Z,1547,25,Female,Higher,Asian,English,NA,NA,Full.time,Patient Administrator,3,28,6,36,0.5,7.75
+R_29gGo4HoM1f3veE,FALSE,100,2025-01-25T07:07:43Z,1465,19,Female,Secondary,White,Other,Hungarian,3,Student,NA,3,31,10,58,0.7,8.2
+R_8e8eJJF01DQ2LwM,FALSE,100,2025-01-23T08:42:25Z,1509,40,Female,Higher,White,English,NA,NA,Full.time,Clinical psychologist,2,40,11,53,0.95,7
+R_2dFH3iw9UsBtwCU,FALSE,100,2025-01-23T08:48:02Z,28614,55,Female,Higher,White,English,NA,NA,Full.time,Full time,2,33,7,43,0.95,6.6
+R_21mCJgpJZQxjJjt,FALSE,100,2025-01-24T05:51:39Z,3738,64,Female,Further,White,English,NA,NA,NA,NA,2,38,13,52,0.9,7.6
+R_2K24ryZnoW6Paql,FALSE,100,2025-01-24T15:16:56Z,1749,20,Female,Further,White,English,NA,NA,23,NA,2,26,6,44,0.6,5.4
+R_8OvJVxE6NmSZGoe,FALSE,100,2025-01-24T15:31:37Z,1500,22,Female,Further,White,English,NA,NA,23,NA,2,31,9,33,0.85,7.4
+R_2VpuWmuCqv4g7e1,FALSE,100,2025-01-25T01:27:20Z,1665,52,Female,Higher,White,English,NA,NA,12,Teaching assistant,4,29,6,41,0.55,5.25
+R_8h3dM6C9v9N5yx8,FALSE,100,2025-01-23T11:15:54Z,274413,20,Female,Further,White,English,NA,NA,Student,NA,2,31,11,53,1,8
+R_2kGJqTLDe4d2ci4,FALSE,100,2025-01-26T15:17:32Z,2519,54,Female,Higher,White,English,NA,NA,Part.time,NA,3,32,8,42,0.9,7.8
+R_8nSMgZFYgXONpdn,FALSE,100,2025-01-27T05:39:31Z,974,21,Female,Higher,White,English,NA,NA,23,NA,2,34,9,50,0.75,6.8
+R_8awBWPqxFK5TQMH,FALSE,100,2025-01-27T08:52:15Z,1420,24,Female,Higher,Asian,Other,Tagalog (Filipino),3,Full.time,Interventions Facilitator,2,31,8,49,0.9,3.2
+R_8kByr8Oox3uCVxA,FALSE,100,2025-01-29T12:00:38Z,699,20,Female,Further,White,English,NA,NA,Full.time,Auditor,2,35,7,54,0.85,6.4
+R_2kb6alJuZaP2fyw,FALSE,100,2025-01-30T05:16:07Z,12113,51,Female,Further,White,English,NA,NA,Full.time,Registered Service Manager,2,23,5,46,0.8,4.4
+R_2X0TEu6JhU6ylwV,FALSE,100,2025-01-30T13:27:05Z,1280,54,Female,Further,White,English,NA,NA,Full.time,Supervisory Senior Support Worker,1,36,8,54,0.9,5.8
+R_8j6qe3aQDNzxSP0,FALSE,100,2025-02-02T06:33:28Z,1425,44,Female,Further,White,English,NA,NA,Full.time,Senior supervisory support worker,3,30,7,40,0.8,5
+R_5LZmtyDp5WbuEex,FALSE,100,2025-02-03T18:48:27Z,1120,65,Female,Higher,Mixed,English,NA,NA,Retired,NA,1,36,10,62,0.9,9
+R_8ITmZFBhAmrCHkt,FALSE,100,2025-02-04T08:17:51Z,1166,57,Female,Higher,White,English,NA,NA,25,NA,2,32,9,50,0.85,5.8
+R_8VCjoQNEafonfgd,FALSE,100,2025-02-05T10:54:26Z,1578,52,Female,Further,White,English,NA,NA,Part.time,NA,1,30,11,46,0.9,5
+R_9rRJaPHbjg482OJ,FALSE,100,2025-02-05T19:45:13Z,1765,60,Female,Higher,White,English,NA,NA,Retired,NA,1,34,10,53,0.85,7
+R_6gOa8Hxa9UVSxCG,FALSE,100,2025-02-06T18:31:32Z,6875,48,Male,Further,White,English,NA,NA,Retired,NA,1,39,11,59,0.95,9
+R_7EiHP2WmzJUD7WE,FALSE,100,2025-02-08T19:17:45Z,2589,56,Female,Further,White,English,NA,NA,Full.time,In home health care provider,1,38,9,9,0.95,7.4
+R_2M4mAnYehLvpDqx,FALSE,100,2025-02-26T04:49:40Z,1546,23,Female,Higher,White,English,NA,NA,Full.time,Interventions Facilitator,3,30,9,40,0.75,4.2
+R_2FDtgx4J7cp5Sgd,FALSE,100,2025-02-26T07:59:42Z,4828,31,Female,Higher,White,English,NA,NA,Part.time,NA,3,28,8,38,0.6,6.5
+R_8oqlp6TDCYmW0ba,FALSE,100,2025-02-26T13:27:37Z,2388,30,Female,Higher,Asian,English,NA,NA,Full.time,Interventions Facilitator,1,29,7,46,1,8.8
+R_2NvY50BxO6Xkf05,FALSE,100,2025-01-29T04:09:13Z,799,19,Female,Further,White,English,NA,NA,23,NA,3,22,8,37,1,6.4
+R_81aydCbZq9cBEZj,FALSE,100,2025-01-29T08:09:27Z,2508,57,Female,Further,White,English,NA,NA,Full.time,Senior new homes sales executive,1,30,9,59,0.9,4.2
+R_27TOnatGLwHpZsG,FALSE,100,2025-01-29T11:43:19Z,9018,26,Male,Further,White,English,NA,NA,Full.time,NA,4,35,10,54,1,8.2
+R_8FDrQCuNLCLt2LV,FALSE,100,2025-01-30T11:18:43Z,2685,19,Female,Further,White,English,NA,NA,Student,NA,3,34,10,49,1,6
+R_8eambf3z7CdMKHF,FALSE,100,2025-01-31T05:45:25Z,1849,18,Female,Further,White,English,NA,NA,Student,NA,3,24,12,41,1,7.6
+R_2kBQmNexea6ZQYU,FALSE,100,2025-01-31T07:47:09Z,1955,18,Female,Further,White,English,NA,NA,34,NA,3,37,10,46,0.9,7.6
+R_22Yb6SDapsdSaHR,FALSE,100,2025-02-02T12:27:48Z,962,23,Female,Further,White,English,NA,NA,Student,NA,2,30,10,41,0.7,6.4
+R_2ln8tlDnIWqAyyd,FALSE,100,2025-02-13T06:50:24Z,2192,18,Female,Further,Mixed,English,NA,NA,Student,NA,2,32,10,39,0.8,6.8
+R_8zY2FhiaWY0aIqw,FALSE,100,2025-02-18T10:49:29Z,1577,19,Female,Further,White,English,NA,NA,Part.time,NA,2,27,10,54,0.95,7.5
+R_82ISViwA7ausGe5,FALSE,100,2025-02-25T04:42:23Z,1792,18,Female,Further,White,English,NA,NA,Part.time,NA,3,24,6,36,0.6,5.8
+R_8M6wb8zj6Sk8Vz5,FALSE,100,2025-02-26T05:19:02Z,1328,18,Female,Further,White,English,NA,NA,23,NA,2,29,8,45,0.75,7.8
+R_4BCm7ghHTrN5xSN,FALSE,100,2025-01-22T17:07:08Z,9858,54,Female,Further,Asian,Other,Chinese,2,Full.time,Secretary,1,33,8,50,0.75,6.5
+R_4KcM3CpcAN0fRjQ,FALSE,100,2025-01-22T20:38:57Z,8446,59,Male,Secondary,Asian,Other,Chinese,1,Full.time,Purchasing officer,1,33,4,56,0.6,6
+R_4SrdKTd85qmHjcF,FALSE,100,2025-01-23T06:11:17Z,1359,28,Female,Higher,Asian,Other,Cantonese,2,Part.time,NA,3,27,9,38,0.5,4
+R_4IS8aaAVGxidkI1,FALSE,100,2025-01-24T23:49:43Z,5025,18,Female,Secondary,Asian,Other,Chinese,2,Student,NA,2,33,8,35,0.85,5.6
+R_45Wz3mJe74jQqG9,FALSE,100,2025-01-25T05:30:34Z,2365,18,Male,Secondary,Asian,Other,cantonese,2,Student,NA,4,37,9,45,0.7,5.5
+R_8IMicvC5YegK0p7,FALSE,100,2025-02-02T04:20:47Z,1115,19,Male,Further,White,English,NA,NA,Unemployed,NA,2,31,10,39,0.95,7
+R_2isP1y3mnFkc7L4,FALSE,100,2025-02-03T11:06:22Z,1714,18,Female,Further,White,English,NA,NA,Student,NA,2,30,9,51,0.85,8.8
+R_8nvWmvRpXziCkTv,FALSE,100,2025-02-03T14:54:56Z,134519,19,Female,Further,White,English,NA,NA,23,NA,3,23,8,38,0.75,6.8
+R_8GRtlFT4e50EBP3,FALSE,100,2025-02-06T16:52:36Z,1301,18,Female,Further,White,English,NA,NA,Student,NA,3,36,8,39,0.9,7.25
+R_9f7XcqTl4xvMton,FALSE,100,2025-02-09T17:58:43Z,3699,54,Male,Higher,Asian,Other,Cantonese,2,Full.time,NA,1,34,11,39,0.6,5
+R_2QIThK0nPs8VJCN,FALSE,100,2025-01-23T08:11:46Z,3275,53,Female,Further,White,English,NA,NA,Part.time,NA,1,32,8,53,0.85,8
+R_2bnmS7xgAFk19Xb,FALSE,100,2025-01-25T09:54:45Z,2206,18,Female,Further,Black,English,NA,NA,Part.time,NA,4,30,9,52,0.8,4.8
+R_8ePfgMm2QRgXHup,FALSE,100,2025-01-25T10:02:18Z,2378,21,Female,Secondary,Asian,Other,Chinese,2,Student,NA,4,26,8,48,0.75,6.4
+R_2kGytO48jpLhWHT,FALSE,100,2025-01-25T12:49:15Z,1979,21,Female,Higher,White,English,NA,NA,23,NA,3,31,8,44,0.75,7.75
+R_8f0OF8YczFur4AC,FALSE,100,2025-01-25T15:22:49Z,2303,18,Female,Further,Asian,English,NA,NA,Student,NA,3,37,10,59,0.95,7.8
+R_2hQriTpgQiT4LeR,FALSE,100,2025-01-25T11:49:09Z,67346,20,Male,Further,White,English,NA,NA,23,NA,2,38,11,56,0.85,7
+R_27fVM6D8v1amgqf,FALSE,100,2025-01-27T03:03:37Z,4042,56,Male,Secondary,White,English,NA,NA,Full.time,Operations Director,1,40,8,37,0.8,3.8
+R_8JyEmi0Gvr28I8y,FALSE,100,2025-01-27T05:07:20Z,1854,49,Female,Higher,White,English,NA,NA,Full.time,NA,1,34,11,61,0.85,9
+R_2RwRWWDJdv7OGlo,FALSE,100,2025-01-27T07:45:40Z,4915,60,Female,Further,White,English,NA,NA,Part.time,NA,3,39,11,51,0.95,7.25
+R_29uwHEHDRMPvw8F,FALSE,100,2025-01-27T13:19:01Z,4189,63,Male,Further,White,English,NA,NA,Full.time,Company Director,3,37,11,50,0.9,6
+R_2kZ4VBO4Xh7KCXf,FALSE,100,2025-01-28T02:13:11Z,9699,34,Female,Further,White,English,NA,NA,Full.time,Manager,2,36,8,47,0.95,8.2
+R_2D09lRvmso5nElD,FALSE,100,2025-01-29T08:44:36Z,3239,44,Female,Higher,White,English,NA,NA,Full.time,Head of HR,1,26,12,49,0.9,9
+R_8QEC3Eb2bnzZRvj,FALSE,100,2025-02-05T09:31:35Z,624,22,Male,Further,White,English,NA,NA,Student,NA,3,35,6,45,0.65,4.6
+R_3ddaSV72Z5vvu8r,FALSE,100,2025-02-06T10:51:39Z,2164,52,Female,Higher,White,English,NA,NA,Part.time,NA,2,38,9,63,0.95,9
+R_2LjlfiEhge49GFM,FALSE,100,2025-02-06T11:22:36Z,1237,49,Male,Further,White,English,NA,NA,Full.time,Country Director,1,33,5,48,0.8,6.4
+R_2J30RlxhtwaMMmT,FALSE,100,2025-02-11T04:26:41Z,2052,21,Female,Further,White,English,NA,NA,Student,NA,2,37,8,50,0.95,7.2
