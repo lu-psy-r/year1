@@ -271,7 +271,7 @@ The downloadable .zip folder includes the data files:
 
 - `study-one-general-participants.csv`
 - `study-two-general-participants.csv`
-- `2023-24_PSYC122-participants.csv`
+- `2024-25_PSYC122-participants.csv`
 
 and the R Markdown `.Rmd`:
 
@@ -296,10 +296,10 @@ download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/mai
 download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/study-two-general-participants.csv?raw=true", destfile = "study-two-general-participants.csv")
 ```
 
-3. Get the 2023-24 PSYC122 `2023-24_PSYC122-participants.csv` data
+3. Get the 2023-24 PSYC122 `2024-25_PSYC122-participants.csv` data
 
 ```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/2023-24_PSYC122-participants.csv?raw=true", destfile = "2023-24_PSYC122-participants.csv")
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/2024-25_PSYC122-participants.csv?raw=true", destfile = "2024-25_PSYC122-participants.csv")
 ```
 
 4. Get the `2023-24-PSYC122-w19-how-to.Rmd` how-to guide
@@ -487,7 +487,7 @@ Use the `library()` function to make these libraries available to you.
 The data files are called:
 
 - `study-two-general-participants.csv`
-- `2023-24_PSYC122-participants.csv`
+- `2024-25_PSYC122-participants.csv`
 
 Use the `read_csv()` function to read the data files into R:
 
@@ -495,7 +495,7 @@ Use the `read_csv()` function to read the data files into R:
 <!-- ## Code -->
 <!-- ```{r} -->
 <!-- study.two.gen <- read_csv("study-two-general-participants.csv")   -->
-<!-- study.122 <- read_csv("2023-24_PSYC122-participants.csv")   -->
+<!-- study.122 <- read_csv("2024-25_PSYC122-participants.csv")   -->
 <!-- ``` -->
 <!-- ::: -->
 
