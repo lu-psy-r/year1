@@ -334,16 +334,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#sec-wk19-lab-activities-1-introduction" id="toc-sec-wk19-lab-activities-1-introduction" class="nav-link" data-scroll-target="#sec-wk19-lab-activities-1-introduction">Introduction</a></li>
   <li><a href="#sec-wk19-prelab-activities-ready" id="toc-sec-wk19-prelab-activities-ready" class="nav-link" data-scroll-target="#sec-wk19-prelab-activities-ready">Get ready</a></li>
-  <li><a href="#sec-wk19-lab-activities-1" id="toc-sec-wk19-lab-activities-1" class="nav-link" data-scroll-target="#sec-wk19-lab-activities-1">Lab activity 1: Work with the <code>How-to</code> guide</a></li>
-  <li><a href="#sec-wk19-lab-activities-2" id="toc-sec-wk19-lab-activities-2" class="nav-link" data-scroll-target="#sec-wk19-lab-activities-2">Lab activity 2</a></li>
-  <li><a href="#ok-now-lets-do-it" id="toc-ok-now-lets-do-it" class="nav-link" data-scroll-target="#ok-now-lets-do-it">OK: now let’s do it!</a></li>
-  <li><a href="#task-13-examine-the-predictors-of-mean-accuracy-mean.acc-now-for-the-study.122-data" id="toc-task-13-examine-the-predictors-of-mean-accuracy-mean.acc-now-for-the-study.122-data" class="nav-link" data-scroll-target="#task-13-examine-the-predictors-of-mean-accuracy-mean.acc-now-for-the-study.122-data">Task 13 – Examine the predictors of mean accuracy (<code>mean.acc</code>), now, for the <code>study.122</code> data</a></li>
   </ul></li>
-  <li><a href="#sec-wk19-lab-activities-answers" id="toc-sec-wk19-lab-activities-answers" class="nav-link" data-scroll-target="#sec-wk19-lab-activities-answers">Answers</a>
-  <ul class="collapse">
-  <li><a href="#sec-wk19-lab-activities-answers-information" id="toc-sec-wk19-lab-activities-answers-information" class="nav-link" data-scroll-target="#sec-wk19-lab-activities-answers-information">Answers</a></li>
-  </ul></li>
-  <li><a href="#sec-wk19-lab-Q-and-A" id="toc-sec-wk19-lab-Q-and-A" class="nav-link" data-scroll-target="#sec-wk19-lab-Q-and-A">Online Q&amp;A</a></li>
   </ul>
 </nav>
     </div>
@@ -713,10 +704,10 @@ Important
 <p>Critically evaluating results across a series of studies, or replication attempts, is part of the process of accumulating evidence to build insight in psychological science, given measurement under uncertainty and limits in samples.</p>
 </section>
 <section id="sec-wk19-prelab-activities-ready" class="level3">
-<h3 class="anchored" data-anchor-id="sec-wk19-prelab-activities-ready">Get ready</h3>
+<h3 class="anchored">Get ready</h3>
 <section id="download-the-data" class="level4">
-<h4 class="anchored" data-anchor-id="download-the-data">Download the data</h4>
-<p>Click on the link: <a href="data/week19/122-week19_for_students.zip">122-week19_for_students.zip</a> to download the data files folder. Then upload the contents to the new folder you created in RStudio Server.</p>
+<h4 class="anchored">Download the data</h4>
+<p>Click on the link: <a href="data/week19/122_week19_for_students.zip">122_week19_for_students.zip</a> to download the data files folder. Then upload the contents to the new folder you created in RStudio Server.</p>
 <p>The downloadable .zip folder includes the data files:</p>
 <ul>
 <li><code>study-one-general-participants.csv</code></li>
@@ -729,7 +720,7 @@ Important
 </ul>
 <p>If you can’t upload these files to the server – this affects some students – you can use some code to get R to do it for you: uncover the code box below to reveal the code to do this.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -738,7 +729,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>You can use the code below to directly download the file you need in this lab activity to the server.</li>
@@ -762,16 +753,24 @@ Code
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/2024-25_PSYC122-participants.csv?raw=true"</span>, <span class="at">destfile =</span> <span class="st">"2024-25_PSYC122-participants.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<ol start="4" type="1">
-<li>Get the <code>PSYC122-w19-how-to.Rmd</code> how-to guide</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">download.file</span>(<span class="st">"https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/PSYC122-w19-how-to.Rmd?raw=true"</span>, <span class="at">destfile =</span> <span class="st">"PSYC122-w19-how-to.Rmd"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you need to get the <code>how-to</code> guide, you can do that by clicking on the link in the box below. <strong>Warning</strong>: if you click on the link, the how-to guide might be shown to you (in some browsers) as a new webpage tab.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Link to the how-to guide
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Get the <code>PSYC122-w19-how-to.Rmd</code> how-to guide</p>
+<p>Click on the link: <a href="../PSYC122/data/week19/PSYC122-w19-how-to.html">PSYC122-w19-how-to.Rmd</a> to download the <code>PSYC122-w19-how-to.Rmd</code> guide.</p>
 </div>
 </div>
 </div>
-</div>
-</section>
 <section id="sec-wk19-data-summary" class="level4">
 <h4 class="anchored" data-anchor-id="sec-wk19-data-summary">Check: What is in the data files?</h4>
 <p>Each of the data files we will work with has a similar structure, as you can see in this extract.</p>
@@ -885,7 +884,6 @@ Tip
 <p>Note that the data we collected comprise responses from 2024-25 PSYC122 students — <strong>you</strong> — as well as from samples of participants recruited by Psychology third year undergraduate researchers.</p>
 </div>
 </div>
-</section>
 </section>
 <section id="sec-wk19-lab-activities-1" class="level3">
 <h3 class="anchored" data-anchor-id="sec-wk19-lab-activities-1">Lab activity 1: Work with the <code>How-to</code> guide</h3>
@@ -1465,7 +1463,10 @@ Revise: practice to strengthen skills
 <!-- - A.12.  -->
 <!-- > The correlations are positive and significant, indicating that higher `mean.self` (evaluations) are associated with higher `mean.acc` (understanding), suggesting that people *can* judge their accuracy of understanding. -->
 <blockquote class="blockquote">
-<p><strong>Q.13.</strong> Can you compare the estimates, given the two data-sets, to evaluate if the result in <code>study.two.gen</code> is <em>replicated</em> in <code>study.122</code>? <strong>hint: Q.13.</strong> We can judge if the result in a study is replicated in another study by examining if – here – the correlation coefficient is significant in both studies <em>and</em> if the coefficient has the same size and sign in both studies.</p>
+<p><strong>Q.13.</strong> Can you compare the estimates, given the two data-sets, to evaluate if the result in <code>study.two.gen</code> is <em>replicated</em> in <code>study.122</code>?</p>
+</blockquote>
+<blockquote class="blockquote">
+<p><strong>hint: Q.13.</strong> We can judge if the result in a study is replicated in another study by examining if – here – the correlation coefficient is significant in both studies <em>and</em> if the coefficient has the same size and sign in both studies.</p>
 </blockquote>
 <!-- - A.13. If you compare the correlation estimates from both `study.two.gen` and `study.122` you can see: -->
 <!-- - first, the correlation is significant in both `study.two.gen` and `study.122`; -->
@@ -1759,7 +1760,6 @@ Tip
 </ul>
 </div>
 </div>
-</section>
 </section>
 </section>
 <section id="sec-wk19-lab-activities-answers" class="level2">
@@ -2067,6 +2067,12 @@ Tip
 <!-- ``` -->
 
 
+</section>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
