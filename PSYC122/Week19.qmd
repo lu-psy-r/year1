@@ -301,6 +301,7 @@ download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/mai
 ```{r eval=FALSE}
 download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/2024-25_PSYC122-participants.csv?raw=true", destfile = "2024-25_PSYC122-participants.csv")
 ```
+::: 
 
 If you need to get the `how-to` guide, you can do that by clicking on the link in the box below. **Warning**: if you click on the link, the how-to guide might be shown to you (in some browsers) as a new webpage tab.
 
