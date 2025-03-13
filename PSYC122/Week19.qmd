@@ -461,27 +461,27 @@ To begin, we set up our environment in R.
 
 ##### Task 1 -- Run code to empty the R environment
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- #| eval: false -->
-<!-- rm(list=ls()) -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+#| eval: false
+rm(list=ls())
+```
+:::
 
 ##### Task 2 -- Run code to load relevant libraries
 
 Notice that in Week 19, we need to work with the libraries `ggeffects`, `patchwork` and `tidyverse`.
 Use the `library()` function to make these libraries available to you.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- library("ggeffects") -->
-<!-- library("patchwork") -->
-<!-- library("tidyverse") -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+library("ggeffects")
+library("patchwork")
+library("tidyverse")
+```
+:::
 
 #### Step 2: Load the data
 
@@ -494,13 +494,13 @@ The data files are called:
 
 Use the `read_csv()` function to read the data files into R:
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- study.two.gen <- read_csv("study-two-general-participants.csv")   -->
-<!-- study.122 <- read_csv("2024-25_PSYC122-participants.csv")   -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+study.two.gen <- read_csv("study-two-general-participants.csv")
+study.122 <- read_csv("2024-25_PSYC122-participants.csv")
+```
+:::
 
 When you read the data files in, give the data objects you create distinct name 
 e.g. `study.two.gen` versus `study.122`.
@@ -509,13 +509,13 @@ e.g. `study.two.gen` versus `study.122`.
 
 Use the `summary()` or `head()` functions to take a look at both data-sets.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- summary(study.two.gen) -->
-<!-- summary(study.122) -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+summary(study.two.gen)
+summary(study.122)
+```
+:::
 
 #### Step 3: Compare the data from the different studies
 
@@ -538,33 +538,33 @@ Use the `summary()` or `head()` functions to take a look at both data-sets.
 
 >**Q.2.** Draw histograms of both mean.acc and mean.self for both studies.
 
-<!-- - A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing data-set and variable names to get the right plots: -->
+- A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing data-set and variable names to get the right plots:
 
-<!-- ```{r} -->
-<!-- ggplot(data = study.two.gen, aes(x = mean.acc)) +  -->
-<!--   geom_histogram(binwidth = .1) + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "Mean accuracy (mean.acc)", y = "frequency count") + -->
-<!--   xlim(0, 1) -->
+```{r}
+ggplot(data = study.two.gen, aes(x = mean.acc)) +
+  geom_histogram(binwidth = .1) +
+  theme_bw() +
+  labs(x = "Mean accuracy (mean.acc)", y = "frequency count") +
+  xlim(0, 1)
 
-<!-- ggplot(data = study.two.gen, aes(x = SHIPLEY)) +  -->
-<!--   geom_histogram(binwidth = 2) + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "Vocabulary (SHIPLEY)", y = "frequency count") + -->
-<!--   xlim(0, 40) -->
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) +
+  geom_histogram(binwidth = 2) +
+  theme_bw() +
+  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count") +
+  xlim(0, 40)
 
-<!-- ggplot(data = study.122, aes(x = mean.acc)) +  -->
-<!--   geom_histogram(binwidth = .1) + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "Mean accuracy (mean.acc)", y = "frequency count") + -->
-<!--   xlim(0, 1) -->
+ggplot(data = study.122, aes(x = mean.acc)) +
+  geom_histogram(binwidth = .1) +
+  theme_bw() +
+  labs(x = "Mean accuracy (mean.acc)", y = "frequency count") +
+  xlim(0, 1)
 
-<!-- ggplot(data = study.122, aes(x = SHIPLEY)) +  -->
-<!--   geom_histogram(binwidth = 2) + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "Vocabulary (SHIPLEY)", y = "frequency count") + -->
-<!--   xlim(0, 40) -->
-<!-- ``` -->
+ggplot(data = study.122, aes(x = SHIPLEY)) +
+  geom_histogram(binwidth = 2) +
+  theme_bw() +
+  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count") +
+  xlim(0, 40)
+```
 
 ::: callout-tip
 ## Introduce: make some new moves
@@ -580,31 +580,31 @@ We need to make two changes to the coding approach you have been using until now
 
 First, create plot objects, assign the plot objects distinct names.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- plot.two <- ggplot(data = study.two.gen, aes(x = mean.acc)) +  -->
-<!--   geom_histogram(binwidth = .1) + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "Mean accuracy (mean.acc)", y = "frequency count", title = "Study Two") + -->
-<!--   xlim(0, 1) -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+plot.two <- ggplot(data = study.two.gen, aes(x = mean.acc)) +
+  geom_histogram(binwidth = .1) +
+  theme_bw() +
+  labs(x = "Mean accuracy (mean.acc)", y = "frequency count", title = "Study Two") +
+  xlim(0, 1)
 
-<!-- plot.122 <- ggplot(data = study.122, aes(x = mean.acc)) +  -->
-<!--   geom_histogram(binwidth = .1) + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "Mean accuracy (mean.acc)", y = "frequency count", title = "Study PSYC122") + -->
-<!--   xlim(0, 1) -->
-<!-- ``` -->
-<!-- ::: -->
+plot.122 <- ggplot(data = study.122, aes(x = mean.acc)) +
+  geom_histogram(binwidth = .1) +
+  theme_bw() +
+  labs(x = "Mean accuracy (mean.acc)", y = "frequency count", title = "Study PSYC122") +
+  xlim(0, 1)
+```
+:::
 
 Second, name the plots to show them side-by-side.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- plot.two + plot.122 -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+plot.two + plot.122
+```
+:::
 
 :::{.callout-tip collapse="true"}
 ## Hint
@@ -637,14 +637,14 @@ Finally, having created the two plots, produce them for viewing:
 Notice: until you get to step 10, **nothing will appear**. This will be **surprising** but it is perfectly normal when we increase the *level of complexity* of the plots we build.
 :::
 
-<!-- - You first build the plots.  -->
-<!-- - You are creating plot objects and you give these objects names. -->
-<!-- - The objects will appear in the `Environment` with the names you give them. -->
-<!-- - You then *produce* the plots for viewing, by using their names. -->
+- You first build the plots.
+- You are creating plot objects and you give these objects names.
+- The objects will appear in the `Environment` with the names you give them.
+- You then *produce* the plots for viewing, by using their names.
 
-<!-- Until you complete the last step, you will not see any changes until you use the object names to produce them for viewing. -->
+Until you complete the last step, you will not see any changes until you use the object names to produce them for viewing.
 
-<!-- This is how you construct complex arrays of plots.  -->
+This is how you construct complex arrays of plots.
 
 ##### Task 7 -- Try this out for yourself, focusing now on the distribution of `SHIPLEY` scores in the two studies
 
@@ -652,31 +652,31 @@ First, create plot objects but do not show them.
 
 - Give each plot a name. You will use the names next.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- plot.two <- ggplot(data = study.two.gen, aes(x = SHIPLEY)) +  -->
-<!--   geom_histogram(binwidth = 2) + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "Vocabulary (SHIPLEY)", y = "frequency count", title = "Study Two") + -->
-<!--   xlim(0, 40) -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+plot.two <- ggplot(data = study.two.gen, aes(x = SHIPLEY)) +
+  geom_histogram(binwidth = 2) +
+  theme_bw() +
+  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count", title = "Study Two") +
+  xlim(0, 40)
 
-<!-- plot.122 <- ggplot(data = study.122, aes(x = SHIPLEY)) +  -->
-<!--   geom_histogram(binwidth = 2) + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "Vocabulary (SHIPLEY)", y = "frequency count", title = "PSYC122") + -->
-<!--   xlim(0, 40) -->
-<!-- ``` -->
-<!-- ::: -->
+plot.122 <- ggplot(data = study.122, aes(x = SHIPLEY)) +
+  geom_histogram(binwidth = 2) +
+  theme_bw() +
+  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count", title = "PSYC122") +
+  xlim(0, 40)
+```
+:::
 
 Second produce the plots for viewing, side-by-side, by *naming* them: `plot.1.name + plot.2.name`.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- plot.two + plot.122 -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+plot.two + plot.122
+```
+:::
 
 >**Q.3.** Now use the plots to do some data analysis work: how do the `SHIPLEY` distributions compare, when you compare the `SHIPLEY` of `study.two.gen` versus `SHIPLEY` of `study.122`?
 
@@ -701,24 +701,24 @@ Second produce the plots for viewing, side-by-side, by *naming* them: `plot.1.na
 
 > Hint: Task 8 -- The plotting steps are explained in some detail in `PSYC122-w17-how-to.Rmd` and you can see example code in `PSYC122-w19-how-to.Rmd`
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r}   -->
-<!-- ggplot(data = study.two.gen, aes(x = mean.self, y = mean.acc)) + -->
-<!--   geom_point(alpha = 0.75, size = 3, colour = "darkgrey") + -->
-<!--   geom_smooth(method = "lm", size = 1.5, colour = "green") + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "mean self-rated accuracy", y = "mean accuracy") + -->
-<!--   xlim(0, 10) + ylim(0, 1) -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+ggplot(data = study.two.gen, aes(x = mean.self, y = mean.acc)) +
+  geom_point(alpha = 0.75, size = 3, colour = "darkgrey") +
+  geom_smooth(method = "lm", size = 1.5, colour = "green") +
+  theme_bw() +
+  labs(x = "mean self-rated accuracy", y = "mean accuracy") +
+  xlim(0, 10) + ylim(0, 1)
 
-<!-- ggplot(data = study.122, aes(x = mean.self, y = mean.acc)) + -->
-<!--   geom_point(alpha = 0.75, size = 3, colour = "darkgrey") + -->
-<!--   geom_smooth(method = "lm", size = 1.5, colour = "green") + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "mean self-rated accuracy", y = "mean accuracy") + -->
-<!--   xlim(0, 10) + ylim(0, 1) -->
-<!-- ``` -->
-<!-- ::: -->
+ggplot(data = study.122, aes(x = mean.self, y = mean.acc)) +
+  geom_point(alpha = 0.75, size = 3, colour = "darkgrey") +
+  geom_smooth(method = "lm", size = 1.5, colour = "green") +
+  theme_bw() +
+  labs(x = "mean self-rated accuracy", y = "mean accuracy") +
+  xlim(0, 10) + ylim(0, 1)
+```
+:::
 
 ##### Task 9 --  Create a grid of plots to make the comparison easier to do
 
@@ -733,33 +733,33 @@ Though this time we are producing a grid of **scatterplots**.
 
 First, create plot objects, give them names, but do not show them.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- plot.two <- ggplot(data = study.two.gen, aes(x = mean.self, y = mean.acc)) + -->
-<!--   geom_point(alpha = 0.75, size = 3, colour = "darkgrey") + -->
-<!--   geom_smooth(method = "lm", size = 1.5, colour = "green") + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "mean self-rated accuracy", y = "mean accuracy") + -->
-<!--   xlim(0, 10) + ylim(0, 1) -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+plot.two <- ggplot(data = study.two.gen, aes(x = mean.self, y = mean.acc)) +
+  geom_point(alpha = 0.75, size = 3, colour = "darkgrey") +
+  geom_smooth(method = "lm", size = 1.5, colour = "green") +
+  theme_bw() +
+  labs(x = "mean self-rated accuracy", y = "mean accuracy") +
+  xlim(0, 10) + ylim(0, 1)
 
-<!-- plot.122 <- ggplot(data = study.122, aes(x = mean.self, y = mean.acc)) + -->
-<!--   geom_point(alpha = 0.75, size = 3, colour = "darkgrey") + -->
-<!--   geom_smooth(method = "lm", size = 1.5, colour = "green") + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "mean self-rated accuracy", y = "mean accuracy") + -->
-<!--   xlim(0, 10) + ylim(0, 1) -->
-<!-- ``` -->
-<!-- ::: -->
+plot.122 <- ggplot(data = study.122, aes(x = mean.self, y = mean.acc)) +
+  geom_point(alpha = 0.75, size = 3, colour = "darkgrey") +
+  geom_smooth(method = "lm", size = 1.5, colour = "green") +
+  theme_bw() +
+  labs(x = "mean self-rated accuracy", y = "mean accuracy") +
+  xlim(0, 10) + ylim(0, 1)
+```
+:::
 
 Second name the plots to show them side-by-side in the plot window.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- plot.two + plot.122 -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+plot.two + plot.122
+```
+:::
 
 Now use the plots to make comparison judgments.
 
@@ -786,12 +786,12 @@ Do the correlation for both data-sets.
 
 First calculate the correlation between `mean.acc` and `mean.self` in `study.two`.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- cor.test(study.two.gen$mean.acc, study.two.gen$mean.self, method = "pearson",  alternative = "two.sided") -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+cor.test(study.two.gen$mean.acc, study.two.gen$mean.self, method = "pearson",  alternative = "two.sided")
+```
+:::
 
 Then answer the following questions.
 
@@ -809,12 +809,12 @@ Then answer the following questions.
 
 Second, look at the correlation between `mean.acc` and `mean.self` in `study.122`.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- cor.test(study.122$mean.acc, study.122$mean.self, method = "pearson",  alternative = "two.sided") -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+cor.test(study.122$mean.acc, study.122$mean.self, method = "pearson",  alternative = "two.sided")
+```
+:::
 
 Then answer the following questions.
 
@@ -893,13 +893,13 @@ and including as the predictors the variables:
 - vocabulary (`SHIPLEY`); 
 - reading strategy (`FACTOR3`).
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- model <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.two.gen) -->
-<!-- summary(model) -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+model <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.two.gen)
+summary(model)
+```
+:::
 
 Using the model estimates, we can answer the research question:
 
@@ -943,13 +943,13 @@ and including as the predictors the variables:
 - vocabulary (`SHIPLEY`); 
 - reading strategy (`FACTOR3`).
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- model <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.122) -->
-<!-- summary(model) -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+model <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.122)
+summary(model)
+```
+:::
 
 Using the model estimates, we can answer the research question:
 
@@ -1004,36 +1004,36 @@ At this point, we can evaluate the evidence from the PSYC122 sample -- based on 
 
 First: fit the models -- using different names for the different models.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- model.two <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.two.gen) -->
-<!-- summary(model.two) -->
-<!-- model.122 <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.122) -->
-<!-- summary(model.122) -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+model.two <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.two.gen)
+summary(model.two)
+model.122 <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.122)
+summary(model.122)
+```
+:::
 
 Second, create prediction plots for the `HLVA` effect for each model.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- dat.two <- ggpredict(model.two, "HLVA") -->
-<!-- plot.two <- plot(dat.two) + labs(title = "Study Two") -->
-<!-- dat.122 <- ggpredict(model.122, "HLVA") -->
-<!-- plot.122 <- plot(dat.122) + labs(title = "Study PSYC122") -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+dat.two <- ggpredict(model.two, "HLVA")
+plot.two <- plot(dat.two) + labs(title = "Study Two")
+dat.122 <- ggpredict(model.122, "HLVA")
+plot.122 <- plot(dat.122) + labs(title = "Study PSYC122")
+```
+:::
 
 Third, show the plots side-by-side:
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- plot.two + plot.122 -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+plot.two + plot.122
+```
+:::
 
 Then use your *visualization* of the model results to describe the outstanding difference between the results of the two studies -- focusing on the effect of `HLVA` in both models.
 
@@ -1067,24 +1067,24 @@ If you do that, you will see links to the website:
 
 First create the plots.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- dat.two <- ggpredict(model.two, "HLVA") -->
-<!-- plot.two <- plot(dat.two, colors = "bw", add.data = TRUE) + labs(title = "Study Two") -->
-<!-- dat.122 <- ggpredict(model.122, "HLVA") -->
-<!-- plot.122 <- plot(dat.122, colors = "bw", add.data = TRUE) + labs(title = "Study PSYC122") -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+dat.two <- ggpredict(model.two, "HLVA")
+plot.two <- plot(dat.two, colors = "bw", add.data = TRUE) + labs(title = "Study Two")
+dat.122 <- ggpredict(model.122, "HLVA")
+plot.122 <- plot(dat.122, colors = "bw", add.data = TRUE) + labs(title = "Study PSYC122")
+```
+:::
 
 Then show the plots in a grid, to allow comparison of the effect of `HLVA` between studies in a *professional* presentation.
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- plot.two + plot.122 -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+plot.two + plot.122
+```
+:::
 
 ::: calloutbox-tip
 It is often useful to compare model estimates -- here, the slopes -- with the raw data observations.
