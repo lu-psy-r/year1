@@ -1,11 +1,13 @@
 ---
 title: 1. Introduction to PSYC121
-subtitle: Written by John Towse & Tom Beesley (2024)
+subtitle: Written by Tom Beesley (2025)
 order: 2
 ---
 
 
 # 1. Lectures for week 1
+
+PLEASE NOTE: Prof. John Towse is on sabbatical (research leave) this year and so will not be answering emails on his content. All questions should be posted on the discussion forum and will be answered by Dr Tom Beesley.
 
 Watch the introduction: Lecture Part 1
 
