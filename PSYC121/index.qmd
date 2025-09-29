@@ -38,11 +38,8 @@ It is fairly inevitable that you will get stuck on the lab materials in this mod
 If you have something that needs to be private, then please feel free to email the academic staff at the email addresses below:
 
 |   | Email Address |
-|----|----|
+|------------------------------------|------------------------------------|
 | Tom Beesley (Coordinator) | [t.beesley\@lancaster.ac.uk](mailto:t.beesley@lancaster.ac.uk) |
-| John Towse | [j.towse\@lancaster.ac.uk](mailto:j.towse@lancaster.ac.uk) |
 |  |  |
 
 ![](images/TB.jpeg){fig-align="center" width="2in"}
-
-![](images/JNT-01.jpeg){fig-align="center" width="2in"}

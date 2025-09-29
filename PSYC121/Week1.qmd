@@ -4,7 +4,6 @@ subtitle: Written by Tom Beesley (2025)
 order: 2
 ---
 
-
 # 1. Lectures for week 1
 
 PLEASE NOTE: Prof. John Towse is on sabbatical (research leave) this year and so will not be answering emails on his content. All questions should be posted on the discussion forum and will be answered by Dr Tom Beesley.
@@ -13,26 +12,26 @@ Watch the introduction: Lecture Part 1
 
 ```{=html}
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=86d9de63-1bd8-45a4-b289-b36700b8e9f9&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="week 1(2024) part A" ></iframe>
-
 ```
+
 Watch Lecture Part 2
 
 ```{=html}
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=9cc4d98f-cbdc-463d-bdb3-b36700b917e4&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 1 (2024) part 2" ></iframe>
-
-
 ```
+
 Watch Lecture Part 3
 
 ```{=html}
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=2901e2ee-6374-4d89-9e8d-b36700b9654f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 1 (2024) part 3" ></iframe>
 ```
+
 Watch Lecture Part 4
 
 ```{=html}
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=15290882-5748-439d-aa11-b36700b99269&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 1 (2024) part D" ></iframe>
-
 ```
+
 Download the lecture slides [here](data/Week_1/week_1_lecture_student_slides.pptx)
 
 # 2. Analysis labs and 'pre-lab' activity
@@ -51,7 +50,7 @@ Want additional support? Keep in mind that the Department has endorsed and will 
 
 ![](images/Wk1/howell.png){fig-align="center" width="2in"}
 
-The book covers principles of statistics as well as some tutorials on using R. You can access a library copy [from the library pages](https://onesearch.lancaster-university.uk/permalink/f/cssk39/44LAN_ALMA_DS51180136050001221){target="_blank"}
+**You do NOT need to purchase a copy of this book**, as it is available online [from the library pages](https://onesearch.lancaster-university.uk/permalink/f/cssk39/44LAN_ALMA_DS51180136050001221){target="_blank"}. The book covers principles of statistics as well as some tutorials on using R.
 
 # 3. Lab activities for this week
 
@@ -97,7 +96,7 @@ Therefore, we need to learn both about the concepts of statistical analysis on t
 
 ### Getting started with RStudio {#getting_started}
 
-For Lancaster University Psychology Students in 2024, we will be learning about R Studio through a simple but powerful web server architecture. That is, through the power of the internet, you can access and use R Studio by logging into a free account that we have provided and we will maintain for your use.
+We will be learning about R Studio through a simple but powerful web server architecture. That is, through the power of the internet, you can access and use R Studio by logging into a free account that we have provided and we will maintain for your use.
 
 > Here's a little secret: There are several different ways to access RStudio. For example, you can download a copy of the software onto your computer, or use a Virtual Machine set up to run a copy. There's nothing to stop you having your local copy, but please note - we can't support your own version through lab classes. We're using the web server to make sure everyone has the same, controlled experience.
 
@@ -181,9 +180,15 @@ median(week_1_lecture_data)
 
 This also should be the answer from the lecture (7)
 
-R doesn't have a single corresponding command for the *mode*, but we can use the block of code in the script for this that starts and ends with the "getmode" text (there are 6 lines of text)
+R doesn't have a built in function for the *mode* (in fact be careful, `mode()` does something very different to the mode command that we want). So we will use a **library()** command to bring in a new set of functions, one of which is a handy mode function called `mfv()`. Try highlighting the text "mvf" and press F1 to view the help on this function. Alternatively you can type `?mfv` in the console. and press return.
 
-This is just a bit of clever jiggery-pokery that gets the mode. What does R say the mode is?
+```{r eval=FALSE}
+library(modeest)
+mfv()
+
+```
+
+What does R say the mode is?
 
 #### Your challenge
 
@@ -203,21 +208,19 @@ b)  End your session on the RStudio server, this logs you out of the server and 
 
 ### Extra content for outside the lab class
 
-a)  In the Howell text book on statistics, there's some R code on descriptive statistics. It is included in the script for you to look at and play with.
+In your own time and think about the following:
 
-b)  in your own time and think about the following:
-
-In R, "\<-" is the assignment operator as in the command we used:
+In R, the leftward pointing arrow, "\<-", is called the assignment operator. For example we used it in the command here:
 
 ```{r eval=FALSE}
 PSYC121_week_1_data <- c(7,8,8,7,3,1,6,9,3,8)
 ```
 
-We create the variable label on the left (`Analysis_week1_data`) and we give it those numbers on the right. The name`Analysis_week1_data` is largely arbitrary: try use a variable of your own naming (your own name?) instead - and then use that alternative name for the other commands.
+It's important to stop and think about what this does. When we use "\<-", we create the variable label on the left (`Analysis_week1_data`) and we give it those numbers on the right. The name`Analysis_week1_data` is largely arbitrary: try use a variable of your own naming (your own name?) instead - and then use that alternative name for the other commands. QUICK TIP: there is a keyboard shortcut, alt+hyphen, which will give you the assignment arrow in R. Get used to this as it will save you lots of time in the long run.
 
 ------------------------------------------------------------------------
 
-Throughout this year, we'll use the convention of the "underscore" to separate words in labels (it_makes_them_easier_to_read than ifyoudidn'thaveanyspaces)
+Another tip: Throughout this year, we'll use the convention of the "underscore" to separate words in labels (it_makes_them_easier_to_read than ifyoudidn'thaveanyspaces)
 
 ------------------------------------------------------------------------
 
