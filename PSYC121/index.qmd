@@ -1,6 +1,6 @@
 ---
 title: Statistics for Psychologists I
-subtitle: "Course coordinators: Tom Beesley, John Towse"
+subtitle: "Course coordinator: Tom Beesley"
 email-obfuscation: javascript
 order: 1
 
@@ -18,7 +18,7 @@ In this module we will provide you with an introduction to data handling, data p
 
 In Week 1 we will introduce you to the software that we use to do all this useful work in statistics: "R" and "RStudio". This is a coding language, and you will be taught the basics of how to write code in order to do all of the above key steps in data analysis. This tuition will continue in Term 2, and in your statistics modules in Year 2. Coding is challenging, but we know from experience that those students who attend classes, who work through the exercises carefully, and who seek help when they need it, do very well on these modules.
 
-Most of all, it's important that you recognise that data analysis (statistics) is a critical aspect of the study of psychology. When we want to understand behaviour, we take measurements of that behaviour, which the majority of the time will result in quantitative (numerical) data. In order to understand the behaviour in a meaningful way, we need to conduct all of the above steps in our data analysis workflow. In summary, we cannot investigate psychological processes without the skills and toolbox of statistics and data analysis techniques.
+Most of all, it's important that you recognise that data analysis (statistics) is a critical aspect of the study of psychology. When we want to understand behaviour, we take measurements of that behaviour, which the majority of the time will result in quantitative (numerical) data. In order to understand the behaviour in a meaningful way, we need to conduct all of the above steps in our data analysis workflow (view data, conduct basic stats, draw graphs, etc). In summary, we cannot investigate psychological processes without the toolbox of statistics and data analysis techniques you will learn in PSYC121/122.
 
 # Working at your own pace and seeking help
 
@@ -37,11 +37,11 @@ It is fairly inevitable that you will get stuck on the lab materials in this mod
 
 If you have something that needs to be private, then please feel free to email the academic staff at the email addresses below:
 
-|                           | Email Address                                                  |
-|----------------|--------------------------------------------------------|
+|   | Email Address |
+|----|----|
 | Tom Beesley (Coordinator) | [t.beesley\@lancaster.ac.uk](mailto:t.beesley@lancaster.ac.uk) |
-| John Towse                | [j.towse\@lancaster.ac.uk](mailto:j.towse@lancaster.ac.uk)     |
-|                           |                                                                |
+| John Towse | [j.towse\@lancaster.ac.uk](mailto:j.towse@lancaster.ac.uk) |
+|  |  |
 
 ![](images/TB.jpeg){fig-align="center" width="2in"}
 

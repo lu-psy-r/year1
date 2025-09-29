@@ -12,7 +12,8 @@ PLEASE NOTE: Prof. John Towse is on sabbatical (research leave) this year and so
 Watch the introduction: Lecture Part 1
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=15a82586-1f14-467f-95c0-b1fc008c9139&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="week 1(2024) part A" ></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=2901e2ee-6374-4d89-9e8d-b36700b9654f&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="week 1(2024) part A" ></iframe>
+
 ```
 Watch Lecture Part 2
 
