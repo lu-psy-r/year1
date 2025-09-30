@@ -120,7 +120,7 @@ Click on that folder to open it
 
 Next, we've prepared some *instructions* for RStudio to use - this is called a "script". So we need to get this script into the server for you to explore and play with
 
-1.  Download the "zip" file by [clicking this link](data/Week_1/week_1.zip)
+1.  Download the "zip" file by [clicking this link](data/Week_1/week_1_2025.zip)
 
 2.  Find the location of the file on your computer and check it is saved as a ".zip" file
 
