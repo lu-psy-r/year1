@@ -1,14 +1,12 @@
 ---
 title: 2. Descriptive statistics in RStudio
-subtitle: Written by John Towse & Tom Beesley (2024)
+subtitle: Written by Tom Beesley (2025)
 order: 3
 ---
 
 # 1. Week 2 lecture
 
-Due to illness, we're releasing some previously recorded lecture videos that explain the week 2 content. Unfortuantely I'm full of cold right now - and making a video recording is just creating a muffled and hard to hear version of the ideas :-(
-
-Also, just bear in mind - these lectures in PSYC121 are designed to provide an explanation of the conceptual and computational work involved in some core analytic material. The workshops are designed (a) to put these ideas into practice (b) to work with R Studio in practicing with data, as a tool that can help to explore data. So the lectures and lab complement each other, and we will continue to takle this approach across the module.
+Below you will see the embedded lecture videos. As a reminder these lectures in PSYC121 are designed to provide an explanation of the conceptual and computational work involved in some core analytic material. The lab classes are designed (a) to put these ideas into practice (b) to work with R Studio in practicing with data, as a tool that helps you to explore data. So the lectures and lab complement each other, and we will continue to tackle this approach across the module.
 
 Watch Part 1
 
@@ -28,21 +26,21 @@ Watch Part 3
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=aa38ad8d-4bf9-4ecd-bd99-b09800a13e2e&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
 ```
 
-Download the lecture slides [here](data/Week_2/week 2 Analysis lecture 2024.pptx)
+Download the lecture slides [here](data/Week_2/week 2 Analysis lecture 2025.pptx)
 
 # 2. Pre-lab work
 
 Last week, among other things, we asked you to
 
 -   Roll some dice, carry out some (relatively) straightforward 'hand' calculations of central tendency
--   Connect to the RStudio server and 'create a folder'look around'
+-   Connect to the RStudio server, create a folder and get used to the different "panes"
 -   Within RStudio upload and run a script (a set of instructions), and explore annotations
 -   Adapt the script commands to perform calculations on the dice rolls within RStudio
 -   Complete a survey so that we can collect data for analysis teaching
 
 Your progress was great! We start with small steps and build up - but this is a nice start and as staff we're pleased how things went!
 
-Before the lab, make sure you have worked through the material in the week2 learnr tutorial. [The link is here](https://ma-rconnect.lancs.ac.uk/W2_prelab_24/){target="_blank"}
+Before the lab, make sure you have worked through the material in the week2 learnr tutorial. [The link is here](https://ma-rconnect.lancs.ac.uk/Psych121_week_2/){target="_blank"}
 
 # 3. Lab activity
 ## 3.1 R Studio tasks recap
@@ -59,7 +57,7 @@ In week 1, we had a tiny dataset (relatively speaking) that we entered into R th
 
 R can handle data files, and this week we're going to explore them. Within R, we can specify 'data frames' which can have, essentially, multiple columns of data, and we can link data files to data frames for processing
 
-To make things straightforward, each week we'll provide students with a "zip" file that contains the script to start from (which you can expand and annotate etc, and save on your file space). We'll also provide a data file or data files for you to use in the zip file. R can then *import* these files into the RStudio environment. So when you upload the zip file, you can import the data AND you can open up the script
+To make things straightforward, each week we'll provide students with a "zip" file that contains the script to start from (which you can expand and annotate etc, and save on your file space). We'll also provide a data file(s) for you to use in the zip file. R can then *import* these files into the RStudio environment. So when you upload the zip file, you can import the data AND you can open up the script
 
 ## 3.3 Main lab exercise - descriptive information in R Studio (Penelope the cow)
 
@@ -72,11 +70,17 @@ What we can see from this graph is that:
 
 Let's look at (a sample of) the PSYC121 student data collected on guessing the weight of Penelope, and ask whether it resembles the properties of this large dataset.
 
-### Step 1. Loading the data
+### Step 1. Create a folder and set the "working directory"
 
-Using the instructions and advice given on Moodle, get the `week_2_2024.zip` file and bring the data and R script into R Studio. [The week 2 zip file is here](data/Week_2/week_2_2024v2.zip)
+Last week you should have created a "PSYC121" folder. This week, we'll organise our work a little more. Follow these steps to organise your scripts and data:
 
-### Step 2. Using the R script
+1. Within the PSYC121 folder, create a "Week_1" folder and a "Week_2" folder (you don't have to use the underscores, but it's good practice)
+2. Move the Week 1 script (the .R file) into the Week 1 folder. To do this, tick the box next to the Week 1 R file, select "More" and then "Move". Find the Week 1 folder and select it. 
+3. Navigate to the Week 2 folder and set it as the "working directory". To do this, click "More" and "Set as Working Directory". What does this mean? Well, RStudio is a bit unusual, in that you need to tell it where you want to work. So even if you navigate to a different directory, RStudio doesn't assume that's where it should look for files. So when you're sure you're in the correct folder you want to work in, make sure you *Set as Working Directory*.
+4. Download and then upload the zip file into RStudio. You'll remember from last week that we need to download the zip file from this page and then upload it into [RStudio]. This week we're using a file named `week_2_2025.zip`. [Click on this link to download the zip file](data/Week_2/week_2_2025.zip). Follow the same process as last week to achieve this step.
+
+
+### Step 3. Using the R script
 
 Let's start working with our data, by opening up (clicking on) the script "Week_2.R" file.
 
@@ -88,21 +92,21 @@ library(tidyverse)
 
 To run this, simply click anywhere on line 1 of the R script to put the cursor there, and press ctrl+enter (cmd+enter on a mac) or click the button called run. You will see a number of messages appear in the console. Don't worry about these, or worry too much about what exactly this command is doing. Essentially this is giving us some useful tools for our analysis. We will introduce the features of the **tidyverse** gradually during this course.
 
-The data are on the RStudio server if you have followed all the instructions to this point. Note that when you imported the data into the R environment, a command line was generated at the console
+If you have followed all the instructions to this point, you should see a "csv" file in the Week 2 folder. "csv" is a filetype that means "comma separated values" - it's a very typical way to store data in very small files. So the data exist in this file, but we need to get them into an R object so we can explore the data on the RStudio server. To do this, run the next line of code:
 
 ```{r eval=FALSE}
-cows <- read_csv("~/penelope22.csv")
+cows <- read_csv("penelope22.csv")
 ```
 
-What this command accomplished was to read the spreadsheet called 'penelope22' into an object in R called `cows`. You could use any object label - it doesn't *have* to be 'cows'- but it's important to then keep that alternate name consistent in what you do next.
+What this command accomplished was to read the data file called 'penelope22.csv' into an object in R called `cows`. You could use any object label - it doesn't *have* to be 'cows'- but it's important to then keep that alternate name consistent in what you do next.
 
-The command was also generated
+We can use the following command to view the data in the spreadsheet format:
 
 ```{r eval=FALSE}
  View(cows)
 ```
 
-which presents the data in a window of RStudio. Note that "NA" means not available or missing data. Does this file structure make some sense to you?
+This presents the data in a window of RStudio. As you look through the data, note that "NA" means not available or missing data. Does this file structure start to make some sense to you?
 
 ### Step 3. Finding the mean and median estimates
 
@@ -120,7 +124,7 @@ You may be thinking, how do I possibly do any of this?! Well this week most of t
 mean(week_1_lecture_data)
 ```
 
-That gave us the mean of the small dataset `week_1_lecture_data`. This time, we want to explore the penelope dataset. But also, the lecture_data was just a single list of numbers. The penelope22 object is more like a datasheet. So we need to tell R Studio which **column** we are interested in. RStudio uses the format **data\$column**. So run the followinbg line in the script
+That gave us the mean of the small dataset `week_1_lecture_data`. This time, we want to explore the penelope dataset. But also, the lecture_data was just a single list of numbers. The penelope22 object is a 2D datasheet: it has rows and columns. So we need to tell R Studio which **column** we are interested in. RStudio uses the format **object_name$column_name**. So run the following lines in the script:
 
 ```{r eval = FALSE}
 mean(cows$estimate) 
@@ -130,7 +134,7 @@ mean(cows$estimate)
 sd(cows$estimate)
 ```
 
-So from this, can you work out what you would do to get the median value (remember from last week how we got the median value?)? Part of the command is given to you, can you change the text so that it works?
+So from this, can you work out what you would do to get the median value? Part of the command is given to you, can you change the text so that it works?
 
 ### Step 4. Calculations from a range of columns
 
@@ -140,13 +144,11 @@ We have seen that:
 mean(cows$estimate) 
 ```
 
-will provide a mean of the column "estimate". In the third column, named "female_estimate", we have the estimates of just the female respondents. In the fourth column, named "other_estimate", we have the estimates of the "other" respondents (males and non-binary and prefer not to say).
+will provide a mean of the column "estimate". In the third column, named "female_estimate", we have the estimates of just the female respondents. In the fourth column, named "other_estimate", we have the estimates of the "other" respondents (i.e., males and non-binary and those that prefer not to say).
 
-So can you now figure out how you might get information about the estimate from the female data (only) or the non-female data? Try it, based on what you have just done. Does it work?
+Can you now figure out how you might get information about the estimate from the female data (only) or the non-female data? Try this out and compare with others on your table to check you are getting the same answers. You will certainly find that the result of the this command produces an "NA" result. This means that the answer is "Not Available", or in other words, is a "missing value". This is because some of the values in this column are NA, and the mean of a column with NAs will always lead to the result NA.
 
-You will find that the result of the this command produces an "NA" result. This means that the answer is "Not Available", or in other words, is a "missing value". This is because some of the values in this column are NA, and the mean of a column with NAs will always lead to the result NA.
-
-Instead, try change the script so it looks like this:
+But thankfully there is a solution. Try changing the script so it looks like this:
 
 ```{r eval = FALSE}
 mean(cows$female_estimate, na.rm = TRUE )
@@ -167,7 +169,7 @@ hist(cows$estimate)
 One way to alter or adjust the histogram is to change the width of the bars, the intervals, between each plot section. Try run this line from the script
 
 ```{r eval=FALSE}
-hist(cows$estimate, breaks = ??)
+hist(cows$estimate, breaks = *MISSING*)
 ```
 
 Does it work? No? What you need to do is replace the two question marks in the script (or better still, create a new instruction line in which you amend this to have a numerical value representing the number of different plot bars. Try at least 3 different values. Look at and think about how this affects the visual distribution.
