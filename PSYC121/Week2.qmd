@@ -69,11 +69,11 @@ Some years ago, a large group of participants gave an estimate of the weight of 
 What we can see from this graph is that:
 
 1.  Guesses formed a roughly normal distribution. There is a bit of a skew with a right-hand tail, but this is inevitable as a weight of less than 0 is physically impossible, but there is no limit of the semantics of a large guess.
-2.  The mean guess weight (1,287 lbs) is very close to the actual (true) weight of the cow (1,355 lbs). So even though lots of people were inaccurate, a central tendency measure has a pretty good alignment with the true weight. This is known as the Wisdom of Crowds phenomenon, first identified by Galton in 1907 (though he suggested using the median weight). The concept of the wisdom of crowds continues to be used and investigated in psychology today (see for example [here](https://doi.org/10.1073/pnas.1008636108){target="_blank"} and [here](https://doi.org/10.1177/0956797620941840){target="_blank"}
+2.  The mean guess weight (1,287 lbs) is very close to the actual (true) weight of the cow (1,355 lbs). So even though lots of people were inaccurate, a central tendency measure has a pretty good alignment with the true weight. This is known as the Wisdom of Crowds phenomenon, first identified by Galton in 1907 (though he suggested using the median weight). The concept of the wisdom of crowds continues to be used and investigated in psychology today (see for example [here](https://doi.org/10.1073/pnas.1008636108){target="_blank"} and [here](https://doi.org/10.1177/0956797620941840){target="_blank"})
 
 Let's look at (a sample of) the PSYC121 student data collected on guessing the weight of Penelope, and ask whether it resembles the properties of this large dataset.
 
-### Step 1. Create a folder and set the "working directory"
+### Create a folder and set the "working directory"
 
 Last week you should have created a "PSYC121" folder. This week, we'll organise our work a little more. Follow these steps to organise your scripts and data:
 
@@ -83,7 +83,7 @@ Last week you should have created a "PSYC121" folder. This week, we'll organise 
 4. Download and then upload the zip file into RStudio. You'll remember from last week that we need to download the zip file from this page and then upload it into [RStudio]. This week we're using a file named `week_2_2025.zip`. [Click on this link to download the zip file](data/Week_2/week_2_2025.zip). Follow the same process as last week to achieve this step.
 
 
-### Step 3. Using the R script
+### Using the R script
 
 Let's start working with our data, by opening up (clicking on) the script "Week_2.R" file.
 
@@ -95,7 +95,7 @@ library(tidyverse)
 
 To run this, simply click anywhere on line 1 of the R script to put the cursor there, and press ctrl+enter (cmd+enter on a mac) or click the button called run. You will see a number of messages appear in the console. Don't worry about these, or worry too much about what exactly this command is doing. Essentially this is giving us some useful tools for our analysis. We will introduce the features of the **tidyverse** gradually during this course.
 
-If you have followed all the instructions to this point, you should see a "csv" file in the Week 2 folder. "csv" is a filetype that means "comma separated values" - it's a very typical way to store data in very small files. So the data exist in this file, but we need to get them into an R object so we can explore the data on the RStudio server. To do this, run the next line of code:
+If you have followed all the instructions to this point, you should see a "csv" file in the Week 2 folder. "csv" is a filetype that means "comma separated values" - it's a very typical way to store data in very small files. While the data exist in this file, we actually need to get them into an **R object** so we can explore the data on the RStudio server. To do this, run the next line of code:
 
 ```{r eval=FALSE}
 cows <- read_csv("penelope22.csv")
@@ -106,12 +106,12 @@ What this command accomplished was to read the data file called 'penelope22.csv'
 We can use the following command to view the data in the spreadsheet format:
 
 ```{r eval=FALSE}
- View(cows)
+View(cows)
 ```
 
 This presents the data in a window of RStudio. As you look through the data, note that "NA" means not available or missing data. Does this file structure start to make some sense to you?
 
-### Step 3. Finding the mean and median estimates
+### Finding the mean and median estimates
 
 Use the data to answer the following questions...
 
@@ -139,7 +139,7 @@ sd(cows$estimate)
 
 So from this, can you work out what you would do to get the median value? Part of the command is given to you, can you change the text so that it works?
 
-### Step 4. Calculations from a range of columns
+### Calculations from a range of columns
 
 We have seen that:
 
@@ -159,7 +159,7 @@ mean(cows$female_estimate, na.rm = TRUE )
 
 Any different? The `na.rm = TRUE` instruction tells RStudio that missing data can be ignored in this mean calculation. (in technical language, `na.rm` is a parameter of the function `mean` that removes the NAs if set to TRUE)
 
-### Step 5. Simple graphs
+## Simple graphs
 
 RStudio can be used to create graphical data plots that can help interpret datasets
 
@@ -185,7 +185,5 @@ We can also create a "box and whisker plot". Here's a general simple description
 
 In the zip file, we also provide data on the estimates of the percentage of immigrants in the UK. This will allow you to explore this variable, create visualisations of the data and its spread. We'll be looking at a version of this variable in week 3: but for now, can you apply the analysis of the penelope data to the immigration data (report descriptive statistics)? Write some new script lines to investigate this additional dataset, and annotate those new script lines.
 
-# 4. Post - lab recap: The slides
 
-Want to see the introduction slides that we used in the Levy lab? They are [available here](data/Week_2/week_2_levylab_slides24.pptx)
 

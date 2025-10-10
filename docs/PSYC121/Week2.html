@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.6.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -72,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-07ba0ad10f5680c660e360ac31d2f3b6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-052754da5edda02e8295a3d9f31723fc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-86be405356afa2e2e0c843f0d4897448.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -227,15 +227,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#bringing-data-scripts-and-files-into-r-studio" id="toc-bringing-data-scripts-and-files-into-r-studio" class="nav-link" data-scroll-target="#bringing-data-scripts-and-files-into-r-studio">3.2 Bringing data, scripts and files into R Studio</a></li>
   <li><a href="#main-lab-exercise---descriptive-information-in-r-studio-penelope-the-cow" id="toc-main-lab-exercise---descriptive-information-in-r-studio-penelope-the-cow" class="nav-link" data-scroll-target="#main-lab-exercise---descriptive-information-in-r-studio-penelope-the-cow">3.3 Main lab exercise - descriptive information in R Studio (Penelope the cow)</a>
   <ul class="collapse">
-  <li><a href="#step-1.-create-a-folder-and-set-the-working-directory" id="toc-step-1.-create-a-folder-and-set-the-working-directory" class="nav-link" data-scroll-target="#step-1.-create-a-folder-and-set-the-working-directory">Step 1. Create a folder and set the “working directory”</a></li>
-  <li><a href="#step-3.-using-the-r-script" id="toc-step-3.-using-the-r-script" class="nav-link" data-scroll-target="#step-3.-using-the-r-script">Step 3. Using the R script</a></li>
-  <li><a href="#step-3.-finding-the-mean-and-median-estimates" id="toc-step-3.-finding-the-mean-and-median-estimates" class="nav-link" data-scroll-target="#step-3.-finding-the-mean-and-median-estimates">Step 3. Finding the mean and median estimates</a></li>
-  <li><a href="#step-4.-calculations-from-a-range-of-columns" id="toc-step-4.-calculations-from-a-range-of-columns" class="nav-link" data-scroll-target="#step-4.-calculations-from-a-range-of-columns">Step 4. Calculations from a range of columns</a></li>
-  <li><a href="#step-5.-simple-graphs" id="toc-step-5.-simple-graphs" class="nav-link" data-scroll-target="#step-5.-simple-graphs">Step 5. Simple graphs</a></li>
+  <li><a href="#create-a-folder-and-set-the-working-directory" id="toc-create-a-folder-and-set-the-working-directory" class="nav-link" data-scroll-target="#create-a-folder-and-set-the-working-directory">Create a folder and set the “working directory”</a></li>
+  <li><a href="#using-the-r-script" id="toc-using-the-r-script" class="nav-link" data-scroll-target="#using-the-r-script">Using the R script</a></li>
+  <li><a href="#finding-the-mean-and-median-estimates" id="toc-finding-the-mean-and-median-estimates" class="nav-link" data-scroll-target="#finding-the-mean-and-median-estimates">Finding the mean and median estimates</a></li>
+  <li><a href="#calculations-from-a-range-of-columns" id="toc-calculations-from-a-range-of-columns" class="nav-link" data-scroll-target="#calculations-from-a-range-of-columns">Calculations from a range of columns</a></li>
   </ul></li>
+  <li><a href="#simple-graphs" id="toc-simple-graphs" class="nav-link" data-scroll-target="#simple-graphs">Simple graphs</a></li>
   <li><a href="#extension-and-practice.-apply-your-new-skils-to-a-different-dataset" id="toc-extension-and-practice.-apply-your-new-skils-to-a-different-dataset" class="nav-link" data-scroll-target="#extension-and-practice.-apply-your-new-skils-to-a-different-dataset">3.4. Extension and practice. Apply your new skils to a different dataset</a></li>
   </ul></li>
-  <li><a href="#post---lab-recap-the-slides" id="toc-post---lab-recap-the-slides" class="nav-link" data-scroll-target="#post---lab-recap-the-slides">4. Post - lab recap: The slides</a></li>
   </ul>
 </nav>
     </div>
@@ -311,11 +310,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>What we can see from this graph is that:</p>
 <ol type="1">
 <li>Guesses formed a roughly normal distribution. There is a bit of a skew with a right-hand tail, but this is inevitable as a weight of less than 0 is physically impossible, but there is no limit of the semantics of a large guess.</li>
-<li>The mean guess weight (1,287 lbs) is very close to the actual (true) weight of the cow (1,355 lbs). So even though lots of people were inaccurate, a central tendency measure has a pretty good alignment with the true weight. This is known as the Wisdom of Crowds phenomenon, first identified by Galton in 1907 (though he suggested using the median weight). The concept of the wisdom of crowds continues to be used and investigated in psychology today (see for example <a href="https://doi.org/10.1073/pnas.1008636108" target="_blank">here</a> and <a href="https://doi.org/10.1177/0956797620941840" target="_blank">here</a></li>
+<li>The mean guess weight (1,287 lbs) is very close to the actual (true) weight of the cow (1,355 lbs). So even though lots of people were inaccurate, a central tendency measure has a pretty good alignment with the true weight. This is known as the Wisdom of Crowds phenomenon, first identified by Galton in 1907 (though he suggested using the median weight). The concept of the wisdom of crowds continues to be used and investigated in psychology today (see for example <a href="https://doi.org/10.1073/pnas.1008636108" target="_blank">here</a> and <a href="https://doi.org/10.1177/0956797620941840" target="_blank">here</a>)</li>
 </ol>
 <p>Let’s look at (a sample of) the PSYC121 student data collected on guessing the weight of Penelope, and ask whether it resembles the properties of this large dataset.</p>
-<section id="step-1.-create-a-folder-and-set-the-working-directory" class="level3">
-<h3 class="anchored" data-anchor-id="step-1.-create-a-folder-and-set-the-working-directory">Step 1. Create a folder and set the “working directory”</h3>
+<section id="create-a-folder-and-set-the-working-directory" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-folder-and-set-the-working-directory">Create a folder and set the “working directory”</h3>
 <p>Last week you should have created a “PSYC121” folder. This week, we’ll organise our work a little more. Follow these steps to organise your scripts and data:</p>
 <ol type="1">
 <li>Within the PSYC121 folder, create a “Week_1” folder and a “Week_2” folder (you don’t have to use the underscores, but it’s good practice)</li>
@@ -324,27 +323,27 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Download and then upload the zip file into RStudio. You’ll remember from last week that we need to download the zip file from this page and then upload it into [RStudio]. This week we’re using a file named <code>week_2_2025.zip</code>. <a href="data/Week_2/week_2_2025.zip">Click on this link to download the zip file</a>. Follow the same process as last week to achieve this step.</li>
 </ol>
 </section>
-<section id="step-3.-using-the-r-script" class="level3">
-<h3 class="anchored" data-anchor-id="step-3.-using-the-r-script">Step 3. Using the R script</h3>
+<section id="using-the-r-script" class="level3">
+<h3 class="anchored" data-anchor-id="using-the-r-script">Using the R script</h3>
 <p>Let’s start working with our data, by opening up (clicking on) the script “Week_2.R” file.</p>
 <p>The first command is to load a library of functions:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>To run this, simply click anywhere on line 1 of the R script to put the cursor there, and press ctrl+enter (cmd+enter on a mac) or click the button called run. You will see a number of messages appear in the console. Don’t worry about these, or worry too much about what exactly this command is doing. Essentially this is giving us some useful tools for our analysis. We will introduce the features of the <strong>tidyverse</strong> gradually during this course.</p>
-<p>If you have followed all the instructions to this point, you should see a “csv” file in the Week 2 folder. “csv” is a filetype that means “comma separated values” - it’s a very typical way to store data in very small files. So the data exist in this file, but we need to get them into an R object so we can explore the data on the RStudio server. To do this, run the next line of code:</p>
+<p>If you have followed all the instructions to this point, you should see a “csv” file in the Week 2 folder. “csv” is a filetype that means “comma separated values” - it’s a very typical way to store data in very small files. While the data exist in this file, we actually need to get them into an <strong>R object</strong> so we can explore the data on the RStudio server. To do this, run the next line of code:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>cows <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"penelope22.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>What this command accomplished was to read the data file called ‘penelope22.csv’ into an object in R called <code>cows</code>. You could use any object label - it doesn’t <em>have</em> to be ‘cows’- but it’s important to then keep that alternate name consistent in what you do next.</p>
 <p>We can use the following command to view the data in the spreadsheet format:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">View</span>(cows)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(cows)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This presents the data in a window of RStudio. As you look through the data, note that “NA” means not available or missing data. Does this file structure start to make some sense to you?</p>
 </section>
-<section id="step-3.-finding-the-mean-and-median-estimates" class="level3">
-<h3 class="anchored" data-anchor-id="step-3.-finding-the-mean-and-median-estimates">Step 3. Finding the mean and median estimates</h3>
+<section id="finding-the-mean-and-median-estimates" class="level3">
+<h3 class="anchored" data-anchor-id="finding-the-mean-and-median-estimates">Finding the mean and median estimates</h3>
 <p>Use the data to answer the following questions…</p>
 <ol type="1">
 <li>What is the mean weight estimates?</li>
@@ -366,8 +365,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>So from this, can you work out what you would do to get the median value? Part of the command is given to you, can you change the text so that it works?</p>
 </section>
-<section id="step-4.-calculations-from-a-range-of-columns" class="level3">
-<h3 class="anchored" data-anchor-id="step-4.-calculations-from-a-range-of-columns">Step 4. Calculations from a range of columns</h3>
+<section id="calculations-from-a-range-of-columns" class="level3">
+<h3 class="anchored" data-anchor-id="calculations-from-a-range-of-columns">Calculations from a range of columns</h3>
 <p>We have seen that:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(cows<span class="sc">$</span>estimate) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -380,8 +379,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <p>Any different? The <code>na.rm = TRUE</code> instruction tells RStudio that missing data can be ignored in this mean calculation. (in technical language, <code>na.rm</code> is a parameter of the function <code>mean</code> that removes the NAs if set to TRUE)</p>
 </section>
-<section id="step-5.-simple-graphs" class="level3">
-<h3 class="anchored" data-anchor-id="step-5.-simple-graphs">Step 5. Simple graphs</h3>
+</section>
+<section id="simple-graphs" class="level2">
+<h2 class="anchored" data-anchor-id="simple-graphs">Simple graphs</h2>
 <p>RStudio can be used to create graphical data plots that can help interpret datasets</p>
 <p>The first thing we can do is create a histogram distribution of guesses from the sample student data to compare with the previous large sample study (i.e.&nbsp;the 17,000 guesses):</p>
 <div class="cell">
@@ -395,17 +395,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We can also create a “box and whisker plot”. Here’s a general simple description of a box-and-whisker plot as a graphical representation of data:</p>
 <p><img src="images/wk2/Box_and_whisker.png" class="img-fluid"></p>
 </section>
-</section>
 <section id="extension-and-practice.-apply-your-new-skils-to-a-different-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="extension-and-practice.-apply-your-new-skils-to-a-different-dataset">3.4. Extension and practice. Apply your new skils to a different dataset</h2>
 <p>In the zip file, we also provide data on the estimates of the percentage of immigrants in the UK. This will allow you to explore this variable, create visualisations of the data and its spread. We’ll be looking at a version of this variable in week 3: but for now, can you apply the analysis of the penelope data to the immigration data (report descriptive statistics)? Write some new script lines to investigate this additional dataset, and annotate those new script lines.</p>
-</section>
-</section>
-<section id="post---lab-recap-the-slides" class="level1">
-<h1>4. Post - lab recap: The slides</h1>
-<p>Want to see the introduction slides that we used in the Levy lab? They are <a href="data/Week_2/week_2_levylab_slides24.pptx">available here</a></p>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
@@ -491,6 +486,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   });
   clipboard.on('success', onCopySuccess);
   if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
     const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
       text: getTextToCopy,
       container: window.document.getElementById('quarto-embedded-source-code-modal')
@@ -601,6 +598,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
