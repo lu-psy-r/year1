@@ -4,7 +4,7 @@ subtitle: Written by Tom Beesley (2025)
 order: 3
 ---
 
-# 1. Week 2 lecture
+## 1. Week 2 lecture
 
 Below you will see the embedded lecture videos. As a reminder these lectures in PSYC121 are designed to provide an explanation of the conceptual and computational work involved in some core analytic material. The lab classes are designed (a) to put these ideas into practice (b) to work with R Studio in practicing with data, as a tool that helps you to explore data. So the lectures and lab complement each other, and we will continue to tackle this approach across the module.
 
@@ -31,7 +31,7 @@ Watch Part 3
 
 Download the lecture slides [here](data/Week_2/week 2 Analysis lecture 2025.pptx)
 
-# 2. Pre-lab work
+## Pre-lab work
 
 Last week, among other things, we asked you to
 
@@ -45,8 +45,8 @@ Your progress was great! We start with small steps and build up - but this is a 
 
 Before the lab, make sure you have worked through the material in the week2 learnr tutorial. [The link is here](https://ma-rconnect.lancs.ac.uk/Psych121_week_2/){target="_blank"}
 
-# Lab activities
-## R Studio recap and setup
+## Lab activities
+### R Studio recap and setup
 
 For a reminder of how to start RStudio, [see week 1's instructions](Week1.html#getting_started){target="_blank"}
 
@@ -60,7 +60,7 @@ R can handle data files, and this week we're going to explore them. Within R, we
 
 To make things straightforward, each week we'll provide students with a "zip" file that contains the script to start from (which you can expand and annotate etc, and save on your file space). We'll also provide a data file(s) for you to use in the zip file. R can then *import* these files into the RStudio environment. So when you upload the zip file, you can import the data AND you can open up the script
 
-## Working with multiple columns
+### Working with multiple columns
 
 Some years ago, a large group of participants gave an estimate of the weight of Penelope the cow. Just over 17,000 guesses. And the distribution of guesses was something like this: ![](images/wk2/penelope.png)
 
@@ -157,7 +157,7 @@ mean(cows$female_estimate, na.rm = TRUE )
 
 Any different? The `na.rm = TRUE` instruction tells RStudio that missing data can be ignored in this mean calculation. (in technical language, `na.rm` is a parameter of the function `mean` that removes the NAs if set to TRUE)
 
-## Simple graphs
+### Simple graphs
 
 RStudio can be used to create graphical data plots that can help interpret datasets
 
@@ -179,7 +179,7 @@ We can also create a "box and whisker plot". Here's a general simple description
 
 ![](images/wk2/Box_and_whisker.png)
 
-## 3.4. Extension and practice. Apply your new skils to a different dataset
+### Extension and practice. Apply your new skils to a different dataset
 
 In the zip file, we also provide data on the estimates of the percentage of immigrants in the UK. This will allow you to explore this variable, create visualisations of the data and its spread. We'll be looking at a version of this variable in week 3: but for now, can you apply the analysis of the penelope data to the immigration data (report descriptive statistics)? Write some new script lines to investigate this additional dataset, and annotate those new script lines.
 
