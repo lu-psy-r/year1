@@ -1,54 +1,58 @@
 ---
 title: 3. DVs and IVs in RStudio
-subtitle: Written by John Towse & Tom Beesley (2024)
+subtitle: Written by Tom Beesley (2025)
 order: 4
 ---
-# 1. Week 3 Lecture
+## Week 3 Lecture
 
 Watch Part 1
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=503a090b-69b5-4f55-a7be-b20c0085fb89&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3 (A)" ></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6dcaa958-8ebb-4c7c-8aab-b36700ceaf8b&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3 (A)" ></iframe>
+
 ```
 Watch Part 2
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=8e761f7d-04f5-40f2-b862-b20c0089f1b8&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 Week 3(B)" ></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=a2e69b40-b969-432a-a58f-b36700ced454&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 Week 3(B)" ></iframe>
+
 ```
 Watch Lecture Part 3
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0ce688c2-1057-4ad8-8048-b20c008e67dc&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3 (C)" ></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=be0f83f6-501b-40a4-9365-b36700ceffab&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3 (C)" ></iframe>
+
 ```
 Watch Lecture Part 4
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6e02a27c-b909-4655-b07a-b20c0093d396&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3(D)" ></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=e757e413-d17d-4085-8ef1-b36700cf1ef2&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3(D)" ></iframe>
+
 ```
 Download the lecture slides [here](data/Week_3/week_3_lecture_slides_2024.pptx)
 
-# 2. Pre-lab work
+## Pre-lab work
 
 Last week we asked you to
 
 -   Use a script to run instructions in RStudio
--   Put data into RStudio form a data file and explore how to run descriptive stats
+-   Put data into RStudio form a data file and explore how to run descriptive stats and basic visualisations
 
 This week - again, there's a learnr tutorial to follow and help prep for this week's activities. [You can find it here](https://ma-rconnect.lancs.ac.uk//W3_prelab_24/){target="_blank"}
 
-# 3. R Studio tasks
+## Lab activities
 
-For the weight of a cow data last week, we provided you with estimates data, and you were able to generate descriptive statistics for the estimates (if not, please go back and work through that part of the week 2 activity again). You also found the weight estimates for the female and non-female guesses, right?
+For the data concerning the weight of a cow data (week 2), we provided you with columns that refelcted people's estimates, and you were able to generate descriptive statistics for those estimates (if not, please go back and work through that part of the week 2 activity again). 
 
-However, in order to find the estimates separately for gender identity, we needed to have a column for each gender category. Whilst that worked, it could get cumbersome over time always to work with data created like that.
+In order to find the estimates separately for the different groups of respondents (female and non-female), we needed to have a column for each gender category. Whilst that worked, it could get cumbersome over time always to work with data created like that.
 
-*There is a better way...*
+*There is a better way...* In this first task we will look at how you can analyse the numerical weight estimates *as a function of* the categorical data in the identity column.
 
-## 3.1 Task 1 - More with the `penelope22` data
+### Task 1 - More with the `penelope22` data
 
-Step 1. Create a project and a folder, and set the working directory. This is covered in the learnr tutorial so head over there if you need reminding.
+Step 1. Create a new folder for week 3, and set this as the working directory. This is covered in the learnr tutorial and we covered it in Week 2 as well. 
 
-Step 2. Bring the `week3_2024.zip` file into R Studio server. Like last week, upload the zip file, and launch the R script. [You can get the file here](data/Week_3/week_3_2024.zip)
+Step 2. Bring the `Week_3_2025.zip` file into R Studio server. Like last week, upload the zip file, and launch the R script. [You can get the file here](data/Week_3/week_3_2024.zip)
 
 Step 3. This week, we again want to explore commands from the tidyverse library (toolkit) which can help us do more powerful things more elegantly. So let's get R to work again with the tidyverse library by running the code line
 
@@ -56,14 +60,14 @@ Step 3. This week, we again want to explore commands from the tidyverse library 
 
 Step 4. Explore help() commands. R can give you more information about how it works.
 
-Step 5. Read or load the penelope data into R. That is what line 18 of the code is designed to do
+Step 5. Read the penelope22.csv data into R:
 
 ```{r eval=FALSE}
-data_object_name <- read_csv("fill in") # use your own dataobject_name and specify the file you want to work with
+what_a_really_terrible_data_object_name <- read_csv(*MISSING*) 
+# use your own data object name and specify the file you want to read in
 ```
 
-
-but note that you will need to edit this line -and ensure you are in the correct working directory- for this to be successful. Then have a look at it using the View() command in the script
+Note that you will need to edit this line (and ensure you are in the correct working directory) for this to be successful. View the new data object using the View() command in the script or clicking on the object in the environment. 
 
 This time, let's ask for the estimate data arranged by identity:
 
@@ -83,9 +87,9 @@ Second, let's look at what is happening here:
 
 `FUN=mean` Specifies which descriptive function is being asked for Can you explore whether you can call on alternate measures?)
 
-### 3.1.2 group_by()
+### using group_by() to calculate means for each group
 
-There's another way that also allows us to group scores by a (nominal) variable. This is explored in the learnr tutorial, which should help you create the command the get weight estimates broken down by gender identity. You need to define the data frame for the estimates data, and the gender IV and the estimates DV
+There's another way that also allows us to group scores by a (nominal/categorical) variable. This is explored in the learnr tutorial, which should help you create the command the get weight estimates broken down by gender identity. You need to define the data frame for the estimates data, and the gender IV and the estimates DV
 
 ```{r eval=FALSE}
 *MISSING* %>% group_by(*MISSING*) %>% summarise(mean_estimate = mean(*MISSING*))
