@@ -183,5 +183,11 @@ We can also create a "box and whisker plot". Here's a general simple description
 
 In the zip file, we also provide data on the estimates of the percentage of immigrants in the UK. This will allow you to explore this variable, create visualisations of the data and its spread. We'll be looking at a version of this variable in week 3: but for now, can you apply the analysis of the penelope data to the immigration data (report descriptive statistics)? Write some new script lines to investigate this additional dataset, and annotate those new script lines.
 
+## Task 3.5 -- Data collection exercise
 
+In order to learn about psychology and data analysis techniques, we need data! Rather than rely too much on artificial data (certainly it is sometimes useful to say "Here are a bunch of numbers and this is what we can do with them" -- think about the R Studio example for this week's lab) for the most part, we prefer to draw on datasets that are a bit more engaging and meaningful that you have a stake in yourself! By using a common data set, that we can return to over the year, we can also build up familiarity and confidence in the data and remove a potential obstacle to thinking about the more important analysis part.
+
+So a key task will be for everyone to have a go at taking our online survey, and contribute to a dataset that can be used throughout the year.
+
+The survey runs [by following this link](https://lancasteruni.eu.qualtrics.com/jfe/form/SV_4YnySR3Qa8G1kh0){target="_blank"}
 

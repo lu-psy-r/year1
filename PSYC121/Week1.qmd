@@ -244,7 +244,7 @@ In order to learn about psychology and data analysis techniques, we need data! R
 
 So a key task will be for everyone to have a go at taking our online survey, and contribute to a dataset that can be used throughout the year.
 
-The survey runs [by following this link](https://lancasteruni.eu.qualtrics.com/jfe/form/SV_0rJaVFmYy6ppcUu){target="_blank"}
+The survey runs [by following this link](https://lancasteruni.eu.qualtrics.com/jfe/form/SV_4YnySR3Qa8G1kh0){target="_blank"}
 
 ## Post - lab recap: The slides we used
 
