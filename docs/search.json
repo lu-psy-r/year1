@@ -2584,5 +2584,41 @@
       "PSYC121",
       "2. Descriptive statistics in RStudio"
     ]
+  },
+  {
+    "objectID": "PSYC121/Week1.html#data-collection-exercise",
+    "href": "PSYC121/Week1.html#data-collection-exercise",
+    "title": "1. Introduction to PSYC121",
+    "section": "Data collection exercise",
+    "text": "Data collection exercise\nIn order to learn about psychology and data analysis techniques, we need data! Rather than rely too much on artificial data (certainly it is sometimes useful to say “Here are a bunch of numbers and this is what we can do with them” – think about the R Studio example for this week’s lab) for the most part, we prefer to draw on datasets that are a bit more engaging and meaningful that you have a stake in yourself! By using a common data set, that we can return to over the year, we can also build up familiarity and confidence in the data and remove a potential obstacle to thinking about the more important analysis part.\nSo a key task will be for everyone to have a go at taking our online survey, and contribute to a dataset that can be used throughout the year.\nThe survey runs by following this link",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "1. Introduction to PSYC121"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week2.html#data-collection-exercise",
+    "href": "PSYC121/Week2.html#data-collection-exercise",
+    "title": "2. Descriptive statistics in RStudio",
+    "section": "Data collection exercise",
+    "text": "Data collection exercise\nIn order to learn about psychology and data analysis techniques, we need data! Rather than rely too much on artificial data (certainly it is sometimes useful to say “Here are a bunch of numbers and this is what we can do with them” – think about the R Studio example for this week’s lab) for the most part, we prefer to draw on datasets that are a bit more engaging and meaningful that you have a stake in yourself! By using a common data set, that we can return to over the year, we can also build up familiarity and confidence in the data and remove a potential obstacle to thinking about the more important analysis part.\nSo a key task will be for everyone to have a go at taking our online survey, and contribute to a dataset that can be used throughout the year.\nThe survey runs by following this link",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "2. Descriptive statistics in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week2.html#post---lab-recap-the-slides-we-used",
+    "href": "PSYC121/Week2.html#post---lab-recap-the-slides-we-used",
+    "title": "2. Descriptive statistics in RStudio",
+    "section": "Post - lab recap: The slides we used",
+    "text": "Post - lab recap: The slides we used\nWant to see again the introduction slides that we used in the Levy lab? They are available here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "2. Descriptive statistics in RStudio"
+    ]
   }
 ]
