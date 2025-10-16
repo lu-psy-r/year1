@@ -38,7 +38,7 @@ Last week we asked you to
 -   Use a script to run instructions in RStudio
 -   Put data into RStudio form a data file and explore how to run descriptive stats and basic visualisations
 
-This week - again, there's a learnr tutorial to follow and help prep for this week's activities. [You can find it here](https://ma-rconnect.lancs.ac.uk//W3_prelab_24/){target="_blank"}
+This week - again, there's a learnr tutorial to follow and help prep for this week's activities. [You can find it here](https://ma-rconnect.lancs.ac.uk//Psych121_week_3/){target="_blank"}
 
 ## Lab activities
 
@@ -52,7 +52,7 @@ In order to find the estimates separately for the different groups of respondent
 
 Step 1. Create a new folder for week 3, and set this as the working directory. This is covered in the learnr tutorial and we covered it in Week 2 as well. 
 
-Step 2. Bring the `Week_3_2025.zip` file into R Studio server. Like last week, upload the zip file, and launch the R script. [You can get the file here](data/Week_3/week_3_2025.zip)
+Step 2. Bring the `Week_3_2025.zip` file into R Studio server. Like last week, upload the zip file, and launch the R script. [You can get the file here](data/Week_3/Week_3_2025.zip)
 
 Step 3. This week, we again want to explore commands from the tidyverse library (toolkit) which can help us do more powerful things more elegantly. So let's get R to work again with the tidyverse library by running the code line
 
