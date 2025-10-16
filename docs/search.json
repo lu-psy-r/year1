@@ -908,7 +908,7 @@
     "href": "PSYC121/Week3.html",
     "title": "3. DVs and IVs in RStudio",
     "section": "",
-    "text": "Watch Part 1\n\nWatch Part 2\n\nWatch Lecture Part 3\n\nWatch Lecture Part 4\n\nDownload the lecture slides here",
+    "text": "Watch Part 1\n\n\nWatch Part 2\n\n\nWatch Lecture Part 3\n\n\nWatch Lecture Part 4\n\n\nDownload the lecture slides here",
     "crumbs": [
       "Home",
       "PSYC121",
@@ -932,7 +932,7 @@
     "href": "PSYC121/Week3.html#task-3.2---new-phone-use-data",
     "title": "3. DVs and IVs in RStudio",
     "section": "Task 3.2 - New phone use data",
-    "text": "Task 3.2 - New phone use data\n\nDataset 3: Use the dataset of phone screen time usage, screentime2024.csv to further explore and consolidate the group_by() command (ie we’ll drop the aggregate command for this task to focus on group_by()). Use copy and paste to adapt the existing script lines from the above two tasks so that this time you read in and calculate screen time usage as a function of the type of phone. In other words, add line (and comments) to the scripts for this new task.\nUse RStudio to figure out the overall mean screen time usage estimate and the standard deviation. Calculate by hand what usage estimate would have a z score of z=-1.5?",
+    "text": "Task 3.2 - New phone use data\n\nRead in the dataset of phone screen time usage, screentime2024.csv, into a new object. For this task we’ll focus on the group_by() and summarise() commands to further explore the data and consolidate your skills. Use copy and paste to adapt the existing script lines from the above tasks so that this time you calculate screen time usage as a function of the type of phone.\nUse RStudio to figure out the (overall) mean screen time estimate and the standard deviation. Using these values, can you calculate by hand what screen time estimate value would reflect z scores of z=-1.5 and z = +2?",
     "crumbs": [
       "Home",
       "PSYC121",
@@ -944,7 +944,7 @@
     "href": "PSYC121/Week3.html#task-3.3---final-challenge-visualisation",
     "title": "3. DVs and IVs in RStudio",
     "section": "Task 3.3 - Final challenge: visualisation",
-    "text": "Task 3.3 - Final challenge: visualisation\nCan you find a way to visualise the screentime usage data that you have been working with above? The script provides two ways to consider doing this - boxplots (which we have looked at in script commands already) and ggplot, which we have spent less time with but is an extremely powerful engine for creating plots. We’ve provided the start of the code in each case, leaving you to work out the specifics. Remember to annotate your creations!",
+    "text": "Task 3.3 - Final challenge: visualisation\nCan you find a way to visualise the screentime usage data that you have been working with above? The script provides two ways to consider doing this - basic boxplots (which we have looked at last week) and ggplot, which we have spent less time with but is an extremely powerful engine for creating plots. We’ve provided the start of the code in each case, leaving you to work out the specifics.",
     "crumbs": [
       "Home",
       "PSYC121",
@@ -2619,6 +2619,42 @@
       "Home",
       "PSYC121",
       "2. Descriptive statistics in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week3.html#week-3-lecture",
+    "href": "PSYC121/Week3.html#week-3-lecture",
+    "title": "3. DVs and IVs in RStudio",
+    "section": "",
+    "text": "Watch Part 1\n\n\nWatch Part 2\n\n\nWatch Lecture Part 3\n\n\nWatch Lecture Part 4\n\n\nDownload the lecture slides here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "3. DVs and IVs in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week3.html#pre-lab-work",
+    "href": "PSYC121/Week3.html#pre-lab-work",
+    "title": "3. DVs and IVs in RStudio",
+    "section": "Pre-lab work",
+    "text": "Pre-lab work\nLast week we asked you to\n\nUse a script to run instructions in RStudio\nPut data into RStudio form a data file and explore how to run descriptive stats and basic visualisations\n\nThis week - again, there’s a learnr tutorial to follow and help prep for this week’s activities. You can find it here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "3. DVs and IVs in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week3.html#lab-activities",
+    "href": "PSYC121/Week3.html#lab-activities",
+    "title": "3. DVs and IVs in RStudio",
+    "section": "Lab activities",
+    "text": "Lab activities\nFor the data concerning the weight of a cow data (week 2), we provided you with columns that reflected people’s estimates, and you were able to generate descriptive statistics for those estimates (if you haven’t done this, please go back and work through that part of the week 2 activity again).\nIn order to find the estimates separately for the different groups of respondents (female and non-female), we needed to have a column for each gender category. Whilst that worked, it could get cumbersome over time always to work with data created like that.\nThere is a better way… In this first task we will look at how you can analyse the numerical weight estimates as a function of the categorical data in the identity column.\n\nTask 1 - More with the penelope22 data\nStep 1. Create a new folder for week 3, and set this as the working directory. This is covered in the learnr tutorial and we covered it in Week 2 as well.\nStep 2. Bring the Week_3_2025.zip file into R Studio server. Like last week, upload the zip file, and launch the R script. You can get the file here\nStep 3. This week, we again want to explore commands from the tidyverse library (toolkit) which can help us do more powerful things more elegantly. So let’s get R to work again with the tidyverse library by running the code line\nlibrary(tidyverse)\nStep 4. Explore help() commands. R can give you more information about how it works.\nStep 5. Read the penelope22.csv data into R:\n\nwhat_a_really_terrible_data_object_name &lt;- read_csv(*MISSING*) \n# use your own data object name and specify the file you want to read in\n\nNote that you will need to edit this line (and ensure you are in the correct working directory) for this to be successful. View the new data object using the View() command in the script or clicking on the object in the environment.\nThis week we’ll for the mean of the estimate data as a function of the different gender identities:\n\naggregate(x = *MISSING*$estimate, by = list(*MISSING*$identity), FUN = mean)\n\nThere’s a lot going on in this code, but first, let’s try replacing data object name where it says MISSING and then running the code. What do you get? Does this match what we did last week when we calculated the mean for the female and for the other (i.e., non-female) group?\nOnce you’ve run this, let’s consider all the things that are going on in the code:\naggregate This is a command to call for descriptive statistics\nx= This defines what column we are analyzing\nby=list Now we tell R how to group the estimate data, and which column does that\nFUN=mean Specifies which descriptive function is being asked for. Feel free to try functions for other descriptive statistics that you’ve used in previous weeks.\n\n\nusing group_by() to calculate means for each group\nLike most things in R, there are multiple ways to do the same thing. Here’s another way to group scores by a (nominal/categorical) variable and calculate the values we need for each level of that variable. We explored this already in the learnr tutorial, and that should help you to complete the code below to get the weight estimates broken down by gender identity. You need to first define the data frame for the estimates data, and then specify the gender IV in the group_by command and the estimates DV in the summarise command:\n\n*MISSING* %&gt;% group_by(*MISSING*) %&gt;% summarise(mean_estimate = mean(*MISSING*))\n\nIf you edit this code correctly and run it, you should get a result that is quite similar to that provided by the aggregate command (though the format of the output may be slightly different)\nA note about: %&gt;%\nThis is called a “pipe operator”, basically take the output from the left and feed it into the requests on the right. Summarise Provide summary statistics information for the specified variable as specified (whether mean, median etc)\n\n\n3.1.3 The assignment operator\nAs well as learning about the pipe operator, we want to remind you /draw attention explicitly to another important element of the R command line syntax: the assignment operator. Using a command such as\ncows &lt;- read_csv(\"penelope22.csv\")\nlooks for the csv datafile called ‘penelope22’, reads that data in, and assigns it to an object called ‘cows’\nWe could create any object name we wanted (within broad limits of names that RStudio allows). The arrow symbol isn’t just for reading in data files, we can perform a whole range of functions and assign them to an object.\n\nTask 2 - New salary data\nUsing aggregate and summarise may not seem like much progress, because they are just replicating what we had already done with mean() is week 2. However (a) this emphasizes that there are often several ways to get at the same thing in R (b) now we know about doing calculations on grouped data, and about working with 2-dimensional data. These are big steps - we can now start to do much more efficient and informative things with our data.\nNow, let’s turn to the guesses made about median salary in the UK. We will read in some of the data that PSYC121 students provided in the file wages2024.csv (you will need to adapt the code we used above for the weight estimation file so that it will load in the wages data, and in what follows the assumption is your new variable name is called wages)\nLet’s take a peek at the dataset with:\nglimpse(wages)\nGlimpse pretty much does what you might think from the meaning of the word: it just gives us some quick statistics on the different column (handy because this is a much bigger dataset). We can see that we have 3 columns; uk_region (where someone lives, note ‘other’ probably equals Ireland, Europe, China, etc), family_position (age relationship with siblings), and salary (estimate).\nWe will be analysing how people assessed the median income in the UK. According to government statistics, the median income in 2023 was approximately £34,963 see this link\nYour task:\n\nWithin the script, use the working “aggregate” commands from task 1 with the penelope weight data, can you find out the mean salary estimates as a function of where someone lives? That is, can you adapt that code you used earlier for this problem?\nCan you use the aggregate command to find out mean salary estimates as a function of the different family relationships? (if you are the youngest child maybe you have older siblings earning money that changes your evaluation?)\nCan you get a breakdown of salary estimates as a function of BOTH UK region AND family relationship together? You may well need some help with this, but have a guess at which bit of code would need to change to do it.\nCan you use the group by() and summarise() command to display salary guesses as a function of where someone lives? Check this gives you the same answer.",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "3. DVs and IVs in RStudio"
     ]
   }
 ]
