@@ -29,7 +29,7 @@ Watch Lecture Part 4
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=e757e413-d17d-4085-8ef1-b36700cf1ef2&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC121 week 3(D)" ></iframe>
 
 ```
-Download the lecture slides [here](data/Week_3/week_3_lecture_slides_2024.pptx)
+Download the lecture slides [here](data/Week_3/week_3_lecture_slides_2025.pptx)
 
 ## Pre-lab work
 
