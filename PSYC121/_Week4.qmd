@@ -47,9 +47,9 @@ Download the lecture slides [here](data/Week_4/week4_24_lecture_slides.pptx)
 
 # 3. R Studio tasks
 
-Last week we introduced two different ways to get descriptive information about a variable / column of scores investigated as a function of a separate piece of information. In others words, describe the DV a function of an IV
+Last week we introduced two different ways to get descriptive information about a numerical variable (column) as a function of a categorical variable. We discussed how this was extremely powerful, as we can look at the effect of an IV on the DV, which gets us a long way in the analysis of our psychological experiments!
 
-Students were generally very good at utilising each of these;
+In the labs students were showing great skills in utilising each of these tools:
 
 `aggregate(x = DV, by = list(IV), FUN = mean)`
 
@@ -57,38 +57,35 @@ and
 
 `dataframe %>% group_by(IV) %>% summarise(label_header = mean(DV))`
 
-
-This week, we're focusing on how you can edit or customise a graph to be more useful to a viewer.
+This week we'll first look at some more features of our powerful graphing tool, `ggplot()`.
 
 ## 3.1 - Customisation of data plots
 
-Step 1. Set up a project / folder that you created last week.
+Step 1. Set up a folder for Week 4 and set the working directory.
 
-Step 2. Bring the `week_4_2024.zip` file into R Studio server. Like last week, upload the zip file. Launch the week_4 R script as before, and read in the data file. 
+Step 2. Bring the `week_4_2025.zip` file into R Studio server. Like last week, upload the zip file. Launch the week_4 R script.
 
-{If you've done Step 1 &2 already as a pre-lab preparation, super, pat yourself on the back, skip these steps an move on)}
+*If you've done Step 1 & 2 already as a lab preparation, super! Pat yourself on the back, skip these steps, and move on...*
 
-Step 3. Once again, we're gong to be using commands from the tidyverse library (the pipe operator is one example) so we need to ensure that it's active. Run the command
+Step 3. Once again, we're gong to be using several commands from the tidyverse library (the pipe operator is one example) so we need to ensure that it's active. Run the command
 
 `library(tidyverse)`
 
-Step 4. Read in the datafiles that will be on the server. There's already a script line for this, you just need to change the file name (and we've done this in previous weeks)
+Step 4. Read in the "wages.csv" data. There's already a `read_csv()` script line for this, you just need to change the file name (like we've done in previous weeks). 
 
-Step 5. We've provided a suggestion of how you can complete the visualisation challenge task from week 3.
-
-Step 6. Customize you graph work. We've provided some suggestions about adding titles and labels for your graph. Edit and play with the script lines to make them useful to you and to understand how they work. Note that the `ggplot` instructions have a similar structure / grammar to the `group_by()` instructions that we used: piping a data frame to a (here, plotting) function and piping that to an output or summarisation format.
+Step 5. Customize you graph work. We've provided some suggestions about adding titles and labels for your graph. Edit and play with the script lines to make them useful to you and to understand how they work. Note that the `ggplot` instructions have a similar structure / grammar to the `group_by()` instructions that we used: piping a data frame to a (here, plotting) function and piping that to an output or summarisation format.
 
 -   Try change the text, the colours, and so on of the graphs.
 -   Add comments for yourself about what the different commands do. The idea is to learn by trying different things out (changing values, taking out elements of the command, putting other is) and record for yourself.
 -   If you are struggling or not sure, try look at help files.
 
-## 3.2 - z-scores
+## 4.2 - z-scores
 
 > Hint / Reminder: Sketch a normal (z score) distribution and mark the mean/mode, and mark off the relevant parts of the question so you know what you are trying to achieve and how to interpret any calculations you make.
 
 > Hint/ Guide 2. For questions 6 & 7, typically in psychology we use the 5% level as a cutoff to decide, in broadly described terms, whether something is extreme or unlikely vs. at least somewhat plausible or likely.
 
-### 3.2.1 z-scores 1
+### 4.2.1 z-scores 1
 
 z-score distributions
 
@@ -98,7 +95,7 @@ Q2. If a distribution has a mean of 100 and a standard deviation of 10, what is 
 
 Q3. If a distribution has a mean of 157 and a standard deviation of 19, what is the raw score equivalent to a z-score of 1?
 
-### 3.2.2 z-scores 2 Using z-score tables
+### 3.2.2 Using z-score tables
 
 Q4. What proportion of scores lie between the mean and a z-score of 0.5?
 
