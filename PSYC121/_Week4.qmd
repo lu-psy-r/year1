@@ -110,7 +110,7 @@ Q6. A Neuropsychologist has presented a test of face recognition to 200 neurotyp
 
 1.  What is the z score of the right hemisphere patient when compared to the neurotypical group?
 
-2.  What proportion of neurotypical participants score lower that this patient?
+2.  What proportion of neurotypical participants score lower than this patient?
 
 3.  Is this patient likely to belong to the population of neurotypical participants? (justify your answer)
 
