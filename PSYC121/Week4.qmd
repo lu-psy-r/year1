@@ -51,9 +51,11 @@ Download the lecture slides [here](data/Week_4/week4_lecture_slides.pptx)
 
 -   This week - there's a new learnr tutorial to follow and help prep for what we are covering: [You can find it here](https://ma-rconnect.lancs.ac.uk/Psych121_week_4/){target="_blank"}.
 
--   Make sure you [download the zip file for the RStudio tasks](data/Week_4/week_4_2024v2.zip).
+<!-- -   Make sure you [download the zip file for the RStudio tasks] (data/Week_4/week_4_2024v2.zip). -->
 
--   Create a new folder and upload the file into RStudio, ideally before the lab class.
+<!-- -   Create a new folder and upload the file into RStudio, ideally before the lab class. -->
+
+THE FOLLOWING TASKS ARE STILL BEING UPDATED....
 
 # 3. R Studio tasks
 
