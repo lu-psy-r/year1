@@ -1,0 +1,168 @@
+---
+title: 4. Customisation of graphs, and z-scores
+subtitle: Written by John Towse & Tom Beesley (2024)
+order: 4
+---
+
+::: {.callout-important icon="true" title="PLEASE NOTE!"}
+Friday 24/10 - 16.30
+
+This page has been posted to allow you to view the lecture and learnr content ahead of the Week 4 labs. Some of the text for the activities is still being updated (due to a very busy schedule this week!!!). Please bear with me - I will update to the final version over the weekend.
+
+Tom
+:::
+
+# 1. Week 4 Lecture
+
+
+Watch Part 1
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=e5a7f35e-65cc-4d1a-a7c0-b36700d2feeb&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week_4(part_a)" ></iframe>
+
+```
+
+Watch Part 2
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=899194c4-ed74-4d4e-83b5-b36700d3266d&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week_4(Part_B)" ></iframe>
+
+```
+
+Watch Lecture Part 3
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=41c26f79-cde9-4f60-aa5b-b36700d34b9a&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week_4(Part_c)" ></iframe>
+
+```
+Watch Lecture Part 4
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=663ae4a9-087e-4b50-8ac0-b36700d3727f&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week_4(part_d)" ></iframe>
+
+```
+
+Download the lecture slides [here](data/Week_4/week4_lecture_slides.pptx)
+
+
+# 2. Pre-lab work
+
+-   Complete materials from sessions in previous week. Consolidate what we have already covered.
+
+-   This week - there's a new learnr tutorial to follow and help prep for what we are covering: [You can find it here](https://ma-rconnect.lancs.ac.uk/Psych121_week_4/){target="_blank"}.
+
+-   Make sure you [download the zip file for the RStudio tasks](data/Week_4/week_4_2024v2.zip).
+
+-   Create a new folder and upload the file into RStudio, ideally before the lab class.
+
+# 3. R Studio tasks
+
+Last week we introduced two different ways to get descriptive information about a numerical variable (column) as a function of a categorical variable. We discussed how this was extremely powerful, as we can look at the effect of an IV on the DV, which gets us a long way in the analysis of our psychological experiments!
+
+In the labs students were showing great skills in utilising each of these tools:
+
+`aggregate(x = DV, by = list(IV), FUN = mean)`
+
+and
+
+`dataframe %>% group_by(IV) %>% summarise(label_header = mean(DV))`
+
+This week we'll first look at some more features of our powerful graphing tool, `ggplot()`.
+
+## 3.1 - Customisation of data plots
+
+Step 1. Set up a folder for Week 4 and set the working directory.
+
+Step 2. Bring the `week_4_2025.zip` file into R Studio server. Like last week, upload the zip file. Launch the week_4 R script.
+
+*If you've done Step 1 & 2 already as a lab preparation, super! Pat yourself on the back, skip these steps, and move on...*
+
+Step 3. Once again, we're gong to be using several commands from the tidyverse library (the pipe operator is one example) so we need to ensure that it's active. Run the command
+
+`library(tidyverse)`
+
+Step 4. Read in the "wages.csv" data. There's already a `read_csv()` script line for this, you just need to change the file name (like we've done in previous weeks). 
+
+Step 5. Customize you graph work. We've provided some suggestions about adding titles and labels for your graph. Edit and play with the script lines to make them useful to you and to understand how they work. Note that the `ggplot` instructions have a similar structure / grammar to the `group_by()` instructions that we used: piping a data frame to a (here, plotting) function and piping that to an output or summarisation format.
+
+-   Try change the text, the colours, and so on of the graphs.
+-   Add comments for yourself about what the different commands do. The idea is to learn by trying different things out (changing values, taking out elements of the command, putting other is) and record for yourself.
+-   If you are struggling or not sure, try look at help files.
+
+## 4.2 - z-scores
+
+> Hint / Reminder: Sketch a normal (z score) distribution and mark the mean/mode, and mark off the relevant parts of the question so you know what you are trying to achieve and how to interpret any calculations you make.
+
+> Hint/ Guide 2. For questions 6 & 7, typically in psychology we use the 5% level as a cutoff to decide, in broadly described terms, whether something is extreme or unlikely vs. at least somewhat plausible or likely.
+
+### 4.2.1 z-scores 1
+
+z-score distributions
+
+Q1. What is the relationship between the sign of a z-score and its position in a distribution?
+
+Q2. If a distribution has a mean of 100 and a standard deviation of 10, what is the raw score equivalent to a z-score of 1.96?
+
+Q3. If a distribution has a mean of 157 and a standard deviation of 19, what is the raw score equivalent to a z-score of 1?
+
+### 3.2.2 Using z-score tables
+
+Q4. What proportion of scores lie between the mean and a z-score of 0.5?
+
+Q5. What is the combined proportion of scores lying between z=-1.2 and z=.85?
+
+### 3.2.3 z-scores 3 Applying z-scores to inferential problems
+
+Q6. A Neuropsychologist has presented a test of face recognition to 200 neurotypical participants and finds that the scores are normally distributed with a mean of 85 and the standard deviation of 12. Two brain-damaged patients are also given the test. The one with right hemisphere brain damage scored 58 and the one with left hemisphere damage scored 67.
+
+1.  What is the z score of the right hemisphere patient when compared to the neurotypical group?
+
+2.  What proportion of neurotypical participants score lower than this patient?
+
+3.  Is this patient likely to belong to the population of neurotypical participants? (justify your answer)
+
+4.  What is the z score of the left hemisphere patient when compared to the neurotypical group?
+
+5.  What proportion of neurotypical participants score lower than this patient?
+
+6.  Is this patient likely to belong to the population of neurotypical participants? (justify your answer)
+
+### 3.2.4 Final z-score challenge
+
+Come back to this afterwards for some extra practice if you want:
+
+Q7. Tom Bunion has completed a huge research study and measured the foot size of men and women and found each to be normally distributed. The men have a mean size of 55 with a standard deviation of 5 and the women a mean of 33 and a standard deviation of 5. Joanna Toes has foolishly measured two individuals but forgotten to note their gender. These have foot sizes of 37 and 47. To which gender is each more likely to belong? What evidence is there for this?
+
+# 4. RStudio and stats humour
+
+For a bit of fun... The following are parody music videos about stats. Now that you have a few weeks' experience with R Studio and also, an introduction to hypothesis testing, you might appreciate the following
+
+The R Inferno Song (Teenage Dirtbag Parody) filmed largely on campus at Maynooth University, Ireland with stats students and staff:
+```{=html}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nziSP3vELCk?si=9HG9waQaEagUeCXA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+Hypothesis testing and p values (plus bunny rabbits and a dog)
+```{=html}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HTdo6xjfFHI?si=Z5Z4W5kggt5Ef0um" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+```
+
+
+# 5. Summary for the first block of PSYC121 (week 1-5)
+
+Want to check the lab slides used for this week in the Levy Lab? They are [here](data/Week_4/week 4 analysis_lab24.pptx)
+
+You can review all the lab handout material so far across this site. We've also put together more-or-less completed scripts from this block of teaching so you can review what you have created:
+
+[Week 2 R script is here](data/Week_4/Week_2_complete_24.R)
+
+[Week 3 R script is here](data/Week_4/Week_3_complete_24.R)
+
+[Week 4 R script is here](data/Week_4/week_4_complete_24.R)
+
+[Information about the z-score questions are here](data/Week_4/Week_4_z-scores_answers.pdf){target="_blank"}
+
+# 6. Extra external R resources 
+
+Some students have asked for a pointer to additional R resources so they can structure some time exploring the R system. There are lots, but this is good and very compatible with the teaching we provide:
+[R for data science](https://r4ds.hadley.nz){target="_blank"}
