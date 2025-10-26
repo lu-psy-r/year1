@@ -51,7 +51,7 @@ Download the lecture slides [here](data/Week_4/week4_lecture_slides.pptx)
 
 -   This week - there's a new learnr tutorial to follow and help prep for what we are covering: [You can find it here](https://ma-rconnect.lancs.ac.uk/Psych121_week_4/){target="_blank"}.
 
-Make sure you [download the zip file for the RStudio tasks] (data/Week_4/week_4_2025.zip).
+Make sure you [download the zip file for the RStudio tasks](data/Week_4/week_4_2025.zip).
 
 Create a new folder and upload the file into RStudio, ideally before the lab class.
 
@@ -92,7 +92,7 @@ Step 6. Customize you graph work. We've provided some suggestions about adding t
 -   Try to change the text, the colours, and so on of the graphs.
 -   Add comments for yourself about what the different commands do. The idea is to learn by trying different things out (changing values, taking out elements of the command, putting other is) and record for yourself.
 
-Step 7. Let's add a boxplot over the top of our violin plots: 
+Step 7. Let's add a boxplot over the top of our violin plots. The code for a boxplot is `geom_boxplot()` and remember that you'll need to add a `+` to the line before to add this new layer.   
 
 Step 8. Let's use the next block of code to draw a simple histogram of the salary estimates. You'll just need to add the object name to do this.
 
