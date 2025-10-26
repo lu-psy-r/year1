@@ -1,6 +1,6 @@
 ---
 title: 4. Customisation of graphs, and z-scores
-subtitle: Written by John Towse & Tom Beesley (2024)
+subtitle: Written by Tom Beesley (2025)
 order: 4
 ---
 
@@ -12,7 +12,7 @@ This page has been posted to allow you to view the lecture and learnr content ah
 Tom
 :::
 
-# 1. Week 4 Lecture
+## Week 4 Lecture
 
 
 Watch Part 1
@@ -45,19 +45,19 @@ Watch Lecture Part 4
 Download the lecture slides [here](data/Week_4/week4_lecture_slides.pptx)
 
 
-# 2. Pre-lab work
+## Pre-lab work
 
 -   Complete materials from sessions in previous week. Consolidate what we have already covered.
 
 -   This week - there's a new learnr tutorial to follow and help prep for what we are covering: [You can find it here](https://ma-rconnect.lancs.ac.uk/Psych121_week_4/){target="_blank"}.
 
-<!-- -   Make sure you [download the zip file for the RStudio tasks] (data/Week_4/week_4_2024v2.zip). -->
+Make sure you [download the zip file for the RStudio tasks] (data/Week_4/week_4_2025.zip).
 
-<!-- -   Create a new folder and upload the file into RStudio, ideally before the lab class. -->
+Create a new folder and upload the file into RStudio, ideally before the lab class.
 
 THE FOLLOWING TASKS ARE STILL BEING UPDATED....
 
-# 3. R Studio tasks
+## R Studio tasks
 
 Last week we introduced two different ways to get descriptive information about a numerical variable (column) as a function of a categorical variable. We discussed how this was extremely powerful, as we can look at the effect of an IV on the DV, which gets us a long way in the analysis of our psychological experiments!
 
@@ -71,11 +71,11 @@ and
 
 This week we'll first look at some more features of our powerful graphing tool, `ggplot()`.
 
-## 3.1 - Customisation of data plots
+### Customisation of data plots
 
 Step 1. Set up a folder for Week 4 and set the working directory.
 
-Step 2. Bring the `week_4_2025.zip` file into R Studio server. Like last week, upload the zip file. Launch the week_4 R script.
+Step 2. Bring the `week_4_2025.zip` file into R Studio server. Like last week, upload the zip file. Launch the week_4 R script. This will give you 3 files. 
 
 *If you've done Step 1 & 2 already as a lab preparation, super! Pat yourself on the back, skip these steps, and move on...*
 
@@ -83,21 +83,40 @@ Step 3. Once again, we're gong to be using several commands from the tidyverse l
 
 `library(tidyverse)`
 
-Step 4. Read in the "wages.csv" data. There's already a `read_csv()` script line for this, you just need to change the file name (like we've done in previous weeks). 
+Step 4. Read in the "wages.csv" data. There's already a `read_csv()` script line for this, you just need to change the file name and the object name (like we've done in previous weeks). 
 
-Step 5. Customize you graph work. We've provided some suggestions about adding titles and labels for your graph. Edit and play with the script lines to make them useful to you and to understand how they work. Note that the `ggplot` instructions have a similar structure / grammar to the `group_by()` instructions that we used: piping a data frame to a (here, plotting) function and piping that to an output or summarisation format.
+Step 5. Draw a graph of the screen time data, with the phone type on the x axis and the usage data on the y axis. You've done this last week, so it should be straightforward. 
 
--   Try change the text, the colours, and so on of the graphs.
+Step 6. Customize you graph work. We've provided some suggestions about adding titles and labels for your graph. Edit and play with the script lines to make them useful to you and to understand how they work. Note how we are using the piping command, `%>%`, to send the data into the ggplot() commands. When we build up layers of the graph we `+` each layer to the graph (we'll learn more about this in future weeks).
+
+-   Try to change the text, the colours, and so on of the graphs.
 -   Add comments for yourself about what the different commands do. The idea is to learn by trying different things out (changing values, taking out elements of the command, putting other is) and record for yourself.
--   If you are struggling or not sure, try look at help files.
 
-## 4.2 - z-scores
+Step 7. Let's add a boxplot over the top of our violin plots: 
+
+Step 8. Let's use the next block of code to draw a simple histogram of the salary estimates. You'll just need to add the object name to do this.
+
+Step 9. We'll now use a new tool to split the data up by the "family_position" variable. This technique is called "faceting". facet_wrap() makes a long ribbon of panels according to the variable(s) you specify. This is useful if you have a single variable with many levels and want to arrange the plots in a more space efficient manner.
+
+```{r}
+#| eval: false
+
+# remember to add a + to the end of the graph command
+facet_wrap(vars(family_position))
+
+```
+
+You should have a plot with 4 different graphs, each showing a histogram for each value in the family position variable.
+
+Step 10. We've included the `screentime.csv` data again this week and given you some code to work with. Try out some of the techniques you've learnt in this week's tutorial as well as practicing the technqiues you've learnt in previous weeks. You'll see we've included a new type of plot: `geom_density()` which is another great way to plot distributions of data. As always, make sure you add comments to your ode. 
+
+## z-scores
 
 > Hint / Reminder: Sketch a normal (z score) distribution and mark the mean/mode, and mark off the relevant parts of the question so you know what you are trying to achieve and how to interpret any calculations you make.
 
 > Hint/ Guide 2. For questions 6 & 7, typically in psychology we use the 5% level as a cutoff to decide, in broadly described terms, whether something is extreme or unlikely vs. at least somewhat plausible or likely.
 
-### 4.2.1 z-scores 1
+### z-scores basics
 
 z-score distributions
 
@@ -107,13 +126,13 @@ Q2. If a distribution has a mean of 100 and a standard deviation of 10, what is 
 
 Q3. If a distribution has a mean of 157 and a standard deviation of 19, what is the raw score equivalent to a z-score of 1?
 
-### 3.2.2 Using z-score tables
+### Using z-score tables
 
 Q4. What proportion of scores lie between the mean and a z-score of 0.5?
 
 Q5. What is the combined proportion of scores lying between z=-1.2 and z=.85?
 
-### 3.2.3 z-scores 3 Applying z-scores to inferential problems
+### Applying z-scores to inferential problems
 
 Q6. A Neuropsychologist has presented a test of face recognition to 200 neurotypical participants and finds that the scores are normally distributed with a mean of 85 and the standard deviation of 12. Two brain-damaged patients are also given the test. The one with right hemisphere brain damage scored 58 and the one with left hemisphere damage scored 67.
 
@@ -129,13 +148,13 @@ Q6. A Neuropsychologist has presented a test of face recognition to 200 neurotyp
 
 6.  Is this patient likely to belong to the population of neurotypical participants? (justify your answer)
 
-### 3.2.4 Final z-score challenge
+### Final z-score challenge
 
 Come back to this afterwards for some extra practice if you want:
 
 Q7. Tom Bunion has completed a huge research study and measured the foot size of men and women and found each to be normally distributed. The men have a mean size of 55 with a standard deviation of 5 and the women a mean of 33 and a standard deviation of 5. Joanna Toes has foolishly measured two individuals but forgotten to note their gender. These have foot sizes of 37 and 47. To which gender is each more likely to belong? What evidence is there for this?
 
-# 4. RStudio and stats humour
+## RStudio and stats humour
 
 For a bit of fun... The following are parody music videos about stats. Now that you have a few weeks' experience with R Studio and also, an introduction to hypothesis testing, you might appreciate the following
 
@@ -149,22 +168,7 @@ Hypothesis testing and p values (plus bunny rabbits and a dog)
 <iframe width="560" height="315" src="https://www.youtube.com/embed/HTdo6xjfFHI?si=Z5Z4W5kggt5Ef0um" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ```
 
-
-# 5. Summary for the first block of PSYC121 (week 1-5)
-
-Want to check the lab slides used for this week in the Levy Lab? They are [here](data/Week_4/week 4 analysis_lab24.pptx)
-
-You can review all the lab handout material so far across this site. We've also put together more-or-less completed scripts from this block of teaching so you can review what you have created:
-
-[Week 2 R script is here](data/Week_4/Week_2_complete_24.R)
-
-[Week 3 R script is here](data/Week_4/Week_3_complete_24.R)
-
-[Week 4 R script is here](data/Week_4/week_4_complete_24.R)
-
-[Information about the z-score questions are here](data/Week_4/Week_4_z-scores_answers.pdf){target="_blank"}
-
-# 6. Extra external R resources 
+## Extra external R resources 
 
 Some students have asked for a pointer to additional R resources so they can structure some time exploring the R system. There are lots, but this is good and very compatible with the teaching we provide:
 [R for data science](https://r4ds.hadley.nz){target="_blank"}

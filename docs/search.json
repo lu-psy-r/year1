@@ -27,12 +27,358 @@
     "objectID": "PSYC121/Week4.html#z-scores",
     "href": "PSYC121/Week4.html#z-scores",
     "title": "4. Customisation of graphs, and z-scores",
-    "section": "4.2 - z-scores",
-    "text": "4.2 - z-scores\n\nHint / Reminder: Sketch a normal (z score) distribution and mark the mean/mode, and mark off the relevant parts of the question so you know what you are trying to achieve and how to interpret any calculations you make.\n\n\nHint/ Guide 2. For questions 6 & 7, typically in psychology we use the 5% level as a cutoff to decide, in broadly described terms, whether something is extreme or unlikely vs. at least somewhat plausible or likely.\n\n\n4.2.1 z-scores 1\nz-score distributions\nQ1. What is the relationship between the sign of a z-score and its position in a distribution?\nQ2. If a distribution has a mean of 100 and a standard deviation of 10, what is the raw score equivalent to a z-score of 1.96?\nQ3. If a distribution has a mean of 157 and a standard deviation of 19, what is the raw score equivalent to a z-score of 1?\n\n\n3.2.2 Using z-score tables\nQ4. What proportion of scores lie between the mean and a z-score of 0.5?\nQ5. What is the combined proportion of scores lying between z=-1.2 and z=.85?\n\n\n3.2.3 z-scores 3 Applying z-scores to inferential problems\nQ6. A Neuropsychologist has presented a test of face recognition to 200 neurotypical participants and finds that the scores are normally distributed with a mean of 85 and the standard deviation of 12. Two brain-damaged patients are also given the test. The one with right hemisphere brain damage scored 58 and the one with left hemisphere damage scored 67.\n\nWhat is the z score of the right hemisphere patient when compared to the neurotypical group?\nWhat proportion of neurotypical participants score lower than this patient?\nIs this patient likely to belong to the population of neurotypical participants? (justify your answer)\nWhat is the z score of the left hemisphere patient when compared to the neurotypical group?\nWhat proportion of neurotypical participants score lower than this patient?\nIs this patient likely to belong to the population of neurotypical participants? (justify your answer)\n\n\n\n3.2.4 Final z-score challenge\nCome back to this afterwards for some extra practice if you want:\nQ7. Tom Bunion has completed a huge research study and measured the foot size of men and women and found each to be normally distributed. The men have a mean size of 55 with a standard deviation of 5 and the women a mean of 33 and a standard deviation of 5. Joanna Toes has foolishly measured two individuals but forgotten to note their gender. These have foot sizes of 37 and 47. To which gender is each more likely to belong? What evidence is there for this?",
+    "section": "z-scores",
+    "text": "z-scores\n\nHint / Reminder: Sketch a normal (z score) distribution and mark the mean/mode, and mark off the relevant parts of the question so you know what you are trying to achieve and how to interpret any calculations you make.\n\n\nHint/ Guide 2. For questions 6 & 7, typically in psychology we use the 5% level as a cutoff to decide, in broadly described terms, whether something is extreme or unlikely vs. at least somewhat plausible or likely.\n\n\nz-scores basics\nz-score distributions\nQ1. What is the relationship between the sign of a z-score and its position in a distribution?\nQ2. If a distribution has a mean of 100 and a standard deviation of 10, what is the raw score equivalent to a z-score of 1.96?\nQ3. If a distribution has a mean of 157 and a standard deviation of 19, what is the raw score equivalent to a z-score of 1?\n\n\nUsing z-score tables\nQ4. What proportion of scores lie between the mean and a z-score of 0.5?\nQ5. What is the combined proportion of scores lying between z=-1.2 and z=.85?\n\n\nApplying z-scores to inferential problems\nQ6. A Neuropsychologist has presented a test of face recognition to 200 neurotypical participants and finds that the scores are normally distributed with a mean of 85 and the standard deviation of 12. Two brain-damaged patients are also given the test. The one with right hemisphere brain damage scored 58 and the one with left hemisphere damage scored 67.\n\nWhat is the z score of the right hemisphere patient when compared to the neurotypical group?\nWhat proportion of neurotypical participants score lower than this patient?\nIs this patient likely to belong to the population of neurotypical participants? (justify your answer)\nWhat is the z score of the left hemisphere patient when compared to the neurotypical group?\nWhat proportion of neurotypical participants score lower than this patient?\nIs this patient likely to belong to the population of neurotypical participants? (justify your answer)\n\n\n\nFinal z-score challenge\nCome back to this afterwards for some extra practice if you want:\nQ7. Tom Bunion has completed a huge research study and measured the foot size of men and women and found each to be normally distributed. The men have a mean size of 55 with a standard deviation of 5 and the women a mean of 33 and a standard deviation of 5. Joanna Toes has foolishly measured two individuals but forgotten to note their gender. These have foot sizes of 37 and 47. To which gender is each more likely to belong? What evidence is there for this?",
     "crumbs": [
       "Home",
       "PSYC121",
       "4. Customisation of graphs, and z-scores"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week4.html#week-4-lecture",
+    "href": "PSYC121/Week4.html#week-4-lecture",
+    "title": "4. Customisation of graphs, and z-scores",
+    "section": "Week 4 Lecture",
+    "text": "Week 4 Lecture\nWatch Part 1\n\n\nWatch Part 2\n\n\nWatch Lecture Part 3\n\n\nWatch Lecture Part 4\n\n\nDownload the lecture slides here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "4. Customisation of graphs, and z-scores"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week4.html#pre-lab-work",
+    "href": "PSYC121/Week4.html#pre-lab-work",
+    "title": "4. Customisation of graphs, and z-scores",
+    "section": "Pre-lab work",
+    "text": "Pre-lab work\n\nComplete materials from sessions in previous week. Consolidate what we have already covered.\nThis week - there’s a new learnr tutorial to follow and help prep for what we are covering: You can find it here.\n\nMake sure you [download the zip file for the RStudio tasks] (data/Week_4/week_4_2025.zip).\nCreate a new folder and upload the file into RStudio, ideally before the lab class.\nTHE FOLLOWING TASKS ARE STILL BEING UPDATED….",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "4. Customisation of graphs, and z-scores"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week4.html#r-studio-tasks",
+    "href": "PSYC121/Week4.html#r-studio-tasks",
+    "title": "4. Customisation of graphs, and z-scores",
+    "section": "R Studio tasks",
+    "text": "R Studio tasks\nLast week we introduced two different ways to get descriptive information about a numerical variable (column) as a function of a categorical variable. We discussed how this was extremely powerful, as we can look at the effect of an IV on the DV, which gets us a long way in the analysis of our psychological experiments!\nIn the labs students were showing great skills in utilising each of these tools:\naggregate(x = DV, by = list(IV), FUN = mean)\nand\ndataframe %&gt;% group_by(IV) %&gt;% summarise(label_header = mean(DV))\nThis week we’ll first look at some more features of our powerful graphing tool, ggplot().\n\nCustomisation of data plots\nStep 1. Set up a folder for Week 4 and set the working directory.\nStep 2. Bring the week_4_2025.zip file into R Studio server. Like last week, upload the zip file. Launch the week_4 R script. This will give you 3 files.\nIf you’ve done Step 1 & 2 already as a lab preparation, super! Pat yourself on the back, skip these steps, and move on…\nStep 3. Once again, we’re gong to be using several commands from the tidyverse library (the pipe operator is one example) so we need to ensure that it’s active. Run the command\nlibrary(tidyverse)\nStep 4. Read in the “wages.csv” data. There’s already a read_csv() script line for this, you just need to change the file name and the object name (like we’ve done in previous weeks).\nStep 5. Draw a graph of the screen time data, with the phone type on the x axis and the usage data on the y axis. You’ve done this last week, so it should be straightforward.\nStep 6. Customize you graph work. We’ve provided some suggestions about adding titles and labels for your graph. Edit and play with the script lines to make them useful to you and to understand how they work. Note how we are using the piping command, %&gt;%, to send the data into the ggplot() commands. When we build up layers of the graph we + each layer to the graph (we’ll learn more about this in future weeks).\n\nTry to change the text, the colours, and so on of the graphs.\nAdd comments for yourself about what the different commands do. The idea is to learn by trying different things out (changing values, taking out elements of the command, putting other is) and record for yourself.\n\nStep 7. Let’s add a boxplot over the top of our violin plots:\nStep 8. Let’s use the next block of code to draw a simple histogram of the salary estimates. You’ll just need to add the object name to do this.\nStep 9. We’ll now use a new tool to split the data up by the “family_position” variable. This technique is called “faceting”. facet_wrap() makes a long ribbon of panels according to the variable(s) you specify. This is useful if you have a single variable with many levels and want to arrange the plots in a more space efficient manner.\n\n# remember to add a + to the end of the graph command\nfacet_wrap(vars(family_position))\n\nYou should have a plot with 4 different graphs, each showing a histogram for each value in the family position variable.\nStep 10. We’ve included the screentime.csv data again this week and given you some code to work with. Try out some of the techniques you’ve learnt in this week’s tutorial as well as practicing the technqiues you’ve learnt in previous weeks. You’ll see we’ve included a new type of plot: geom_density() which is another great way to plot distributions of data. As always, make sure you add comments to your ode.",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "4. Customisation of graphs, and z-scores"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week4.html#rstudio-and-stats-humour",
+    "href": "PSYC121/Week4.html#rstudio-and-stats-humour",
+    "title": "4. Customisation of graphs, and z-scores",
+    "section": "RStudio and stats humour",
+    "text": "RStudio and stats humour\nFor a bit of fun… The following are parody music videos about stats. Now that you have a few weeks’ experience with R Studio and also, an introduction to hypothesis testing, you might appreciate the following\nThe R Inferno Song (Teenage Dirtbag Parody) filmed largely on campus at Maynooth University, Ireland with stats students and staff:\n\nHypothesis testing and p values (plus bunny rabbits and a dog)",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "4. Customisation of graphs, and z-scores"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week4.html#extra-external-r-resources",
+    "href": "PSYC121/Week4.html#extra-external-r-resources",
+    "title": "4. Customisation of graphs, and z-scores",
+    "section": "Extra external R resources",
+    "text": "Extra external R resources\nSome students have asked for a pointer to additional R resources so they can structure some time exploring the R system. There are lots, but this is good and very compatible with the teaching we provide: R for data science",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "4. Customisation of graphs, and z-scores"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week2.html",
+    "href": "PSYC121/Week2.html",
+    "title": "2. Descriptive statistics in RStudio",
+    "section": "",
+    "text": "Below you will see the embedded lecture videos. As a reminder these lectures in PSYC121 are designed to provide an explanation of the conceptual and computational work involved in some core analytic material. The lab classes are designed (a) to put these ideas into practice (b) to work with R Studio in practicing with data, as a tool that helps you to explore data. So the lectures and lab complement each other, and we will continue to tackle this approach across the module.\nWatch Part 1\n\n\nWatch Part 2\n\n\nWatch Part 3\n\n\nDownload the lecture slides here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "2. Descriptive statistics in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week2.html#week-2-lecture",
+    "href": "PSYC121/Week2.html#week-2-lecture",
+    "title": "2. Descriptive statistics in RStudio",
+    "section": "",
+    "text": "Below you will see the embedded lecture videos. As a reminder these lectures in PSYC121 are designed to provide an explanation of the conceptual and computational work involved in some core analytic material. The lab classes are designed (a) to put these ideas into practice (b) to work with R Studio in practicing with data, as a tool that helps you to explore data. So the lectures and lab complement each other, and we will continue to tackle this approach across the module.\nWatch Part 1\n\n\nWatch Part 2\n\n\nWatch Part 3\n\n\nDownload the lecture slides here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "2. Descriptive statistics in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week2.html#pre-lab-work",
+    "href": "PSYC121/Week2.html#pre-lab-work",
+    "title": "2. Descriptive statistics in RStudio",
+    "section": "Pre-lab work",
+    "text": "Pre-lab work\nLast week, among other things, we asked you to\n\nRoll some dice, carry out some (relatively) straightforward ‘hand’ calculations of central tendency\nConnect to the RStudio server, create a folder and get used to the different “panes”\nWithin RStudio upload and run a script (a set of instructions), and explore annotations\nAdapt the script commands to perform calculations on the dice rolls within RStudio\nComplete a survey so that we can collect data for analysis teaching\n\nYour progress was great! We start with small steps and build up - but this is a nice start and as staff we’re pleased how things went!\nBefore the lab, make sure you have worked through the material in the week2 learnr tutorial. The link is here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "2. Descriptive statistics in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week2.html#lab-activities",
+    "href": "PSYC121/Week2.html#lab-activities",
+    "title": "2. Descriptive statistics in RStudio",
+    "section": "Lab activities",
+    "text": "Lab activities\n\nR Studio recap and setup\nFor a reminder of how to start RStudio, see week 1’s instructions\n(remember: off campus, you will need to be on the VPN)\n\nA word of advice (from David Howell’s statistics book: One more word of advice I can’t resist adding what is perhaps the best advice I have. If there is something that you don’t understand, just remember that “Google is your friend.” She certainly is mine. (Well, maybe Google is getting a bit pushy, but there are many other search sites.) If you don’t understand what Fisher’s Exact Test is, or you don’t like my explanation, go to Google and type in Fisher’s Exact Test. I just did that and had 260,000 hits. You can’t tell me that there isn’t going to be something useful in there.)\n\nIn week 1, we had a tiny dataset (relatively speaking) that we entered into R through a script line. That worked for what is was. But it’s going to become painful and tedious when (a) we want to work with larger datasets (b) we have data more complex than a 1-dimensional list of numbers (think about some 2-dimensional data sheets you might have encountered in excel for example)\nR can handle data files, and this week we’re going to explore them. Within R, we can specify ‘data frames’ which can have, essentially, multiple columns of data, and we can link data files to data frames for processing\nTo make things straightforward, each week we’ll provide students with a “zip” file that contains the script to start from (which you can expand and annotate etc, and save on your file space). We’ll also provide a data file(s) for you to use in the zip file. R can then import these files into the RStudio environment. So when you upload the zip file, you can import the data AND you can open up the script\n\n\nWorking with multiple columns\nSome years ago, a large group of participants gave an estimate of the weight of Penelope the cow. Just over 17,000 guesses. And the distribution of guesses was something like this: \nWhat we can see from this graph is that:\n\nGuesses formed a roughly normal distribution. There is a bit of a skew with a right-hand tail, but this is inevitable as a weight of less than 0 is physically impossible, but there is no limit of the semantics of a large guess.\nThe mean guess weight (1,287 lbs) is very close to the actual (true) weight of the cow (1,355 lbs). So even though lots of people were inaccurate, a central tendency measure has a pretty good alignment with the true weight. This is known as the Wisdom of Crowds phenomenon, first identified by Galton in 1907 (though he suggested using the median weight). The concept of the wisdom of crowds continues to be used and investigated in psychology today (see for example here and here)\n\nLet’s look at (a sample of) the PSYC121 student data collected on guessing the weight of Penelope, and ask whether it resembles the properties of this large dataset.\n\n\nCreate a folder and set the “working directory”\nLast week you should have created a “PSYC121” folder. This week, we’ll organise our work a little more. Follow these steps to organise your scripts and data:\n\nWithin the PSYC121 folder, create a “Week_1” folder and a “Week_2” folder (you don’t have to use the underscores, but it’s good practice)\nMove the Week 1 script (the .R file) into the Week 1 folder. To do this, tick the box next to the Week 1 R file, select “More” and then “Move”. Find the Week 1 folder and select it.\nNavigate to the Week 2 folder and set it as the “working directory”. To do this, click “More” and “Set as Working Directory”. What does this mean? Well, RStudio is a bit unusual, in that you need to tell it where you want to work. So even if you navigate to a different directory, RStudio doesn’t assume that’s where it should look for files. So when you’re sure you’re in the correct folder you want to work in, make sure you Set as Working Directory.\nDownload and then upload the zip file into RStudio. You’ll remember from last week that we need to download the zip file from this page and then upload it into [RStudio]. This week we’re using a file named week_2_2025.zip. Click on this link to download the zip file. Follow the same process as last week to achieve this step.\n\n\n\nLibrary() and read_csv()\nLet’s start working with our data, by opening up (clicking on) the script “Week_2.R” file.\nThe first command is to load a library of functions:\n\nlibrary(tidyverse)\n\nTo run this, simply click anywhere on line 1 of the R script to put the cursor there, and press ctrl+enter (cmd+enter on a mac) or click the button called run. You will see a number of messages appear in the console. Don’t worry about these, or worry too much about what exactly this command is doing. Essentially this is giving us some useful tools for our analysis. We will introduce the features of the tidyverse gradually during this course.\nIf you have followed all the instructions to this point, you should see a “csv” file in the Week 2 folder. “csv” is a filetype that means “comma separated values” - it’s a very typical way to store data in very small files. While the data exist in this file, we actually need to get them into an R object so we can explore the data on the RStudio server. To do this, run the next line of code:\n\ncows &lt;- read_csv(\"penelope22.csv\")\n\nWhat this command accomplished was to read the data file called ‘penelope22.csv’ into an object in R called cows. You could use any object label - it doesn’t have to be ‘cows’- but it’s important to then keep that alternate name consistent in what you do next.\nWe can use the following command to view the data in the spreadsheet format:\n\nView(cows)\n\nThis presents the data in a window of RStudio. As you look through the data, note that “NA” means not available or missing data. Does this file structure start to make some sense to you?\n\n\nFinding the mean and median estimates\nUse the data to answer the following questions…\n\nWhat is the mean weight estimates?\nWhat is the standard deviation of the estimates?\nWhat is the median weight of the estimates?\nWhich of these central tendency measures is the more accurate measure of the true cow weight? (make a judgement)\nWhat is the mean weight estimate (and standard deviation) for female respondents and non-female (male / non-binary /prefer not to say) respondents?\n\nYou may be thinking, how do I possibly do any of this?! Well this week most of the commands you need are contained in the R script you have downloaded. Also, remember from last week, we explored the R command:\n\nmean(week_1_lecture_data)\n\nThat gave us the mean of the small dataset week_1_lecture_data. This time, we want to explore the penelope dataset. But also, the lecture_data was just a single list of numbers. The penelope22 object is a 2D datasheet: it has rows and columns. So we need to tell R Studio which column we are interested in. RStudio uses the format object_name$column_name. So run the following lines in the script:\n\nmean(cows$estimate) \n\n\nsd(cows$estimate)\n\nSo from this, can you work out what you would do to get the median value? Part of the command is given to you, can you change the text so that it works?\n\n\nCalculations from a range of columns\nWe have seen that:\n\nmean(cows$estimate) \n\nwill provide a mean of the column “estimate”. In the third column, named “female_estimate”, we have the estimates of just the female respondents. In the fourth column, named “other_estimate”, we have the estimates of the “other” respondents (i.e., males and non-binary and those that prefer not to say).\nCan you now figure out how you might get information about the estimate from the female data (only) or the non-female data? Try this out and compare with others on your table to check you are getting the same answers. You will certainly find that the result of the this command produces an “NA” result. This means that the answer is “Not Available”, or in other words, is a “missing value”. This is because some of the values in this column are NA, and the mean of a column with NAs will always lead to the result NA.\nBut thankfully there is a solution. Try changing the script so it looks like this:\n\nmean(cows$female_estimate, na.rm = TRUE )\n\nAny different? The na.rm = TRUE instruction tells RStudio that missing data can be ignored in this mean calculation. (in technical language, na.rm is a parameter of the function mean that removes the NAs if set to TRUE)\n\n\nSimple graphs\nRStudio can be used to create graphical data plots that can help interpret datasets\nThe first thing we can do is create a histogram distribution of guesses from the sample student data to compare with the previous large sample study (i.e. the 17,000 guesses):\n\nhist(cows$estimate)\n\nOne way to alter or adjust the histogram is to change the width of the bars, the intervals, between each plot section. Try run this line from the script\n\nhist(cows$estimate, breaks = *MISSING*)\n\nDoes it work? No? What you need to do is replace the two question marks in the script (or better still, create a new instruction line in which you amend this to have a numerical value representing the number of different plot bars. Try at least 3 different values. Look at and think about how this affects the visual distribution.\nWe can also create a “box and whisker plot”. Here’s a general simple description of a box-and-whisker plot as a graphical representation of data:\n\n\n\nExtension and practice. Apply your new skils to a different dataset\nIn the zip file, we also provide data on the estimates of the percentage of immigrants in the UK. This will allow you to explore this variable, create visualisations of the data and its spread. We’ll be looking at a version of this variable in week 3: but for now, can you apply the analysis of the penelope data to the immigration data (report descriptive statistics)? Write some new script lines to investigate this additional dataset, and annotate those new script lines.",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "2. Descriptive statistics in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week2.html#data-collection-exercise",
+    "href": "PSYC121/Week2.html#data-collection-exercise",
+    "title": "2. Descriptive statistics in RStudio",
+    "section": "Data collection exercise",
+    "text": "Data collection exercise\nIn order to learn about psychology and data analysis techniques, we need data! Rather than rely too much on artificial data (certainly it is sometimes useful to say “Here are a bunch of numbers and this is what we can do with them” – think about the R Studio example for this week’s lab) for the most part, we prefer to draw on datasets that are a bit more engaging and meaningful that you have a stake in yourself! By using a common data set, that we can return to over the year, we can also build up familiarity and confidence in the data and remove a potential obstacle to thinking about the more important analysis part.\nSo a key task will be for everyone to have a go at taking our online survey, and contribute to a dataset that can be used throughout the year.\nThe survey runs by following this link",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "2. Descriptive statistics in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week2.html#post---lab-recap-the-slides-we-used",
+    "href": "PSYC121/Week2.html#post---lab-recap-the-slides-we-used",
+    "title": "2. Descriptive statistics in RStudio",
+    "section": "Post - lab recap: The slides we used",
+    "text": "Post - lab recap: The slides we used\nWant to see again the introduction slides that we used in the Levy lab? They are available here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "2. Descriptive statistics in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/index.html",
+    "href": "PSYC121/index.html",
+    "title": "Statistics for Psychologists I",
+    "section": "",
+    "text": "Welcome\nWelcome to the PSYC121 lab material for 2024!\nIn this module we will provide you with an introduction to data handling, data processing and data visualisation. What that means is that, by the end of the this module (at Christmas time), you will be able to take a set of data, look at some basic statistics (e.g., the mean value), filter and process the data in order to answer basic questions about it, and present the data in an appealing way with different graphs. On top of this, you will be able to apply some of your knowledge of the basic “inferential” statistical tests that we will introduce in the lecture series (e.g., “t-test”).\nIn Week 1 we will introduce you to the software that we use to do all this useful work in statistics: “R” and “RStudio”. This is a coding language, and you will be taught the basics of how to write code in order to do all of the above key steps in data analysis. This tuition will continue in Term 2, and in your statistics modules in Year 2. Coding is challenging, but we know from experience that those students who attend classes, who work through the exercises carefully, and who seek help when they need it, do very well on these modules.\nMost of all, it’s important that you recognise that data analysis (statistics) is a critical aspect of the study of psychology. When we want to understand behaviour, we take measurements of that behaviour, which the majority of the time will result in quantitative (numerical) data. In order to understand the behaviour in a meaningful way, we need to conduct all of the above steps in our data analysis workflow (view data, conduct basic stats, draw graphs, etc). In summary, we cannot investigate psychological processes without the toolbox of statistics and data analysis techniques you will learn in PSYC121/122.\n\n\nWorking at your own pace and seeking help\nWe have carefully prepared and refined the lab materials in this course over several years, and we feel that the pace of the materials is just about right for our students. Some students will complete them more quickly, and others more slowly - both of these scenarios are absolutely fine. You should work at the pace that suits you best, making sure you understand the materials before you move forward.\nIt is fairly inevitable that you will get stuck on the lab materials in this module at some point. This might be in Week 1, Week 2, or later. When you do, it’s important you reach out for help:\n\nAsk your friends on your table. We’ve designed this teaching space to help collaborative work. You are encouraged to work with other students. Make sure you ask others to explain how they’ve solved an exercise. Make sure you help out others where you can. Always make sure you understand the code and the exercise; don’t simply be satisfied that you’ve got the right answer.\nAsk a GTA or Lecturer. Our Graduate Teaching Assistants are there to help you. There are no “stupid questions” in statistics, so just ask the GTAs any question about what you’re doing. Likewise, ask the Lecturer.\nAsk on the Discussion Forum. On the PSYC121 moodle page you will find a Discussion Forum. This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don’t be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).\nAsk on the module Q & A session. Each week we hold a “Q&A” online session where we will try and resolve any general queries and problems. It’s an ideal time to discuss things that students are struggling with or confused about, and can share ideas and answers. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but also you can ask in the session itself.\n\nAsking good questions - it’s really important that you give us as much information as you can when you ask your questions (in class and especially on the forum). It’s so much harder to help respond to “I can’t do Exercise 5 in Week 7” (because we don’t know why it is that you can’t do it) than for example “In Exercise 5 of Week 7, I’ve managed to read in the data, put the graph looks quite odd. Here is the code I’m using…”\n\n\nCourse Contacts\nIf you have something that needs to be private, then please feel free to email the academic staff at the email addresses below:\n\n\n\n\nEmail Address\n\n\n\n\nTom Beesley (Coordinator)\nt.beesley at lancaster dot ac dot uk\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "PSYC121"
+    ]
+  },
+  {
+    "objectID": "PSYC121/data/Week_9/Week_9_learnr.html",
+    "href": "PSYC121/data/Week_9/Week_9_learnr.html",
+    "title": "PSYC121: Week 9 Lab",
+    "section": "",
+    "text": "For this week’s online tutorial we have data on how much students use social media platforms and people’s mean reading times from the stroop task. We will use these data to look at how we create new variables (columns) using mutate(). We will also expand what we have learnt about filtering data based on conditions, using the filter() function. Let’s take a look at the data we have using the summary(), to get useful statistics. You can also use head() to look at the first few rows of data\n\n\nsummary(data)\nhead(data)"
+  },
+  {
+    "objectID": "PSYC121/data/Week_9/Week_9_learnr.html#exploring-the-data",
+    "href": "PSYC121/data/Week_9/Week_9_learnr.html#exploring-the-data",
+    "title": "PSYC121: Week 9 Lab",
+    "section": "",
+    "text": "For this week’s online tutorial we have data on how much students use social media platforms and people’s mean reading times from the stroop task. We will use these data to look at how we create new variables (columns) using mutate(). We will also expand what we have learnt about filtering data based on conditions, using the filter() function. Let’s take a look at the data we have using the summary(), to get useful statistics. You can also use head() to look at the first few rows of data\n\n\nsummary(data)\nhead(data)"
+  },
+  {
+    "objectID": "PSYC121/data/Week_9/Week_9_learnr.html#mutating-new-variables",
+    "href": "PSYC121/data/Week_9/Week_9_learnr.html#mutating-new-variables",
+    "title": "PSYC121: Week 9 Lab",
+    "section": "“Mutating” new variables",
+    "text": "“Mutating” new variables\nIn this data set, all of the variables are numerical. Sometimes we may want to recode a variable to turn it from a continuous numerical variable, to a categorical/nominal variable. For example, maybe we want to compare students who are high users of facebook, to those who are low users of facebook. We could do that in the following way using the mutate() function:\n\n\ndata %&gt;% \n  mutate(facebook_use = facebook_days &gt;= 4)\n\n\n\n\n\nWhen you run this code you’ll see that mutate() has created a new column on the end, which tells us whether the person uses facebook for at least 4 days a week. Note that the new column is called “facebook_use” - this works in exactly the same way as the summarise() commands you have been practising, where you tell it the new variable name you want to create. The values “TRUE” and “FALSE” are not especially informative here - we probably want to be a bit clearer in the names we give to these levels of the new variable. To do that we can modify this code a little to use an if_else(), which checks if the “conditional statement” (facebook_days &gt;= 4) is TRUE or FALSE, and specifies the values to use in each case:\n\n\ndata %&gt;% \n  mutate(facebook_use = if_else(facebook_days &gt;= 4,true = \"high\",false = \"low\"))\n\n\n\n\n\n\nJust like with summarise(), we can have multiple new columns created within the one mutate() command. Each of these needs to be separated by a comma, and it’s good practice to put each one on a new line. Try copying and pasting the if_else command, and then modifying it to make two new variables to code for “high” and “low” instagram and twitter use:\n\n\ndata &lt;- \n  data %&gt;% \n  mutate(facebook_use = if_else(facebook_days &gt;= 4,true = \"high\",false = \"low\"),\n         instagram_use = ,\n         twitter_use = )\n\ndata\n# because we are assigning (&lt;-) the changes to update \"data\", \n# we write it again here to display the results\n\n\n\n\n\ndata &lt;- \n  data %&gt;% \n  mutate(facebook_use = if_else(facebook_days &gt;= 4,true = \"high\",false = \"low\"),\n         instagram_use = if_else(instagram_days &gt;= 4,true = \"high\",false = \"low\"),\n         twitter_use = if_else(twitter_days &gt;= 4,true = \"high\",false = \"low\"))\n\ndata\n# because we are assigning (&lt;-) the changes to update \"data\", \n# we write it again here to display the results\n\n\n\n\n\nLet’s now look at our avg_stroop variable, and first plot the data in a box and whisker plot:\n\n\ndata %&gt;% \n  ggplot() +\n  geom_boxplot(aes(y = avg_stroop))\n\n\n\n\n\n\nWe can see here that we have a number of points that lie outside the “whiskers” on the plot. One thing we can do to identify potential outliers is to create a new variable that transforms the data to a z distribution. This is easy to do in R using the scale() function:\n\n\ndata &lt;- \n  data %&gt;% \n  mutate(z_stroop = scale(avg_stroop))\n\ndata\n# because we are assigning (&lt;-) the changes to update \"data\", \n# we write it again here to display the results\n\n\n\n\n\n\nYou may remember that a distribution of z scores has a mean of 0 and a standard deviation of 1. Let’s check that here:\n\n\nmean()\nsd()\n\n\n\n\n\nmean(data_set$variable) # example\nsd(data_set$variable) # example\n\n\n\n\nmean(data$z_stroop)\nsd(data$z_stroop)\n\n\nYou’ll notice that the value for the mean is not quite 0 (but it is very very small!). This is probably due to a rounding of values in the scale() function. To get a value of 0 we could encolse the statement in the round() function, e.g. `round(mean(),digits = 2).\n\n\n\nA good way to get a sense of the range of values in our z-scores is to use arrange() to sort them in order. We can then use head() and tail() to see the values at each end of the distribution (the first ‘n’ rows, and the last ‘n’ rows)\n\n\ndata &lt;- \n  data %&gt;% \n  arrange(desc(z_stroop)) # arrange in descending order\n\nhead(data, n = 10)\ntail(data, n = 10)\n\n\n\nYou can see that we’ve got some quite extreme values here. First, we’ve got some very slow participants, showing average reading times of over 10 seconds. Secondly, we’ve got some extremely fast participants. The fastest participant of all is particularly unusual - perhaps they put in incorrect values into the survey?"
+  },
+  {
+    "objectID": "PSYC121/data/Week_9/Week_9_learnr.html#filtering-data",
+    "href": "PSYC121/data/Week_9/Week_9_learnr.html#filtering-data",
+    "title": "PSYC121: Week 9 Lab",
+    "section": "Filtering data",
+    "text": "Filtering data\nAs you can see, we quite often want to filter our data to select or remove some of the rows we are working with. To do this, we can use the filter() command.\nTo use filter(), we simply specify the data first, and then we need to use an expression to state how we want the data to be filtered. For example:\n\n\ndata %&gt;% \n  filter(z_stroop &lt;= 2) \n# find all those people who have z_stroop values lower than positive 2\n\n\n\n\nCommon expressions\nThe following table gives some examples of very common expressions used in filtering data:\n\n\n\n\n\nOperator\nMeaning\nExample\n\n\n\n\n==\nis the same as\nfilter(dataQ, age==27)\n\n\n&lt;\nis less than\nfilter(dataQ, age&lt;25)\n\n\n&gt;\nis greater than\nfilter(dataQ, age&gt;30)\n\n\n!=\nis not equal to\nfilter(dataQ, gender != 'female')\n\n\n&\nand\nfilter(dataQ, age&lt;30 & gender == 'female')\n\n\n|\nor\nfilter(dataQ, gender == 'male' | gender == 'non-binary')\n\n\n\n\n\nIt’s particularly important to note the difference between “==” and “=” in R. “=” is used as an assignment operator - you’ve used it several times already inside functions (e.g., na.rm = TRUE, mu = 29600). You can think of “=” as meaning “set this to”. In contrast the double equals operator, “==”, asks a question: “is this thing the same as this other thing?” In the above example, z_stroop &lt;= 2, it looks for all rows in the data where z_stroop is the same as, or less than, the value of 2. In programming terms, the expression returns a boolean value, which reports whether the statement is TRUE or FALSE (and when used in the filter, it finds all rows where it is TRUE). You can see this in the results of the following “conditional expressions”:\n\n\n2 == 3\n\"blah\" == \"blah\"\n\"blah\" == \"BLAH\"\n\"John\" == \"rock star\"\nmean(c(3,4,5,6)) == 4.5\nTRUE == FALSE # this is getting meta...\n\n\n\n\n\nPractice filtering\nPractice writing your own filter commands in the box below. Try to filter the data to match the following queries:\n\nData for those people who are “high” facebook users (hint: facebook_use == )\nData for those people who use instagram for 7 days, and have a z_stroop score of less than -1 (hint: use &)\nData for those people who are “high” users of at least one social media platform (hint: this needs two “or”: | )\n\n[Each hint here gives the solution to each query]\n\n\ndata %&gt;% \n  filter()\n\n\n\n\n\n# Query 1 solution\ndata %&gt;% \n  filter(facebook_use == \"high\")\n\n\n\n\n# Query 2 solution\ndata %&gt;% \n  filter(instagram_days == 7 & z_stroop &lt; -1)\n\n\n\n\n# Query 3 solution\ndata %&gt;% \n  filter(facebook_use == \"high\" | instagram_use == \"high\" | twitter_use == \"high\")"
+  },
+  {
+    "objectID": "PSYC121/data/Week_9/Week_9_learnr.html#section-6",
+    "href": "PSYC121/data/Week_9/Week_9_learnr.html#section-6",
+    "title": "PSYC121: Week 9 Lab",
+    "section": "",
+    "text": "End of tutorial\nThis is now the end of the online tutorial on filter() and mutate(). Please return to the tasks in the lab worksheet."
+  },
+  {
+    "objectID": "PSYC121/Week1.html",
+    "href": "PSYC121/Week1.html",
+    "title": "1. Introduction to PSYC121",
+    "section": "",
+    "text": "PLEASE NOTE: Prof. John Towse is on sabbatical (research leave) this year and so will not be answering emails on his content. All questions should be posted on the discussion forum and will be answered by Dr Tom Beesley.\nWatch the introduction: Lecture Part 1\n\nWatch Lecture Part 2\n\nWatch Lecture Part 3\n\nWatch Lecture Part 4\n\nDownload the lecture slides here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "1. Introduction to PSYC121"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week1.html#task-3.1---check-in-with-the-university-attendance-register",
+    "href": "PSYC121/Week1.html#task-3.1---check-in-with-the-university-attendance-register",
+    "title": "1. Introduction to PSYC121",
+    "section": "Task 3.1 - check-in with the University attendance register",
+    "text": "Task 3.1 - check-in with the University attendance register\nWhen you arrive, make sure you have checked-in to your Analysis session in the Levy lab. All students are required by the University to confirm attendance at taught session\nStaff will remind you of this in your class.",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "1. Introduction to PSYC121"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week1.html#task-3.2---getting-dicy",
+    "href": "PSYC121/Week1.html#task-3.2---getting-dicy",
+    "title": "1. Introduction to PSYC121",
+    "section": "Task 3.2 - Getting dicy",
+    "text": "Task 3.2 - Getting dicy\n\n\n\n\n\nHere’s a simple task for you to complete as a group around each of the workstations;\nYou will be given a pair of dice\n\nWorking in pairs, one person rolls both dice.\nAdd up the total on each of them and have someone record that total (if you don’t have some spare paper or a pen, use your computer)\nRepeat those steps 20 times.\nThen swap over your roles (the person rolling the dice, the person recording the outcome)\nOnce everyone at the workstation has had a turn at this, each person should attempt to work out (a) the mean and (b) the median of their dice roll total.\nCheck each others working, and discuss any differences or problems you have.\n\nAre all your answers the same? Why / why not? If not, are they very different or very similar?",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "1. Introduction to PSYC121"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week1.html#task-3.3---using-rstudio",
+    "href": "PSYC121/Week1.html#task-3.3---using-rstudio",
+    "title": "1. Introduction to PSYC121",
+    "section": "Task 3.3 - Using RStudio",
+    "text": "Task 3.3 - Using RStudio\n\nIntroducing R Studio\nR and RStudio is the software that we will be using to explore and learn about analysis in your Psychology degree. It’s a computational engine: a very snazzy calculator that you should see as your friend and ally in the journey to understand and appreciate psychology. It sits alongside what we teach about the concepts and interpretation of statistical analysis.\nR is the core software, RStudio is the interface for interacting with it. Put another way, R is the engine, RStudio is the cockpit.\nLike even a simplest calculator, it just does what you ask (at least when you ask nicely!) but it requires the user to know what they want from it and to understand what it is telling you. A calculator can’t help a kid get the right answer to a multiplication problem if they don’t know the difference between multiplication and division and addition etc. And whilst a calculator is brilliant at doing the number crunching (and as a bonus, R Studio can help with turning the numbers into beautiful graphs and images too), even a calculator requires a thoughtful person to take the answers and make sensible interpretations from them.\nTherefore, we need to learn both about the concepts of statistical analysis on the one hand, and the processing of statistical information -through R- on the other. The lectures will provide the starting point and the direction for statistical concepts, whilst these analysis labs provide the more practical experiences in how to use R, and how to make R your ally. Over the next year, in these labs we will increasingly be using RStudio to focus on the latter, processing side, which will allow you to focus your energies on the conceptual side and its relevance for appreciating psychology.\n\n\nGetting started with RStudio\nWe will be learning about R Studio through a simple but powerful web server architecture. That is, through the power of the internet, you can access and use R Studio by logging into a free account that we have provided and we will maintain for your use.\n\nHere’s a little secret: There are several different ways to access RStudio. For example, you can download a copy of the software onto your computer, or use a Virtual Machine set up to run a copy. There’s nothing to stop you having your local copy, but please note - we can’t support your own version through lab classes. We’re using the web server to make sure everyone has the same, controlled experience.\n\nTo log in to the R server, first make sure that you have the VPN switched on, or you will need to be connected to the university network (Eduroam). To set up the VPN, follow ISS instructions here or connecting to Eduroam here.\nWhen you are connected, navigate to https://psy-rstudio.lancaster.ac.uk, where you will be shown a login screen that looks like the below. Click the option that says “Sign in with SAML”.\n \nThis will take you through to the University login screen, where you should enter your username (e.g. ivorym) and then your university password. This will then redirect you to the R server where you can start using RStudio!\n\n\n\n\n\n\n\n\nNote\n\n\n\nIf you have already logged in through the university login already, perhaps to get to the portal, then you may not see the username/password screen. When you click login, you will be redirected straight to RStudio. This is because the server shares the login information securely across the university.\n\n\n\n\nWhat does RStudio look like?\nWhen RStudio starts, it will look something like this: \nRStudio has three panels or windows: there are tabs for Console (taking up the left hand side), Environment (and History top right) , Current file (bottom right). You will also see a 4th window for a script or set of commands you develop, also (on the left hand side).\n\n\nLet’s get started!\nThe first thing we want to do in RStudio is to create a folder for this week so that we can put the relevant material there and keep it tidy.\nFrom the lower-right panel of RStudio, click the files tab.\nSelect the “new folder” option and create a new folder (eg “week 1”)\nClick on that folder to open it\nNext, we’ve prepared some instructions for RStudio to use - this is called a “script”. So we need to get this script into the server for you to explore and play with\n\nDownload the “zip” file by clicking this link\nFind the location of the file on your computer and check it is saved as a “.zip” file\nReturn to RStudio\nClick “Upload”\nClick choose file and find the file on your computer.\nSelect the file and click “Open”. Click “OK”\n\nYou should now see the files extracted in the directory.\nYou should now have the script available in RStudio.\nUse “Save…As” to create a new version of the script. By doing this, you’ll be able to have a “before” and “after” version of the script and can go back over the changes\nIn the script, select or highlight the first line of text, which is this one:\n\nRun your first ever R instruction!\n\n5 + 5\n\nand “run” this line. That tells RStudio to carry out the instruction.\nYou should see that in the console tab, RStudio calculates the answer to this incredibly hard maths challenge! (amazing huh? OK, maybe not *that* amazing…).\n\n\nModify your first ever R instruction!\nUse your imagination – add a new line to the script and ask a different simple arithmetic question of your own choosing! What happens?\n\n\nCalculate descriptive stats in R for the first time!\nIn this week’s analysis lecture, we looked at measures of central tendency and how to calculate them. So let’s get R to do these calculations also!\nFirst, we tell R about the data used in the lecture. We’ve already created the instruction that will do exactly this and it is in the script, so run this line from the script\n\nweek_1_lecture_data &lt;- c(7,8,8,7,3,1,6,9,3,8)\n\nThis creates an “object” called week_1_lecture_data. We can then perform calculations on this object. For example, we can find the mean by running the following command (use the script to do this)\n\nmean(week_1_lecture_data)\n\nCheck the answer is the same we found in the lecture (it should be 6!).\nNext, let’s ask for the median by running this line from the script:\n\nmedian(week_1_lecture_data)\n\nThis also should be the answer from the lecture (7)\nR doesn’t have a built in function for the mode (in fact be careful, mode() does something very different to the mode command that we want). So we will use a library() command to bring in a new set of functions, one of which is a handy mode function called mfv(). Try highlighting the text “mvf” and press F1 to view the help on this function. Alternatively you can type ?mfv in the console. and press return.\n\nlibrary(modeest)\nmfv()\n\nWhat does R say the mode is?\n\n\nYour challenge\nHow can you get RStudio to verify / check the dice calculations that you attempted earlier? Think about how you might solve this problem, on the basis of what we have covered so far.\nWe will discuss this in class and attempt to get RStudio to check your answers. In doing so, annotate the script (add notes for you - not RStudio) using the “#” command",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "1. Introduction to PSYC121"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week1.html#before-you-finish",
+    "href": "PSYC121/Week1.html#before-you-finish",
+    "title": "1. Introduction to PSYC121",
+    "section": "Before you finish",
+    "text": "Before you finish\n\nMake sure you save a copy of the script that you have been working on by the end of the session. This provides you with the record - the digital trace - on what you have done. And it means you can come back and repeat any of the work you have performed.\nEnd your session on the RStudio server, this logs you out of the server and stops any ongoing activities and tasks you have set up, maybe in the background.\n\nThere is a red “power” button near the top right of the R studio window (do ask for help if you can’t find it). It’s a good habit to get into to turn the session off\n\n\nExtra content for outside the lab class\nIn your own time and think about the following:\nIn R, the leftward pointing arrow, “&lt;-”, is called the assignment operator. For example we used it in the command here:\n\nPSYC121_week_1_data &lt;- c(7,8,8,7,3,1,6,9,3,8)\n\nIt’s important to stop and think about what this does. When we use “&lt;-”, we create the variable label on the left (Analysis_week1_data) and we give it those numbers on the right. The nameAnalysis_week1_data is largely arbitrary: try use a variable of your own naming (your own name?) instead - and then use that alternative name for the other commands. QUICK TIP: there is a keyboard shortcut, alt+hyphen, which will give you the assignment arrow in R. Get used to this as it will save you lots of time in the long run.\n\nAnother tip: Throughout this year, we’ll use the convention of the “underscore” to separate words in labels (it_makes_them_easier_to_read than ifyoudidn’thaveanyspaces)",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "1. Introduction to PSYC121"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week1.html#task-3.4-review-the-learnr-sample-practice-questions",
+    "href": "PSYC121/Week1.html#task-3.4-review-the-learnr-sample-practice-questions",
+    "title": "1. Introduction to PSYC121",
+    "section": "Task 3.4 – Review the learnr sample / practice questions",
+    "text": "Task 3.4 – Review the learnr sample / practice questions\nAfter every block of teaching in part-1 analysis (specifically, we mean in week 5, week 10, week 15 and week 20) there will be a class test. This will assess your knowledge and your understanding of the material that has been covered.\nThe class test will comprise a set of Multiple Choice Questions (and the set of questions will be different for each student, as the test will involve random selection from a larger pool) under timed conditions.\nIn order to help you get (a) a broad or basic feel for the sort of questions you might get in the class test (b) self-review your progress through the term, we will provide MCQs each week for you to attempt.\nSo these are for your benefit… you can take the questions when you choose to, and the learnr quiz will provide feedback on the answers your provide. Just bear in mind:\n\nWe place a set of questions at the end of the learnr pages so that you can attempt these at the end of each week, after you’ve completed lab activities, follow-up work, weekly Q&As etc. But it’s up to you when you answer the questions\nThese are meant as indicative questions. There’s no point in learning/ memorising these questions (they won’t be on the quiz!) and our advice is to reflect on how the teaching and content links to the sorts of questions that get posed.",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "1. Introduction to PSYC121"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week1.html#data-collection-exercise",
+    "href": "PSYC121/Week1.html#data-collection-exercise",
+    "title": "1. Introduction to PSYC121",
+    "section": "Data collection exercise",
+    "text": "Data collection exercise\nIn order to learn about psychology and data analysis techniques, we need data! Rather than rely too much on artificial data (certainly it is sometimes useful to say “Here are a bunch of numbers and this is what we can do with them” – think about the R Studio example for this week’s lab) for the most part, we prefer to draw on datasets that are a bit more engaging and meaningful that you have a stake in yourself! By using a common data set, that we can return to over the year, we can also build up familiarity and confidence in the data and remove a potential obstacle to thinking about the more important analysis part.\nSo a key task will be for everyone to have a go at taking our online survey, and contribute to a dataset that can be used throughout the year.\nThe survey runs by following this link",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "1. Introduction to PSYC121"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week1.html#post---lab-recap-the-slides-we-used",
+    "href": "PSYC121/Week1.html#post---lab-recap-the-slides-we-used",
+    "title": "1. Introduction to PSYC121",
+    "section": "Post - lab recap: The slides we used",
+    "text": "Post - lab recap: The slides we used\nWant to see again the introduction slides that we used in the Levy lab? They are available here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "1. Introduction to PSYC121"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week3.html",
+    "href": "PSYC121/Week3.html",
+    "title": "3. DVs and IVs in RStudio",
+    "section": "",
+    "text": "Watch Part 1\n\n\nWatch Part 2\n\n\nWatch Lecture Part 3\n\n\nWatch Lecture Part 4\n\n\nDownload the lecture slides here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "3. DVs and IVs in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week3.html#week-3-lecture",
+    "href": "PSYC121/Week3.html#week-3-lecture",
+    "title": "3. DVs and IVs in RStudio",
+    "section": "",
+    "text": "Watch Part 1\n\n\nWatch Part 2\n\n\nWatch Lecture Part 3\n\n\nWatch Lecture Part 4\n\n\nDownload the lecture slides here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "3. DVs and IVs in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week3.html#pre-lab-work",
+    "href": "PSYC121/Week3.html#pre-lab-work",
+    "title": "3. DVs and IVs in RStudio",
+    "section": "Pre-lab work",
+    "text": "Pre-lab work\nLast week we asked you to\n\nUse a script to run instructions in RStudio\nPut data into RStudio form a data file and explore how to run descriptive stats and basic visualisations\n\nThis week - again, there’s a learnr tutorial to follow and help prep for this week’s activities. You can find it here",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "3. DVs and IVs in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week3.html#lab-activities",
+    "href": "PSYC121/Week3.html#lab-activities",
+    "title": "3. DVs and IVs in RStudio",
+    "section": "Lab activities",
+    "text": "Lab activities\nFor the data concerning the weight of a cow data (week 2), we provided you with columns that reflected people’s estimates, and you were able to generate descriptive statistics for those estimates (if you haven’t done this, please go back and work through that part of the week 2 activity again).\nIn order to find the estimates separately for the different groups of respondents (female and non-female), we needed to have a column for each gender category. Whilst that worked, it could get cumbersome over time always to work with data created like that.\nThere is a better way… In this first task we will look at how you can analyse the numerical weight estimates as a function of the categorical data in the identity column.\n\nTask 1 - More with the penelope22 data\nStep 1. Create a new folder for week 3, and set this as the working directory. This is covered in the learnr tutorial and we covered it in Week 2 as well.\nStep 2. Bring the Week_3_2025.zip file into R Studio server. Like last week, upload the zip file, and launch the R script. You can get the file here\nStep 3. This week, we again want to explore commands from the tidyverse library (toolkit) which can help us do more powerful things more elegantly. So let’s get R to work again with the tidyverse library by running the code line\nlibrary(tidyverse)\nStep 4. Explore help() commands. R can give you more information about how it works.\nStep 5. Read the penelope22.csv data into R:\n\nwhat_a_really_terrible_data_object_name &lt;- read_csv(*MISSING*) \n# use your own data object name and specify the file you want to read in\n\nNote that you will need to edit this line (and ensure you are in the correct working directory) for this to be successful. View the new data object using the View() command in the script or clicking on the object in the environment.\nThis week we’ll for the mean of the estimate data as a function of the different gender identities:\n\naggregate(x = *MISSING*$estimate, by = list(*MISSING*$identity), FUN = mean)\n\nThere’s a lot going on in this code, but first, let’s try replacing data object name where it says MISSING and then running the code. What do you get? Does this match what we did last week when we calculated the mean for the female and for the other (i.e., non-female) group?\nOnce you’ve run this, let’s consider all the things that are going on in the code:\naggregate This is a command to call for descriptive statistics\nx= This defines what column we are analyzing\nby=list Now we tell R how to group the estimate data, and which column does that\nFUN=mean Specifies which descriptive function is being asked for. Feel free to try functions for other descriptive statistics that you’ve used in previous weeks.\n\n\nusing group_by() to calculate means for each group\nLike most things in R, there are multiple ways to do the same thing. Here’s another way to group scores by a (nominal/categorical) variable and calculate the values we need for each level of that variable. We explored this already in the learnr tutorial, and that should help you to complete the code below to get the weight estimates broken down by gender identity. You need to first define the data frame for the estimates data, and then specify the gender IV in the group_by command and the estimates DV in the summarise command:\n\n*MISSING* %&gt;% group_by(*MISSING*) %&gt;% summarise(mean_estimate = mean(*MISSING*))\n\nIf you edit this code correctly and run it, you should get a result that is quite similar to that provided by the aggregate command (though the format of the output may be slightly different)\nA note about: %&gt;%\nThis is called a “pipe operator”, basically take the output from the left and feed it into the requests on the right. Summarise Provide summary statistics information for the specified variable as specified (whether mean, median etc)\n\n\n3.1.3 The assignment operator\nAs well as learning about the pipe operator, we want to remind you /draw attention explicitly to another important element of the R command line syntax: the assignment operator. Using a command such as\ncows &lt;- read_csv(\"penelope22.csv\")\nlooks for the csv datafile called ‘penelope22’, reads that data in, and assigns it to an object called ‘cows’\nWe could create any object name we wanted (within broad limits of names that RStudio allows). The arrow symbol isn’t just for reading in data files, we can perform a whole range of functions and assign them to an object.\n\nTask 2 - New salary data\nUsing aggregate and summarise may not seem like much progress, because they are just replicating what we had already done with mean() is week 2. However (a) this emphasizes that there are often several ways to get at the same thing in R (b) now we know about doing calculations on grouped data, and about working with 2-dimensional data. These are big steps - we can now start to do much more efficient and informative things with our data.\nNow, let’s turn to the guesses made about median salary in the UK. We will read in some of the data that PSYC121 students provided in the file wages2024.csv (you will need to adapt the code we used above for the weight estimation file so that it will load in the wages data, and in what follows the assumption is your new variable name is called wages)\nLet’s take a peek at the dataset with:\nglimpse(wages)\nGlimpse pretty much does what you might think from the meaning of the word: it just gives us some quick statistics on the different column (handy because this is a much bigger dataset). We can see that we have 3 columns; uk_region (where someone lives, note ‘other’ probably equals Ireland, Europe, China, etc), family_position (age relationship with siblings), and salary (estimate).\nWe will be analysing how people assessed the median income in the UK. According to government statistics, the median income in 2023 was approximately £34,963 see this link\nYour task:\n\nWithin the script, use the working “aggregate” commands from task 1 with the penelope weight data, can you find out the mean salary estimates as a function of where someone lives? That is, can you adapt that code you used earlier for this problem?\nCan you use the aggregate command to find out mean salary estimates as a function of the different family relationships? (if you are the youngest child maybe you have older siblings earning money that changes your evaluation?)\nCan you get a breakdown of salary estimates as a function of BOTH UK region AND family relationship together? You may well need some help with this, but have a guess at which bit of code would need to change to do it.\nCan you use the group by() and summarise() command to display salary guesses as a function of where someone lives? Check this gives you the same answer.",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "3. DVs and IVs in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week3.html#task-3.2---new-phone-use-data",
+    "href": "PSYC121/Week3.html#task-3.2---new-phone-use-data",
+    "title": "3. DVs and IVs in RStudio",
+    "section": "Task 3.2 - New phone use data",
+    "text": "Task 3.2 - New phone use data\n\nRead in the dataset of phone screen time usage, screentime2024.csv, into a new object. For this task we’ll focus on the group_by() and summarise() commands to further explore the data and consolidate your skills. Use copy and paste to adapt the existing script lines from the above tasks so that this time you calculate screen time usage as a function of the type of phone.\nUse RStudio to figure out the (overall) mean screen time estimate and the standard deviation. Using these values, can you calculate by hand what screen time estimate value would reflect z scores of z=-1.5 and z = +2?",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "3. DVs and IVs in RStudio"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week3.html#task-3.3---final-challenge-visualisation",
+    "href": "PSYC121/Week3.html#task-3.3---final-challenge-visualisation",
+    "title": "3. DVs and IVs in RStudio",
+    "section": "Task 3.3 - Final challenge: visualisation",
+    "text": "Task 3.3 - Final challenge: visualisation\nCan you find a way to visualise the screentime usage data that you have been working with above? The script provides two ways to consider doing this - basic boxplots (which we have looked at last week) and ggplot, which we have spent less time with but is an extremely powerful engine for creating plots. We’ve provided the start of the code in each case, leaving you to work out the specifics.",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "3. DVs and IVs in RStudio"
     ]
   }
 ]
