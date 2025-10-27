@@ -47,8 +47,6 @@ Make sure you [download the zip file for the RStudio tasks](data/Week_4/week_4_2
 
 Create a new folder and upload the file into RStudio, ideally before the lab class.
 
-THE FOLLOWING TASKS ARE STILL BEING UPDATED....
-
 ## R Studio tasks
 
 Last week we introduced two different ways to get descriptive information about a numerical variable (column) as a function of a categorical variable. We discussed how this was extremely powerful, as we can look at the effect of an IV on the DV, which gets us a long way in the analysis of our psychological experiments!
