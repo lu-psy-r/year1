@@ -1,6 +1,6 @@
 ---
 title: 6. Sampling, probability and binomial tests
-subtitle: Written by Tom Beesley & John Towse
+subtitle: Written by Tom Beesley 
 order: 7
 editor_options: 
   chunk_output_type: console
@@ -32,7 +32,7 @@ Watch Part 4
 
 </iframe>
 
-You can download the lecture slides [here](data/Week_6/PSYC121_wk6_slides_2023.pptx)
+You can download the lecture slides [here](data/Week_6/PSYC121_wk6_slides_2025.pptx)
 
 ## Reading
 
@@ -174,30 +174,30 @@ Once you've conducted a few experiments, discuss on your table the results you f
 #| echo: false
 #| output: false
 
-# library(tidyverse)
-# 
-# 
-# d_raw <- read_csv("data/Week_6/PSYC121_survey_values.csv")
-# 
-# # get the relevant risky decision columns and wrangle
-# d <-
-#   d_raw %>%
-#   select("gain" = Q16, "loss" = Q17) %>%
-#   dplyr::slice(3:n()) %>%
-#   mutate(across(gain:loss, ~ (case_when(.x == "1" ~ "safe", .x == "2" ~ "risky")))) %>% 
-#   drop_na()
-# 
-# write_csv(d, file = "data/Week_6/risky_decisions.csv")
-# 
-# risk_dec <- read_csv("data/Week_6/risky_decisions.csv")
-# 
-# count(risk_dec,gain)
-# 
-# binom.test(99,128)
-# 
-# count(risk_dec,loss)
-# 
-# binom.test(56,128)
+library(tidyverse)
+
+
+d_raw <- read_csv("data/Week_6/PSYC121_survey_values_2025.csv")
+
+# get the relevant risky decision columns and wrangle
+d <-
+  d_raw %>%
+  select("gain" = Q16, "loss" = Q17) %>%
+  dplyr::slice(3:n()) %>%
+  mutate(across(gain:loss, ~ (case_when(.x == "1" ~ "safe", .x == "2" ~ "risky")))) %>%
+  drop_na()
+
+write_csv(d, file = "data/Week_6/risky_decisions.csv")
+
+risk_dec <- read_csv("data/Week_6/risky_decisions.csv")
+
+count(risk_dec,gain)
+
+binom.test(58,66)
+
+count(risk_dec,loss)
+
+binom.test(32,66)
 
 ```
 

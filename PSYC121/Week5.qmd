@@ -1,6 +1,6 @@
 ---
 title: 5. Class test
-subtitle: Written by John Towse & Tom Beesley (2024)
+subtitle: Written by Tom Beesley
 order: 6
 ---
 
