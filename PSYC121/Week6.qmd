@@ -8,6 +8,8 @@ editor_options:
 
 ## Week 6 Lecture
 
+*Please note: Lecture recordings do not seem to show properly using Safari browser (Mac). Please try Chrome and if problem persists, report on the Moodle Discussion Forum.*
+
 Watch Part 1
 
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=5676177e-7dcc-4c30-9e72-b0b500aa82d6&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player">
@@ -177,7 +179,7 @@ Once you've conducted a few experiments, discuss on your table the results you f
 library(tidyverse)
 
 
-d_raw <- read_csv("data/Week_6/PSYC121_survey_values_2025.csv")
+d_raw <- read_csv("data/Week_6/PSYC121_survey_data_2025.csv")
 
 # get the relevant risky decision columns and wrangle
 d <-
@@ -187,17 +189,17 @@ d <-
   mutate(across(gain:loss, ~ (case_when(.x == "1" ~ "safe", .x == "2" ~ "risky")))) %>%
   drop_na()
 
-write_csv(d, file = "data/Week_6/risky_decisions.csv")
-
-risk_dec <- read_csv("data/Week_6/risky_decisions.csv")
-
-count(risk_dec,gain)
-
-binom.test(58,66)
-
-count(risk_dec,loss)
-
-binom.test(32,66)
+# write_csv(d, file = "data/Week_6/risky_decisions.csv")
+# 
+# risk_dec <- read_csv("data/Week_6/risky_decisions.csv")
+# 
+# count(risk_dec,gain)
+# 
+# binom.test(58,66)
+# 
+# count(risk_dec,loss)
+# 
+# binom.test(32,66)
 
 ```
 
@@ -206,7 +208,7 @@ binom.test(32,66)
 For the second exercise today we will look at data from the survey on "risky and safe decisions". You may remember that you were asked the following question:
 
 ::: {.callout-tip icon="false" title="Gain"}
-Imagine you are on a game-show and you win £300. The presenter gives you have a choice: receive an additional £100 for sure, or take a gamble offering a 50% chance to gain £200 and a 50% chance to gain nothing. Which would you choose?
+Imagine you are on a game-show and you win £300. The presenter gives you a choice: receive an additional £100 for sure, or take a gamble offering a 50% chance to gain £200 and a 50% chance to gain nothing. Which would you choose?
 
 -   receive £100 for sure
 
