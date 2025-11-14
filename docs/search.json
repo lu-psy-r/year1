@@ -204,7 +204,7 @@
     "href": "PSYC121/data/Week_9/Week_9_learnr.html#filtering-data",
     "title": "PSYC121: Week 9 Lab",
     "section": "Filtering data",
-    "text": "Filtering data\nAs you can see, we quite often want to filter our data to select or remove some of the rows we are working with. To do this, we can use the filter() command.\nTo use filter(), we simply specify the data first, and then we need to use an expression to state how we want the data to be filtered. For example:\n\n\ndata %&gt;% \n  filter(z_stroop &lt;= 2) \n# find all those people who have z_stroop values lower than positive 2\n\n\n\n\nCommon expressions\nThe following table gives some examples of very common expressions used in filtering data:\n\n\n\n\n\nOperator\nMeaning\nExample\n\n\n\n\n==\nis the same as\nfilter(dataQ, age==27)\n\n\n&lt;\nis less than\nfilter(dataQ, age&lt;25)\n\n\n&gt;\nis greater than\nfilter(dataQ, age&gt;30)\n\n\n!=\nis not equal to\nfilter(dataQ, gender != 'female')\n\n\n&\nand\nfilter(dataQ, age&lt;30 & gender == 'female')\n\n\n|\nor\nfilter(dataQ, gender == 'male' | gender == 'non-binary')\n\n\n\n\n\n\n\nIt’s particularly important to note the difference between “==” and “=” in R. “=” is used as an assignment operator - you’ve used it several times already inside functions (e.g., na.rm = TRUE, mu = 29600). You can think of “=” as meaning “set this to”. In contrast the double equals operator, “==”, asks a question: “is this thing the same as this other thing?” In the above example, z_stroop &lt;= 2, it looks for all rows in the data where z_stroop is the same as, or less than, the value of 2. In programming terms, the expression returns a boolean value, which reports whether the statement is TRUE or FALSE (and when used in the filter, it finds all rows where it is TRUE). You can see this in the results of the following “conditional expressions”:\n\n\n2 == 3\n\"blah\" == \"blah\"\n\"blah\" == \"BLAH\"\n\"John\" == \"rock star\"\nmean(c(3,4,5,6)) == 4.5\nTRUE == FALSE # this is getting meta...\n\n\n\n\n\nPractice filtering\nPractice writing your own filter commands in the box below. Try to filter the data to match the following queries:\n\nData for those people who are “high” facebook users (hint: facebook_use == )\nData for those people who use instagram for 7 days, and have a z_stroop score of less than -1 (hint: use &)\nData for those people who are “high” users of at least one social media platform (hint: this needs two “or”: | )\n\n[Each hint here gives the solution to each query]\n\n\ndata %&gt;% \n  filter()\n\n\n\n\n\n# Query 1 solution\ndata %&gt;% \n  filter(facebook_use == \"high\")\n\n\n\n\n# Query 2 solution\ndata %&gt;% \n  filter(instagram_days == 7 & z_stroop &lt; -1)\n\n\n\n\n# Query 3 solution\ndata %&gt;% \n  filter(facebook_use == \"high\" | instagram_use == \"high\" | twitter_use == \"high\")"
+    "text": "Filtering data\nAs you can see, we quite often want to filter our data to select or remove some of the rows we are working with. To do this, we can use the filter() command.\nTo use filter(), we simply specify the data first, and then we need to use an expression to state how we want the data to be filtered. For example:\n\n\ndata %&gt;% \n  filter(z_stroop &lt;= 2) \n# find all those people who have z_stroop values lower than positive 2\n\n\n\n\nCommon expressions\nThe following table gives some examples of very common expressions used in filtering data:\n\n\n\n\n\nOperator\nMeaning\nExample\n\n\n\n\n==\nis the same as\nfilter(dataQ, age==27)\n\n\n&lt;\nis less than\nfilter(dataQ, age&lt;25)\n\n\n&gt;\nis greater than\nfilter(dataQ, age&gt;30)\n\n\n!=\nis not equal to\nfilter(dataQ, gender != 'female')\n\n\n&\nand\nfilter(dataQ, age&lt;30 & gender == 'female')\n\n\n|\nor\nfilter(dataQ, gender == 'male' | gender == 'non-binary')\n\n\n\n\n\nIt’s particularly important to note the difference between “==” and “=” in R. “=” is used as an assignment operator - you’ve used it several times already inside functions (e.g., na.rm = TRUE, mu = 29600). You can think of “=” as meaning “set this to”. In contrast the double equals operator, “==”, asks a question: “is this thing the same as this other thing?” In the above example, z_stroop &lt;= 2, it looks for all rows in the data where z_stroop is the same as, or less than, the value of 2. In programming terms, the expression returns a boolean value, which reports whether the statement is TRUE or FALSE (and when used in the filter, it finds all rows where it is TRUE). You can see this in the results of the following “conditional expressions”:\n\n\n2 == 3\n\"blah\" == \"blah\"\n\"blah\" == \"BLAH\"\n\"John\" == \"rock star\"\nmean(c(3,4,5,6)) == 4.5\nTRUE == FALSE # this is getting meta...\n\n\n\n\n\nPractice filtering\nPractice writing your own filter commands in the box below. Try to filter the data to match the following queries:\n\nData for those people who are “high” facebook users (hint: facebook_use == )\nData for those people who use instagram for 7 days, and have a z_stroop score of less than -1 (hint: use &)\nData for those people who are “high” users of at least one social media platform (hint: this needs two “or”: | )\n\n[Each hint here gives the solution to each query]\n\n\ndata %&gt;% \n  filter()\n\n\n\n\n\n# Query 1 solution\ndata %&gt;% \n  filter(facebook_use == \"high\")\n\n\n\n\n# Query 2 solution\ndata %&gt;% \n  filter(instagram_days == 7 & z_stroop &lt; -1)\n\n\n\n\n# Query 3 solution\ndata %&gt;% \n  filter(facebook_use == \"high\" | instagram_use == \"high\" | twitter_use == \"high\")"
   },
   {
     "objectID": "PSYC121/data/Week_9/Week_9_learnr.html#section-6",
@@ -523,6 +523,54 @@
       "Home",
       "PSYC121",
       "5. Class test"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week7.html",
+    "href": "PSYC121/Week7.html",
+    "title": "7. Filtering data and testing means (one-sample t-test)",
+    "section": "",
+    "text": "Please note: Lecture recordings do not seem to show properly using Safari browser (Mac). Please try Chrome and if problem persists, report on the Moodle Discussion Forum.\nWatch Part 1\n\nWatch Part 2\n\nWatch Part 3\n\nWatch Part 4\n\nDownload the lecture slides here\n\n\nChapter 12 of Howell\nToday we will look in a bit more detail at people’s estimates of the average UK salary. We will first plot this data using geom_histogram() and also geom_boxplot(). When we do this, we’ll see that there are some unusual values, and we’ll need to do a bit of data wrangling to remove them, using the filter() command. We’ll then turn to the conceptual ideas of the lecture - how can we tell if the mean of our sample is unusual, or whether we would actually expect this mean value under the null hypothesis? Finally, we’ll continue to develop our skills in data visualisation by exploring geom_density() plots.",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "7. Filtering data and testing means (one-sample t-test)"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week7.html#reading",
+    "href": "PSYC121/Week7.html#reading",
+    "title": "7. Filtering data and testing means (one-sample t-test)",
+    "section": "",
+    "text": "Chapter 12 of Howell\nToday we will look in a bit more detail at people’s estimates of the average UK salary. We will first plot this data using geom_histogram() and also geom_boxplot(). When we do this, we’ll see that there are some unusual values, and we’ll need to do a bit of data wrangling to remove them, using the filter() command. We’ll then turn to the conceptual ideas of the lecture - how can we tell if the mean of our sample is unusual, or whether we would actually expect this mean value under the null hypothesis? Finally, we’ll continue to develop our skills in data visualisation by exploring geom_density() plots.",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "7. Filtering data and testing means (one-sample t-test)"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week7.html#sample-size-size-of-effect-and-the-one-sample-t-test",
+    "href": "PSYC121/Week7.html#sample-size-size-of-effect-and-the-one-sample-t-test",
+    "title": "7. Filtering data and testing means (one-sample t-test)",
+    "section": "Sample size, size of effect, and the one sample t-test",
+    "text": "Sample size, size of effect, and the one sample t-test\nIn the lecture this week, Tom used an application to show the process of sampling data. You can access this application at the link below. There are three “parameters” you can change in this:\n\nThe true mean of the effect: Think of this like the bias that was set up in your deck of cards last week. There is some true state out there in the world, and we are going to draw samples from a distribution of data that has a mean that equals this value. If you make this 100, then the true mean is equal to that under the null hypothesis (there is no effect).\nThe standard deviation of the data: This sets how variable the data are in this population. If the data are more variable, then our samples will produce estimations that are less accurate of the true mean value.\nThe sample size: How many observations are drawn in the sample. These are represented by the yellow circles in the plot.\n\nEach time you draw a sample the data points are plotted in yellow and the mean of the sample is marked with the red line. The application also runs a one-sample t-test against the expected mean under the null hypothesis, of 100. The null hypothesis is also represented by the static distribution presented in grey, centred on 100.\nThings to try:\n\nStart with a sample size of 10, and a mean of the effect of 110 (SD = 15). How often do you get a significant result (p &lt; .05) when you draw a new sample?\nNow try changing the mean of the effect to 120. Does this increase or decrease the likelihood of getting significant results? What about changing to 130?\nNow keep the mean effect constant (say 110), but increase the sample size. Try 5, then 10, 15, and so on. Does this increase or decrease the likelihood of getting significant results?\nSet the mean of the effect to 100 and the sample size to 10. Keep drawing new samples, noting each time the p value. You will evenutally get a p value of &lt; .05. What type of error is this?\n\nClick here for the one-sample t-test application",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "7. Filtering data and testing means (one-sample t-test)"
+    ]
+  },
+  {
+    "objectID": "PSYC121/Week7.html#week-7-quiz",
+    "href": "PSYC121/Week7.html#week-7-quiz",
+    "title": "7. Filtering data and testing means (one-sample t-test)",
+    "section": "Week 7 Quiz",
+    "text": "Week 7 Quiz\nYou can access a set of quiz questions related to this week here.",
+    "crumbs": [
+      "Home",
+      "PSYC121",
+      "7. Filtering data and testing means (one-sample t-test)"
     ]
   }
 ]

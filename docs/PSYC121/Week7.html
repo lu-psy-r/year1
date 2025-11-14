@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1. Introduction to PSYC121 – Statistics for Psychologists</title>
+<title>7. Filtering data and testing means (one-sample t-test) – Statistics for Psychologists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -65,8 +65,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../PSYC121/Week2.html" rel="next">
-<link href="../PSYC121/index.html" rel="prev">
+<link href="../PSYC122/index.html" rel="next">
+<link href="../PSYC121/Week6.html" rel="prev">
 <link href="../Images/favicon.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
@@ -164,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC121/index.html">PSYC121</a></li><li class="breadcrumb-item"><a href="../PSYC121/Week1.html">1. Introduction to PSYC121</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC121/index.html">PSYC121</a></li><li class="breadcrumb-item"><a href="../PSYC121/Week7.html">7. Filtering data and testing means (one-sample t-test)</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -195,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../PSYC121/Week1.html" class="sidebar-item-text sidebar-link active">
+  <a href="../PSYC121/Week1.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">1. Introduction to PSYC121</span></a>
   </div>
 </li>
@@ -231,7 +231,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../PSYC121/Week7.html" class="sidebar-item-text sidebar-link">
+  <a href="../PSYC121/Week7.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">7. Filtering data and testing means (one-sample t-test)</span></a>
   </div>
 </li>
@@ -251,26 +251,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lectures-for-week-1" id="toc-lectures-for-week-1" class="nav-link active" data-scroll-target="#lectures-for-week-1">1. Lectures for week 1</a></li>
-  <li><a href="#analysis-labs-and-pre-lab-activity" id="toc-analysis-labs-and-pre-lab-activity" class="nav-link" data-scroll-target="#analysis-labs-and-pre-lab-activity">2. Analysis labs and ‘pre-lab’ activity</a></li>
-  <li><a href="#lab-activities-for-this-week" id="toc-lab-activities-for-this-week" class="nav-link" data-scroll-target="#lab-activities-for-this-week">3. Lab activities for this week</a>
+  <li><a href="#lectures" id="toc-lectures" class="nav-link active" data-scroll-target="#lectures">Lectures</a>
   <ul class="collapse">
-  <li><a href="#task-3.1---check-in-with-the-university-attendance-register" id="toc-task-3.1---check-in-with-the-university-attendance-register" class="nav-link" data-scroll-target="#task-3.1---check-in-with-the-university-attendance-register">Task 3.1 - check-in with the University attendance register</a></li>
-  <li><a href="#task-3.2---getting-dicy" id="toc-task-3.2---getting-dicy" class="nav-link" data-scroll-target="#task-3.2---getting-dicy">Task 3.2 - Getting dicy</a></li>
-  <li><a href="#task-3.3---using-rstudio" id="toc-task-3.3---using-rstudio" class="nav-link" data-scroll-target="#task-3.3---using-rstudio">Task 3.3 - Using RStudio</a>
-  <ul class="collapse">
-  <li><a href="#introducing-r-studio" id="toc-introducing-r-studio" class="nav-link" data-scroll-target="#introducing-r-studio">Introducing R Studio</a></li>
-  <li><a href="#getting_started" id="toc-getting_started" class="nav-link" data-scroll-target="#getting_started">Getting started with RStudio</a></li>
-  <li><a href="#what-does-rstudio-look-like" id="toc-what-does-rstudio-look-like" class="nav-link" data-scroll-target="#what-does-rstudio-look-like">What does RStudio look like?</a></li>
-  <li><a href="#lets-get-started" id="toc-lets-get-started" class="nav-link" data-scroll-target="#lets-get-started">Let’s get started!</a></li>
+  <li><a href="#reading" id="toc-reading" class="nav-link" data-scroll-target="#reading">Reading</a></li>
   </ul></li>
-  <li><a href="#before-you-finish" id="toc-before-you-finish" class="nav-link" data-scroll-target="#before-you-finish">Before you finish</a>
+  <li><a href="#pre-lab-work" id="toc-pre-lab-work" class="nav-link" data-scroll-target="#pre-lab-work">Pre-lab work</a></li>
+  <li><a href="#rstudio-tasks" id="toc-rstudio-tasks" class="nav-link" data-scroll-target="#rstudio-tasks">RStudio tasks</a>
   <ul class="collapse">
-  <li><a href="#extra-content-for-outside-the-lab-class" id="toc-extra-content-for-outside-the-lab-class" class="nav-link" data-scroll-target="#extra-content-for-outside-the-lab-class">Extra content for outside the lab class</a></li>
-  </ul></li>
-  <li><a href="#task-3.4-review-the-learnr-sample-practice-questions" id="toc-task-3.4-review-the-learnr-sample-practice-questions" class="nav-link" data-scroll-target="#task-3.4-review-the-learnr-sample-practice-questions">Task 3.4 – Review the learnr sample / practice questions</a></li>
-  <li><a href="#data-collection-exercise" id="toc-data-collection-exercise" class="nav-link" data-scroll-target="#data-collection-exercise">Data collection exercise</a></li>
-  <li><a href="#post---lab-recap-the-slides-we-used" id="toc-post---lab-recap-the-slides-we-used" class="nav-link" data-scroll-target="#post---lab-recap-the-slides-we-used">Post - lab recap: The slides we used</a></li>
+  <li><a href="#creating-a-new-r-markdown-document" id="toc-creating-a-new-r-markdown-document" class="nav-link" data-scroll-target="#creating-a-new-r-markdown-document">Creating a new R Markdown document</a></li>
+  <li><a href="#task-1---plotting-and-filtering" id="toc-task-1---plotting-and-filtering" class="nav-link" data-scroll-target="#task-1---plotting-and-filtering">Task 1 - Plotting and filtering</a></li>
+  <li><a href="#task-2---one-sample-t-test" id="toc-task-2---one-sample-t-test" class="nav-link" data-scroll-target="#task-2---one-sample-t-test">Task 2 - One-sample t-test</a></li>
+  <li><a href="#task-3---test-your-understanding-of-filtering" id="toc-task-3---test-your-understanding-of-filtering" class="nav-link" data-scroll-target="#task-3---test-your-understanding-of-filtering">Task 3 - Test your understanding of filtering</a></li>
+  <li><a href="#sample-size-size-of-effect-and-the-one-sample-t-test" id="toc-sample-size-size-of-effect-and-the-one-sample-t-test" class="nav-link" data-scroll-target="#sample-size-size-of-effect-and-the-one-sample-t-test">Sample size, size of effect, and the one sample t-test</a></li>
+  <li><a href="#week-7-quiz" id="toc-week-7-quiz" class="nav-link" data-scroll-target="#week-7-quiz">Week 7 Quiz</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -278,10 +271,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC121/index.html">PSYC121</a></li><li class="breadcrumb-item"><a href="../PSYC121/Week1.html">1. Introduction to PSYC121</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC121/index.html">PSYC121</a></li><li class="breadcrumb-item"><a href="../PSYC121/Week7.html">7. Filtering data and testing means (one-sample t-test)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">1. Introduction to PSYC121</h1>
-<p class="subtitle lead">Written by Tom Beesley (2025)</p>
+<h1 class="title">7. Filtering data and testing means (one-sample t-test)</h1>
+<p class="subtitle lead">Written by Tom Beesley</p>
 </div>
 
 
@@ -298,205 +291,192 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="lectures-for-week-1" class="level1">
-<h1>1. Lectures for week 1</h1>
-<p>PLEASE NOTE: Prof.&nbsp;John Towse is on sabbatical (research leave) this year and so will not be answering emails on his content. All questions should be posted on the discussion forum and will be answered by Dr Tom Beesley.</p>
-<p>Watch the introduction: Lecture Part 1</p>
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=86d9de63-1bd8-45a4-b289-b36700b8e9f9&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="week 1(2024) part A"></iframe>
-<p>Watch Lecture Part 2</p>
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=9cc4d98f-cbdc-463d-bdb3-b36700b917e4&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 1 (2024) part 2"></iframe>
-<p>Watch Lecture Part 3</p>
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=2901e2ee-6374-4d89-9e8d-b36700b9654f&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 1 (2024) part 3"></iframe>
-<p>Watch Lecture Part 4</p>
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=15290882-5748-439d-aa11-b36700b99269&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=false&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 1 (2024) part D"></iframe>
-<p>Download the lecture slides <a href="data/Week_1/week_1_lecture_student_slides.pptx">here</a></p>
+<section id="lectures" class="level1">
+<h1>Lectures</h1>
+<p><em>Please note: Lecture recordings do not seem to show properly using Safari browser (Mac). Please try Chrome and if problem persists, report on the Moodle Discussion Forum.</em></p>
+<p>Watch Part 1</p>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=828612c2-616d-432b-8f58-b0b500aa81f4&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<p>Watch Part 2</p>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=56ec19ce-8c6d-4114-a47a-b0b500aa819a&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<p>Watch Part 3</p>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=e2685a26-dcec-4124-bae3-b0b500aa8176&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<p>Watch Part 4</p>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=951454b4-fb08-49b6-9cfd-b0b500aa811b&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<p>Download the lecture slides <a href="data/Week_7/PSYC121 Week 7.pptx">here</a></p>
+<section id="reading" class="level2">
+<h2 class="anchored" data-anchor-id="reading">Reading</h2>
+<p><a href="https://onesearch.lancaster-university.uk/permalink/44LAN_INST/1438dph/alma9930907993701221">Chapter 12 of Howell</a></p>
+<p>Today we will look in a bit more detail at people’s estimates of the average UK salary. We will first plot this data using <code>geom_histogram()</code> and also <code>geom_boxplot()</code>. When we do this, we’ll see that there are some unusual values, and we’ll need to do a bit of <strong>data wrangling</strong> to remove them, using the <code>filter()</code> command. We’ll then turn to the conceptual ideas of the lecture - how can we tell if the mean of our sample is unusual, or whether we would actually expect this mean value under the null hypothesis? Finally, we’ll continue to develop our skills in <strong>data visualisation</strong> by exploring <code>geom_density()</code> plots.</p>
 </section>
-<section id="analysis-labs-and-pre-lab-activity" class="level1">
-<h1>2. Analysis labs and ‘pre-lab’ activity</h1>
-<p>For each lab session that you have been scheduled to attend, please come “prepared’. By this we mean</p>
+</section>
+<section id="pre-lab-work" class="level1">
+<h1>Pre-lab work</h1>
 <ul>
-<li><p>You have watched the lecture video, made notes, and developed questions where you have them.</p></li>
-<li><p>You have worked through the online “prelab” preparation materials - <a href="https://ma-rconnect.lancs.ac.uk/Psych121_week_1" target="_blank">You can access the link for Week 1 here</a></p></li>
-<li><p>You read the lab sheet (this one) to get a sense of what we’re going to be doing, and you anticipate potential problems so that you can focus on these in the session.</p></li>
+<li><p>There is an <a href="https://ma-rconnect.lancs.ac.uk/PSYC121_Week_7_labprep/" target="_blank">online tutorial</a>. Please make every attempt to complete this before the lab!</p></li>
+<li><p>Create a folder for Week 7</p></li>
+<li><p>Download the <a href="data/Week_7/salary_data_wk7_2025.csv">csv file for Week 7</a> and upload it into this new folder in RStudio Server.</p></li>
 </ul>
-<p>The lecture is designed to deliver important ideas and procedures for learning about analysis. Pre-lab material is then designed to help consolidate this learning, or enhance, expand and apply it in ways that set the scene for the lab session activity. We want to prepare you to be ready to go in the session itself and make the most of your time there.</p>
-<p>Want additional support? Keep in mind that the Department has endorsed and will use the Statistics textbook by David Howell called “<strong>Fundamental statistics for the behavioral sciences</strong>”</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Wk1/howell.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:2in"></p>
-</figure>
-</div>
-<p><strong>You do NOT need to purchase a copy of this book</strong>, as it is available online <a href="https://onesearch.lancaster-university.uk/permalink/f/cssk39/44LAN_ALMA_DS51180136050001221" target="_blank">from the library pages</a>. The book covers principles of statistics as well as some tutorials on using R.</p>
 </section>
-<section id="lab-activities-for-this-week" class="level1">
-<h1>3. Lab activities for this week</h1>
-<section id="task-3.1---check-in-with-the-university-attendance-register" class="level2">
-<h2 class="anchored" data-anchor-id="task-3.1---check-in-with-the-university-attendance-register">Task 3.1 - check-in with the University attendance register</h2>
-<p>When you arrive, make sure you have checked-in to your Analysis session in the Levy lab. All students are required by the University to <a href="https://www.lancaster.ac.uk/student-and-education-services/check-in/" target="_blank">confirm attendance at taught session</a></p>
-<p>Staff will remind you of this in your class.</p>
-</section>
-<section id="task-3.2---getting-dicy" class="level2">
-<h2 class="anchored" data-anchor-id="task-3.2---getting-dicy">Task 3.2 - Getting dicy</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/Wk1/dice.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:3in"></p>
-</figure>
-</div>
-<p>Here’s a simple task for you to complete as a group around each of the workstations;</p>
-<p>You will be given a pair of dice</p>
+<section id="rstudio-tasks" class="level1">
+<h1>RStudio tasks</h1>
+<section id="creating-a-new-r-markdown-document" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-new-r-markdown-document">Creating a new R Markdown document</h3>
 <ol type="1">
-<li><p>Working in pairs, one person rolls both dice.</p></li>
-<li><p>Add up the total on each of them and have someone record that total (if you don’t have some spare paper or a pen, use your computer)</p></li>
-<li><p>Repeat those steps 20 times.</p></li>
-<li><p>Then swap over your roles (the person rolling the dice, the person recording the outcome)</p></li>
-<li><p>Once everyone at the workstation has had a turn at this, each person should attempt to work out (a) the mean and (b) the median of their dice roll total.</p></li>
-<li><p>Check each others working, and discuss any differences or problems you have.</p></li>
+<li><p>Like last week, create a Week 7 folder and a new R Markdown document</p></li>
+<li><p>Delete everything, back to the first title (## R Markdown)</p></li>
+<li><p>Change the title to <em>Task 1 - plotting the salary data</em></p></li>
 </ol>
-<p>Are all your answers the same? Why / why not? If not, are they very different or very similar?</p>
 </section>
-<section id="task-3.3---using-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="task-3.3---using-rstudio">Task 3.3 - Using RStudio</h2>
-<section id="introducing-r-studio" class="level3">
-<h3 class="anchored" data-anchor-id="introducing-r-studio">Introducing R Studio</h3>
-<p>R and RStudio is the software that we will be using to explore and learn about analysis in your Psychology degree. It’s a computational engine: a very snazzy calculator that you should see as your friend and ally in the journey to understand and appreciate psychology. It sits <em>alongside</em> what we teach about the concepts and interpretation of statistical analysis.</p>
-<p>R is the core software, RStudio is the interface for interacting with it. Put another way, <em>R is the engine, RStudio is the cockpit.</em></p>
-<p>Like even a simplest calculator, it just does what you ask (at least when you ask nicely!) but it requires the user to know what they want from it and to understand what it is telling you. A calculator can’t help a kid get the right answer to a multiplication problem if they don’t know the difference between multiplication and division and addition etc. And whilst a calculator is brilliant at doing the number crunching (and as a bonus, R Studio can help with turning the numbers into beautiful graphs and images too), even a calculator requires a thoughtful person to take the answers and make sensible interpretations from them.</p>
-<p>Therefore, we need to learn both about the concepts of statistical analysis on the one hand, and the processing of statistical information -through R- on the other. The lectures will provide the starting point and the direction for statistical concepts, whilst these analysis labs provide the more practical experiences in how to use R, and how to make R your ally. Over the next year, in these labs we will increasingly be using RStudio to focus on the latter, processing side, which will allow you to focus your energies on the conceptual side and its relevance for appreciating psychology.</p>
-</section>
-<section id="getting_started" class="level3">
-<h3 class="anchored" data-anchor-id="getting_started">Getting started with RStudio</h3>
-<p>We will be learning about R Studio through a simple but powerful web server architecture. That is, through the power of the internet, you can access and use R Studio by logging into a free account that we have provided and we will maintain for your use.</p>
-<blockquote class="blockquote">
-<p>Here’s a little secret: There are several different ways to access RStudio. For example, you can download a copy of the software onto your computer, or use a Virtual Machine set up to run a copy. There’s nothing to stop you having your local copy, but please note - we can’t support your own version through lab classes. We’re using the web server to make sure everyone has the same, controlled experience.</p>
-</blockquote>
-<p>To log in to the R server, first make sure that you have the VPN switched on, or you will need to be connected to the university network (Eduroam). To set up the VPN, follow ISS <a href="https://portal.lancaster.ac.uk/ask/digital/services/university-it-network/vpn/" target="_blank">instructions here</a> or connecting to Eduroam <a href="https://portal.lancaster.ac.uk/ask/digital/services/university-it-network/wi-fi/" target="_blank">here</a>.</p>
-<p>When you are connected, navigate to <a href="https://psy-rstudio.lancaster.ac.uk" target="_blank">https://psy-rstudio.lancaster.ac.uk</a>, where you will be shown a login screen that looks like the below. Click the option that says “Sign in with SAML”.</p>
-<p><img src="..\Includes/1LoginSAML.png" class="img-fluid"> <!-- says no image but it's all about the include setup --></p>
-<p>This will take you through to the University login screen, where you should enter your username (e.g.&nbsp;ivorym) and then your university password. This will then redirect you to the R server where you can start using RStudio!</p>
-<p><img src="..\Includes/2LoginUser.png" class="img-fluid"></p>
-<p><img src="..\Includes/3LoginPass.png" class="img-fluid"></p>
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="task-1---plotting-and-filtering" class="level3">
+<h3 class="anchored" data-anchor-id="task-1---plotting-and-filtering">Task 1 - Plotting and filtering</h3>
+<ol type="1">
+<li><p>Below the title, insert a code chunk using either the code chunk button, or via the menu (“Code” -&gt; “Insert Chunk”).</p></li>
+<li><p>Add in the code <code>library(tidyverse)</code></p></li>
+<li><p>Next, add a <code>read_csv()</code> command to get the data - you’ve done this every week, so this should be familiar. Remember when reading in the data, you need to assign it to a new data object.</p></li>
+<li><p>Let’s draw a histogram of the salary estimates. Copy the code below and edit the name of the data object and column:</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>name_of_the_data_object <span class="sc">%&gt;%</span> <span class="co"># the pipe sends the data to the next command (ggplot)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(name_of_the_column), <span class="at">bins =</span> <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Outputs from code chunks">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Outputs from code chunks
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you have already logged in through the university login already, perhaps to get to the portal, then you may not see the username/password screen. When you click login, you will be redirected straight to RStudio. This is because the server shares the login information securely across the university.</p>
+<p>When you run code in a .Rmd file, it appears under the code chunk in the file. If you’d prefer to see the output appear in the console or the plots window (for plots) then you can set this in the options. Click the little cog icon at the top of the .Rmd and select “Chunk output in console”</p>
 </div>
 </div>
+<ol start="5" type="1">
+<li><p>Once you’ve got the code to run, you’ll realise that the setting <code>bins = 3</code> is not a good setting to see the distribution of data. Play around with the number of bins for the histogram until you are happy that you can see the distribution of the scores more clearly, including some of the more extreme values.</p></li>
+<li><p>You will see that we’ve got some quite unusual values here. There are a few people that think that the average salary is less than £10,000. It’s unclear what to make of these low values. For example, maybe the £5,000 estimates meant to put £50,000? Quite often when we get our “raw” data, it contains extreme values like this, and we need to consider removing them. Let’s run these two lines of code, using <code>arrange()</code>, to view the lowest and highest values:</p></li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(name_of_the_data_object, name_of_the_column) <span class="co"># order by lowest first</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(name_of_the_data_object, <span class="fu">desc</span>(name_of_the_column)) <span class="co"># order by highest first</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="7" type="1">
+<li>We’ll first just remove the low values in the data in order to get a better sense of the distribution. Let’s use a <code>filter()</code> command to do this. We need to make a decision about what values to exclude. In later labs we’ll look at a more systematic process of removing <em>outliers</em>, but for now, let’s just remove any that are below £10,000. Edit the <code>filter()</code> command to <strong>keep</strong> only those estimates that are <em>above</em> £10,000 (&gt;). Remember that the filter command <strong><em>keeps</em></strong> the data that are <em>TRUE</em> according to the expression.</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>name_of_the_data_object <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">*</span>MISSING<span class="sc">*</span>) <span class="co"># add your expression here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="Assigning the result!">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Assigning the result!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you completed that last step correctly you’ll see an output in the console (or in your .Rmd) showing a data object which has 121 rows and 5 columns. However, your data object has not actually changed in the environment. This will still be showing as 128 observations (rows). So while the filter command will take out those small estimations, we haven’t actually changed the data object at all. To do this we need to assign (<code>&lt;-</code>) the result of our filter command to the object.</p>
+</div>
+</div>
+<ol start="8" type="1">
+<li><p>Think about what you need to do to <strong>assign</strong> the result of the filter to a data object. You can assign the result to the same object name you’ve been using (that is, overwrite it), OR you can assign the result to a new data object (e.g., my_object_filtered). <strong>It’s up to you</strong>.</p></li>
+<li><p>We may also want to filter out the very high estimates. Let’s keep all those values less than (&lt;) £100,000 (again, this is arbitrary, but we are just doing this so we can learn how to use the <code>filter()</code> command). You can copy and edit the code above to run another filter command. Remember, you’ll need to think about which data is going IN to the calculation, and what you will assign the result to.</p></li>
+<li><p>When you’ve done both filter commands, the (new) object should have <strong>69 rows</strong>. We can now plot the data again as a histogram. To do this, <strong>copy the earlier code for the histogram</strong> and edit it as necessary (if you’re using a new object for the filtered data, you’ll need to edit the code to reflect that).</p></li>
+<li><p>And as you know, we can also look at the distribution as a boxplot (<code>geom_boxplot()</code>), a violin (<code>geom_violin()</code>), or a density plot (<code>geom_density()</code>). Go ahead and try some of these different visualisations.</p></li>
+<li><p>It’s worth pausing at this point and documenting each of these steps you’ve done. Between each of your code chunks, you’ll want to write a sentence or two, describing the analysis you’ve done and what it produces. Try using the “Visual” mode at this stage, which might help you to make your document look even nicer. Try knitting the document to html or pdf format.</p></li>
+</ol>
 </section>
-<section id="what-does-rstudio-look-like" class="level3">
-<h3 class="anchored" data-anchor-id="what-does-rstudio-look-like">What does RStudio look like?</h3>
-<p>When RStudio starts, it will look something like this: <img src="images/Wk1/RStudio_starup_screen.png" class="img-fluid" alt="Startup screen"></p>
-<p>RStudio has three panels or windows: there are tabs for Console (taking up the left hand side), Environment (and History top right) , Current file (bottom right). You will also see a 4th window for a script or set of commands you develop, also (on the left hand side).</p>
-</section>
-<section id="lets-get-started" class="level3">
-<h3 class="anchored" data-anchor-id="lets-get-started">Let’s get started!</h3>
-<p>The first thing we want to do in RStudio is to create a folder for this week so that we can put the relevant material there and keep it tidy.</p>
-<p>From the lower-right panel of RStudio, click the files tab.</p>
-<p>Select the “new folder” option and create a new folder (eg “week 1”)</p>
-<p>Click on that folder to open it</p>
-<p>Next, we’ve prepared some <em>instructions</em> for RStudio to use - this is called a “script”. So we need to get this script into the server for you to explore and play with</p>
+<section id="task-2---one-sample-t-test" class="level3">
+<h3 class="anchored" data-anchor-id="task-2---one-sample-t-test">Task 2 - One-sample t-test</h3>
+<p>We now want to know if the salary estimates are different to the actual average salary in the UK. According to <a href="https://www.ons.gov.uk/employmentandlabourmarket/peopleinwork/earningsandworkinghours/bulletins/annualsurveyofhoursandearnings/2024">ONS</a> this was £37,430 in 2024. Our hypothesis might be that people are inaccurate - they overestimate or underestimate the average UK salary. Let’s test that.</p>
 <ol type="1">
-<li><p>Download the “zip” file by <a href="data/Week_1/week_1_2025.zip">clicking this link</a></p></li>
-<li><p>Find the location of the file on your computer and check it is saved as a “.zip” file</p></li>
-<li><p>Return to RStudio</p></li>
-<li><p>Click “Upload”</p></li>
-<li><p>Click choose file and find the file on your computer.</p></li>
-<li><p>Select the file and click “Open”. Click “OK”</p></li>
+<li>First, let’s calculate the mean and sd of the column:</li>
 </ol>
-<p>You should now see the files extracted in the directory.</p>
-<p>You should now have the script available in RStudio.</p>
-<p>Use “Save…As” to create a new version of the script. By doing this, you’ll be able to have a “before” and “after” version of the script and can go back over the changes</p>
-<p>In the script, select or highlight the first line of text, which is this one:</p>
-<section id="run-your-first-ever-r-instruction" class="level4">
-<h4 class="anchored" data-anchor-id="run-your-first-ever-r-instruction">Run your first ever R instruction!</h4>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="sc">+</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>() <span class="co"># hint: object$column</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>and “run” this line. That tells RStudio to carry out the instruction.</p>
-<p>You should see that in the console tab, RStudio calculates the answer to this incredibly hard maths challenge! (amazing huh? OK, maybe not *that* amazing…).</p>
-</section>
-<section id="modify-your-first-ever-r-instruction" class="level4">
-<h4 class="anchored" data-anchor-id="modify-your-first-ever-r-instruction">Modify your first ever R instruction!</h4>
-<p>Use your imagination – add a new line to the script and ask a different simple arithmetic question of your own choosing! What happens?</p>
-</section>
-<section id="calculate-descriptive-stats-in-r-for-the-first-time" class="level4">
-<h4 class="anchored" data-anchor-id="calculate-descriptive-stats-in-r-for-the-first-time">Calculate descriptive stats in R for the first time!</h4>
-<p>In this week’s analysis lecture, we looked at measures of central tendency and how to calculate them. So let’s get R to do these calculations also!</p>
-<p>First, we tell R about the data used in the lecture. We’ve already created the instruction that will do exactly this and it is in the script, so run this line from the script</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>week_1_lecture_data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">3</span>,<span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This creates an “object” called <code>week_1_lecture_data</code>. We can then perform calculations on this object. For example, we can find the mean by running the following command (use the script to do this)</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(week_1_lecture_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Check the answer is the same we found in the lecture (it should be 6!).</p>
-<p>Next, let’s ask for the median by running this line from the script:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">median</span>(week_1_lecture_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>This also should be the answer from the lecture (7)</p>
-<p>R doesn’t have a built in function for the <em>mode</em> (in fact be careful, <code>mode()</code> does something very different to the mode command that we want). So we will use a <strong>library()</strong> command to bring in a new set of functions, one of which is a handy mode function called <code>mfv()</code>. Try highlighting the text “mvf” and press F1 to view the help on this function. Alternatively you can type <code>?mfv</code> in the console. and press return.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(modeest)</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mfv</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>What does R say the mode is?</p>
-</section>
-<section id="your-challenge" class="level4">
-<h4 class="anchored" data-anchor-id="your-challenge">Your challenge</h4>
-<p>How can you get RStudio to verify / check the dice calculations that you attempted earlier? Think about how you might solve this problem, on the basis of what we have covered so far.</p>
-<p>We will discuss this in class and attempt to get RStudio to check your answers. In doing so, annotate the script (add notes for you - not RStudio) using the “#” command</p>
-</section>
-</section>
-</section>
-<section id="before-you-finish" class="level2">
-<h2 class="anchored" data-anchor-id="before-you-finish">Before you finish</h2>
-<ol type="a">
-<li><p>Make sure you save a copy of the script that you have been working on by the end of the session. This provides you with the record - the digital trace - on what you have done. And it means you can come back and repeat any of the work you have performed.</p></li>
-<li><p>End your session on the RStudio server, this logs you out of the server and stops any ongoing activities and tasks you have set up, maybe in the background.</p>
-<p><img src="images/Wk1/power_button.png" class="img-fluid" style="width:2.5in"></p>
-<p>There is a red “power” button near the top right of the R studio window (do ask for help if you can’t find it). It’s a good habit to get into to turn the session off</p></li>
+<ol start="2" type="1">
+<li>Now we can compute a t-statistic and check whether this mean is significantly different from the expected mean. We do this with <code>t.test()</code>:</li>
 </ol>
-<section id="extra-content-for-outside-the-lab-class" class="level3">
-<h3 class="anchored" data-anchor-id="extra-content-for-outside-the-lab-class">Extra content for outside the lab class</h3>
-<p>In your own time and think about the following:</p>
-<p>In R, the leftward pointing arrow, “&lt;-”, is called the assignment operator. For example we used it in the command here:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>PSYC121_week_1_data <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">8</span>,<span class="dv">7</span>,<span class="dv">3</span>,<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">3</span>,<span class="dv">8</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(<span class="at">x =</span> name_of_the_data_object<span class="sc">$</span>name_of_the_column, <span class="at">mu =</span> value_of_expected_mean_under_null_hyp) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>It’s important to stop and think about what this does. When we use “&lt;-”, we create the variable label on the left (<code>Analysis_week1_data</code>) and we give it those numbers on the right. The name<code>Analysis_week1_data</code> is largely arbitrary: try use a variable of your own naming (your own name?) instead - and then use that alternative name for the other commands. QUICK TIP: there is a keyboard shortcut, alt+hyphen, which will give you the assignment arrow in R. Get used to this as it will save you lots of time in the long run.</p>
-<hr>
-<p>Another tip: Throughout this year, we’ll use the convention of the “underscore” to separate words in labels (it_makes_them_easier_to_read than ifyoudidn’thaveanyspaces)</p>
-<hr>
+<p>Copy the above code into your document and edit it to conduct a one-sample t-test. You need to provide <strong>the sample of data on which you want to conduct the test</strong>, and the <strong>expected mean under the null hypothesis</strong>. Remember our hypothesis stated above is that people are not accurate. Your calculation of the mean should tell you whether they numerically overestimated or underestimated. But would we expect such a result under the null hypothesis? Run the t-test and <strong>note the p value</strong>. How likely is it that we would see data like this under the null hypothesis? The p value ranges from 0 to 1. If it is very low - typically we say p &lt; .05 - then we conclude our result is unlikely under the null hypothesis and it is therefore a <em>significant result</em>.</p>
+<ol start="3" type="1">
+<li>What is the critical value of t in the t-distribution table, for this sample size? Degrees of freedom is N - 1.</li>
+</ol>
+<p><img src="images/wk7/ttable.png" class="img-fluid"></p>
+<section id="practice-this-process-on-the-climate-change-column" class="level4">
+<h4 class="anchored" data-anchor-id="practice-this-process-on-the-climate-change-column">Practice this process on the “Climate change” column</h4>
+<p>We’ve also included a column labelled <code>human_CC</code>. For this survey question we asked:</p>
+<div class="callout callout-style-default callout-tip no-icon callout-titled" title="Human made climate change">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Human made climate change
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>How much do you think human activity contributes to climate change, as a percentage of overall climate change? Please enter a value between 0 (humans do not contribute to climate change at all) and 100 (human contribute entirely to climate change).</p>
+</div>
+</div>
+<p>Feel free to practice what you’ve learnt so far in this week’s task, but with this new column (e.g., calculate a mean, draw a plot of the data). It’s a little harder to be sure exactly what % of climate change is actually driven by human activity, but scientists believe it is likely to be very close to 100% (see <a href="https://xkcd.com/1732/">this rather effective infographic</a>). For your statistical test, you could ask whether our sample believes human climate change is less than 100%. Discuss on your table whether you think it is appropriate to filter any of the data out before you run this test.</p>
+<p>You will also see in the data for this week, that we have a column that is labelled <code>attention_check</code> . This column represents answers to a survey question where we said “Please select strongly agree to show you are paying attention”. You may want to add in code to your analysis to use a filter command to remove those participants who failed the attention check. Run your analysis again to check if anything has changed (i.e., the graphs and stats).</p>
 </section>
 </section>
-<section id="task-3.4-review-the-learnr-sample-practice-questions" class="level2">
-<h2 class="anchored" data-anchor-id="task-3.4-review-the-learnr-sample-practice-questions">Task 3.4 – Review the learnr sample / practice questions</h2>
-<p>After every block of teaching in part-1 analysis (specifically, we mean in week 5, week 10, week 15 and week 20) there will be a class test. This will assess your knowledge and your understanding of the material that has been covered.</p>
-<p>The class test will comprise a set of Multiple Choice Questions (and the set of questions will be different for each student, as the test will involve random selection from a larger pool) under timed conditions.</p>
-<p>In order to help you get (a) a broad or basic feel for the sort of questions you might get in the class test (b) self-review your progress through the term, we will provide MCQs each week for you to attempt.</p>
-<p>So these are for your benefit… you can take the questions when you choose to, and the learnr quiz will provide feedback on the answers your provide. Just bear in mind:</p>
-<ol type="a">
-<li><p>We place a set of questions at the end of the learnr pages so that you can attempt these at the end of each week, after you’ve completed lab activities, follow-up work, weekly Q&amp;As etc. But it’s up to you when you answer the questions</p></li>
-<li><p>These are meant as <em>indicative questions</em>. There’s no point in learning/ memorising these questions (they won’t be on the quiz!) and our advice is to reflect on how the teaching and content links to the sorts of questions that get posed.</p></li>
+<section id="task-3---test-your-understanding-of-filtering" class="level3">
+<h3 class="anchored" data-anchor-id="task-3---test-your-understanding-of-filtering">Task 3 - Test your understanding of filtering</h3>
+<ol type="1">
+<li>Filtering is very useful for selecting certain sub-sets of our data. Here we have given you an example of how we select a sub-set of data based on two conditions from two different columns:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>name_of_the_data_object <span class="sc">%&gt;%</span> </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(home_location_in_UK <span class="sc">==</span> <span class="st">"NW"</span> <span class="sc">&amp;</span> sibling_order <span class="sc">==</span> <span class="st">"oldest"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>We have given you a few different columns to look at and to use in practicing your filter commands:</p>
+<ul>
+<li><code>sibling_order</code>: what position in age was the respondent within their siblings</li>
+<li><code>home_location</code>: UK / Asia / Europe, etc</li>
+<li><code>home_location_in_UK</code>: NW, NE, etc (NA is non-UK residents)</li>
+<li><code>attention_check</code>: respondents were asked “click strongly agree to show you are paying attention” - some people failed this!!!</li>
+</ul>
+<p>Gain some skills in filtering by trying to complete the following filters. Use the filtered data object that has 120 rows. We’ve put in <strong>()</strong> the number of rows you should see in the resulting object, after the filter.</p>
+<ol start="2" type="1">
+<li><p>Just those people who come from the North East (11 rows)</p></li>
+<li><p>Those people who come from South East and are the oldest child within their siblings (10 rows)</p></li>
+<li><p>Those people who failed the attention check (16 rows)</p></li>
+<li><p>Those people passed the attention check, are from the UK, and are the youngest child (35 rows)</p></li>
+<li><p>Those people who are NOT from the North West (hint: you’ll need to use <code>!=</code>) (49 rows)</p></li>
+<li><p>Those people who are from the South East or (<code>|</code>) the South West (25 rows)</p></li>
 </ol>
 </section>
-<section id="data-collection-exercise" class="level2">
-<h2 class="anchored" data-anchor-id="data-collection-exercise">Data collection exercise</h2>
-<p>In order to learn about psychology and data analysis techniques, we need data! Rather than rely too much on artificial data (certainly it is sometimes useful to say “Here are a bunch of numbers and this is what we can do with them” – think about the R Studio example for this week’s lab) for the most part, we prefer to draw on datasets that are a bit more engaging and meaningful that you have a stake in yourself! By using a common data set, that we can return to over the year, we can also build up familiarity and confidence in the data and remove a potential obstacle to thinking about the more important analysis part.</p>
-<p>So a key task will be for everyone to have a go at taking our online survey, and contribute to a dataset that can be used throughout the year.</p>
-<p>The survey runs <a href="https://lancasteruni.eu.qualtrics.com/jfe/form/SV_4YnySR3Qa8G1kh0" target="_blank">by following this link</a></p>
+<section id="sample-size-size-of-effect-and-the-one-sample-t-test" class="level2">
+<h2 class="anchored" data-anchor-id="sample-size-size-of-effect-and-the-one-sample-t-test">Sample size, size of effect, and the one sample t-test</h2>
+<p>In the lecture this week, Tom used an application to show the process of sampling data. You can access this application at the link below. There are three “parameters” you can change in this:</p>
+<ul>
+<li><p><strong>The true mean of the effect:</strong> Think of this like the bias that was set up in your deck of cards last week. There is some true state out there in the world, and we are going to draw samples from a distribution of data that has a mean that equals this value. If you make this 100, then the true mean is equal to that under the null hypothesis (there is no effect).</p></li>
+<li><p><strong>The standard deviation of the data:</strong> This sets how variable the data are in this population. If the data are more variable, then our samples will produce estimations that are less accurate of the true mean value.</p></li>
+<li><p><strong>The sample size:</strong> How many observations are drawn in the sample. These are represented by the yellow circles in the plot.</p></li>
+</ul>
+<p>Each time you draw a sample the data points are plotted in yellow and the mean of the sample is marked with the red line. The application also runs a one-sample t-test against the expected mean under the null hypothesis, of 100. The null hypothesis is also represented by the static distribution presented in grey, centred on 100.</p>
+<p>Things to try:</p>
+<ol type="1">
+<li><p>Start with a sample size of 10, and a mean of the effect of 110 (SD = 15). How often do you get a significant result (p &lt; .05) when you draw a new sample?</p></li>
+<li><p>Now try changing the mean of the effect to 120. Does this increase or decrease the likelihood of getting significant results? What about changing to 130?</p></li>
+<li><p>Now keep the mean effect constant (say 110), but increase the sample size. Try 5, then 10, 15, and so on. Does this increase or decrease the likelihood of getting significant results?</p></li>
+<li><p>Set the mean of the effect to 100 and the sample size to 10. Keep drawing new samples, noting each time the p value. You will evenutally get a p value of &lt; .05. What type of error is this?</p></li>
+</ol>
+<p><a href="https://ma-rconnect.lancs.ac.uk/one_sample_t" target="_blank"><strong>Click here for the one-sample t-test application</strong></a></p>
 </section>
-<section id="post---lab-recap-the-slides-we-used" class="level2">
-<h2 class="anchored" data-anchor-id="post---lab-recap-the-slides-we-used">Post - lab recap: The slides we used</h2>
-<p>Want to see again the introduction slides that we used in the Levy lab? They are <a href="data/Week_1/week_1_lecture_student_slides.pptx">available here</a></p>
+<section id="week-7-quiz" class="level2">
+<h2 class="anchored" data-anchor-id="week-7-quiz">Week 7 Quiz</h2>
+<p>You can access a set of quiz questions related to this week <a href="https://ma-rconnect.lancs.ac.uk/PSYC121_2022_Week_7_quiz/" target="_blank">here.</a></p>
 
 
 </section>
@@ -904,13 +884,13 @@ Note
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../PSYC121/index.html" class="pagination-link" aria-label="PSYC121">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">PSYC121</span>
+      <a href="../PSYC121/Week6.html" class="pagination-link" aria-label="6. Sampling, probability and binomial tests">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">6. Sampling, probability and binomial tests</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../PSYC121/Week2.html" class="pagination-link" aria-label="2. Descriptive statistics in RStudio">
-        <span class="nav-page-text">2. Descriptive statistics in RStudio</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../PSYC122/index.html" class="pagination-link" aria-label="PSYC122">
+        <span class="nav-page-text">PSYC122</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
