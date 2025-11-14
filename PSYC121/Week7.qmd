@@ -44,8 +44,7 @@ Download the lecture slides [here](data/Week_7/PSYC121%20Week%207.pptx)
 library(tidyverse)
 options(scipen = 999) # this stops numbers appearing as scientific notation
 
-
-d_raw <- read_csv("data/Week_6/PSYC121_survey_data.csv")
+d_raw <- read_csv("data/Week_6/PSYC121_survey_data_2025.csv")
 
 d <- 
   d_raw %>% 
@@ -242,17 +241,17 @@ We have given you a few different columns to look at and to use in practicing yo
 
 Gain some skills in filtering by trying to complete the following filters. Use the filtered data object that has 120 rows. We've put in **()** the number of rows you should see in the resulting object, after the filter.
 
-2.  Just those people who come from the North East (11 rows)
+2.  Just those people who come from the South East (10 rows)
 
-3.  Those people who come from South East and are the oldest child within their siblings (10 rows)
+3.  Those people who come from North West and are the oldest child within their siblings (17 rows)
 
-4.  Those people who failed the attention check (16 rows)
+4.  Those people who failed the attention check (6 rows)
 
-5.  Those people passed the attention check, are from the UK, and are the youngest child (35 rows)
+5.  Those people passed the attention check and are the youngest child (14 rows)
 
-6.  Those people who are NOT from the North West (hint: you'll need to use `!=`) (49 rows)
+6.  Those people who are NOT from the North West (hint: you'll need to use `!=`) (28 rows)
 
-7.  Those people who are from the South East or (`|`) the South West (25 rows)
+7.  Those people who are from the South East or (`|`) the South West (13 rows)
 
 ```{r}
 #| eval: false
@@ -260,16 +259,16 @@ Gain some skills in filtering by trying to complete the following filters. Use t
 
 
 d_f %>% 
-  filter(home_location_in_UK == "NE")
+  filter(home_location_in_UK == "SE")
 
 d_f %>% 
-  filter(home_location_in_UK == "SE" & sibling_order == "oldest")
+  filter(home_location_in_UK == "NW" & sibling_order == "oldest")
 
 d_f %>% 
   filter(attention_check == "fail")
 
 d_f %>% 
-  filter(attention_check == "pass" & home_location == "UK" & sibling_order == "youngest")
+  filter(attention_check == "pass" & sibling_order == "youngest")
 
 d_f %>% 
   filter(home_location_in_UK != "NW")
