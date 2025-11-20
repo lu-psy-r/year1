@@ -48,7 +48,7 @@ To play around with the t distribution simulator that Tom uses in the lecture, [
 
 library(tidyverse)
 
-d_raw <- read_csv("data/Week_6/PSYC121_survey_data.csv")
+d_raw <- read_csv("data/Week_6/PSYC121_survey_data_2025.csv")
 
 # set up the data for Task 3
 d <- 
@@ -69,7 +69,7 @@ d <-
   mutate(avg_time = round(mean(time),2))
   
 
-write_csv(d, file = "data/Week_8/stroop_wk8_2024.csv")
+write_csv(d, file = "data/Week_8/stroop_wk8_2025.csv")
 
 
 
@@ -80,7 +80,7 @@ Today we will take a look at summarising means and standard errors (SEs) from ou
 
 ## Pre-lab work: online tutorial
 
-**Online tutorial**: You must make every attempt to complete this before the lab! To access the [**pre-lab tutorial click here**](https://ma-rconnect.lancs.ac.uk/PSYC121_Week_8_2024/){target="_blank"} (on campus, or VPN required)
+**Online tutorial**: You must make every attempt to complete this before the lab! To access the [**pre-lab tutorial click here**](https://ma-rconnect.lancs.ac.uk/PSYC121_Week_8_Quiz_2025/){target="_blank"} (on campus, or VPN required)
 
 **Getting ready for the lab class**
 
@@ -94,7 +94,7 @@ The "Stroop Effect" is a classic demonstration of automaticity of behaviour. Par
 
 ![](images/wk8/stroop.png) In this task we will calculate the means and standard errors of the means and then we will then plot them using ggplot(). First though, we'll need to inspect the data and maybe do a bit of data wrangling by using our `filter()` command.
 
-1.  Create a new R Markdown document. If you're unsure about this step, see the instructions from Week 6 (or 7).
+1.  Create a new Rmarkdown document. If you're unsure about this step, see the instructions from Week 6 (or 7).
 
 2.  As usual, add a code chunk with `library(tidyverse)` and a `read_csv` command (see above for the link to the csv). Assign the result to a new data object, and call your data something meaningful (perhaps *data_w8* or *data_stroop* but maybe not *bestest_most_fantastic_data_on_the_stroop_test_eva_init*)
 
@@ -108,7 +108,9 @@ The "Stroop Effect" is a classic demonstration of automaticity of behaviour. Par
 # distribution of times by condition
 your_data_object %>% 
   ggplot() +
-  geom_density(aes(x = missing_column_name_A, fill = missing_column_name_B), alpha = .8) + # you need to EDIT this for Q4
+  geom_density(aes(x = missing_column_name, 
+                   fill = missing_column_name), 
+               alpha = .8) + # you need to EDIT this for Q4
   theme_dark()
 
 
@@ -136,7 +138,7 @@ d %>%
 # distribution of average times
 your_data_object %>% 
   ggplot() +
-  geom_histogram(aes(x = missing_column_name_A), fill = "pink") + # you need to EDIT this line
+  geom_histogram(aes(x = missing_column_name), fill = "pink") + # you need to EDIT this line
   theme_classic()
 
 ```
@@ -164,8 +166,18 @@ new_data_object <- # create a new object (or overwrite)
   filter(insert_an_expression_here)
 ```
 
+```{r}
+#| eval: false
+#| include: false
+
+# filter out the high values
+d_f <- # create a new object (or overwrite)
+  d %>% # original data object 
+  filter(avg_time < 10)
+```
+
 ::: {.callout-important icon=true title="Check your result!"}
-If you've done this correctly, you should now have a data object that has **327 rows** (data for 109 participants, with 3 responses each). 
+If you've done this correctly, you should now have a data object that has **189 rows** (data for 63 participants, with 3 responses each). 
 :::
 
 8. Add and edit the following code to plot a histogram of the *filtered* data.
@@ -188,11 +200,6 @@ new_data_object %>%
 ```{r}
 #| eval: false
 #| include: false
-
-# filter out the high values
-d_f <- # create a new object (or overwrite)
-  d %>% # original data object 
-  filter(avg_time < 10)
 
 # draw a new 
 d_f %>% 
@@ -236,7 +243,7 @@ d_f %>%
 ```
 
 ::: {.callout-important icon=true title="Check your result!"}
-- You should have 3 values: 4.63, 5.92, 7.25
+- You should have 3 values: 4.81, 6.09, 7.80
 - If all of your values are the same, you've analysed the wrong column.
 :::
 
@@ -304,7 +311,7 @@ t.test(x = stroop_compatible$time, y = stroop_incompatible$time, paired = TRUE)
 6.  With 3 levels (L1,L2,L3) to the IV *condition* there are 3 possible comparisons we can make (L1 vs. L2; L1 vs. L3; L2 vs. L3). Complete all three tests, by copying and pasting the code chunk twice more, editing each filter expression to select the relevant data. For each pair of conditions/levels, run the t-test. Write out a reporting statement (Q5) for each of your comparisons.
 
 ::: {.callout-important icon=true title="Check your results!"}
-- Using the filtered data (327 rows) you should get the following t statistics: -9.7648, -7.7069, -14.844
+- Using the filtered data (189 rows) you should get the following t statistics: (+/-)7.5688, (+/-)7.4054, (+/-)12.191
 - Remember that it's the magnitude that's important, not whether it's positive or negative. The sign simply depends which way round they are compared in the t calculations (mean_1 - mean_2 or mean_2 - mean_1)
 :::
 
@@ -345,7 +352,7 @@ stroop_summary <-
 4.  View the new summary object you have created. Check that the means and SEs are different for the 3 conditions. If they are the same, you probably summarised the wrong column!
 
 ::: {.callout-important icon=true title="Check your result!"}
-- The SE values should be: 0.137, 0.136, 0.168
+- The SE values should be: 0.180, 0.168, 0.274
 :::
 
 5.  We will now plot these 3 mean values in a figure. Let's use `geom_point()` so that our means and SEs look a bit like the figure above. Complete the ggplot command to plot our summarised value called *stroop_mean* (y), as a function of the IV, *condition* (x):
@@ -419,7 +426,7 @@ EXTRA: These next steps can be completed to practice customising your plot
 # let's first plot the means
 stroop_summary %>%
   ggplot(aes(x = condition, y = stroop_mean)) + # map variables to x and y for Q5
-  geom_col(size = 5) +
+  geom_col() +
   geom_errorbar(aes(ymin = stroop_mean - stroop_SE, # edit this for Q5
                     ymax = stroop_mean + stroop_SE), # edit this for Q5
                 width = .2) 
@@ -448,4 +455,4 @@ Knitting the document is a great way to see how your work looks as an actual rep
 
 ## Week 8 Quiz
 
-You can access a set of quiz questions related to this week [here.](https://ma-rconnect.lancs.ac.uk/PSYC121_2022_Week_8_Quiz/){target="_blank"}
+You can access a set of quiz questions related to this week [here.](https://ma-rconnect.lancs.ac.uk/PSYC121_Week_8_Quiz/){target="_blank"}

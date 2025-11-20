@@ -12,7 +12,7 @@ order: 1
 
 # Welcome
 
-Welcome to the PSYC121 lab material for 2024!
+Welcome to the PSYC121 lab material for 2025!
 
 In this module we will provide you with an introduction to data handling, data processing and data visualisation. What that means is that, by the end of the this module (at Christmas time), you will be able to take a set of data, look at some basic statistics (e.g., the mean value), filter and process the data in order to answer basic questions about it, and present the data in an appealing way with different graphs. On top of this, you will be able to apply some of your knowledge of the basic "inferential" statistical tests that we will introduce in the lecture series (e.g., "t-test").
 
@@ -28,7 +28,7 @@ It is fairly inevitable that you will get stuck on the lab materials in this mod
 
 -   **Ask your friends on your table**. We've designed this teaching space to help collaborative work. You are encouraged to work with other students. Make sure you ask others to explain how they've solved an exercise. Make sure you help out others where you can. Always make sure you understand the code and the exercise; don't simply be satisfied that you've got the right answer.
 -   **Ask a GTA or Lecturer**. Our Graduate Teaching Assistants are there to help you. There are no "stupid questions" in statistics, so just ask the GTAs any question about what you're doing. Likewise, ask the Lecturer.
--   **Ask on the Discussion Forum**. On the PSYC121 moodle page you will find a [Discussion Forum](https://modules.lancaster.ac.uk/mod/forum/view.php?id=2490409). This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don't be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).
+-   **Ask on the Discussion Forum**. On the PSYC121 moodle page you will find a [Discussion Forum](https://modules.lancaster.ac.uk/mod/forum/view.php?id=2666867). This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don't be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).
 -   **Ask on the module Q & A session**. Each week we hold a "Q&A" online session where we will try and resolve any general queries and problems. It's an ideal time to discuss things that students are struggling with or confused about, and can share ideas and answers. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but also you can ask in the session itself.
 
 **Asking good questions** - it's really important that you give us as much information as you can when you ask your questions (in class and especially on the forum). It's so much harder to help respond to "I can't do Exercise 5 in Week 7" (because we don't know why it is that you can't do it) than for example "In Exercise 5 of Week 7, I've managed to read in the data, put the graph looks quite odd. Here is the code I'm using..."
