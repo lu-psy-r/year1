@@ -84,7 +84,7 @@ Today we will take a look at summarising means and standard errors (SEs) from ou
 
 **Getting ready for the lab class**
 
-- Create a folder for Week 8 and download the [Week_8 csv file](data/Week_8/stroop_wk8_2024.csv) file and upload it into this new folder in RStudio Server.
+- Create a folder for Week 8 and download the [Week_8 csv file](data/Week_8/stroop_wk8_2025.csv) file and upload it into this new folder in RStudio Server.
 
 ## RStudio Tasks
 
