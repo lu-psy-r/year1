@@ -357,7 +357,7 @@ t.test(x = north_condition$pop_est_age, y = south_condition$pop_est_age,
 
 1.  We saw in last week's lab tasks that there was a significant effect in our Stroop task data: participants were faster to say the colour names of the compatible list compared to the incompatible list (there were significant differences with the control list too). We will now use these data to calculate an **effect size** (*Cohen's d*) for the t-statistic that we observed in that test.
 
-2.  Import the  [new stroop data csv file](data/Week_9/data_stroop_wk9.csv). We have reduced the data down to just the *compatible* and *incompatible* conditions.
+2.  Import the  [new stroop data csv file](data/Week_9/data_stroop_wk9_2025.csv). We have reduced the data down to just the *compatible* and *incompatible* conditions.
 
 3.  Add the following code into a chunk and run it (edit the data object name) to calculate the  `cohens_d()` effect size, which is reported as *effsize*. You can ignore any negative sign, taking note of the absolute value.
 
