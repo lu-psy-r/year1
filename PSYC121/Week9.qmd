@@ -322,8 +322,8 @@ t.test(x = north_condition$pop_est_immigrants, y = south_condition$pop_est_immig
 #| eval: false
 #| include: false
 
-north_condition <- data_wk9_z %>% filter(home_location_in_UK == "North")
-south_condition <- data_wk9_z %>%filter(home_location_in_UK == "South")
+north_condition <- data_wk9_f %>% filter(home_location_in_UK == "North")
+south_condition <- data_wk9_f %>%filter(home_location_in_UK == "South")
 
 # check if variances are unequal (p < .05) - Q3
 var.test(x = north_condition$pop_est_immigrants, y = south_condition$pop_est_immigrants, data = data_wk9_f)
@@ -335,7 +335,7 @@ t.test(x = north_condition$pop_est_immigrants, y = south_condition$pop_est_immig
 
 ```
 
-6. If you've done this correctly, you should have a **t-statistic = --0.6912**. Examine the p-value and discuss on your table what this means. Write a line in your .Rmd to formally state the result of the t-test (look at last week for the format). Describe what this result means in your own words.
+6. If you've done this correctly, you should have a **t-statistic = -1.0533**. Examine the p-value and discuss on your table what this means. Write a line in your .Rmd to formally state the result of the t-test (look at last week for the format). Describe what this result means in your own words.
 
 7.  In that t-test we looked at the *pop_est_immigrants* variable, but we can do this test for all of our population estimates. Copy the code to run another `var.test()` and `t.test()`, for the *pop_est_age* variable. Document the result of the t-test in your .Rmd and describe the finding. What do these tell us about the relationship between home_location and estimates of the population (if anything)? Feel free to come back to this and run the other two tests on the other population estimations.
 
