@@ -513,15 +513,13 @@ What does a negative IAT_RT score reflect?
 
 ::: {.callout-note icon=false collapse="true"}
 ## Answer
+**People with a negative IAT_RT are considered to hold the implicit view that vaping is positive (i.e. incongruent associations were quicker than congruent associations).**
 :::
- **People with a negative IAT_RT are considered to hold the implicit view that vaping is positive (i.e. incongruent associations were quicker than congruent associations).**
- :::
 
- What does a higher score on the 'VapingQuestionnaireScore' mean?
+What does a higher score on the 'VapingQuestionnaireScore' mean?
 
- ::: {.callout-note icon=false collapse="true"}
+::: {.callout-note icon=false collapse="true"}
 ## Answer
-:::
 **Higher scores indicated a positive explicit attitude towards vaping.**
 :::
 
