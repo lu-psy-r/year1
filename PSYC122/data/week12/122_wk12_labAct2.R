@@ -41,9 +41,10 @@ dat <- dat %>%
   filter(!is.na(IAT_RT))
 
 # Normality
-ggplot(dat, aes(x = VapingQuestionnaireScore)) + 
+histogramVapingQS <- ggplot(dat, aes(x = VapingQuestionnaireScore)) + 
   geom_histogram(binwidth = 10) +
   theme_bw()
+histogramVapingQS
 
 qqPlot(x = dat$VapingQuestionnaireScore)
 

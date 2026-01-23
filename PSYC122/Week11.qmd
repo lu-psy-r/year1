@@ -87,7 +87,7 @@ If you get error messages when attempting to upload a file or a folder with file
 :::
 
 ```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/year1/blob/main/PSYC122/data/week11/122_week11_forStudents/exams.csv?raw=true", destfile = "exams.csv")
+download.file("https://github.com/lu-psy-r/year1/blob/main/PSYC122/data/week11/122_week11_forStudents/MillerHadenData.csv?raw=true", destfile = "MillerHadenData.csv")
 ```
 
 ## Lab activities {#sec-wk11-labactivities}

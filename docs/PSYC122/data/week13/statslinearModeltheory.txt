@@ -1,0 +1,959 @@
+﻿Hi, it's Margriet Groen here.
+In this video I will talk
+
+you through what the linear
+model is and how we can use
+
+linear regression to build
+such a model.
+
+So more specifically, we will be
+looking at what a regression
+
+line is, or a line of best fit,
+
+and how we can specify such a
+line and by
+
+looking at its intercept and its
+
+slope. Also we'll be looking at
+the formula that specifies
+
+the regression line and
+its different components.
+
+And then, we'll be talking about
+residuals, what they are, and
+
+what they tell you about the
+model and how you can use them.
+
+We'll be briefly review
+different types of regression.
+
+We'll be looking at the
+assumptions that are relevant
+
+in the context of regression,
+and finally we will be
+
+looking at how you can
+measure how well your model
+
+fits, by using R ^2.
+
+So. Let's start with an example.
+
+Hundreds of studies have found
+that frequent words are
+
+comprehended faster than
+
+infrequent words. So in this
+Figure you see the
+
+response durations from a
+linguistic study conducted as
+
+part of the English Lexicon
+project by Balota et al.
+
+2007. So this study uses
+something that's called a
+
+lexical decision task, in which the
+participant sees a word and is
+
+asked to decide whether it is an
+English word or not.
+
+So the Y axis extends from about
+400 milliseconds (that's 2/5 of
+
+a second) to 1000 milliseconds (
+which is 1 second), and longer
+
+response durations mean that
+participants responded more
+
+slowly. Shorter response
+durations mean that they
+
+responded faster.
+
+Now the word frequencies on The
+x axis are taken from a large
+
+corpus study and the frequency
+of a word is a measure that
+
+tells you how often that word
+occurs in the language.
+
+Now word frequency is
+represented on a
+
+logarithmic scale, but
+don't worry about that. For
+
+now and for understanding the
+basics of regression it
+
+really doesn't matter what
+scale it is.
+
+So the relationship between
+response duration and word
+
+frequency is neatly summarized
+by a line.
+
+This is the regression line
+and it represents the average
+
+response duration for
+different frequency values.
+
+Now, generally you specify
+regression in the direction of
+
+assumed causality. That is,
+
+we expect word frequency to
+affect response durations rather
+
+than the other way around.
+
+But it is important to remember
+that mantra that says:
+
+correlation does not infer
+
+causation, because a
+regression model cannot tell
+
+you whether there actually is
+a causal relationship.
+
+OK, now some terminology.
+
+The variable plotted on the Y
+axis is referred to as the
+
+response variable or the outcome
+variable. Other people talk
+
+about the dependent variable.
+
+On the X axis, we plot our
+predictor that's also referred
+
+to as the independent variable,
+sometimes the explanatory
+
+variable or the regressor.
+
+They all refer to the same
+thing, but different people
+
+use different words.
+
+OK. Mathematically, lines are
+represented in terms of
+
+intercepts and slopes.
+
+Now let's talk about slopes
+
+first. So in the case of
+the word frequency effect
+
+on the previous slide,
+uou saw that the slope
+
+of the line is negative.
+
+As word frequency values
+increase, response
+
+durations decrease.
+
+Now, in
+contrast, a positive
+
+slope goes up, so as X
+increases, Y
+
+increases as well.
+
+Now the figure on the left of
+this slide shows two slopes that
+
+differ in sign.
+
+One line has a slope of plus 1/2,
+
+And the other one has a slope of
+
+minus 1/2. The one that
+goes down.
+
+And the slope is defined as the
+change in Y (or delta Y) over the
+
+change in X. Sometimes the
+mnemonic 'rise over run' is
+
+used to remember this formula.
+
+So how much do you have to
+rise in Y for a specified run
+
+along the X axis? So how
+much do you have to rise?
+
+on the Y axis an for
+a specified run, kind of from
+
+unit 1 to 2, for instance,
+along the X axis.
+
+Now in our word frequency
+example, the slope turns out to
+
+be minus 70.
+
+So for each increase in sord
+frequency by 1 unit, the
+
+predicted response duration
+decreases by 70 milliseconds.
+
+Now,
+
+to specify a line, you
+need a second piece of
+
+information and
+that is its intercept.
+
+The figure on the right of
+the slide here,
+
+shows 2 lines with the same
+
+slope, but different
+intercepts. So you can
+
+think of the intercept
+informally as the point
+
+where the line starts on
+the Y axis. So we have the
+
+Y axis here.
+
+So this first line
+
+has an intercept
+
+close to one and this
+second line has an
+
+intercept of about 3.
+
+So the Intercept is the
+predicted Y value for X is 0.
+
+Now for the for the word
+frequency effect data, this
+
+happens to be the number 880
+milliseconds and that was
+
+represented again with this
+white square in the previous
+
+slide.
+
+Now, once you know the intercept
+and the slope of a line,
+
+there can only be one line. It
+is completely specified.
+
+Now,
+
+this is summarized in the
+
+following formula. So here we
+have the dependent variable Y.
+
+And that equals the
+
+intercept (beta zero), plus
+
+the predictor and it's
+weight. So beta one is the
+
+weight of the predictor.
+
+This bit
+
+is the slope, sorry this bit
+
+is the slope and this
+bit is the intercept.
+
+So let's have a look at our
+word frequency effect example
+
+so you can see that same graph
+here on on the right, the
+
+slope, the intercept.
+
+The dependent variable or response
+variable: response duration, here
+
+equals the intercept beta
+
+0. Which is here, that's
+880 milliseconds, plus and here
+
+we have to slope of minus 70
+milliseconds per unit increase
+
+in the frequency.
+
+Multiply it by the word
+
+frequency. Now you might, you
+might ask, why do I need to know
+
+that or what use is that? Well,
+you can make predictions using
+
+this formula. So if we want to
+
+know. What is a word's
+response duration
+
+does a participant need to decide whether
+
+something is a word or
+is not a word?
+
+We can predict that using this
+model if we know what the word
+
+frequency for that particular
+
+word is. So let's take
+
+the word script.
+
+That does not occur in the
+original data set, so it would
+
+be a prediction about a new word.
+
+But if we know what the word
+frequency is of script, that
+
+equation will tell us what it
+predicts the response duration
+
+to be.
+
+In the case of
+script it's word frequency is 3,
+
+so we put that in this formula.
+So we have the intercept, we
+
+have the slope and here is where
+we put this this three. So if we
+
+do the sums here. We
+end up with a prediction of 670
+
+milliseconds, so that is the
+time we think it will take a
+
+participant to decide whether or
+not 'script' is an English word.
+
+Now this prediction is called a
+fitted value, as it results from
+
+kind of fitting a regression
+model to the data set.
+
+In fact, all these points
+along the regression line are
+
+called fitted values.
+
+Now.
+
+Let's now look at residuals.
+
+The regression model doesn't fit
+any of the data points perfectly
+
+usually. And the extent to which
+the model is wrong for any
+
+specific data point is
+quantified by the residuals.
+
+So the residuals are
+these vertical differences of
+
+the observed
+
+from the regression line.
+
+So you can see that all
+those different residuals
+
+for different data points
+into figure.
+
+So the observed values here,
+above the regression line, they
+
+have positive residuals. And the
+observed values here, below the
+
+regression line, they have
+
+negative residuals. And the
+actual numerical values
+
+represent how much the
+predictions would have to be
+
+adjusted upwards or
+downwards to reach each
+
+observed value.
+
+Now the relationship between
+fitted values, observed values
+
+and residuals can be summarized
+in the following way:
+
+The residuals equal the
+observed values minus
+
+the fitted values.
+
+So now that you know about
+residuals, the general form
+
+of a regression line can be
+completed by adding what is
+
+known as an error term.
+
+This is 'e'.
+
+So essentially you can think of
+the regression equation
+
+As to be composed of two parts:
+One part is kind of the
+
+deterministic part and that
+allows you to make predictions
+
+for any mean of Y given a certain
+value of X. So that is this part.
+
+We saw that in the example with
+the word frequency where we put
+
+in a word frequency for the
+word script and then got
+
+the value for the response
+duration.
+
+So that is deterministic in the
+sense that for a particular
+
+value of X it will always give
+you the same value for y.
+
+Now the second part that is
+this error term 'e'. This is what is
+
+called the stochastic part of
+the model and that kind of
+
+messes with those predictions.
+
+Your predictions are basically
+never going to be perfect.
+
+OK, now what is linear
+
+regression? Basically it is a
+statistical method that is used
+
+to create a linear model.
+
+And there are different types:
+there is simple linear
+
+regression. That is
+
+models when you only have one
+
+predictor. Then there is
+multiple linear regression,
+
+then the model has
+multiple predictors.
+
+There's also something called
+logistic regression, and that
+
+models a categorical response
+
+variable. So for instance,
+whether you have passed an exam
+
+or not passed an exam.
+
+And then there is multivariate
+linear regression where you
+
+model multiple response
+variables at once.
+
+Now in the in the remainder of
+this video we will be looking at
+
+simple linear regression.
+
+So statistical models rely on
+assumptions and regression is no
+
+exception in that regard. So all
+claims made on the basis of a
+
+model are contingent on
+satisfying its assumptions to
+
+some reasonable degree. So
+we'll talk
+
+about assumptions in more
+
+detail elsewhere. But here I'd
+like to focus on this.
+
+For regression, the assumptions
+discussed are actually about the
+
+error. That is, they relate to
+the residuals of the model.
+
+So if the model satisfies the
+normality assumption, its
+
+residuals are approximately
+normally distributed.
+
+If the model satisfies the
+constant variance assumption,
+
+the spread of the residuals
+should be about equal while
+
+moving along the regression, the
+
+regression line. So that is
+known as homoscedasticity.
+
+Sorry,
+really difficult word.
+
+Anyway, in the figures here on
+the slide, you can see examples
+
+of what residuals look like if
+they do not meet these
+
+assumptions. So on the right
+here, we see a clear violation
+
+of the normality assumption.
+
+So if we look at this histogram,
+it's reveals a positive skew.
+
+And that is there are very few
+extreme values here, and most of
+
+the values are really bunched up
+here. So if we have a regression
+
+line here and here, we have all
+our observed values, but you can
+
+see that this, the scatter, around
+this line is not kind of nicely,
+
+randomly distributed like a
+cloud. There is a clear skew.
+
+So it is important to emphasize
+that the normality assumption in the
+
+case of regression is about the
+residuals, not about the response
+
+or the dependent variable.
+
+And it is possible that a model
+of a of a skewed response or dependent variable, has
+
+normally distributed residuals.
+
+You always need to look
+at the residuals not at the
+
+distribution of the
+response measure.
+
+Now in the figure on the left
+you see a clear violation of
+
+the constant variance
+assumption. So in this case
+
+the residuals are larger for
+larger X values, so you can see
+
+that there is more spread here
+on this side of the regression
+
+line, then there is here. So
+It's kind of fanning out.
+
+So these residuals are therefore
+not homoscedastic, but they are
+
+heteroscedastic. So that
+is a problem.
+
+So here an in this figure you
+can see some more examples of
+
+data where the residuals
+
+meet or do not meet the constant
+
+variance assumption. So on the
+left: this is what
+
+constant variance looks like.
+
+So there is no clear pattern
+and that that is what we need.
+
+It indicates that the residuals
+meet the assumption of constant
+
+variance, or in other words,
+they are homoscedastic.
+
+So in the middle, here in blue, we
+have a situation where the
+
+residuals show a kind of bow
+tie shaped pattern with less
+
+spread, so smaller
+residuals here in the middle and
+
+larger residuals, more spread here
+
+on both sides.
+
+So again, this is not constant
+
+variance. So they are
+
+heteroscedastic. And here we
+have this fan-shaped pattern
+
+that we saw before in
+
+green again; violating the
+constant variance assumption.
+
+Now the residuals are
+useful for creating a
+
+measure of the goodness of
+fit of a model. So once
+
+you've fitted your
+regression model, it is
+
+useful to know how well
+that model actually fits
+
+with the observations.
+
+So what do you think? Will a
+well fitting model have large
+
+residuals or small residuals?
+
+Maybe think about
+that for a second.
+
+The well fitting model
+has small residuals.
+
+So let's get back to our word
+
+frequency model. Here on the
+right of the slide this one.
+
+So the closer the observations
+are to the line, all these
+
+different observations are to
+the line, the smaller the residuals.
+
+Because you might remember that
+residuals equals the observed values
+
+minus the fitted values.
+
+Now, to assess a goodness of
+fit of our model with word
+
+frequency as a predictor for
+response duration, we compare
+
+it to a model that does not
+include that predictor.
+
+So that is the model over here.
+
+That model includes only the
+
+intercept and is therefore
+also referred
+
+to as the null model.
+
+So the slope of the regression
+line is zero in this case
+
+because it does not include a
+predictor and a line with zero
+
+slope is horizontal OK.
+
+So if we have our original
+regression line formula here
+
+with the intercept, the
+intercept slope and the error
+
+term. The new model only has an
+
+an intercept and the
+error term.
+
+So you can see that the observed
+
+values in the null model are a
+lot further away from the
+
+regression line. So here we
+have the regression line and
+
+you can see that these
+residuals are larger. So it
+
+is worse than the model with
+the frequent word frequency
+
+predictor.
+
+To get an overall measure
+of fit or 'misfit',
+
+the residuals can
+be squared and summed so that
+
+gives you something called the
+sum of squared errors.
+
+So we can do that for the
+model with the word frequency
+
+predictor, and in that case, if
+you do the sums, you end up with
+
+an SSD of 42,609.
+
+Now, without context, that number
+is pretty meaningless.
+
+It is unstandardized, and it
+changes depending on the metric
+
+of the response measure.
+
+Now the null model can be used
+to put the SSE of the
+
+main model into perspective, so
+it can be used to compute a
+
+standardized measure of model
+
+fit. And that standardized
+measure is, R-squared.
+
+And this is what it looks like.
+
+Take the SSE of the
+main model. That's that.
+
+And divide it by the SSE.
+of the null model and
+
+subtract that from 1.
+
+So if you do the sums, we get an
+R-squared of .70.
+
+So what does that number tell
+
+you? That number can be
+conceptualized as how much
+
+variance is described by the
+
+model. So in this case, 72% of
+the variation in response
+
+durations in the lexical
+decision task can be accounted
+
+for by including word frequency
+into the model.
+
+On the other end, 38% of the
+
+variation is due to chance.
+
+Sorry, 28% of the variation is
+due to chance or due to factors
+
+that you've omitted.
+
+So that are not included in
+the model.
+
+So, R-squared is actually a
+measure of effect size.
+
+It ranges from zero to 1.
+
+So you can have any value in
+between zero and one and
+
+values closer to 1 indicate
+that the model fits better
+
+and it also shows you that
+there is a stronger
+
+effect.
+
+So that is illustrated in
+this figure.
+
+A regression line or
+regression model, and
+
+that's that. Looks like
+that I would have R
+
+squared of approximately .3
+so,
+
+whatever the predictor is,
+would account for about 30% of
+
+the variation in Y.
+
+Now, as the model
+fit becomes better,
+
+the distances between the
+observed values and the fitted
+
+line become smaller. Here an
+even smaller here as we get
+
+closer to 1.
+
+OK, so just to summarize we
+talked about a mathematical
+
+specification of the regression
+line by using the intercept
+
+and slope of the line.
+
+We looked at the regression
+
+formula. Then we talked about
+residuals and how residuals are
+
+basically the observed values
+minus the fitted values.
+
+We looked at different types of
+
+regression. I also discussed the
+assumptions. So residuals need
+
+to be normally distributed and
+they need to show constant
+
+variance. They need to
+be homoscedastic.
+
+And finally we looked at R-squared that uses the residuals
+
+of the null model to
+standardize the residuals of the
+
+main model and that provides an
+effect size measure which tells
+
+you what proportion of variance
+in the dependent variable can be
+
+accounted for by the predictor
+in the main model.
+
+Thank you very much for
+your attention.
