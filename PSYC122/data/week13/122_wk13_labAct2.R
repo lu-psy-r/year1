@@ -7,6 +7,7 @@ library(tidyverse)
 
 # Step 2: Read in the data ------------------------------------------------
 stars <- read_csv("stars2.csv")
+#stars2 <- download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week13/stars2.csv?raw=true", destfile = "stars2.csv")
 engage <- read_csv("psess.csv")
 
 head(stars) # Look at the data frames

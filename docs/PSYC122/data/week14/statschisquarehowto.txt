@@ -1,0 +1,649 @@
+﻿OK hi again
+
+So in this video I will talk you
+through the example script of
+
+how to do Chi Square in R.
+
+So I've set my working directory.
+I have checked that the file I
+
+need fighting_TV.csv
+is in that directory so I'm
+
+all good to go.
+
+Um?
+
+So we are working with the same
+example that we looked at in the
+
+slides, in the slides in the
+lecture and so want to know
+
+where there is a relationship
+between children's record for
+
+fighting in school.
+
+and a preference for a TV program.
+
+So first of all, just always
+good idea to start by cleaning
+
+the environment. So we
+do that with this bit of code
+
+Then we need to load two
+particular libraries, tidyverse
+
+which you're familiar with
+and we also need the library
+
+called LSR. So let's load those.
+
+Um?
+
+And then we need
+to read in data.
+
+now we've done that before its not
+very new, we're using again the read_csv
+
+function to do this.
+
+We are assigning.
+
+whatever is in that file to an
+object in studio called fighting_data
+
+So there we go. Now we have an
+object here in our
+
+environment in top right
+panel. So we know that it's there.
+
+Now by running the next bit
+of code, you can just see the first few
+
+lines of that table so let's do that.
+
+And we can see that there
+it has three variables so ID
+
+which is participant
+
+Number TV and fight.
+
+Now in these TV and fight
+variables, we only have the
+
+numbers 1 and zero because if the
+child has been involved in fighting in
+
+school we have recorded
+a 1 for that participant and
+
+if not, we have recorded
+a 0 for that participant
+
+Similarly for TV program, if
+they chose, if they have a preference for
+
+Violent TV program they get a 1
+
+In that uhm
+
+in in that variable or
+if they have a preference
+
+for 0 they get a 0 for that
+
+variable. So in the bottom left
+pane of the console you can see
+
+for instance, for participant 5 we have
+one and one. So suggesting that
+
+participant 5 choose, has a preference
+for Violent TV program
+
+and is also involved in fights in school.
+
+OK, so far so good.
+
+The first thing that we want
+to do though is to re code
+
+these numbers to more
+informative text labels. So
+
+instead of having oops, instead of having
+one, we are going to say please
+
+record the text label violent for zero
+
+or for non violent.
+Similarly, we want yes and no
+
+for the ones and the
+zeros in the fight variable
+
+To do that, we will be using
+mutate that you have come
+
+across before and we say OK,
+use within mutate we want to use the
+
+recode function and we want you to take.
+
+the variable TV and whenever you
+encounter a 1, we want you to
+
+replace that with word violent.
+
+If whenever you encounter a zero
+we want you to replace that with
+
+the word label non-violent, etc. etc.
+
+Now Please note that these are
+all in double quotation marks.
+
+OK, so we've.
+
+Got our data table there and we're
+saying OK, take the data table.
+
+And then, that's our pipe, use the mutate
+function to change the coding of these
+
+values for TV variable
+and for the fight variable.
+
+We run that.
+
+We can again have a look
+and we see that instead of
+
+of 1s and 0s we have words
+violent and Yes makes the
+
+output later and also
+the graphs easier to read.
+
+Now the next thing is to do
+calculate some descriptive
+
+statistics and.
+
+Some we actually need to
+create a contingency table,
+
+so let's do that first,
+the contingency table.
+
+And that is our table that
+we sort of get an inlection with
+
+one variable across the top
+and the other one across the side
+
+So we are taking our
+table with recoded.
+
+Values and then we say group by
+our two variables.
+
+And then we ask, it, please count
+how many observations we have in
+
+each of the cells.
+
+Let's run that..
+
+and lets have a look so we
+
+erm just to remind you we took
+this table with the recoded
+
+values. We did all that and we
+assigned it, that's this arrow, to
+
+a new object in R studio called
+
+fighting counts. You can see
+that object in the top right pane in
+
+the environment pane.
+
+Now, if you just run it, it
+appears in the environment
+
+pane in the top right, But you
+don't see, you can't see it in
+
+the console. You have to, what's called
+
+you have to call it, Well, I did
+and that's why in the bottom left
+
+pane we now have our contingency
+table. So TV program on the
+
+preference on this side
+and here we have fight
+
+So we have 70 children
+who have.
+
+erm
+
+who have not been in a fight in school and
+prefer a non-violent TV program, etc. etc.
+
+You will recognize this from the er
+
+lecture slides
+
+Now, as I mentioned
+in the lecture, it is useful to
+
+Report the percentages of these
+
+to give the reader an idea about how much
+is actually what this actually means. Even
+
+though we need these numbers
+to calculate the chi square
+
+the percentages are informative.
+
+You can use this bit of code to add
+them to this table. So if I run this
+
+And then call this new table.
+Then here you see we've got. We've
+
+got raw numbers. But now we've also
+got our percentages.
+
+You might wonder why is the
+same, but that's because there were
+
+were exactly 100 children who had a
+
+preference for a nonviolent tv program,
+so here we've got the percentages
+
+in the console
+
+in the bottom left pane
+is the right-most column
+
+OK then.
+
+Often a good visualisation is really
+
+helpful in understanding your data,
+so that is a no different for chi square
+
+you can use a bar plot to graph the data.
+
+and this is how you do it.
+
+We're using the ggplot function
+that you've used before to create
+
+scatterplots for instance,
+And that needs a few pieces of
+
+information, right? So usually
+we tell it what the data is and say
+
+OK, please use the
+data recode table
+
+and on the x axis, please
+put fight, the variable fight
+
+And in this case we don't have a Y
+axis, but we said OK. Please use
+
+the color to er indicate what
+
+that tv program preference was.
+
+So that is all the information that
+ggplots needs about the data and then
+
+here we tell it to use the geom_bar
+function to create the bar plot
+
+Let's run that.
+
+And here we are. I will make that bigger.
+
+So here you can see the
+count data graph in the bar plot
+
+so fight, not been involved in a
+
+fight. Yes, has been involved in a
+fight and the colors indicate whether
+
+they have a preference
+for violent or non violent
+
+TV program
+
+So as you can see, the plot makes
+it much easier to visualize the data
+
+Children with preference for violent
+tv programs were more likely to get into
+
+fights in school.
+
+OK, so then we are ready to
+run the chi square test and for that
+
+function called chisq.test
+
+And that function needs to, we need
+to tell it a few different things.
+
+We need to tell it what our
+first grouping variable is, TV.
+
+We need to tell it what our
+second grouping variable is fight
+
+and notice that again we're telling it
+to use the data table fighting_recode.
+
+and then here we tell,
+we say want to use the
+
+continuity correction.
+Don't worry about that for now.
+
+So we asked it to do all that
+and save the results in a
+
+new object that we've called results.
+
+So let's do that.
+
+So now I have this
+result object.
+
+In my top right pane, the environment
+pane. If I want to actually see them on the
+
+screen, I need to print it. So I need
+to call that object, so thats what I do
+
+Here
+
+so we're running just
+this bit that's called results.
+
+You get some output in the console
+
+so in the bottom left pane you
+can now see what the results are so
+
+Pearsons chi squared test, this is the
+data it's using, and the chi squared is
+
+26.157. You might remember that
+we calculate by hand and it was
+
+26.16, so it's pretty accurate.
+
+we have one degree of
+freedom and this is our exact
+
+P value. It is scientific notation so you
+
+have to move this decimal
+point seven places to the left.
+
+So this is well below 0.01
+
+So, it is significant.
+
+Now we need to check a
+few assumptions right so
+
+data in the cells
+should be frequencies of
+
+counts, not something
+else, we know that that
+
+is the case. The levels
+and categories need to
+
+be mutually exclusive.
+
+So a participant can only contribute
+to the count in one particular cell
+
+We know that that's also the case
+
+No child was both involved in
+the fight and not involved in the fight
+
+it wouldn't be logically possible.
+
+There was also only, they
+could only choose either
+
+a violent TV program or
+a non-violent TV program
+
+so it's mutually exclusive
+
+Groups are independent all
+fine and there are two variables.
+
+both categorical. That's all those
+assumptions you can check from
+
+the design of the study
+
+The final one, number 6 here is
+something that you need to check
+
+in R so the expected cell frequencies should
+be greater than 5 or at least 20% of them
+
+So
+
+We had in our results object
+
+that we created by running
+the chi squared test. We actually
+
+have a lot more information
+than it spits out in the first instance,
+
+so if it has actually nine
+different things in it and we we
+
+need to look at one of those things and
+that is the expected cell count. So if you
+
+say. OK, take this table and then
+look at that location with the dollar sign.
+
+It'll give you the
+expected cell count so let's
+
+run that. Here you can
+see what the expected
+
+cell count for this
+particular sample were.
+
+and you can see in the bottom
+pane, so in the console that
+
+they are way bigger than five.
+Actually in all cases.
+
+So, the assumption in
+this case has been met
+
+just come back to this
+continuity correction that is
+
+basically, so. We
+specified that here as false.
+
+That is, becomes relevant when
+your counts are smaller than 10.
+
+You can use whats called
+Yates's correction and say true.
+
+OK, but we don't need to
+worry about that right now
+
+That was the expected frequencies, we've
+checked that. All good, assumption met
+
+Now over to the effect size so Cramer's V
+
+there is a function for Cramer's V in R
+
+and that what we use.
+The code very closely
+
+mirrors what you put
+into the original chi square
+
+Again, you have our data table
+finding_recode and the first
+
+variable is TV and the second variable
+
+is Fight. And so that's exactly what you
+put into Cramer's V and we're storing that
+
+into new object called eff_size
+
+OK, so let's run that code
+again and call that object to
+
+actually see what the numbers is at the
+bottom pane in the console you can now see
+
+that Cramer's V is .41.
+
+Now we can.
+
+Square that effect size to get the
+
+percentage variance accounted for
+
+or multiply it by itself, thats what
+I'm doing here, say run that.
+
+I get the percentage of
+variance accounted for in.
+
+Number of fights, number of children that
+were involved in a fight accounted for,
+
+by number of children that
+preferred the violent TV program.
+
+You can see that again in the console
+that is .17, multiply that by 100.
+
+and then you have your
+percentage of variance accounted for
+
+Now it is useful to look
+at the standard residuals to
+
+help interpret the relationship
+basically asking OK which of
+
+these if we go to the cells
+here. Which of these numbers
+
+contributes most or contributes
+significantly to the overall
+
+significance association
+
+You know if we look at the
+
+graph in the bottom right pane
+
+Where which difference is
+actually significant within that
+
+within the contingency
+table? And to figure that out
+
+we can look at the standardised
+residuals and they are again
+
+stored within that results
+object. So we say OK, look
+
+into the results and give me
+whatever is in.
+
+in the residuals location so
+
+if I run that code.
+
+I get this so if you
+now look in the console
+
+So you can see that these.
+
+these are the standardised
+residuals, these numbers here
+
+so standardised residuals for the
+case where a child has been in a fight
+
+and preferred a violent TV program is
+
+3.04. And so that indicates gives
+you an indication of the number
+
+of standard deviation that is above
+or below the expected frequencies.
+
+so 3 you might remember
+is very much significant
+
+It's bigger than point than 2.48 sorry 2.58.
+
+but it is smaller than 3.29 so we
+would say that that standardised residual
+
+is significant at
+
+p is smaller than .01
+
+And then we've got all of the
+information we need for the
+
+write up. So here you have an
+example of the write up its the same
+
+as was on the lecture slide.
+
+OK, that's it for that.
+Thank you very much for
+
+your attention.
