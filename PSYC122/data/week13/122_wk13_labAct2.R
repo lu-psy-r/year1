@@ -33,7 +33,10 @@ ggplot(joined, aes(x = mean_anxiety, y = n_weeks)) +
   geom_point() +
   geom_smooth(method = "lm") +
   labs(x = "Anxiety", y = "Engagement") +
-  theme_bw()
+  theme_bw() #+
+  #xlim(0,4) +
+  #ylim(0,10)
+
 
 # Step 6: Build the regression model -----------------------------------------------
 mod <- lm(n_weeks ~ mean_anxiety, data = joined)
