@@ -595,5 +595,5 @@ Step 6. Write a few sentences in which you report this result, following APA gui
 Below is the recording of this week's online Q&A.
 
 ```html{}
-<iframe src="https://teams.microsoft.com/l/meetingrecap?driveId=b%2107KtLaez2km4aO26MLKvrFC3XEe-ZGdMhBvRcr392ZTNuDPKiX2UT6EiKEZpu7GO&driveItemId=01VY6M5E7FAB7WMHCNUBFIOHKW5MJR6ZMZ&sitePath=https%3A%2F%2Flivelancsac-my.sharepoint.com%2F%3Av%3A%2Fg%2Fpersonal%2Fgroen_lancaster_ac_uk%2FIQDlAH9mHE2gSocdVusTH2WZAQNWddqsgUxK6fEXwSY_l70&fileUrl=https%3A%2F%2Flivelancsac-my.sharepoint.com%2Fpersonal%2Fgroen_lancaster_ac_uk%2FDocuments%2FRecordings%2FPSYC122+-+Online+Q%26A-20260116_145141UTC-Meeting+Recording.mp4%3Fweb%3D1&threadId=19%3Ameeting_MWM4OTRlYTUtNzk0Ny00YzQzLWIzZTMtNTM4NjA2YjNjMTA0%40thread.v2&organizerId=b4127b53-9e1a-49be-a19d-af31837568ea&tenantId=9c9bcd11-977a-4e9c-a9a0-bc734090164a&callId=100e46ba-a436-4642-b161-706567b10ea8&threadType=Meeting&meetingType=Scheduled&subType=RecapSharingLink_RecapCore"></iframe>
+<iframe allow="autoplay; fullscreen" width="640" height="360" src="https://estream.lancaster.ac.uk/Embed.aspx?id=93146&amp;code=dZ~w0gUpvCiLHGxKSLnVbniLBMiaXxhpd" frameborder="0" allowfullscreen></iframe>
 ```
