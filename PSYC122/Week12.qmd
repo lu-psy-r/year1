@@ -594,10 +594,10 @@ Question 8b. What do you conclude from the results of the correlation analysis?
 **No significant correlation with age was found.**
 :::
 
-<!-- ## Online Q&A -->
+## Online Q&A
 
-<!-- Below is the recording of this week's online Q&A. -->
+Below is the recording of this week's online Q&A.
 
-<!-- ```{=html} -->
-<!-- <iframe src="https://livelancsac-my.sharepoint.com/personal/shawej1_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=2a79d2c0-09e2-4ded-a704-8f9e521e60f5&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="PSYC122 Online Q&A Week 11-14 & 16 -19-20250123_140407-Meeting Recording.mp4"></iframe> -->
-<!-- ``` -->
+```{=html}
+<iframe src="https://teams.microsoft.com/l/meetingrecap?driveId=b%2107KtLaez2km4aO26MLKvrFC3XEe-ZGdMhBvRcr392ZTNuDPKiX2UT6EiKEZpu7GO&driveItemId=01VY6M5E5UUYLMCIBSFZAJFYKP5N6VHL2T&sitePath=https%3A%2F%2Flivelancsac-my.sharepoint.com%2F%3Av%3A%2Fg%2Fpersonal%2Fgroen_lancaster_ac_uk%2FIQC0phbBIDIuQJLhT-t9U69TAXbPFpTasf1dOt0a6qdpBKY&fileUrl=https%3A%2F%2Flivelancsac-my.sharepoint.com%2Fpersonal%2Fgroen_lancaster_ac_uk%2FDocuments%2FRecordings%2FPSYC122+-+Online+Q%26A-20260123_144034UTC-Meeting+Recording.mp4%3Fweb%3D1&threadId=19%3Ameeting_MWM4OTRlYTUtNzk0Ny00YzQzLWIzZTMtNTM4NjA2YjNjMTA0%40thread.v2&organizerId=b4127b53-9e1a-49be-a19d-af31837568ea&tenantId=9c9bcd11-977a-4e9c-a9a0-bc734090164a&callId=185ae1c3-a818-47ad-861c-cdd99a32421a&threadType=Meeting&meetingType=Scheduled&subType=RecapSharingLink_RecapCore"></iframe>
+```
