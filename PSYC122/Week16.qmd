@@ -1141,6 +1141,7 @@ Try doing a search with the keywords: `ggplot reference geom_point`
 
 You will find, below, a link to the video recording of the week 16 online Q&A after it has been completed.
 
-<!-- ```{=html} -->
-<!-- <iframe src="https://livelancsac-my.sharepoint.com/personal/shawej1_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=1d6b0b1d-2abc-4730-ace4-d8c280c77144&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="PSYC122 Online Q&A Week 11-14 & 16 -19-20250220_140122-Meeting Recording.mp4"></iframe> -->
-<!-- ``` -->
+```{=html}
+<iframe allow="autoplay; fullscreen" width="640" height="360" src="https://estream.lancaster.ac.uk/Embed.aspx?id=93900&code=Js~7fkHIygIfPGYBhxbpRV5AdWomAQRCddFv6Oqat8l8AVGfObZqTgoKdtEp9rO7uzcueURjQjoGATjChkqIUREhd%22 frameborder="0" allowfullscreen></iframe>
+```
+
