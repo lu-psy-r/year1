@@ -1,6 +1,6 @@
 ggeffects
 kableExtra
-patchwork
+sjPlot
 tidyverse
 ggplot2
 tibble
