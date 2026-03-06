@@ -1,5 +1,5 @@
 ---
-title: 8. Week 19 -- Linear models -- critical perspectives
+title: 8. Week 19 -- Linear models -- interactions
 subtitle: Written by Rob Davies
 order: 9
 ---
@@ -15,18 +15,14 @@ order: 9
 ```{r}
 #| warning: false
 #| echo: false
-library(ggeffects)
-library(kableExtra)
-library(patchwork)
-library(tidyverse)
+library("ggeffects")
+library("tidyverse")
 ```
 
 ```{r}
 #| warning: false
 #| echo: false
-study.one.gen <- read_csv("study-one-general-participants.csv")  
-study.two.gen <- read_csv("study-two-general-participants.csv")
-study.122 <- read_csv("2024-25_PSYC122-participants.csv")  
+all.data <- read_csv("all.data.csv")  
 ```
 
 ## Week 19: Introduction {#sec-wk19-introduction}
@@ -34,51 +30,51 @@ study.122 <- read_csv("2024-25_PSYC122-participants.csv")
 Welcome to your overview of our work together in **PSYC122 Week 19**.
 
 ::: callout-tip
-*Putting it all together*
+### The real challenge in psychological science
 
-- We have completed four classes in **weeks 16-19**.
+- We are working together through four classes in **weeks 16-19**.
 - These classes are designed to enable you to revise and put into practice some of the key ideas and skills you have been developing in the first year research methods modules *PSYC121, PSYC123 and PSYC124*.
 - We have been doing this in the context of a live research project with potential real world impacts: the **Clearly Understood** project.
 :::
 
-In the week 19 class, we **will aim to answer** two research questions:
+In the week 19 class, we will face *the real challenge in psychological science*, in the context of the theory, methods, and data of the **Clearly Understood** project. This challenge results from the facts that:
 
-1. What person attributes predict success in understanding?
-2. Can people accurately evaluate whether they correctly understand written information?
+1.  People vary
+2.  Effects vary
+3.  Results vary
 
-We will be revisiting some of the ideas and techniques you have seen introduced in previous classes.
-And we will be extending your development with some new ideas, to strengthen your skills.
+- **Because** the effects of interventions, treatments or experimental manipulations can be expected to vary, 
+- We **must** build the ability to investigate **how** those effects vary.
+
+We will locate this ability in the capacity to work with **interaction effects** using the tools you have already been learning to apply within the linear model approach to analysis.
 
 ::: callout-tip
-I have said that our aim in these classes is to contribute new findings from the data we collect together.
+Our aim in these classes is to contribute new findings from the data we collect together.
 
 - **That time is now.**
-:::
 
-The PSYC122 health comprehension survey is now closed, and we will focus our practical work in week 19 on analyzing the data we have collected.
+We will be working now with a large dataset that incorporates the responses from *PSYC122* students.
+:::
 
 ### Our learning goals
 
-In Week 19, we aim to further develop skills in *analyzing* and in *visualizing* psychological data.
+In Week 19, we aim to extend your skills in *analyzing* and in *visualizing* psychological data.
 
 We will use linear models to estimate the association between predictors and outcomes in order to answer our research questions.
 
 ::: callout-tip
-**What is new** here is that we will compare the results from different studies to critically examine questions relating to **reproducibility**:
+**What is new** here is that we will examine how the effects that interest us can be different in different groups of people, in different contexts, or for different values of a third variable
 
-- Do we see similar results when similar methods are used to collect data to address the same questions?
+- **If** Psychologists think that the shape or size of an effect is different in different groups of people, or in different contexts, or for different values of a third variable (a *moderator)*
+- **Then** typically we are thinking about an **interaction** effect.
 :::
 
-We shall be focusing our analysis work on response data *contributed by PSYC122 students*.
+When we work with linear models, as you have seen, we usually need to report:  
 
-- But we will critically examine whether the results of our analyses of PSYC122 data are or are not similar to the results of the analyses of data collected in other studies.
-
-When we do linear models, as you have seen, we usually need to report:  
-
-- information about **the model we specify**, identifying *all* predictors;
-- our evaluation of **whether the effects** of one or more predictors **are significant**;
-- model **fit statistics** (`F, R-squared`) as well as coefficient estimates;
-- and **descriptions of the impact** of predictors.
+- information about the model we specify, identifying *all* predictors;
+- our evaluation of whether the effects of one or more predictors are significant;
+- model fit statistics (`F, R-squared`) as well as coefficient estimates;
+- and descriptions of the impact of predictors.
 
 Usually, in describing the impacts of predictors, we are required to communicate:
 
@@ -86,16 +82,17 @@ Usually, in describing the impacts of predictors, we are required to communicate
 - the **size** of the effect -- *how much* do values of the outcome variable *increase* or *decrease* given increasing values of the predictor?
 
 ::: callout-tip
-In assessing **reproducibility**, therefore, we may focus here on:
+In examining **interactions**, we now have to consider how we should analyse, visualize and talk about *how* effects may vary:
 
-1. Whether an effect is or is not significant in the data-sets we are comparing;
-2. Whether the estimate of the coefficient for the slope of an effect of interest has similar sign (positive or negative) or size (the value of the coefficient) in the data-sets we are comparing.
+- Is the shape or size of an effect different in different groups of people, in different contexts, or for different values of a third variable (a *moderator*)?
+
+We answer questions like these by building linear models that include **interaction effects**.
 :::
 
 ## Lectures {#sec-wk19-lectures}
 
 ::: callout-tip
-Before you go on to the activities in @sec-wk19-lab-activities, **watch** the lectures:
+Before you go on to the activities in @sec-wk19-lab-activities, **watch** the lectures: `Week 19: Linear models – interactions and variation in effects`
 :::
 
 The lecture for this week is presented in four short parts.
@@ -103,25 +100,25 @@ You can view video recordings of the lectures using Panopto, by clicking on the 
 
 - Anybody who has the link should be able to view the video.
 
-1. **Overview** (17 minutes): Critical perspectives -- The real challenge in psychological science (people vary, results vary) -- variation, replication and evaluating evidence across multiple studies.
+1. **Introduction** (15 minutes): Overview of the classes; introduction to key ideas -- the real challenge in psychological science (people vary, effects vary, results vary) -- variation, uncertainty, and working with the limits of samples.
 
 ```{=html}
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0e35b8e9-dd4f-4fb7-a88e-afbe010b250a&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
 ```
 
-2. **The Clearly Understood project -- questions and analyses** (13 minutes): Critical thinking -- candidate answers, our assumptions, the sources of uncertainty, and working with samples.
+2. **The Clearly Understood project -- questions and analyses** (15 minutes): Critical thinking -- what effects can vary, how can effects vary, theoretical reasons motivating why effects might vary.
 
 ```{=html}
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6d20197c-6559-463b-8672-afbe011e2371&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
 ```
 
-3. **Evaluating evidence across studies** (18 minutes): People vary, results vary -- evaluating, thinking about, critically reflecting on analysis results
+3. **Coding models with interactions** (15 minutes): Revision on linear models as methods to predict outcomes; coding linear models with multiple predictors; models that do or do not include interactions; identifying the key information in the results from models including interactions; and making sense of what we see.
 
 ```{=html}
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=22d3bf7c-1710-4a75-9a73-b12b00b502b1&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
 ```
 
-4. **Becoming a power learner** (24 minutes): Reproducibility, sharing, and learning to exploit the R knowledge ecosystem -- every question you ever have has an answer somewhere online; find out how to locate and use this knowledge for yourself.
+4. **Interactions between numeric variables and factors** (15 minutes): Working with factors, the difference between numeric variables and factors, as predictors in linear models; the effects of factors in linear models; coding, plotting, interpreting and evaluating the effects of interactions between numeric variables and factors. Summary of key lessons.
 
 ```{=html}
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=3633c4c0-e364-4d8f-beba-b12b00bb18f7&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
@@ -137,7 +134,7 @@ The slides presented in the videos can be downloaded either as a web page or as 
 You can download the web page `.html` file and click on it to open it in any browser (e.g., Chrome, Edge or Safari). The slide images are high quality and there are a lot of them, so the file is quite big; it may take a few seconds to download.
 
 You can download the `.docx` file and click on it to open it as a Word document that you can then edit. 
-Converting the slides to a .docx distorts some images but the benefit of the conversion is that it makes it easier for you to add your notes.
+Converting the slides to a `.docx` distorts some images but the benefit of the conversion is that it makes it easier for you to add your notes.
 
 ::: callout-tip
 To work with our lecture recordings:
@@ -149,87 +146,82 @@ To work with our lecture recordings:
 
 ### The lectures have four main areas of focus {#sec-wk19-lectures-focus}
 
-**1. The real challenges in psychological science**
+**1. The real challenge in psychological science**
 
-We step back to get a broader perspective on what we are doing when we are doing psychological science. We look at some of the *real* challenges that professional psychologists work with, as we attempt to build a scientific understanding of what people think and do, and why they do it.
+We look at a -- maybe *the* real challenge in psychological science -- as we attempt to build a scientific understanding of what people think and do, and why they do it. We connect (1.) the fact that psychological and social processes show variability to (2.) the uncertainties we face when we try to draw insights from limited sample evidence.
 
 ::: callout-tip
 What makes psychological science challenging:
 
 1. People vary
-2. Results vary
+2. Effects
+3. Results vary
 :::
 
 **2. Critical thinking**
 
-The power and flexibility of the linear model presents challenges.
-We must decide which candidate predictor variables we specify in our model.
-This means *we must* think critically.
+We have been working on answers to research questions in the context of the **Clearly Understood** project on the comprehension of health information. 
+
+- What person attributes predict success in understanding?
+- Can people accurately evaluate whether they correctly understand written health information?
+
+So far, we have been looking at the impact (on understanding) of variation between individuals in attributes like vocabulary knowledge.
+
+Now, we need to consider the fact that the effect of one variable (a predictor like vocabulary knowledge) could itself vary.
 
 ::: callout-tip
 We can develop our critical thinking skills by considering:
 
-1. Our assumptions about:
+1. What effects can vary
+2. How effects can vary
 
-- validity;
-- measurement;
-- generalizability.
-
-2. Sources of uncertainty about:
-
-- predicted change in outcomes, given our predictors;
-- ways that expected changes vary between people or groups;
-- random ways that specific responses can be produced.
+We discuss the kinds of theoretical assumptions that may lead Psychologists to hypothesize interaction effects.
 :::
 
-**3. Evaluating evidence across multiple studies**
+**3. Coding models with interactions**
 
-All important questions in the psychological scientific literature are addressed in *multiple studies*: how do we evaluate the evidence, comparing the results from different studies?
+We build on our understanding that linear models can be used to predict variation in psychological outcomes like observations of behaviours or scores on tests of person attributes. We build on our development of skills in coding linear models with multiple predictors to examine how we should code models incorporating interaction effects.
 
 ::: callout-tip
-How do we *build* knowledge in psychological science?
+We build skills by looking at:
 
-We consider:
-
-- replication
-- reproducibility
-
-And how to assess results across multiple studies.
+- The kind of coding we should use;
+- The key information in results, where to find it, and how to interpret it;
+- And the different ways in which we can present and interpret interactions.
 :::
 
-These are complex concerns and you will learn more about them, in other modules, this year and next year, when you develop an understanding of systematic reviews, meta-analysis, and the critical evaluation of scientific evidence.
+**4. Interactions between numeric variables and factors**
 
-**4. How to become a power user**
-
-You have been learning about data analysis using R. We have been providing rich learning materials but in Week 19 we start to explore the wider world of knowledge about data analysis and R.
+The effect on an outcome that is due to a numeric variable (like reading strategy) can differ depending on variation in another numeric variable (like vocabulary knowledge). But an effect can also differ depending on differences between groups or contexts. We often test or estimate the effects of differences between groups or contexts using categorical variables -- factors. This means we need to consolidate what we understand about working with factors in linear models. And then we need to build on this understanding by looking at interactions between numeric variables and factors.
 
 ::: callout-tip
-R is *free* and *open*. This means that:
+We will learn about:
 
-- there is a vast knowledge ecosystem you can use for your own purposes;
-- learning to be a powerful data analyst involves learning how to locate and to use the resources that are out there.
+- How we code for the effects of factors in linear models;
+- How we identify and interpret key information about factor effects;
+- How we code models to estimate the effects of interactions between numeric variables and factors.
 :::
 
-We hope that these lessons are just the start for many of you.
-
-*Every* problem you ever have: 
-
-- someone has had it before;
-- solved it;
-- and written a blog or social media post or recorded a YouTube or TikTok about it.
+We end the class by looking at the language and style of reporting results when we present our findings from linear model including an interaction effect.
 
 ## Reading: Links to other classes
 
-We do not provide further reading for this class but you will find it helpful to revise some of the key ideas you have been learning about PSYC122 and in other modules.
+We do not provide further reading for this class but you will find it helpful to revise some of the key ideas you have been learning about in PSYC122 and in other modules.
 
-- The lectures in *PSYC123* on: the scientific method; reliability and validity; experimental design, especially between-subjects studies; hypothesis testing; and precise hypotheses.
-- The lecture in *PSYC122* on linear models. 
+- The lectures in *PSYC122* on linear models. 
+- The lectures in *PSYC123* on: the scientific method; reliability and validity; experimental design; and hypothesis testing.
 
 ## Pre-lab activities {#sec-wk19-prelab-activities}
 
 ### Pre-lab activity 1 {#sec-wk19-prelab-activities-1}
 
-The survey is now closed.
+In weeks 16-19, we have been working together on a research project to investigate how people vary in their response to written health information or health advice.
+
+Completing the project involves collecting responses from *PSYC122* students: **you**.
+
+To enter your responses, we invite you to complete a short survey.
+
+Complete the survey by clicking on the link [here](https://lancasteruni.eu.qualtrics.com/jfe/form/SV_8figdBSMYe4V2bI)
 
 If you want more information about the project, we invite you to read the pre-registered research plan for the *PSYC122 health advice* research project.
 
@@ -239,27 +231,29 @@ If you want more information about the project, we invite you to read the pre-re
 
 ### Introduction {#sec-wk19-lab-activities-1-introduction}
 
-We will do our practical lab work to develop your skills in the context of the **Clearly Understood** project.
+We will do our practical lab work in the context of the **Clearly Understood** project.
 
 - Our focus is on what makes it easy or difficult for people to understand written health information.
 
 ::: callout-important
 In Week 19, we aim to answer the research questions:
 
-1. What person attributes predict success in understanding health information?
-2. Can people accurately evaluate whether they correctly understand written health information?
+- What person attributes predict success in understanding health information?
+- How can the effects of person attributes vary, in different groups of people, or for different values of a third variable (a *moderator*)?
 :::
 
 PSYC122 students contributed their responses to a survey we have been using to collect data to find answers to these questions.
 
-In our practical work, we will be examining the PSYC122 data but, as we do so, we should understand that no one study in psychological science will give us definitive answers to any interesting question about people and what they do.
+In our practical work, we will be examining a dataset combining:
 
-In the practical work, you will be asked to reflect on how data from different studies -- using the same methods, with the same aims -- may nevertheless vary: 
+1. Data from two studies of the response of adults from a UK national sample to written health information
 
-- vary in the data distributions;
-- and vary in the results that analyses indicate.
+- `study-one-general-participants.csv`
+- `study-two-general-participants.csv`
 
-Critically evaluating results across a series of studies, or replication attempts, is part of the process of accumulating evidence to build insight in psychological science, given measurement under uncertainty and limits in samples.
+2. Data from PSYC122 students.
+
+These data have been joined together to create a dataset of over 400 observations. This is because it often requires a lot of evidence to be able to draw precise or accurate conclusions about potential interaction effects.
 
 ### Get ready {#sec-wk19-prelab-activities-ready}
 
@@ -267,11 +261,9 @@ Critically evaluating results across a series of studies, or replication attempt
 
 Click on the link: [122_week19_for_students.zip](data/week19/122_week19_for_students.zip) to download the data files folder. Then upload the contents to the new folder you created in RStudio Server.
 
-The downloadable .zip folder includes the data files:
+The downloadable .zip folder includes the data file:
 
-- `study-one-general-participants.csv`
-- `study-two-general-participants.csv`
-- `2024-25_PSYC122-participants.csv`
+- `all.data.csv`
 
 and the R Markdown `.Rmd`:
 
@@ -284,26 +276,16 @@ If you can't upload these files to the server -- this affects some students -- y
 - You can use the code below to directly download the file you need in this lab activity to the server.
 - Remember that you can copy the code to your clipboard by clicking on the 'clipboard' in the top right corner.
 
-1. Get the `study-one-general-participants.csv` data
+Get the `all.data.csv` data:
 
 ```{r eval=FALSE}
 download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/study-one-general-participants.csv?raw=true", destfile = "study-one-general-participants.csv")
 ```
-
-2. Get the `study-two-general-participants.csv` data
-
-```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/study-two-general-participants.csv?raw=true", destfile = "study-two-general-participants.csv")
-```
-
-3. Get the 2024-25 PSYC122 `2024-25_PSYC122-participants.csv` data
-
-```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/2024-25_PSYC122-participants.csv?raw=true", destfile = "2024-25_PSYC122-participants.csv")
-```
 ::: 
 
-If you need to get the `how-to` guide, you can do that by clicking on the link in the box below. **Warning**: if you click on the link, the how-to guide might be shown to you (in some browsers) as a new webpage tab.
+If you need to get the `how-to` guide, you can do that by clicking on the link in the box below. 
+
+- **Warning**: if you click on the link, the how-to guide might be shown to you (in some browsers) as a new webpage tab.
 
 :::{.callout-tip collapse="true"}
 ## Link to the how-to guide
@@ -312,16 +294,18 @@ Get the `PSYC122-w19-how-to.Rmd` how-to guide
 Click on the link: [PSYC122-w19-how-to.Rmd](data/week19/PSYC122-w19-how-to.Rmd) to download the `PSYC122-w19-how-to.Rmd` guide.
 :::
 
-#### Check: What is in the data files? {#sec-wk19-data-summary}
+#### Check: What is in the data file? {#sec-wk19-data-summary}
 
 Each of the data files we will work with has a similar structure, as you can see in this extract.
 
 ```{r}
 #| label: headcheck-wide
 #| echo: false
-# head(behaviour.rt)
-study.two.gen %>%
-  filter(participant_ID == c('studytwo.1', 'studytwo.10', 'studytwo.100', 'studytwo.101')) %>%
+
+target <- c('studyone.10', 'studytwo.1', 'R_8jSZdRgu4oq4QyD')
+
+all.data %>%
+  filter(participant_ID %in% target) %>%
   as.data.frame() %>%
   kable() %>%
   kable_styling()
@@ -334,18 +318,14 @@ You can see the columns:
 - `participant_ID` participant code;
 - `mean.acc` average accuracy of response to questions testing understanding of health guidance (varies between 0-1);
 - `mean.self` average self-rated accuracy of understanding of health guidance (varies between 1-9);
-- `study` variable coding for what study the data were collected in
+- `study` variable coding for what study the data were collected in;
 - `AGE` age in years;
 - `HLVA` health literacy test score (varies between 1-16);
 - `SHIPLEY` vocabulary knowledge test score (varies between 0-40);
 - `FACTOR3` reading strategy survey score (varies between 0-80);
-- `GENDER` gender code;
-- `EDUCATION` education level code;
-- `ETHNICITY` ethnicity (Office National Statistics categories) code.
-
-::: callout-tip
-Note that the data we collected comprise responses from 2024-25 PSYC122 students --- **you** --- as well as from samples of participants recruited by Psychology third year undergraduate researchers.
-:::
+- `GENDER` gender code (here, `Female, Male`);
+- `EDUCATION` education level code (here, `Further, Higher`);
+- `ETHNICITY` ethnicity (Office National Statistics categories) code (here, `Asian, Black, Mixed, White, Other`).
 
 ### Lab activity 1: Work with the `How-to` guide {#sec-wk19-lab-activities-1}
 
@@ -355,12 +335,9 @@ The `how-to` guide comprises an .Rmd file:
 
 It is full of advice and example code.
 
-The code in the `how-to` guide was written to work with **two data files**:
+The code in the `how-to` guide was written to work with:
 
-- `study-one-general-participants.csv`
-- `study-two-general-participants.csv`
-
-We will be working with *your* (PSYC122) response data in @sec-wk19-lab-activities-2.
+- `all.data.csv`
 
 ::: callout-tip
 We show you how to do everything you need to do in the lab activity (@sec-wk19-lab-activities-2, shown following) in the `how-to` guide.
@@ -374,10 +351,10 @@ We split .Rmd scripts by steps, tasks and questions:
 
 - different steps for different phases of the analysis workflow;
 - different tasks for different things you need to do;
-- different questions to examine different ideas or coding challenges
+- different questions to examine different ideas or coding challenges.
 
 ::: callout-tip
-- Make sure you start at the top of the `.Rmd` file and work your way, in order, through each task.
+- Make sure you start at the top of the `.Rmd` file and work in order through each task.
 - Complete each task before you move on to the next task.
 :::
 
@@ -396,36 +373,44 @@ In the activity @sec-wk19-lab-activities-2, we are going to work through a seque
 
 **Step 2: Load the data**
 
-3. Read in the data files -- using `read_csv()`
-4. Inspect both data-sets -- using `head()` and `summary()`
+3. Read in the data file -- using `read_csv()`
+4. Inspect the data -- using `summary()`
 
-**Step 3: Compare the data from the different studies**
+**Step 3: Work with different kinds of variables**
 
-5. Compare the data distributions from the two studies -- using `geom_histogram()` 
-6-7. and by constructing grids of plots
+5. Visualize the distribution of a numeric variable -- using `geom_histogram()`
+6. Identify the kind or class of a variable -- using functions like `is.factor()` or `is.numeric()` or `is.character()` -- the `is._()` family of functions
+6. Change the kind or class of a variable -- using functions like `as.factor()` or `as.numeric()` or `as.character()` -- the `as._()` family of functions
 
-**Step 4: Use scatterplots and correlation to examine associations between variables**
+**Step 4: Draw plots to examine associations between variables and to visualize interactions**
 
-8. Draw scatterplots to compare the potential association between variables
-9. Create grids of plots to make side-by-side comparisons of associations in different data-sets
-10. Estimate the associations between pairs of variables and compare the estimates
+7. Draw scatterplots to compare the potential association between two variables -- using `geom_point()` 
+7. Use `facet_wrap()` to examine or to show the association may vary for different values of a third variable (numeric or factor)
+8. Use `cut_number()` to split a dataset, in rows (observations), by values of a numeric variable
 
-**Step 5: Use a linear model to to answer the research questions -- models with multiple predictors**
+**Step 5: Use linear models with multiple predictors, to estimate the effects of factors as well as numeric variables**
 
-11. Examine the relation between one outcome and multiple predictors
-12. Do this in different -- but similar -- study data-sets, and compare summaries or plots
+9. Fit a linear model including numeric variables as predictors
+10. Fit a linear model including a numeric variable and a factor as predictors 
+
+**Step 6: Use linear models with multiple predictors, including interaction effects**
+
+11. Center numeric variables before using them as predictors
+12. Specify models to include interaction effects: interactions between two numeric predictor variables -- using the `*` operator
+13. Specify models to include interaction effects: interactions between a numeric predictor variable and a factor predictor variable -- using the `*` operator
 
 ::: callout-tip
 If you are unsure about what you need to do, look at the advice in `PSYC122-w19-how-to.Rmd` on how to do the tasks, with examples on how to write the code.
 :::
 
 You will see that you can match a task in the activity @sec-wk19-lab-activities-2 to the same task in the `how-to` guide.
-The `how-to` shows you what function you need and how you should write the function code.
+
+- The `how-to` shows you what function you need and how you should write the function code.
 
 This process of adapting demonstration code is a process critical to data literacy and to effective problem solving in modern psychological science.
 
 ::: callout-warning
-Don't forget: You will need to change the names of the data-set or the variables to complete the tasks in @sec-wk19-lab-activities-2.
+Don't forget: You will need to change the names of the variables to complete the tasks in @sec-wk19-lab-activities-2.
 :::
 
 ### Lab activity 2 {#sec-wk19-lab-activities-2}
@@ -471,634 +456,770 @@ rm(list=ls())
 
 ##### Task 2 -- Run code to load relevant libraries
 
-Notice that in Week 19, we need to work with the libraries `ggeffects`, `patchwork` and `tidyverse`.
+Notice that in Week 19, we need to work with the libraries `ggeffects` and `tidyverse`.
 Use the `library()` function to make these libraries available to you.
 
 :::{.callout-tip collapse="true"}
 ## Code
 ```{r}
 library("ggeffects")
-library("patchwork")
 library("tidyverse")
 ```
 :::
 
 #### Step 2: Load the data
 
-##### Task 3 -- Read in the data files we will be using
+##### Task 3 -- Read in the data file we will be using
 
-The data files are called:
+The data files is called:
 
-- `study-two-general-participants.csv`
-- `2024-25_PSYC122-participants.csv`
+- `all-data.csv`
 
 Use the `read_csv()` function to read the data files into R:
 
 :::{.callout-tip collapse="true"}
 ## Code
 ```{r}
-study.two.gen <- read_csv("study-two-general-participants.csv")
-study.122 <- read_csv("2024-25_PSYC122-participants.csv")
+all.data <- read_csv("all.data.csv")  
 ```
 :::
 
-When you read the data files in, give the data objects you create distinct name 
-e.g. `study.two.gen` versus `study.122`.
+When you read the data files in, give the data object you create a meaningful name 
+e.g. `all.data`.
 
 ##### Task 4 -- Inspect the data file
 
-Use the `summary()` or `head()` functions to take a look at both data-sets.
+Use the `summary()` function to take a look at the dataset.
 
 :::{.callout-tip collapse="true"}
 ## Code
 ```{r}
-summary(study.two.gen)
-summary(study.122)
+summary(all.data)
 ```
 :::
 
-#### Step 3: Compare the data from the different studies
+#### Step 3: Work with different kinds of variables
+
+It is an important skill in psychological data analysis to be able to: 
+
+(1.) identify the different kinds of data variables we are working with;
+(2.) adapt our methods depending on differences in kind (variable `Class` or type).
+
+We learn about these skills, next, in exercises that combine some revision with
+some new moves.
 
 ::: callout-tip
-## Revise: practice to strengthen skills
+## Revise: consolidate what you know
 :::
 
-##### Task 5 --  Compare the data distributions from the two studies
+##### Task 5 -- Use summaries or plots to examine variables
 
 ##### Questions: Task 5
 
->**Q.1.** What is the mean of the `mean.acc` and `SHIPLEY` variables in the two studies?
+>**Q.1.** What is the median of the `FACTOR3` variable in the dataset?
 
-<!-- - A.1. The means are: -->
+<!-- - A.1. You can use the `summary()` function to calculate that the median `FACTOR3` score is 50.00 -->
 
-<!-- - study two -- `mean.acc`: mean = 0.7596 -->
-<!-- - study two -- `SHIPLEY`: mean = 35.13 -->
-<!-- - study PSYC122 -- `mean.acc`: mean = 0.8231 -->
-<!-- - study PSYC122 -- `SHIPLEY`: mean = 32.61 -->
+>**Q.2.** Draw a histogram of the `FACTOR3` distribution.
 
->**Q.2.** Draw histograms of both mean.acc and mean.self for both studies.
-
-- A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing data-set and variable names to get the right plots:
+<!-- - A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing data-set and variable names to get the right plots: -->
 
 ```{r}
-ggplot(data = study.two.gen, aes(x = mean.acc)) +
-  geom_histogram(binwidth = .1) +
+ggplot(data = all.data, aes(x = FACTOR3)) +
+  geom_histogram(binwidth = 1) +
   theme_bw() +
-  labs(x = "Mean accuracy (mean.acc)", y = "frequency count") +
-  xlim(0, 1)
-
-ggplot(data = study.two.gen, aes(x = SHIPLEY)) +
-  geom_histogram(binwidth = 2) +
-  theme_bw() +
-  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count") +
-  xlim(0, 40)
-
-ggplot(data = study.122, aes(x = mean.acc)) +
-  geom_histogram(binwidth = .1) +
-  theme_bw() +
-  labs(x = "Mean accuracy (mean.acc)", y = "frequency count") +
-  xlim(0, 1)
-
-ggplot(data = study.122, aes(x = SHIPLEY)) +
-  geom_histogram(binwidth = 2) +
-  theme_bw() +
-  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count") +
-  xlim(0, 40)
+  labs(x = "Reading strategy (FACTOR3)", y = "frequency count")
 ```
+
+>**Q.3.** Examine the reading strategy (`FACTOR3`) scores distribution: what does it tell you about the variation in the reading strategies of the participants in the sample?
+
+<!-- - A.3. The histogram shows that most participants present scores varying somewhere between 40-60 but there is a "long tail" of smaller numbers of participants with low or very low scores on the reading strategy (`FACTOR3`) measure. -->
+
+::: callout-tip
+## Extend: make some new moves
+:::
+
+We can tell from the summary and the distribution that the `FACTOR3` variable consists of numbers. 
+
+Another way to identify the kind or class of a variable is by using a check question:
+
+```{r}
+is.factor(all.data$FACTOR3)
+is.numeric(all.data$FACTOR3)
+```
+
+The `is._()` family of functions act like identity checks: what is this variable? 
+These functions work like questions with TRUE or FALSE answers.
+
+- Q. Is this variable a factor? A. `[TRUE]` or `[FALSE]` 
+- Q. Is this variable numeric? A. `[TRUE]` or `[FALSE]
+
+##### Task 6 -- Identify (and change) what kind of variable -- numeric or factor -- a variable is
+
+> Hint: Task 6 -- The `is._()` functions are available to ask what kind a variable is
+> Hint: Task 6 -- The `as._()` functions can be used to change variable types
+
+>**Q.4.** What kind of variable is `GENDER`?
+
+<!-- - A.4. Use the same functions but change the variable name: -->
+
+<!-- ```{r} -->
+<!-- is.factor(all.data$GENDER) -->
+<!-- is.numeric(all.data$GENDER) -->
+<!-- ``` -->
+
+>**Q.5.** What do the `is._()` functions tell us?
+
+<!-- - A.5. The function calls tell us that `GENDER` is not a factor and is not numeric. -->
+
+>**Q.6.** If you look at the `summary()` results, what does it tell you the `Class` of `GENDER` is?
+
+<!-- - A.6. The summary shows that `GENDER` is identified as `Class: character`.  -->
+
+<!-- You can check this by doing the `is._()` test again. -->
+
+<!-- ```{r} -->
+<!-- is.character(all.data$GENDER) -->
+<!-- ``` -->
+
+>**Q.7.** How do you change the class or type of the variable `GENDER`? Change the variable's type (`Class`) into a factor.
+
+<!-- - A.7. The `as._()` functions can be used to change variable type, as you have done -->
+<!-- previously (e.g., in week 16). -->
+
+<!-- ```{r} -->
+<!-- all.data$GENDER <- as.factor(all.data$GENDER) -->
+<!-- ``` -->
+
+>**Q.8.** What does a `summary()` tell us about the self-reported `GENDER` of participants in the `all.data` sample?
+
+<!-- ```{r} -->
+<!-- summary(all.data) -->
+<!-- ```  -->
+
+<!-- - A.8. The summary will show how many different participants report themselves -->
+<!-- as belonging to one of the different `GENDER` self-identification groups in the corresponding survey question. -->
+
+<!-- You should see counts of the numbers of people in different `GENDER` level  -->
+<!-- groups in the total survey sample: -->
+
+<!-- GENDER -->
+<!-- Female:323 -->
+<!-- Male  :155 -->
+
+<!-- We can see that 323 participants identified themselves as `Female` in the survey. -->
+
+<!-- We can see that 155 participants identified themselves as `Male` in the survey. -->
+
+##### Gender identity representation in survey samples
+
+We note, here, that in addition to the numbers shown in the summary, six participants in the survey data entered the `Non-Binary` identification response option, and two participants entered the `Prefer not to say` option, in response to the gender identification question in the survey.
+
+In the present exercises, we are looking at the way in which the effect on outcomes of variables -- like variation in health literacy (`HLVA`) or reading strategy (`FACTOR3`) score -- vary for different values of a categorical variable (like `GENDER`). These kinds of interactions become more complicated to analyse where there are more than two categories or levels in a factor, especially when the numbers of participants in one or more categories or levels is relatively small. 
+
+We think it is important to ensure representation of the responses and experiences of the full range of diversity among the populations we study. In future work, we hope to have collected sufficient numbers of observations from groups of participants like those entering responses like `Non-Binary` or `Prefer not to say` in order to be able to incorporate all possible between-group comparisons in analyses.
+
+For now, we enter this explanation as a promise to to examine more representative samples in future work. Here is a link, for those who are interested, to reports of analyses of data from a survey conducted by a leading research organization (Pew Research Center). Follow the link to "Methodology" for information on how this organization exemplify good practice in obtaining representative samples.
+
+<https://www.pewresearch.org/social-trends/2025/05/29/the-experiences-of-lgbtq-americans-today/>
+
+#### Step 4: Now draw plots to examine associations between variables and to visualize interactions
+
+Here, we are going to build on previous work to use plots to:
+
+(1.) Examine the associations between pairs of variables, an outcome and a predictor
+(2.) Examine how the association between two variables can be different for
+different levels of a third variable
+
+Scenario (2.) comes up if we are thinking about or working with *interaction* effects.
+
+::: callout-tip
+## Consolidation: practice to strengthen skills
+:::
+
+##### Task 7 -- Create a scatterplot to examine the association between two numeric variables
+
+> Hint: Task 7 -- We are working with `geom_point()` and you need x and y aesthetic mappings.
+
+Here, we can look at the potential association between variation in reading strategy (using the `FACTOR3` measure) and accuracy of understanding of health information (`mean.acc`).
+
+Code and run a chunk of code to make the plot.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+ggplot(data = all.data, aes(x = FACTOR3, y = mean.acc)) +
+  geom_point() +
+  theme_bw() +
+  labs(y = "Accuracy of understanding (mean.acc)", 
+       x = "Reading strategy (FACTOR3)") +
+  xlim(0, 65) + ylim(0, 1)
+```
+
+This plot shows:
+
+- the possible association between x-axis variable `FACTOR3` and y-axis 
+variable `mean.acc`.
+
+The plot code moves through the following steps:  
+
+1. `ggplot(...)` make a plot;
+2. `ggplot(data = all.data, ...)` with the `all.data` dataset;
+3. `ggplot(...aes(x = FACTOR3, y = mean.acc))` using two aesthetic mappings
+
+- `x = FACTOR3` map `FACTOR3` values to x-axis (horizontal, left to right) 
+positions;
+- `y = mean.acc` map `mean.acc` values to y-axis (vertical, bottom to top) 
+positions;
+
+4. `geom_point()` show the mappings as points.
+5. `theme_bw()` changes the theme to a white background.
+6. `labs(y = "Accuracy of understanding (mean.acc)", x = "Reading strategy (FACTOR3)")` changes axis labels.
+7. `xlim(0, 65) + ylim(0, 1)` changes axis limits.
+:::
+
+>**Q.9.** What do you notice about the distribution of `mean.acc` scores at
+increasing values of reading strategy (`FACTOR3`) scores?
+
+<!-- - A.9. The scatterplot shows that, for increasing reading strategy (`FACTOR3`) scores, there is an associated rise in accuracy of understanding (`mean.acc`) scores. -->
+
+<!-- - There is extra credit for noticing that variation in outcome and predictor variable values is not tightly coupled: it is possible to have low reading strategy (`FACTOR3`) scores and high accuracy of understanding (`mean.acc`). -->
 
 ::: callout-tip
 ## Introduce: make some new moves
 :::
 
-##### Task 6 --  Create grids of plots to make the comparison easier to do
+In the next sequence of exercises, we are going to take the `all.data` dataset and split it into parts (sub-sets) in different ways.
 
-> Hint: Task 6 -- What we are going to do is to create two histograms of `mean.acc` (one plot for each study data-set) and then present the plots side by side to allow easy comparison of variable distributions
+- We split the dataset vertically, into different sets of rows or observations.
 
-We need to make two changes to the coding approach you have been using until now.
-
-- Remember, you can find what you need to do in `PSYC122-w19-how-to.Rmd`.
-
-First, create plot objects, assign the plot objects distinct names.
-
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-plot.two <- ggplot(data = study.two.gen, aes(x = mean.acc)) +
-  geom_histogram(binwidth = .1) +
-  theme_bw() +
-  labs(x = "Mean accuracy (mean.acc)", y = "frequency count", title = "Study Two") +
-  xlim(0, 1)
-
-plot.122 <- ggplot(data = study.122, aes(x = mean.acc)) +
-  geom_histogram(binwidth = .1) +
-  theme_bw() +
-  labs(x = "Mean accuracy (mean.acc)", y = "frequency count", title = "Study PSYC122") +
-  xlim(0, 1)
-```
-:::
-
-Second, name the plots to show them side-by-side.
-
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-plot.two + plot.122
-```
-:::
-
-:::{.callout-tip collapse="true"}
-## Hint
-This is what you need to: check out the process, step-by-step.
-
-- Notice that you repeat the process for each of two (or more) plots.
-
-1. `ggplot(...)` tell R you want to make a plot using the `ggplot()` function;
-2. `plot.one <-` tell R you want to give the plot a name; the name appears in the environment;
-3. `ggplot(data = study.two.gen ...)` tell R you want to make a plot with the `study.two` data;
-4. `ggplot(..., aes(x = mean.acc))` tell R that you want to make a plot with the variable `mean.acc`;
-
-- here, specify the aesthetic mapping, `x = mean.acc`
-
-5. `geom_histogram()` tell R you want to plot values of `mean.acc` as a histogram;
-6. `binwidth = .1` adjust the binwidth to show enough detail but not too much in the distribution;
-7. `theme_bw()` tell R what theme you want, adjusting the plot appearance;
-8. `labs(x = "Mean accuracy (mean.acc)", y = "frequency count", title = "Study Two")` fix the x-axis and y-axis labels;
-
-- here, add a title for the plot, so you can tell the two plots apart;
-
-9. `xlim(0, 1)` adjust the x-axis limits to show the full range of possible score values on this variable.
-
-Do this process twice, once for each data-set, creating two plots so that you can compare the distribution of `mean.acc` scores between the studies.
-
-Finally, having created the two plots, produce them for viewing:
+##### Why are we learning how to do this?
   
-10. `plot.two + plot.122` having constructed -- and named -- both plots, you enter their names, separated by a +, to show them in a grid of two plots.
+The capacity to do this kind of split-analyse operation is *extremely* useful.
 
-Notice: until you get to step 10, **nothing will appear**. This will be **surprising** but it is perfectly normal when we increase the *level of complexity* of the plots we build.
-:::
+We are going to do this so that we can examine how the effects of interest to us
+(here, associations) can vary between different groups of people.
 
-- You first build the plots.
-- You are creating plot objects and you give these objects names.
-- The objects will appear in the `Environment` with the names you give them.
-- You then *produce* the plots for viewing, by using their names.
+Remember, observations about different people are on different rows in `all.data`.
 
-Until you complete the last step, you will not see any changes until you use the object names to produce them for viewing.
+- We are going to focus on an association between two column variables (`mean.acc`, `FACTOR3`).
+- We are going to identify different groups (sub-sets) of observations using values on a third variable.
 
-This is how you construct complex arrays of plots.
+##### Task 8 -- Create a scatterplot to examine the association between two numeric variables, showing how the association is different for different values of a third variable
 
-##### Task 7 -- Try this out for yourself, focusing now on the distribution of `SHIPLEY` scores in the two studies
+> Hint: Task 8 -- We are working with `geom_point()` again.
 
-First, create plot objects but do not show them.
+> Hint: Task 8 -- We can show how the association between two variables (`mean.acc`, `FACTOR3`) is different for different values of a third, categorical (factor), variable (`GENDER`) by splitting the plot so that we see the association for different levels of `GENDER`.
 
-- Give each plot a name. You will use the names next.
+Here, we are splitting the dataset into:
 
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-plot.two <- ggplot(data = study.two.gen, aes(x = SHIPLEY)) +
-  geom_histogram(binwidth = 2) +
-  theme_bw() +
-  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count", title = "Study Two") +
-  xlim(0, 40)
+- observation data from people with just `GENDER` level `Female`
+- observation data from people with just `GENDER` level `Male`
 
-plot.122 <- ggplot(data = study.122, aes(x = SHIPLEY)) +
-  geom_histogram(binwidth = 2) +
-  theme_bw() +
-  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count", title = "PSYC122") +
-  xlim(0, 40)
-```
-:::
+and we are then producing a different scatterplot for each sub-set of data produced by the split.
 
-Second produce the plots for viewing, side-by-side, by *naming* them: `plot.1.name + plot.2.name`.
+Run the following chunk of code to make the plot.
 
 :::{.callout-tip collapse="true"}
 ## Code
 ```{r}
-plot.two + plot.122
+ggplot(data = all.data, aes(x = FACTOR3, y = mean.acc)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  theme_bw() +
+  labs(y = "Accuracy of understanding (mean.acc)", 
+       x = "Reading strategy (FACTOR3)") +
+  xlim(0, 65) + ylim(0, 1) +
+  facet_wrap(~ GENDER)
 ```
+
+This plot shows:
+
+- the possible association between x-axis variable `FACTOR3` and y-axis 
+variable `mean.acc`
+- for different groups of people -- people with self-reported `GENDER` responses of `Female` or `Male`.
+
+The plot code moves through steps we have seen before. What is new here is this bit:
+
+`facet_wrap(~ GENDER)`
+
+The function `facet_wrap()` splits the dataset into sub-sets (different parts): different sets of rows, where different sets are defined according to different values of the variable identified inside the brackets `(~ GENDER)`.
+
+Here, we are asking for different scatterplots for the dataset split by whether
+participants are coded as `Female` or `Male` for this survey.
+
+You can see a general guide to the function here:
+
+<https://ggplot2.tidyverse.org/reference/facet_wrap.html>
 :::
 
->**Q.3.** Now use the plots to do some data analysis work: how do the `SHIPLEY` distributions compare, when you compare the `SHIPLEY` of `study.two.gen` versus `SHIPLEY` of `study.122`?
+Now use the plots to answer the following question.
 
-<!-- - A.3. When you compare the plots side-by-side you can see that the `SHIPLEY` distributions are *mostly* similar: most people have high `SHIPLEY` scores. -->
+>**Q.10.** What do you notice about the distribution of `mean.acc` scores at
+increasing values of reading strategy (`FACTOR3`) scores, for different sub-sets of the data: for people with `Female` or `Male` `GENDER` coding?
 
-<!-- But you can also see striking differences:  -->
+<!-- - A.10. You can see that the association between `mean.acc` and `FACTOR3` scores appears to be *mostly* similar for different `GENDER` codes. -->
 
-<!-- - The peak of the distribution -- where the tallest bar is -- is at a higher `SHIPLEY` score in `study.two.gen` (around `SHIPLEY` = 37-38) than in `study.122` (where is it around `SHIPLEY` = 30). -->
-<!-- - There appear to be *fewer* participants with lower `SHIPLEY` scores in `study.122` than in `study.two`. -->
+<!-- - The distribution of scores is different: we have more `Female` participants; their scores vary more widely. -->
+<!-- - But the trend is similar overall: the trend line representing the association between `mean.acc` and `FACTOR3` looks similar such that for both sub-groups in the sample, increasing `FACTOR3` scores are associated with higher `mean.acc` scores. -->
 
->**Q.4.** Is the visual impression you get from comparing the distributions consistent with the statistics you see in the summary?
+> Hint: Task 8 -- We can show how the association between two variables (`mean.acc`, `FACTOR3`) is different for different values of a third numeric variable (`HLVA`) by splitting the dataset
 
-<!-- - A.4. Yes: If you go back to the summary of `SHIPLEY`, comparing the two studies datasets, then you can see that the median and mean are higher in `study.two.gen` than in `study.122`. -->
+Here, we are first creating a new variable to code for (distinguish between) different sub-sets of observations (different rows in the dataset) based on `HLVA` scores, and then second drawing different plots based on different subsets.
 
-#### Step 4: Now use scatterplots and correlation to examine associations between variables
+We do this in two steps, as follows.
+
+First, run a chunk of code to divide (`cut`) the dataset into parts.
+
+:::{.callout-tip collapse="true"}
+```{r}
+all.data$HLVA_splits <- cut_number(all.data$HLVA, 3)
+```
+
+The code works bit-by-bit like this:
+
+1. `all.data$HLVA_splits <-` create a new variable, `HLVA_splits` and add it to the dataset `all.data` given the work done by the bit of code on the right of the arrow `<-`.
+
+On the right of the arrow `<-` ...
+
+2. `cut_number(all.data$HLVA, 3)` uses the `cut_number(...)` to divide the dataset observations into three sets based on the values in the `all.data$HLVA` variable named inside the brackets.
+
+The function works by ordering all the observations (the rows) in the dataset according to the values in the named variable `all.data$HLVA`, then splitting the dataset (here, into three sub-sets) based on values in that named variable.
+:::
+
+Given this code, we are going to get three sub-sets of the data, observations corresponding to (1.) low (2.) mid or (3.) high `HLVA` values.
+
+- We split the data into data about people with:
+
+(1.) low `HLVA` values, scores between 2-8 on the `HLVA` test;
+(2.) mid `HLVA` values, scores between 8-10 on the `HLVA` test;
+(3.) high `HLVA` values, scores between 10-14 on the `HLVA` test.
+
+You can see a guide to the key function here:
+
+<https://ggplot2.tidyverse.org/reference/cut_interval.html>
+
+Note that *where* we split the data (what ranges of scores we use) will depend on the sample.
+
+Second, we draw a plot to examine if the association between two variables (`mean.acc`, `HLVA`) is different for different values of a third variable (`SHIPLEY`) by splitting the data
+
+Run the following chunk of code to make the plot.
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+ggplot(data = all.data, aes(x = FACTOR3, y = mean.acc)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  facet_wrap(~ HLVA_splits, nrow = 1, labeller = label_both) +
+  labs(y = "Accuracy of understanding (mean.acc)", 
+       x = "Reading strategy (FACTOR3)") +
+  theme_bw() 
+```
+
+The plot code moves through the scatterplot production steps we have seen before.  
+
+The bit that is new is here:
+
+`facet_wrap(~ HLVA_splits, nrow = 1, labeller = label_both)` which is included to use the data split, constructed earlier.
+
+This addition allows us to show:
+
+- the nature of the association between two variables (`mean.acc`, `FACTOR3`) 
+- for different values of the third variable (`HLVA`)
+- by splitting the data into three sub-sets according to `HLVA` score (2-8 low, 8-10 mid, 10-14 high).
+:::
+
+Now use the plots to answer the following question.
+
+>**Q.11.** What do you notice about the distribution of `mean.acc` scores at
+increasing values of reading strategy (`FACTOR3`) scores, for different sub-sets of the data: for (1.) low (2.) mid (3.) high `HLVA` values?
+
+<!-- - A.11. You can see that the association between `mean.acc` and `FACTOR3` scores appears to vary (the slope differs) given different values of the third variable (`HLVA`). -->
+
+>**Q.12.** What do you think the values in the grey labels at the top of the facets (the plot panels) tell us?
+
+<!-- - A.12. The values tell us what values (e.g., `2,8`) are used to identify the range of `HLVA` scores that have been used to define the sub-set of observations for which the plot below shows the association between `mean.acc` and `FACTOR3` scores. -->
+
+#### Step 5: Use linear models with multiple predictors, to estimate the effects of factors as well as numeric variables
 
 ::: callout-tip
-## Revise: practice to strengthen skills
+## Consolidation: practice to strengthen skills
 :::
 
-##### Task 8 -- Draw scatterplots to compare the potential association between `mean.acc` and `mean.self` in both `study.two.gen` and `study.122` data-sets
+As we saw in weeks 17 and 18, we can use linear models to predict outcome variables. 
 
-> Hint: Task 8 -- The plotting steps are explained in some detail in `PSYC122-w17-how-to.Rmd` and you can see example code in `PSYC122-w19-how-to.Rmd`
+- Linear models can include numeric variables (like `FACTOR3` or `HLVA`) as predictors. 
+- Linear models can also include categorical variables or factors (like `GENDER` or `EDUCATION`) as predictors.
+
+##### Task 9 -- First, fit a linear model including just numeric variables as predictors
+
+> Hint: Task 9 -- We use the `lm()` function to fit a model with `mean.acc` as the outcome and `FACTOR3` and `HLVA` as predictors.
+
+Note that in this model:
+
+- `FACTOR3` is a measure of reading strategy -- numeric scores correspond to a test of the relative effectiveness of the strategies participants use to read and understand written information;
+- `HLVA` is a measure of health literacy -- numeric scores correspond to a test of knowledge of health-related words.
 
 :::{.callout-tip collapse="true"}
 ## Code
 ```{r}
-ggplot(data = study.two.gen, aes(x = mean.self, y = mean.acc)) +
-  geom_point(alpha = 0.75, size = 3, colour = "darkgrey") +
-  geom_smooth(method = "lm", size = 1.5, colour = "green") +
-  theme_bw() +
-  labs(x = "mean self-rated accuracy", y = "mean accuracy") +
-  xlim(0, 10) + ylim(0, 1)
+model <- lm(mean.acc ~ FACTOR3 + HLVA, 
+            data = all.data)
 
-ggplot(data = study.122, aes(x = mean.self, y = mean.acc)) +
-  geom_point(alpha = 0.75, size = 3, colour = "darkgrey") +
-  geom_smooth(method = "lm", size = 1.5, colour = "green") +
-  theme_bw() +
-  labs(x = "mean self-rated accuracy", y = "mean accuracy") +
-  xlim(0, 10) + ylim(0, 1)
-```
-:::
-
-##### Task 9 --  Create a grid of plots to make the comparison easier to do
-
-> Hint: Task 9 -- We follow the same steps as we used in tasks 6 and 7 to create the plots
-
-We again:
-
-1. First construct the plot objects and give them names;
-2. create and show a grid of named plots.
-
-Though this time we are producing a grid of **scatterplots**.
-
-First, create plot objects, give them names, but do not show them.
-
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-plot.two <- ggplot(data = study.two.gen, aes(x = mean.self, y = mean.acc)) +
-  geom_point(alpha = 0.75, size = 3, colour = "darkgrey") +
-  geom_smooth(method = "lm", size = 1.5, colour = "green") +
-  theme_bw() +
-  labs(x = "mean self-rated accuracy", y = "mean accuracy") +
-  xlim(0, 10) + ylim(0, 1)
-
-plot.122 <- ggplot(data = study.122, aes(x = mean.self, y = mean.acc)) +
-  geom_point(alpha = 0.75, size = 3, colour = "darkgrey") +
-  geom_smooth(method = "lm", size = 1.5, colour = "green") +
-  theme_bw() +
-  labs(x = "mean self-rated accuracy", y = "mean accuracy") +
-  xlim(0, 10) + ylim(0, 1)
-```
-:::
-
-Second name the plots to show them side-by-side in the plot window.
-
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-plot.two + plot.122
-```
-:::
-
-Now use the plots to make comparison judgments.
-
->**Q.5.** How does the association, shown in the plots, between `mean.self` and `mean.acc` compare when you look at the `study.two.gen` versus the `study.122` plot?
->**hint: Q.5.** When comparing evidence about associations in different studies, we are mostly going to focus on the slope -- the angle -- of the prediction lines, and the ways in which points do or do not cluster about the prediction lines.
-
-<!-- - A.5. If you examine the `study.two.gen` versus the `study.122` plots then you can see that in both plots higher `mean.self` scores appear to be associated with higher `mean.acc` scores. But the trend maybe is a bit stronger -- the line is steeper -- in `study.two`. -->
-
-We are now in a position to answer one of our research questions:
-
-2. Can people accurately evaluate whether they correctly understand written health information?
-
-<!-- If people *can* accurately evaluate whether they correctly understand written health information then `mean.self` (a score representing their evaluation) should be associated with `mean.acc` (a score representing their accuracy of understanding) for each person. -->
-
-::: callout-tip
-## Revise: practice to strengthen skills
-:::
-
-##### Task 10 --  Can you estimate the association between `mean.acc` and `mean.self` in both data-sets?
-
-> Hint: Task 10 -- We use `cor.test()` as you have been shown how to do e.g. in `PSYC122-w16-how-to.Rmd`
-
-Do the correlation for both data-sets.
-
-First calculate the correlation between `mean.acc` and `mean.self` in `study.two`.
-
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-cor.test(study.two.gen$mean.acc, study.two.gen$mean.self, method = "pearson",  alternative = "two.sided")
-```
-:::
-
-Then answer the following questions.
-
->**Q.6.** What is r, the correlation coefficient?
-
-<!-- - A.6. r = 0.5460792 -->
-
->**Q.7.** Is the correlation significant?
-
-<!-- - A.7. r is significant -->
-
->**Q.8.** What are the values for t and p for the significance test for the correlation?
-
-<!-- - A.8. t = 8.4991, p = 9.356e-15 -->
-
-Second, look at the correlation between `mean.acc` and `mean.self` in `study.122`.
-
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-cor.test(study.122$mean.acc, study.122$mean.self, method = "pearson",  alternative = "two.sided")
-```
-:::
-
-Then answer the following questions.
-
->**Q.9.** What is r, the correlation coefficient?
-
-<!-- - A.9. r = 0.3474471 -->
-
->**Q.10.** Is the correlation significant?
-
-<!-- - A.10. r is significant -->
-
->**Q.11.** What are the values for t and p for the significance test for the correlation?
-
-<!-- - A.11. t = 5.1742, p-value = 5.664e-07 -->
-
-Now we can answer the research question:
-
-2. Can people accurately evaluate whether they correctly understand written health information?
-
->**Q.12.** What do the correlation estimates tell you is the answer to the research question?
-
-<!-- - A.12.  -->
-
-<!-- > The correlations are positive and significant, indicating that higher `mean.self` (evaluations) are associated with higher `mean.acc` (understanding), suggesting that people *can* judge their accuracy of understanding. -->
-
->**Q.13.**  Can you compare the estimates, given the two data-sets, to evaluate if the result in `study.two.gen` is *replicated* in `study.122`?
-
->**hint: Q.13.** We can judge if the result in a study is replicated in another study by examining if -- here -- the correlation coefficient is significant in both studies *and* if the coefficient has the same size and sign in both studies.
-
-<!-- - A.13. If you compare the correlation estimates from both `study.two.gen` and `study.122` you can see: -->
-
-<!-- - first, the correlation is significant in both `study.two.gen` and `study.122`; -->
-<!-- - second, the correlation is positive in both studies. -->
-
-<!-- But, if you compare the correlation estimates, you can see that the coefficient estimate is smaller in `study.122` (where r = .35) than in `study.two.gen` (where r = .55). -->
-
-<!-- This may suggest that the association observed in `study.two.gen` is different from the association in `study.122`, for some reason. -->
-
-##### Task 11 -- In working with R to do data analysis, we often work with libraries of function like `{tidyverse}` that enable us to do things (see the week 19 lecture for discussion).
-
-In this way, we are using the `{patchwork}` library so that we can create plots and then present them in a grid.
-
-Can you find the online information about `{patchwork}` and use it to adjust the layout of the grids of plots you are using?
-
-> Hint: Task 11 -- To find out more information about a function or a library in R, do a search for the keywords
-
-You can do a search, using any search engine (e.g., Bing, Chrome, Google), by entering: 
-
-> `in r ...`
-
-And pasting the words you want to know about to replace the `...` e.g. "in r patchwork".
-
-You will then see a list of results including the link to the `{patchwork}` information:
-
-<https://patchwork.data-imaginist.com>
-
-#### Step 5: Use a linear model to to answer the research questions -- multiple predictors
-
-::: callout-tip
-## Revise: practice to strengthen skills
-:::
-
-##### Task 12 -- Examine the relation between outcome mean accuracy (`mean.acc`) and multiple predictors 
-
-> Hint: Task 12 -- We use `lm()`, as we have been doing before, see e.g. `PSYC122-w18-how-to.R`
-
-> Examine the predictors of mean accuracy (`mean.acc`), first, for the `study.two.gen` data.
-
-We specify a linear model of the `study.two.gen` data, including as the outcome:
-
-- mean accuracy (`mean.acc`) 
-
-and including as the predictors the variables:
-
-- health literacy (`HLVA`); 
-- vocabulary (`SHIPLEY`); 
-- reading strategy (`FACTOR3`).
-
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-model <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.two.gen)
 summary(model)
 ```
 :::
 
-Using the model estimates, we can answer the research question:
+If you look at the model summary you can answer the following questions.
 
-1. What person attributes predict success in understanding?
+>**Q.13.** What is the estimate for the coefficient of the effect of the predictor, `FACTOR3` (reading strategy)?
 
-Inspect the model summary to then answer the following questions:  
+<!-- - A.13. 0.0023489 -->
 
->**Q.14.** What is the estimate for the coefficient of the effect of the predictor `SHIPLEY` in *this* model?
+>**Q.14.** Is the effect significant?
 
-<!-- - A.14. 0.008397  -->
+<!-- - A.14. It is significant. Because `Pr(>|t|)` equals `0.003` for the `Estimate` of the effect of `FACTOR3` (reading strategy): this means that  p < .05, and so the effect is significant. -->
 
->**Q.15.** Is the effect significant?
+>**Q.15.** What are the values for t and p for the significance test for the 
+estimated coefficient of the effect of `HLVA` (health literacy)?
 
-<!-- - A.15. It is significant, p < .05 -->
-
->**Q.16.** What are the values for t and p for the significance test for the coefficient?
-
-<!-- - A.16. t = 4.533, p = 1.1e-05 -->
-
->**Q.17.** Now consider the estimates for all the variables, what do you conclude is the answer to the research question -- given the `study.two.gen` data:
-
-1. What person attributes predict success in understanding?
-
->**hint: Q.17.** Can you report the model and the model fit statistics using the language you have been shown in the week 18 lecture?
-
-<!-- - A.17.  -->
-
-<!-- > We fitted a linear model with mean comprehension accuracy as the outcome and health literacy (`HLVA`),  reading strategy (`FACTOR3`), and vocabulary (`SHIPLEY`) as predictors. The model is significant overall, with F(3, 168) = 31.99, p< .001, and explains 35% of variance (adjusted R2 = 0.35). Mean accuracy was predicted to be higher given higher scores in health literacy (`HLVA` estimate = .018, t = 4.90, p < .001), vocabulary knowledge (`SHIPLEY` estimate = .008, t = 4.53, p < .001), and reading strategy (`FACTOR3` estimate = .003, t = 2.68, p = .008). -->
-
-### Task 13 -- Examine the predictors of mean accuracy (`mean.acc`), now, for the `study.122` data
-
-> Examine the predictors of mean accuracy (`mean.acc`), second, for the `study.122` data.
-
-We specify a linear model of the `study.122` data, including as the outcome:
-
-- mean accuracy (`mean.acc`) 
-
-and including as the predictors the variables:
-
-- health literacy (`HLVA`); 
-- vocabulary (`SHIPLEY`); 
-- reading strategy (`FACTOR3`).
+<!-- - A.15. t = 8.861, p = <2e-16 -->
 
 :::{.callout-tip collapse="true"}
-## Code
+## Do you know how to intepret numbers like `<2e-16`?
+
+If you are unsure you can find out about scientific notation here:
+
+<https://www.calculatorsoup.com/calculators/math/scientific-notation-converter.php>
+:::
+
+>**Q.16.** What do you conclude are the effects of the `FACTOR3` (reading strategy) and `HLVA` (health literacy) variables, as predictors of outcome `mean.acc` (accuracy of understanding of health information)?
+
+<!-- - A.16. The model slope estimates suggests that both predictors are significant, and that as both `FACTOR3` (reading strategy) and `HLVA` (health literacy) increase, so `mean.acc` scores are predicted to increase also. -->
+
+##### Task 10 -- Second, fit a linear model including a numeric variable and a factor as predictors
+
+> Hint: Task 10 -- We use the `lm()` function to fit a model with `mean.acc` as the outcome and `FACTOR3` and `GENDER` as predictors.
+
+Note that in this model:
+
+- `FACTOR3` is a measure of reading strategy -- numeric scores correspond to a test of strategy awareness
+- `GENDER` is a self-report measure of gender identity
+
+:::{.callout-tip collapse="true"}
 ```{r}
-model <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.122)
+model <- lm(mean.acc ~ FACTOR3 + GENDER, 
+            data = all.data)
+
 summary(model)
 ```
 :::
 
-Using the model estimates, we can answer the research question:
+If you look at the model summary you can answer the following questions.
 
-1. What person attributes predict success in understanding?
+>**Q.17.** What is the estimate for the coefficient of the effect of the predictor, `FACTOR3` (strategy)?
 
-Inspect the model summary, then answer the following questions:  
+<!-- - A.17. 0.0040658 -->
 
->**Q.18.** What is the estimate for the coefficient of the effect of the predictor, `HLVA`, in *this* model?
+>**Q.18.** Is the effect significant?
 
-<!-- - A.18. 0.018850  -->
+<!-- - A.18. It is significant. Because `Pr(>|t|)` equals `1.1e-06` for the `Estimate` of the effect of `FACTOR3` (strategy): this means that  p < .05, and so the effect is significant. -->
 
->**Q.19.** Is the effect significant?
+>**Q.19.** What are the values for t and p for the significance test for the 
+estimated coefficient of the effect of `GENDER` (level, `Male` compared to `Female`)?
 
-<!-- - A.19. It is significant, p > .05 because p = 1.01e-05 -->
+<!-- - A.19. t = -0.901, p = 0.368  -->
 
->**Q.20.** What are the values for t and p for the significance test for the coefficient?
+>**Q.20.** Is the effect of `GENDER` significant?
 
-<!-- - A.20. 4.536, p < .001 -->
+<!-- - A.20. It is not significant. Because `Pr(>|t|)` equals `0.635` for the `Estimate` of the effect of `GENDER` this means that  p > .05, and so the effect is not significant.  -->
 
->**Q.21.** Now consider the estimates for all the variables, what do you conclude is the answer to the research question -- given the `study.122` data:
+> Hint: Task 10 -- How do we know how to interpret estimates for the effects of factors? We discussed how R deals with factors in week 18, and discuss factors, and the effects of factors, in the week 19 lecture.
 
-1. What person attributes predict success in understanding?
+>**Q.21.** How should we interpret the coefficient estimate for the effect of `GENDER`?
 
->**hint: Q.21.** Can you report the model and the model fit statistics using the language you have been shown in the week 18 lecture?
+<!-- - A.21. Though the effect is not significant, we can say that, on average, outcome `mean.acc` is -0.0108184 (slightly) lower for `Male` compared to `Female` coded people. -->
 
-<!-- - A.21.  -->
+>**Q.22.** What do you conclude are the effects of the `FACTOR3` (strategy) and `GENDER` (`Female` compared to `Male`) variables, as predictors of outcome `mean.acc` (accuracy of understanding of health information)?
 
-<!-- > We fitted a linear model with mean comprehension accuracy as the outcome and health literacy (`HLVA`),  reading strategy (`FACTOR3`), and vocabulary (`SHIPLEY)` as predictors. The model is significant overall, with F(3, 193) = 19.77, p < .001, and explains 22% of variance (adjusted R2 = .2232). Mean accuracy was predicted to be higher given higher scores in health literacy (`HLVA` estimate = .019, t = 4.54, p < .001) and vocabulary knowledge (`SHIPLEY` estimate = .007, t = 3.63, p < .001). There was a non-significant effect of individual differences in reading strategy (`FACTOR3` estimate = .001, t = .99, p = .325).  -->
+<!-- - A.22. The model slope estimates suggest that gender does not have a significant effect but that as `FACTOR3` (strategy) scores increase, so `mean.acc` scores are predicted to increase.  -->
 
-At this point, we can evaluate the evidence from the PSYC122 sample -- based on your responses -- to assess if the patterns, the estimates, we saw previously are repeated in analyses of PSYC122 responses.
-
->**Q.22.** Are the findings from `study.two.gen` replicated in `study.122`?
-
->**hint: Q.22.** We can judge if the results in an earlier study are replicated in another study by examining if -- here -- the linear model estimates are significant in both studies *and* if the coefficient estimates have the same size and sign in both studies.
-
-<!-- - A.22. If you compare the linear model coefficient estimates from both the `study.two.gen` and `study.122` models, you can see: -->
-
-<!-- - first, that the `HLVA` and `SHIPLEY` effects are significant in both `study.two.gen` and `study.122`; -->
-<!-- - second, that the estimates of the `HLVA` and `SHIPLEY` effects have the same sign -- positive -- and similar magnitudes in both studies (implying similar effects); -->
-<!-- - but, third that the estimate of the effect of variation in reading strategy (`FACTOR3`) is significant in `study.two.gen` but not in `study.122`.   -->
-
-<!-- This suggests that the attributes -- the set of abilities -- that predict comprehension accuracy are similar but not the same in the `study.two.gen` participants compared to the `study.122` participants. -->
-
->**Q.23.** How would you describe the outstanding difference between the results of the two studies?
-
->**hint: Q.23.** We can look at the estimates but we can also use model prediction plotting code to *visualize* the results. You can build on the code you used before, see:
-
-- `PSYC122-w18-how-to.R`
-- `PSYC122-w19-how-to.R`
-
->**hint: Q.23.** Let's focus on comparing the `study.two.gen` and `study.122` estimates for the effect of `HLVA` in both models: we can plot model predictions, for comparison:
-
-First: fit the models -- using different names for the different models.
-
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-model.two <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.two.gen)
-summary(model.two)
-model.122 <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.122)
-summary(model.122)
-```
-:::
-
-Second, create prediction plots for the `HLVA` effect for each model.
-
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-dat.two <- ggpredict(model.two, "HLVA")
-plot.two <- plot(dat.two) + labs(title = "Study Two")
-dat.122 <- ggpredict(model.122, "HLVA")
-plot.122 <- plot(dat.122) + labs(title = "Study PSYC122")
-```
-:::
-
-Third, show the plots side-by-side:
-
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-plot.two + plot.122
-```
-:::
-
-Then use your *visualization* of the model results to describe the outstanding difference between the results of the two studies -- focusing on the effect of `HLVA` in both models.
-
-<!-- - A.23. If we compare the estimates for the coefficient of the `HLVA` effect in the `study.two.gen` and `study.122` models we can see that: -->
-
-<!-- 1. The health literacy `HLVA` effect is significant in both `study.two.gen` and `study.122`. -->
-<!-- 2. The effect trends positive in both studies. -->
-<!-- 3. The coefficient estimate is similar in `study.122` and in `study.two.gen`. -->
-<!-- 4. The prediction plots suggest the prediction line slope is similar in `study.122`. -->
-<!-- 5. The grey shaded area around the trend line (indicating our uncertainty about the estimated trend) is also similar for `study.two.gen` and for `study.122`.  -->
-
-<!-- - The breadth of the grey shaded area around the trend line is hard to compare between the two plots. You have to look carefully at the y-axis scale information to make a judgment about the relative width of these uncertainty ellipses. -->
+#### Step 6: Use linear models with multiple predictors, including interaction effects
 
 ::: callout-tip
-- We can redraw the prediction plots -- next -- to add in more information about our samples. This change, see following, will help us to interpret the results of the analyses we have done.
-- And *that* will help you to see why data visualization and data analysis work well together.
+## Introduce: make some new moves
 :::
 
-##### Task 14 -- In producing prediction plots, we are using functions from the `{ggefects}` library. Can you locate online information about working with the library functions?
+As we saw through Task 8, it is possible that:
 
-:::{.callout-tip collapse="true"}
-## Hint
-Try doing a search with the key words: `in r ggeffects`.
+- the association between two variables (`mean.acc`, `FACTOR3`) can be different for different values of a third categorical (factor) variable (`GENDER`);
+- the association between two variables (`mean.acc`, `FACTOR3`) can be different for different values of a third variable (`HLVA`)
 
-If you do that, you will see links to the website:
+While we can examine these possibilities using visualizations, we often need to conduct statistical analyses to test *interaction effects*, or the ways in which the association between two variables can be different for different levels of a third variable.
 
-<https://strengejacke.github.io/ggeffects/>
-:::
+We can extend linear models to include terms that allow us to test or to estimate *interaction effects*.
 
-#### Task 15 -- In the `{ggeffects}` online information, you can see links to practical examples. Can you use the information under `Practical examples` to adjust the appearance of the prediction plots: to make them black and white; to add points?
+##### Task 11 -- Center numeric variables before using them as predictors
 
-First create the plots.
+> Hint: Task 11
 
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-dat.two <- ggpredict(model.two, "HLVA")
-plot.two <- plot(dat.two, colors = "bw", add.data = TRUE) + labs(title = "Study Two")
-dat.122 <- ggpredict(model.122, "HLVA")
-plot.122 <- plot(dat.122, colors = "bw", add.data = TRUE) + labs(title = "Study PSYC122")
-```
-:::
+When we include numeric variables (e.g., `FACTOR3, HLVA, SHIPLEY`) in linear models, it can cause problems of interpretation or of estimation if we include the variables as they first come to us in datasets (as *raw* variables).
 
-Then show the plots in a grid, to allow comparison of the effect of `HLVA` between studies in a *professional* presentation.
+- It often helps our analyses to *center* variables on their means.
+- Centering a variable means calculating its mean, and then subtracting that mean from every value in the variable column.
+
+For example, to center values of the `HLVA` variable, we create a new column `data$HLVA_centered` by first calculating the mean of the `data$HLVA` variable, and then subtracting that mean from every row value in `data$HLVA`.
 
 :::{.callout-tip collapse="true"}
 ## Code
 ```{r}
-plot.two + plot.122
+all.data$HLVA_centered <- all.data$HLVA - mean(all.data$HLVA, na.rm = TRUE)
 ```
 :::
 
-::: calloutbox-tip
-It is often useful to compare model estimates -- here, the slopes -- with the raw data observations.
+>**Q.23.** Can you check what is going on when we center variables?
 
-- No model will be perfect.
-- Visualizing the difference between what we observe and what we predict helps to make sense of how our prediction model could be improved.
+- Q.23. Hint: You can see what is happening when you run this code by first calculating the mean for `HLVA`
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+mean(all.data$HLVA, na.rm = TRUE)
+```
 :::
 
->**Q.24.** Given the information in the adjusted plots, can you explain why we appear to be more uncertain about the `HLVA` effect given the `study.122` data?
+then looking at column values in the new `HLVA_centered` column, compared to the original `HLVA` column:
 
-<!-- - A.24. Adding points allow us to see: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+all.data %>%
+  select(HLVA_centered, HLVA) %>%
+  print(n = 20)
+```
+:::
 
-<!-- 1. There are far fewer observations in the `study.122` data-set than in the `study.two.gen` data: this means that our estimate of the effect will be *more uncertain* because we have *less information* when we look at the `study.122` data. -->
-<!-- 2. But it is also clear that the effect of `HLVA` appears to be stronger in the  `study.122` data because observed scores are *closer* to model predictions: the `HLVA` effect *explains more variation* in the `study.122` data than in the `study.two.gen` data. -->
+What is the difference between the `HLVA` and `HLVA_centered` columns?
+
+<!-- - A.23. You can see that every value in the `HLVA_centered` column equals the value, on the same row, in the `HLVA` column, minus the mean for `HLVA`. -->
+
+>**Q.24.** Can you center the variable `FACTOR3`?
+
+<!-- - A.24. You can use the same code to center `FACTOR3`: -->
+
+<!-- ```{r} -->
+<!-- all.data$FACTOR3_centered <- all.data$FACTOR3 - mean(all.data$FACTOR3, na.rm = TRUE) -->
+<!-- ``` -->
+
+>**Q.25.** Can you center the variable `SHIPLEY`?
+
+<!-- - A.25. You can use the same code to center `SHIPLEY`: -->
+
+<!-- ```{r} -->
+<!-- all.data$SHIPLEY_centered <- all.data$SHIPLEY - mean(all.data$SHIPLEY, na.rm = TRUE) -->
+<!-- ``` -->
+
+##### Why are we learning how to do this?
+
+It is common in data analysis to want to transform variables before using them in analyses.
+
+- Here, we are transforming predictor variables by centering them on their mean values.
+
+The practical reason for doing this transformation now is because if we use uncentered (raw) numeric variables as predictors in linear models that involve interactions the model can find it difficult to distinguish between the effects of those predictors and the effect of their interaction.
+
+##### Task 12 -- Specify models to include interaction effects: interactions between two numeric predictor variables
+
+> Hint: Task 12
+
+We use `lm()` to specify models, as we have been doing. 
+
+- What changes is that we now use the `*` operator in our model code to specify interaction effects.
+
+For example, let's suppose that we want to examine the possibility that the effect of reading strategy (`FACTOR3`) on accuracy understanding (`mean.acc`) is different for different values of health literacy (`HLVA`).
+
+- Here, we are considering the possibility that the association between reading strategy (`FACTOR3`) and accuracy of understanding (`mean.acc`) *varies*.
+- We are considering the possibility that the the association between reading strategy (`FACTOR3`) and accuracy of understanding (`mean.acc`) is different for different groups of people.
+- We are considering the possibility that the effect of reading strategy (`FACTOR3`) on accuracy of understanding (`mean.acc`) is different for people who differ, also, in health literacy (`HLVA`).
+
+In examining the possibility that the effect of reading strategy (`FACTOR3`) on accuracy of understanding (`mean.acc`) is different for different values of health literacy (`HLVA`), we are examining a possible *interaction* between the effects of reading strategy (`FACTOR3`) and health literacy (`HLVA`).
+
+::: callout-tip
+## Let's go through this step-by-step
+:::
+
+First, consider: if we ignored the possibility of an interaction, we would fit a model with just the predictors: reading strategy (`FACTOR3`) and health literacy (`HLVA`).
+
+We can fit the same model that we fit before (for Task 9).
+
+- We vary the code a little, by using the centered variables we have just created:
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+model <- lm(mean.acc ~ FACTOR3_centered + HLVA_centered, 
+            data = all.data)
+
+summary(model)
+```
+:::
+
+>**Q.26.** Can you compare the summary of results for this model with the model, using the same (but not centered) predictors, that you fitted for Task 9 -- compare the estimates, what do you see?
+
+<!-- - A.26. If we compare the results of the models we can see that the estimates, t-test values and probability values are the same for `FACTOR3` compared to `FACTOR3_centered` or for `HLVA` compared to `HLVA_centered`.  -->
+
+<!-- - This shows that centering predictors only changes the scaling of the predictor variables so that their centers are 0. -->
+
+Second, now consider: we aim to test or estimate the interactions between the effects of reading strategy (`FACTOR3_centered`) and health literacy (`HLVA_centered`).
+
+- We vary the code a little, again, this time by separating the predictors by `*` not by `+`:
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+model <- lm(mean.acc ~ FACTOR3_centered*HLVA_centered, 
+            data = all.data)
+
+summary(model)
+```
+:::
+
+>**Q.27.** Can you compare the summary of results for this model with the results for the previous model (which uses the same predictors but without an interaction)?
+
+- What do you see?
+
+<!-- - A.27. If we compare the results of the models we can see that now the summary gives us estimates for the effects of: -->
+
+<!-- - `FACTOR3_centered` -- this is the effect of `SHIPLEY_centered` when `HLVA_centered` is 0 -->
+<!-- - `HLVA_centered` -- this is the effect of `HLVA_centered` when `FACTOR3_centered` is 0 -->
+<!-- - `FACTOR3_centered*HLVA_centered` -- this is the interaction, and reflects the change in the effect of `FACTOR3_centered` on outcome `mean.acc`, given different values of `HLVA_centered`. -->
+
+<!-- - Notice that the effect of the interaction is not significant but that the results suggest a very slight tendencey for the effect of reading strategy to be different (smaller) for increasing values of `HLVA_centered`. -->
+
+##### What are we learning here?
+
+The `*` symbol (the `*` operator) is used here to code for a model including the effects of the two variables separated by the symbol, here, as well as the effect of the interaction between these two variables.
+
+### Task 13 -- Plot model predictions to help with interpretation of interaction effects
+
+> Hint: Task 13 
+
+How do we interpret interactions?
+
+- It helps to plot model predictions, given the effects estimates that we derive from our sample using the linear model.
+
+We can do this in a two-step sequence, similar to the sequence we trialled through weeks 17 and 18:
+
+1. First fit the model
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+# -- first fit the model
+model <- lm(mean.acc ~ FACTOR3_centered*HLVA_centered, 
+            data = all.data)
+```
+:::
+
+2. Second, use the model information to plot the predictions, given the effects
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+# -- second use model information to make a plot to show model predictions
+plot_model(model, type = "pred", 
+           terms = c("FACTOR3_centered", "HLVA_centered")) +
+  theme_bw() +
+  ylim(0, 1)
+```
+:::
+
+>**Q.28.** Can you compare the summary of results for the model with the plot to develop an interpretation of the `FACTOR3_centered*HLVA_centered` interaction?
+
+- What do you see?
+
+<!-- - A.28. We can build an interpretation in steps: -->
+
+<!-- - If we look at the coefficient estimate for the `FACTOR3_centered*HLVA_centered` interaction, we can see that it is negative (`-0.0005713`).  -->
+<!-- - If we look at the plot of the model predictions, we can see that there are three slopes for the `FACTOR3_centered` effect, one each for different levels of `HLVA_centered`: for `HLVA_centered` = -2.19; `HLVA_centered` = 0; and `HLVA_centered` = 2.19. -->
+
+<!-- - Notice that the steepness of the slope of the `FACTOR3_centered` effect decreases (the slope gets less steep) from `HLVA_centered` = -2.19 to `HLVA_centered` = 2.19. -->
+<!-- - This tells us that the interaction (though not significant) operates so that the effect of reading strategy tends to be smaller for people with higher levels of health literacy. -->
+
+<!-- - Returning to the fact that the coefficient estimate for the `FACTOR3_centered*HLVA_centered` is negative, we can now understand that it is negative because the interaction operates so that the slope of the `FACTOR3_centered` gets smaller as scores on `HLVA_centered` increase. -->
+
+### Task 14 -- Specify models to include interaction effects: interactions between a numeric predictor variable and a factor predictor variable
+
+> Hint: Task 14 -- We follow the same approach that we followed through Task 12.
+
+Now consider: we aim to test or estimate the interactions between the effects of reading strategy (`FACTOR3`) and gender (`GENDER`).
+
+- We can vary the code to change the predictor variables but the structure otherwise stays the same: how should we do this?
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+model <- lm(mean.acc ~ FACTOR3_centered*GENDER, 
+            data = all.data)
+
+summary(model)
+```
+:::
+
+>**Q.29.** Can you identify what effects are shown in the model summary?
+
+<!-- - A.29. We can see that now the summary gives us estimates for the effects of: -->
+
+<!-- - `FACTOR3_centered` -- this is the effect of reading strategy (`FACTOR3`) when `GENDER` level is `Female` -->
+<!-- - `GENDERMale` -- this is the effect of `GENDER` when `FACTOR3_centered` is 0.  -->
+
+<!-- Note that the effect of `GENDER` is the estimated difference in outcome when `GENDER` level is `Female` (not shown, treated as the baseline) compared to when `GENDER` level is `Male`. -->
+
+<!-- - `FACTOR3_centered*GENDER` -- this is the interaction, and reflects the change in the effect of `FACTOR3_centered` on outcome `mean.acc`, given different values of `GENDER`, here, when `GENDER` is `Male` instead of `Female`. -->
+
+##### What are we learning here?
+
+Remember from week 18:
+
+Categorical variables or **factors** and reference levels.
+
+- If you have a categorical variable like `GENDER` then when you use it in
+an analysis, R will look at the different categories (called `levels) e.g., here,
+`Female, Male` and it will pick one level to be the *reference* or baseline level. 
+- The *reference* is the the level against which other levels are compared. 
+- Here, the reference level is `Female` simply because, unless
+you tell R otherwise, it picks the level with a category name that begins
+earlier in the alphabet as the reference level.
+
+##### How do we interpret interactions?
+
+- It helps to plot the effects estimates, given the model.
+
+We can do this in a two-step sequence, similar to the sequence we trialled through weeks 17 and 18:
+
+1. First fit the model
+2. Second, use the model information to plot the predictions, given the effects
+
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+# -- first fit the model
+model <- lm(mean.acc ~ FACTOR3_centered*GENDER, 
+            data = all.data)
+
+# -- make plot
+plot_model(model, type = "pred", 
+           terms = c("FACTOR3_centered", "GENDER")) +
+  theme_bw() +
+  ylim(0, 1)
+```
+:::
+
+>**Q.30.** Can you identify how the effects of reading strategy (`FACTOR3`) and gender (`GENDER`) interact, given the model results summary and this plot?
+
+<!-- - A.30. The plot, and the estimate for the interaction `FACTOR3_centered:GENDERMale`, together show that the coefficient for the effect of reading strategy (`FACTOR3_centered`) is slightly larger (the slope is slightly steeper) when `GENDER` is `Male` instead of `Female. -->
+
+<!-- - Notice that, for this sample, the interaction is not significant, suggesting that there is no difference between genders in the relative effectiveness of reading strategy. -->
 
 #### You have now completed the Week 19 questions.
 
@@ -1106,7 +1227,7 @@ You have now extended your capacity to *think critically* about our data and our
 
 ::: callout-tip
 - We have used PSYC122 students' responses to examine the robustness of evidence for potential answers to our research questions.
-- Examining evidence across multiple different studies is a key element part of the process of *building* insights in psychological science.
+- Examining the ways that effects can vary between groups, contexts or the values of a moderator is a key element in the process of *building* insights in psychological science.
 :::
 
 ## Answers {#sec-wk19-lab-activities-answers}
@@ -1116,10 +1237,10 @@ When you have completed all of the lab content, you may want to check your answe
 ::: callout-tip
 The `.Rmd` script containing all code and all answers for each task and each question will be made available after the final lab session has taken place.
 
-- You can download the script by clicking on the link:  [PSYC122-w19-workbook-answers.Rmd](data/week19/PSYC122-w19-workbook-answers.Rmd).
+<!-- - You can download the script by clicking on the link:  [PSYC122-w19-workbook-answers.Rmd](data/week19/PSYC122-w19-workbook-answers.Rmd). -->
 :::
 
-We set out answers information the Week 19 **Critical perspectives** questions, below.
+We set out answers information on the Week 19 questions, below.
 
 - We focus on the **Lab activity 2** questions where we ask you to interpret something or say something.
 - We do not show questions where we have given example or target code in the foregoing lab activity @sec-wk19-lab-activities-2.
@@ -1134,400 +1255,353 @@ Click on a box to reveal the answer.
 
 #### Questions {#sec-wk19-lab-activities-2-questions-answers}
 
->**Q.1.** What is the mean of the `mean.acc` and `SHIPLEY` variables in the two studies?
+>**Q.1.** What is the median of the `FACTOR3` variable in the dataset?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.1. The means are:
-
-- study two -- `mean.acc`: mean = 0.7596
-- study two -- `SHIPLEY`: mean = 35.13
-- study PSYC122 -- `mean.acc`: mean = 0.8231
-- study PSYC122 -- `SHIPLEY`: mean = 32.61
+- A.1. You can use the `summary()` function to calculate that the median `FACTOR3` score is 50.00
 :::
 
->**Q.2.** Draw histograms of both mean.acc and mean.self for both studies.
+>**Q.2.** Draw a histogram of the `FACTOR3` distribution.
 
 ::: {.callout-note icon=false collapse="true"}
 - A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing data-set and variable names to get the right plots:
 
 ```{r}
-ggplot(data = study.two.gen, aes(x = mean.acc)) +
-  geom_histogram(binwidth = .1) +
+ggplot(data = all.data, aes(x = FACTOR3)) +
+  geom_histogram(binwidth = 1) +
   theme_bw() +
-  labs(x = "Mean accuracy (mean.acc)", y = "frequency count") +
-  xlim(0, 1)
-
-ggplot(data = study.two.gen, aes(x = SHIPLEY)) +
-  geom_histogram(binwidth = 2) +
-  theme_bw() +
-  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count") +
-  xlim(0, 40)
-
-ggplot(data = study.122, aes(x = mean.acc)) +
-  geom_histogram(binwidth = .1) +
-  theme_bw() +
-  labs(x = "Mean accuracy (mean.acc)", y = "frequency count") +
-  xlim(0, 1)
-
-ggplot(data = study.122, aes(x = SHIPLEY)) +
-  geom_histogram(binwidth = 2) +
-  theme_bw() +
-  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count") +
-  xlim(0, 40)
+  labs(x = "Reading strategy (FACTOR3)", y = "frequency count")
 ```
 :::
 
-Create histograms to enable you to compare the distribution of `SHIPLEY` scores in the `study.two.gen` and the `study.122` studies
-
-- First, create plot objects but do not show them.
-- Second produce the plots for viewing, side-by-side, by *naming* them: `plot.1.name + plot.2.name`.
-
->**Q.3.** Now use the plots to do some data analysis work: how do the `SHIPLEY` distributions compare, when you compare the `SHIPLEY` of `study.two.gen` versus `SHIPLEY` of `study.122`?
+>**Q.3.** Examine the reading strategy (`FACTOR3`) scores distribution: what does it tell you about the variation in the reading strategies of the participants in the sample?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.3. When you compare the plots side-by-side you can see that the `SHIPLEY` distributions are *mostly* similar: most people have high `SHIPLEY` scores.
-
-But you can also see striking differences:
-
-- The peak of the distribution -- where the tallest bar is -- is at a higher `SHIPLEY` score in `study.two.gen` (around `SHIPLEY` = 37-38) than in `study.122` (where is it around `SHIPLEY` = 30).
-- There appear to be *fewer* participants with lower `SHIPLEY` scores in `study.122` than in `study.two`.
+- A.3. The histogram shows that most participants present scores varying somewhere between 40-60 but there is a "long tail" of smaller numbers of participants with low or very low scores on the reading strategy (`FACTOR3`) measure.
 :::
 
->**Q.4.** Is the visual impression you get from comparing the distributions consistent with the statistics you see in the summary?
+>**Q.4.** What kind of variable is `GENDER`?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.4. Yes: If you go back to the summary of `SHIPLEY`, comparing the two studies datasets, then you can see that the median and mean are higher in `study.two.gen` than in `study.122`.
+- A.4. Use the same functions but change the variable name:
+
+```{r}
+is.factor(all.data$GENDER)
+is.numeric(all.data$GENDER)
+```
 :::
 
-Draw scatterplots to compare the potential association between `mean.acc` and `mean.self` in both the `study.two.gen` and the `study.122` data-sets.
-
-We again:
-
-1. First construct the plot objects and give them names;
-2. create and show a grid of named plots.
-
-Though this time we are producing a grid of **scatterplots**.
-
-Now use the plots to make comparison judgments.
-
->**Q.5.** How does the association, shown in the plots, between `mean.self` and `mean.acc` compare when you look at the `study.two.gen` versus the `study.122` plot?
->**hint: Q.5.** When comparing evidence about associations in different studies, we are mostly going to focus on the slope -- the angle -- of the prediction lines, and the ways in which points do or do not cluster about the prediction lines.
+>**Q.5.** What do the `is._()` functions tell us?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.5. If you examine the `study.two.gen` versus the `study.122` plots then you can see that in both plots higher `mean.self` scores appear to be associated with higher `mean.acc` scores. But the trend maybe is a bit stronger -- the line is steeper -- in `study.two`.
-
-We are now in a position to answer one of our research questions:
-
-2. Can people accurately evaluate whether they correctly understand written health information?
-
-If people *can* accurately evaluate whether they correctly understand written health information then `mean.self` (a score representing their evaluation) should be associated with `mean.acc` (a score representing their accuracy of understanding) for each person.
+- A.5. The function calls tell us that `GENDER` is not a factor and is not numeric.
 :::
 
-Can you estimate the association between `mean.acc` and `mean.self` in both data-sets?
-
-- We use `cor.test()` as you have been shown how to do e.g. in `PSYC122-w16-how-to.Rmd`.
-- Do the correlation for both data-sets.
-
-First calculate the correlation between `mean.acc` and `mean.self` in `study.two`.
-Then answer the following questions.
-
->**Q.6.** What is r, the correlation coefficient?
+>**Q.6.** If you look at the `summary()` results, what does it tell you the `Class` of `GENDER` is?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.6. r = 0.5460792
+- A.6. The summary shows that `GENDER` is identified as `Class: character`.
+
+You can check this by doing the `is._()` test again.
+
+```{r}
+is.character(all.data$GENDER)
+```
 :::
 
->**Q.7.** Is the correlation significant?
+>**Q.7.** How do you change the class or type of the variable `GENDER`? Change the variable's type (`Class`) into a factor.
 
 ::: {.callout-note icon=false collapse="true"}
-- A.7. r is significant
+- A.7. The `as._()` functions can be used to change variable type, as you have done
+previously (e.g., in week 16).
+
+```{r}
+all.data$GENDER <- as.factor(all.data$GENDER)
+```
 :::
 
->**Q.8.** What are the values for t and p for the significance test for the correlation?
+>**Q.8.** What does a `summary()` tell us about the self-reported `GENDER` of participants in the `all.data` sample?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.8. t = 8.4991, p = 9.356e-15
+```{r}
+summary(all.data)
+```
+
+- A.8. The summary will show how many different participants report themselves
+as belonging to one of the different `GENDER` self-identification groups in the corresponding survey question.
+
+You should see counts of the numbers of people in different `GENDER` level
+groups in the total survey sample:
+
+GENDER
+Female:323
+Male  :155
+
+We can see that 323 participants identified themselves as `Female` in the survey.
+
+We can see that 155 participants identified themselves as `Male` in the survey.
 :::
 
-Second, use the same method to calculate the correlation between `mean.acc` and `mean.self` in `study.122`.
-Then answer the following questions.
+Create a scatterplot to examine the association between two numeric variables.
 
->**Q.9.** What is r, the correlation coefficient?
+Here, we can look at the potential association between variation in reading strategy (using the `FACTOR3` measure) and accuracy of understanding of health information (`mean.acc`).
+
+>**Q.9.** What do you notice about the distribution of `mean.acc` scores at
+increasing values of reading strategy (`FACTOR3`) scores?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.9. r = 0.3474471
+- A.9. The scatterplot shows that, for increasing reading strategy (`FACTOR3`) scores, there is an associated rise in accuracy of understanding (`mean.acc`) scores.
+
+- There is extra credit for noticing that variation in outcome and predictor variable values is not tightly coupled: it is possible to have low reading strategy (`FACTOR3`) scores and high accuracy of understanding (`mean.acc`).
 :::
 
->**Q.10.** Is the correlation significant?
+Create a scatterplot to examine the association between two numeric variables, showing how the association is different for different values of a third variable.
+
+We can show how the association between two variables (`mean.acc`, `FACTOR3`) is different for different values of a third, categorical (factor), variable (`GENDER`) by splitting the plot so that we see the association for different levels of `GENDER`.
+
+>**Q.10.** What do you notice about the distribution of `mean.acc` scores at
+increasing values of reading strategy (`FACTOR3`) scores, for different sub-sets of the data: for people with `Female` or `Male` `GENDER` coding?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.10. r is significant
+- A.10. You can see that the association between `mean.acc` and `FACTOR3` scores appears to be *mostly* similar for different `GENDER` codes.
+
+- The distribution of scores is different: we have more `Female` participants; their scores vary more widely.
+- But the trend is similar overall: the trend line representing the association between `mean.acc` and `FACTOR3` looks similar such that for both sub-groups in the sample, increasing `FACTOR3` scores are associated with higher `mean.acc` scores.
 :::
 
->**Q.11.** What are the values for t and p for the significance test for the correlation?
+We can show how the association between two variables (`mean.acc`, `FACTOR3`) is different for different values of a third numeric variable (`HLVA`) by splitting the dataset.
+
+Here, we are first creating a new variable to code for (distinguish between) different sub-sets of observations (different rows in the dataset) based on `HLVA` scores, and then second drawing different plots based on different subsets.
+
+>**Q.11.** What do you notice about the distribution of `mean.acc` scores at
+increasing values of reading strategy (`FACTOR3`) scores, for different sub-sets of the data: for (1.) low (2.) mid (3.) high `HLVA` values?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.11. t = 5.1742, p-value = 5.664e-07
+- A.11. You can see that the association between `mean.acc` and `FACTOR3` scores appears to vary (the slope differs) given different values of the third variable (`HLVA`).
 :::
 
-Now we can answer the research question:
-
-2. Can people accurately evaluate whether they correctly understand written health information?
-
->**Q.12.** What do the correlation estimates tell you is the answer to the research question?
+>**Q.12.** What do you think the values in the grey labels at the top of the facets (the plot panels) tell us?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.12.
-
-> The correlations are positive and significant, indicating that higher `mean.self` (evaluations) are associated with higher `mean.acc` (understanding), suggesting that people *can* judge their accuracy of understanding.
+- A.12. The values tell us what values (e.g., `2,8`) are used to identify the range of `HLVA` scores that have been used to define the sub-set of observations for which the plot below shows the association between `mean.acc` and `FACTOR3` scores.
 :::
 
->**Q.13.**  Can you compare the estimates, given the two data-sets, to evaluate if the result in `study.two.gen` is *replicated* in `study.122`?
->**hint: Q.13.** We can judge if the result in a study is replicated in another study by examining if -- here -- the correlation coefficient is significant in both studies *and* if the coefficient has the same size and sign in both studies.
+We use the `lm()` function to fit a model with `mean.acc` as the outcome and `FACTOR3` and `HLVA` as predictors.
+
+>**Q.13.** What is the estimate for the coefficient of the effect of the predictor, `FACTOR3` (reading strategy)?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.13. If you compare the correlation estimates from both `study.two.gen` and `study.122` you can see:
-
-- first, the correlation is significant in both `study.two.gen` and `study.122`;
-- second, the correlation is positive in both studies.
-
-But, if you compare the correlation estimates, you can see that the coefficient estimate is smaller in `study.122` (where r = .35) than in `study.two.gen` (where r = .55).
-
-This may suggest that the association observed in `study.two.gen` is different from the association in `study.122`, for some reason.
+- A.13. 0.0023489
 :::
 
-Examine the relation between outcome mean accuracy (`mean.acc`) and multiple predictors.
+>**Q.14.** Is the effect significant?
 
-We use `lm()`, as we have been doing before, see e.g. `PSYC122-w18-how-to.R`
+::: {.callout-note icon=false collapse="true"}
+- A.14. It is significant. Because `Pr(>|t|)` equals `0.003` for the `Estimate` of the effect of `FACTOR3` (reading strategy): this means that  p < .05, and so the effect is significant.
+:::
 
-Examine the predictors of mean accuracy (`mean.acc`), first, for the `study.two.gen` data.
+>**Q.15.** What are the values for t and p for the significance test for the 
+estimated coefficient of the effect of `HLVA` (health literacy)?
 
-We specify a linear model of the `study.two.gen` data, including as the outcome:
+::: {.callout-note icon=false collapse="true"}
+- A.15. t = 8.861, p = <2e-16
+:::
 
-- mean accuracy (`mean.acc`)
+>**Q.16.** What do you conclude are the effects of the `FACTOR3` (reading strategy) and `HLVA` (health literacy) variables, as predictors of outcome `mean.acc` (accuracy of understanding of health information)?
 
-and including as the predictors the variables:
+::: {.callout-note icon=false collapse="true"}
+- A.16. The model slope estimates suggests that both predictors are significant, and that as both `FACTOR3` (reading strategy) and `HLVA` (health literacy) increase, so `mean.acc` scores are predicted to increase also.
+:::
 
-- health literacy (`HLVA`);
-- vocabulary (`SHIPLEY`);
-- reading strategy (`FACTOR3`).
+We use the `lm()` function to fit a model with `mean.acc` as the outcome and `FACTOR3` and `GENDER` as predictors.
+
+>**Q.17.** What is the estimate for the coefficient of the effect of the predictor, `FACTOR3` (strategy)?
+
+::: {.callout-note icon=false collapse="true"}
+- A.17. 0.0040658
+:::
+
+>**Q.18.** Is the effect significant?
+
+::: {.callout-note icon=false collapse="true"}
+- A.18. It is significant. Because `Pr(>|t|)` equals `1.1e-06` for the `Estimate` of the effect of `FACTOR3` (strategy): this means that  p < .05, and so the effect is significant.
+:::
+
+>**Q.19.** What are the values for t and p for the significance test for the 
+estimated coefficient of the effect of `GENDER` (level, `Male` compared to `Female`)?
+
+::: {.callout-note icon=false collapse="true"}
+- A.19. t = -0.901, p = 0.368
+:::
+
+>**Q.20.** Is the effect of `GENDER` significant?
+
+::: {.callout-note icon=false collapse="true"}
+- A.20. It is not significant. Because `Pr(>|t|)` equals `0.635` for the `Estimate` of the effect of `GENDER` this means that  p > .05, and so the effect is not significant.
+:::
+
+>**Q.21.** How should we interpret the coefficient estimate for the effect of `GENDER`?
+
+::: {.callout-note icon=false collapse="true"}
+- A.21. Though the effect is not significant, we can say that, on average, outcome `mean.acc` is -0.0108184 (slightly) lower for `Male` compared to `Female` coded people.
+:::
+
+>**Q.22.** What do you conclude are the effects of the `FACTOR3` (strategy) and `GENDER` (`Female` compared to `Male`) variables, as predictors of outcome `mean.acc` (accuracy of understanding of health information)?
+
+::: {.callout-note icon=false collapse="true"}
+- A.22. The model slope estimates suggest that gender does not have a significant effect but that as `FACTOR3` (strategy) scores increase, so `mean.acc` scores are predicted to increase.
+:::
+
+We can extend linear models to include terms that allow us to test or to estimate *interaction effects*.
+
+When we include numeric variables (e.g., `FACTOR3, HLVA, SHIPLEY`) in linear models, it can cause problems of interpretation or of estimation if we include the variables as they first come to us in datasets (as *raw* variables).
+
+- It often helps our analyses to *center* variables on their means.
+- Centering a variable means calculating its mean, and then subtracting that mean from every value in the variable column.
+
+>**Q.23.** Can you check what is going on when we center variables?
+
+- Q.23. Hint: You can see what is happening when you run this code by first calculating the mean for `HLVA`
 
 :::{.callout-tip collapse="true"}
 ## Code
 ```{r}
-model <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.two.gen)
-summary(model)
+mean(all.data$HLVA, na.rm = TRUE)
 ```
 :::
 
-Using the model estimates, we can answer the research question:
-
-1. What person attributes predict success in understanding?
-
-Inspect the model summary to then answer the following questions:
-
->**Q.14.** What is the estimate for the coefficient of the effect of the predictor `SHIPLEY` in *this* model?
-
-::: {.callout-note icon=false collapse="true"}
-- A.14. 0.008397
-:::
-
->**Q.15.** Is the effect significant?
-
-::: {.callout-note icon=false collapse="true"}
-- A.15. It is significant, p < .05
-:::
-
->**Q.16.** What are the values for t and p for the significance test for the coefficient?
-
-::: {.callout-note icon=false collapse="true"}
-- A.16. t = 4.533, p = 1.1e-05
-:::
-
->**Q.17.** Now consider the estimates for all the variables, what do you conclude is the answer to the research question -- given the `study.two.gen` data:
-
-1. What person attributes predict success in understanding?
-
->**hint: Q.17.** Can you report the model and the model fit statistics using the language you have been shown in the week 18 lecture?
-
-::: {.callout-note icon=false collapse="true"}
-- A.17.
-
-> We fitted a linear model with mean comprehension accuracy as the outcome and health literacy (`HLVA`),  reading strategy (`FACTOR3`), and vocabulary (`SHIPLEY`) as predictors. The model is significant overall, with F(3, 168) = 31.99, p< .001, and explains 35% of variance (adjusted R2 = 0.35). Mean accuracy was predicted to be higher given higher scores in health literacy (`HLVA` estimate = .018, t = 4.90, p < .001), vocabulary knowledge (`SHIPLEY` estimate = .008, t = 4.53, p < .001), and reading strategy (`FACTOR3` estimate = .003, t = 2.68, p = .008).
-:::
-
-Examine the predictors of mean accuracy (`mean.acc`), now, for the `study.122` data.
-
-We specify a linear model *now* of the `study.122` data, including as the outcome:
-
-- mean accuracy (`mean.acc`)
-
-and including as the predictors the variables:
-
-- health literacy (`HLVA`);
-- vocabulary (`SHIPLEY`);
-- reading strategy (`FACTOR3`).
+then looking at column values in the new `HLVA_centered` column, compared to the original `HLVA` column:
 
 :::{.callout-tip collapse="true"}
 ## Code
 ```{r}
-model <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.122)
-summary(model)
+all.data %>%
+  select(HLVA_centered, HLVA) %>%
+  print(n = 20)
 ```
 :::
 
-Using the model estimates, we can answer the research question:
-
-1. What person attributes predict success in understanding?
-
-Inspect the model summary, then answer the following questions:
-
->**Q.18.** What is the estimate for the coefficient of the effect of the predictor, `HLVA`, in *this* model?
+What is the difference between the `HLVA` and `HLVA_centered` columns?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.18. 0.018850
+- A.23. You can see that every value in the `HLVA_centered` column equals the value, on the same row, in the `HLVA` column, minus the mean for `HLVA`.
 :::
 
->**Q.19.** Is the effect significant?
+>**Q.24.** Can you center the variable `FACTOR3`?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.19. It is significant, p > .05 because p = 1.01e-05
-:::
+- A.24. You can use the same code to center `FACTOR3`:
 
->**Q.20.** What are the values for t and p for the significance test for the coefficient?
-
-::: {.callout-note icon=false collapse="true"}
-- A.20. 4.536, p < .001
-:::
-
->**Q.21.** Now consider the estimates for all the variables, what do you conclude is the answer to the research question -- given the `study.122` data:
-
-1. What person attributes predict success in understanding?
-
->**hint: Q.21.** Can you report the model and the model fit statistics using the language you have been shown in the week 18 lecture?
-
-::: {.callout-note icon=false collapse="true"}
-- A.21.
-
-> We fitted a linear model with mean comprehension accuracy as the outcome and health literacy (`HLVA`),  reading strategy (`FACTOR3`), and vocabulary (`SHIPLEY)` as predictors. The model is significant overall, with F(3, 193) = 19.77, p < .001, and explains 22% of variance (adjusted R2 = .2232). Mean accuracy was predicted to be higher given higher scores in health literacy (`HLVA` estimate = .019, t = 4.54, p < .001) and vocabulary knowledge (`SHIPLEY` estimate = .007, t = 3.63, p < .001). There was a non-significant effect of individual differences in reading strategy (`FACTOR3` estimate = .001, t = .99, p = .325).
-:::
-
-At this point, we can evaluate the evidence from the PSYC122 sample -- based on your responses -- to assess if the patterns, the estimates, we saw previously are repeated in analyses of PSYC122 responses.
-
->**Q.22.** Are the findings from `study.two.gen` replicated in `study.122`?
-- hint: Q.22. We can judge if the results in an earlier study are replicated in another study by examining if -- here -- the linear model estimates are significant in both studies *and* if the coefficient estimates have the same size and sign in both studies.
-
-::: {.callout-note icon=false collapse="true"}
-- A.22. If you compare the linear model coefficient estimates from both the `study.two.gen` and `study.122` models, you can see:
-
-- first, that the `HLVA` and `SHIPLEY` effects are significant in both `study.two.gen` and `study.122`;
-- second, that the estimates of the `HLVA` and `SHIPLEY` effects have the same sign -- positive -- and similar magnitudes in both studies (implying similar effects);
-- but, third that the estimate of the effect of variation in reading strategy (`FACTOR3`) is significant in `study.two.gen` but not in `study.122`.
-
-This suggests that the attributes -- the set of abilities -- that predict comprehension accuracy are similar but not the same in the `study.two.gen` participants compared to the `study.122` participants.
-:::
-
->**Q.23.** How would you describe the outstanding difference between the results of the two studies?
->**hint: Q.23.** We can look at the estimates but we can also use model prediction plotting code to *visualize* the results. You can build on the code you used before, see:
-
-- `PSYC122-w18-how-to.R`
-- `PSYC122-w19-how-to.R`
-
->**hint: Q.23.** Let's focus on comparing the `study.two.gen` and `study.122` estimates for the effect of `HLVA` in both models: we can plot model predictions, for comparison:
-
-First: fit the models -- using different names for the different models.
-
-:::{.callout-tip collapse="true"}
-## Code
 ```{r}
-model.two <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.two.gen)
-summary(model.two)
-model.122 <- lm(mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.122)
-summary(model.122)
+all.data$FACTOR3_centered <- all.data$FACTOR3 - mean(all.data$FACTOR3, na.rm = TRUE)
 ```
 :::
 
-Second, create prediction plots for the `HLVA` effect for each model.
-
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-dat.two <- ggpredict(model.two, "HLVA")
-plot.two <- plot(dat.two) + labs(title = "Study Two")
-dat.122 <- ggpredict(model.122, "HLVA")
-plot.122 <- plot(dat.122) + labs(title = "Study PSYC122")
-```
-:::
-
-Third, show the plots side-by-side:
-
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-plot.two + plot.122
-```
-:::
-
-Then use your *visualization* of the model results to describe the outstanding difference between the results of the two studies -- focusing on the effect of `HLVA` in both models.
+>**Q.25.** Can you center the variable `SHIPLEY`?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.23. If we compare the estimates for the coefficient of the `HLVA` effect in the `study.two.gen` and `study.122` models we can see that:
+- A.25. You can use the same code to center `SHIPLEY`:
 
-1. The health literacy `HLVA` effect is significant in both `study.two.gen` and `study.122`.
-2. The effect trends positive in both studies.
-3. The coefficient estimate is similar in `study.122` and in `study.two.gen`.
-4. The prediction plots suggest the prediction line slope is similar in `study.122`.
-5. The grey shaded area around the trend line (indicating our uncertainty about the estimated trend) is also similar for `study.two.gen` and for `study.122`.
-
-- The breadth of the grey shaded area around the trend line is hard to compare between the two plots. You have to look carefully at the y-axis scale information to make a judgment about the relative width of these uncertainty ellipses.
-:::
-
-We can redraw the prediction plots to add in more information about our samples. This change, see following, will help us to interpret the results of the analyses we have done.
-And *that* will help you to see why data visualization and data analysis work well together.
-
-In the `{ggeffects}` online information, you can see links to practical examples. Can you use the information under `Practical examples` to adjust the appearance of the prediction plots: to make them black and white; to add points?
-
-First create the plots.
-
-:::{.callout-tip collapse="true"}
-## Code
 ```{r}
-dat.two <- ggpredict(model.two, "HLVA")
-plot.two <- plot(dat.two, colors = "bw", add.data = TRUE) + labs(title = "Study Two")
-dat.122 <- ggpredict(model.122, "HLVA")
-plot.122 <- plot(dat.122, colors = "bw", add.data = TRUE) + labs(title = "Study PSYC122")
+all.data$SHIPLEY_centered <- all.data$SHIPLEY - mean(all.data$SHIPLEY, na.rm = TRUE)
 ```
 :::
 
-Then show the plots in a grid, to allow comparison of the effect of `HLVA` between studies in a *professional* presentation.
+Specify models to include interaction effects: interactions between two numeric predictor variables.
 
-:::{.callout-tip collapse="true"}
-## Code
-```{r}
-plot.two + plot.122
-```
-:::
+For example, let's suppose that we want to examine the possibility that the effect of reading strategy (`FACTOR3`) on accuracy understanding (`mean.acc`) is different for different values of health literacy (`HLVA`).
 
-::: calloutbox-tip
-It is often useful to compare model estimates -- here, the slopes -- with the raw data observations.
+First, consider: if we ignored the possibility of an interaction, we would fit a model with just the predictors: reading strategy (`FACTOR3`) and health literacy (`HLVA`).
 
-- No model will be perfect.
-- Visualizing the difference between what we observe and what we predict helps to make sense of how our prediction model could be improved.
-:::
+We can fit the same model that we fit before (for Task 9).
 
->**Q.24.** Given the information in the adjusted plots, can you explain why we appear to be more uncertain about the `HLVA` effect given the `study.122` data?
+- We vary the code a little, by using the centered variables we have just created.
+
+>**Q.26.** Can you compare the summary of results for this model with the model, using the same (but not centered) predictors, that you fitted for Task 9 -- compare the estimates, what do you see?
 
 ::: {.callout-note icon=false collapse="true"}
-- A.24. Adding points allow us to see:
+- A.26. If we compare the results of the models we can see that the estimates, t-test values and probability values are the same for `FACTOR3` compared to `FACTOR3_centered` or for `HLVA` compared to `HLVA_centered`.
 
-1. There are fewer observations in the `study.two.gen` dataset than in the `study.122` data: this means that our estimate of the effect will be *a bit more uncertain* because we have *less information* when we look at the `study.two.gen` data.
-2. But it is also clear that the effect of `HLVA` appears to be similar in the two data-sets.
+- This shows that centering predictors only changes the scaling of the predictor variables so that their centers are 0.
+:::
+
+Second, now consider: we aim to test or estimate the interactions between the effects of reading strategy (`FACTOR3_centered`) and health literacy (`HLVA_centered`).
+
+- We vary the code a little, again, this time by separating the predictors by `*` not by `+`.
+
+>**Q.27.** Can you compare the summary of results for this model with the results for the previous model (which uses the same predictors but without an interaction)?
+
+- What do you see?
+
+::: {.callout-note icon=false collapse="true"}
+- A.27. If we compare the results of the models we can see that now the summary gives us estimates for the effects of:
+
+- `FACTOR3_centered` -- this is the effect of `SHIPLEY_centered` when `HLVA_centered` is 0
+- `HLVA_centered` -- this is the effect of `HLVA_centered` when `FACTOR3_centered` is 0
+- `FACTOR3_centered*HLVA_centered` -- this is the interaction, and reflects the change in the effect of `FACTOR3_centered` on outcome `mean.acc`, given different values of `HLVA_centered`.
+
+- Notice that the effect of the interaction is not significant but that the results suggest a very slight tendencey for the effect of reading strategy to be different (smaller) for increasing values of `HLVA_centered`.
+:::
+
+Plot model predictions to help with interpretation of interaction effects.
+
+- It helps to plot model predictions, given the effects estimates that we derive from our sample using the linear model.
+
+>**Q.28.** Can you compare the summary of results for the model with the plot to develop an interpretation of the `FACTOR3_centered*HLVA_centered` interaction?
+
+- What do you see?
+
+::: {.callout-note icon=false collapse="true"}
+- A.28. We can build an interpretation in steps:
+
+- If we look at the coefficient estimate for the `FACTOR3_centered*HLVA_centered` interaction, we can see that it is negative (`-0.0005713`).
+- If we look at the plot of the model predictions, we can see that there are three slopes for the `FACTOR3_centered` effect, one each for different levels of `HLVA_centered`: for `HLVA_centered` = -2.19; `HLVA_centered` = 0; and `HLVA_centered` = 2.19.
+
+- Notice that the steepness of the slope of the `FACTOR3_centered` effect decreases (the slope gets less steep) from `HLVA_centered` = -2.19 to `HLVA_centered` = 2.19.
+- This tells us that the interaction (though not significant) operates so that the effect of reading strategy tends to be smaller for people with higher levels of health literacy.
+
+- Returning to the fact that the coefficient estimate for the `FACTOR3_centered*HLVA_centered` is negative, we can now understand that it is negative because the interaction operates so that the slope of the `FACTOR3_centered` gets smaller as scores on `HLVA_centered` increase.
+:::
+
+Specify models to include interaction effects: interactions between a numeric predictor variable and a factor predictor variable
+
+Now consider: we aim to test or estimate the interactions between the effects of reading strategy (`FACTOR3`) and gender (`GENDER`).
+
+- We can vary the code to change the predictor variables but the structure otherwise stays the same: how should we do this?
+
+>**Q.29.** Can you identify what effects are shown in the model summary?
+
+::: {.callout-note icon=false collapse="true"}
+- A.29. We can see that now the summary gives us estimates for the effects of:
+
+- `FACTOR3_centered` -- this is the effect of reading strategy (`FACTOR3`) when `GENDER` level is `Female`
+- `GENDERMale` -- this is the effect of `GENDER` when `FACTOR3_centered` is 0.
+
+Note that the effect of `GENDER` is the estimated difference in outcome when `GENDER` level is `Female` (not shown, treated as the baseline) compared to when `GENDER` level is `Male`.
+
+- `FACTOR3_centered*GENDER` -- this is the interaction, and reflects the change in the effect of `FACTOR3_centered` on outcome `mean.acc`, given different values of `GENDER`, here, when `GENDER` is `Male` instead of `Female`.
+:::
+
+- It helps to plot the effects estimates, given the model.
+
+We can do this in a two-step sequence, similar to the sequence we trialled through weeks 17 and 18:
+
+1. First fit the model
+2. Second, use the model information to plot the predictions, given the effects
+
+>**Q.30.** Can you identify how the effects of reading strategy (`FACTOR3`) and gender (`GENDER`) interact, given the model results summary and this plot?
+
+::: {.callout-note icon=false collapse="true"}
+- A.30. The plot, and the estimate for the interaction `FACTOR3_centered:GENDERMale`, together show that the coefficient for the effect of reading strategy (`FACTOR3_centered`) is slightly larger (the slope is slightly steeper) when `GENDER` is `Male` instead of `Female.
+
+- Notice that, for this sample, the interaction is not significant, suggesting that there is no difference between genders in the relative effectiveness of reading strategy.
 :::
 
 ## Online Q&A {#sec-wk19-lab-Q-and-A}
 
 You will find, below, a link to the video recording of the Week 19 online Q&A after it has been completed.
 
-```{=html}
-<iframe src="https://livelancsac-my.sharepoint.com/personal/shawej1_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=85fcf27d-0a64-4d89-bf5b-250d3b42bc08&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="PSYC122 Online Q&A Week 11-14 & 16 -19-20250313_140242-Meeting Recording.mp4"></iframe>
-```
+<!-- ```{=html} -->
+<!-- <iframe src="https://livelancsac-my.sharepoint.com/personal/shawej1_lancaster_ac_uk/_layouts/15/embed.aspx?UniqueId=85fcf27d-0a64-4d89-bf5b-250d3b42bc08&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="PSYC122 Online Q&A Week 11-14 & 16 -19-20250313_140242-Meeting Recording.mp4"></iframe> -->
+<!-- ``` -->
+
