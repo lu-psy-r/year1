@@ -285,7 +285,7 @@ If you can't upload these files to the server -- this affects some students -- y
 Get the `all.data.csv` data:
 
 ```{r eval=FALSE}
-download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week19/all.data.csv?raw=true", destfile = "all.data.csv")
+download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week18/study-one-general-participants.csv?raw=true", destfile = "all.data.csv")
 ```
 ::: 
 
