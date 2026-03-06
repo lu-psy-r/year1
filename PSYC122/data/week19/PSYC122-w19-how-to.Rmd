@@ -1,0 +1,719 @@
+---
+title: "PSYC122-w19-how-to"
+author: Rob Davies
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Introduction
+
+
+In Week 19, we aim to *further develop* skills in working with the linear model.
+
+We do this to learn how to answer research questions like:
+
+1. What person attributes predict success in understanding?
+2. Can people accurately evaluate whether they correctly understand written 
+health information?
+
+In this class, what is new is our focus on critically evaluating the ways in which people, effects or results can vary using *interaction* analyses.
+
+- This work simulates the kinds of interaction analyses that psychologists must often do in professional research.
+
+## Naming things
+
+I will format dataset names like this: 
+
+- `all.data.csv`
+
+I will also format variable (data column) names like this: `variable` 
+
+I will also format value or other data object (e.g. cell value) names like this: `all.data`
+
+I will format functions and library names like this: e.g. function `ggplot()` or e.g. library `{tidyverse}`.
+
+## The data we will be using
+
+In this how-to guide, we use data from:
+
+(1.) two 2020 studies of the response of adults from a UK national sample to written health information
+
+- `study-one-general-participants.csv`
+- `study-two-general-participants.csv`
+
+(2.) along with data recently collected from PSYC122 students.
+
+These data have been joined together to create a dataset of over 400 observations. This is because it often requires a lot of evidence to be able to draw precise or accurate conclusions about potential interaction effects.
+
+
+# Answers
+
+
+## Step 1: Set-up
+
+
+To begin, we set up our environment in R.
+
+
+### Task 1 -- Run code to empty the R environment
+
+```{r}
+rm(list=ls())                            
+```                          
+
+
+### Task 2 -- Run code to load relevant libraries
+
+```{r}
+library("ggeffects")
+library("tidyverse")
+```
+
+
+## Step 2: Load the data
+
+
+### Task 3 -- Read in the data file we will be using
+
+The data file is called:
+
+- `all-data.csv`
+
+Use the `read_csv()` function to read the data file into R:
+
+```{r}
+all.data <- read_csv("all.data.csv")  
+```
+
+
+### Task 4 -- Inspect the data file
+
+Use the `summary()` function to take a look at the dataset.
+
+```{r}
+summary(all.data)
+```
+
+Notice that we conducted a series of studies using the same online survey methods.
+
+- Our data include the responses made by *PSYC122* students.
+
+
+## Step 3: Work with different kinds of variables
+
+
+It is an important skill in psychological data analysis to be able to: 
+
+(1.) identify the different kinds of data variables we are working with;
+(2.) adapt our methods depending on differences in kind (variable `Class` or type).
+
+We learn about these skills, next, in exercises that combine some revision with
+some new moves.
+
+
+## Revise: consolidate what you know
+
+
+### Task 5 -- Use summaries or plots to examine variables
+
+
+- Q.1. What is the mean of the `AGE` variable in the dataset?
+- A.1. You can use the `summary()` function to calculate that the mean `AGE` is 32.85
+
+- Q.2. Draw a histogram of the age distribution.
+- A.2. You can write the code as you have been shown to do previously (e.g., in week 16):
+
+```{r}
+ggplot(data = all.data, aes(x = AGE)) + 
+  geom_histogram(binwidth = 1) +
+  theme_bw() +
+  labs(x = "Age (years)", y = "frequency count")
+```
+
+- Q.3. Examine the age distribution: what does it tell you about the ages of the participants in the sample?
+- A.3. The histogram shows that most participants are around 20 years in age but
+there is a "long tail" of small numbers of older participants.
+
+
+## Extend: make some new moves
+
+
+We can tell from the summary and the distribution that the `AGE` variable consists
+of numbers (participant ages in years). 
+
+Another way to identify what kind of variable we have is by using a check question:
+
+```{r}
+is.factor(all.data$AGE)
+is.numeric(all.data$AGE)
+```
+
+The `is._()` family of functions act like identity checks: what is this variable? 
+These functions work like questions with TRUE or FALSE answers.
+
+- Is this variable a factor? [TRUE or FALSE] 
+- Is this variable numeric? [TRUE or FALSE]
+
+
+## Revise: consolidate what you know
+
+
+### Task 6 -- Identify (and change) what kind of variable -- numeric or factor -- a variable is
+
+#### Hint: Task 6 -- The `is._()` functions are available to ask what kind a variable is
+#### Hint: Task 6 -- The `as._()` functions can be used to change variable types
+
+- Q.4. What kind of variable is `EDUCATION`?
+- A.4. Use the same functions but change the variable name:
+
+```{r}
+is.factor(all.data$EDUCATION)
+is.numeric(all.data$EDUCATION)
+```
+
+- Q.5. What do the `is._()` functions tell us?
+- A.5. The function calls tell us that `EDUCATION` is not a factor and is not numeric.
+
+- Q.6. If you look at the `summary()` results, what does it tell you the `Class` of `EDUCATION` is?
+- A.6. The summary shows that `EDUCATION` is identified as `Class: character`. 
+
+You can check this by doing the `is._()` test again.
+
+```{r}
+is.character(all.data$EDUCATION)
+```
+
+- Q.7. How do you change the class or type of the variable `EDUCATION`? Change the variable's type (`Class`) into a factor.
+- A.7. The `as._()` functions can be used to change variable type, as you have done
+previously (e.g., in week 16).
+
+```{r}
+all.data$EDUCATION <- as.factor(all.data$EDUCATION)
+```
+
+- Q.8. What does a `summary()` tell us about `EDUCATION`?
+
+```{r}
+summary(all.data)
+```
+
+- A.8. The summary will show how many different participants report themselves
+as belonging to one of the different `EDUCATION` level groups in the corresponding 
+survey question.
+
+You should see counts of the numbers of people in different `EDUCATION` level 
+groups in the total survey sample:
+
+EDUCATION
+Further:224
+Higher :254
+
+We can see that 224 participants reported in the survey that they had attained
+a `Further` level of education (corresponding to A-level or Sixth Form).
+
+254 participants reported a `Higher` level of education (corresponding to
+university level).
+
+
+## Step 4: Now draw plots to examine associations between variables and to visualize interactions
+
+
+Here, we are going to build on previous work to use plots to:
+
+(1.) Examine the associations between pairs of variables, an outcome and a predictor
+(2.) Examine how the association between two variables can be different for
+different levels of a third variable
+
+Scenario (2.) comes up if we are thinking about or working with *interaction* effects.
+
+
+### Consolidation: practice to strengthen skills
+
+
+### Task 7 -- Create a scatterplot to examine the association between two numeric variables 
+
+#### Hint: Task 7 -- We are working with `geom_point()` and you need x and y aesthetic mappings.
+
+Run a chunk of code to make the plot.
+
+```{r}
+ggplot(data = all.data, aes(x = HLVA, y = mean.acc)) +
+  geom_point() +
+  theme_bw() +
+  labs(y = "Accuracy of understanding (mean.acc)", 
+       x = "Health literacy (HLVA)") +
+  xlim(0, 16) + ylim(0, 1)
+```
+
+This plot shows:
+
+- the possible association between x-axis variable `HLVA` and y-axis 
+variable `mean.acc`.
+
+The plot code moves through the following steps:  
+
+1. `ggplot(...)` make a plot;
+2. `ggplot(data = all.data, ...)` with the `all.data` dataset;
+3. `ggplot(...aes(x = HLVA, y = mean.acc))` using two aesthetic mappings
+
+- `x = HLVA` map `HLVA` values to x-axis (horizontal, left to right) 
+positions;
+- `y = mean.acc` map `mean.acc` values to y-axis (vertical, bottom to top) 
+positions;
+
+4. `geom_point()` show the mappings as points.
+5. `theme_bw()` changes the theme to a white background.
+6. `labs(y = "Accuracy of understanding (mean.acc)", x = "Health literacy (HLVA)")` changes axis labels.
+7. `xlim(0, 6) + ylim(0, 1)` changes axis limits.
+
+
+#### Questions: Task 7
+
+- Q.9. What do you notice about the distribution of `mean.acc` scores at
+increasing values of health literacy (`HLVA`) scores?
+- A.9. The scatterplot shows that, for increasing health literacy (`HLVA`) scores,
+there is an associated rise in accuracy of understanding (`mean.acc`) scores.
+
+
+### Introduce: make some new moves
+
+
+In the next sequence of exercises, we are going to take the `all.data` dataset and split it into parts (sub-sets) in different ways.
+
+- We split the dataset vertically, into different sets of rows or observations.
+
+
+#### Why are we learning how to do this?
+  
+The capacity to do this kind of split-analyse operation is *extremely* useful.
+
+We are going to do this so that we can examine how the effects of interest to us
+(here, associations) can vary between different groups of people.
+
+- Remember, observations about different people are on different rows in `all.data`.
+
+- We are going to focus on an association between two column variables (`mean.acc`, `HLVA`).
+- We are going to identify different groups (sub-sets) of observations using values on a third variable.
+
+
+### Task 8 -- Create a scatterplot to examine the association between two numeric variables, showing how the association is different for different values of a third variable
+
+#### Hint: Task 8 -- We are working with `geom_point()` again.
+
+
+#### Hint: Task 8 -- We can show how the association between two variables (`mean.acc`, `HLVA`) is different for different values of a third, categorical (factor), variable (`EDUCATION`) by splitting the plot so that we see the association for different levels of `EDUCATION`.
+
+Here, we are splitting the dataset into:
+
+- observation data from people with just `EDUCATION` level `Further`
+- observation data from people with just `EDUCATION` level `Higher`
+
+and we are then producing a different scatterplot for each sub-set of data produced by the split.
+
+Run the following chunk of code to make the plot.
+
+```{r}
+ggplot(data = all.data, aes(x = HLVA, y = mean.acc)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  theme_bw() +
+  labs(y = "Accuracy of understanding (mean.acc)", 
+       x = "Health literacy (HLVA)") +
+  xlim(0, 16) + ylim(0, 1) +
+  facet_wrap(~ EDUCATION)
+```
+
+This plot shows:
+
+- the possible association between x-axis variable `HLVA` and y-axis 
+variable `mean.acc`
+- for different groups of people -- people with `Further` or people with `Higher` levels of `EDUCATION`.
+
+The plot code moves through steps we have seen before. What is new here is this bit:
+
+`facet_wrap(~ EDUCATION)`
+
+The function `facet_wrap()` splits the dataset into sub-sets (different parts): different sets of rows, where different sets are defined according to different values of the variable identified inside the brackets `(~ EDUCATION)`.
+
+Here, we are asking for different scatterplots for the dataset split by whether
+participants are coded as people with `Further` or people with `Higher` levels of `EDUCATION`.
+
+You can see a general guide to the function here:
+
+<https://ggplot2.tidyverse.org/reference/facet_wrap.html>
+
+
+#### Questions: Task 8
+
+- Q.10. What do you notice about the distribution of `mean.acc` scores at
+increasing values of health literacy (`HLVA`) scores, for different sub-sets of the data: for people with `Further` compared to people with `Higher` levels of `EDUCATION`?
+- A.10. You can see that the association between `mean.acc` and `HLVA` scores appears to be similar for different levels of education: the distribution of points is different but the shape is similar overall, and the trend line representing the association between `mean.acc` and `HLVA` looks similar too.
+
+
+#### Hint: Task 8 -- We can show how the association between two variables (`mean.acc`, `HLVA`) is different for different values of a third numeric variable (`SHIPLEY`) by splitting the dataset
+
+Here, we are first creating a new variable to code for (distinguish between) different sub-sets of observations (different rows in the dataset) based on `SHIPLEY` scores, and then second drawing different plots based on different subsets.
+
+We do this in two steps, as follows.
+
+First, run a chunk of code to divide (`cut`) the dataset into parts:
+
+```{r}
+all.data$SHIPLEY_splits <- cut_number(all.data$SHIPLEY, 3)
+```
+
+The code works bit-by-bit like this:
+
+1. `all.data$SHIPLEY_splits <-` create a new variable, `SHIPLEY_splits` and add it to the dataset `all.data` given the work done by the bit of code on the right of the arrow `<-`.
+
+On the right of the arrow `<-` ...
+
+2. `cut_number(all.data$SHIPLEY, 3)` uses the `cut_number(...)` to divide the dataset observations into three sets based on the values in the `all.data$SHIPLEY` variable named inside the brackets.
+
+The function works by ordering all the observations (the rows) in the dataset according to the values in the named variable `all.data$SHIPLEY`, then splitting the dataset (here, into three sub-sets) based on values in that named variable.
+
+- Given this code, we are going to get three sub-sets of the data, observations corresponding to (1.) low (2.) mid or (3.) high `SHIPLEY` values.
+- We split the data into data about people with:
+
+(1.) low `SHIPLEY` values, scores between 19-33 on the `SHIPLEY` test;
+(2.) mid `SHIPLEY` values, scores between 33-37 on the `SHIPLEY` test;
+(3.) high `SHIPLEY` values, scores between 37-40 on the `SHIPLEY` test.
+
+You can see a guide to the function here:
+
+<https://ggplot2.tidyverse.org/reference/cut_interval.html>
+
+Note that *where* we split the data (what ranges of scores we use) will depend on the sample.
+
+Second, we draw a plot to examine if the association between two variables (`mean.acc`, `HLVA`) is different for different values of a third variable (`SHIPLEY`) by splitting the data:
+
+```{r}
+ggplot(data = all.data, aes(x = HLVA, y = mean.acc)) +
+  geom_point() +
+  geom_smooth(method = 'lm') +
+  facet_wrap(~ SHIPLEY_splits, nrow = 1, labeller = label_both) +
+  labs(y = "Accuracy of understanding (mean.acc)", 
+       x = "Health literacy (HLVA)") +
+  theme_bw() 
+```
+
+The plot code moves through the scatterplot production steps we have seen before.  
+
+The bit that is new is here:
+
+`facet_wrap(~ SHIPLEY_splits, nrow = 1, labeller = label_both)` which is included to use the data split, constructed earlier.
+
+This addition allows us to show:
+
+- the nature of the association between two variables (`mean.acc`, `HLVA`) 
+- for different values of the third variable (`SHIPLEY`)
+- by splitting the data into three sub-sets according to `SHIPLEY` score (19-33 low, 33-37 mid, 37-40 high).
+
+#### Questions: Task 8
+
+- Q.11. What do you notice about the distribution of `mean.acc` scores at
+increasing values of health literacy (`HLVA`) scores, for different sub-sets of the data: for (1.) low (2.) mid (3.) high `SHIPLEY` values?
+- A.11. You can see that the association between `mean.acc` and `HLVA` scores appears to vary (the slope differs) given different values of the third variable (`SHIPLEY`).
+
+- Q.12. What do you think the values in the grey labels at the top of the facets (the plot panels) tell us?
+- A.12. The values tell us what values (e.g., `19,33`) are used to identify the range of `SHIPLEY` scores that have been used to define the sub-set of observations for which the plot below shows the association between `mean.acc` and `HLVA` scores.
+
+
+## Step 5: Use linear models with multiple predictors, to estimate the effects of factors as well as numeric variables
+
+
+### Consolidation: practice to strengthen skills
+
+
+As we saw in weeks 17 and 18, we can use linear models to predict outcome variables. 
+
+- Linear models can include numeric variables (like `HLVA`) as predictors. 
+- Linear models can also include categorical variables or factors (like `EDUCATION`) as predictors.
+
+
+### Task 9 -- First, fit a linear model including just numeric variables as predictors
+
+#### Hint: Task 9 -- We use the `lm()` function to fit a model with `mean.acc` as the outcome and `HLVA` and `SHIPLEY` as predictors.
+
+Note that in this model:
+
+- `HLVA` is a measure of health literacy -- numeric scores correspond to a test of knowledge of health-related words
+- `SHIPLEY` is a measure of vocabulary knowledge -- numeric scores correspond to a test of knowledge of vocabulary
+
+```{r}
+model <- lm(mean.acc ~ HLVA + SHIPLEY, 
+            data = all.data)
+
+summary(model)
+```
+
+If you look at the model summary you can answer the following questions.
+
+- Q.13. What is the estimate for the coefficient of the effect of the predictor, `SHIPLEY` (vocabulary knowledge)?
+- A.13. 0.005471 
+
+- Q.14. Is the effect significant?
+- A.14. It is significant. Because `Pr(>|t|)` equals `1.53e-05` for the `Estimate` of the effect of `SHIPLEY` (vocabulary knowledge): this means that  p < .05, and so the effect is significant.
+
+#### Hint: Task 9 -- Do you know how to intepret numbers like `1.53e-05`? If you are unsure you can find out about scientific notation here:
+
+<https://www.calculatorsoup.com/calculators/math/scientific-notation-converter.php>
+
+- Q.15. What are the values for t and p for the significance test for the 
+estimated coefficient of the effect of `HLVA` (health literacy)?
+- A.15. t = 7.488, p = 3.43e-13
+
+- Q.16. What do you conclude are the effects of the `SHIPLEY` (vocabulary knowledge) and `HLVA` (health literacy) variables, as predictors of outcome `mean.acc` (accuracy of understanding of health information)?
+- A.16. The model slope estimates suggests that both predictors are significant, and that as both `SHIPLEY` (vocabulary knowledge) and `HLVA` (health literacy) increase, so `mean.acc` scores are predicted to increase also.
+
+
+### Task 10 -- Second, fit a linear model including a numeric variable and a factor as predictors
+
+#### Hint: Task 10 -- We use the `lm()` function to fit a model with `mean.acc` as the outcome and `FACTOR3` and `EDUCATION` as predictors.
+
+Note that in this model:
+
+- `FACTOR3` is a measure of reading strategy -- numeric scores correspond to a test of strategy awareness
+- `EDUCATION` is a measure of education level -- factor levels correspond to self-reported education
+
+```{r}
+model <- lm(mean.acc ~ FACTOR3 + EDUCATION, 
+            data = all.data)
+
+summary(model)
+```
+
+If you look at the model summary you can answer the following questions.
+
+- Q.17. What is the estimate for the coefficient of the effect of the predictor, `FACTOR3` (strategy)?
+- A.17. 0.0040226
+
+- Q.18. Is the effect significant?
+- A.18. It is significant. Because `Pr(>|t|)` equals `1.55e-06` for the `Estimate` of the effect of `FACTOR3` (strategy): this means that  p < .05, and so the effect is significant.
+
+- Q.19. What are the values for t and p for the significance test for the 
+estimated coefficient of the effect of `EDUCATION` (level, `Further` compared to `Higher`)?
+- A.19. t = .475, p = .635
+
+- Q.20. Is the effect of `EDUCATION` significant?
+- A.20. It is not significant. Because `Pr(>|t|)` equals `0.635` for the `Estimate` of the effect of `EDUCATION` level this means that  p > .05, and so the effect is not significant.
+
+#### Hint: Task 10 -- How do we know how to interpret estimates for the effects of factors? We discussed how R deals with factors in week 18, and discuss factors, and the effects of factors, in the week 19 lecture.
+
+- Q.21. How should we interpret the coefficient estimate for the effect of `EDUCATION`?
+- A.21. Though the effect is not significant, we can say that, on average, outcome `mean.acc` is 0.0053666 (slightly) higher for people with `Higher` (compared to `Further`) level of education.
+
+- Q.22. What do you conclude are the effects of the `FACTOR3` (strategy) and `EDUCATION` (level, `Further` compared to `Higher`) variables, as predictors of outcome `mean.acc` (accuracy of understanding of health information)?
+- A.22. The model slope estimates suggest that education level does not have a significant effect but that as `FACTOR3` (strategy) scores increase, so `mean.acc` scores are predicted to increase. 
+
+
+## Step 6: Use linear models with multiple predictors, including interaction effects
+
+
+### Introduce: make some new moves
+
+
+As we saw through Task 8, it is possible that:
+
+- the association between two variables (`mean.acc`, `HLVA`) can be different for different values of a third categorical (factor) variable (`EDUCATION`);
+- the association between two variables (`mean.acc`, `HLVA`) can be different for different values of a third variable (`SHIPLEY`)
+
+While we can examine these possibilities using visualizations, we often need to conduct statistical analyses to test *interaction effects*, or the ways in which the association between two variables can be different for different levels of a third variable.
+
+We can extend linear models to include terms that allow us to test or to estimate *interaction effects*.
+
+
+### Task 11 -- Center numeric variables before using them as predictors
+
+### Hint: Task 11
+
+When we include numeric variables (e.g., `HLVA, SHIPLEY`) in linear models, it can cause problems of interpretation or of estimation if we include the variables as they first come to us in datasets (as *raw* variables).
+
+- It often helps our analyses to *center* variables on their means.
+- Centering a variable means calculating its mean, and then subtracting that mean from every value in the variable column.
+
+For example, to center values of the `FACTOR3` variable, we create a new column `data$FACTOR3_centered` by first calculating the mean of the `data$FACTOR3` variable, and then subtracting that mean from every row value in `data$FACTOR3`.
+
+```{r}
+all.data$FACTOR3_centered <- all.data$FACTOR3 - mean(all.data$FACTOR3, na.rm = TRUE)
+```
+
+- Q.23. Can you check what is going on when we center variables?
+- Q.23. Hint: You can see what is happening when you run this code by first calculating the mean for `FACTOR3`
+
+```{r}
+mean(all.data$FACTOR3, na.rm = TRUE)
+```
+
+then looking at column values in the new `FACTOR3_centered` column, compared to the original `FACTOR3` column:
+
+```{r}
+all.data %>%
+  select(FACTOR3_centered, FACTOR3) %>%
+  print(n = 20)
+```
+
+What is the difference between the `FACTOR3` and `FACTOR3_centered` columns?
+
+- A.23. You can see that every value in the `FACTOR3_centered` column equals the value, on the same row, in the `FACTOR3` column, minus the mean for `FACTOR3`.
+
+- Q.24. Can you center the variable `HLVA`?
+- A.24. You can use the same code to center `HLVA`:
+
+```{r}
+all.data$HLVA_centered <- all.data$HLVA - mean(all.data$HLVA, na.rm = TRUE)
+```
+
+- Q.25. Can you center the variable `SHIPLEY`?
+- A.25. You can use the same code to center `SHIPLEY`:
+
+```{r}
+all.data$SHIPLEY_centered <- all.data$SHIPLEY - mean(all.data$SHIPLEY, na.rm = TRUE)
+```
+
+
+#### Why are we learning how to do this?
+
+It is common in data analysis to want to transform variables before using them in analyses.
+
+- Here, we are transforming predictor variables by centering them on their mean values.
+
+The practical reason for doing this transformation now is because if we use uncentered (raw) numeric variables as predictors in linear models that involve interactions the model can find it difficult to distinguish between the effects of those predictors and the effect of their interaction.
+
+
+### Task 12 -- Specify models to include interaction effects: interactions between two numeric predictor variables
+
+### Hint: Task 12 
+
+We use `lm()` to specify models, as we have been doing. 
+
+- What changes is that we now use the `*` operator in our model code to specify interaction effects.
+
+For example, let's suppose that we want to examine the possibility that the effect of health literacy (`HLVA`) on accuracy understanding (`mean.acc`) is different for different values of vocabulary knowledge (`SHIPLEY`).
+
+- Here, we are considering the possibility that the association between health literacy (`HLVA`) and accuracy of understanding (`mean.acc`) *varies*.
+- We are considering the possibility that the the association between health literacy (`HLVA`) and accuracy of understanding (`mean.acc`) is different for different groups of people.
+- We are considering the possibility that the effect of health literacy (`HLVA`) on accuracy of understanding (`mean.acc`) is different for people who differ, also, in vocabulary knowledge (`SHIPLEY`).
+
+In examining the possibility that the effect of health literacy (`HLVA`) on accuracy of understanding (`mean.acc`) is different for different values of vocabulary knowledge (`SHIPLEY`), we are examining a possible *interaction* between the effects of health literacy (`HLVA`) and vocabulary knowledge (`SHIPLEY`).
+
+
+**Let's go through this step-by-step.**
+
+
+First, consider: if we ignored the possibility of an interaction, we would fit a model with just the predictors: health literacy (`HLVA`) and vocabulary knowledge (`SHIPLEY`).
+
+We can fit the same model that we fit before (for Task 9).
+
+- We vary the code a little, by using the centered variables we have just created:
+
+```{r}
+model <- lm(mean.acc ~ HLVA_centered + SHIPLEY_centered, 
+            data = all.data)
+
+summary(model)
+```
+
+- Q.26. Can you compare the summary of results for this model with the model, using the same (but not centered) predictors, that you fitted for Task 9 -- compare the estimates, what do you see?
+- A.26. If we compare the results of the models we can see that the estimates, t-test values and probability values are the same for `HLVA` compared to `HLVA_centered` or for `SHIPLEY` compared to `SHIPLEY_centered`. 
+
+- This shows that centering predictors only changes the scaling of the predictor variables so that their centers are 0.
+
+
+Second, now consider: we aim to test or estimate the interactions between the effects of health literacy (`HLVA_centered`) and vocabulary knowledge (`SHIPLEY_centered`).
+
+- We vary the code a little, again, this time by separating the predictors by `*` not by `+`:
+
+```{r}
+model <- lm(mean.acc ~ HLVA_centered*SHIPLEY_centered, 
+            data = all.data)
+
+summary(model)
+```
+
+- Q.27. Can you compare the summary of results for this model with the results for the previous model (which uses the same predictors but without an interaction)?
+
+- What do you see?
+
+- A.27. If we compare the results of the models we can see that now the summary gives us estimates for the effects of:
+
+- `HLVA_centered` -- this is the effect of `HLVA_centered` when `SHIPLEY_centered` is 0
+- `SHIPLEY_centered` -- this is the effect of `SHIPLEY_centered` when `HLVA_centered` is 0
+- `HLVA_centered:SHIPLEY_centered` -- this is the interaction, and reflects the change in the effect of `HLVA_centered` on outcome `mean.acc`, given different values of `SHIPLEY_centered`.
+
+- Notice that the effect of the interaction is not significant, suggesting, for this sample, that the effects of these predictor variables are at least approximately independent of each other. 
+
+The `*` symbol (the `*` operator) is used here to code for a model including the effects of the two variables separated by the symbol, here, as well as the effect of the interaction between these two variables.
+
+
+### Task 13 -- Specify models to include interaction effects: interactions between a numeric predictor variable and a factor predictor variable
+
+### Hint: Task 13 -- We follow the same approach that we followed through Task 12.
+
+Now consider: we aim to test or estimate the interactions between the effects of reading strategy (`FACTOR3`) and education level (`EDUCATION`).
+
+- We vary the code to change the predictor variables but the structure otherwise stays the same:
+
+```{r}
+model <- lm(mean.acc ~ FACTOR3_centered*EDUCATION, 
+            data = all.data)
+
+summary(model)
+```
+
+- Q.28. Can you identify what effects are shown in the model summary?
+- A.28. We can see that now the summary gives us estimates for the effects of:
+
+- `FACTOR3_centered` -- this is the effect of reading strategy (`FACTOR3`) when `EDUCATION` level is `Further`
+- `EDUCATIONHigher` -- this is the effect of `EDUCATION` when `FACTOR3_centered` is 0. 
+
+Note that the effect of `EDUCATION` is the estimated difference in outcome when `EDUCATION` level is `Further` (not shown, treated as the baseline) compared to when `EDUCATION` level is `Higher`.
+
+- `FACTOR3_centered:EDUCATIONHigher` -- this is the interaction, and reflects the change in the effect of `FACTOR3_centered` on outcome `mean.acc`, given different values of `EDUCATION`, here, when `EDUCATION` is `Higher` instead of `Further`.
+
+
+#### What are we learning here?
+
+Remember from week 18:
+
+Categorical variables or **factors** and reference levels.
+
+- If you have a categorical variable like `EDUCATION` then when you use it in
+an analysis, R will look at the different categories (called `levels) e.g., here,
+`Higher, Further` and it will pick one
+level to be the *reference* or baseline level. 
+- The *reference* is the the level against which other levels are compared. 
+- Here, the reference level is `Further` (education) simply because, unless
+you tell R otherwise, it picks the level with a category name that begins
+earlier in the alphabet as the reference level.
+
+
+#### How do we interpret interactions?
+
+- It helps to plot the effects estimates, given the model.
+
+We can do this in a two-step sequence, similar to the sequence we trialled through weeks 17 and 18:
+
+1. First fit the model
+2. Second, use the model information to plot the predictions, given the effects
+
+```{r}
+# -- first fit the model
+model <- lm(mean.acc ~ FACTOR3_centered*EDUCATION, 
+            data = all.data)
+
+# -- make plot
+plot_model(model, type = "pred", 
+           terms = c("FACTOR3_centered", "EDUCATION")) +
+  theme_bw() +
+  ylim(0, 1)
+```
+
+- Q.29. Can you identify how the effects of reading strategy (`FACTOR3`) and education level (`EDUCATION`) interact, given the model results summary and this plot?
+- A.29. The plot, and the estimate for the interaction `FACTOR3_centered:EDUCATIONHigher`, together show that the coefficient for the effect of reading strategy (`FACTOR3_centered`) is larger (the slope is steeper) when `EDUCATION` is `Higher` instead of `Further`.
+
+- Notice that, for this sample, the interaction is not significant, suggesting that there is no difference between education levels in the relative effectiveness of reading strategy.
