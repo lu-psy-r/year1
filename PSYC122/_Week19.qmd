@@ -125,16 +125,12 @@ You can view video recordings of the lectures using Panopto, by clicking on the 
 ```
 
 ::: callout-tip
-The slides presented in the videos can be downloaded either as a web page or as a Word document.
+The slides presented in the videos can be downloaded as a web page.
 :::
 
-- [The slides](data/week19/122-linear-model-perspectives.html) exactly as presented (21 MB).
-- [The slides](data/week19/122-linear-model-perspectives-printable-edit.docx) converted to a Word .docx (11 MB). 
+- [The slides](data/week19/122-linear-model-interactions.html) exactly as presented (13 MB).
 
 You can download the web page `.html` file and click on it to open it in any browser (e.g., Chrome, Edge or Safari). The slide images are high quality and there are a lot of them, so the file is quite big; it may take a few seconds to download.
-
-You can download the `.docx` file and click on it to open it as a Word document that you can then edit. 
-Converting the slides to a `.docx` distorts some images but the benefit of the conversion is that it makes it easier for you to add your notes.
 
 ::: callout-tip
 To work with our lecture recordings:
