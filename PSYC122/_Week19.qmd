@@ -16,6 +16,8 @@ order: 9
 #| warning: false
 #| echo: false
 library("ggeffects")
+library("kableExtra")
+library("sjPlot")
 library("tidyverse")
 ```
 
@@ -103,25 +105,33 @@ You can view video recordings of the lectures using Panopto, by clicking on the 
 1. **Introduction** (9 minutes): Overview of the classes; introduction to key ideas -- the real challenge in psychological science (people vary, effects vary, results vary) -- variation, uncertainty, and working with the limits of samples.
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=00bbc559-eb90-4766-a209-b40100c7ac33&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC122-lm-interactions-1-of-4"></iframe>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=00bbc559-eb90-4766-a209-b40100c7ac33&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC122-lm-interactions-1-of-4"></iframe>
+</div>
 ```
 
 2. **The Clearly Understood project -- questions and analyses** (11 minutes): Critical thinking -- what effects can vary, how can effects vary, theoretical reasons motivating why effects might vary.
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=2aabd1ed-c276-454b-bef8-b40100cc98c9&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC122-lm-interactions-2-of-4"></iframe>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=2aabd1ed-c276-454b-bef8-b40100cc98c9&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC122-lm-interactions-2-of-4"></iframe>
+</div>
 ```
 
 3. **Coding models with interactions** (19 minutes): Revision on linear models as methods to predict outcomes; coding linear models with multiple predictors; models that do or do not include interactions; identifying the key information in the results from models including interactions; and making sense of what we see.
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=4767b039-415a-4878-b048-b40100d74247&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC122-lm-interactions-3-of-4"></iframe>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=4767b039-415a-4878-b048-b40100d74247&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC122-lm-interactions-3-of-4"></iframe>
+</div>
 ```
 
 4. **Interactions between numeric variables and factors** (13 minutes): Working with factors, the difference between numeric variables and factors, as predictors in linear models; the effects of factors in linear models; coding, plotting, interpreting and evaluating the effects of interactions between numeric variables and factors. Summary of key lessons.
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=8531b025-7f1e-4ec3-9f67-b40100dd88fd&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC122-lm-interactions-4-of-4"></iframe>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=8531b025-7f1e-4ec3-9f67-b40100dd88fd&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC122-lm-interactions-4-of-4"></iframe>
+</div>
 ```
 
 ::: callout-tip
@@ -459,6 +469,7 @@ Use the `library()` function to make these libraries available to you.
 ## Code
 ```{r}
 library("ggeffects")
+library("sjPlot")
 library("tidyverse")
 ```
 :::
@@ -1053,9 +1064,14 @@ We can fit the same model that we fit before (for Task 9).
 :::{.callout-tip collapse="true"}
 ## Code
 ```{r}
+# -- center the variable if it has not been already
+all.data$FACTOR3_centered <- all.data$FACTOR3 - mean(all.data$FACTOR3, na.rm = TRUE)
+
+# -- fit the model
 model <- lm(mean.acc ~ FACTOR3_centered + HLVA_centered, 
             data = all.data)
 
+# -- get the model summary
 summary(model)
 ```
 :::
