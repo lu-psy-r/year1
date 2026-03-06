@@ -108,35 +108,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="https://lu-psy-r.github.io/essentials/index_24.css">
 </head>
@@ -367,39 +338,43 @@ window.Quarto = {
   </ul></li>
   <li><a href="#step-2-load-the-data" id="toc-step-2-load-the-data" class="nav-link" data-scroll-target="#step-2-load-the-data">Step 2: Load the data</a>
   <ul class="collapse">
-  <li><a href="#task-3-read-in-the-data-files-we-will-be-using" id="toc-task-3-read-in-the-data-files-we-will-be-using" class="nav-link" data-scroll-target="#task-3-read-in-the-data-files-we-will-be-using">Task 3 – Read in the data files we will be using</a></li>
+  <li><a href="#task-3-read-in-the-data-file-we-will-be-using" id="toc-task-3-read-in-the-data-file-we-will-be-using" class="nav-link" data-scroll-target="#task-3-read-in-the-data-file-we-will-be-using">Task 3 – Read in the data file we will be using</a></li>
   <li><a href="#task-4-inspect-the-data-file" id="toc-task-4-inspect-the-data-file" class="nav-link" data-scroll-target="#task-4-inspect-the-data-file">Task 4 – Inspect the data file</a></li>
   </ul></li>
-  <li><a href="#step-3-compare-the-data-from-the-different-studies" id="toc-step-3-compare-the-data-from-the-different-studies" class="nav-link" data-scroll-target="#step-3-compare-the-data-from-the-different-studies">Step 3: Compare the data from the different studies</a>
+  <li><a href="#step-3-work-with-different-kinds-of-variables" id="toc-step-3-work-with-different-kinds-of-variables" class="nav-link" data-scroll-target="#step-3-work-with-different-kinds-of-variables">Step 3: Work with different kinds of variables</a></li>
+  <li><a href="#revise-consolidate-what-you-know" id="toc-revise-consolidate-what-you-know" class="nav-link" data-scroll-target="#revise-consolidate-what-you-know">Revise: consolidate what you know</a>
   <ul class="collapse">
-  <li><a href="#revise-practice-to-strengthen-skills" id="toc-revise-practice-to-strengthen-skills" class="nav-link" data-scroll-target="#revise-practice-to-strengthen-skills">Revise: practice to strengthen skills</a></li>
-  <li><a href="#task-5-compare-the-data-distributions-from-the-two-studies" id="toc-task-5-compare-the-data-distributions-from-the-two-studies" class="nav-link" data-scroll-target="#task-5-compare-the-data-distributions-from-the-two-studies">Task 5 – Compare the data distributions from the two studies</a></li>
+  <li><a href="#task-5-use-summaries-or-plots-to-examine-variables" id="toc-task-5-use-summaries-or-plots-to-examine-variables" class="nav-link" data-scroll-target="#task-5-use-summaries-or-plots-to-examine-variables">Task 5 – Use summaries or plots to examine variables</a></li>
+  </ul></li>
+  <li><a href="#extend-make-some-new-moves" id="toc-extend-make-some-new-moves" class="nav-link" data-scroll-target="#extend-make-some-new-moves">Extend: make some new moves</a></li>
+  <li><a href="#revise-consolidate-what-you-know-1" id="toc-revise-consolidate-what-you-know-1" class="nav-link" data-scroll-target="#revise-consolidate-what-you-know-1">Revise: consolidate what you know</a>
+  <ul class="collapse">
+  <li><a href="#task-6-identify-and-change-what-kind-of-variable-numeric-or-factor-a-variable-is" id="toc-task-6-identify-and-change-what-kind-of-variable-numeric-or-factor-a-variable-is" class="nav-link" data-scroll-target="#task-6-identify-and-change-what-kind-of-variable-numeric-or-factor-a-variable-is">Task 6 – Identify (and change) what kind of variable – numeric or factor – a variable is</a></li>
+  </ul></li>
+  <li><a href="#step-4-now-draw-plots-to-examine-associations-between-variables-and-to-visualize-interactions" id="toc-step-4-now-draw-plots-to-examine-associations-between-variables-and-to-visualize-interactions" class="nav-link" data-scroll-target="#step-4-now-draw-plots-to-examine-associations-between-variables-and-to-visualize-interactions">Step 4: Now draw plots to examine associations between variables and to visualize interactions</a>
+  <ul class="collapse">
+  <li><a href="#consolidation-practice-to-strengthen-skills" id="toc-consolidation-practice-to-strengthen-skills" class="nav-link" data-scroll-target="#consolidation-practice-to-strengthen-skills">Consolidation: practice to strengthen skills</a></li>
+  <li><a href="#task-7-create-a-scatterplot-to-examine-the-association-between-two-numeric-variables" id="toc-task-7-create-a-scatterplot-to-examine-the-association-between-two-numeric-variables" class="nav-link" data-scroll-target="#task-7-create-a-scatterplot-to-examine-the-association-between-two-numeric-variables">Task 7 – Create a scatterplot to examine the association between two numeric variables</a></li>
   <li><a href="#introduce-make-some-new-moves" id="toc-introduce-make-some-new-moves" class="nav-link" data-scroll-target="#introduce-make-some-new-moves">Introduce: make some new moves</a></li>
-  <li><a href="#task-6-create-grids-of-plots-to-make-the-comparison-easier-to-do" id="toc-task-6-create-grids-of-plots-to-make-the-comparison-easier-to-do" class="nav-link" data-scroll-target="#task-6-create-grids-of-plots-to-make-the-comparison-easier-to-do">Task 6 – Create grids of plots to make the comparison easier to do</a></li>
-  <li><a href="#hint-task-6-what-we-are-going-to-do-is-to-create-two-histograms-and-then-present-them-side-by-side-to-allow-easy-comparison-of-variable-distributions" id="toc-hint-task-6-what-we-are-going-to-do-is-to-create-two-histograms-and-then-present-them-side-by-side-to-allow-easy-comparison-of-variable-distributions" class="nav-link" data-scroll-target="#hint-task-6-what-we-are-going-to-do-is-to-create-two-histograms-and-then-present-them-side-by-side-to-allow-easy-comparison-of-variable-distributions">hint: Task 6 – What we are going to do is to create two histograms and then present them side by side to allow easy comparison of variable distributions</a></li>
-  <li><a href="#task-7-try-this-out-for-yourself-focusing-now-on-the-distribution-of-mean.self-scores-in-the-two-studies" id="toc-task-7-try-this-out-for-yourself-focusing-now-on-the-distribution-of-mean.self-scores-in-the-two-studies" class="nav-link" data-scroll-target="#task-7-try-this-out-for-yourself-focusing-now-on-the-distribution-of-mean.self-scores-in-the-two-studies">Task 7 – Try this out for yourself, focusing now on the distribution of <code>mean.self</code> scores in the two studies</a></li>
+  <li><a href="#task-8-create-a-scatterplot-to-examine-the-association-between-two-numeric-variables-showing-how-the-association-is-different-for-different-values-of-a-third-variable" id="toc-task-8-create-a-scatterplot-to-examine-the-association-between-two-numeric-variables-showing-how-the-association-is-different-for-different-values-of-a-third-variable" class="nav-link" data-scroll-target="#task-8-create-a-scatterplot-to-examine-the-association-between-two-numeric-variables-showing-how-the-association-is-different-for-different-values-of-a-third-variable">Task 8 – Create a scatterplot to examine the association between two numeric variables, showing how the association is different for different values of a third variable</a></li>
   </ul></li>
-  <li><a href="#step-4-now-use-scatterplots-and-correlation-to-examine-associations-between-variables" id="toc-step-4-now-use-scatterplots-and-correlation-to-examine-associations-between-variables" class="nav-link" data-scroll-target="#step-4-now-use-scatterplots-and-correlation-to-examine-associations-between-variables">Step 4: Now use scatterplots and correlation to examine associations between variables</a>
+  <li><a href="#step-5-use-linear-models-with-multiple-predictors-to-estimate-the-effects-of-factors-as-well-as-numeric-variables" id="toc-step-5-use-linear-models-with-multiple-predictors-to-estimate-the-effects-of-factors-as-well-as-numeric-variables" class="nav-link" data-scroll-target="#step-5-use-linear-models-with-multiple-predictors-to-estimate-the-effects-of-factors-as-well-as-numeric-variables">Step 5: Use linear models with multiple predictors, to estimate the effects of factors as well as numeric variables</a>
   <ul class="collapse">
-  <li><a href="#revise-practice-to-strengthen-skills-1" id="toc-revise-practice-to-strengthen-skills-1" class="nav-link" data-scroll-target="#revise-practice-to-strengthen-skills-1">Revise: practice to strengthen skills</a></li>
-  <li><a href="#task-8-draw-scatterplots-to-compare-the-potential-association-between-mean.acc-and-mean.self-in-both-study.one.gen-and-study.two.gen-datasets" id="toc-task-8-draw-scatterplots-to-compare-the-potential-association-between-mean.acc-and-mean.self-in-both-study.one.gen-and-study.two.gen-datasets" class="nav-link" data-scroll-target="#task-8-draw-scatterplots-to-compare-the-potential-association-between-mean.acc-and-mean.self-in-both-study.one.gen-and-study.two.gen-datasets">Task 8 – Draw scatterplots to compare the potential association between <code>mean.acc</code> and <code>mean.self</code> in both <code>study.one.gen</code> and <code>study.two.gen</code> datasets</a></li>
-  <li><a href="#hint-task-8-the-plotting-steps-are-explained-in-some-detail-in-psyc122-w17-how-to.rmd" id="toc-hint-task-8-the-plotting-steps-are-explained-in-some-detail-in-psyc122-w17-how-to.rmd" class="nav-link" data-scroll-target="#hint-task-8-the-plotting-steps-are-explained-in-some-detail-in-psyc122-w17-how-to.rmd">hint: Task 8 – The plotting steps are explained in some detail in <code>PSYC122-w17-how-to.Rmd</code></a></li>
-  <li><a href="#task-9-create-a-grid-of-plots-to-make-the-comparison-easier-to-do" id="toc-task-9-create-a-grid-of-plots-to-make-the-comparison-easier-to-do" class="nav-link" data-scroll-target="#task-9-create-a-grid-of-plots-to-make-the-comparison-easier-to-do">Task 9 – Create a grid of plots to make the comparison easier to do</a></li>
-  <li><a href="#hint-task-9-we-follow-the-same-steps-as-we-used-in-tasks-6-and-7-to-create-the-plots" id="toc-hint-task-9-we-follow-the-same-steps-as-we-used-in-tasks-6-and-7-to-create-the-plots" class="nav-link" data-scroll-target="#hint-task-9-we-follow-the-same-steps-as-we-used-in-tasks-6-and-7-to-create-the-plots">hint: Task 9 – We follow the same steps as we used in tasks 6 and 7 to create the plots</a></li>
-  <li><a href="#revise-practice-to-strengthen-skills-2" id="toc-revise-practice-to-strengthen-skills-2" class="nav-link" data-scroll-target="#revise-practice-to-strengthen-skills-2">Revise: practice to strengthen skills</a></li>
-  <li><a href="#task-10-can-you-estimate-the-association-between-mean.acc-and-mean.self-in-both-datasets" id="toc-task-10-can-you-estimate-the-association-between-mean.acc-and-mean.self-in-both-datasets" class="nav-link" data-scroll-target="#task-10-can-you-estimate-the-association-between-mean.acc-and-mean.self-in-both-datasets">Task 10 – Can you estimate the association between <code>mean.acc</code> and <code>mean.self</code> in both datasets?</a></li>
-  <li><a href="#hint-task-10-use-cor.test-as-you-have-been-shown-how-to-do-e.g.-in-2023-24-psyc122-w16-how-to.rmd" id="toc-hint-task-10-use-cor.test-as-you-have-been-shown-how-to-do-e.g.-in-2023-24-psyc122-w16-how-to.rmd" class="nav-link" data-scroll-target="#hint-task-10-use-cor.test-as-you-have-been-shown-how-to-do-e.g.-in-2023-24-psyc122-w16-how-to.rmd">hint: Task 10 – Use <code>cor.test()</code> as you have been shown how to do e.g.&nbsp;in <code>2023-24-PSYC122-w16-how-to.Rmd</code></a></li>
+  <li><a href="#consolidation-practice-to-strengthen-skills-1" id="toc-consolidation-practice-to-strengthen-skills-1" class="nav-link" data-scroll-target="#consolidation-practice-to-strengthen-skills-1">Consolidation: practice to strengthen skills</a></li>
+  <li><a href="#task-9-first-fit-a-linear-model-including-just-numeric-variables-as-predictors" id="toc-task-9-first-fit-a-linear-model-including-just-numeric-variables-as-predictors" class="nav-link" data-scroll-target="#task-9-first-fit-a-linear-model-including-just-numeric-variables-as-predictors">Task 9 – First, fit a linear model including just numeric variables as predictors</a></li>
+  <li><a href="#task-10-second-fit-a-linear-model-including-a-numeric-variable-and-a-factor-as-predictors" id="toc-task-10-second-fit-a-linear-model-including-a-numeric-variable-and-a-factor-as-predictors" class="nav-link" data-scroll-target="#task-10-second-fit-a-linear-model-including-a-numeric-variable-and-a-factor-as-predictors">Task 10 – Second, fit a linear model including a numeric variable and a factor as predictors</a></li>
   </ul></li>
-  <li><a href="#step-5-use-a-linear-model-to-to-answer-the-research-questions-multiple-predictors" id="toc-step-5-use-a-linear-model-to-to-answer-the-research-questions-multiple-predictors" class="nav-link" data-scroll-target="#step-5-use-a-linear-model-to-to-answer-the-research-questions-multiple-predictors">Step 5: Use a linear model to to answer the research questions – multiple predictors</a>
+  <li><a href="#step-6-use-linear-models-with-multiple-predictors-including-interaction-effects" id="toc-step-6-use-linear-models-with-multiple-predictors-including-interaction-effects" class="nav-link" data-scroll-target="#step-6-use-linear-models-with-multiple-predictors-including-interaction-effects">Step 6: Use linear models with multiple predictors, including interaction effects</a>
   <ul class="collapse">
-  <li><a href="#revise-practice-to-strengthen-skills-3" id="toc-revise-practice-to-strengthen-skills-3" class="nav-link" data-scroll-target="#revise-practice-to-strengthen-skills-3">Revise: practice to strengthen skills</a></li>
-  <li><a href="#task-11-examine-the-relation-between-outcome-mean-accuracy-mean.acc-and-multiple-predictors" id="toc-task-11-examine-the-relation-between-outcome-mean-accuracy-mean.acc-and-multiple-predictors" class="nav-link" data-scroll-target="#task-11-examine-the-relation-between-outcome-mean-accuracy-mean.acc-and-multiple-predictors">Task 11 – Examine the relation between outcome mean accuracy (<code>mean.acc</code>) and multiple predictors</a></li>
-  <li><a href="#hint-task-11-use-lm-as-you-have-done-before-see-e.g.-2023-24-psyc122-w18-how-to.r" id="toc-hint-task-11-use-lm-as-you-have-done-before-see-e.g.-2023-24-psyc122-w18-how-to.r" class="nav-link" data-scroll-target="#hint-task-11-use-lm-as-you-have-done-before-see-e.g.-2023-24-psyc122-w18-how-to.r">hint: Task 11 – Use <code>lm()</code>, as you have done before, see e.g.&nbsp;<code>2023-24-PSYC122-w18-how-to.R</code></a></li>
-  <li><a href="#task-11-examine-the-predictors-of-mean-accuracy-mean.acc-first-for-the-study.one.gen-data" id="toc-task-11-examine-the-predictors-of-mean-accuracy-mean.acc-first-for-the-study.one.gen-data" class="nav-link" data-scroll-target="#task-11-examine-the-predictors-of-mean-accuracy-mean.acc-first-for-the-study.one.gen-data">Task 11 – Examine the predictors of mean accuracy (<code>mean.acc</code>), first, for the <code>study.one.gen</code> data</a></li>
-  <li><a href="#task-12-examine-the-predictors-of-mean-accuracy-mean.acc-now-for-the-study.two.gen-data" id="toc-task-12-examine-the-predictors-of-mean-accuracy-mean.acc-now-for-the-study.two.gen-data" class="nav-link" data-scroll-target="#task-12-examine-the-predictors-of-mean-accuracy-mean.acc-now-for-the-study.two.gen-data">Task 12 – Examine the predictors of mean accuracy (<code>mean.acc</code>), now, for the <code>study.two.gen</code> data</a></li>
+  <li><a href="#introduce-make-some-new-moves-1" id="toc-introduce-make-some-new-moves-1" class="nav-link" data-scroll-target="#introduce-make-some-new-moves-1">Introduce: make some new moves</a></li>
+  <li><a href="#task-11-center-numeric-variables-before-using-them-as-predictors" id="toc-task-11-center-numeric-variables-before-using-them-as-predictors" class="nav-link" data-scroll-target="#task-11-center-numeric-variables-before-using-them-as-predictors">Task 11 – Center numeric variables before using them as predictors</a></li>
+  <li><a href="#hint-task-11" id="toc-hint-task-11" class="nav-link" data-scroll-target="#hint-task-11">Hint: Task 11</a></li>
+  <li><a href="#task-12-specify-models-to-include-interaction-effects-interactions-between-two-numeric-predictor-variables" id="toc-task-12-specify-models-to-include-interaction-effects-interactions-between-two-numeric-predictor-variables" class="nav-link" data-scroll-target="#task-12-specify-models-to-include-interaction-effects-interactions-between-two-numeric-predictor-variables">Task 12 – Specify models to include interaction effects: interactions between two numeric predictor variables</a></li>
+  <li><a href="#hint-task-12" id="toc-hint-task-12" class="nav-link" data-scroll-target="#hint-task-12">Hint: Task 12</a></li>
+  <li><a href="#task-13-specify-models-to-include-interaction-effects-interactions-between-a-numeric-predictor-variable-and-a-factor-predictor-variable" id="toc-task-13-specify-models-to-include-interaction-effects-interactions-between-a-numeric-predictor-variable-and-a-factor-predictor-variable" class="nav-link" data-scroll-target="#task-13-specify-models-to-include-interaction-effects-interactions-between-a-numeric-predictor-variable-and-a-factor-predictor-variable">Task 13 – Specify models to include interaction effects: interactions between a numeric predictor variable and a factor predictor variable</a></li>
+  <li><a href="#hint-task-13-we-follow-the-same-approach-that-we-followed-through-task-12." id="toc-hint-task-13-we-follow-the-same-approach-that-we-followed-through-task-12." class="nav-link" data-scroll-target="#hint-task-13-we-follow-the-same-approach-that-we-followed-through-task-12.">Hint: Task 13 – We follow the same approach that we followed through Task 12.</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#third-show-the-plots-side-by-side" id="toc-third-show-the-plots-side-by-side" class="nav-link" data-scroll-target="#third-show-the-plots-side-by-side">– Third, show the plots side-by-side</a></li>
   </ul>
 </nav>
     </div>
@@ -439,30 +414,30 @@ window.Quarto = {
 <li>What person attributes predict success in understanding?</li>
 <li>Can people accurately evaluate whether they correctly understand written health information?</li>
 </ol>
-<p>In this class, what is new is our focus on critically evaluating – comparing, reflecting on – the evidence from more than one relevant study.</p>
+<p>In this class, what is new is our focus on critically evaluating the ways in which people, effects or results can vary using <em>interaction</em> analyses.</p>
 <ul>
-<li>This work simulates the kind of critical evaluation of evidence that psychologists must do in professional research.</li>
+<li>This work simulates the kinds of interaction analyses that psychologists must often do in professional research.</li>
 </ul>
 <section id="naming-things" class="level2">
 <h2 class="anchored" data-anchor-id="naming-things">Naming things</h2>
 <p>I will format dataset names like this:</p>
 <ul>
-<li><code>study-one-general-participants.csv</code></li>
+<li><code>all.data.csv</code></li>
 </ul>
 <p>I will also format variable (data column) names like this: <code>variable</code></p>
-<p>I will also format value or other data object (e.g.&nbsp;cell value) names like this: <code>studyone</code></p>
+<p>I will also format value or other data object (e.g.&nbsp;cell value) names like this: <code>all.data</code></p>
 <p>I will format functions and library names like this: e.g.&nbsp;function <code>ggplot()</code> or e.g.&nbsp;library <code>{tidyverse}</code>.</p>
 </section>
 <section id="the-data-we-will-be-using" class="level2">
 <h2 class="anchored" data-anchor-id="the-data-we-will-be-using">The data we will be using</h2>
-<p>In this how-to guide, we use data from two 2020 studies of the response of adults from a UK national sample to written health information:</p>
+<p>In this how-to guide, we use data from:</p>
+<p>(1.) two 2020 studies of the response of adults from a UK national sample to written health information</p>
 <ul>
 <li><code>study-one-general-participants.csv</code></li>
 <li><code>study-two-general-participants.csv</code></li>
 </ul>
-<p>The reason we are going to work with two datasets is that we will be comparing the results of analyses of the data to assess whether the results are robust.</p>
-<p>Here, our assessment of robustness focuses on whether similar results are found in two different studies.</p>
-<p>Check out the PSYC122 Week 19 lecture for a discussion of how an assessment of robustness is important to psychological science.</p>
+<p>(2.) along with data recently collected from PSYC122 students.</p>
+<p>These data have been joined together to create a dataset of over 400 observations. This is because it often requires a lot of evidence to be able to draw precise or accurate conclusions about potential interaction effects.</p>
 </section>
 </section>
 <section id="answers" class="level1">
@@ -480,7 +455,7 @@ window.Quarto = {
 <h3 class="anchored" data-anchor-id="task-2-run-code-to-load-relevant-libraries">Task 2 – Run code to load relevant libraries</h3>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggeffects"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"patchwork"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"sjPlot"</span>)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
@@ -490,8 +465,9 @@ window.Quarto = {
 ✔ lubridate 1.9.4     ✔ tidyr     1.3.2
 ✔ purrr     1.2.1     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
+✖ dplyr::filter()      masks stats::filter()
+✖ dplyr::lag()         masks stats::lag()
+✖ ggplot2::set_theme() masks sjPlot::set_theme()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
 </div>
@@ -499,127 +475,83 @@ window.Quarto = {
 </section>
 <section id="step-2-load-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="step-2-load-the-data">Step 2: Load the data</h2>
-<section id="task-3-read-in-the-data-files-we-will-be-using" class="level3">
-<h3 class="anchored" data-anchor-id="task-3-read-in-the-data-files-we-will-be-using">Task 3 – Read in the data files we will be using</h3>
-<p>The data files are called:</p>
+<section id="task-3-read-in-the-data-file-we-will-be-using" class="level3">
+<h3 class="anchored" data-anchor-id="task-3-read-in-the-data-file-we-will-be-using">Task 3 – Read in the data file we will be using</h3>
+<p>The data file is called:</p>
 <ul>
-<li><code>study-one-general-participants.csv</code></li>
-<li><code>study-two-general-participants.csv</code></li>
+<li><code>all-data.csv</code></li>
 </ul>
-<p>Use the <code>read_csv()</code> function to read the data files into R:</p>
+<p>Use the <code>read_csv()</code> function to read the data file into R:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>study.one.gen <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"study-one-general-participants.csv"</span>)  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>all.data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"all.data.csv"</span>)  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Rows: 169 Columns: 12
+<pre><code>Rows: 478 Columns: 11
 ── Column specification ────────────────────────────────────────────────────────
 Delimiter: ","
 chr (5): participant_ID, study, GENDER, EDUCATION, ETHNICITY
-dbl (7): mean.acc, mean.self, AGE, SHIPLEY, HLVA, FACTOR3, QRITOTAL
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>study.two.gen <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"study-two-general-participants.csv"</span>)  </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 172 Columns: 12
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr (5): participant_ID, study, GENDER, EDUCATION, ETHNICITY
-dbl (7): mean.acc, mean.self, AGE, SHIPLEY, HLVA, FACTOR3, QRITOTAL
+dbl (6): mean.acc, mean.self, AGE, SHIPLEY, HLVA, FACTOR3
 
 ℹ Use `spec()` to retrieve the full column specification for this data.
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
 </div>
-<p>When you read the data files in, give the data objects you create distinct name e.g.&nbsp;<code>study.one.gen</code> versus <code>study.two.gen</code>.</p>
 </section>
 <section id="task-4-inspect-the-data-file" class="level3">
 <h3 class="anchored" data-anchor-id="task-4-inspect-the-data-file">Task 4 – Inspect the data file</h3>
-<p>Use the <code>summary()</code> or <code>head()</code> functions to take a look at both datasets.</p>
+<p>Use the <code>summary()</code> function to take a look at the dataset.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(study.one.gen)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(all.data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> participant_ID        mean.acc        mean.self        study          
- Length:169         Min.   :0.3600   Min.   :3.440   Length:169        
- Class :character   1st Qu.:0.7600   1st Qu.:6.080   Class :character  
- Mode  :character   Median :0.8400   Median :7.080   Mode  :character  
-                    Mean   :0.8163   Mean   :6.906                     
-                    3rd Qu.:0.9000   3rd Qu.:7.920                     
-                    Max.   :0.9900   Max.   :9.000                     
+ Length:478         Min.   :0.3600   Min.   :2.250   Length:478        
+ Class :character   1st Qu.:0.7500   1st Qu.:6.200   Class :character  
+ Mode  :character   Median :0.8300   Median :7.200   Mode  :character  
+                    Mean   :0.8066   Mean   :6.967                     
+                    3rd Qu.:0.9000   3rd Qu.:7.910                     
+                    Max.   :1.0000   Max.   :9.000                     
       AGE           SHIPLEY           HLVA           FACTOR3     
- Min.   :18.00   Min.   :23.00   Min.   : 3.000   Min.   :34.00  
- 1st Qu.:24.00   1st Qu.:33.00   1st Qu.: 7.000   1st Qu.:46.00  
- Median :32.00   Median :35.00   Median : 9.000   Median :51.00  
- Mean   :34.87   Mean   :34.96   Mean   : 8.905   Mean   :50.33  
- 3rd Qu.:42.00   3rd Qu.:38.00   3rd Qu.:10.000   3rd Qu.:55.00  
+ Min.   :18.00   Min.   :19.00   Min.   : 2.000   Min.   : 9.00  
+ 1st Qu.:21.00   1st Qu.:31.00   1st Qu.: 7.000   1st Qu.:46.00  
+ Median :29.00   Median :35.00   Median : 9.000   Median :50.00  
+ Mean   :32.85   Mean   :34.19   Mean   : 8.929   Mean   :49.84  
+ 3rd Qu.:43.00   3rd Qu.:38.00   3rd Qu.:10.000   3rd Qu.:55.00  
  Max.   :76.00   Max.   :40.00   Max.   :14.000   Max.   :63.00  
-    QRITOTAL        GENDER           EDUCATION          ETHNICITY        
- Min.   : 6.00   Length:169         Length:169         Length:169        
- 1st Qu.:12.00   Class :character   Class :character   Class :character  
- Median :13.00   Mode  :character   Mode  :character   Mode  :character  
- Mean   :13.36                                                           
- 3rd Qu.:15.00                                                           
- Max.   :19.00                                                           </code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(study.two.gen)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code> participant_ID        mean.acc        mean.self        study          
- Length:172         Min.   :0.4107   Min.   :3.786   Length:172        
- Class :character   1st Qu.:0.6786   1st Qu.:6.411   Class :character  
- Mode  :character   Median :0.7679   Median :7.321   Mode  :character  
-                    Mean   :0.7596   Mean   :7.101                     
-                    3rd Qu.:0.8393   3rd Qu.:7.946                     
-                    Max.   :0.9821   Max.   :9.000                     
-      AGE           SHIPLEY           HLVA           FACTOR3     
- Min.   :18.00   Min.   :23.00   Min.   : 3.000   Min.   :29.00  
- 1st Qu.:25.00   1st Qu.:32.75   1st Qu.: 7.750   1st Qu.:47.00  
- Median :32.50   Median :36.00   Median : 9.000   Median :51.00  
- Mean   :35.37   Mean   :35.13   Mean   : 9.064   Mean   :51.24  
- 3rd Qu.:44.00   3rd Qu.:39.00   3rd Qu.:11.000   3rd Qu.:56.25  
- Max.   :76.00   Max.   :40.00   Max.   :14.000   Max.   :63.00  
-    QRITOTAL        GENDER           EDUCATION          ETHNICITY        
- Min.   : 6.00   Length:172         Length:172         Length:172        
- 1st Qu.:12.00   Class :character   Class :character   Class :character  
- Median :14.00   Mode  :character   Mode  :character   Mode  :character  
- Mean   :13.88                                                           
- 3rd Qu.:16.00                                                           
- Max.   :20.00                                                           </code></pre>
+    GENDER           EDUCATION          ETHNICITY        
+ Length:478         Length:478         Length:478        
+ Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character  
+                                                         
+                                                         
+                                                         </code></pre>
 </div>
 </div>
-<p>Notice that <code>study.two.gen</code> was designed to be a replication of <code>study.one.gen</code>.</p>
+<p>Notice that we conducted a series of studies using the same online survey methods.</p>
 <ul>
-<li>We use the same online survey methods to collect data in both studies.</li>
-<li>We present different health information texts in the different studies and recorded responses from different groups of adults in the UK.</li>
+<li>Our data include the responses made by <em>PSYC122</em> students.</li>
 </ul>
 </section>
 </section>
-<section id="step-3-compare-the-data-from-the-different-studies" class="level2">
-<h2 class="anchored" data-anchor-id="step-3-compare-the-data-from-the-different-studies">Step 3: Compare the data from the different studies</h2>
-<section id="revise-practice-to-strengthen-skills" class="level3">
-<h3 class="anchored" data-anchor-id="revise-practice-to-strengthen-skills">Revise: practice to strengthen skills</h3>
+<section id="step-3-work-with-different-kinds-of-variables" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-work-with-different-kinds-of-variables">Step 3: Work with different kinds of variables</h2>
+<p>It is an important skill in psychological data analysis to be able to:</p>
+<p>(1.) identify the different kinds of data variables we are working with; (2.) adapt our methods depending on differences in kind (variable <code>Class</code> or type).</p>
+<p>We learn about these skills, next, in exercises that combine some revision with some new moves.</p>
 </section>
-<section id="task-5-compare-the-data-distributions-from-the-two-studies" class="level3">
-<h3 class="anchored" data-anchor-id="task-5-compare-the-data-distributions-from-the-two-studies">Task 5 – Compare the data distributions from the two studies</h3>
+<section id="revise-consolidate-what-you-know" class="level2">
+<h2 class="anchored" data-anchor-id="revise-consolidate-what-you-know">Revise: consolidate what you know</h2>
+<section id="task-5-use-summaries-or-plots-to-examine-variables" class="level3">
+<h3 class="anchored" data-anchor-id="task-5-use-summaries-or-plots-to-examine-variables">Task 5 – Use summaries or plots to examine variables</h3>
 <ul>
-<li><p>Q.1. What is the mean of the <code>mean.acc</code> and <code>SHIPLEY</code> variables in the two studies?</p></li>
-<li><p>A.1. The means are:</p></li>
-<li><p>study one – mean.acc – mean = 0.8163</p></li>
-<li><p>study one – mean.self – mean = 6.906</p></li>
-<li><p>study two – mean.acc – mean = 0.7596</p></li>
-<li><p>study two – mean.self – mean = 7.101</p></li>
-<li><p>Q.2. Draw histograms of both mean.acc and mean.self for both studies.</p></li>
-<li><p>A.2. You can write the code as you have been shown to do e.g.&nbsp;in week 17:</p></li>
+<li><p>Q.1. What is the mean of the <code>AGE</code> variable in the dataset?</p></li>
+<li><p>A.1. You can use the <code>summary()</code> function to calculate that the mean <code>AGE</code> is 32.85</p></li>
+<li><p>Q.2. Draw a histogram of the age distribution.</p></li>
+<li><p>A.2. You can write the code as you have been shown to do previously (e.g., in week 16):</p></li>
 </ul>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.one.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.acc)) <span class="sc">+</span> </span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> .<span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Mean accuracy (mean.acc)"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>) <span class="sc">+</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
-(`geom_bar()`).</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> all.data, <span class="fu">aes</span>(<span class="at">x =</span> AGE)) <span class="sc">+</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Age (years)"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -627,267 +559,214 @@ dbl (7): mean.acc, mean.self, AGE, SHIPLEY, HLVA, FACTOR3, QRITOTAL
 </figure>
 </div>
 </div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.one.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.self)) <span class="sc">+</span> </span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Mean self-rated accuracy (mean.self)"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>) <span class="sc">+</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>,<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
-(`geom_bar()`).</code></pre>
 </div>
+<ul>
+<li>Q.3. Examine the age distribution: what does it tell you about the ages of the participants in the sample?</li>
+<li>A.3. The histogram shows that most participants are around 20 years in age but there is a “long tail” of small numbers of older participants.</li>
+</ul>
+</section>
+</section>
+<section id="extend-make-some-new-moves" class="level2">
+<h2 class="anchored" data-anchor-id="extend-make-some-new-moves">Extend: make some new moves</h2>
+<p>We can tell from the summary and the distribution that the <code>AGE</code> variable consists of numbers (participant ages in years).</p>
+<p>Another way to identify what kind of variable we have is by using a check question:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(all.data<span class="sc">$</span>AGE)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(all.data<span class="sc">$</span>AGE)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p>The <code>is._()</code> family of functions act like identity checks: what is this variable? These functions work like questions with TRUE or FALSE answers.</p>
+<ul>
+<li>Is this variable a factor? [TRUE or FALSE]</li>
+<li>Is this variable numeric? [TRUE or FALSE]</li>
+</ul>
+</section>
+<section id="revise-consolidate-what-you-know-1" class="level2">
+<h2 class="anchored" data-anchor-id="revise-consolidate-what-you-know-1">Revise: consolidate what you know</h2>
+<section id="task-6-identify-and-change-what-kind-of-variable-numeric-or-factor-a-variable-is" class="level3">
+<h3 class="anchored" data-anchor-id="task-6-identify-and-change-what-kind-of-variable-numeric-or-factor-a-variable-is">Task 6 – Identify (and change) what kind of variable – numeric or factor – a variable is</h3>
+<section id="hint-task-6-the-is._-functions-are-available-to-ask-what-kind-a-variable-is" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-6-the-is._-functions-are-available-to-ask-what-kind-a-variable-is">Hint: Task 6 – The <code>is._()</code> functions are available to ask what kind a variable is</h4>
+</section>
+<section id="hint-task-6-the-as._-functions-can-be-used-to-change-variable-types" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-6-the-as._-functions-can-be-used-to-change-variable-types">Hint: Task 6 – The <code>as._()</code> functions can be used to change variable types</h4>
+<ul>
+<li>Q.4. What kind of variable is <code>EDUCATION</code>?</li>
+<li>A.4. Use the same functions but change the variable name:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(all.data<span class="sc">$</span>EDUCATION)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(all.data<span class="sc">$</span>EDUCATION)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+<ul>
+<li><p>Q.5. What do the <code>is._()</code> functions tell us?</p></li>
+<li><p>A.5. The function calls tell us that <code>EDUCATION</code> is not a factor and is not numeric.</p></li>
+<li><p>Q.6. If you look at the <code>summary()</code> results, what does it tell you the <code>Class</code> of <code>EDUCATION</code> is?</p></li>
+<li><p>A.6. The summary shows that <code>EDUCATION</code> is identified as <code>Class: character</code>.</p></li>
+</ul>
+<p>You can check this by doing the <code>is._()</code> test again.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.character</span>(all.data<span class="sc">$</span>EDUCATION)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<ul>
+<li>Q.7. How do you change the class or type of the variable <code>EDUCATION</code>? Change the variable’s type (<code>Class</code>) into a factor.</li>
+<li>A.7. The <code>as._()</code> functions can be used to change variable type, as you have done previously (e.g., in week 16).</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>EDUCATION <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(all.data<span class="sc">$</span>EDUCATION)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Q.8. What does a <code>summary()</code> tell us about <code>EDUCATION</code>?</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(all.data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> participant_ID        mean.acc        mean.self        study          
+ Length:478         Min.   :0.3600   Min.   :2.250   Length:478        
+ Class :character   1st Qu.:0.7500   1st Qu.:6.200   Class :character  
+ Mode  :character   Median :0.8300   Median :7.200   Mode  :character  
+                    Mean   :0.8066   Mean   :6.967                     
+                    3rd Qu.:0.9000   3rd Qu.:7.910                     
+                    Max.   :1.0000   Max.   :9.000                     
+      AGE           SHIPLEY           HLVA           FACTOR3     
+ Min.   :18.00   Min.   :19.00   Min.   : 2.000   Min.   : 9.00  
+ 1st Qu.:21.00   1st Qu.:31.00   1st Qu.: 7.000   1st Qu.:46.00  
+ Median :29.00   Median :35.00   Median : 9.000   Median :50.00  
+ Mean   :32.85   Mean   :34.19   Mean   : 8.929   Mean   :49.84  
+ 3rd Qu.:43.00   3rd Qu.:38.00   3rd Qu.:10.000   3rd Qu.:55.00  
+ Max.   :76.00   Max.   :40.00   Max.   :14.000   Max.   :63.00  
+    GENDER            EDUCATION    ETHNICITY        
+ Length:478         Further:224   Length:478        
+ Class :character   Higher :254   Class :character  
+ Mode  :character                 Mode  :character  
+                                                    
+                                                    
+                                                    </code></pre>
+</div>
+</div>
+<ul>
+<li>A.8. The summary will show how many different participants report themselves as belonging to one of the different <code>EDUCATION</code> level groups in the corresponding survey question.</li>
+</ul>
+<p>You should see counts of the numbers of people in different <code>EDUCATION</code> level groups in the total survey sample:</p>
+<p>EDUCATION Further:224 Higher :254</p>
+<p>We can see that 224 participants reported in the survey that they had attained a <code>Further</code> level of education (corresponding to A-level or Sixth Form).</p>
+<p>254 participants reported a <code>Higher</code> level of education (corresponding to university level).</p>
+</section>
+</section>
+</section>
+<section id="step-4-now-draw-plots-to-examine-associations-between-variables-and-to-visualize-interactions" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-now-draw-plots-to-examine-associations-between-variables-and-to-visualize-interactions">Step 4: Now draw plots to examine associations between variables and to visualize interactions</h2>
+<p>Here, we are going to build on previous work to use plots to:</p>
+<p>(1.) Examine the associations between pairs of variables, an outcome and a predictor (2.) Examine how the association between two variables can be different for different levels of a third variable</p>
+<p>Scenario (2.) comes up if we are thinking about or working with <em>interaction</em> effects.</p>
+<section id="consolidation-practice-to-strengthen-skills" class="level3">
+<h3 class="anchored" data-anchor-id="consolidation-practice-to-strengthen-skills">Consolidation: practice to strengthen skills</h3>
+</section>
+<section id="task-7-create-a-scatterplot-to-examine-the-association-between-two-numeric-variables" class="level3">
+<h3 class="anchored" data-anchor-id="task-7-create-a-scatterplot-to-examine-the-association-between-two-numeric-variables">Task 7 – Create a scatterplot to examine the association between two numeric variables</h3>
+<section id="hint-task-7-we-are-working-with-geom_point-and-you-need-x-and-y-aesthetic-mappings." class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-7-we-are-working-with-geom_point-and-you-need-x-and-y-aesthetic-mappings.">Hint: Task 7 – We are working with <code>geom_point()</code> and you need x and y aesthetic mappings.</h4>
+<p>Run a chunk of code to make the plot.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> all.data, <span class="fu">aes</span>(<span class="at">x =</span> HLVA, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Accuracy of understanding (mean.acc)"</span>, </span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Health literacy (HLVA)"</span>) <span class="sc">+</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">16</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="PSYC122-w19-how-to_files/figure-html/unnamed-chunk-5-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.acc)) <span class="sc">+</span> </span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> .<span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Mean accuracy (mean.acc)"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>) <span class="sc">+</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
-(`geom_bar()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="PSYC122-w19-how-to_files/figure-html/unnamed-chunk-5-3.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.self)) <span class="sc">+</span> </span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Mean self-rated accuracy (mean.self)"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>) <span class="sc">+</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>,<span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
-(`geom_bar()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="PSYC122-w19-how-to_files/figure-html/unnamed-chunk-5-4.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="PSYC122-w19-how-to_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
+<p>This plot shows:</p>
+<ul>
+<li>the possible association between x-axis variable <code>HLVA</code> and y-axis variable <code>mean.acc</code>.</li>
+</ul>
+<p>The plot code moves through the following steps:</p>
+<ol type="1">
+<li><code>ggplot(...)</code> make a plot;</li>
+<li><code>ggplot(data = all.data, ...)</code> with the <code>all.data</code> dataset;</li>
+<li><code>ggplot(...aes(x = HLVA, y = mean.acc))</code> using two aesthetic mappings</li>
+</ol>
+<ul>
+<li><code>x = HLVA</code> map <code>HLVA</code> values to x-axis (horizontal, left to right) positions;</li>
+<li><code>y = mean.acc</code> map <code>mean.acc</code> values to y-axis (vertical, bottom to top) positions;</li>
+</ul>
+<ol start="4" type="1">
+<li><code>geom_point()</code> show the mappings as points.</li>
+<li><code>theme_bw()</code> changes the theme to a white background.</li>
+<li><code>labs(y = "Accuracy of understanding (mean.acc)", x = "Health literacy (HLVA)")</code> changes axis labels.</li>
+<li><code>xlim(0, 6) + ylim(0, 1)</code> changes axis limits.</li>
+</ol>
+</section>
+<section id="questions-task-7" class="level4">
+<h4 class="anchored" data-anchor-id="questions-task-7">Questions: Task 7</h4>
+<ul>
+<li>Q.9. What do you notice about the distribution of <code>mean.acc</code> scores at increasing values of health literacy (<code>HLVA</code>) scores?</li>
+<li>A.9. The scatterplot shows that, for increasing health literacy (<code>HLVA</code>) scores, there is an associated rise in accuracy of understanding (<code>mean.acc</code>) scores.</li>
+</ul>
+</section>
 </section>
 <section id="introduce-make-some-new-moves" class="level3">
 <h3 class="anchored" data-anchor-id="introduce-make-some-new-moves">Introduce: make some new moves</h3>
-</section>
-<section id="task-6-create-grids-of-plots-to-make-the-comparison-easier-to-do" class="level3">
-<h3 class="anchored" data-anchor-id="task-6-create-grids-of-plots-to-make-the-comparison-easier-to-do">Task 6 – Create grids of plots to make the comparison easier to do</h3>
-</section>
-<section id="hint-task-6-what-we-are-going-to-do-is-to-create-two-histograms-and-then-present-them-side-by-side-to-allow-easy-comparison-of-variable-distributions" class="level3">
-<h3 class="anchored" data-anchor-id="hint-task-6-what-we-are-going-to-do-is-to-create-two-histograms-and-then-present-them-side-by-side-to-allow-easy-comparison-of-variable-distributions">hint: Task 6 – What we are going to do is to create two histograms and then present them side by side to allow easy comparison of variable distributions</h3>
-<p>We need to make two changes to the coding approach you have been using until now.</p>
-<p>Before we explain anything, let’s look at an example: run these line of code and check the result.</p>
+<p>In the next sequence of exercises, we are going to take the <code>all.data</code> dataset and split it into parts (sub-sets) in different ways.</p>
 <ul>
-<li>Make sure you identify what is different about the plotting code, shown following, compared to what you have done before: there is a <em>surprise</em> in what is going to happen.</li>
+<li>We split the dataset vertically, into different sets of rows or observations.</li>
 </ul>
-<p>First, create plot objects, give them names, but do not show them:</p>
+<section id="why-are-we-learning-how-to-do-this" class="level4">
+<h4 class="anchored" data-anchor-id="why-are-we-learning-how-to-do-this">Why are we learning how to do this?</h4>
+<p>The capacity to do this kind of split-analyse operation is <em>extremely</em> useful.</p>
+<p>We are going to do this so that we can examine how the effects of interest to us (here, associations) can vary between different groups of people.</p>
+<ul>
+<li><p>Remember, observations about different people are on different rows in <code>all.data</code>.</p></li>
+<li><p>We are going to focus on an association between two column variables (<code>mean.acc</code>, <code>HLVA</code>).</p></li>
+<li><p>We are going to identify different groups (sub-sets) of observations using values on a third variable.</p></li>
+</ul>
+</section>
+</section>
+<section id="task-8-create-a-scatterplot-to-examine-the-association-between-two-numeric-variables-showing-how-the-association-is-different-for-different-values-of-a-third-variable" class="level3">
+<h3 class="anchored" data-anchor-id="task-8-create-a-scatterplot-to-examine-the-association-between-two-numeric-variables-showing-how-the-association-is-different-for-different-values-of-a-third-variable">Task 8 – Create a scatterplot to examine the association between two numeric variables, showing how the association is different for different values of a third variable</h3>
+<section id="hint-task-8-we-are-working-with-geom_point-again." class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-8-we-are-working-with-geom_point-again.">Hint: Task 8 – We are working with <code>geom_point()</code> again.</h4>
+</section>
+<section id="hint-task-8-we-can-show-how-the-association-between-two-variables-mean.acc-hlva-is-different-for-different-values-of-a-third-categorical-factor-variable-education-by-splitting-the-plot-so-that-we-see-the-association-for-different-levels-of-education." class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-8-we-can-show-how-the-association-between-two-variables-mean.acc-hlva-is-different-for-different-values-of-a-third-categorical-factor-variable-education-by-splitting-the-plot-so-that-we-see-the-association-for-different-levels-of-education.">Hint: Task 8 – We can show how the association between two variables (<code>mean.acc</code>, <code>HLVA</code>) is different for different values of a third, categorical (factor), variable (<code>EDUCATION</code>) by splitting the plot so that we see the association for different levels of <code>EDUCATION</code>.</h4>
+<p>Here, we are splitting the dataset into:</p>
+<ul>
+<li>observation data from people with just <code>EDUCATION</code> level <code>Further</code></li>
+<li>observation data from people with just <code>EDUCATION</code> level <code>Higher</code></li>
+</ul>
+<p>and we are then producing a different scatterplot for each sub-set of data produced by the split.</p>
+<p>Run the following chunk of code to make the plot.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>plot.one <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> study.one.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.acc)) <span class="sc">+</span> </span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> .<span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Mean accuracy (mean.acc)"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>, <span class="at">title =</span> <span class="st">"Study One"</span>) <span class="sc">+</span></span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>plot.two <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.acc)) <span class="sc">+</span> </span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> .<span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Mean accuracy (mean.acc)"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>, <span class="at">title =</span> <span class="st">"Study Two"</span>) <span class="sc">+</span></span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Second, show the plots, side-by-side:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>plot.one <span class="sc">+</span> plot.two</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
-(`geom_bar()`).
-Removed 2 rows containing missing values or values outside the scale range
-(`geom_bar()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="PSYC122-w19-how-to_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<p>This is what you are doing: check out the process, step-by-step. (And notice that you repeat the process for each of two (or more) plots.)</p>
-<ol type="1">
-<li><code>ggplot(...)</code> tell R you want to make a plot using the <code>ggplot()</code> function;</li>
-<li><code>plot.one &lt;-</code> tell R you want to give the plot a name; the name appears in the environment;</li>
-<li><code>ggplot(data = study.one.gen ...)</code> tell R you want to make a plot with the <code>study.two</code> data;</li>
-<li><code>ggplot(..., aes(x = mean.acc))</code> tell R that you want to make a plot with the variable <code>mean.acc</code>;</li>
-</ol>
-<ul>
-<li>here, specify the aesthetic mapping, <code>x = mean.acc</code></li>
-</ul>
-<ol start="5" type="1">
-<li><code>geom_histogram()</code> tell R you want to plot values of <code>mean.acc</code> as a histogram;</li>
-<li><code>binwidth = .1</code> adjust the binwidth to show enough detail but not too much in the distribution;</li>
-<li><code>theme_bw()</code> tell R what theme you want, adjusting the plot appearance;</li>
-<li><code>labs(x = "Mean accuracy (mean.acc)", y = "frequency count", title = "Study One")</code> fix the x-axis and y-axis labels;</li>
-</ol>
-<ul>
-<li>here, add a title for the plot, so you can tell the two plots apart;</li>
-</ul>
-<ol start="9" type="1">
-<li><code>xlim(0, 1)</code> adjust the x-axis limits to show the full range of possible score values on this variable.</li>
-</ol>
-<p>Do this process twice, once for each dataset, creating two plots so that you can compare the distribution of <code>mean.acc</code> scores between the studies.</p>
-<p>Finally, having created the two plots, produce them for viewing:</p>
-<ol start="10" type="1">
-<li><code>plot.one + plot.two</code> having constructed – and named – both plots, you enter their names, separated by a +, to show them in a grid of two plots.</li>
-</ol>
-<p>Notice: until you get to step 10, <strong>nothing will appear</strong>.</p>
-<p>This will be <strong>surprising</strong> but it is perfectly normal when we increase the <em>level of complexity</em> of the plots we build.</p>
-<ul>
-<li>You first build the plots.</li>
-<li>You are creating plot objects and you give these objects names.</li>
-<li>The objects will appear in the <code>Environment</code> with the names you give them.</li>
-<li>You then <em>produce</em> the plots for viewing, by using their names.</li>
-</ul>
-<p>Until you complete the last step, you will not see any changes until you use the object names to produce them for viewing.</p>
-<p>This is how you construct complex arrays of plots.</p>
-</section>
-<section id="task-7-try-this-out-for-yourself-focusing-now-on-the-distribution-of-mean.self-scores-in-the-two-studies" class="level3">
-<h3 class="anchored" data-anchor-id="task-7-try-this-out-for-yourself-focusing-now-on-the-distribution-of-mean.self-scores-in-the-two-studies">Task 7 – Try this out for yourself, focusing now on the distribution of <code>mean.self</code> scores in the two studies</h3>
-<p>First, create plot objects but do not show them.</p>
-<ul>
-<li>Give each plot a name. You will use the names next.</li>
-</ul>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>plot.one <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> study.one.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.self)) <span class="sc">+</span> </span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Self-rated accuracy (mean.self)"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>, <span class="at">title =</span> <span class="st">"Study One"</span>) <span class="sc">+</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">10</span>)</span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>plot.two <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.self)) <span class="sc">+</span> </span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Self-rated accuracy (mean.self)"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>, <span class="at">title =</span> <span class="st">"Study Two"</span>) <span class="sc">+</span></span>
-<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">10</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Second produce the plots for viewing, side-by-side, by <em>naming</em> them.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>plot.one <span class="sc">+</span> plot.two</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Removed 2 rows containing missing values or values outside the scale range
-(`geom_bar()`).
-Removed 2 rows containing missing values or values outside the scale range
-(`geom_bar()`).</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="PSYC122-w19-how-to_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<ul>
-<li><p>Q.3. Now use the plots to do some data analysis work: how do the <code>mean.self</code> distributions compare, when you compare the <code>mean.self</code> of <code>study.one.gen</code> versus `<code>mean.self</code> of <code>study.two.gen</code>?</p></li>
-<li><p>A.3. When you compare the plots side-by-side you can see that the <code>mean.self</code> distributions are similar in the two studies: most people have high <code>mean.self</code> scores. This means that they rated the accuracy of their understanding at a high level, on average.</p></li>
-<li><p>Q.4. Is the visual impression you get from comparing the distributions consistent with the statistics you see in the summary?</p></li>
-<li><p>A.4. Yes: If you go back to the summary of <code>mean.self</code>, comparing the two studies datasets, then you can see that the median and mean are similar (around 7) in both <code>study.one.gen</code> and <code>study.two.gen</code> datasets.</p></li>
-</ul>
-</section>
-</section>
-<section id="step-4-now-use-scatterplots-and-correlation-to-examine-associations-between-variables" class="level2">
-<h2 class="anchored" data-anchor-id="step-4-now-use-scatterplots-and-correlation-to-examine-associations-between-variables">Step 4: Now use scatterplots and correlation to examine associations between variables</h2>
-<section id="revise-practice-to-strengthen-skills-1" class="level3">
-<h3 class="anchored" data-anchor-id="revise-practice-to-strengthen-skills-1">Revise: practice to strengthen skills</h3>
-</section>
-<section id="task-8-draw-scatterplots-to-compare-the-potential-association-between-mean.acc-and-mean.self-in-both-study.one.gen-and-study.two.gen-datasets" class="level3">
-<h3 class="anchored" data-anchor-id="task-8-draw-scatterplots-to-compare-the-potential-association-between-mean.acc-and-mean.self-in-both-study.one.gen-and-study.two.gen-datasets">Task 8 – Draw scatterplots to compare the potential association between <code>mean.acc</code> and <code>mean.self</code> in both <code>study.one.gen</code> and <code>study.two.gen</code> datasets</h3>
-</section>
-<section id="hint-task-8-the-plotting-steps-are-explained-in-some-detail-in-psyc122-w17-how-to.rmd" class="level3">
-<h3 class="anchored" data-anchor-id="hint-task-8-the-plotting-steps-are-explained-in-some-detail-in-psyc122-w17-how-to.rmd">hint: Task 8 – The plotting steps are explained in some detail in <code>PSYC122-w17-how-to.Rmd</code></h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.one.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.self, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.75</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">colour =</span> <span class="st">"darkgrey"</span>) <span class="sc">+</span></span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">colour =</span> <span class="st">"green"</span>) <span class="sc">+</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"mean self-rated accuracy"</span>, <span class="at">y =</span> <span class="st">"mean accuracy"</span>) <span class="sc">+</span></span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">10</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-ℹ Please use `linewidth` instead.</code></pre>
-</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> all.data, <span class="fu">aes</span>(<span class="at">x =</span> HLVA, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">'lm'</span>) <span class="sc">+</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Accuracy of understanding (mean.acc)"</span>, </span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Health literacy (HLVA)"</span>) <span class="sc">+</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">16</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> EDUCATION)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="PSYC122-w19-how-to_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.self, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
-<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.75</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">colour =</span> <span class="st">"darkgrey"</span>) <span class="sc">+</span></span>
-<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">colour =</span> <span class="st">"green"</span>) <span class="sc">+</span></span>
-<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"mean self-rated accuracy"</span>, <span class="at">y =</span> <span class="st">"mean accuracy"</span>) <span class="sc">+</span></span>
-<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">10</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="PSYC122-w19-how-to_files/figure-html/unnamed-chunk-10-2.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="task-9-create-a-grid-of-plots-to-make-the-comparison-easier-to-do" class="level3">
-<h3 class="anchored" data-anchor-id="task-9-create-a-grid-of-plots-to-make-the-comparison-easier-to-do">Task 9 – Create a grid of plots to make the comparison easier to do</h3>
-</section>
-<section id="hint-task-9-we-follow-the-same-steps-as-we-used-in-tasks-6-and-7-to-create-the-plots" class="level3">
-<h3 class="anchored" data-anchor-id="hint-task-9-we-follow-the-same-steps-as-we-used-in-tasks-6-and-7-to-create-the-plots">hint: Task 9 – We follow the same steps as we used in tasks 6 and 7 to create the plots</h3>
-<p>We again:</p>
-<ol type="1">
-<li>First construct the plot objects and give them names;</li>
-<li>Then create and show a grid of named plots.</li>
-</ol>
-<p>Though this time we are producing a grid of <strong>scatterplots</strong>.</p>
-<p>First, create plot objects – give them names but do not show them:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>plot.one <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> study.one.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.self, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.75</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">colour =</span> <span class="st">"darkgrey"</span>) <span class="sc">+</span></span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">colour =</span> <span class="st">"green"</span>) <span class="sc">+</span></span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"mean self-rated accuracy"</span>, <span class="at">y =</span> <span class="st">"mean accuracy"</span>, <span class="at">title =</span> <span class="st">"Study One"</span>) <span class="sc">+</span></span>
-<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">10</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span>
-<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>plot.two <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> mean.self, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
-<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.75</span>, <span class="at">size =</span> <span class="dv">3</span>, <span class="at">colour =</span> <span class="st">"darkgrey"</span>) <span class="sc">+</span></span>
-<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">colour =</span> <span class="st">"green"</span>) <span class="sc">+</span></span>
-<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"mean self-rated accuracy"</span>, <span class="at">y =</span> <span class="st">"mean accuracy"</span>, <span class="at">title =</span> <span class="st">"Study Two"</span>) <span class="sc">+</span></span>
-<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">10</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<ul>
-<li>Notice that in the plotting code we ask R to give each plot a title using <code>labs()</code>.</li>
-</ul>
-<p>Second name the plots, to show them side-by-side in the plot window:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>plot.one <span class="sc">+</span> plot.two</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`geom_smooth()` using formula = 'y ~ x'
-`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
 <div class="cell-output-display">
 <div>
@@ -897,323 +776,504 @@ Removed 2 rows containing missing values or values outside the scale range
 </div>
 </div>
 </div>
-<p>Now use the plots to make comparison judgments.</p>
+<p>This plot shows:</p>
 <ul>
-<li>Q.5. How does the association, shown in the plots, between <code>mean.self</code> and <code>mean.acc</code> compare when you look at the <code>study.one.gen</code> versus the <code>study.two.gen</code> plot?</li>
-<li>hint: Q.5. When comparing evidence about associations in different studies, we are mostly going to focus on the slope – the angle – of the prediction lines, and the ways in which points do or do not cluster about the prediction lines.</li>
-<li>A.5. If you examine the <code>study.one.gen</code> versus the <code>study.two.gen</code> plots then you can see that in both plots higher <code>mean.self</code> scores appear to be associated with higher <code>mean.acc</code> scores. But the trend maybe is a bit stronger – the line is steeper – in <code>study.two.gen</code> compared to <code>study.two.gen</code>.</li>
+<li>the possible association between x-axis variable <code>HLVA</code> and y-axis variable <code>mean.acc</code></li>
+<li>for different groups of people – people with <code>Further</code> or people with <code>Higher</code> levels of <code>EDUCATION</code>.</li>
 </ul>
-<p>We are now in a position to answer one of our research questions:</p>
+<p>The plot code moves through steps we have seen before. What is new here is this bit:</p>
+<p><code>facet_wrap(~ EDUCATION)</code></p>
+<p>The function <code>facet_wrap()</code> splits the dataset into sub-sets (different parts): different sets of rows, where different sets are defined according to different values of the variable identified inside the brackets <code>(~ EDUCATION)</code>.</p>
+<p>Here, we are asking for different scatterplots for the dataset split by whether participants are coded as people with <code>Further</code> or people with <code>Higher</code> levels of <code>EDUCATION</code>.</p>
+<p>You can see a general guide to the function here:</p>
+<p><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html" class="uri">https://ggplot2.tidyverse.org/reference/facet_wrap.html</a></p>
+</section>
+<section id="questions-task-8" class="level4">
+<h4 class="anchored" data-anchor-id="questions-task-8">Questions: Task 8</h4>
+<ul>
+<li>Q.10. What do you notice about the distribution of <code>mean.acc</code> scores at increasing values of health literacy (<code>HLVA</code>) scores, for different sub-sets of the data: for people with <code>Further</code> compared to people with <code>Higher</code> levels of <code>EDUCATION</code>?</li>
+<li>A.10. You can see that the association between <code>mean.acc</code> and <code>HLVA</code> scores appears to be similar for different levels of education: the distribution of points is different but the shape is similar overall, and the trend line representing the association between <code>mean.acc</code> and <code>HLVA</code> looks similar too.</li>
+</ul>
+</section>
+<section id="hint-task-8-we-can-show-how-the-association-between-two-variables-mean.acc-hlva-is-different-for-different-values-of-a-third-numeric-variable-shipley-by-splitting-the-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-8-we-can-show-how-the-association-between-two-variables-mean.acc-hlva-is-different-for-different-values-of-a-third-numeric-variable-shipley-by-splitting-the-dataset">Hint: Task 8 – We can show how the association between two variables (<code>mean.acc</code>, <code>HLVA</code>) is different for different values of a third numeric variable (<code>SHIPLEY</code>) by splitting the dataset</h4>
+<p>Here, we are first creating a new variable to code for (distinguish between) different sub-sets of observations (different rows in the dataset) based on <code>SHIPLEY</code> scores, and then second drawing different plots based on different subsets.</p>
+<p>We do this in two steps, as follows.</p>
+<p>First, run a chunk of code to divide (<code>cut</code>) the dataset into parts:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>SHIPLEY_splits <span class="ot">&lt;-</span> <span class="fu">cut_number</span>(all.data<span class="sc">$</span>SHIPLEY, <span class="dv">3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>The code works bit-by-bit like this:</p>
+<ol type="1">
+<li><code>all.data$SHIPLEY_splits &lt;-</code> create a new variable, <code>SHIPLEY_splits</code> and add it to the dataset <code>all.data</code> given the work done by the bit of code on the right of the arrow <code>&lt;-</code>.</li>
+</ol>
+<p>On the right of the arrow <code>&lt;-</code> …</p>
 <ol start="2" type="1">
-<li>Can people accurately evaluate whether they correctly understand written health information?</li>
+<li><code>cut_number(all.data$SHIPLEY, 3)</code> uses the <code>cut_number(...)</code> to divide the dataset observations into three sets based on the values in the <code>all.data$SHIPLEY</code> variable named inside the brackets.</li>
 </ol>
-<p>If people <em>can</em> accurately evaluate whether they correctly understand written health information then <code>mean.self</code> (a score representing their evaluation) should be associated with <code>mean.acc</code> (a score representing their accuracy of understanding) for each person.</p>
-</section>
-<section id="revise-practice-to-strengthen-skills-2" class="level3">
-<h3 class="anchored" data-anchor-id="revise-practice-to-strengthen-skills-2">Revise: practice to strengthen skills</h3>
-</section>
-<section id="task-10-can-you-estimate-the-association-between-mean.acc-and-mean.self-in-both-datasets" class="level3">
-<h3 class="anchored" data-anchor-id="task-10-can-you-estimate-the-association-between-mean.acc-and-mean.self-in-both-datasets">Task 10 – Can you estimate the association between <code>mean.acc</code> and <code>mean.self</code> in both datasets?</h3>
-</section>
-<section id="hint-task-10-use-cor.test-as-you-have-been-shown-how-to-do-e.g.-in-2023-24-psyc122-w16-how-to.rmd" class="level3">
-<h3 class="anchored" data-anchor-id="hint-task-10-use-cor.test-as-you-have-been-shown-how-to-do-e.g.-in-2023-24-psyc122-w16-how-to.rmd">hint: Task 10 – Use <code>cor.test()</code> as you have been shown how to do e.g.&nbsp;in <code>2023-24-PSYC122-w16-how-to.Rmd</code></h3>
-<p>Do the correlation for both datasets.</p>
-<p>First, look at the correlation between <code>mean.acc</code> and <code>mean.self</code> in <code>study.one.gen</code>:</p>
+<p>The function works by ordering all the observations (the rows) in the dataset according to the values in the named variable <code>all.data$SHIPLEY</code>, then splitting the dataset (here, into three sub-sets) based on values in that named variable.</p>
+<ul>
+<li>Given this code, we are going to get three sub-sets of the data, observations corresponding to (1.) low (2.) mid or (3.) high <code>SHIPLEY</code> values.</li>
+<li>We split the data into data about people with:</li>
+</ul>
+<p>(1.) low <code>SHIPLEY</code> values, scores between 19-33 on the <code>SHIPLEY</code> test; (2.) mid <code>SHIPLEY</code> values, scores between 33-37 on the <code>SHIPLEY</code> test; (3.) high <code>SHIPLEY</code> values, scores between 37-40 on the <code>SHIPLEY</code> test.</p>
+<p>You can see a guide to the function here:</p>
+<p><a href="https://ggplot2.tidyverse.org/reference/cut_interval.html" class="uri">https://ggplot2.tidyverse.org/reference/cut_interval.html</a></p>
+<p>Note that <em>where</em> we split the data (what ranges of scores we use) will depend on the sample.</p>
+<p>Second, we draw a plot to examine if the association between two variables (<code>mean.acc</code>, <code>HLVA</code>) is different for different values of a third variable (<code>SHIPLEY</code>) by splitting the data:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(study.one.gen<span class="sc">$</span>mean.acc, study.one.gen<span class="sc">$</span>mean.self, <span class="at">method =</span> <span class="st">"pearson"</span>,  <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's product-moment correlation
-
-data:  study.one.gen$mean.acc and study.one.gen$mean.self
-t = 7.1936, df = 167, p-value = 2.026e-11
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
- 0.3619961 0.5937425
-sample estimates:
-      cor 
-0.4863771 </code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> all.data, <span class="fu">aes</span>(<span class="at">x =</span> HLVA, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">'lm'</span>) <span class="sc">+</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> SHIPLEY_splits, <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">labeller =</span> label_both) <span class="sc">+</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"Accuracy of understanding (mean.acc)"</span>, </span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Health literacy (HLVA)"</span>) <span class="sc">+</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() </span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
 </div>
-</div>
-<ul>
-<li><p>Q.6. What is r, the correlation coefficient?</p></li>
-<li><p>A.6. r = 0.4863771</p></li>
-<li><p>Q.7. Is the correlation significant?</p></li>
-<li><p>A.7. r is significant</p></li>
-<li><p>Q.8. What are the values for t and p for the significance test for the correlation?</p></li>
-<li><p>A.8. t = 7.1936, p-value = 2.026e-11</p></li>
-</ul>
-<p>Second, look at the correlation between <code>mean.acc</code> and <code>mean.self</code> in <code>study.two.gen</code>:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(study.two.gen<span class="sc">$</span>mean.acc, study.two.gen<span class="sc">$</span>mean.self, <span class="at">method =</span> <span class="st">"pearson"</span>,  <span class="at">alternative =</span> <span class="st">"two.sided"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-    Pearson's product-moment correlation
-
-data:  study.two.gen$mean.acc and study.two.gen$mean.self
-t = 8.4991, df = 170, p-value = 9.356e-15
-alternative hypothesis: true correlation is not equal to 0
-95 percent confidence interval:
- 0.4317217 0.6431596
-sample estimates:
-      cor 
-0.5460792 </code></pre>
-</div>
-</div>
-<ul>
-<li><p>Q.9. What is r, the correlation coefficient?</p></li>
-<li><p>A.9. r = 0.5460792</p></li>
-<li><p>Q.10. Is the correlation significant?</p></li>
-<li><p>A.10. r is significant</p></li>
-<li><p>Q.11. What are the values for t and p for the significance test for the correlation?</p></li>
-<li><p>A.11. t = 8.4991, p = 9.356e-15</p></li>
-</ul>
-<p>Now we can answer the research question:</p>
-<ol start="2" type="1">
-<li>Can people accurately evaluate whether they correctly understand written health information?</li>
-</ol>
-<ul>
-<li>Q.12. What do the correlation estimates tell you is the answer to the research question?</li>
-<li>A.12.</li>
-</ul>
-<blockquote class="blockquote">
-<p>The correlations are positive and significant, indicating that higher <code>mean.self</code> (evaluations) are associated with higher <code>mean.acc</code> (understanding), suggesting that people <em>can</em> judge their accuracy of understanding.</p>
-</blockquote>
-<ul>
-<li><p>Q.13. Can you compare the estimates, given the two datasets, to evaluate if the result in <code>study.one.gen</code> is <em>replicated</em> in <code>study.two.gen</code>?</p></li>
-<li><p>hint: Q.13. We can judge if the result in a study is replicated in another study by examining if – here – the correlation coefficient is significant in both studies <em>and</em> if the coefficient has the same size and sign in both studies.</p></li>
-<li><p>A.13. If you compare the correlation estimates from both <code>study.one.gen</code> and <code>study.two.gen</code> you can see:</p></li>
-<li><p>first, the correlation is significant in both studies;</p></li>
-<li><p>second, the correlation is positive in both studies,</p></li>
-<li><p>third, the correlation is similar in magnitude, about <span class="math inline">\(r = .5\)</span> in both studies.</p></li>
-</ul>
-<p>This suggests that the association we see in <code>study.one.gen</code> is replicated in <code>study.two.gen</code>.</p>
-</section>
-</section>
-<section id="step-5-use-a-linear-model-to-to-answer-the-research-questions-multiple-predictors" class="level2">
-<h2 class="anchored" data-anchor-id="step-5-use-a-linear-model-to-to-answer-the-research-questions-multiple-predictors">Step 5: Use a linear model to to answer the research questions – multiple predictors</h2>
-<section id="revise-practice-to-strengthen-skills-3" class="level3">
-<h3 class="anchored" data-anchor-id="revise-practice-to-strengthen-skills-3">Revise: practice to strengthen skills</h3>
-</section>
-<section id="task-11-examine-the-relation-between-outcome-mean-accuracy-mean.acc-and-multiple-predictors" class="level3">
-<h3 class="anchored" data-anchor-id="task-11-examine-the-relation-between-outcome-mean-accuracy-mean.acc-and-multiple-predictors">Task 11 – Examine the relation between outcome mean accuracy (<code>mean.acc</code>) and multiple predictors</h3>
-<p>We specify linear models including as predictors the variables:</p>
-<ul>
-<li>health literacy (<code>HLVA</code>);</li>
-<li>vocabulary (<code>SHIPLEY</code>);</li>
-<li>reading strategy (<code>FACTOR3</code>).</li>
-</ul>
-</section>
-<section id="hint-task-11-use-lm-as-you-have-done-before-see-e.g.-2023-24-psyc122-w18-how-to.r" class="level3">
-<h3 class="anchored" data-anchor-id="hint-task-11-use-lm-as-you-have-done-before-see-e.g.-2023-24-psyc122-w18-how-to.r">hint: Task 11 – Use <code>lm()</code>, as you have done before, see e.g.&nbsp;<code>2023-24-PSYC122-w18-how-to.R</code></h3>
-</section>
-<section id="task-11-examine-the-predictors-of-mean-accuracy-mean.acc-first-for-the-study.one.gen-data" class="level3">
-<h3 class="anchored" data-anchor-id="task-11-examine-the-predictors-of-mean-accuracy-mean.acc-first-for-the-study.one.gen-data">Task 11 – Examine the predictors of mean accuracy (<code>mean.acc</code>), first, for the <code>study.one.gen</code> data</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> HLVA <span class="sc">+</span> SHIPLEY <span class="sc">+</span> FACTOR3, <span class="at">data =</span> study.one.gen)</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.one.gen)
-
-Residuals:
-     Min       1Q   Median       3Q      Max 
--0.40322 -0.05349  0.01152  0.07128  0.18434 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) 0.302030   0.091257   3.310  0.00115 ** 
-HLVA        0.017732   0.003923   4.521 1.17e-05 ***
-SHIPLEY     0.005363   0.002336   2.296  0.02291 *  
-FACTOR3     0.003355   0.001264   2.654  0.00872 ** 
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 0.1033 on 165 degrees of freedom
-Multiple R-squared:  0.2474,    Adjusted R-squared:  0.2337 
-F-statistic: 18.08 on 3 and 165 DF,  p-value: 3.423e-10</code></pre>
-</div>
-</div>
-<p>Using the model estimates, we can answer the research question:</p>
-<ol type="1">
-<li>What person attributes predict success in understanding?</li>
-</ol>
-<p>Inspect the model summary, then answer the following questions:</p>
-<ul>
-<li><p>Q.14. What is the estimate for the coefficient of the effect of the predictor <code>SHIPLEY</code> in <em>this</em> model?</p></li>
-<li><p>A.14. 0.005363</p></li>
-<li><p>Q.15. Is the effect significant?</p></li>
-<li><p>A.15. It is significant, p &lt; .05</p></li>
-<li><p>Q.16. What are the values for t and p for the significance test for the coefficient?</p></li>
-<li><p>A.16. t = 2.296, p = 0.02291</p></li>
-<li><p>Q.17. Now consider the estimates for all the variables, what do you conclude is the answer to the research question – given the <code>study.one.gen</code> data:</p></li>
-</ul>
-<ol type="1">
-<li>What person attributes predict success in understanding?</li>
-</ol>
-<ul>
-<li><p>hint: Q.17. Can you report the model and the model fit statistics using the language you have been shown in the week 18 lecture?</p></li>
-<li><p>A.17.</p></li>
-</ul>
-<blockquote class="blockquote">
-<p>We fitted a linear model with mean comprehension accuracy as the outcome and health literacy (<code>HLVA</code>), reading strategy (<code>FACTOR3</code>), and vocabulary (<code>SHIPLEY</code>) as predictors. The model is significant overall, with F(3, 165) = 18.08, p &lt; .001, and explains 23% of variance (adjusted R2 = 0.23). Mean accuracy was predicted to be higher given higher scores in health literacy (<code>HLVA</code> estimate = .018, t = 4.52, p &lt; .001), vocabulary knowledge (<code>SHIPLEY</code> estimate = .005, t = 2.96, p &lt; .001), and reading strategy (<code>FACTOR3</code> estimate = .003, t = 2.65, p = .009).</p>
-</blockquote>
-</section>
-<section id="task-12-examine-the-predictors-of-mean-accuracy-mean.acc-now-for-the-study.two.gen-data" class="level3">
-<h3 class="anchored" data-anchor-id="task-12-examine-the-predictors-of-mean-accuracy-mean.acc-now-for-the-study.two.gen-data">Task 12 – Examine the predictors of mean accuracy (<code>mean.acc</code>), now, for the <code>study.two.gen</code> data</h3>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> HLVA <span class="sc">+</span> SHIPLEY <span class="sc">+</span> FACTOR3, <span class="at">data =</span> study.two.gen)</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.two.gen)
-
-Residuals:
-      Min        1Q    Median        3Q       Max 
--0.242746 -0.074188  0.003173  0.075361  0.211357 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) 0.146896   0.076325   1.925  0.05597 .  
-HLVA        0.017598   0.003589   4.904  2.2e-06 ***
-SHIPLEY     0.008397   0.001853   4.533  1.1e-05 ***
-FACTOR3     0.003087   0.001154   2.675  0.00822 ** 
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 0.097 on 168 degrees of freedom
-Multiple R-squared:  0.3636,    Adjusted R-squared:  0.3522 
-F-statistic: 31.99 on 3 and 168 DF,  p-value: &lt; 2.2e-16</code></pre>
-</div>
-</div>
-<p>Using the model estimates, we can answer the research question:</p>
-<ol type="1">
-<li>What person attributes predict success in understanding?</li>
-</ol>
-<p>Inspect the model summary, then answer the following questions:</p>
-<ul>
-<li><p>Q.18. What is the estimate for the coefficient of the effect of the predictor, <code>SHIPLEY</code>, in <em>this</em> model?</p></li>
-<li><p>A.18. 0.008397</p></li>
-<li><p>Q.19. Is the effect significant?</p></li>
-<li><p>A.19. It is significant, p &lt; .05</p></li>
-<li><p>Q.20. What are the values for t and p for the significance test for the coefficient?</p></li>
-<li><p>A.20. t = 4.533, p = 1.1e-05</p></li>
-<li><p>Q.21. Now consider the estimates for all the variables, what do you conclude is the answer to the research question – given the <code>study.two.gen</code> data:</p></li>
-</ul>
-<ol type="1">
-<li>What person attributes predict success in understanding?</li>
-</ol>
-<ul>
-<li><p>hint: Q.21. Can you report the model and the model fit statistics using the language you have been shown in the week 18 lecture?</p></li>
-<li><p>A.21.</p></li>
-</ul>
-<blockquote class="blockquote">
-<p>We fitted a linear model with mean comprehension accuracy as the outcome and health literacy (<code>HLVA</code>), reading strategy (<code>FACTOR3</code>), and vocabulary (<code>SHIPLEY</code>) as predictors. The model is significant overall, with F(3, 168) = 31.99, p &lt; .001, and explains 35% of variance (adjusted R2 = 0.35). Mean accuracy was predicted to be higher given higher scores in health literacy (HLVA estimate = .018, t = 4.90, p &lt; .001), vocabulary knowledge (SHIPLEY estimate = .008, t = 4.53, p &lt; .001), and reading strategy (FACTOR3 estimate = .003, t = 2.68, p = .008).</p>
-</blockquote>
-<ul>
-<li><p>Q.22. Are the findings from <code>study.one.gen</code> replicated in <code>study.two.gen</code>?</p></li>
-<li><p>hint: Q.22. We can judge if the results in an earlier study are replicated in another study by examining if – here – the linear model estimates are significant in both studies <em>and</em> if the coefficient estimates have the same size and sign in both studies.</p></li>
-<li><p>A.22. If you compare the linear model coefficient estimates from both <code>study.one.gen</code> and <code>study.two.gen</code> you can see:</p></li>
-<li><p>first, the <code>HLVA</code>, <code>SHIPLEY</code> and <code>FACTOR3</code> estimates are significant in both <code>study.one.gen</code> and <code>study.two.gen</code>;</p></li>
-<li><p>second, the estimates have the same sign – positive – in both studies.</p></li>
-</ul>
-<p>This suggests that the results we see in <code>study.one.gen</code> <em>are</em> replicated in <code>study.two.gen</code>.</p>
-<ul>
-<li>Q.23. Are there any important differences between the results of the two studies?</li>
-<li>hint: Q.23. You can look at the estimates but you can also use the model prediction plotting code you used before, see example code in <code>PSYC122-w18-how-to.R</code>.</li>
-<li>hint: Q.23. – Let’s focus on comparing the <code>study.one.gen</code> and <code>study.two.gen</code> estimates for the effect of vocabulary knowledge in both models: we can plot model predictions for comparison:</li>
-</ul>
-<p>First: fit the models – using different names for the different models:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>model.one <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> HLVA <span class="sc">+</span> SHIPLEY <span class="sc">+</span> FACTOR3, <span class="at">data =</span> study.one.gen)</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model.one)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.one.gen)
-
-Residuals:
-     Min       1Q   Median       3Q      Max 
--0.40322 -0.05349  0.01152  0.07128  0.18434 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) 0.302030   0.091257   3.310  0.00115 ** 
-HLVA        0.017732   0.003923   4.521 1.17e-05 ***
-SHIPLEY     0.005363   0.002336   2.296  0.02291 *  
-FACTOR3     0.003355   0.001264   2.654  0.00872 ** 
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 0.1033 on 165 degrees of freedom
-Multiple R-squared:  0.2474,    Adjusted R-squared:  0.2337 
-F-statistic: 18.08 on 3 and 165 DF,  p-value: 3.423e-10</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>model.two <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> HLVA <span class="sc">+</span> SHIPLEY <span class="sc">+</span> FACTOR3, <span class="at">data =</span> study.two.gen)</span>
-<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model.two)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = mean.acc ~ HLVA + SHIPLEY + FACTOR3, data = study.two.gen)
-
-Residuals:
-      Min        1Q    Median        3Q       Max 
--0.242746 -0.074188  0.003173  0.075361  0.211357 
-
-Coefficients:
-            Estimate Std. Error t value Pr(&gt;|t|)    
-(Intercept) 0.146896   0.076325   1.925  0.05597 .  
-HLVA        0.017598   0.003589   4.904  2.2e-06 ***
-SHIPLEY     0.008397   0.001853   4.533  1.1e-05 ***
-FACTOR3     0.003087   0.001154   2.675  0.00822 ** 
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 0.097 on 168 degrees of freedom
-Multiple R-squared:  0.3636,    Adjusted R-squared:  0.3522 
-F-statistic: 31.99 on 3 and 168 DF,  p-value: &lt; 2.2e-16</code></pre>
-</div>
-</div>
-<p>Second, create prediction plots for the SHIPLEY effect for each model:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>dat.one <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model.one, <span class="st">"SHIPLEY"</span>)</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>plot.one <span class="ot">&lt;-</span> <span class="fu">plot</span>(dat.one) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Study One"</span>)</span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>dat.two <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model.two, <span class="st">"SHIPLEY"</span>)</span>
-<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>plot.two <span class="ot">&lt;-</span> <span class="fu">plot</span>(dat.two) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Study Two"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-</section>
-</section>
-<section id="third-show-the-plots-side-by-side" class="level1">
-<h1>– Third, show the plots side-by-side</h1>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>plot.one <span class="sc">+</span> plot.two</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="PSYC122-w19-how-to_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="PSYC122-w19-how-to_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>The plot code moves through the scatterplot production steps we have seen before.</p>
+<p>The bit that is new is here:</p>
+<p><code>facet_wrap(~ SHIPLEY_splits, nrow = 1, labeller = label_both)</code> which is included to use the data split, constructed earlier.</p>
+<p>This addition allows us to show:</p>
+<ul>
+<li>the nature of the association between two variables (<code>mean.acc</code>, <code>HLVA</code>)</li>
+<li>for different values of the third variable (<code>SHIPLEY</code>)</li>
+<li>by splitting the data into three sub-sets according to <code>SHIPLEY</code> score (19-33 low, 33-37 mid, 37-40 high).</li>
+</ul>
+</section>
+<section id="questions-task-8-1" class="level4">
+<h4 class="anchored" data-anchor-id="questions-task-8-1">Questions: Task 8</h4>
+<ul>
+<li><p>Q.11. What do you notice about the distribution of <code>mean.acc</code> scores at increasing values of health literacy (<code>HLVA</code>) scores, for different sub-sets of the data: for (1.) low (2.) mid (3.) high <code>SHIPLEY</code> values?</p></li>
+<li><p>A.11. You can see that the association between <code>mean.acc</code> and <code>HLVA</code> scores appears to vary (the slope differs) given different values of the third variable (<code>SHIPLEY</code>).</p></li>
+<li><p>Q.12. What do you think the values in the grey labels at the top of the facets (the plot panels) tell us?</p></li>
+<li><p>A.12. The values tell us what values (e.g., <code>19,33</code>) are used to identify the range of <code>SHIPLEY</code> scores that have been used to define the sub-set of observations for which the plot below shows the association between <code>mean.acc</code> and <code>HLVA</code> scores.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="step-5-use-linear-models-with-multiple-predictors-to-estimate-the-effects-of-factors-as-well-as-numeric-variables" class="level2">
+<h2 class="anchored" data-anchor-id="step-5-use-linear-models-with-multiple-predictors-to-estimate-the-effects-of-factors-as-well-as-numeric-variables">Step 5: Use linear models with multiple predictors, to estimate the effects of factors as well as numeric variables</h2>
+<section id="consolidation-practice-to-strengthen-skills-1" class="level3">
+<h3 class="anchored" data-anchor-id="consolidation-practice-to-strengthen-skills-1">Consolidation: practice to strengthen skills</h3>
+<p>As we saw in weeks 17 and 18, we can use linear models to predict outcome variables.</p>
+<ul>
+<li>Linear models can include numeric variables (like <code>HLVA</code>) as predictors.</li>
+<li>Linear models can also include categorical variables or factors (like <code>EDUCATION</code>) as predictors.</li>
+</ul>
+</section>
+<section id="task-9-first-fit-a-linear-model-including-just-numeric-variables-as-predictors" class="level3">
+<h3 class="anchored" data-anchor-id="task-9-first-fit-a-linear-model-including-just-numeric-variables-as-predictors">Task 9 – First, fit a linear model including just numeric variables as predictors</h3>
+<section id="hint-task-9-we-use-the-lm-function-to-fit-a-model-with-mean.acc-as-the-outcome-and-hlva-and-shipley-as-predictors." class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-9-we-use-the-lm-function-to-fit-a-model-with-mean.acc-as-the-outcome-and-hlva-and-shipley-as-predictors.">Hint: Task 9 – We use the <code>lm()</code> function to fit a model with <code>mean.acc</code> as the outcome and <code>HLVA</code> and <code>SHIPLEY</code> as predictors.</h4>
+<p>Note that in this model:</p>
+<ul>
+<li><code>HLVA</code> is a measure of health literacy – numeric scores correspond to a test of knowledge of health-related words</li>
+<li><code>SHIPLEY</code> is a measure of vocabulary knowledge – numeric scores correspond to a test of knowledge of vocabulary</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> HLVA <span class="sc">+</span> SHIPLEY, </span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> all.data)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mean.acc ~ HLVA + SHIPLEY, data = all.data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.38048 -0.06818  0.01317  0.07672  0.30910 
+
+Coefficients:
+            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept) 0.448687   0.040197  11.162  &lt; 2e-16 ***
+HLVA        0.019132   0.002555   7.488 3.43e-13 ***
+SHIPLEY     0.005471   0.001252   4.370 1.53e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1127 on 475 degrees of freedom
+Multiple R-squared:  0.2003,    Adjusted R-squared:  0.1969 
+F-statistic: 59.48 on 2 and 475 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<p>If you look at the model summary you can answer the following questions.</p>
+<ul>
+<li><p>Q.13. What is the estimate for the coefficient of the effect of the predictor, <code>SHIPLEY</code> (vocabulary knowledge)?</p></li>
+<li><p>A.13. 0.005471</p></li>
+<li><p>Q.14. Is the effect significant?</p></li>
+<li><p>A.14. It is significant. Because <code>Pr(&gt;|t|)</code> equals <code>1.53e-05</code> for the <code>Estimate</code> of the effect of <code>SHIPLEY</code> (vocabulary knowledge): this means that p &lt; .05, and so the effect is significant.</p></li>
+</ul>
+</section>
+<section id="hint-task-9-do-you-know-how-to-intepret-numbers-like-1.53e-05-if-you-are-unsure-you-can-find-out-about-scientific-notation-here" class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-9-do-you-know-how-to-intepret-numbers-like-1.53e-05-if-you-are-unsure-you-can-find-out-about-scientific-notation-here">Hint: Task 9 – Do you know how to intepret numbers like <code>1.53e-05</code>? If you are unsure you can find out about scientific notation here:</h4>
+<p><a href="https://www.calculatorsoup.com/calculators/math/scientific-notation-converter.php" class="uri">https://www.calculatorsoup.com/calculators/math/scientific-notation-converter.php</a></p>
+<ul>
+<li><p>Q.15. What are the values for t and p for the significance test for the estimated coefficient of the effect of <code>HLVA</code> (health literacy)?</p></li>
+<li><p>A.15. t = 7.488, p = 3.43e-13</p></li>
+<li><p>Q.16. What do you conclude are the effects of the <code>SHIPLEY</code> (vocabulary knowledge) and <code>HLVA</code> (health literacy) variables, as predictors of outcome <code>mean.acc</code> (accuracy of understanding of health information)?</p></li>
+<li><p>A.16. The model slope estimates suggests that both predictors are significant, and that as both <code>SHIPLEY</code> (vocabulary knowledge) and <code>HLVA</code> (health literacy) increase, so <code>mean.acc</code> scores are predicted to increase also.</p></li>
+</ul>
+</section>
+</section>
+<section id="task-10-second-fit-a-linear-model-including-a-numeric-variable-and-a-factor-as-predictors" class="level3">
+<h3 class="anchored" data-anchor-id="task-10-second-fit-a-linear-model-including-a-numeric-variable-and-a-factor-as-predictors">Task 10 – Second, fit a linear model including a numeric variable and a factor as predictors</h3>
+<section id="hint-task-10-we-use-the-lm-function-to-fit-a-model-with-mean.acc-as-the-outcome-and-factor3-and-education-as-predictors." class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-10-we-use-the-lm-function-to-fit-a-model-with-mean.acc-as-the-outcome-and-factor3-and-education-as-predictors.">Hint: Task 10 – We use the <code>lm()</code> function to fit a model with <code>mean.acc</code> as the outcome and <code>FACTOR3</code> and <code>EDUCATION</code> as predictors.</h4>
+<p>Note that in this model:</p>
+<ul>
+<li><code>FACTOR3</code> is a measure of reading strategy – numeric scores correspond to a test of strategy awareness</li>
+<li><code>EDUCATION</code> is a measure of education level – factor levels correspond to self-reported education</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3 <span class="sc">+</span> EDUCATION, </span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> all.data)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mean.acc ~ FACTOR3 + EDUCATION, data = all.data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.42828 -0.06774  0.02177  0.09198  0.31055 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)     0.6032460  0.0415482  14.519  &lt; 2e-16 ***
+FACTOR3         0.0040226  0.0008266   4.866 1.55e-06 ***
+EDUCATIONHigher 0.0053666  0.0113014   0.475    0.635    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1229 on 475 degrees of freedom
+Multiple R-squared:  0.04889,   Adjusted R-squared:  0.04489 
+F-statistic: 12.21 on 2 and 475 DF,  p-value: 6.75e-06</code></pre>
+</div>
+</div>
+<p>If you look at the model summary you can answer the following questions.</p>
+<ul>
+<li><p>Q.17. What is the estimate for the coefficient of the effect of the predictor, <code>FACTOR3</code> (strategy)?</p></li>
+<li><p>A.17. 0.0040226</p></li>
+<li><p>Q.18. Is the effect significant?</p></li>
+<li><p>A.18. It is significant. Because <code>Pr(&gt;|t|)</code> equals <code>1.55e-06</code> for the <code>Estimate</code> of the effect of <code>FACTOR3</code> (strategy): this means that p &lt; .05, and so the effect is significant.</p></li>
+<li><p>Q.19. What are the values for t and p for the significance test for the estimated coefficient of the effect of <code>EDUCATION</code> (level, <code>Further</code> compared to <code>Higher</code>)?</p></li>
+<li><p>A.19. t = .475, p = .635</p></li>
+<li><p>Q.20. Is the effect of <code>EDUCATION</code> significant?</p></li>
+<li><p>A.20. It is not significant. Because <code>Pr(&gt;|t|)</code> equals <code>0.635</code> for the <code>Estimate</code> of the effect of <code>EDUCATION</code> level this means that p &gt; .05, and so the effect is not significant.</p></li>
+</ul>
+</section>
+<section id="hint-task-10-how-do-we-know-how-to-interpret-estimates-for-the-effects-of-factors-we-discussed-how-r-deals-with-factors-in-week-18-and-discuss-factors-and-the-effects-of-factors-in-the-week-19-lecture." class="level4">
+<h4 class="anchored" data-anchor-id="hint-task-10-how-do-we-know-how-to-interpret-estimates-for-the-effects-of-factors-we-discussed-how-r-deals-with-factors-in-week-18-and-discuss-factors-and-the-effects-of-factors-in-the-week-19-lecture.">Hint: Task 10 – How do we know how to interpret estimates for the effects of factors? We discussed how R deals with factors in week 18, and discuss factors, and the effects of factors, in the week 19 lecture.</h4>
+<ul>
+<li><p>Q.21. How should we interpret the coefficient estimate for the effect of <code>EDUCATION</code>?</p></li>
+<li><p>A.21. Though the effect is not significant, we can say that, on average, outcome <code>mean.acc</code> is 0.0053666 (slightly) higher for people with <code>Higher</code> (compared to <code>Further</code>) level of education.</p></li>
+<li><p>Q.22. What do you conclude are the effects of the <code>FACTOR3</code> (strategy) and <code>EDUCATION</code> (level, <code>Further</code> compared to <code>Higher</code>) variables, as predictors of outcome <code>mean.acc</code> (accuracy of understanding of health information)?</p></li>
+<li><p>A.22. The model slope estimates suggest that education level does not have a significant effect but that as <code>FACTOR3</code> (strategy) scores increase, so <code>mean.acc</code> scores are predicted to increase.</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="step-6-use-linear-models-with-multiple-predictors-including-interaction-effects" class="level2">
+<h2 class="anchored" data-anchor-id="step-6-use-linear-models-with-multiple-predictors-including-interaction-effects">Step 6: Use linear models with multiple predictors, including interaction effects</h2>
+<section id="introduce-make-some-new-moves-1" class="level3">
+<h3 class="anchored" data-anchor-id="introduce-make-some-new-moves-1">Introduce: make some new moves</h3>
+<p>As we saw through Task 8, it is possible that:</p>
+<ul>
+<li>the association between two variables (<code>mean.acc</code>, <code>HLVA</code>) can be different for different values of a third categorical (factor) variable (<code>EDUCATION</code>);</li>
+<li>the association between two variables (<code>mean.acc</code>, <code>HLVA</code>) can be different for different values of a third variable (<code>SHIPLEY</code>)</li>
+</ul>
+<p>While we can examine these possibilities using visualizations, we often need to conduct statistical analyses to test <em>interaction effects</em>, or the ways in which the association between two variables can be different for different levels of a third variable.</p>
+<p>We can extend linear models to include terms that allow us to test or to estimate <em>interaction effects</em>.</p>
+</section>
+<section id="task-11-center-numeric-variables-before-using-them-as-predictors" class="level3">
+<h3 class="anchored" data-anchor-id="task-11-center-numeric-variables-before-using-them-as-predictors">Task 11 – Center numeric variables before using them as predictors</h3>
+</section>
+<section id="hint-task-11" class="level3">
+<h3 class="anchored" data-anchor-id="hint-task-11">Hint: Task 11</h3>
+<p>When we include numeric variables (e.g., <code>HLVA, SHIPLEY</code>) in linear models, it can cause problems of interpretation or of estimation if we include the variables as they first come to us in datasets (as <em>raw</em> variables).</p>
+<ul>
+<li>It often helps our analyses to <em>center</em> variables on their means.</li>
+<li>Centering a variable means calculating its mean, and then subtracting that mean from every value in the variable column.</li>
+</ul>
+<p>For example, to center values of the <code>FACTOR3</code> variable, we create a new column <code>data$FACTOR3_centered</code> by first calculating the mean of the <code>data$FACTOR3</code> variable, and then subtracting that mean from every row value in <code>data$FACTOR3</code>.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>FACTOR3_centered <span class="ot">&lt;-</span> all.data<span class="sc">$</span>FACTOR3 <span class="sc">-</span> <span class="fu">mean</span>(all.data<span class="sc">$</span>FACTOR3, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Q.23. Can you check what is going on when we center variables?</li>
+<li>Q.23. Hint: You can see what is happening when you run this code by first calculating the mean for <code>FACTOR3</code></li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(all.data<span class="sc">$</span>FACTOR3, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 49.841</code></pre>
+</div>
+</div>
+<p>then looking at column values in the new <code>FACTOR3_centered</code> column, compared to the original <code>FACTOR3</code> column:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>all.data <span class="sc">%&gt;%</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(FACTOR3_centered, FACTOR3) <span class="sc">%&gt;%</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 478 × 2
+   FACTOR3_centered FACTOR3
+              &lt;dbl&gt;   &lt;dbl&gt;
+ 1           10.2        60
+ 2           -3.84       46
+ 3            1.16       51
+ 4           -4.84       45
+ 5           13.2        63
+ 6            6.16       56
+ 7            3.16       53
+ 8          -15.8        34
+ 9            5.16       55
+10           10.2        60
+11            0.159      50
+12            9.16       59
+13           11.2        61
+14           -9.84       40
+15           -6.84       43
+16            5.16       55
+17            8.16       58
+18           -7.84       42
+19           -3.84       46
+20           -2.84       47
+# ℹ 458 more rows</code></pre>
+</div>
+</div>
+<p>What is the difference between the <code>FACTOR3</code> and <code>FACTOR3_centered</code> columns?</p>
+<ul>
+<li><p>A.23. You can see that every value in the <code>FACTOR3_centered</code> column equals the value, on the same row, in the <code>FACTOR3</code> column, minus the mean for <code>FACTOR3</code>.</p></li>
+<li><p>Q.24. Can you center the variable <code>HLVA</code>?</p></li>
+<li><p>A.24. You can use the same code to center <code>HLVA</code>:</p></li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>HLVA_centered <span class="ot">&lt;-</span> all.data<span class="sc">$</span>HLVA <span class="sc">-</span> <span class="fu">mean</span>(all.data<span class="sc">$</span>HLVA, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Q.25. Can you center the variable <code>SHIPLEY</code>?</li>
+<li>A.25. You can use the same code to center <code>SHIPLEY</code>:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>SHIPLEY_centered <span class="ot">&lt;-</span> all.data<span class="sc">$</span>SHIPLEY <span class="sc">-</span> <span class="fu">mean</span>(all.data<span class="sc">$</span>SHIPLEY, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="why-are-we-learning-how-to-do-this-1" class="level4">
+<h4 class="anchored" data-anchor-id="why-are-we-learning-how-to-do-this-1">Why are we learning how to do this?</h4>
+<p>It is common in data analysis to want to transform variables before using them in analyses.</p>
+<ul>
+<li>Here, we are transforming predictor variables by centering them on their mean values.</li>
+</ul>
+<p>The practical reason for doing this transformation now is because if we use uncentered (raw) numeric variables as predictors in linear models that involve interactions the model can find it difficult to distinguish between the effects of those predictors and the effect of their interaction.</p>
+</section>
+</section>
+<section id="task-12-specify-models-to-include-interaction-effects-interactions-between-two-numeric-predictor-variables" class="level3">
+<h3 class="anchored" data-anchor-id="task-12-specify-models-to-include-interaction-effects-interactions-between-two-numeric-predictor-variables">Task 12 – Specify models to include interaction effects: interactions between two numeric predictor variables</h3>
+</section>
+<section id="hint-task-12" class="level3">
+<h3 class="anchored" data-anchor-id="hint-task-12">Hint: Task 12</h3>
+<p>We use <code>lm()</code> to specify models, as we have been doing.</p>
+<ul>
+<li>What changes is that we now use the <code>*</code> operator in our model code to specify interaction effects.</li>
+</ul>
+<p>For example, let’s suppose that we want to examine the possibility that the effect of health literacy (<code>HLVA</code>) on accuracy understanding (<code>mean.acc</code>) is different for different values of vocabulary knowledge (<code>SHIPLEY</code>).</p>
+<ul>
+<li>Here, we are considering the possibility that the association between health literacy (<code>HLVA</code>) and accuracy of understanding (<code>mean.acc</code>) <em>varies</em>.</li>
+<li>We are considering the possibility that the the association between health literacy (<code>HLVA</code>) and accuracy of understanding (<code>mean.acc</code>) is different for different groups of people.</li>
+<li>We are considering the possibility that the effect of health literacy (<code>HLVA</code>) on accuracy of understanding (<code>mean.acc</code>) is different for people who differ, also, in vocabulary knowledge (<code>SHIPLEY</code>).</li>
+</ul>
+<p>In examining the possibility that the effect of health literacy (<code>HLVA</code>) on accuracy of understanding (<code>mean.acc</code>) is different for different values of vocabulary knowledge (<code>SHIPLEY</code>), we are examining a possible <em>interaction</em> between the effects of health literacy (<code>HLVA</code>) and vocabulary knowledge (<code>SHIPLEY</code>).</p>
+<p><strong>Let’s go through this step-by-step.</strong></p>
+<p>First, consider: if we ignored the possibility of an interaction, we would fit a model with just the predictors: health literacy (<code>HLVA</code>) and vocabulary knowledge (<code>SHIPLEY</code>).</p>
+<p>We can fit the same model that we fit before (for Task 9).</p>
+<ul>
+<li>We vary the code a little, by using the centered variables we have just created:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> HLVA_centered <span class="sc">+</span> SHIPLEY_centered, </span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> all.data)</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mean.acc ~ HLVA_centered + SHIPLEY_centered, data = all.data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.38048 -0.06818  0.01317  0.07672  0.30910 
+
+Coefficients:
+                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)      0.806587   0.005155 156.453  &lt; 2e-16 ***
+HLVA_centered    0.019132   0.002555   7.488 3.43e-13 ***
+SHIPLEY_centered 0.005471   0.001252   4.370 1.53e-05 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1127 on 475 degrees of freedom
+Multiple R-squared:  0.2003,    Adjusted R-squared:  0.1969 
+F-statistic: 59.48 on 2 and 475 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<ul>
+<li><p>Q.26. Can you compare the summary of results for this model with the model, using the same (but not centered) predictors, that you fitted for Task 9 – compare the estimates, what do you see?</p></li>
+<li><p>A.26. If we compare the results of the models we can see that the estimates, t-test values and probability values are the same for <code>HLVA</code> compared to <code>HLVA_centered</code> or for <code>SHIPLEY</code> compared to <code>SHIPLEY_centered</code>.</p></li>
+<li><p>This shows that centering predictors only changes the scaling of the predictor variables so that their centers are 0.</p></li>
+</ul>
+<p>Second, now consider: we aim to test or estimate the interactions between the effects of health literacy (<code>HLVA_centered</code>) and vocabulary knowledge (<code>SHIPLEY_centered</code>).</p>
+<ul>
+<li>We vary the code a little, again, this time by separating the predictors by <code>*</code> not by <code>+</code>:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> HLVA_centered<span class="sc">*</span>SHIPLEY_centered, </span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> all.data)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mean.acc ~ HLVA_centered * SHIPLEY_centered, data = all.data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.37986 -0.06840  0.01342  0.07652  0.29872 
+
+Coefficients:
+                                Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                    0.8061527  0.0054951 146.703  &lt; 2e-16 ***
+HLVA_centered                  0.0191754  0.0025645   7.477 3.70e-13 ***
+SHIPLEY_centered               0.0055241  0.0012742   4.335 1.78e-05 ***
+HLVA_centered:SHIPLEY_centered 0.0001132  0.0004922   0.230    0.818    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1128 on 474 degrees of freedom
+Multiple R-squared:  0.2004,    Adjusted R-squared:  0.1953 
+F-statistic: 39.59 on 3 and 474 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<ul>
+<li><p>Q.27. Can you compare the summary of results for this model with the results for the previous model (which uses the same predictors but without an interaction)?</p></li>
+<li><p>What do you see?</p></li>
+<li><p>A.27. If we compare the results of the models we can see that now the summary gives us estimates for the effects of:</p></li>
+<li><p><code>HLVA_centered</code> – this is the effect of <code>HLVA_centered</code> when <code>SHIPLEY_centered</code> is 0</p></li>
+<li><p><code>SHIPLEY_centered</code> – this is the effect of <code>SHIPLEY_centered</code> when <code>HLVA_centered</code> is 0</p></li>
+<li><p><code>HLVA_centered:SHIPLEY_centered</code> – this is the interaction, and reflects the change in the effect of <code>HLVA_centered</code> on outcome <code>mean.acc</code>, given different values of <code>SHIPLEY_centered</code>.</p></li>
+<li><p>Notice that the effect of the interaction is not significant, suggesting, for this sample, that the effects of these predictor variables are at least approximately independent of each other.</p></li>
+</ul>
+<p>The <code>*</code> symbol (the <code>*</code> operator) is used here to code for a model including the effects of the two variables separated by the symbol, here, as well as the effect of the interaction between these two variables.</p>
+</section>
+<section id="task-13-specify-models-to-include-interaction-effects-interactions-between-a-numeric-predictor-variable-and-a-factor-predictor-variable" class="level3">
+<h3 class="anchored" data-anchor-id="task-13-specify-models-to-include-interaction-effects-interactions-between-a-numeric-predictor-variable-and-a-factor-predictor-variable">Task 13 – Specify models to include interaction effects: interactions between a numeric predictor variable and a factor predictor variable</h3>
+</section>
+<section id="hint-task-13-we-follow-the-same-approach-that-we-followed-through-task-12." class="level3">
+<h3 class="anchored" data-anchor-id="hint-task-13-we-follow-the-same-approach-that-we-followed-through-task-12.">Hint: Task 13 – We follow the same approach that we followed through Task 12.</h3>
+<p>Now consider: we aim to test or estimate the interactions between the effects of reading strategy (<code>FACTOR3</code>) and education level (<code>EDUCATION</code>).</p>
+<ul>
+<li>We vary the code to change the predictor variables but the structure otherwise stays the same:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered<span class="sc">*</span>EDUCATION, </span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> all.data)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = mean.acc ~ FACTOR3_centered * EDUCATION, data = all.data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.43422 -0.06111  0.01700  0.09208  0.23754 
+
+Coefficients:
+                                 Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                      0.802704   0.008193  97.977   &lt;2e-16 ***
+FACTOR3_centered                 0.002210   0.001100   2.008   0.0452 *  
+EDUCATIONHigher                  0.005249   0.011241   0.467   0.6408    
+FACTOR3_centered:EDUCATIONHigher 0.004104   0.001656   2.479   0.0135 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.1223 on 474 degrees of freedom
+Multiple R-squared:  0.06106,   Adjusted R-squared:  0.05512 
+F-statistic: 10.28 on 3 and 474 DF,  p-value: 1.45e-06</code></pre>
+</div>
+</div>
+<ul>
+<li><p>Q.28. Can you identify what effects are shown in the model summary?</p></li>
+<li><p>A.28. We can see that now the summary gives us estimates for the effects of:</p></li>
+<li><p><code>FACTOR3_centered</code> – this is the effect of reading strategy (<code>FACTOR3</code>) when <code>EDUCATION</code> level is <code>Further</code></p></li>
+<li><p><code>EDUCATIONHigher</code> – this is the effect of <code>EDUCATION</code> when <code>FACTOR3_centered</code> is 0.</p></li>
+</ul>
+<p>Note that the effect of <code>EDUCATION</code> is the estimated difference in outcome when <code>EDUCATION</code> level is <code>Further</code> (not shown, treated as the baseline) compared to when <code>EDUCATION</code> level is <code>Higher</code>.</p>
+<ul>
+<li><code>FACTOR3_centered:EDUCATIONHigher</code> – this is the interaction, and reflects the change in the effect of <code>FACTOR3_centered</code> on outcome <code>mean.acc</code>, given different values of <code>EDUCATION</code>, here, when <code>EDUCATION</code> is <code>Higher</code> instead of <code>Further</code>.</li>
+</ul>
+<section id="what-are-we-learning-here" class="level4">
+<h4 class="anchored" data-anchor-id="what-are-we-learning-here">What are we learning here?</h4>
+<p>Remember from week 18:</p>
+<p>Categorical variables or <strong>factors</strong> and reference levels.</p>
+<ul>
+<li>If you have a categorical variable like <code>EDUCATION</code> then when you use it in an analysis, R will look at the different categories (called <code>levels) e.g., here,</code>Higher, Further` and it will pick one level to be the <em>reference</em> or baseline level.</li>
+<li>The <em>reference</em> is the the level against which other levels are compared.</li>
+<li>Here, the reference level is <code>Further</code> (education) simply because, unless you tell R otherwise, it picks the level with a category name that begins earlier in the alphabet as the reference level.</li>
+</ul>
+</section>
+<section id="how-do-we-interpret-interactions" class="level4">
+<h4 class="anchored" data-anchor-id="how-do-we-interpret-interactions">How do we interpret interactions?</h4>
+<ul>
+<li>It helps to plot the effects estimates, given the model.</li>
+</ul>
+<p>We can do this in a two-step sequence, similar to the sequence we trialled through weeks 17 and 18:</p>
+<ol type="1">
+<li>First fit the model</li>
+<li>Second, use the model information to plot the predictions, given the effects</li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># -- first fit the model</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered<span class="sc">*</span>EDUCATION, </span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">data =</span> all.data)</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="co"># -- make plot</span></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_model</span>(model, <span class="at">type =</span> <span class="st">"pred"</span>, </span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>           <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"FACTOR3_centered"</span>, <span class="st">"EDUCATION"</span>)) <span class="sc">+</span></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Scale for y is already present.
+Adding another scale for y, which will replace the existing scale.</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="PSYC122-w19-how-to_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <ul>
-<li>A.23. If we compare the estimates for the coefficient of the <code>SHIPLEY</code> effect in the <code>study.one.gen</code> and <code>study.two.gen</code> models we can see that:</li>
-</ul>
-<ol type="1">
-<li>the <code>SHIPLEY</code> effect is significant in both <code>study.one.gen</code> and <code>study.two.gen</code>;<br>
-</li>
-<li>the effect is positive in both studies;</li>
-<li>the coefficient estimate is a bit bigger in <code>study.two.gen</code> than in <code>study.two.gen</code>;</li>
-<li>the prediction plots suggest the prediction line slope is steeper in <code>study.two.gen</code>.</li>
-</ol>
-<p>This suggests that the effect of vocabulary is stronger in Study Two.</p>
-<ul>
-<li>Why that is should be the target of further investigation.</li>
+<li><p>Q.29. Can you identify how the effects of reading strategy (<code>FACTOR3</code>) and education level (<code>EDUCATION</code>) interact, given the model results summary and this plot?</p></li>
+<li><p>A.29. The plot, and the estimate for the interaction <code>FACTOR3_centered:EDUCATIONHigher</code>, together show that the coefficient for the effect of reading strategy (<code>FACTOR3_centered</code>) is larger (the slope is steeper) when <code>EDUCATION</code> is <code>Higher</code> instead of <code>Further</code>.</p></li>
+<li><p>Notice that, for this sample, the interaction is not significant, suggesting that there is no difference between education levels in the relative effectiveness of reading strategy.</p></li>
 </ul>
 
 
+</section>
+</section>
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
