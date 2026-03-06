@@ -100,28 +100,28 @@ You can view video recordings of the lectures using Panopto, by clicking on the 
 
 - Anybody who has the link should be able to view the video.
 
-1. **Introduction** (15 minutes): Overview of the classes; introduction to key ideas -- the real challenge in psychological science (people vary, effects vary, results vary) -- variation, uncertainty, and working with the limits of samples.
+1. **Introduction** (9 minutes): Overview of the classes; introduction to key ideas -- the real challenge in psychological science (people vary, effects vary, results vary) -- variation, uncertainty, and working with the limits of samples.
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0e35b8e9-dd4f-4fb7-a88e-afbe010b250a&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=00bbc559-eb90-4766-a209-b40100c7ac33&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC122-lm-interactions-1-of-4"></iframe>
 ```
 
-2. **The Clearly Understood project -- questions and analyses** (15 minutes): Critical thinking -- what effects can vary, how can effects vary, theoretical reasons motivating why effects might vary.
+2. **The Clearly Understood project -- questions and analyses** (11 minutes): Critical thinking -- what effects can vary, how can effects vary, theoretical reasons motivating why effects might vary.
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=6d20197c-6559-463b-8672-afbe011e2371&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=2aabd1ed-c276-454b-bef8-b40100cc98c9&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC122-lm-interactions-2-of-4"></iframe>
 ```
 
-3. **Coding models with interactions** (15 minutes): Revision on linear models as methods to predict outcomes; coding linear models with multiple predictors; models that do or do not include interactions; identifying the key information in the results from models including interactions; and making sense of what we see.
+3. **Coding models with interactions** (19 minutes): Revision on linear models as methods to predict outcomes; coding linear models with multiple predictors; models that do or do not include interactions; identifying the key information in the results from models including interactions; and making sense of what we see.
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=22d3bf7c-1710-4a75-9a73-b12b00b502b1&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=4767b039-415a-4878-b048-b40100d74247&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC122-lm-interactions-3-of-4"></iframe>
 ```
 
-4. **Interactions between numeric variables and factors** (15 minutes): Working with factors, the difference between numeric variables and factors, as predictors in linear models; the effects of factors in linear models; coding, plotting, interpreting and evaluating the effects of interactions between numeric variables and factors. Summary of key lessons.
+4. **Interactions between numeric variables and factors** (13 minutes): Working with factors, the difference between numeric variables and factors, as predictors in linear models; the effects of factors in linear models; coding, plotting, interpreting and evaluating the effects of interactions between numeric variables and factors. Summary of key lessons.
 
 ```{=html}
-<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=3633c4c0-e364-4d8f-beba-b12b00bb18f7&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=8531b025-7f1e-4ec3-9f67-b40100dd88fd&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="PSYC122-lm-interactions-4-of-4"></iframe>
 ```
 
 ::: callout-tip
