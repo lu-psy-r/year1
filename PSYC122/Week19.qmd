@@ -1249,7 +1249,7 @@ When you have completed all of the lab content, you may want to check your answe
 ::: callout-tip
 The `.Rmd` script containing all code and all answers for each task and each question will be made available after the final lab session has taken place.
 
-<!-- - You can download the script by clicking on the link:  [PSYC122-w19-workbook-answers.Rmd](data/week19/PSYC122-w19-workbook-answers.Rmd). -->
+- You can download the script by clicking on the link:  [PSYC122-w19-workbook-answers.Rmd](data/week19/PSYC122-w19-workbook-answers.Rmd).
 :::
 
 We set out answers information on the Week 19 questions, below.
@@ -1261,353 +1261,353 @@ You can see all the code and all the answers in `PSYC122-w19-workbook-answers.Rm
 
 ### Answers {#sec-wk19-lab-activities-answers-information}
 
-<!-- ::: callout-tip -->
-<!-- Click on a box to reveal the answer. -->
-<!-- ::: -->
+::: callout-tip
+Click on a box to reveal the answer.
+:::
 
-<!-- #### Questions {#sec-wk19-lab-activities-2-questions-answers} -->
+#### Questions {#sec-wk19-lab-activities-2-questions-answers}
 
-<!-- >**Q.1.** What is the median of the `FACTOR3` variable in the dataset? -->
+>**Q.1.** What is the median of the `FACTOR3` variable in the dataset?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.1. You can use the `summary()` function to calculate that the median `FACTOR3` score is 50.00 -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.1. You can use the `summary()` function to calculate that the median `FACTOR3` score is 50.00
+:::
 
-<!-- >**Q.2.** Draw a histogram of the `FACTOR3` distribution. -->
+>**Q.2.** Draw a histogram of the `FACTOR3` distribution.
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing data-set and variable names to get the right plots: -->
+::: {.callout-note icon=false collapse="true"}
+- A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing data-set and variable names to get the right plots:
 
-<!-- ```{r} -->
-<!-- ggplot(data = all.data, aes(x = FACTOR3)) + -->
-<!--   geom_histogram(binwidth = 1) + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "Reading strategy (FACTOR3)", y = "frequency count") -->
-<!-- ``` -->
-<!-- ::: -->
+```{r}
+ggplot(data = all.data, aes(x = FACTOR3)) +
+  geom_histogram(binwidth = 1) +
+  theme_bw() +
+  labs(x = "Reading strategy (FACTOR3)", y = "frequency count")
+```
+:::
 
-<!-- >**Q.3.** Examine the reading strategy (`FACTOR3`) scores distribution: what does it tell you about the variation in the reading strategies of the participants in the sample? -->
+>**Q.3.** Examine the reading strategy (`FACTOR3`) scores distribution: what does it tell you about the variation in the reading strategies of the participants in the sample?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.3. The histogram shows that most participants present scores varying somewhere between 40-60 but there is a "long tail" of smaller numbers of participants with low or very low scores on the reading strategy (`FACTOR3`) measure. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.3. The histogram shows that most participants present scores varying somewhere between 40-60 but there is a "long tail" of smaller numbers of participants with low or very low scores on the reading strategy (`FACTOR3`) measure.
+:::
 
-<!-- >**Q.4.** What kind of variable is `GENDER`? -->
+>**Q.4.** What kind of variable is `GENDER`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.4. Use the same functions but change the variable name: -->
+::: {.callout-note icon=false collapse="true"}
+- A.4. Use the same functions but change the variable name:
 
-<!-- ```{r} -->
-<!-- is.factor(all.data$GENDER) -->
-<!-- is.numeric(all.data$GENDER) -->
-<!-- ``` -->
-<!-- ::: -->
+```{r}
+is.factor(all.data$GENDER)
+is.numeric(all.data$GENDER)
+```
+:::
 
-<!-- >**Q.5.** What do the `is._()` functions tell us? -->
+>**Q.5.** What do the `is._()` functions tell us?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.5. The function calls tell us that `GENDER` is not a factor and is not numeric. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.5. The function calls tell us that `GENDER` is not a factor and is not numeric.
+:::
 
-<!-- >**Q.6.** If you look at the `summary()` results, what does it tell you the `Class` of `GENDER` is? -->
+>**Q.6.** If you look at the `summary()` results, what does it tell you the `Class` of `GENDER` is?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.6. The summary shows that `GENDER` is identified as `Class: character`. -->
+::: {.callout-note icon=false collapse="true"}
+- A.6. The summary shows that `GENDER` is identified as `Class: character`.
 
-<!-- You can check this by doing the `is._()` test again. -->
+You can check this by doing the `is._()` test again.
 
-<!-- ```{r} -->
-<!-- is.character(all.data$GENDER) -->
-<!-- ``` -->
-<!-- ::: -->
+```{r}
+is.character(all.data$GENDER)
+```
+:::
 
-<!-- >**Q.7.** How do you change the class or type of the variable `GENDER`? Change the variable's type (`Class`) into a factor. -->
+>**Q.7.** How do you change the class or type of the variable `GENDER`? Change the variable's type (`Class`) into a factor.
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.7. The `as._()` functions can be used to change variable type, as you have done -->
-<!-- previously (e.g., in week 16). -->
+::: {.callout-note icon=false collapse="true"}
+- A.7. The `as._()` functions can be used to change variable type, as you have done
+previously (e.g., in week 16).
 
-<!-- ```{r} -->
-<!-- all.data$GENDER <- as.factor(all.data$GENDER) -->
-<!-- ``` -->
-<!-- ::: -->
+```{r}
+all.data$GENDER <- as.factor(all.data$GENDER)
+```
+:::
 
-<!-- >**Q.8.** What does a `summary()` tell us about the self-reported `GENDER` of participants in the `all.data` sample? -->
+>**Q.8.** What does a `summary()` tell us about the self-reported `GENDER` of participants in the `all.data` sample?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ```{r} -->
-<!-- summary(all.data) -->
-<!-- ``` -->
+::: {.callout-note icon=false collapse="true"}
+```{r}
+summary(all.data)
+```
 
-<!-- - A.8. The summary will show how many different participants report themselves -->
-<!-- as belonging to one of the different `GENDER` self-identification groups in the corresponding survey question. -->
+- A.8. The summary will show how many different participants report themselves
+as belonging to one of the different `GENDER` self-identification groups in the corresponding survey question.
 
-<!-- You should see counts of the numbers of people in different `GENDER` level -->
-<!-- groups in the total survey sample: -->
+You should see counts of the numbers of people in different `GENDER` level
+groups in the total survey sample:
 
-<!-- GENDER -->
-<!-- Female:323 -->
-<!-- Male  :155 -->
+GENDER
+Female:323
+Male  :155
 
-<!-- We can see that 323 participants identified themselves as `Female` in the survey. -->
+We can see that 323 participants identified themselves as `Female` in the survey.
 
-<!-- We can see that 155 participants identified themselves as `Male` in the survey. -->
-<!-- ::: -->
+We can see that 155 participants identified themselves as `Male` in the survey.
+:::
 
-<!-- Create a scatterplot to examine the association between two numeric variables. -->
+Create a scatterplot to examine the association between two numeric variables.
 
-<!-- Here, we can look at the potential association between variation in reading strategy (using the `FACTOR3` measure) and accuracy of understanding of health information (`mean.acc`). -->
+Here, we can look at the potential association between variation in reading strategy (using the `FACTOR3` measure) and accuracy of understanding of health information (`mean.acc`).
 
-<!-- >**Q.9.** What do you notice about the distribution of `mean.acc` scores at -->
-<!-- increasing values of reading strategy (`FACTOR3`) scores? -->
+>**Q.9.** What do you notice about the distribution of `mean.acc` scores at
+increasing values of reading strategy (`FACTOR3`) scores?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.9. The scatterplot shows that, for increasing reading strategy (`FACTOR3`) scores, there is an associated rise in accuracy of understanding (`mean.acc`) scores. -->
+::: {.callout-note icon=false collapse="true"}
+- A.9. The scatterplot shows that, for increasing reading strategy (`FACTOR3`) scores, there is an associated rise in accuracy of understanding (`mean.acc`) scores.
 
-<!-- - There is extra credit for noticing that variation in outcome and predictor variable values is not tightly coupled: it is possible to have low reading strategy (`FACTOR3`) scores and high accuracy of understanding (`mean.acc`). -->
-<!-- ::: -->
+- There is extra credit for noticing that variation in outcome and predictor variable values is not tightly coupled: it is possible to have low reading strategy (`FACTOR3`) scores and high accuracy of understanding (`mean.acc`).
+:::
 
-<!-- Create a scatterplot to examine the association between two numeric variables, showing how the association is different for different values of a third variable. -->
+Create a scatterplot to examine the association between two numeric variables, showing how the association is different for different values of a third variable.
 
-<!-- We can show how the association between two variables (`mean.acc`, `FACTOR3`) is different for different values of a third, categorical (factor), variable (`GENDER`) by splitting the plot so that we see the association for different levels of `GENDER`. -->
+We can show how the association between two variables (`mean.acc`, `FACTOR3`) is different for different values of a third, categorical (factor), variable (`GENDER`) by splitting the plot so that we see the association for different levels of `GENDER`.
 
-<!-- >**Q.10.** What do you notice about the distribution of `mean.acc` scores at -->
-<!-- increasing values of reading strategy (`FACTOR3`) scores, for different sub-sets of the data: for people with `Female` or `Male` `GENDER` coding? -->
+>**Q.10.** What do you notice about the distribution of `mean.acc` scores at
+increasing values of reading strategy (`FACTOR3`) scores, for different sub-sets of the data: for people with `Female` or `Male` `GENDER` coding?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.10. You can see that the association between `mean.acc` and `FACTOR3` scores appears to be *mostly* similar for different `GENDER` codes. -->
+::: {.callout-note icon=false collapse="true"}
+- A.10. You can see that the association between `mean.acc` and `FACTOR3` scores appears to be *mostly* similar for different `GENDER` codes.
 
-<!-- - The distribution of scores is different: we have more `Female` participants; their scores vary more widely. -->
-<!-- - But the trend is similar overall: the trend line representing the association between `mean.acc` and `FACTOR3` looks similar such that for both sub-groups in the sample, increasing `FACTOR3` scores are associated with higher `mean.acc` scores. -->
-<!-- ::: -->
+- The distribution of scores is different: we have more `Female` participants; their scores vary more widely.
+- But the trend is similar overall: the trend line representing the association between `mean.acc` and `FACTOR3` looks similar such that for both sub-groups in the sample, increasing `FACTOR3` scores are associated with higher `mean.acc` scores.
+:::
 
-<!-- We can show how the association between two variables (`mean.acc`, `FACTOR3`) is different for different values of a third numeric variable (`HLVA`) by splitting the dataset. -->
+We can show how the association between two variables (`mean.acc`, `FACTOR3`) is different for different values of a third numeric variable (`HLVA`) by splitting the dataset.
 
-<!-- Here, we are first creating a new variable to code for (distinguish between) different sub-sets of observations (different rows in the dataset) based on `HLVA` scores, and then second drawing different plots based on different subsets. -->
+Here, we are first creating a new variable to code for (distinguish between) different sub-sets of observations (different rows in the dataset) based on `HLVA` scores, and then second drawing different plots based on different subsets.
 
-<!-- >**Q.11.** What do you notice about the distribution of `mean.acc` scores at -->
-<!-- increasing values of reading strategy (`FACTOR3`) scores, for different sub-sets of the data: for (1.) low (2.) mid (3.) high `HLVA` values? -->
+>**Q.11.** What do you notice about the distribution of `mean.acc` scores at
+increasing values of reading strategy (`FACTOR3`) scores, for different sub-sets of the data: for (1.) low (2.) mid (3.) high `HLVA` values?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.11. You can see that the association between `mean.acc` and `FACTOR3` scores appears to vary (the slope differs) given different values of the third variable (`HLVA`). -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.11. You can see that the association between `mean.acc` and `FACTOR3` scores appears to vary (the slope differs) given different values of the third variable (`HLVA`).
+:::
 
-<!-- >**Q.12.** What do you think the values in the grey labels at the top of the facets (the plot panels) tell us? -->
+>**Q.12.** What do you think the values in the grey labels at the top of the facets (the plot panels) tell us?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.12. The values tell us what values (e.g., `2,8`) are used to identify the range of `HLVA` scores that have been used to define the sub-set of observations for which the plot below shows the association between `mean.acc` and `FACTOR3` scores. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.12. The values tell us what values (e.g., `2,8`) are used to identify the range of `HLVA` scores that have been used to define the sub-set of observations for which the plot below shows the association between `mean.acc` and `FACTOR3` scores.
+:::
 
-<!-- We use the `lm()` function to fit a model with `mean.acc` as the outcome and `FACTOR3` and `HLVA` as predictors. -->
+We use the `lm()` function to fit a model with `mean.acc` as the outcome and `FACTOR3` and `HLVA` as predictors.
 
-<!-- >**Q.13.** What is the estimate for the coefficient of the effect of the predictor, `FACTOR3` (reading strategy)? -->
+>**Q.13.** What is the estimate for the coefficient of the effect of the predictor, `FACTOR3` (reading strategy)?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.13. 0.0023489 -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.13. 0.0023489
+:::
 
-<!-- >**Q.14.** Is the effect significant? -->
+>**Q.14.** Is the effect significant?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.14. It is significant. Because `Pr(>|t|)` equals `0.003` for the `Estimate` of the effect of `FACTOR3` (reading strategy): this means that  p < .05, and so the effect is significant. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.14. It is significant. Because `Pr(>|t|)` equals `0.003` for the `Estimate` of the effect of `FACTOR3` (reading strategy): this means that  p < .05, and so the effect is significant.
+:::
 
-<!-- >**Q.15.** What are the values for t and p for the significance test for the  -->
-<!-- estimated coefficient of the effect of `HLVA` (health literacy)? -->
+>**Q.15.** What are the values for t and p for the significance test for the
+estimated coefficient of the effect of `HLVA` (health literacy)?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.15. t = 8.861, p = <2e-16 -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.15. t = 8.861, p = <2e-16
+:::
 
-<!-- >**Q.16.** What do you conclude are the effects of the `FACTOR3` (reading strategy) and `HLVA` (health literacy) variables, as predictors of outcome `mean.acc` (accuracy of understanding of health information)? -->
+>**Q.16.** What do you conclude are the effects of the `FACTOR3` (reading strategy) and `HLVA` (health literacy) variables, as predictors of outcome `mean.acc` (accuracy of understanding of health information)?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.16. The model slope estimates suggests that both predictors are significant, and that as both `FACTOR3` (reading strategy) and `HLVA` (health literacy) increase, so `mean.acc` scores are predicted to increase also. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.16. The model slope estimates suggests that both predictors are significant, and that as both `FACTOR3` (reading strategy) and `HLVA` (health literacy) increase, so `mean.acc` scores are predicted to increase also.
+:::
 
-<!-- We use the `lm()` function to fit a model with `mean.acc` as the outcome and `FACTOR3` and `GENDER` as predictors. -->
+We use the `lm()` function to fit a model with `mean.acc` as the outcome and `FACTOR3` and `GENDER` as predictors.
 
-<!-- >**Q.17.** What is the estimate for the coefficient of the effect of the predictor, `FACTOR3` (strategy)? -->
+>**Q.17.** What is the estimate for the coefficient of the effect of the predictor, `FACTOR3` (strategy)?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.17. 0.0040658 -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.17. 0.0040658
+:::
 
-<!-- >**Q.18.** Is the effect significant? -->
+>**Q.18.** Is the effect significant?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.18. It is significant. Because `Pr(>|t|)` equals `1.1e-06` for the `Estimate` of the effect of `FACTOR3` (strategy): this means that  p < .05, and so the effect is significant. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.18. It is significant. Because `Pr(>|t|)` equals `1.1e-06` for the `Estimate` of the effect of `FACTOR3` (strategy): this means that  p < .05, and so the effect is significant.
+:::
 
-<!-- >**Q.19.** What are the values for t and p for the significance test for the  -->
-<!-- estimated coefficient of the effect of `GENDER` (level, `Male` compared to `Female`)? -->
+>**Q.19.** What are the values for t and p for the significance test for the
+estimated coefficient of the effect of `GENDER` (level, `Male` compared to `Female`)?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.19. t = -0.901, p = 0.368 -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.19. t = -0.901, p = 0.368
+:::
 
-<!-- >**Q.20.** Is the effect of `GENDER` significant? -->
+>**Q.20.** Is the effect of `GENDER` significant?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.20. It is not significant. Because `Pr(>|t|)` equals `0.635` for the `Estimate` of the effect of `GENDER` this means that  p > .05, and so the effect is not significant. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.20. It is not significant. Because `Pr(>|t|)` equals `0.635` for the `Estimate` of the effect of `GENDER` this means that  p > .05, and so the effect is not significant.
+:::
 
-<!-- >**Q.21.** How should we interpret the coefficient estimate for the effect of `GENDER`? -->
+>**Q.21.** How should we interpret the coefficient estimate for the effect of `GENDER`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.21. Though the effect is not significant, we can say that, on average, outcome `mean.acc` is -0.0108184 (slightly) lower for `Male` compared to `Female` coded people. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.21. Though the effect is not significant, we can say that, on average, outcome `mean.acc` is -0.0108184 (slightly) lower for `Male` compared to `Female` coded people.
+:::
 
-<!-- >**Q.22.** What do you conclude are the effects of the `FACTOR3` (strategy) and `GENDER` (`Female` compared to `Male`) variables, as predictors of outcome `mean.acc` (accuracy of understanding of health information)? -->
+>**Q.22.** What do you conclude are the effects of the `FACTOR3` (strategy) and `GENDER` (`Female` compared to `Male`) variables, as predictors of outcome `mean.acc` (accuracy of understanding of health information)?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.22. The model slope estimates suggest that gender does not have a significant effect but that as `FACTOR3` (strategy) scores increase, so `mean.acc` scores are predicted to increase. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.22. The model slope estimates suggest that gender does not have a significant effect but that as `FACTOR3` (strategy) scores increase, so `mean.acc` scores are predicted to increase.
+:::
 
-<!-- We can extend linear models to include terms that allow us to test or to estimate *interaction effects*. -->
+We can extend linear models to include terms that allow us to test or to estimate *interaction effects*.
 
-<!-- When we include numeric variables (e.g., `FACTOR3, HLVA, SHIPLEY`) in linear models, it can cause problems of interpretation or of estimation if we include the variables as they first come to us in datasets (as *raw* variables). -->
+When we include numeric variables (e.g., `FACTOR3, HLVA, SHIPLEY`) in linear models, it can cause problems of interpretation or of estimation if we include the variables as they first come to us in datasets (as *raw* variables).
 
-<!-- - It often helps our analyses to *center* variables on their means. -->
-<!-- - Centering a variable means calculating its mean, and then subtracting that mean from every value in the variable column. -->
+- It often helps our analyses to *center* variables on their means.
+- Centering a variable means calculating its mean, and then subtracting that mean from every value in the variable column.
 
-<!-- >**Q.23.** Can you check what is going on when we center variables? -->
+>**Q.23.** Can you check what is going on when we center variables?
 
-<!-- - Q.23. Hint: You can see what is happening when you run this code by first calculating the mean for `HLVA` -->
+- Q.23. Hint: You can see what is happening when you run this code by first calculating the mean for `HLVA`
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- mean(all.data$HLVA, na.rm = TRUE) -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+mean(all.data$HLVA, na.rm = TRUE)
+```
+:::
 
-<!-- then looking at column values in the new `HLVA_centered` column, compared to the original `HLVA` column: -->
+then looking at column values in the new `HLVA_centered` column, compared to the original `HLVA` column:
 
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- all.data %>% -->
-<!--   select(HLVA_centered, HLVA) %>% -->
-<!--   print(n = 20) -->
-<!-- ``` -->
-<!-- ::: -->
+:::{.callout-tip collapse="true"}
+## Code
+```{r}
+all.data %>%
+  select(HLVA_centered, HLVA) %>%
+  print(n = 20)
+```
+:::
 
-<!-- What is the difference between the `HLVA` and `HLVA_centered` columns? -->
+What is the difference between the `HLVA` and `HLVA_centered` columns?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.23. You can see that every value in the `HLVA_centered` column equals the value, on the same row, in the `HLVA` column, minus the mean for `HLVA`. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+- A.23. You can see that every value in the `HLVA_centered` column equals the value, on the same row, in the `HLVA` column, minus the mean for `HLVA`.
+:::
 
-<!-- >**Q.24.** Can you center the variable `FACTOR3`? -->
+>**Q.24.** Can you center the variable `FACTOR3`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.24. You can use the same code to center `FACTOR3`: -->
+::: {.callout-note icon=false collapse="true"}
+- A.24. You can use the same code to center `FACTOR3`:
 
-<!-- ```{r} -->
-<!-- all.data$FACTOR3_centered <- all.data$FACTOR3 - mean(all.data$FACTOR3, na.rm = TRUE) -->
-<!-- ``` -->
-<!-- ::: -->
+```{r}
+all.data$FACTOR3_centered <- all.data$FACTOR3 - mean(all.data$FACTOR3, na.rm = TRUE)
+```
+:::
 
-<!-- >**Q.25.** Can you center the variable `SHIPLEY`? -->
+>**Q.25.** Can you center the variable `SHIPLEY`?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.25. You can use the same code to center `SHIPLEY`: -->
+::: {.callout-note icon=false collapse="true"}
+- A.25. You can use the same code to center `SHIPLEY`:
 
-<!-- ```{r} -->
-<!-- all.data$SHIPLEY_centered <- all.data$SHIPLEY - mean(all.data$SHIPLEY, na.rm = TRUE) -->
-<!-- ``` -->
-<!-- ::: -->
+```{r}
+all.data$SHIPLEY_centered <- all.data$SHIPLEY - mean(all.data$SHIPLEY, na.rm = TRUE)
+```
+:::
 
-<!-- Specify models to include interaction effects: interactions between two numeric predictor variables. -->
+Specify models to include interaction effects: interactions between two numeric predictor variables.
 
-<!-- For example, let's suppose that we want to examine the possibility that the effect of reading strategy (`FACTOR3`) on accuracy understanding (`mean.acc`) is different for different values of health literacy (`HLVA`). -->
+For example, let's suppose that we want to examine the possibility that the effect of reading strategy (`FACTOR3`) on accuracy understanding (`mean.acc`) is different for different values of health literacy (`HLVA`).
 
-<!-- First, consider: if we ignored the possibility of an interaction, we would fit a model with just the predictors: reading strategy (`FACTOR3`) and health literacy (`HLVA`). -->
+First, consider: if we ignored the possibility of an interaction, we would fit a model with just the predictors: reading strategy (`FACTOR3`) and health literacy (`HLVA`).
 
-<!-- We can fit the same model that we fit before (for Task 9). -->
+We can fit the same model that we fit before (for Task 9).
 
-<!-- - We vary the code a little, by using the centered variables we have just created. -->
+- We vary the code a little, by using the centered variables we have just created.
 
-<!-- >**Q.26.** Can you compare the summary of results for this model with the model, using the same (but not centered) predictors, that you fitted for Task 9 -- compare the estimates, what do you see? -->
+>**Q.26.** Can you compare the summary of results for this model with the model, using the same (but not centered) predictors, that you fitted for Task 9 -- compare the estimates, what do you see?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.26. If we compare the results of the models we can see that the estimates, t-test values and probability values are the same for `FACTOR3` compared to `FACTOR3_centered` or for `HLVA` compared to `HLVA_centered`. -->
+::: {.callout-note icon=false collapse="true"}
+- A.26. If we compare the results of the models we can see that the estimates, t-test values and probability values are the same for `FACTOR3` compared to `FACTOR3_centered` or for `HLVA` compared to `HLVA_centered`.
 
-<!-- - This shows that centering predictors only changes the scaling of the predictor variables so that their centers are 0. -->
-<!-- ::: -->
+- This shows that centering predictors only changes the scaling of the predictor variables so that their centers are 0.
+:::
 
-<!-- Second, now consider: we aim to test or estimate the interactions between the effects of reading strategy (`FACTOR3_centered`) and health literacy (`HLVA_centered`). -->
+Second, now consider: we aim to test or estimate the interactions between the effects of reading strategy (`FACTOR3_centered`) and health literacy (`HLVA_centered`).
 
-<!-- - We vary the code a little, again, this time by separating the predictors by `*` not by `+`. -->
+- We vary the code a little, again, this time by separating the predictors by `*` not by `+`.
 
-<!-- >**Q.27.** Can you compare the summary of results for this model with the results for the previous model (which uses the same predictors but without an interaction)? -->
+>**Q.27.** Can you compare the summary of results for this model with the results for the previous model (which uses the same predictors but without an interaction)?
 
-<!-- - What do you see? -->
+- What do you see?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.27. If we compare the results of the models we can see that now the summary gives us estimates for the effects of: -->
+::: {.callout-note icon=false collapse="true"}
+- A.27. If we compare the results of the models we can see that now the summary gives us estimates for the effects of:
 
-<!-- - `FACTOR3_centered` -- this is the effect of `SHIPLEY_centered` when `HLVA_centered` is 0 -->
-<!-- - `HLVA_centered` -- this is the effect of `HLVA_centered` when `FACTOR3_centered` is 0 -->
-<!-- - `FACTOR3_centered*HLVA_centered` -- this is the interaction, and reflects the change in the effect of `FACTOR3_centered` on outcome `mean.acc`, given different values of `HLVA_centered`. -->
+- `FACTOR3_centered` -- this is the effect of `SHIPLEY_centered` when `HLVA_centered` is 0
+- `HLVA_centered` -- this is the effect of `HLVA_centered` when `FACTOR3_centered` is 0
+- `FACTOR3_centered*HLVA_centered` -- this is the interaction, and reflects the change in the effect of `FACTOR3_centered` on outcome `mean.acc`, given different values of `HLVA_centered`.
 
-<!-- - Notice that the effect of the interaction is not significant but that the results suggest a very slight tendencey for the effect of reading strategy to be different (smaller) for increasing values of `HLVA_centered`. -->
-<!-- ::: -->
+- Notice that the effect of the interaction is not significant but that the results suggest a very slight tendencey for the effect of reading strategy to be different (smaller) for increasing values of `HLVA_centered`.
+:::
 
-<!-- Plot model predictions to help with interpretation of interaction effects. -->
+Plot model predictions to help with interpretation of interaction effects.
 
-<!-- - It helps to plot model predictions, given the effects estimates that we derive from our sample using the linear model. -->
+- It helps to plot model predictions, given the effects estimates that we derive from our sample using the linear model.
 
-<!-- >**Q.28.** Can you compare the summary of results for the model with the plot to develop an interpretation of the `FACTOR3_centered*HLVA_centered` interaction? -->
+>**Q.28.** Can you compare the summary of results for the model with the plot to develop an interpretation of the `FACTOR3_centered*HLVA_centered` interaction?
 
-<!-- - What do you see? -->
+- What do you see?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.28. We can build an interpretation in steps: -->
+::: {.callout-note icon=false collapse="true"}
+- A.28. We can build an interpretation in steps:
 
-<!-- - If we look at the coefficient estimate for the `FACTOR3_centered*HLVA_centered` interaction, we can see that it is negative (`-0.0005713`). -->
-<!-- - If we look at the plot of the model predictions, we can see that there are three slopes for the `FACTOR3_centered` effect, one each for different levels of `HLVA_centered`: for `HLVA_centered` = -2.19; `HLVA_centered` = 0; and `HLVA_centered` = 2.19. -->
+- If we look at the coefficient estimate for the `FACTOR3_centered*HLVA_centered` interaction, we can see that it is negative (`-0.0005713`).
+- If we look at the plot of the model predictions, we can see that there are three slopes for the `FACTOR3_centered` effect, one each for different levels of `HLVA_centered`: for `HLVA_centered` = -2.19; `HLVA_centered` = 0; and `HLVA_centered` = 2.19.
 
-<!-- - Notice that the steepness of the slope of the `FACTOR3_centered` effect decreases (the slope gets less steep) from `HLVA_centered` = -2.19 to `HLVA_centered` = 2.19. -->
-<!-- - This tells us that the interaction (though not significant) operates so that the effect of reading strategy tends to be smaller for people with higher levels of health literacy. -->
+- Notice that the steepness of the slope of the `FACTOR3_centered` effect decreases (the slope gets less steep) from `HLVA_centered` = -2.19 to `HLVA_centered` = 2.19.
+- This tells us that the interaction (though not significant) operates so that the effect of reading strategy tends to be smaller for people with higher levels of health literacy.
 
-<!-- - Returning to the fact that the coefficient estimate for the `FACTOR3_centered*HLVA_centered` is negative, we can now understand that it is negative because the interaction operates so that the slope of the `FACTOR3_centered` gets smaller as scores on `HLVA_centered` increase. -->
-<!-- ::: -->
+- Returning to the fact that the coefficient estimate for the `FACTOR3_centered*HLVA_centered` is negative, we can now understand that it is negative because the interaction operates so that the slope of the `FACTOR3_centered` gets smaller as scores on `HLVA_centered` increase.
+:::
 
-<!-- Specify models to include interaction effects: interactions between a numeric predictor variable and a factor predictor variable -->
+Specify models to include interaction effects: interactions between a numeric predictor variable and a factor predictor variable
 
-<!-- Now consider: we aim to test or estimate the interactions between the effects of reading strategy (`FACTOR3`) and gender (`GENDER`). -->
+Now consider: we aim to test or estimate the interactions between the effects of reading strategy (`FACTOR3`) and gender (`GENDER`).
 
-<!-- - We can vary the code to change the predictor variables but the structure otherwise stays the same: how should we do this? -->
+- We can vary the code to change the predictor variables but the structure otherwise stays the same: how should we do this?
 
-<!-- >**Q.29.** Can you identify what effects are shown in the model summary? -->
+>**Q.29.** Can you identify what effects are shown in the model summary?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.29. We can see that now the summary gives us estimates for the effects of: -->
+::: {.callout-note icon=false collapse="true"}
+- A.29. We can see that now the summary gives us estimates for the effects of:
 
-<!-- - `FACTOR3_centered` -- this is the effect of reading strategy (`FACTOR3`) when `GENDER` level is `Female` -->
-<!-- - `GENDERMale` -- this is the effect of `GENDER` when `FACTOR3_centered` is 0. -->
+- `FACTOR3_centered` -- this is the effect of reading strategy (`FACTOR3`) when `GENDER` level is `Female`
+- `GENDERMale` -- this is the effect of `GENDER` when `FACTOR3_centered` is 0.
 
-<!-- Note that the effect of `GENDER` is the estimated difference in outcome when `GENDER` level is `Female` (not shown, treated as the baseline) compared to when `GENDER` level is `Male`. -->
+Note that the effect of `GENDER` is the estimated difference in outcome when `GENDER` level is `Female` (not shown, treated as the baseline) compared to when `GENDER` level is `Male`.
 
-<!-- - `FACTOR3_centered*GENDER` -- this is the interaction, and reflects the change in the effect of `FACTOR3_centered` on outcome `mean.acc`, given different values of `GENDER`, here, when `GENDER` is `Male` instead of `Female`. -->
-<!-- ::: -->
+- `FACTOR3_centered*GENDER` -- this is the interaction, and reflects the change in the effect of `FACTOR3_centered` on outcome `mean.acc`, given different values of `GENDER`, here, when `GENDER` is `Male` instead of `Female`.
+:::
 
-<!-- - It helps to plot the effects estimates, given the model. -->
+- It helps to plot the effects estimates, given the model.
 
-<!-- We can do this in a two-step sequence, similar to the sequence we trialled through weeks 17 and 18: -->
+We can do this in a two-step sequence, similar to the sequence we trialled through weeks 17 and 18:
 
-<!-- 1. First fit the model -->
-<!-- 2. Second, use the model information to plot the predictions, given the effects -->
+1. First fit the model
+2. Second, use the model information to plot the predictions, given the effects
 
-<!-- >**Q.30.** Can you identify how the effects of reading strategy (`FACTOR3`) and gender (`GENDER`) interact, given the model results summary and this plot? -->
+>**Q.30.** Can you identify how the effects of reading strategy (`FACTOR3`) and gender (`GENDER`) interact, given the model results summary and this plot?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.30. The plot, and the estimate for the interaction `FACTOR3_centered:GENDERMale`, together show that the coefficient for the effect of reading strategy (`FACTOR3_centered`) is slightly larger (the slope is slightly steeper) when `GENDER` is `Male` instead of `Female. -->
+::: {.callout-note icon=false collapse="true"}
+- A.30. The plot, and the estimate for the interaction `FACTOR3_centered:GENDERMale`, together show that the coefficient for the effect of reading strategy (`FACTOR3_centered`) is slightly larger (the slope is slightly steeper) when `GENDER` is `Male` instead of `Female.
 
-<!-- - Notice that, for this sample, the interaction is not significant, suggesting that there is no difference between genders in the relative effectiveness of reading strategy. -->
-<!-- ::: -->
+- Notice that, for this sample, the interaction is not significant, suggesting that there is no difference between genders in the relative effectiveness of reading strategy.
+:::
 
 ## Online Q&A {#sec-wk19-lab-Q-and-A}
 
