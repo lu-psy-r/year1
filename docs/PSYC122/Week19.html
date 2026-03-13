@@ -2336,7 +2336,9 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <p>The <code>.Rmd</code> script containing all code and all answers for each task and each question will be made available after the final lab session has taken place.</p>
-<!-- - You can download the script by clicking on the link:  [PSYC122-w19-workbook-answers.Rmd](data/week19/PSYC122-w19-workbook-answers.Rmd). -->
+<ul>
+<li>You can download the script by clicking on the link: <a href="../PSYC122/data/week19/PSYC122-w19-workbook-answers.html">PSYC122-w19-workbook-answers.Rmd</a>.</li>
+</ul>
 </div>
 </div>
 <p>We set out answers information on the Week 19 questions, below.</p>
@@ -2347,235 +2349,868 @@ Tip
 <p>You can see all the code and all the answers in <code>PSYC122-w19-workbook-answers.Rmd</code>.</p>
 <section id="sec-wk19-lab-activities-answers-information" class="level3">
 <h3 class="anchored" data-anchor-id="sec-wk19-lab-activities-answers-information">Answers</h3>
-<!-- ::: callout-tip -->
-<!-- Click on a box to reveal the answer. -->
-<!-- ::: -->
-<!-- #### Questions {#sec-wk19-lab-activities-2-questions-answers} -->
-<!-- >**Q.1.** What is the median of the `FACTOR3` variable in the dataset? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.1. You can use the `summary()` function to calculate that the median `FACTOR3` score is 50.00 -->
-<!-- ::: -->
-<!-- >**Q.2.** Draw a histogram of the `FACTOR3` distribution. -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.2. You can write the code using the same code structure you have been shown e.g. in `PSYC122-w19-how-to.Rmd` but changing data-set and variable names to get the right plots: -->
-<!-- ```{r} -->
-<!-- ggplot(data = all.data, aes(x = FACTOR3)) + -->
-<!--   geom_histogram(binwidth = 1) + -->
-<!--   theme_bw() + -->
-<!--   labs(x = "Reading strategy (FACTOR3)", y = "frequency count") -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- >**Q.3.** Examine the reading strategy (`FACTOR3`) scores distribution: what does it tell you about the variation in the reading strategies of the participants in the sample? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.3. The histogram shows that most participants present scores varying somewhere between 40-60 but there is a "long tail" of smaller numbers of participants with low or very low scores on the reading strategy (`FACTOR3`) measure. -->
-<!-- ::: -->
-<!-- >**Q.4.** What kind of variable is `GENDER`? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.4. Use the same functions but change the variable name: -->
-<!-- ```{r} -->
-<!-- is.factor(all.data$GENDER) -->
-<!-- is.numeric(all.data$GENDER) -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- >**Q.5.** What do the `is._()` functions tell us? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.5. The function calls tell us that `GENDER` is not a factor and is not numeric. -->
-<!-- ::: -->
-<!-- >**Q.6.** If you look at the `summary()` results, what does it tell you the `Class` of `GENDER` is? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.6. The summary shows that `GENDER` is identified as `Class: character`. -->
-<!-- You can check this by doing the `is._()` test again. -->
-<!-- ```{r} -->
-<!-- is.character(all.data$GENDER) -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- >**Q.7.** How do you change the class or type of the variable `GENDER`? Change the variable's type (`Class`) into a factor. -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.7. The `as._()` functions can be used to change variable type, as you have done -->
-<!-- previously (e.g., in week 16). -->
-<!-- ```{r} -->
-<!-- all.data$GENDER <- as.factor(all.data$GENDER) -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- >**Q.8.** What does a `summary()` tell us about the self-reported `GENDER` of participants in the `all.data` sample? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ```{r} -->
-<!-- summary(all.data) -->
-<!-- ``` -->
-<!-- - A.8. The summary will show how many different participants report themselves -->
-<!-- as belonging to one of the different `GENDER` self-identification groups in the corresponding survey question. -->
-<!-- You should see counts of the numbers of people in different `GENDER` level -->
-<!-- groups in the total survey sample: -->
-<!-- GENDER -->
-<!-- Female:323 -->
-<!-- Male  :155 -->
-<!-- We can see that 323 participants identified themselves as `Female` in the survey. -->
-<!-- We can see that 155 participants identified themselves as `Male` in the survey. -->
-<!-- ::: -->
-<!-- Create a scatterplot to examine the association between two numeric variables. -->
-<!-- Here, we can look at the potential association between variation in reading strategy (using the `FACTOR3` measure) and accuracy of understanding of health information (`mean.acc`). -->
-<!-- >**Q.9.** What do you notice about the distribution of `mean.acc` scores at -->
-<!-- increasing values of reading strategy (`FACTOR3`) scores? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.9. The scatterplot shows that, for increasing reading strategy (`FACTOR3`) scores, there is an associated rise in accuracy of understanding (`mean.acc`) scores. -->
-<!-- - There is extra credit for noticing that variation in outcome and predictor variable values is not tightly coupled: it is possible to have low reading strategy (`FACTOR3`) scores and high accuracy of understanding (`mean.acc`). -->
-<!-- ::: -->
-<!-- Create a scatterplot to examine the association between two numeric variables, showing how the association is different for different values of a third variable. -->
-<!-- We can show how the association between two variables (`mean.acc`, `FACTOR3`) is different for different values of a third, categorical (factor), variable (`GENDER`) by splitting the plot so that we see the association for different levels of `GENDER`. -->
-<!-- >**Q.10.** What do you notice about the distribution of `mean.acc` scores at -->
-<!-- increasing values of reading strategy (`FACTOR3`) scores, for different sub-sets of the data: for people with `Female` or `Male` `GENDER` coding? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.10. You can see that the association between `mean.acc` and `FACTOR3` scores appears to be *mostly* similar for different `GENDER` codes. -->
-<!-- - The distribution of scores is different: we have more `Female` participants; their scores vary more widely. -->
-<!-- - But the trend is similar overall: the trend line representing the association between `mean.acc` and `FACTOR3` looks similar such that for both sub-groups in the sample, increasing `FACTOR3` scores are associated with higher `mean.acc` scores. -->
-<!-- ::: -->
-<!-- We can show how the association between two variables (`mean.acc`, `FACTOR3`) is different for different values of a third numeric variable (`HLVA`) by splitting the dataset. -->
-<!-- Here, we are first creating a new variable to code for (distinguish between) different sub-sets of observations (different rows in the dataset) based on `HLVA` scores, and then second drawing different plots based on different subsets. -->
-<!-- >**Q.11.** What do you notice about the distribution of `mean.acc` scores at -->
-<!-- increasing values of reading strategy (`FACTOR3`) scores, for different sub-sets of the data: for (1.) low (2.) mid (3.) high `HLVA` values? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.11. You can see that the association between `mean.acc` and `FACTOR3` scores appears to vary (the slope differs) given different values of the third variable (`HLVA`). -->
-<!-- ::: -->
-<!-- >**Q.12.** What do you think the values in the grey labels at the top of the facets (the plot panels) tell us? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.12. The values tell us what values (e.g., `2,8`) are used to identify the range of `HLVA` scores that have been used to define the sub-set of observations for which the plot below shows the association between `mean.acc` and `FACTOR3` scores. -->
-<!-- ::: -->
-<!-- We use the `lm()` function to fit a model with `mean.acc` as the outcome and `FACTOR3` and `HLVA` as predictors. -->
-<!-- >**Q.13.** What is the estimate for the coefficient of the effect of the predictor, `FACTOR3` (reading strategy)? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.13. 0.0023489 -->
-<!-- ::: -->
-<!-- >**Q.14.** Is the effect significant? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.14. It is significant. Because `Pr(>|t|)` equals `0.003` for the `Estimate` of the effect of `FACTOR3` (reading strategy): this means that  p < .05, and so the effect is significant. -->
-<!-- ::: -->
-<!-- >**Q.15.** What are the values for t and p for the significance test for the  -->
-<!-- estimated coefficient of the effect of `HLVA` (health literacy)? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.15. t = 8.861, p = <2e-16 -->
-<!-- ::: -->
-<!-- >**Q.16.** What do you conclude are the effects of the `FACTOR3` (reading strategy) and `HLVA` (health literacy) variables, as predictors of outcome `mean.acc` (accuracy of understanding of health information)? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.16. The model slope estimates suggests that both predictors are significant, and that as both `FACTOR3` (reading strategy) and `HLVA` (health literacy) increase, so `mean.acc` scores are predicted to increase also. -->
-<!-- ::: -->
-<!-- We use the `lm()` function to fit a model with `mean.acc` as the outcome and `FACTOR3` and `GENDER` as predictors. -->
-<!-- >**Q.17.** What is the estimate for the coefficient of the effect of the predictor, `FACTOR3` (strategy)? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.17. 0.0040658 -->
-<!-- ::: -->
-<!-- >**Q.18.** Is the effect significant? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.18. It is significant. Because `Pr(>|t|)` equals `1.1e-06` for the `Estimate` of the effect of `FACTOR3` (strategy): this means that  p < .05, and so the effect is significant. -->
-<!-- ::: -->
-<!-- >**Q.19.** What are the values for t and p for the significance test for the  -->
-<!-- estimated coefficient of the effect of `GENDER` (level, `Male` compared to `Female`)? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.19. t = -0.901, p = 0.368 -->
-<!-- ::: -->
-<!-- >**Q.20.** Is the effect of `GENDER` significant? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.20. It is not significant. Because `Pr(>|t|)` equals `0.635` for the `Estimate` of the effect of `GENDER` this means that  p > .05, and so the effect is not significant. -->
-<!-- ::: -->
-<!-- >**Q.21.** How should we interpret the coefficient estimate for the effect of `GENDER`? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.21. Though the effect is not significant, we can say that, on average, outcome `mean.acc` is -0.0108184 (slightly) lower for `Male` compared to `Female` coded people. -->
-<!-- ::: -->
-<!-- >**Q.22.** What do you conclude are the effects of the `FACTOR3` (strategy) and `GENDER` (`Female` compared to `Male`) variables, as predictors of outcome `mean.acc` (accuracy of understanding of health information)? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.22. The model slope estimates suggest that gender does not have a significant effect but that as `FACTOR3` (strategy) scores increase, so `mean.acc` scores are predicted to increase. -->
-<!-- ::: -->
-<!-- We can extend linear models to include terms that allow us to test or to estimate *interaction effects*. -->
-<!-- When we include numeric variables (e.g., `FACTOR3, HLVA, SHIPLEY`) in linear models, it can cause problems of interpretation or of estimation if we include the variables as they first come to us in datasets (as *raw* variables). -->
-<!-- - It often helps our analyses to *center* variables on their means. -->
-<!-- - Centering a variable means calculating its mean, and then subtracting that mean from every value in the variable column. -->
-<!-- >**Q.23.** Can you check what is going on when we center variables? -->
-<!-- - Q.23. Hint: You can see what is happening when you run this code by first calculating the mean for `HLVA` -->
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- mean(all.data$HLVA, na.rm = TRUE) -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- then looking at column values in the new `HLVA_centered` column, compared to the original `HLVA` column: -->
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- ```{r} -->
-<!-- all.data %>% -->
-<!--   select(HLVA_centered, HLVA) %>% -->
-<!--   print(n = 20) -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- What is the difference between the `HLVA` and `HLVA_centered` columns? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.23. You can see that every value in the `HLVA_centered` column equals the value, on the same row, in the `HLVA` column, minus the mean for `HLVA`. -->
-<!-- ::: -->
-<!-- >**Q.24.** Can you center the variable `FACTOR3`? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.24. You can use the same code to center `FACTOR3`: -->
-<!-- ```{r} -->
-<!-- all.data$FACTOR3_centered <- all.data$FACTOR3 - mean(all.data$FACTOR3, na.rm = TRUE) -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- >**Q.25.** Can you center the variable `SHIPLEY`? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.25. You can use the same code to center `SHIPLEY`: -->
-<!-- ```{r} -->
-<!-- all.data$SHIPLEY_centered <- all.data$SHIPLEY - mean(all.data$SHIPLEY, na.rm = TRUE) -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- Specify models to include interaction effects: interactions between two numeric predictor variables. -->
-<!-- For example, let's suppose that we want to examine the possibility that the effect of reading strategy (`FACTOR3`) on accuracy understanding (`mean.acc`) is different for different values of health literacy (`HLVA`). -->
-<!-- First, consider: if we ignored the possibility of an interaction, we would fit a model with just the predictors: reading strategy (`FACTOR3`) and health literacy (`HLVA`). -->
-<!-- We can fit the same model that we fit before (for Task 9). -->
-<!-- - We vary the code a little, by using the centered variables we have just created. -->
-<!-- >**Q.26.** Can you compare the summary of results for this model with the model, using the same (but not centered) predictors, that you fitted for Task 9 -- compare the estimates, what do you see? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.26. If we compare the results of the models we can see that the estimates, t-test values and probability values are the same for `FACTOR3` compared to `FACTOR3_centered` or for `HLVA` compared to `HLVA_centered`. -->
-<!-- - This shows that centering predictors only changes the scaling of the predictor variables so that their centers are 0. -->
-<!-- ::: -->
-<!-- Second, now consider: we aim to test or estimate the interactions between the effects of reading strategy (`FACTOR3_centered`) and health literacy (`HLVA_centered`). -->
-<!-- - We vary the code a little, again, this time by separating the predictors by `*` not by `+`. -->
-<!-- >**Q.27.** Can you compare the summary of results for this model with the results for the previous model (which uses the same predictors but without an interaction)? -->
-<!-- - What do you see? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.27. If we compare the results of the models we can see that now the summary gives us estimates for the effects of: -->
-<!-- - `FACTOR3_centered` -- this is the effect of `SHIPLEY_centered` when `HLVA_centered` is 0 -->
-<!-- - `HLVA_centered` -- this is the effect of `HLVA_centered` when `FACTOR3_centered` is 0 -->
-<!-- - `FACTOR3_centered*HLVA_centered` -- this is the interaction, and reflects the change in the effect of `FACTOR3_centered` on outcome `mean.acc`, given different values of `HLVA_centered`. -->
-<!-- - Notice that the effect of the interaction is not significant but that the results suggest a very slight tendencey for the effect of reading strategy to be different (smaller) for increasing values of `HLVA_centered`. -->
-<!-- ::: -->
-<!-- Plot model predictions to help with interpretation of interaction effects. -->
-<!-- - It helps to plot model predictions, given the effects estimates that we derive from our sample using the linear model. -->
-<!-- >**Q.28.** Can you compare the summary of results for the model with the plot to develop an interpretation of the `FACTOR3_centered*HLVA_centered` interaction? -->
-<!-- - What do you see? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.28. We can build an interpretation in steps: -->
-<!-- - If we look at the coefficient estimate for the `FACTOR3_centered*HLVA_centered` interaction, we can see that it is negative (`-0.0005713`). -->
-<!-- - If we look at the plot of the model predictions, we can see that there are three slopes for the `FACTOR3_centered` effect, one each for different levels of `HLVA_centered`: for `HLVA_centered` = -2.19; `HLVA_centered` = 0; and `HLVA_centered` = 2.19. -->
-<!-- - Notice that the steepness of the slope of the `FACTOR3_centered` effect decreases (the slope gets less steep) from `HLVA_centered` = -2.19 to `HLVA_centered` = 2.19. -->
-<!-- - This tells us that the interaction (though not significant) operates so that the effect of reading strategy tends to be smaller for people with higher levels of health literacy. -->
-<!-- - Returning to the fact that the coefficient estimate for the `FACTOR3_centered*HLVA_centered` is negative, we can now understand that it is negative because the interaction operates so that the slope of the `FACTOR3_centered` gets smaller as scores on `HLVA_centered` increase. -->
-<!-- ::: -->
-<!-- Specify models to include interaction effects: interactions between a numeric predictor variable and a factor predictor variable -->
-<!-- Now consider: we aim to test or estimate the interactions between the effects of reading strategy (`FACTOR3`) and gender (`GENDER`). -->
-<!-- - We can vary the code to change the predictor variables but the structure otherwise stays the same: how should we do this? -->
-<!-- >**Q.29.** Can you identify what effects are shown in the model summary? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.29. We can see that now the summary gives us estimates for the effects of: -->
-<!-- - `FACTOR3_centered` -- this is the effect of reading strategy (`FACTOR3`) when `GENDER` level is `Female` -->
-<!-- - `GENDERMale` -- this is the effect of `GENDER` when `FACTOR3_centered` is 0. -->
-<!-- Note that the effect of `GENDER` is the estimated difference in outcome when `GENDER` level is `Female` (not shown, treated as the baseline) compared to when `GENDER` level is `Male`. -->
-<!-- - `FACTOR3_centered*GENDER` -- this is the interaction, and reflects the change in the effect of `FACTOR3_centered` on outcome `mean.acc`, given different values of `GENDER`, here, when `GENDER` is `Male` instead of `Female`. -->
-<!-- ::: -->
-<!-- - It helps to plot the effects estimates, given the model. -->
-<!-- We can do this in a two-step sequence, similar to the sequence we trialled through weeks 17 and 18: -->
-<!-- 1. First fit the model -->
-<!-- 2. Second, use the model information to plot the predictions, given the effects -->
-<!-- >**Q.30.** Can you identify how the effects of reading strategy (`FACTOR3`) and gender (`GENDER`) interact, given the model results summary and this plot? -->
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- - A.30. The plot, and the estimate for the interaction `FACTOR3_centered:GENDERMale`, together show that the coefficient for the effect of reading strategy (`FACTOR3_centered`) is slightly larger (the slope is slightly steeper) when `GENDER` is `Male` instead of `Female. -->
-<!-- - Notice that, for this sample, the interaction is not significant, suggesting that there is no difference between genders in the relative effectiveness of reading strategy. -->
-<!-- ::: -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Click on a box to reveal the answer.</p>
+</div>
+</div>
+<section id="sec-wk19-lab-activities-2-questions-answers" class="level4">
+<h4 class="anchored" data-anchor-id="sec-wk19-lab-activities-2-questions-answers">Questions</h4>
+<blockquote class="blockquote">
+<p><strong>Q.1.</strong> What is the median of the <code>FACTOR3</code> variable in the dataset?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-53-contents" aria-controls="callout-53" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-53" class="callout-53-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.1. You can use the <code>summary()</code> function to calculate that the median <code>FACTOR3</code> score is 50.00</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.2.</strong> Draw a histogram of the <code>FACTOR3</code> distribution.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-54-contents" aria-controls="callout-54" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-54" class="callout-54-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.2. You can write the code using the same code structure you have been shown e.g.&nbsp;in <code>PSYC122-w19-how-to.Rmd</code> but changing data-set and variable names to get the right plots:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> all.data, <span class="fu">aes</span>(<span class="at">x =</span> FACTOR3)) <span class="sc">+</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Reading strategy (FACTOR3)"</span>, <span class="at">y =</span> <span class="st">"frequency count"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Week19_files/figure-html/unnamed-chunk-25-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.3.</strong> Examine the reading strategy (<code>FACTOR3</code>) scores distribution: what does it tell you about the variation in the reading strategies of the participants in the sample?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-55-contents" aria-controls="callout-55" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-55" class="callout-55-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.3. The histogram shows that most participants present scores varying somewhere between 40-60 but there is a “long tail” of smaller numbers of participants with low or very low scores on the reading strategy (<code>FACTOR3</code>) measure.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.4.</strong> What kind of variable is <code>GENDER</code>?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-56-contents" aria-controls="callout-56" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-56" class="callout-56-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.4. Use the same functions but change the variable name:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.factor</span>(all.data<span class="sc">$</span>GENDER)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.numeric</span>(all.data<span class="sc">$</span>GENDER)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.5.</strong> What do the <code>is._()</code> functions tell us?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-57-contents" aria-controls="callout-57" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-57" class="callout-57-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.5. The function calls tell us that <code>GENDER</code> is not a factor and is not numeric.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.6.</strong> If you look at the <code>summary()</code> results, what does it tell you the <code>Class</code> of <code>GENDER</code> is?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-58-contents" aria-controls="callout-58" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-58" class="callout-58-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.6. The summary shows that <code>GENDER</code> is identified as <code>Class: character</code>.</li>
+</ul>
+<p>You can check this by doing the <code>is._()</code> test again.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">is.character</span>(all.data<span class="sc">$</span>GENDER)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.7.</strong> How do you change the class or type of the variable <code>GENDER</code>? Change the variable’s type (<code>Class</code>) into a factor.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-59-contents" aria-controls="callout-59" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-59" class="callout-59-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.7. The <code>as._()</code> functions can be used to change variable type, as you have done previously (e.g., in week 16).</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>GENDER <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(all.data<span class="sc">$</span>GENDER)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.8.</strong> What does a <code>summary()</code> tell us about the self-reported <code>GENDER</code> of participants in the <code>all.data</code> sample?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-60-contents" aria-controls="callout-60" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-60" class="callout-60-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(all.data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> participant_ID        mean.acc        mean.self        study          
+ Length:478         Min.   :0.3600   Min.   :2.250   Length:478        
+ Class :character   1st Qu.:0.7500   1st Qu.:6.200   Class :character  
+ Mode  :character   Median :0.8300   Median :7.200   Mode  :character  
+                    Mean   :0.8066   Mean   :6.967                     
+                    3rd Qu.:0.9000   3rd Qu.:7.910                     
+                    Max.   :1.0000   Max.   :9.000                     
+      AGE           SHIPLEY           HLVA           FACTOR3         GENDER   
+ Min.   :18.00   Min.   :19.00   Min.   : 2.000   Min.   : 9.00   Female:323  
+ 1st Qu.:21.00   1st Qu.:31.00   1st Qu.: 7.000   1st Qu.:46.00   Male  :155  
+ Median :29.00   Median :35.00   Median : 9.000   Median :50.00               
+ Mean   :32.85   Mean   :34.19   Mean   : 8.929   Mean   :49.84               
+ 3rd Qu.:43.00   3rd Qu.:38.00   3rd Qu.:10.000   3rd Qu.:55.00               
+ Max.   :76.00   Max.   :40.00   Max.   :14.000   Max.   :63.00               
+  EDUCATION          ETHNICITY          HLVA_splits  HLVA_centered     
+ Length:478         Length:478         [2,8]  :194   Min.   :-6.92887  
+ Class :character   Class :character   (8,10] :172   1st Qu.:-1.92887  
+ Mode  :character   Mode  :character   (10,14]:112   Median : 0.07113  
+                                                     Mean   : 0.00000  
+                                                     3rd Qu.: 1.07113  
+                                                     Max.   : 5.07113  
+ FACTOR3_centered 
+ Min.   :-40.841  
+ 1st Qu.: -3.841  
+ Median :  0.159  
+ Mean   :  0.000  
+ 3rd Qu.:  5.159  
+ Max.   : 13.159  </code></pre>
+</div>
+</div>
+<ul>
+<li>A.8. The summary will show how many different participants report themselves as belonging to one of the different <code>GENDER</code> self-identification groups in the corresponding survey question.</li>
+</ul>
+<p>You should see counts of the numbers of people in different <code>GENDER</code> level groups in the total survey sample:</p>
+<p>GENDER Female:323 Male :155</p>
+<p>We can see that 323 participants identified themselves as <code>Female</code> in the survey.</p>
+<p>We can see that 155 participants identified themselves as <code>Male</code> in the survey.</p>
+</div>
+</div>
+</div>
+<p>Create a scatterplot to examine the association between two numeric variables.</p>
+<p>Here, we can look at the potential association between variation in reading strategy (using the <code>FACTOR3</code> measure) and accuracy of understanding of health information (<code>mean.acc</code>).</p>
+<blockquote class="blockquote">
+<p><strong>Q.9.</strong> What do you notice about the distribution of <code>mean.acc</code> scores at increasing values of reading strategy (<code>FACTOR3</code>) scores?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-61-contents" aria-controls="callout-61" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-61" class="callout-61-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>A.9. The scatterplot shows that, for increasing reading strategy (<code>FACTOR3</code>) scores, there is an associated rise in accuracy of understanding (<code>mean.acc</code>) scores.</p></li>
+<li><p>There is extra credit for noticing that variation in outcome and predictor variable values is not tightly coupled: it is possible to have low reading strategy (<code>FACTOR3</code>) scores and high accuracy of understanding (<code>mean.acc</code>).</p></li>
+</ul>
+</div>
+</div>
+</div>
+<p>Create a scatterplot to examine the association between two numeric variables, showing how the association is different for different values of a third variable.</p>
+<p>We can show how the association between two variables (<code>mean.acc</code>, <code>FACTOR3</code>) is different for different values of a third, categorical (factor), variable (<code>GENDER</code>) by splitting the plot so that we see the association for different levels of <code>GENDER</code>.</p>
+<blockquote class="blockquote">
+<p><strong>Q.10.</strong> What do you notice about the distribution of <code>mean.acc</code> scores at increasing values of reading strategy (<code>FACTOR3</code>) scores, for different sub-sets of the data: for people with <code>Female</code> or <code>Male</code> <code>GENDER</code> coding?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-62-contents" aria-controls="callout-62" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-62" class="callout-62-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>A.10. You can see that the association between <code>mean.acc</code> and <code>FACTOR3</code> scores appears to be <em>mostly</em> similar for different <code>GENDER</code> codes.</p></li>
+<li><p>The distribution of scores is different: we have more <code>Female</code> participants; their scores vary more widely.</p></li>
+<li><p>But the trend is similar overall: the trend line representing the association between <code>mean.acc</code> and <code>FACTOR3</code> looks similar such that for both sub-groups in the sample, increasing <code>FACTOR3</code> scores are associated with higher <code>mean.acc</code> scores.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<p>We can show how the association between two variables (<code>mean.acc</code>, <code>FACTOR3</code>) is different for different values of a third numeric variable (<code>HLVA</code>) by splitting the dataset.</p>
+<p>Here, we are first creating a new variable to code for (distinguish between) different sub-sets of observations (different rows in the dataset) based on <code>HLVA</code> scores, and then second drawing different plots based on different subsets.</p>
+<blockquote class="blockquote">
+<p><strong>Q.11.</strong> What do you notice about the distribution of <code>mean.acc</code> scores at increasing values of reading strategy (<code>FACTOR3</code>) scores, for different sub-sets of the data: for (1.) low (2.) mid (3.) high <code>HLVA</code> values?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-63-contents" aria-controls="callout-63" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-63" class="callout-63-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.11. You can see that the association between <code>mean.acc</code> and <code>FACTOR3</code> scores appears to vary (the slope differs) given different values of the third variable (<code>HLVA</code>).</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.12.</strong> What do you think the values in the grey labels at the top of the facets (the plot panels) tell us?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-64-contents" aria-controls="callout-64" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-64" class="callout-64-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.12. The values tell us what values (e.g., <code>2,8</code>) are used to identify the range of <code>HLVA</code> scores that have been used to define the sub-set of observations for which the plot below shows the association between <code>mean.acc</code> and <code>FACTOR3</code> scores.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>We use the <code>lm()</code> function to fit a model with <code>mean.acc</code> as the outcome and <code>FACTOR3</code> and <code>HLVA</code> as predictors.</p>
+<blockquote class="blockquote">
+<p><strong>Q.13.</strong> What is the estimate for the coefficient of the effect of the predictor, <code>FACTOR3</code> (reading strategy)?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-65-contents" aria-controls="callout-65" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-65" class="callout-65-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.13. 0.0023489</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.14.</strong> Is the effect significant?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-66-contents" aria-controls="callout-66" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-66" class="callout-66-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.14. It is significant. Because <code>Pr(&gt;|t|)</code> equals <code>0.003</code> for the <code>Estimate</code> of the effect of <code>FACTOR3</code> (reading strategy): this means that p &lt; .05, and so the effect is significant.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.15.</strong> What are the values for t and p for the significance test for the estimated coefficient of the effect of <code>HLVA</code> (health literacy)?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-67-contents" aria-controls="callout-67" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-67" class="callout-67-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.15. t = 8.861, p = &lt;2e-16</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.16.</strong> What do you conclude are the effects of the <code>FACTOR3</code> (reading strategy) and <code>HLVA</code> (health literacy) variables, as predictors of outcome <code>mean.acc</code> (accuracy of understanding of health information)?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-68-contents" aria-controls="callout-68" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-68" class="callout-68-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.16. The model slope estimates suggests that both predictors are significant, and that as both <code>FACTOR3</code> (reading strategy) and <code>HLVA</code> (health literacy) increase, so <code>mean.acc</code> scores are predicted to increase also.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>We use the <code>lm()</code> function to fit a model with <code>mean.acc</code> as the outcome and <code>FACTOR3</code> and <code>GENDER</code> as predictors.</p>
+<blockquote class="blockquote">
+<p><strong>Q.17.</strong> What is the estimate for the coefficient of the effect of the predictor, <code>FACTOR3</code> (strategy)?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-69-contents" aria-controls="callout-69" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-69" class="callout-69-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.17. 0.0040658</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.18.</strong> Is the effect significant?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-70-contents" aria-controls="callout-70" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-70" class="callout-70-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.18. It is significant. Because <code>Pr(&gt;|t|)</code> equals <code>1.1e-06</code> for the <code>Estimate</code> of the effect of <code>FACTOR3</code> (strategy): this means that p &lt; .05, and so the effect is significant.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.19.</strong> What are the values for t and p for the significance test for the estimated coefficient of the effect of <code>GENDER</code> (level, <code>Male</code> compared to <code>Female</code>)?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-71-contents" aria-controls="callout-71" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-71" class="callout-71-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.19. t = -0.901, p = 0.368</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.20.</strong> Is the effect of <code>GENDER</code> significant?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-72-contents" aria-controls="callout-72" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-72" class="callout-72-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.20. It is not significant. Because <code>Pr(&gt;|t|)</code> equals <code>0.635</code> for the <code>Estimate</code> of the effect of <code>GENDER</code> this means that p &gt; .05, and so the effect is not significant.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.21.</strong> How should we interpret the coefficient estimate for the effect of <code>GENDER</code>?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-73-contents" aria-controls="callout-73" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-73" class="callout-73-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.21. Though the effect is not significant, we can say that, on average, outcome <code>mean.acc</code> is -0.0108184 (slightly) lower for <code>Male</code> compared to <code>Female</code> coded people.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.22.</strong> What do you conclude are the effects of the <code>FACTOR3</code> (strategy) and <code>GENDER</code> (<code>Female</code> compared to <code>Male</code>) variables, as predictors of outcome <code>mean.acc</code> (accuracy of understanding of health information)?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-74-contents" aria-controls="callout-74" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-74" class="callout-74-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.22. The model slope estimates suggest that gender does not have a significant effect but that as <code>FACTOR3</code> (strategy) scores increase, so <code>mean.acc</code> scores are predicted to increase.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>We can extend linear models to include terms that allow us to test or to estimate <em>interaction effects</em>.</p>
+<p>When we include numeric variables (e.g., <code>FACTOR3, HLVA, SHIPLEY</code>) in linear models, it can cause problems of interpretation or of estimation if we include the variables as they first come to us in datasets (as <em>raw</em> variables).</p>
+<ul>
+<li>It often helps our analyses to <em>center</em> variables on their means.</li>
+<li>Centering a variable means calculating its mean, and then subtracting that mean from every value in the variable column.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Q.23.</strong> Can you check what is going on when we center variables?</p>
+</blockquote>
+<ul>
+<li>Q.23. Hint: You can see what is happening when you run this code by first calculating the mean for <code>HLVA</code></li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-75-contents" aria-controls="callout-75" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-75" class="callout-75-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(all.data<span class="sc">$</span>HLVA, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8.92887</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>then looking at column values in the new <code>HLVA_centered</code> column, compared to the original <code>HLVA</code> column:</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-76-contents" aria-controls="callout-76" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-76" class="callout-76-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>all.data <span class="sc">%&gt;%</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(HLVA_centered, HLVA) <span class="sc">%&gt;%</span></span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="at">n =</span> <span class="dv">20</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 478 × 2
+   HLVA_centered  HLVA
+           &lt;dbl&gt; &lt;dbl&gt;
+ 1       -1.93       7
+ 2       -0.929      8
+ 3        2.07      11
+ 4        4.07      13
+ 5        0.0711     9
+ 6       -2.93       6
+ 7       -1.93       7
+ 8       -0.929      8
+ 9        1.07      10
+10        4.07      13
+11        1.07      10
+12        2.07      11
+13       -0.929      8
+14        1.07      10
+15        1.07      10
+16        1.07      10
+17        3.07      12
+18        1.07      10
+19       -1.93       7
+20       -2.93       6
+# ℹ 458 more rows</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>What is the difference between the <code>HLVA</code> and <code>HLVA_centered</code> columns?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-77-contents" aria-controls="callout-77" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-77" class="callout-77-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.23. You can see that every value in the <code>HLVA_centered</code> column equals the value, on the same row, in the <code>HLVA</code> column, minus the mean for <code>HLVA</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.24.</strong> Can you center the variable <code>FACTOR3</code>?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-78-contents" aria-controls="callout-78" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-78" class="callout-78-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.24. You can use the same code to center <code>FACTOR3</code>:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>FACTOR3_centered <span class="ot">&lt;-</span> all.data<span class="sc">$</span>FACTOR3 <span class="sc">-</span> <span class="fu">mean</span>(all.data<span class="sc">$</span>FACTOR3, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Q.25.</strong> Can you center the variable <code>SHIPLEY</code>?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-79-contents" aria-controls="callout-79" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-79" class="callout-79-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>A.25. You can use the same code to center <code>SHIPLEY</code>:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>SHIPLEY_centered <span class="ot">&lt;-</span> all.data<span class="sc">$</span>SHIPLEY <span class="sc">-</span> <span class="fu">mean</span>(all.data<span class="sc">$</span>SHIPLEY, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</div>
+<p>Specify models to include interaction effects: interactions between two numeric predictor variables.</p>
+<p>For example, let’s suppose that we want to examine the possibility that the effect of reading strategy (<code>FACTOR3</code>) on accuracy understanding (<code>mean.acc</code>) is different for different values of health literacy (<code>HLVA</code>).</p>
+<p>First, consider: if we ignored the possibility of an interaction, we would fit a model with just the predictors: reading strategy (<code>FACTOR3</code>) and health literacy (<code>HLVA</code>).</p>
+<p>We can fit the same model that we fit before (for Task 9).</p>
+<ul>
+<li>We vary the code a little, by using the centered variables we have just created.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Q.26.</strong> Can you compare the summary of results for this model with the model, using the same (but not centered) predictors, that you fitted for Task 9 – compare the estimates, what do you see?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-80-contents" aria-controls="callout-80" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-80" class="callout-80-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>A.26. If we compare the results of the models we can see that the estimates, t-test values and probability values are the same for <code>FACTOR3</code> compared to <code>FACTOR3_centered</code> or for <code>HLVA</code> compared to <code>HLVA_centered</code>.</p></li>
+<li><p>This shows that centering predictors only changes the scaling of the predictor variables so that their centers are 0.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<p>Second, now consider: we aim to test or estimate the interactions between the effects of reading strategy (<code>FACTOR3_centered</code>) and health literacy (<code>HLVA_centered</code>).</p>
+<ul>
+<li>We vary the code a little, again, this time by separating the predictors by <code>*</code> not by <code>+</code>.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Q.27.</strong> Can you compare the summary of results for this model with the results for the previous model (which uses the same predictors but without an interaction)?</p>
+</blockquote>
+<ul>
+<li>What do you see?</li>
+</ul>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-81-contents" aria-controls="callout-81" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-81" class="callout-81-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>A.27. If we compare the results of the models we can see that now the summary gives us estimates for the effects of:</p></li>
+<li><p><code>FACTOR3_centered</code> – this is the effect of <code>SHIPLEY_centered</code> when <code>HLVA_centered</code> is 0</p></li>
+<li><p><code>HLVA_centered</code> – this is the effect of <code>HLVA_centered</code> when <code>FACTOR3_centered</code> is 0</p></li>
+<li><p><code>FACTOR3_centered*HLVA_centered</code> – this is the interaction, and reflects the change in the effect of <code>FACTOR3_centered</code> on outcome <code>mean.acc</code>, given different values of <code>HLVA_centered</code>.</p></li>
+<li><p>Notice that the effect of the interaction is not significant but that the results suggest a very slight tendencey for the effect of reading strategy to be different (smaller) for increasing values of <code>HLVA_centered</code>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<p>Plot model predictions to help with interpretation of interaction effects.</p>
+<ul>
+<li>It helps to plot model predictions, given the effects estimates that we derive from our sample using the linear model.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Q.28.</strong> Can you compare the summary of results for the model with the plot to develop an interpretation of the <code>FACTOR3_centered*HLVA_centered</code> interaction?</p>
+</blockquote>
+<ul>
+<li>What do you see?</li>
+</ul>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-82-contents" aria-controls="callout-82" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-82" class="callout-82-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>A.28. We can build an interpretation in steps:</p></li>
+<li><p>If we look at the coefficient estimate for the <code>FACTOR3_centered*HLVA_centered</code> interaction, we can see that it is negative (<code>-0.0005713</code>).</p></li>
+<li><p>If we look at the plot of the model predictions, we can see that there are three slopes for the <code>FACTOR3_centered</code> effect, one each for different levels of <code>HLVA_centered</code>: for <code>HLVA_centered</code> = -2.19; <code>HLVA_centered</code> = 0; and <code>HLVA_centered</code> = 2.19.</p></li>
+<li><p>Notice that the steepness of the slope of the <code>FACTOR3_centered</code> effect decreases (the slope gets less steep) from <code>HLVA_centered</code> = -2.19 to <code>HLVA_centered</code> = 2.19.</p></li>
+<li><p>This tells us that the interaction (though not significant) operates so that the effect of reading strategy tends to be smaller for people with higher levels of health literacy.</p></li>
+<li><p>Returning to the fact that the coefficient estimate for the <code>FACTOR3_centered*HLVA_centered</code> is negative, we can now understand that it is negative because the interaction operates so that the slope of the <code>FACTOR3_centered</code> gets smaller as scores on <code>HLVA_centered</code> increase.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<p>Specify models to include interaction effects: interactions between a numeric predictor variable and a factor predictor variable</p>
+<p>Now consider: we aim to test or estimate the interactions between the effects of reading strategy (<code>FACTOR3</code>) and gender (<code>GENDER</code>).</p>
+<ul>
+<li>We can vary the code to change the predictor variables but the structure otherwise stays the same: how should we do this?</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Q.29.</strong> Can you identify what effects are shown in the model summary?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-83-contents" aria-controls="callout-83" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-83" class="callout-83-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>A.29. We can see that now the summary gives us estimates for the effects of:</p></li>
+<li><p><code>FACTOR3_centered</code> – this is the effect of reading strategy (<code>FACTOR3</code>) when <code>GENDER</code> level is <code>Female</code></p></li>
+<li><p><code>GENDERMale</code> – this is the effect of <code>GENDER</code> when <code>FACTOR3_centered</code> is 0.</p></li>
+</ul>
+<p>Note that the effect of <code>GENDER</code> is the estimated difference in outcome when <code>GENDER</code> level is <code>Female</code> (not shown, treated as the baseline) compared to when <code>GENDER</code> level is <code>Male</code>.</p>
+<ul>
+<li><code>FACTOR3_centered*GENDER</code> – this is the interaction, and reflects the change in the effect of <code>FACTOR3_centered</code> on outcome <code>mean.acc</code>, given different values of <code>GENDER</code>, here, when <code>GENDER</code> is <code>Male</code> instead of <code>Female</code>.</li>
+</ul>
+</div>
+</div>
+</div>
+<ul>
+<li>It helps to plot the effects estimates, given the model.</li>
+</ul>
+<p>We can do this in a two-step sequence, similar to the sequence we trialled through weeks 17 and 18:</p>
+<ol type="1">
+<li>First fit the model</li>
+<li>Second, use the model information to plot the predictions, given the effects</li>
+</ol>
+<blockquote class="blockquote">
+<p><strong>Q.30.</strong> Can you identify how the effects of reading strategy (<code>FACTOR3</code>) and gender (<code>GENDER</code>) interact, given the model results summary and this plot?</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-84-contents" aria-controls="callout-84" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-84" class="callout-84-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>A.30. The plot, and the estimate for the interaction <code>FACTOR3_centered:GENDERMale</code>, together show that the coefficient for the effect of reading strategy (<code>FACTOR3_centered</code>) is slightly larger (the slope is slightly steeper) when <code>GENDER</code> is <code>Male</code> instead of `Female.</p></li>
+<li><p>Notice that, for this sample, the interaction is not significant, suggesting that there is no difference between genders in the relative effectiveness of reading strategy.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
 </section>
 </section>
 <section id="sec-wk19-lab-Q-and-A" class="level2">
