@@ -7,10 +7,10 @@ website:
     search: true
     collapse-level: 1
     contents:
-      - section: "PSYC121"
-        contents: PSYC121/*
-      - section: "PSYC122"
-        contents: PSYC122/*
+      - section: "PSYC4141"
+        contents: PSYC4141/*
+      - section: "PSYC4242"
+        contents: PSYC4242/*
 
 format:
   html: 

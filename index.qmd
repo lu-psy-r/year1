@@ -17,11 +17,11 @@ Welcome to Year 1 statistics!
 
 This year you will begin your statistics and data coding with R journey with us. You will complete two statistics modules: 
 
-- PSYC121: Statistics for Psychologists 1, with Tom Beesley and Becca Hall
+- PSYC4141: Statistics for Psychologists 1, with Tom Beesley and Becca Hall
 
-- PSYC122: Statistics for Psychologists 2, with Margriet Groen and Rob Davies
+- PSYC4242: Statistics for Psychologists 2, with Margriet Groen and Rob Davies
 
-Click on the button below to access your module: Term 1: PSYC121, Term 2: PSYC122.
+Click on the button below to access your module: Term 1: PSYC4141, Term 2: PSYC4242.
 
 ```{=html}
 
@@ -29,11 +29,11 @@ Click on the button below to access your module: Term 1: PSYC121, Term 2: PSYC12
   <div class="row">
     <div class="col">
 
-    <a href="PSYC121/">
-      <button type="button" class="btn btn-landing btn-lg year-one">PSYC121</button>
+    <a href="PSYC4141/">
+      <button type="button" class="btn btn-landing btn-lg year-one">PSYC4141</button>
     </a>
-    <a href="PSYC122/">
-      <button type="button" class="btn btn-landing btn-lg year-one">PSYC122</button>
+    <a href="PSYC4242/">
+      <button type="button" class="btn btn-landing btn-lg year-one">PSYC4242</button>
     </a>
     
     </div>
