@@ -12,7 +12,7 @@ order: 1
 
 # Welcome
 
-Welcome to the PSYC4141 lab material for the academic year 2026-2027!
+Welcome to the PSYC4141 material for the academic year 2026-2027!
 
 How do we determine what is a true finding in psychological science? How do we know which theories are well supported by evidence? This module introduces you to rigorous and transparent scientific practices. You will develop systematic ways of thinking about and approaching real-world issues. Using modern techniques, you will learn how to collect, present and analyse data. We will introduce key concepts and practices of research design and data analysis through lectures. Practical laboratory classes will teach you how to design studies, handle data, perform statistical analyses and report your findings. The laboratory classes will be hands-on, giving you direct experience of all stages of a research project, including the use of specialised software. Topics covered will include questionnaire design, collecting and working with observational data, and looking at relationships between variables using correlation and regression analysis.
 

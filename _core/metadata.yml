@@ -3,7 +3,7 @@ project:
   output-dir: docs
   
 website:
-  title: "Statistics for Psychologists"
+  title: "Research Methods and Statistics for Psychologists"
   favicon: "Images/favicon.png"
   page-navigation: true
   back-to-top-navigation: true
