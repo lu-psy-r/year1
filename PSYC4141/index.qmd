@@ -1,6 +1,6 @@
 ---
 title: Introduction to Psychological Research
-subtitle: "Course coordinator: Margriet Groen"
+subtitle: "Teaching team: Carly Anderson, Rob Davies, Sam Finnerty and Margriet Groen (coordinator)"
 email-obfuscation: javascript
 order: 1
 

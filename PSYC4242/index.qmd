@@ -1,6 +1,6 @@
 ---
 title: Foundations of Psychological Research
-subtitle: "Course coordinator: John Towse"
+subtitle: "Teaching team: Katie Alcock, Sam Finnerty and John Towse (coordinator)"
 email-obfuscation: javascript
 
 #listing:
