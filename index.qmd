@@ -12,10 +12,10 @@ back-to-top-navigation: false
 ![](Images/LUPsychology.svg){fig-alt="University Logo" fig-align="center"}
 
 ::: {.div style="font-size:2em;"}
-Welcome to Year 1 statistics!
+Welcome to Year 1 research methods and statistics!
 :::
 
-This year you will begin your statistics and data coding with R journey with us. You will complete two statistics modules: 
+This year you will begin your journey through the world of research methods, and data coding and statistics with R with us. You will complete two research methods and statistics modules: 
 
 - PSYC4141: Introduction to Psychological Research, with Carly Anderson, Rob Davies, Sam Finnerty, and Margriet Groen (coordinator), 
 
