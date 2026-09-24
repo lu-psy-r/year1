@@ -1,6 +1,6 @@
 ---
-title: Statistics for Psychologists I
-subtitle: "Course coordinator: Tom Beesley"
+title: Introduction to Psychological Research
+subtitle: "Course coordinator: Margriet Groen"
 email-obfuscation: javascript
 order: 1
 
@@ -24,18 +24,18 @@ It is fairly inevitable that you will get stuck on the lab materials in this mod
 
 -   **Ask your friends on your table**. We've designed this teaching space to help collaborative work. You are encouraged to work with other students. Make sure you ask others to explain how they've solved an exercise. Make sure you help out others where you can. Always make sure you understand the code and the exercise; don't simply be satisfied that you've got the right answer.
 -   **Ask a GTA or Lecturer**. Our Graduate Teaching Assistants are there to help you. There are no "stupid questions" in statistics, so just ask the GTAs any question about what you're doing. Likewise, ask the Lecturer.
--   **Ask on the Discussion Forum**. On the PSYC4141 moodle page you will find a [Discussion Forum](https://modules.lancaster.ac.uk/mod/forum/view.php?id=2666867). This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don't be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).
--   **Ask on the module Q & A session**. Each week we hold a "Q&A" online session where we will try and resolve any general queries and problems. It's an ideal time to discuss things that students are struggling with or confused about, and can share ideas and answers. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but also you can ask in the session itself.
+-   **Ask on the Q&A Forum on Moodle**. On the PSYC4141 moodle page you will find a [Q&A Forum](https://modules.lancaster.ac.uk/mod/forum/view.php?id=2918081). This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don't be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).
+-   **Ask during live online Q & A session**. Each week we hold an online "Q&A" session where we will try and resolve any general queries and problems. It's an ideal time to discuss things that students are struggling with or confused about, and can share ideas and answers. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but also you can ask in the session itself.
 
-**Asking good questions** - it's really important that you give us as much information as you can when you ask your questions (in class and especially on the forum). It's so much harder to help respond to "I can't do Exercise 5 in Week 7" (because we don't know why it is that you can't do it) than for example "In Exercise 5 of Week 7, I've managed to read in the data, put the graph looks quite odd. Here is the code I'm using..."
+**Asking good questions** - It's really important that you give us as much information as you can when you ask your questions (in class and especially on the forum). It's so much harder to help respond to "I can't do Exercise 5 in Week 7" (because we don't know why it is that you can't do it) than for example "In Exercise 5 of Week 7, I've managed to read in the data, but the graph looks quite odd. Here is the code I'm using..."
 
 # Course Contacts
 
-If you have something that needs to be private, then please feel free to email the academic staff at the email addresses below:
+If you have something that needs to be private, then please feel free to email the coordinator at the email addresses below:
 
 |   | Email Address |
 |----|----|
-| Tom Beesley (Coordinator) | [t.beesley\@lancaster.ac.uk](mailto:t.beesley@lancaster.ac.uk) |
+| Margriet Groen (Coordinator) | [m.groen\@lancaster.ac.uk](mailto:m.groen@lancaster.ac.uk) |
 |  |  |
 
-![](images/TB.jpeg){fig-align="center" width="2in"}
+![](~/stats/2627_year1/PSYC4141/MG.jpeg){fig-align="center" width="2in"}

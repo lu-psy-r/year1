@@ -17,9 +17,9 @@ Welcome to Year 1 statistics!
 
 This year you will begin your statistics and data coding with R journey with us. You will complete two statistics modules: 
 
-- PSYC4141: Statistics for Psychologists 1, with Tom Beesley and Becca Hall
+- PSYC4141: Introduction to Psychological Research, with Carly Anderson, Rob Davies, Sam Finnerty, and Margriet Groen (coordinator), 
 
-- PSYC4242: Statistics for Psychologists 2, with Margriet Groen and Rob Davies
+- PSYC4242: Foundations of Psychological Research, with Katie Alcock, Sam Finnerty and John Towse (coordinator)
 
 Click on the button below to access your module: Term 1: PSYC4141, Term 2: PSYC4242.
 

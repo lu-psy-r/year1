@@ -1,6 +1,6 @@
 ---
-title: Statistics for Psychologists II
-subtitle: "Course coordinators: Margriet Groen, Rob Davies"
+title: Foundations of Psychological Research
+subtitle: "Course coordinator: John Towse"
 email-obfuscation: javascript
 
 #listing:
@@ -13,7 +13,7 @@ email-obfuscation: javascript
 
 Welcome to PSYC4242!
 
-This module builds on the knowledge and skills acquired in Statistics for Psychologists 1 (PSYC4141). You will continue to practise data handling, data processing and data visualisation, using R and R Studio. In addition, you will learn about statistical methods to test whether two (or more) variables are associated and how to implement those methods in R and R Studio.
+This module builds on the knowledge and skills acquired in Introduction to Psychological Research (PSYC4141). You will continue to practise data handling, data processing and data visualisation, using R and R Studio. In addition, you will learn about statistical methods to test whether two groups differ and how to implement those methods in R and R Studio.
 
 # Asking for help
 
@@ -23,13 +23,16 @@ It is fairly inevitable that you will get stuck on the lab materials in this mod
 
   - **Ask your peers on your table**. We've designed this teaching space to help collaborative work. You are encouraged to work with other students. Make sure you ask others to explain how they've solved an exercise. Make sure you help out others where you can. Always make sure you understand the code and the exercise; don't simply be satisfied that you've got the right answer.
   - **Ask a Lecturer**. We are here to help you. There are no "stupid questions" in statistics, so just ask the Lecturer any question about what you're doing. 
-  - **Ask on the Discussion Forum**. On the PSYC4242 moodle page you will find a [Discussion Forum](https://modules.lancaster.ac.uk/mod/forum/view.php?id=2785666). This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don't be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).
-  - **Ask on the module Q & A session**. Each week we hold a "Q&A" online session where we will try and resolve any general queries and problems. It's an ideal time to discuss things that students are struggling with or confused about. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but you can also ask in the session itself.
+  - **Ask on the Q&A Forum on Moodle**. On the PSYC4242 moodle page you will find a [Q&A Forum](ADD LINK TO 4242 Moodle Q&A). This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don't be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).
+  - **Ask during live online Q & A session**. Each week we hold an online "Q&A" session where we will try and resolve any general queries and problems. It's an ideal time to discuss things that students are struggling with or confused about. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but you can also ask in the session itself.
 
 # Course Contacts
 
-|             | Email Address                                                  |
-|-------------|----------------------------------------------------------------|
-| Margriet Groen | [m.groen\@lancaster.ac.uk](mailto:m.groen@lancaster.ac.uk) |
-| Rob Davies  | [r.davies1\@lancaster.ac.uk](mailto:r.davies1@lancaster.ac.uk)     |
-|             |                                                                |
+If you have something that needs to be private, then please feel free to email the coordinator at the email addresses below:
+
+|   | Email Address |
+|----|----|
+| John Towse (Coordinator) | [j.towse\@lancaster.ac.uk](mailto:j.towse@lancaster.ac.uk) |
+|  |  |
+
+![](~/stats/2627_year1/PSYC4141/MG.jpeg){fig-align="center" width="2in"}
