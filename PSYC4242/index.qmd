@@ -13,7 +13,7 @@ email-obfuscation: javascript
 
 Welcome to PSYC4242!
 
-This module builds on the knowledge and skills acquired in Introduction to Psychological Research (PSYC4141). You will continue to practise data handling, data processing and data visualisation, using R and R Studio. In addition, you will learn about statistical methods to test whether two groups differ and how to implement those methods in R and R Studio.
+How do we decide whether two groups differ in a psychological process or behaviour? This module builds on the knowledge and skills acquired in Introduction to Psychological Research (PSYC4141). You will continue to build your understanding of rigorous and transparent scientific practices and develop your thinking of real-world issues. Using modern techniques, learn more about how to collect, present and analyse data. You will be introduced to key concepts and practices of research design and data analysis through lectures. Practical laboratory classes will teach you how to design studies, handle data, perform statistical analyses and report your findings. The laboratory classes will be hands-on, giving you direct experience with all stages of a research project, including the use of specialised software. Topics covered will include experimental design, how to decide on your study participants, comparing groups for behaviours of psychological interest and hypothesis testing.
 
 # Asking for help
 
@@ -34,5 +34,3 @@ If you have something that needs to be private, then please feel free to email t
 |----|----|
 | John Towse (Coordinator) | [j.towse\@lancaster.ac.uk](mailto:j.towse@lancaster.ac.uk) |
 |  |  |
-
-![](~/stats/2627_year1/PSYC4141/MG.jpeg){fig-align="center" width="2in"}
