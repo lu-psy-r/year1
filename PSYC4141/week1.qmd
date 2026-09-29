@@ -31,21 +31,25 @@ Watch this part first. It gives an overview of what the module is about, how the
 
 ## Reading {#sec-wk1-reading}
 
+:::{.callout-tip}
 All reading is accessible via the library. You can go to Moodle -> Library Resources -> Resource List or you can follow [this link](https://lancaster.alma.exlibrisgroup.com/leganto/nui/lists/93496942590001221). Readings have one of the following tags:
+
 - Essential: We expect you to be familiar with these reading. You will be assessed on this.
 - Recommended: We highly recommend these readings. They often provide a different perspective, or explain things in a different way.
 - Optional: Further readings for those interested.
 
 The reading list is divided into multiple sections:
+
 - **Reading associated with statistics**: this contains links to readings useful for the development of statistical concepts and skills. The main textbook  *Fundamental statistics for the behavioral sciences* by Howell (Essential) lives here.
 - **Reading associated with psychological research principles and design**: this contains links to readings that provide a good basis for foundational knowledge around research design.
 - **Reading associated with Open Science principles and practices**: this contains links to key literature on the Open Science movement.
 - **Week by week**: these contain links to key reading for that week that are not listed on any of the more general lists above.
+:::
 
 For reading that accompanies the lecture material for week 1 is:
-- McMillan, B.T.M., Baumgartner, H.A., Bergmann, C. et al. (2026). What 5000 babies can tell us about developing minds and how to study them. *Communications Psychology, 4*, 92, 1-5. ESSENTIAL
-- Peterson, D. (2016). The Baby Factory: Difficult Research Objects, Disciplinary Standards, and the Production of Statistical Significance. *Socius, 2*, 1-10. RECOMMENDED
-- Wright, D. B., Barnett, J., & Breakwell, G. M. (2020). Psychology as a science: What is science? In G. M. Breakwell, D. B. Wright, & J. Barnett (Eds.), Research methods in psychology (5th ed., pp. 119–138). SAGE Publications. RECOMMENDED
+- McMillan, B.T.M., Baumgartner, H.A., Bergmann, C. et al. (2026). What 5000 babies can tell us about developing minds and how to study them. *Communications Psychology, 4*, 92, 1-5.
+- Peterson, D. (2016). The Baby Factory: Difficult Research Objects, Disciplinary Standards, and the Production of Statistical Significance. *Socius, 2*, 1-10.
+- Wright, D. B., Barnett, J., & Breakwell, G. M. (2020). Psychology as a science: What is science? In G. M. Breakwell, D. B. Wright, & J. Barnett (Eds.), Research methods in psychology (5th ed., pp. 119–138). SAGE Publications.
 
 <!-- ## Pre-lab activities {#sec-wk11-prelab-activities} -->
 
