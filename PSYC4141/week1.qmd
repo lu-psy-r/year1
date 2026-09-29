@@ -31,7 +31,7 @@ Watch this part first. It gives an overview of what the module is about, how the
 
 ## Reading {#sec-wk1-reading}
 
-:::{.callout-tip title=:"Easy access to readings"}
+::: {.callout-tip title="Easy access to readings"}
 All reading is accessible via the library. You can go to Moodle -> Library Resources -> Resource List or you can follow [**this link**](https://lancaster.alma.exlibrisgroup.com/leganto/nui/lists/93496942590001221). Readings have one of the following tags:
 
 - **Essential**: We expect you to be familiar with these reading. You will be assessed on this.
