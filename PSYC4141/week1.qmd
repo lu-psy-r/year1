@@ -46,11 +46,11 @@ The reading list is divided into multiple sections:
 - **Week by week**: these contain links to key reading for that week that are not listed on any of the more general lists above.
 :::
 
-For week 1, the reading is:
+For **week 1**, the reading is:
 
-- McMillan, B.T.M., Baumgartner, H.A., Bergmann, C. et al. (2026). What 5000 babies can tell us about developing minds and how to study them. *Communications Psychology, 4*, 92, 1-5.
-- Peterson, D. (2016). The Baby Factory: Difficult Research Objects, Disciplinary Standards, and the Production of Statistical Significance. *Socius, 2*, 1-10.
-- Wright, D. B., Barnett, J., & Breakwell, G. M. (2020). Psychology as a science: What is science? In G. M. Breakwell, D. B. Wright, & J. Barnett (Eds.), Research methods in psychology (5th ed., pp. 119–138). SAGE Publications.
+- McMillan, B. T. M., Baumgartner, H.A., Bergmann, C. et al. (2026). What 5000 babies can tell us about developing minds and how to study them. *Communications Psychology, 4*, 1-5. **Essential**
+- Peterson, D. (2016). The baby factory: Difficult research objects, disciplinary standards, and the production of statistical significance. *Socius, 2*, 1-10. **Recommended**
+- Wright, D. B., Barnett, J., & Breakwell, G. M. (2020). Psychology as a science: What is science? In G. M. Breakwell, D. B. Wright, & J. Barnett (Eds.), *Research methods in psychology* (5th ed., pp. 119–138). SAGE Publications. **Recommended**
 
 <!-- ## Pre-lab activities {#sec-wk11-prelab-activities} -->
 
