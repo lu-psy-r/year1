@@ -4,11 +4,13 @@ subtitle: Written by Rob Davies and Margriet Groen
 order: 2 # ensure this is one more than the previous script
 ---
 
-## Lectures {#sec-wk11-lectures}
+## Lectures {#sec-4141-w1-lectures}
 
 The lecture material comes in multiple parts.
 
-1.  **Intro** (~18 minutes)
+### What this module is about: begin here
+
+1.  **Introduction to the module** (~18 minutes)
 
 Watch this part first. It gives an overview of what the module is about, how the module is organised, how you'll be assessed and how you can ask for help. The video has captions, in case you find that helpful. You can download the slides and a transcript from the links below the video.
 
@@ -18,9 +20,12 @@ Watch this part first. It gives an overview of what the module is about, how the
 </div>
 ```
 
-[Slides](files/week1/4141_intro_slides.pdf) [Transcript](files/week1/4141_intro_transcript.txt)
+- [Intro slides](files/week1/4141_intro_slides.pdf)
+- [Intro transcript](files/week1/4141_intro_transcript.txt)
 
-2.  **How to**(~13 minutes)
+### Getting started with your practical work: you need this for your workshop sessions
+
+2.  **How to work with R-Studio**(~13 minutes)
 
 <!-- ```{=html} -->
 <!-- <iframe allow="autoplay; fullscreen" height="282" width="500" src="https://estream.lancaster.ac.uk/Embed.aspx?id=71956&amp;code=e8~FtztV5mEr3G6oMLZUHkFG48cByFRV8&amp;cc=1" frameborder="0" allowfullscreen></iframe> -->
@@ -28,6 +33,54 @@ Watch this part first. It gives an overview of what the module is about, how the
 
 <!-- [Slides](data/week11/stats_correlation_howto_20240110.pdf) -->
 <!-- [Transcript](data/week11/02statscorrelationhowto20240110.txt) -->
+
+### Interactive lecture -- Being a scientist, doing a science: watch this to get started on learning and thinking about what we are going to be doing in Psychology
+
+::: callout-tip
+The slides presented in the next videos can be downloaded as a web page: `doing-being-science.html.` When you download the file, double click on it to open it in your usual web browser for viewing.
+
+- [Lecture slides](files/week1/doing-being-science.html)
+:::
+
+1. **Big ideas, difficult questions** (~17 minutes). What is science, how do we do it?
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=d6a2642d-4374-47e4-9b74-b4d500b1d9fb&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="critical-thinking-one"></iframe>
+</div>
+```
+
+2. **The hardest science** (~15 minutes). Why learning about people is hard, and why revolutionary new ways of doing psychological science are our response to the challenges.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=d6a2642d-4374-47e4-9b74-b4d500b1d9fb&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="critical-thinking-one"></iframe>
+</div>
+```
+
+3. **The logic, the challenges** (~25 minutes). The logic of the scientific method, and the challengesin doing science when it  involves trying to understand people.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=2ce3cb67-f8c9-4fb2-bd76-b4d500bf7147&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="critical-thinking-three"></iframe>
+</div> 
+```
+
+4. **Science is a thing that is done by people** (~18 minutes). How is it that groups of people who may not know or like or trust each other can produce this thing: science?
+
+```{=html}
+ <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=74066340-0d62-4c7d-a48c-b4d500c982d8&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="critical-thinking-four"></iframe>
+</div>
+```
+
+5. **Science is a social activity: fads, inequities and biases** (15 minutes). What do we study? Who does the studying? Fads, inequities and biases, and taking responsibility.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=352d6ea9-7a1f-4ef0-a369-b4d500cf03f3&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="critical-thinking-five"></iframe>
+</div>
+```
 
 ## Reading {#sec-wk1-reading}
 
