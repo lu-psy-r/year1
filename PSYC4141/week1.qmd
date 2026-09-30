@@ -4,11 +4,16 @@ subtitle: Written by Rob Davies and Margriet Groen
 order: 2 # ensure this is one more than the previous script
 ---
 
-## Lectures {#sec-4141-w1-lectures}
+## Materials for learning {#sec-4141-w1-learning-intro}
 
-The lecture material comes in multiple parts.
+The materials we have prepared to support your learning are arranged in four parts:
 
-### What this module is about: begin here
+- @sec-4141-w1-learning-intro-what-module: What the module is about
+- @sec-4141-w1-learning-intro-how-r: Getting started with your practical work
+- @sec-4141-w1-lecture: The lecture: Being a scientist, doing a science
+- @sec-4141-w1-reading: Recommended readings
+
+### What this module is about: begin here {#sec-4141-w1-learning-intro-what-module}
 
 1.  **Introduction to the module** (~18 minutes)
 
@@ -25,7 +30,8 @@ Watch this part first. It gives an overview of what the module is about, how the
 - [Intro slides](files/week1/4141_intro_slides.pdf)
 - [Intro transcript](files/week1/4141_intro_transcript.txt)
 
-### Getting started with your practical work: you need this for workshops 
+### Getting started with your practical work: you need this for workshops {#sec-4141-w1-learning-intro-how-r} 
+
 2.  **How to work with R-Studio**(~13 minutes)
 
 <!-- ```{=html} -->
@@ -35,7 +41,21 @@ Watch this part first. It gives an overview of what the module is about, how the
 <!-- [Slides](data/week11/stats_correlation_howto_20240110.pdf) -->
 <!-- [Transcript](data/week11/02statscorrelationhowto20240110.txt) -->
 
-### Interactive lecture -- Being a scientist, doing a science: watch this to get started on learning and thinking about what we are going to be doing in Psychology
+### Interactive lecture -- Being a scientist, doing a science: watch this to get started on learning and thinking about what we are going to be doing in Psychology {#sec-4141-w1-lecture} 
+
+This is a quick (~4 minutes) walk through of how you can watch the video lecture, with tips on how to make playback accessible and convenient.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=0f42ac15-3d1c-4f3f-8c3a-b4d50115be65&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&start=0&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="video-lecture-how-to"></iframe>
+</div>
+```
+
+\newline
+
+You can download the lecture slides as a .html file you can open in any browser.
+
+The slides end with a references list but don't worry about reading what's in the references list, we give you recommended readings in @sec-4141-w1-reading.
 
 ::: callout-tip
 The slides presented in the next videos can be downloaded as a web page: `doing-being-science.html.` 
@@ -45,7 +65,11 @@ The slides presented in the next videos can be downloaded as a web page: `doing-
 When you download the file, double click on it to open it in your usual web browser for viewing. In some browsers, clicking on the link will just open the slides as a webpage in your browser.
 :::
 
+Next, you can see the lecture elements. We recommend that you watch them in sequence.
+
 1. **Big ideas, difficult questions** (~17 minutes). What is science, how do we do it?
+
+\newline
 
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
@@ -95,7 +119,7 @@ When you download the file, double click on it to open it in your usual web brow
 
 \newline
 
-## Reading {#sec-wk1-reading}
+## Reading {#sec-4141-w1-reading}
 
 ::: {.callout-tip title="Easy access to readings"}
 All reading is accessible via the library. You can go to Moodle -> Library Resources -> Resource List or you can follow [**this link**](https://lancaster.alma.exlibrisgroup.com/leganto/nui/lists/93496942590001221). Readings have one of the following tags:
