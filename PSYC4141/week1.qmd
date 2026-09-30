@@ -20,7 +20,7 @@ Watch this part first. It gives an overview of what the module is about, how the
 
 [Slides](files/week1/4141_intro_slides.pdf) [Transcript](files/week1/4141_intro_transcript.txt)
 
-<!-- 2.  **How to**(~13 minutes) -->
+2.  **How to**(~13 minutes)
 
 <!-- ```{=html} -->
 <!-- <iframe allow="autoplay; fullscreen" height="282" width="500" src="https://estream.lancaster.ac.uk/Embed.aspx?id=71956&amp;code=e8~FtztV5mEr3G6oMLZUHkFG48cByFRV8&amp;cc=1" frameborder="0" allowfullscreen></iframe> -->
