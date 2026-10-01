@@ -4,6 +4,7 @@ subtitle: Written by Rob Davies and Margriet Groen
 order: 2 # ensure this is one more than the previous script
 ---
 
+:::callout-information
 This week we focus on two separate things:
 
 1. Rob introduces you to what it means to do psychological science
@@ -11,11 +12,18 @@ This week we focus on two separate things:
 
 The materials we have prepared to support your learning are arranged in four parts:
 
+- Lectures
+- Reading
+- Pre-lab activities
+- Lab activities
+
+You can navigate to each in the side bar on the right
+:::
+
 - @sec-4141-w1-lectures: Lectures: watch these before the lab session
 - @sec-4141-w1-lectures-intro-what-module: What the module is about
 - @sec-4141-w1-lectures-lecture: The lecture: Being a scientist, doing a science
 - @sec-4141-w1-lectures-intro-how-r: How to get started with RStudio
-- @sec-4141-w1-lectures-how-to-plot: How to create a plot
 - @sec-4141-w1-reading: Recommended readings
 - @sec-4141-w1-prelab-activities: Activities to do before you attend your lab session
 - @sec-4141-w1-lab-activities: Activities you do during your lab session
@@ -136,9 +144,9 @@ Next, you can see the lecture elements. We recommend that you watch them in sequ
 
 \newline
 
-### Getting started with your practical work: you need this for the labs 
+### Getting started with your practical work: you need this for the labs {#sec-4141-w1-lectures-intro-how-r}
 
-1. **How to work with R-Studio**(~16 minutes) {#sec-4141-w1-lectures-intro-how-r}
+1. **How to work with R-Studio**(~16 minutes) 
 
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
@@ -150,7 +158,7 @@ Next, you can see the lecture elements. We recommend that you watch them in sequ
 
 - [RStudio walkthrough transcript](files/week1/4141_rstudio_transcript.txt)
 
-2. **How to create a plot**(~ minutes) {#sec-4141-w1-lectures-how-to-plot}
+2. **How to create a plot**(~ minutes)
 
 ```{html}
 ```
