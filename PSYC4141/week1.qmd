@@ -11,7 +11,7 @@ This week we focus on two separate things:
 
 The materials we have prepared to support your learning are arranged in four parts:
 
-- @sec-4141-w1-lectures: Watch these before the lab session
+- @sec-4141-w1-lectures: Lectures: watch these before the lab session
 - @sec-4141-w1-lectures-intro-what-module: What the module is about
 - @sec-4141-w1-lectures-lecture: The lecture: Being a scientist, doing a science
 - @sec-4141-w1-lectures-intro-how-r: How to get started with RStudio
@@ -138,7 +138,7 @@ Next, you can see the lecture elements. We recommend that you watch them in sequ
 
 ### Getting started with your practical work: you need this for the labs 
 
-**How to work with R-Studio**(~16 minutes) {#sec-4141-w1-lectures-intro-how-r}
+1. **How to work with R-Studio**(~16 minutes) {#sec-4141-w1-lectures-intro-how-r}
 
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
@@ -150,7 +150,7 @@ Next, you can see the lecture elements. We recommend that you watch them in sequ
 
 - [RStudio walkthrough transcript](files/week1/4141_rstudio_transcript.txt)
 
-**How to create a plot**(~ minutes) {#sec-4141-w1-lectures-how-to-plot}
+2. **How to create a plot**(~ minutes) {#sec-4141-w1-lectures-how-to-plot}
 
 ```{html}
 ```
