@@ -1,0 +1,140 @@
+[
+  {
+    "objectID": "PSYC4242/index.html",
+    "href": "PSYC4242/index.html",
+    "title": "Foundations of Psychological Research",
+    "section": "",
+    "text": "Welcome\nWelcome to PSYC4242!\nHow do we decide whether two groups differ in a psychological process or behaviour? This module builds on the knowledge and skills acquired in Introduction to Psychological Research (PSYC4141). You will continue to build your understanding of rigorous and transparent scientific practices and develop your thinking of real-world issues. Using modern techniques, learn more about how to collect, present and analyse data. You will be introduced to key concepts and practices of research design and data analysis through lectures. Practical laboratory classes will teach you how to design studies, handle data, perform statistical analyses and report your findings. The laboratory classes will be hands-on, giving you direct experience with all stages of a research project, including the use of specialised software. Topics covered will include experimental design, how to decide on your study participants, comparing groups for behaviours of psychological interest and hypothesis testing.\n\n\nAsking for help\nWe have carefully prepared and refined the lab materials in this course over several years, and we feel that the pace of the materials is just right for our students. Some students will complete them more quickly, and others more slowly - both of these scenarios are absolutely fine. You should work at the pace that suits you best, making sure you understand the materials before you move forward.\nIt is fairly inevitable that you will get stuck on the lab materials in this module at some point. This might be in Week 11, Week 12, or later. When you do, it’s important you reach out for help:\n\nAsk your peers on your table. We’ve designed this teaching space to help collaborative work. You are encouraged to work with other students. Make sure you ask others to explain how they’ve solved an exercise. Make sure you help out others where you can. Always make sure you understand the code and the exercise; don’t simply be satisfied that you’ve got the right answer.\nAsk a Lecturer. We are here to help you. There are no “stupid questions” in statistics, so just ask the Lecturer any question about what you’re doing.\nAsk on the Q&A Forum on Moodle. On the PSYC4242 moodle page you will find a Q&A Forum. This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don’t be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).\nAsk during live online Q & A session. Each week we hold an online “Q&A” session where we will try and resolve any general queries and problems. It’s an ideal time to discuss things that students are struggling with or confused about. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but you can also ask in the session itself.\n\n\n\nCourse Contacts\nIf you have something that needs to be private, then please feel free to email the coordinator at the email addresses below:\n\n\n\n\nEmail Address\n\n\n\n\nJohn Towse (coordinator)\nj.towse at lancaster dot ac dot uk\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "PSYC4242"
+    ]
+  },
+  {
+    "objectID": "PSYC4141/files/week1/4141_wk1_lab_act1.html",
+    "href": "PSYC4141/files/week1/4141_wk1_lab_act1.html",
+    "title": "4141-w1-lab_act1",
+    "section": "",
+    "text": "We’ve all been there. I may be trying to focus on a lecture, but a thought on what you would like to have for lunch pops into your mind. Mind wandering describes the common experience of one’s thoughts driting away form the task at hand towards self-generated thoughts and feelings (Smallwood & Schooler, 2006). Today, we’ll work with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens."
+  },
+  {
+    "objectID": "PSYC4141/files/week1/4141_wk1_lab_act1.html#background",
+    "href": "PSYC4141/files/week1/4141_wk1_lab_act1.html#background",
+    "title": "4141-w1-lab_act1",
+    "section": "",
+    "text": "We’ve all been there. I may be trying to focus on a lecture, but a thought on what you would like to have for lunch pops into your mind. Mind wandering describes the common experience of one’s thoughts driting away form the task at hand towards self-generated thoughts and feelings (Smallwood & Schooler, 2006). Today, we’ll work with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens."
+  },
+  {
+    "objectID": "PSYC4141/files/week1/4141_wk1_lab_act1.html#aims-of-the-activity",
+    "href": "PSYC4141/files/week1/4141_wk1_lab_act1.html#aims-of-the-activity",
+    "title": "4141-w1-lab_act1",
+    "section": "Aims of the activity",
+    "text": "Aims of the activity\nWe are going to:\n\nSetup the appropriate bits and pieces in RStudio that we need.\nDownload the data\nRead in the data and have a quick look what is in the file\nCreate a plot\n\n\n\n\n\n\n\nWatch the ‘How to’ video\n\n\n\nIf you haven’t done so already, this is a good time to watch the ‘How to’ video (here ?@sec-4141-w1-lectures) on ‘How to create a plot’."
+  },
+  {
+    "objectID": "PSYC4141/files/week1/4141_wk1_lab_act1.html#step-1-setup",
+    "href": "PSYC4141/files/week1/4141_wk1_lab_act1.html#step-1-setup",
+    "title": "4141-w1-lab_act1",
+    "section": "Step 1: Setup",
+    "text": "Step 1: Setup\nBefore we can do anything, we need to tell R what packages we want to use. You may wonder what a package is. If R is your kitchen with basic equipment, a package is a specialist cookbook that adds new recipes. All the packages that you’ll need have already been installed on the R-server, but you have to tell R which cookbooks to get off the shelf for what you want to do right now. We use the function ‘library’ to do that. It is useful to have a section at the top of your script where you get all the cookbooks you need for this script off the shelf (…or load all the relevant libraries).\n\n# Load relevant libraries\nlibrary(here) # the 'here' package helps with finding your files\n\nhere() starts at /Users/margrietgroen/stats/2627_year1\n\nlibrary(tidyverse) # the 'tidyverse' is a set of packages that handles almost everything you need to do with data\n\nWarning: package 'ggplot2' was built under R version 4.4.3\n\n\nWarning: package 'tidyr' was built under R version 4.4.3\n\n\nWarning: package 'dplyr' was built under R version 4.4.3\n\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.2.0     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   4.0.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.2\n✔ purrr     1.0.4     \n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
+  },
+  {
+    "objectID": "PSYC4141/files/week1/4141_wk1_lab_act1.html#step-2-download-the-data",
+    "href": "PSYC4141/files/week1/4141_wk1_lab_act1.html#step-2-download-the-data",
+    "title": "4141-w1-lab_act1",
+    "section": "Step 2: Download the data",
+    "text": "Step 2: Download the data\nNow we need to get the data onto our computer and into our working directory on the R-server.\nDownload the data_bmw3.csv file by clicking on it. Usually it will be saved in your ‘Downloads’ folder. Now upload the file into the new folder called ‘week 1’ in RStudio Server you created during the previous lab activity."
+  },
+  {
+    "objectID": "PSYC4141/files/week1/4141_wk1_lab_act1.html#step-3-reading-in-the-data",
+    "href": "PSYC4141/files/week1/4141_wk1_lab_act1.html#step-3-reading-in-the-data",
+    "title": "4141-w1-lab_act1",
+    "section": "Step 3: Reading in the data",
+    "text": "Step 3: Reading in the data\nThe next step is to read in a data file. Here we’ll use a subset of the data collected by Schubert and colleagues. It contains responses from 215 students on a questionnaire that measures mind wandering. It is a file of the type .csv (which means that individual bits of data are separated by comma’s), so we’ll use the function read_csv() to do this. Inside the function, we tell R where to find the file. This is the bit that comes after here(): It specifies the filepath. After the comma, we have the file name, including the extension.\n\n# Read in the data\ndata_bmw3 &lt;- read_csv(here(\"PSYC4141/files/week1/\", \"data_bmw3.csv\"))\n\nRows: 215 Columns: 22\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (4): location, type, gender, education\ndbl (18): subject, id, Age, BMW3_UN_01, BMW3_UN_02, BMW3_UN_03, BMW3_UN_04, ...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message."
+  },
+  {
+    "objectID": "PSYC4141/files/week1/4141_wk1_lab_act1.html#step-4-create-a-plot",
+    "href": "PSYC4141/files/week1/4141_wk1_lab_act1.html#step-4-create-a-plot",
+    "title": "4141-w1-lab_act1",
+    "section": "Step 4: Create a plot",
+    "text": "Step 4: Create a plot\nThe last thing we’ll do today is create our first plot. Let’s say we’d like to visualise how many people selected each response option for question 1 of the questionnaire. Question 1 was “While listening to a presentation, my thoughts start to trail off unintentionally.” Participants were asked to decide to what extent they agreed or disagreed with that statement. They chose one of the following options: “Fully disagree”, “Somewhat disagree”, “Neutral”, “Somewhat agree” or “Fully agree”.\nWe can do that by creating a histogram. The function we use for that (and for a lot of other plots you’ll make for research methods and stats) is ggplot(). First we need- simple histogram - change the background - add a label for the x-axis - change the colour (fill) - colours (in the Console) - add labels for the answer options\n\nggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01)) + # specifies data and variable to plot\n  geom_histogram()                                       # specifies what type of plot\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\n\nNow, this does the job, but it doesn’t quite look like I’d like it to look. Let’s change that. I don’t particularly like the grey background. I can change that by adding a layer to the plot specifying a different background. There are lots of different ‘themes’ in ggplot() that you can use. Have a look here.\n\nggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01)) + # specifies data and variable to plot\n  geom_histogram()  +                                     # specifies what type of plot\n  theme_bw()                                              # changes the background\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\n\nI would like the bars to be red instead of grey. I can make that happen, but specifying an additional bit of code (or ‘argument’ in the ggplot() part. There are lots of different colours and colour schemes available within ggplot(). Have a look at this overview and choose one you like for your plot. There is more to say about which colour schemes to use, but we’ll save that for another day.\n\nggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01, fill = \"tomato\")) + # ...and makes the bars red\n  geom_histogram()  +                                                      # specifies what type of plot\n  theme_bw()                                                               # changes the background\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\n\nTo avoid the legend on the right getting printed (because we don’t need it in this case), we can tell R not to include it\n\nggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01, fill = \"tomato\")) + # ...and makes the bars red\n  geom_histogram()  +                                                      # specifies what type of plot\n  theme_bw() +                                                             # changes the background\n  theme(legend.position = \"none\")                                          # removes the legend\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\n\nNow it would be good to have a more informative label for what we’ve plotted on the x-axis. Instead of the variable name BMW3_UN_01, we’ll add ‘Brief Mind Wandering Three-factor Scale - Question 1’.\n\nggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01, fill = \"tomato\")) + # ...and makes the bars red\n  geom_histogram()  +                                                      # specifies what type of plot\n  theme_bw() +                                                             # changes the background\n  theme(legend.position = \"none\") +                                        # removes the legend\n  labs(x = \"Brief Mind Wandering Three-Factor Scale - Question 1\")        # add more informative label for the x-axis\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\n\nFinally, instead of the numerical values 0 to 4 that are currently on the x-axis, we’ll add the labels that are associated with each of these values.\n\nggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01, fill = \"tomato\")) + # ...and makes the bars red\n  geom_histogram()  +                                                      # specifies what type of plot\n  theme_bw() +                                                             # changes the background\n  theme(legend.position = \"none\") +                                        # removes the legend\n  labs(x = \"Brief Mind Wandering Three-Factor Scale - Question 1\") +       # add more informative label for the x-axis\n  scale_x_continuous(                                                      # replace numerical values with text labels\n    breaks = 0:4,\n    labels = c(\"Fully disagree\", \"Somewhat disagree\", \"Neutral\", \"Somewhat agree\", \"Fully agree\")\n  )\n\n`stat_bin()` using `bins = 30`. Pick better value `binwidth`.\n\n\n\n\n\n\n\n\n\nThat’s it! You have created your first plot.\nFor more practice, go through the same steps for a different question."
+  },
+  {
+    "objectID": "PSYC4141/index.html",
+    "href": "PSYC4141/index.html",
+    "title": "Introduction to Psychological Research",
+    "section": "",
+    "text": "Welcome\nWelcome to the PSYC4141 material for the academic year 2026-2027!\nHow do we determine what is a true finding in psychological science? How do we know which theories are well supported by evidence? This module introduces you to rigorous and transparent scientific practices. You will develop systematic ways of thinking about and approaching real-world issues. Using modern techniques, you will learn how to collect, present and analyse data. We will introduce key concepts and practices of research design and data analysis through lectures. Practical laboratory classes will teach you how to design studies, handle data, perform statistical analyses and report your findings. The laboratory classes will be hands-on, giving you direct experience of all stages of a research project, including the use of specialised software. Topics covered will include questionnaire design, collecting and working with observational data, and looking at relationships between variables using correlation and regression analysis.\n\n\nWorking at your own pace and seeking help\nWe have carefully prepared and refined the lab materials in this course over several years, and we feel that the pace of the materials is just about right for our students. Some students will complete them more quickly, and others more slowly - both of these scenarios are absolutely fine. You should work at the pace that suits you best, making sure you understand the materials before you move forward.\nIt is fairly inevitable that you will get stuck on the lab materials in this module at some point. This might be in Week 1, Week 2, or later. When you do, it’s important you reach out for help:\n\nAsk your friends on your table. We’ve designed this teaching space to help collaborative work. You are encouraged to work with other students. Make sure you ask others to explain how they’ve solved an exercise. Make sure you help out others where you can. Always make sure you understand the code and the exercise; don’t simply be satisfied that you’ve got the right answer.\nAsk a GTA or Lecturer. Our Graduate Teaching Assistants are there to help you. There are no “stupid questions” in statistics, so just ask the GTAs any question about what you’re doing. Likewise, ask the Lecturer.\nAsk on the Q&A Forum on Moodle. On the PSYC4141 moodle page you will find a Q&A Forum. This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don’t be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).\nAsk during live online Q & A session. Each week we hold an online “Q&A” session where we will try and resolve any general queries and problems. It’s an ideal time to discuss things that students are struggling with or confused about, and can share ideas and answers. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but also you can ask in the session itself.\n\nAsking good questions - It’s really important that you give us as much information as you can when you ask your questions (in class and especially on the forum). It’s so much harder to help respond to “I can’t do Exercise 5 in Week 7” (because we don’t know why it is that you can’t do it) than for example “In Exercise 5 of Week 7, I’ve managed to read in the data, but the graph looks quite odd. Here is the code I’m using…”\n\n\nCourse Contacts\nIf you have something that needs to be private, then please feel free to email the coordinator at the email addresses below:\n\n\n\n\nEmail Address\n\n\n\n\nMargriet Groen (coordinator)\nm.groen at lancaster dot ac dot uk\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "PSYC4141"
+    ]
+  },
+  {
+    "objectID": "PSYC4141/week1.html",
+    "href": "PSYC4141/week1.html",
+    "title": "1. Week 1 - Being a scientist, doing a science",
+    "section": "",
+    "text": "This week we focus on two separate things: 1. Rob introduces you to what it means to do psychological science 2. Margriet talks you through how to get started in one of the main tools you’ll use throughout the research methods and stats modules: RStudio.\nThe materials we have prepared to support your learning are arranged in four parts:",
+    "crumbs": [
+      "Home",
+      "PSYC4141",
+      "1. Week 1 - Being a scientist, doing a science"
+    ]
+  },
+  {
+    "objectID": "PSYC4141/week1.html#lectures-sec-4141-w1-lectures",
+    "href": "PSYC4141/week1.html#lectures-sec-4141-w1-lectures",
+    "title": "1. Week 1 - Being a scientist, doing a science",
+    "section": "Lectures {sec-4141-w1-lectures}",
+    "text": "Lectures {sec-4141-w1-lectures}\n\nWhat this module is about: begin here\nIntroduction to the module (~18 minutes)\nWatch this part first. It gives an overview of what the module is about, how the module is organised, how you’ll be assessed and how you can ask for help. The video has captions, in case you find that helpful. You can download the slides and a transcript from the links below the video.\n\n    \n\n\nIntro slides\nIntro transcript\n\n\n\nInteractive lecture – Being a scientist, doing a science: watch this to get started on learning and thinking about what we are going to be doing in Psychology\nYou can watch the lecture for the video using the video playback windows shown next. The lecture is broken into five parts, each about 15 minutes long (some a bit longer).\n\nBig ideas, difficult questions\nThe hardest science\nThe logic, the challenges\nScience is a thing that is done by people\nScience is a social activity: fads, inequities and biases\n\n\n\n\n\n\n\nTip\n\n\n\nDuring the lecture, we suggest some questions you can think about. Responding to these questions will help you to learn.\nIt would be great if you cared to enter your questions to me (Rob) about the lecture. You can do that anonymously by clicking on this link and typing in your thoughts:\nhttps://app.sli.do/event/gChjffSSfLvkAJSr9GNuCA\n\n\nThis is a quick (~4 minutes) walk through of how you can watch the video lecture, with tips on how to make playback accessible and convenient.\n\n    \n\nYou can download the lecture slides as a .html file you can open in any browser.\nThe slides end with a references list but don’t worry about reading what’s in the references list, we give you recommended readings in Section 2.\n\n\n\n\n\n\nTip\n\n\n\nThe slides presented in the next videos can be downloaded as a web page: doing-being-science.html.\n\nLecture slides\n\nWhen you download the file, double click on it to open it in your usual web browser for viewing. In some browsers, clicking on the link will just open the slides as a webpage in your browser.\n\n\nNext, you can see the lecture elements. We recommend that you watch them in sequence.\n\nBig ideas, difficult questions (~17 minutes). What is science, how do we do it?\n\n\n    \n\n\nThe hardest science (~15 minutes). Why learning about people is hard, and why revolutionary new ways of doing psychological science are our response to the challenges.\n\n\n    \n\n\nThe logic, the challenges (~25 minutes). The logic of the scientific method, and the challengesin doing science when it involves trying to understand people.\n\n\n    \n \n\nScience is a thing that is done by people (~18 minutes). How is it that groups of people who may not know or like or trust each other can produce this thing: science?\n\n \n    \n\n\nScience is a social activity: fads, inequities and biases (15 minutes). What do we study? Who does the studying? Fads, inequities and biases, and taking responsibility.\n\n\n    \n\n\n\nGetting started with your practical work: you need this for the labs\nHow to work with R-Studio(~16 minutes) {#sec-4141-w1-lectures-intro-how-r}\n\n    \n\n\nRStudio walkthrough transcript\n\nHow to create a plot(~ minutes) {#sec-4141-w1-lectures-how-to-plot}\n\n\n\n\nHow to create a plot walkthrough transcript",
+    "crumbs": [
+      "Home",
+      "PSYC4141",
+      "1. Week 1 - Being a scientist, doing a science"
+    ]
+  },
+  {
+    "objectID": "PSYC4141/week1.html#sec-4141-w1-reading",
+    "href": "PSYC4141/week1.html#sec-4141-w1-reading",
+    "title": "1. Week 1 - Being a scientist, doing a science",
+    "section": "Reading",
+    "text": "Reading\n\n\n\n\n\n\nEasy access to readings\n\n\n\nAll reading is accessible via the library. You can go to Moodle -&gt; Library Resources -&gt; Resource List or you can follow this link. Readings have one of the following tags:\n\nEssential: We expect you to be familiar with these reading. You will be assessed on this.\nRecommended: We highly recommend these readings. They often provide a different perspective, or explain things in a different way.\nOptional: Further readings for those interested.\n\nThe reading list is divided into multiple sections:\n\nReading associated with statistics: this contains links to readings useful for the development of statistical concepts and skills. The main textbook Fundamental statistics for the behavioral sciences by Howell (Essential) lives here.\nReading associated with psychological research principles and design: this contains links to readings that provide a good basis for foundational knowledge around research design.\nReading associated with Open Science principles and practices: this contains links to key literature on the Open Science movement.\nWeek by week: these contain links to key reading for that week that are not listed on any of the more general lists above.\n\n\n\nFor week 1, the reading is:\n\nMcMillan, B. T. M., Baumgartner, H.A., Bergmann, C. et al. (2026). What 5000 babies can tell us about developing minds and how to study them. Communications Psychology, 4, 1-5. Essential\nPeterson, D. (2016). The baby factory: Difficult research objects, disciplinary standards, and the production of statistical significance. Socius, 2, 1-10. Recommended\nWright, D. B., Barnett, J., & Breakwell, G. M. (2020). Psychology as a science: What is science? In G. M. Breakwell, D. B. Wright, & J. Barnett (Eds.), Research methods in psychology (5th ed., pp. 119–138). SAGE Publications. Recommended",
+    "crumbs": [
+      "Home",
+      "PSYC4141",
+      "1. Week 1 - Being a scientist, doing a science"
+    ]
+  },
+  {
+    "objectID": "PSYC4141/week1.html#sec-4141-w1-prelab-activities",
+    "href": "PSYC4141/week1.html#sec-4141-w1-prelab-activities",
+    "title": "1. Week 1 - Being a scientist, doing a science",
+    "section": "Pre-lab activities",
+    "text": "Pre-lab activities\nWe often ask you to do a few things in RStudio before you attend your lab session. Not this week though, so you are ready to go. Well done!",
+    "crumbs": [
+      "Home",
+      "PSYC4141",
+      "1. Week 1 - Being a scientist, doing a science"
+    ]
+  },
+  {
+    "objectID": "PSYC4141/week1.html#sec-4141-w1-lab-activities",
+    "href": "PSYC4141/week1.html#sec-4141-w1-lab-activities",
+    "title": "1. Week 1 - Being a scientist, doing a science",
+    "section": "Lab activities",
+    "text": "Lab activities\nInstructions on what you’ll be doing in your lab session will be added here soon.",
+    "crumbs": [
+      "Home",
+      "PSYC4141",
+      "1. Week 1 - Being a scientist, doing a science"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistics for Psychologists",
+    "section": "",
+    "text": "Welcome to Year 1 research methods and statistics!\n\nThis year you will begin your journey through the world of research methods, and data coding and statistics with R with us. You will complete two research methods and statistics modules:\n\nPSYC4141: Introduction to Psychological Research, with Carly Anderson, Rob Davies, Sam Finnerty, and Margriet Groen (coordinator),\nPSYC4242: Foundations of Psychological Research, with Katie Alcock, Sam Finnerty and John Towse (coordinator)\n\nClick on the button below to access your module: Term 1: PSYC4141, Term 2: PSYC4242.\n\n\n  \n    \n\n    \n      PSYC4141\n    \n    \n      PSYC4242"
+  }
+]
