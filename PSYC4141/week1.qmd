@@ -227,8 +227,8 @@ If you haven't done so already, this is a good time to watch the 'How to' video 
   
 To complete this lab activity you will need two files:
   
-1. We'll work with an example script called [`4141_wk1_lab_act1.qmd`](files/week1/4141_wk1_lab_act1.qmd). This is a Quarto document.
-2. We need a data file called [`data_bmw3.csv`](files/week1/data_bmw3.csv). This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This  means that individual bits of data are separated by comma's. We'll often use `.csv` files.
+1. We'll work with an example script called [`4141_wk1_lab_act1.qmd`](files/week1/4141_wk1_lab_act1.qmd){download="4141_wk1_lab_act1.qmd"}. This is a Quarto document.
+2. We need a data file called [`data_bmw3.csv`](files/week1/data_bmw3.csv){download="data_bmw3.csv"}. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This  means that individual bits of data are separated by comma's. We'll often use `.csv` files.
 
 You can download the files by clicking on each of them. Usually they will be saved in your 'Downloads' folder.
 
