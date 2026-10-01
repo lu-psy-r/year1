@@ -10,24 +10,16 @@ This week we focus on two separate things:
 
 The materials we have prepared to support your learning are arranged in four parts:
 
-1. [Lectures](#sec-4141-w1-lectures)
-    - [Intro](#sec-4141-w1-lectures-intro)
-    - [Lecture](#sec-4141-w1-lectures-lecture)
-    - [How-to](#sec-4141-w1-lectures-how-to)
-2. [Reading](#sec-4141-w1-reading)
-3. [Pre-lab activities](#sec-4141-w1-prelab-activities)
-4. [Lab activities](#sec-4141-w1-lab-activities)
+<!-- - @sec-4141-w1-lectures: Watch these before the lab session -->
+<!-- - @sec-4141-w1-lectures-intro-what-module: What the module is about -->
+<!-- - @sec-4141-w1-lectures-lecture: The lecture: Being a scientist, doing a science -->
+<!-- - @sec-4141-w1-lectures-intro-how-r: Getting started with your practical work -->
+<!-- - @sec-4141-w1-lectures-how-to-plot: How to create a plot -->
+<!-- - @sec-4141-w1-reading: Recommended readings -->
+<!-- - @sec-4141-w1-prelab-activities: Activities to do before you attend your lab session -->
+<!-- - @sec-4141-w1-lab-activities: Activities you do during your lab session -->
 
-- @sec-4141-w1-lectures: Watch these before the lab session
-- @sec-4141-w1-lectures-intro-what-module: What the module is about
-- @sec-4141-w1-lectures-lecture: The lecture: Being a scientist, doing a science
-- @sec-4141-w1-lectures-intro-how-r: Getting started with your practical work
-- @sec-4141-w1-lectures-how-to-plot: How to create a plot
-- @sec-4141-w1-reading: Recommended readings
-- @sec-4141-w1-prelab-activities: Activities to do before you attend your lab session
-- @sec-4141-w1-lab-activities: Activities you do during your lab session
-
-## Lectures {ec-4141-w1-lectures}
+## Lectures {sec-4141-w1-lectures}
 
 ### What this module is about: begin here {#sec-4141-w1-lectures-intro-what-module}
 
@@ -194,19 +186,3 @@ We often ask you to do a few things in RStudio before you attend your lab sessio
 ## Lab activities {#sec-4141-w1-lab-activities}
 
 Instructions on what you'll be doing in your lab session will be added here soon.
-
-
-<!-- - Create a folder for Week 11. -->
-
-<!-- - Download the [122_week11_forStudents.zip](data/week11/122_week11_forStudents.zip) file and upload it into the new folder in RStudio Server you created at the previous step. -->
-
-<!-- ::: {.callout-important} -->
-<!-- ## the double hash is your callout box header bar. -->
-<!-- Important will give an exclamation mark at the beginning of the header bar -->
-<!-- Ensure that you have the three colons at the end of your box to close your callout -->
-<!-- ::: -->
-
-<!-- ```{r eval=FALSE} -->
-<!-- download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week11/122_week11_forStudents/exams.csv?raw=true", destfile = "exams.csv") -->
-<!-- ``` -->
-

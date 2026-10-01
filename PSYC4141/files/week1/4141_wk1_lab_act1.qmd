@@ -11,13 +11,14 @@ We've all been there. I may be trying to focus on a lecture, but a thought on wh
 
 We are going to:
 
-1. Setup the appropriate bits and pieces in RStudio that we need.
-2. Download the data
-3. Read in the data and have a quick look what is in the file
-4. Create a plot
+1.  Setup the appropriate bits and pieces in RStudio that we need.
+2.  Download the data
+3.  Read in the data and have a quick look what is in the file
+4.  Create a plot
 
-::: {.callout-important}
+::: callout-important
 ## Watch the 'How to' video
+
 If you haven't done so already, this is a good time to watch the 'How to' video (here @sec-4141-w1-lectures) on 'How to create a plot'.
 :::
 
@@ -58,8 +59,7 @@ ggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01)) + # specifies data and v
   geom_histogram()                                       # specifies what type of plot
 ```
 
-Now, this does the job, but it doesn't quite look like I'd like it to look. Let's change that.
-I don't particularly like the grey background. I can change that by adding a layer to the plot specifying a different background. There are lots of different 'themes' in `ggplot()` that you can use. Have a look [here](https://ggplot2.tidyverse.org/reference/ggtheme.html). 
+Now, this does the job, but it doesn't quite look like I'd like it to look. Let's change that. I don't particularly like the grey background. I can change that by adding a layer to the plot specifying a different background. There are lots of different 'themes' in `ggplot()` that you can use. Have a look [here](https://ggplot2.tidyverse.org/reference/ggtheme.html).
 
 ```{r}
 #| label: With a different background
