@@ -4,7 +4,7 @@ subtitle: Written by Rob Davies and Margriet Groen
 order: 2 # ensure this is one more than the previous script
 ---
 
-:::callout-information
+:::{.callout-note
 This week we focus on two separate things:
 
 1. Rob introduces you to what it means to do psychological science
