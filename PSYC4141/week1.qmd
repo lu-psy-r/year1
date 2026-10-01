@@ -220,14 +220,14 @@ We are going to:
 4.  Create a plot
 
 :::{.callout-important title="Watch the 'How to' lecture"}
-If you haven't done so already, this is a good time to watch the 'How to' video (here @sec-4141-w1-lectures) on 'How to create a plot'.
+If you haven't done so already, this is a good time to watch the 'How to' video (here @sec-4141-w1-lectures-intro-how-r on 'How to create a plot'.
 :::
 
 #### Step 1: Setup
 
 Before we can do anything, we need to tell R what packages we want to use. You may wonder what a package is. If R is your kitchen with basic equipment, a package is a specialist cookbook that adds new recipes. All the packages that you'll need have already been installed on the R-server, but you have to tell R which cookbooks to get off the shelf for what you want to do right now. We use the function 'library' to do that. It is useful to have a section at the top of your script where you get all the cookbooks you need for this script off the shelf (...or load all the relevant libraries).
 
-```{r}
+```{r eval=FALSE}
 # Load relevant libraries
 library(here) # the 'here' package helps with finding your files
 library(tidyverse) # the 'tidyverse' is a set of packages that handles almost everything you need to do with data
@@ -237,13 +237,13 @@ library(tidyverse) # the 'tidyverse' is a set of packages that handles almost ev
 
 Now we need to get the data onto our computer and into our working directory on the R-server.
 
-Download the [data_bmw3.csv](PSYC4141/files/week1/data_bmw3.csv) file by clicking on it. Usually it will be saved in your 'Downloads' folder. Now upload the file into the new folder called 'week 1' in RStudio Server you created during the previous lab activity.
+Download the [data_bmw3.csv](here(PSYC4141/files/week1/data_bmw3.csv)) file by clicking on it. Usually it will be saved in your 'Downloads' folder. Now upload the file into the new folder called 'week 1' in RStudio Server you created during the previous lab activity.
 
 #### Step 3: Reading in the data
 
 The next step is to read in a data file. Here we'll use a subset of the data collected by Schubert and colleagues. It contains responses from 215 students on a questionnaire that measures mind wandering. It is a file of the type `.csv` (which means that individual bits of data are separated by comma's), so we'll use the function `read_csv()` to do this. Inside the function, we tell R where to find the file. This is the bit that comes after `here()`: It specifies the filepath. After the comma, we have the file name, including the extension.
 
-```{r}
+```{r eval=FALSE}
 # Read in the data
 data_bmw3 <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
 ```
@@ -254,7 +254,7 @@ The last thing we'll do today is create our first plot. Let's say we'd like to v
 
 We can do that by creating a histogram. The function we use for that (and for a lot of other plots you'll make for research methods and stats) is `ggplot()`. First we need- simple histogram - change the background - add a label for the x-axis - change the colour (fill) - colours (in the Console) - add labels for the answer options
 
-```{r}
+```{r eval=FALSE}
 #| label: A very simple histogram
 ggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01)) + # specifies data and variable to plot
   geom_histogram()                                       # specifies what type of plot
@@ -262,7 +262,7 @@ ggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01)) + # specifies data and v
 
 Now, this does the job, but it doesn't quite look like I'd like it to look. Let's change that. I don't particularly like the grey background. I can change that by adding a layer to the plot specifying a different background. There are lots of different 'themes' in `ggplot()` that you can use. Have a look [here](https://ggplot2.tidyverse.org/reference/ggtheme.html).
 
-```{r}
+```{r eval=FALSE}
 #| label: With a different background
 ggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01)) + # specifies data and variable to plot
   geom_histogram()  +                                     # specifies what type of plot
@@ -271,7 +271,7 @@ ggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01)) + # specifies data and v
 
 I would like the bars to be red instead of grey. I can make that happen, but specifying an additional bit of code (or 'argument' in the `ggplot()` part. There are lots of different colours and colour schemes available within `ggplot()`. Have a look at [this overview](https://r-charts.com/colors/) and choose one you like for your plot. There is more to say about which colour schemes to use, but we'll save that for another day.
 
-```{r}
+```{r eval=FALSE}
 #| label: The bars are now red
 ggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...and makes the bars red
   geom_histogram()  +                                                      # specifies what type of plot
@@ -280,7 +280,7 @@ ggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...
 
 To avoid the legend on the right getting printed (because we don't need it in this case), we can tell R not to include it
 
-```{r}
+```{r eval=FALSE}
 #| label: Remove the legend
 ggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...and makes the bars red
   geom_histogram()  +                                                      # specifies what type of plot
@@ -290,7 +290,7 @@ ggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...
 
 Now it would be good to have a more informative label for what we've plotted on the x-axis. Instead of the variable name `BMW3_UN_01`, we'll add 'Brief Mind Wandering Three-factor Scale - Question 1'.
 
-```{r}
+```{r eval=FALSE}
 #| label: Add informative x-axis label
 ggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...and makes the bars red
   geom_histogram()  +                                                      # specifies what type of plot
@@ -301,7 +301,7 @@ ggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...
 
 Finally, instead of the numerical values 0 to 4 that are currently on the x-axis, we'll add the labels that are associated with each of these values.
 
-```{r}
+```{r eval=FALSE}
 #| label: Add text labels to x-axis
 ggplot(data = data_bmw3, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...and makes the bars red
   geom_histogram()  +                                                      # specifies what type of plot

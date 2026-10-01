@@ -476,7 +476,7 @@ Watch the ‘How to’ lecture
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you haven’t done so already, this is a good time to watch the ‘How to’ video (here <a href="#sec-4141-w1-lectures" class="quarto-xref">Section&nbsp;1</a>) on ‘How to create a plot’.</p>
+<p>If you haven’t done so already, this is a good time to watch the ‘How to’ video (here <a href="#sec-4141-w1-lectures-intro-how-r" class="quarto-xref">Section&nbsp;1.3</a> on ‘How to create a plot’.</p>
 </div>
 </div>
 </section>
@@ -485,57 +485,21 @@ Watch the ‘How to’ lecture
 <p>Before we can do anything, we need to tell R what packages we want to use. You may wonder what a package is. If R is your kitchen with basic equipment, a package is a specialist cookbook that adds new recipes. All the packages that you’ll need have already been installed on the R-server, but you have to tell R which cookbooks to get off the shelf for what you want to do right now. We use the function ‘library’ to do that. It is useful to have a section at the top of your script where you get all the cookbooks you need for this script off the shelf (…or load all the relevant libraries).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load relevant libraries</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here) <span class="co"># the 'here' package helps with finding your files</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>here() starts at /Users/margrietgroen/stats/2627_year1</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># the 'tidyverse' is a set of packages that handles almost everything you need to do with data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'ggplot2' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'tidyr' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: package 'dplyr' was built under R version 4.4.3</code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.2.0     ✔ readr     2.1.5
-✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   4.0.1     ✔ tibble    3.2.1
-✔ lubridate 1.9.4     ✔ tidyr     1.3.2
-✔ purrr     1.0.4     </code></pre>
-</div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here) <span class="co"># the 'here' package helps with finding your files</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># the 'tidyverse' is a set of packages that handles almost everything you need to do with data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-2-download-the-data" class="level4">
 <h4 class="anchored" data-anchor-id="step-2-download-the-data">Step 2: Download the data</h4>
 <p>Now we need to get the data onto our computer and into our working directory on the R-server.</p>
-<p>Download the <a href="PSYC4141/files/week1/data_bmw3.csv">data_bmw3.csv</a> file by clicking on it. Usually it will be saved in your ‘Downloads’ folder. Now upload the file into the new folder called ‘week 1’ in RStudio Server you created during the previous lab activity.</p>
+<p>Download the <a href="here(PSYC4141/files/week1/data_bmw3.csv)">data_bmw3.csv</a> file by clicking on it. Usually it will be saved in your ‘Downloads’ folder. Now upload the file into the new folder called ‘week 1’ in RStudio Server you created during the previous lab activity.</p>
 </section>
 <section id="step-3-reading-in-the-data" class="level4">
 <h4 class="anchored" data-anchor-id="step-3-reading-in-the-data">Step 3: Reading in the data</h4>
 <p>The next step is to read in a data file. Here we’ll use a subset of the data collected by Schubert and colleagues. It contains responses from 215 students on a questionnaire that measures mind wandering. It is a file of the type <code>.csv</code> (which means that individual bits of data are separated by comma’s), so we’ll use the function <code>read_csv()</code> to do this. Inside the function, we tell R where to find the file. This is the bit that comes after <code>here()</code>: It specifies the filepath. After the comma, we have the file name, including the extension.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the data</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>data_bmw3 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"PSYC4141/files/week1/"</span>, <span class="st">"data_bmw3.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 215 Columns: 22
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr  (4): location, type, gender, education
-dbl (18): subject, id, Age, BMW3_UN_01, BMW3_UN_02, BMW3_UN_03, BMW3_UN_04, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the data</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>data_bmw3 <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"PSYC4141/files/week1/"</span>, <span class="st">"data_bmw3.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="step-4-create-a-plot" class="level4">
@@ -543,107 +507,47 @@ dbl (18): subject, id, Age, BMW3_UN_01, BMW3_UN_02, BMW3_UN_03, BMW3_UN_04, ...
 <p>The last thing we’ll do today is create our first plot. Let’s say we’d like to visualise how many people selected each response option for question 1 of the questionnaire. Question 1 was “While listening to a presentation, my thoughts start to trail off unintentionally.” Participants were asked to decide to what extent they agreed or disagreed with that statement. They chose one of the following options: “Fully disagree”, “Somewhat disagree”, “Neutral”, “Somewhat agree” or “Fully agree”.</p>
 <p>We can do that by creating a histogram. The function we use for that (and for a lot of other plots you’ll make for research methods and stats) is <code>ggplot()</code>. First we need- simple histogram - change the background - add a label for the x-axis - change the colour (fill) - colours (in the Console) - add labels for the answer options</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_bmw3, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN_01)) <span class="sc">+</span> <span class="co"># specifies data and variable to plot</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()                                       <span class="co"># specifies what type of plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="week1_files/figure-html/A very simple histogram-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_bmw3, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN_01)) <span class="sc">+</span> <span class="co"># specifies data and variable to plot</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()                                       <span class="co"># specifies what type of plot</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now, this does the job, but it doesn’t quite look like I’d like it to look. Let’s change that. I don’t particularly like the grey background. I can change that by adding a layer to the plot specifying a different background. There are lots of different ‘themes’ in <code>ggplot()</code> that you can use. Have a look <a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">here</a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_bmw3, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN_01)) <span class="sc">+</span> <span class="co"># specifies data and variable to plot</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()  <span class="sc">+</span>                                     <span class="co"># specifies what type of plot</span></span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()                                              <span class="co"># changes the background</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="week1_files/figure-html/With a different background-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_bmw3, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN_01)) <span class="sc">+</span> <span class="co"># specifies data and variable to plot</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()  <span class="sc">+</span>                                     <span class="co"># specifies what type of plot</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()                                              <span class="co"># changes the background</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>I would like the bars to be red instead of grey. I can make that happen, but specifying an additional bit of code (or ‘argument’ in the <code>ggplot()</code> part. There are lots of different colours and colour schemes available within <code>ggplot()</code>. Have a look at <a href="https://r-charts.com/colors/">this overview</a> and choose one you like for your plot. There is more to say about which colour schemes to use, but we’ll save that for another day.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_bmw3, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN_01, <span class="at">fill =</span> <span class="st">"tomato"</span>)) <span class="sc">+</span> <span class="co"># ...and makes the bars red</span></span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()  <span class="sc">+</span>                                                      <span class="co"># specifies what type of plot</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()                                                               <span class="co"># changes the background</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="week1_files/figure-html/The bars are now red-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_bmw3, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN_01, <span class="at">fill =</span> <span class="st">"tomato"</span>)) <span class="sc">+</span> <span class="co"># ...and makes the bars red</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()  <span class="sc">+</span>                                                      <span class="co"># specifies what type of plot</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()                                                               <span class="co"># changes the background</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>To avoid the legend on the right getting printed (because we don’t need it in this case), we can tell R not to include it</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_bmw3, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN_01, <span class="at">fill =</span> <span class="st">"tomato"</span>)) <span class="sc">+</span> <span class="co"># ...and makes the bars red</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()  <span class="sc">+</span>                                                      <span class="co"># specifies what type of plot</span></span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                             <span class="co"># changes the background</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)                                          <span class="co"># removes the legend</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="week1_files/figure-html/Remove the legend-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_bmw3, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN_01, <span class="at">fill =</span> <span class="st">"tomato"</span>)) <span class="sc">+</span> <span class="co"># ...and makes the bars red</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()  <span class="sc">+</span>                                                      <span class="co"># specifies what type of plot</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                             <span class="co"># changes the background</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>)                                          <span class="co"># removes the legend</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now it would be good to have a more informative label for what we’ve plotted on the x-axis. Instead of the variable name <code>BMW3_UN_01</code>, we’ll add ‘Brief Mind Wandering Three-factor Scale - Question 1’.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_bmw3, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN_01, <span class="at">fill =</span> <span class="st">"tomato"</span>)) <span class="sc">+</span> <span class="co"># ...and makes the bars red</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()  <span class="sc">+</span>                                                      <span class="co"># specifies what type of plot</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                             <span class="co"># changes the background</span></span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span>                                        <span class="co"># removes the legend</span></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Brief Mind Wandering Three-Factor Scale - Question 1"</span>)        <span class="co"># add more informative label for the x-axis</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="week1_files/figure-html/Add informative x-axis label-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_bmw3, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN_01, <span class="at">fill =</span> <span class="st">"tomato"</span>)) <span class="sc">+</span> <span class="co"># ...and makes the bars red</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()  <span class="sc">+</span>                                                      <span class="co"># specifies what type of plot</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                             <span class="co"># changes the background</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span>                                        <span class="co"># removes the legend</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Brief Mind Wandering Three-Factor Scale - Question 1"</span>)        <span class="co"># add more informative label for the x-axis</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Finally, instead of the numerical values 0 to 4 that are currently on the x-axis, we’ll add the labels that are associated with each of these values.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_bmw3, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN_01, <span class="at">fill =</span> <span class="st">"tomato"</span>)) <span class="sc">+</span> <span class="co"># ...and makes the bars red</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()  <span class="sc">+</span>                                                      <span class="co"># specifies what type of plot</span></span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                             <span class="co"># changes the background</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span>                                        <span class="co"># removes the legend</span></span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Brief Mind Wandering Three-Factor Scale - Question 1"</span>) <span class="sc">+</span>       <span class="co"># add more informative label for the x-axis</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(                                                      <span class="co"># replace numerical values with text labels</span></span>
-<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">4</span>,</span>
-<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Fully disagree"</span>, <span class="st">"Somewhat disagree"</span>, <span class="st">"Neutral"</span>, <span class="st">"Somewhat agree"</span>, <span class="st">"Fully agree"</span>)</span>
-<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`stat_bin()` using `bins = 30`. Pick better value `binwidth`.</code></pre>
-</div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="week1_files/figure-html/Add text labels to x-axis-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_bmw3, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN_01, <span class="at">fill =</span> <span class="st">"tomato"</span>)) <span class="sc">+</span> <span class="co"># ...and makes the bars red</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>()  <span class="sc">+</span>                                                      <span class="co"># specifies what type of plot</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span>                                                             <span class="co"># changes the background</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"none"</span>) <span class="sc">+</span>                                        <span class="co"># removes the legend</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Brief Mind Wandering Three-Factor Scale - Question 1"</span>) <span class="sc">+</span>       <span class="co"># add more informative label for the x-axis</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(                                                      <span class="co"># replace numerical values with text labels</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Fully disagree"</span>, <span class="st">"Somewhat disagree"</span>, <span class="st">"Neutral"</span>, <span class="st">"Somewhat agree"</span>, <span class="st">"Fully agree"</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>That’s it! You have created your first plot.</p>
 <p>For more practice, go through the same steps for a different question. Remember, you can look at the questionnaire <a href="PSYC4141/files/week1/&quot;BMW-3_eng.pdf&quot;">here</a></p>
