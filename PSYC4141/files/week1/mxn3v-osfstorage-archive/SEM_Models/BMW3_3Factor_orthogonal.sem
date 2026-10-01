@@ -1,0 +1,7 @@
+MW_Unintentional =~  BMW3_UN_01 + BMW3_UN_02 + BMW3_UN_03 + BMW3_UN_04 
+MW_intentional =~ BMW3_IN_01 + BMW3_IN_02 + BMW3_IN_03 + BMW3_IN_04
+MW_MetaAwareness =~ BMW3_ME_01 + BMW3_ME_02 + BMW3_ME_03 + BMW3_ME_04
+
+# constrain covariances to be zero
+MW_Unintentional ~~ 0*MW_intentional + 0*MW_MetaAwareness
+MW_intentional ~~ 0*MW_MetaAwareness

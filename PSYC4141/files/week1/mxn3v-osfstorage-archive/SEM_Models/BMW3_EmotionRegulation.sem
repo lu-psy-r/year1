@@ -1,0 +1,39 @@
+MW_Unintentional =~  BMW3_UN_01_z + BMW3_UN_02_z + BMW3_UN_03_z + BMW3_UN_04_z
+MW_intentional =~ BMW3_IN_01_z + BMW3_IN_02_z + BMW3_IN_03_z + BMW3_IN_04_z
+MW_MetaAwareness =~ BMW3_ME_01_z + BMW3_ME_02_z + BMW3_ME_03_z + BMW3_ME_04_z
+
+ER_Reappraisal =~ ERQ_01_z+ ERQ_03_z+ ERQ_05_z+ ERQ_07_z+ ERQ_08_z+ ERQ_10_z
+ER_Suppression =~ ERQ_02_z+ ERQ_04_z+ ERQ_06_z+ ERQ_09_z
+ER_Rumination =~ Rumination_01_z + Rumination_02_z + Rumination_03_z + Rumination_04_z
+
+ER_Reappraisal ~ MW_Unintentional + MW_intentional + MW_MetaAwareness
+ER_Suppression ~ MW_Unintentional + MW_intentional + MW_MetaAwareness
+ER_Rumination ~ MW_Unintentional + MW_intentional + MW_MetaAwareness
+
+
+BMW3_UN_01_z ~ 0
+BMW3_UN_02_z ~ 0
+BMW3_UN_03_z ~ 0
+BMW3_UN_04_z ~ 0
+BMW3_IN_01_z ~ 0
+BMW3_IN_02_z ~ 0
+BMW3_IN_03_z ~ 0
+BMW3_IN_04_z ~ 0
+BMW3_ME_01_z ~ 0
+BMW3_ME_02_z ~ 0
+BMW3_ME_03_z ~ 0
+BMW3_ME_04_z ~ 0
+ERQ_01_z ~ 0
+ERQ_02_z ~ 0
+ERQ_03_z ~ 0
+ERQ_04_z ~ 0
+ERQ_05_z ~ 0
+ERQ_06_z ~ 0
+ERQ_07_z ~ 0
+ERQ_08_z ~ 0
+ERQ_09_z ~ 0
+ERQ_10_z ~ 0
+Rumination_01_z ~ 0
+Rumination_02_z ~ 0
+Rumination_03_z ~ 0
+Rumination_04_z ~ 0

@@ -1,0 +1,20 @@
+MW_Unintentional =~  BMW3_UN_01_z + BMW3_UN_02_z + BMW3_UN_03_z + BMW3_UN_04_z
+MW_intentional =~ BMW3_IN_01_z + BMW3_IN_02_z + BMW3_IN_03_z + BMW3_IN_04_z
+MW_MetaAwareness =~ BMW3_ME_01_z + BMW3_ME_02_z + BMW3_ME_03_z + BMW3_ME_04_z
+
+AC =~ 1*ACS_FOC_z + 1*ACS_SHIF_z
+
+BMW3_UN_01_z ~ 0
+BMW3_UN_02_z ~ 0
+BMW3_UN_03_z ~ 0
+BMW3_UN_04_z ~ 0
+BMW3_IN_01_z ~ 0
+BMW3_IN_02_z ~ 0
+BMW3_IN_03_z ~ 0
+BMW3_IN_04_z ~ 0
+BMW3_ME_01_z ~ 0
+BMW3_ME_02_z ~ 0
+BMW3_ME_03_z ~ 0
+BMW3_ME_04_z ~ 0
+ACS_FOC_z ~ 0
+ACS_SHIF_z ~ 0

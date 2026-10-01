@@ -1,0 +1,27 @@
+MW_Unintentional =~  BMW3_UN_01_z + BMW3_UN_02_z + BMW3_UN_03_z + BMW3_UN_04_z
+MW_intentional =~ BMW3_IN_01_z + BMW3_IN_02_z + BMW3_IN_03_z + BMW3_IN_04_z
+MW_MetaAwareness =~ BMW3_ME_01_z + BMW3_ME_02_z + BMW3_ME_03_z + BMW3_ME_04_z
+
+ADS =~ 1*ADS_psych_symptoms_1_z + ADS_psych_symptoms_2_z + ADS_soma_symptoms_1_z + ADS_soma_symptoms_2_z
+ADS_psych_symptoms_1_z ~~ ADS_psych_symptoms_2_z
+ADS_soma_symptoms_1_z ~~ ADS_soma_symptoms_2_z
+
+ADS ~ MW_Unintentional + MW_intentional + MW_MetaAwareness
+
+
+BMW3_UN_01_z ~ 0
+BMW3_UN_02_z ~ 0
+BMW3_UN_03_z ~ 0
+BMW3_UN_04_z ~ 0
+BMW3_IN_01_z ~ 0
+BMW3_IN_02_z ~ 0
+BMW3_IN_03_z ~ 0
+BMW3_IN_04_z ~ 0
+BMW3_ME_01_z ~ 0
+BMW3_ME_02_z ~ 0
+BMW3_ME_03_z ~ 0
+BMW3_ME_04_z ~ 0
+ADS_psych_symptoms_1_z ~ 0
+ADS_soma_symptoms_1_z ~ 0
+ADS_psych_symptoms_2_z ~ 0
+ADS_soma_symptoms_2_z ~ 0

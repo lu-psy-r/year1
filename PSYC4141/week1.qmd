@@ -4,20 +4,34 @@ subtitle: Written by Rob Davies and Margriet Groen
 order: 2 # ensure this is one more than the previous script
 ---
 
-## Materials for learning {#sec-4141-w1-learning-intro}
+This week we focus on two separate things:
+1. Rob introduces you to what it means to do psychological science
+2. Margriet talks you through how to get started in one of the main tools you'll use throughout the research methods and stats modules: RStudio.
 
 The materials we have prepared to support your learning are arranged in four parts:
 
-- @sec-4141-w1-learning-intro-what-module: What the module is about
-- @sec-4141-w1-learning-intro-how-r: Getting started with your practical work
-- @sec-4141-w1-lecture: The lecture: Being a scientist, doing a science
+1. [Lectures](#sec-4141-w1-lectures)
+    - [Intro](#sec-4141-w1-lectures-intro)
+    - [Lecture](#sec-4141-w1-lectures-lecture)
+    - [How-to](#sec-4141-w1-lectures-how-to)
+2. [Reading](#sec-4141-w1-reading)
+3. [Pre-lab activities](#sec-4141-w1-prelab-activities)
+4. [Lab activities](#sec-4141-w1-lab-activities)
+
+- @sec-4141-w1-lectures: Watch these before the lab session
+- @sec-4141-w1-lectures-intro-what-module: What the module is about
+- @sec-4141-w1-lectures-lecture: The lecture: Being a scientist, doing a science
+- @sec-4141-w1-lectures-intro-how-r: Getting started with your practical work
+- @sec-4141-w1-lectures-how-to-plot: How to create a plot
 - @sec-4141-w1-reading: Recommended readings
 - @sec-4141-w1-prelab-activities: Activities to do before you attend your lab session
 - @sec-4141-w1-lab-activities: Activities you do during your lab session
 
-### What this module is about: begin here {#sec-4141-w1-learning-intro-what-module}
+## Lectures {ec-4141-w1-lectures}
 
-1.  **Introduction to the module** (~18 minutes)
+### What this module is about: begin here {#sec-4141-w1-lectures-intro-what-module}
+
+**Introduction to the module** (~18 minutes)
 
 Watch this part first. It gives an overview of what the module is about, how the module is organised, how you'll be assessed and how you can ask for help. The video has captions, in case you find that helpful. You can download the slides and a transcript from the links below the video.
 
@@ -32,21 +46,7 @@ Watch this part first. It gives an overview of what the module is about, how the
 - [Intro slides](files/week1/4141_intro_slides.pdf)
 - [Intro transcript](files/week1/4141_intro_transcript.txt)
 
-### Getting started with your practical work: you need this for workshops {#sec-4141-w1-learning-intro-how-r} 
-
-2.  **How to work with R-Studio**(~16 minutes)
-
-```{=html}
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=991c9fde-4fb9-4f3e-b4a9-b4d500dbfbe2&autoplay=true&offerviewer=true&showtitle=false&showbrand=false&captions=true&start=2&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_rstudio"></iframe>
-</div>
-```
-
-\newline
-
-- [RStudio walkthrough transcript](files/week1/4141_rstudio_transcript.txt)
-
-### Interactive lecture -- Being a scientist, doing a science: watch this to get started on learning and thinking about what we are going to be doing in Psychology {#sec-4141-w1-lecture} 
+### Interactive lecture -- Being a scientist, doing a science: watch this to get started on learning and thinking about what we are going to be doing in Psychology {#sec-4141-w1-lectures-lecture} 
 
 You can watch the lecture for the video using the video playback windows shown next. The lecture is broken into five parts, each about 15 minutes long (some a bit longer).
 
@@ -140,6 +140,29 @@ Next, you can see the lecture elements. We recommend that you watch them in sequ
 
 \newline
 
+### Getting started with your practical work: you need this for the labs 
+
+**How to work with R-Studio**(~16 minutes) {#sec-4141-w1-lectures-intro-how-r}
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=991c9fde-4fb9-4f3e-b4a9-b4d500dbfbe2&autoplay=true&offerviewer=true&showtitle=false&showbrand=false&captions=true&start=2&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_rstudio"></iframe>
+</div>
+```
+
+\newline
+
+- [RStudio walkthrough transcript](files/week1/4141_rstudio_transcript.txt)
+
+**How to create a plot**(~ minutes) {#sec-4141-w1-lectures-how-to-plot}
+
+```{html}
+```
+
+\newline
+
+- [How to create a plot walkthrough transcript](files/week1/4141_how_to_plot_transcript.txt)
+
 ## Reading {#sec-4141-w1-reading}
 
 ::: {.callout-tip title="Easy access to readings"}
@@ -162,6 +185,7 @@ For **week 1**, the reading is:
 - McMillan, B. T. M., Baumgartner, H.A., Bergmann, C. et al. (2026). What 5000 babies can tell us about developing minds and how to study them. *Communications Psychology, 4*, 1-5. **Essential**
 - Peterson, D. (2016). The baby factory: Difficult research objects, disciplinary standards, and the production of statistical significance. *Socius, 2*, 1-10. **Recommended**
 - Wright, D. B., Barnett, J., & Breakwell, G. M. (2020). Psychology as a science: What is science? In G. M. Breakwell, D. B. Wright, & J. Barnett (Eds.), *Research methods in psychology* (5th ed., pp. 119–138). SAGE Publications. **Recommended**
+
 
 ## Pre-lab activities {#sec-4141-w1-prelab-activities}
 

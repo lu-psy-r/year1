@@ -1,0 +1,44 @@
+MW_Unintentional =~  BMW3_UN_01_z + BMW3_UN_02_z + BMW3_UN_03_z + BMW3_UN_04_z
+MW_intentional =~ BMW3_IN_01_z + BMW3_IN_02_z + BMW3_IN_03_z + BMW3_IN_04_z
+MW_MetaAwareness =~ BMW3_ME_01_z + BMW3_ME_02_z + BMW3_ME_03_z + BMW3_ME_04_z
+
+Extraversion =~ IPIP_E_p1_z + IPIP_E_p2_z + IPIP_E_p3_z
+Conscientiousness =~ IPIP_C_p1_z + IPIP_C_p2_z + IPIP_C_p3_z
+Openness =~ IPIP_I_p1_z + IPIP_I_p2_z + IPIP_I_p3_z
+Agreeableness =~ IPIP_A_p1_z + IPIP_A_p2_z + IPIP_A_p3_z
+Stability =~ IPIP_S_p1_z + IPIP_S_p2_z + IPIP_S_p3_z
+
+MW_Unintentional ~ Openness + Conscientiousness + Extraversion + Agreeableness + Stability
+MW_intentional ~ Openness + Conscientiousness + Extraversion + Agreeableness + Stability
+MW_MetaAwareness ~ Openness + Conscientiousness + Extraversion + Agreeableness + Stability
+
+
+BMW3_UN_01_z ~ 0
+BMW3_UN_02_z ~ 0
+BMW3_UN_03_z ~ 0
+BMW3_UN_04_z ~ 0
+BMW3_IN_01_z ~ 0
+BMW3_IN_02_z ~ 0
+BMW3_IN_03_z ~ 0
+BMW3_IN_04_z ~ 0
+BMW3_ME_01_z ~ 0
+BMW3_ME_02_z ~ 0
+BMW3_ME_03_z ~ 0
+BMW3_ME_04_z ~ 0
+IPIP_E_p1_z ~ 0
+IPIP_E_p2_z ~ 0
+IPIP_E_p3_z ~ 0
+IPIP_C_p1_z ~ 0
+IPIP_C_p2_z ~ 0
+IPIP_C_p3_z ~ 0
+IPIP_I_p1_z ~ 0
+IPIP_I_p2_z ~ 0
+IPIP_I_p3_z ~ 0
+IPIP_A_p1_z ~ 0
+IPIP_A_p2_z ~ 0
+IPIP_A_p3_z ~ 0
+IPIP_S_p1_z ~ 0
+IPIP_S_p2_z ~ 0
+IPIP_S_p3_z ~ 0
+
+IPIP_A_p1_z ~~ 0*IPIP_A_p1_z

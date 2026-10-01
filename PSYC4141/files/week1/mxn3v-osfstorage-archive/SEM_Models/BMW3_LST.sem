@@ -1,0 +1,36 @@
+MW_Unintentional_t1 =~  BMW3_UN_01_z + BMW3_UN_02_z + BMW3_UN_03_z + BMW3_UN_04_z
+MW_intentional_t1 =~ BMW3_IN_01_z + BMW3_IN_02_z + BMW3_IN_03_z + BMW3_IN_04_z
+MW_MetaAwareness_t1 =~ BMW3_ME_01_z + BMW3_ME_02_z + BMW3_ME_03_z + BMW3_ME_04_z
+
+MW_Unintentional_t2 =~  BMW3_UN_01_t2_z + BMW3_UN_02_t2_z + BMW3_UN_03_t2_z + BMW3_UN_04_t2_z
+MW_intentional_t2 =~ BMW3_IN_01_t2_z + BMW3_IN_02_t2_z + BMW3_IN_03_t2_z + BMW3_IN_04_t2_z
+MW_MetaAwareness_t2 =~ BMW3_ME_01_t2_z + BMW3_ME_02_t2_z + BMW3_ME_03_t2_z + BMW3_ME_04_t2_z
+
+MW_Unintentional_t =~ 1*MW_Unintentional_t1 + 1*MW_Unintentional_t2
+MW_intentional_t =~ 1*MW_intentional_t1 + 1*MW_intentional_t2
+MW_MetaAwareness_t =~ 1*MW_MetaAwareness_t1 + 1*MW_MetaAwareness_t2
+
+BMW3_UN_01_z ~ 0
+BMW3_UN_02_z ~ 0
+BMW3_UN_03_z ~ 0
+BMW3_UN_04_z ~ 0
+BMW3_IN_01_z ~ 0
+BMW3_IN_02_z ~ 0
+BMW3_IN_03_z ~ 0
+BMW3_IN_04_z ~ 0
+BMW3_ME_01_z ~ 0
+BMW3_ME_02_z ~ 0
+BMW3_ME_03_z ~ 0
+BMW3_ME_04_z ~ 0
+BMW3_UN_01_t2_z ~ 0
+BMW3_UN_02_t2_z ~ 0
+BMW3_UN_03_t2_z ~ 0
+BMW3_UN_04_t2_z ~ 0
+BMW3_IN_01_t2_z ~ 0
+BMW3_IN_02_t2_z ~ 0
+BMW3_IN_03_t2_z ~ 0
+BMW3_IN_04_t2_z ~ 0
+BMW3_ME_01_t2_z ~ 0
+BMW3_ME_02_t2_z ~ 0
+BMW3_ME_03_t2_z ~ 0
+BMW3_ME_04_t2_z ~ 0

@@ -1,0 +1,32 @@
+MW_Unintentional =~  BMW3_UN_01_z + BMW3_UN_02_z + BMW3_UN_03_z + BMW3_UN_04_z
+MW_intentional =~ BMW3_IN_01_z + BMW3_IN_02_z + BMW3_IN_03_z + BMW3_IN_04_z
+MW_MetaAwareness =~ BMW3_ME_01_z + BMW3_ME_02_z + BMW3_ME_03_z + BMW3_ME_04_z
+
+MW_spontaneous =~ SMW_01_z + SMW_02_z + SMW_03_z + SMW_04_z
+MW_deliberate =~ DMW_01_z + DMW_02_z + DMW_03_z + DMW_04_z
+
+mindfulness =~ MAAS_p1_z + MAAS_p2_z + MAAS_p3_z
+
+BMW3_UN_01_z ~ 0
+BMW3_UN_02_z ~ 0
+BMW3_UN_03_z ~ 0
+BMW3_UN_04_z ~ 0
+BMW3_IN_01_z ~ 0
+BMW3_IN_02_z ~ 0
+BMW3_IN_03_z ~ 0
+BMW3_IN_04_z ~ 0
+BMW3_ME_01_z ~ 0
+BMW3_ME_02_z ~ 0
+BMW3_ME_03_z ~ 0
+BMW3_ME_04_z ~ 0
+SMW_01_z ~ 0
+SMW_02_z ~ 0
+SMW_03_z ~ 0
+SMW_04_z ~ 0
+DMW_01_z ~ 0
+DMW_02_z ~ 0
+DMW_03_z ~ 0
+DMW_04_z ~ 0
+MAAS_p1_z ~ 0
+MAAS_p2_z ~ 0
+MAAS_p3_z ~ 0

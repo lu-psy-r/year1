@@ -1,0 +1,28 @@
+MW_Unintentional =~  BMW3_UN_01_z + BMW3_UN_02_z + BMW3_UN_03_z + BMW3_UN_04_z
+MW_intentional =~ BMW3_IN_01_z + BMW3_IN_02_z + BMW3_IN_03_z 
+MW_MetaAwareness =~ BMW3_ME_01_z + BMW3_ME_02_z + BMW3_ME_03_z + BMW3_ME_04_z
+
+TUT_Unintentional =~ MWsum_unint_nback_easy_z + MWsum_unint_nback_difficult_z + MWsum_unint_cmt_easy_z + 
+MWsum_unint_cmt_difficult_z + MWsum_unint_ms_easy_z + MWsum_unint_ms_difficult_z
+
+
+TUT_Unintentional ~ MW_Unintentional + MW_intentional + MW_MetaAwareness
+
+BMW3_UN_01_z ~ 0
+BMW3_UN_02_z ~ 0
+BMW3_UN_03_z ~ 0
+BMW3_UN_04_z ~ 0
+BMW3_IN_01_z ~ 0
+BMW3_IN_02_z ~ 0
+BMW3_IN_03_z ~ 0
+BMW3_IN_04_z ~ 0
+BMW3_ME_01_z ~ 0
+BMW3_ME_02_z ~ 0
+BMW3_ME_03_z ~ 0
+BMW3_ME_04_z ~ 0
+MWsum_unint_nback_easy_z ~ 0
+MWsum_unint_nback_difficult_z ~ 0
+MWsum_unint_cmt_easy_z ~ 0 
+MWsum_unint_cmt_difficult_z ~ 0
+MWsum_unint_ms_easy_z ~ 0
+MWsum_unint_ms_difficult_z ~ 0
