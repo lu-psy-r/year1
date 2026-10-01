@@ -4,7 +4,7 @@ subtitle: Written by Rob Davies and Margriet Groen
 order: 2 # ensure this is one more than the previous script
 ---
 
-:::{.callout-note
+:::{.callout-note}
 This week we focus on two separate things:
 
 1. Rob introduces you to what it means to do psychological science
@@ -20,13 +20,13 @@ The materials we have prepared to support your learning are arranged in four par
 You can navigate to each in the side bar on the right
 :::
 
-- @sec-4141-w1-lectures: Lectures: watch these before the lab session
-- @sec-4141-w1-lectures-intro-what-module: What the module is about
-- @sec-4141-w1-lectures-lecture: The lecture: Being a scientist, doing a science
-- @sec-4141-w1-lectures-intro-how-r: How to get started with RStudio
-- @sec-4141-w1-reading: Recommended readings
-- @sec-4141-w1-prelab-activities: Activities to do before you attend your lab session
-- @sec-4141-w1-lab-activities: Activities you do during your lab session
+<!-- - @sec-4141-w1-lectures: Lectures: watch these before the lab session -->
+<!-- - @sec-4141-w1-lectures-intro-what-module: What the module is about -->
+<!-- - @sec-4141-w1-lectures-lecture: The lecture: Being a scientist, doing a science -->
+<!-- - @sec-4141-w1-lectures-intro-how-r: How to get started with RStudio -->
+<!-- - @sec-4141-w1-reading: Recommended readings -->
+<!-- - @sec-4141-w1-prelab-activities: Activities to do before you attend your lab session -->
+<!-- - @sec-4141-w1-lab-activities: Activities you do during your lab session -->
 
 ## Lectures {#sec-4141-w1-lectures}
 
