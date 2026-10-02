@@ -68,6 +68,12 @@ During the lecture, we suggest some questions you can think about. Responding to
 It would be great if you cared to enter your questions to me (Rob) about the lecture. You can do that anonymously by clicking on this link and typing in your thoughts:
 
 <https://app.sli.do/event/gChjffSSfLvkAJSr9GNuCA>
+
+In our practical classes in Week 1, **we will return to three questions** as part of our opening discussions:
+
+1. What psychological claims do you see online are *pseudoscientific*?
+2. How do you recognize if you are looking at *credible* science?
+3. What is the *next* revolution for psychological science? Are we already there?
 :::
 
 This is a quick (~4 minutes) walk through of how you can watch the video lecture, with tips on how to make playback accessible and convenient.
@@ -89,7 +95,7 @@ The slides presented in the next videos can be downloaded as a web page: `doing-
 
 - [Lecture slides](files/week1/doing-being-science.html)
 
-When you download the file, double click on it to open it in your usual web browser for viewing. In some browsers, clicking on the link will just open the slides as a webpage in your browser.
+When you download the file, double click on it to open it in your usual web browser for viewing.
 :::
 
 Next, you can see the lecture elements. We recommend that you watch them in sequence.
