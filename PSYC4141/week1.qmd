@@ -157,7 +157,9 @@ Next, you can see the lecture elements. We recommend that you watch them in sequ
 1. **How to work with R-Studio** (~15 minutes) 
 
 ```{=html}
-
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=752af8d3-9b08-4184-91a9-b4d8010ce4d0&autoplay=false&offerviewer=false&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_rstudio"></iframe>
+</div>
 ```
 
 \newline
@@ -168,10 +170,8 @@ Next, you can see the lecture elements. We recommend that you watch them in sequ
 
 Video will follow soon.
 
-```{html}
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=752af8d3-9b08-4184-91a9-b4d8010ce4d0&autoplay=false&offerviewer=false&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_rstudio"></iframe>
-</div>
+```{=html}
+
 ```
 
 \newline
