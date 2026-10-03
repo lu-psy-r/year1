@@ -1,293 +1,261 @@
 [Auto-generated transcript. Edits may have been applied for clarity.]
-Hi. In this video, I'm going to cover the basics of how to log in to the R server,
+In this video, we're going to cover some of the basics of how to log into the R server, and I'll talk you through the different parts of RStudio.
 
-and I'll talk through the main software that you will be using for your research methods and stats modules, that is RStudio.
+Our studio is the main piece of software that you'll be using throughout the research methods and stats modules.
 
-And we'll also talk about how to get things set up in our studio.
+So you're looking at the Moodle page here, and you can see that the link to the RStudio server or the R server is just over here.
 
-So by the end of it you will know how to log into the R server.
+If you're on campus, you can just click that link and it should take you there.
 
-You'll know your way around RStudio so you know how to create a project a file in RStudio,
+If you are not on campus, you need to make sure that you connect to the VPN first.
 
-you'll understand the idea of a working directory and where your files live.
+So VPN stands for Virtual Personal Network, and it is a thing that allows you to pretend to be on campus, even if you're not.
 
-Um, and you understand what happens in the four quadrants of RStudio.
+Um, if you don't know how to set that up, then go to this page, um, that sits underneath this link,
 
-At the end, we'll also have a look at some settings that we'd like you to adjust to make our studio work a little bit more smoothly for you.
+and you'll find instructions as to how to set up a VPN on your device.
 
-So this is foundational knowledge that will take you through your R journey.
+Okay. Let's go to the R server. So this is the login screen.
 
-Okay. We're going to we'll start at the very beginning. And I'm going to assume that you've never opened our studio.
+Um, and it um uses the username and password, um, that you use for anything else to do with Lancaster University.
 
-So um, you are looking at the Moodle page and here you can see a link to the ah server.
+So if you click this blue button, it will. Uh, yeah.
 
-Um, now you need to be on campus to be able to just, uh, use that link.
+Check those credentials. Um, and I have already signed into Moodle,
 
-If you're not on campus, you need to make sure that you're on the VPN or a virtual personal network.
+which is why it doesn't ask me again if it is the first thing that you sign into that day that's got to do with Lancaster University.
 
-So, um, if you don't know what that is or you haven't set that up, click this link and it will take you to some instructions on how to set up the VPN.
+It will ask you for your username and password. Okay.
 
-But for now, let's assume you are on campus. So we're just going to click this link and we'll get to the R server.
+So this is what our studio looks like. Um, we have four quadrants here in the top left.
 
-So this is the sign in window. And it uses the same credentials that you use for anything else to do with Lancaster University.
+We have what is called the source quadrant. And this is where you will see your different scripts and what a script is.
 
-So we'll say sign in and um okay.
+We'll talk about in the different video. Um, then, um, in the top, in the bottom left we have the console in the top right.
 
-It has not asked me for any username and password because I have logged into something else to do with the university today already.
+We have the environment quadrant, and in the bottom right we have a quadrant with multiple panes.
 
-If you haven't, it will ask you for your username and password.
+And the first thing it takes you to usually is this files tab.
 
-Okay, so this is what the basic setup of our studio looks like.
+So that is where all of your files live. Okay.
 
-We have these four, um, windows or quadrants.
+Before we talk about each of those in turn, let's look at this thing up here.
 
-So at the top left here we have it has opened a script for me.
+So next to this little blue cube it says Project None.
 
-This is what is called the um, so this top left window here is what is called the source quadrant.
+That means we're currently not working in a project.
 
-Uh, in the bottom left we have the console, then uh, in the top right we have the environment.
+Now, it is a really good idea to create a project and work within a project when you're working in RStudio,
 
-And at the bottom here you have something that has multiple panes, but it usually starts, um, with the files pane.
+because it helps you to organise your files. And it helps R to know where to look for your files.
 
-That's why it will go to. So the first thing to know about these four quadrants is that you can adjust their size.
+So if I click on this downward arrow here and I say new project in a new directory, and I want to just kind of create a new project.
 
-So if depending on what you're doing. So if somehow you didn't want to see the the console, you could make that much smaller.
+Not any of these other things. Um, so you could create a project for each module.
 
-Um, or if you don't want to see the environment, you can adjust that by using these little accordion,
+So let's call this 164141 because that's the module that we're currently doing.
 
-um, thingies in the top right corner of each quadrant.
+I say create project. And there we are.
 
-Um, you could also kind of change this default setup and say, let's if you want it at your console at the top right.
+So it has now um created the project. You can see that here.
 
-Instead, you could change those things. But for now, we recommend that you, uh, stick with this default.
+Um, it says it has a file here called psych 4141. r proj.
 
-Um, okay. So, um, now we're going to start with, um, talking about a project.
+And that is the file extension for an R project.
 
-So here in the top right corner you can see, um, this blue, um, cube thing and it says Project None.
+And that sits in a folder called psych 4141. And that sits kind of in the, in the R directory in your space on the server.
 
-So that means that we're not going that we're not currently working in a project.
+And now you can see here in the top right that um, it says psych 4141.
 
-So if we click this downward button, we can say new project.
+So that is the project we're working in. So far so good.
 
-Um, now, why would we want to work within a project.
+Now it has opened a new session. And in this session, uh, we can't see the, um, source quadrant because it has closed.
 
-It is really helpful because projects help you to group all the relevant parts.
+Uh, the script that we looked at earlier. So let's create a new script.
 
-Uh, for instance, everything that's relevant to this module in the same place.
+So if you go here to file and you say new file, there are lots of different options.
 
-So projects make it easier for R to help you find stuff.
+Um, and the type of script that we will be working with, um, are quarter documents.
 
-Um, and yeah, that's why we recommend you use that way to organise your things.
+So we open a new quarter document and we can just call it my first script, and we'll create an empty document for now.
 
-So we'll say let's put this in a new directory. Um, uh, so we'll say a new project in a new directory.
+There we go. Now we have our source window back, our source quadrant, I should say, um,
 
-Um, and we'll call the directory. We'll give it the name of, um, the module that you're doing.
+let's see, just looking at my notes to make sure that I don't forget anything.
 
-And you could do that for, for each, um, module.
+Let's look at each of the quadrants in turn. So, um.
 
-Right. Um, so here it tells you where it's going to put that that is usually fine.
+In this source quadrant, I, as I said, that will contain the script that you will be working in.
 
-That will be your home directory on the R server.
+And a script is basically a file that contains all the code, um, that you have created to work with data, to visualise data, to analyse data.
 
-So there we go. I've called it psych 4141 I'll say create project.
+Um, now code is just a set of instructions.
 
-So Let's see.
+So basically this is a will be a collection of, of all of the instructions that you have created to, to work with data.
 
-Um, here we are. So in the file Spain, you can now see that we have a file called cipher.
+Now the clever thing about the script is that you can save it, um, using that button here.
 
-14141. approach. Our approach is the file extension for our projects.
+Um, and then you can come back to it at a later stage and use that code again so you don't have to write it all over again.
 
-And that sits within this folder. Psych 4141. You can see that here, right?
+There's a few other useful buttons here. So we have the run button here.
 
-You can see home directory. Ah. And then psych 4141.
+And if you just click on that downward arrow you can see different ways of running bits of code.
 
-And here this is this is where you are. Okay.
+So that's all. Um, yeah. We'll talk more about this in a later video.
 
-Um, because we've created a project, it has, uh, kind of closed the, um, script pane.
+But this is where where that is. Um, another useful button is this pancake thing with outline next to it.
 
-So let's create, um, make a new one.
+So at the moment it is empty because we don't have any sections in our script yet.
 
-So we'll just say file, new file. And the kind of the types of scripts that we will be using, um.
+But um, this will have different kind of you can easily see the different, um,
 
-Uh, our quarto documents. So I'm just opening a new one here, and I'll call it my first script.
+headings of the different sections once you've created them, and it helps you to navigate through your script.
 
-Um, and all of this is is fine as it is.
+So let's say if you want to go to a previous section, you can just click here in the outline and you can easily go down.
 
-You don't need to worry about that right now. We'll just, um, say create and we'll go into more detail at a later stage.
+So just it in that way you don't have to scroll endlessly in your script.
 
-Okay. So there we have our source quadrant back.
+I think that's all for now. On about the Source quadrant and the scripts then.
 
-So now let's look, um, in a bit more detail at each quadrant.
+Now we'll let's have a look at console. So, um, you can think of the console as the quadrant where the output from your script goes.
 
-So we have the source quadrant here. Um, and that will contain the script that you are working in.
+So think of it as the console kind of telling you what is being run and what the output is.
 
-So a script is basically a file that contains all the lines of code that you have created to read in data, to visualise data, to analyse data.
+Um, you can also do things in the console.
 
-And um, you might want to save that code because you might want to use it again later.
+So you could do simple maths. So you could say five plus seven equals.
 
-Now there is a couple of useful buttons. Um, one that is important to know about is here the run button.
+And it will tell me that it is 12 which is correct.
 
-So if you just click that one, it will run one line of code.
+You could also um assign numbers to certain um to do something like this.
 
-Um, but you also can say run a current chunk of code or the next chunk, um,
+You could say so you could say x equals three.
 
-etc. or you could run the whole script if you've finished it and you make sure and you're sure that it will,
+Um, and that means that we have now stored this value on the, the name x, we have stored the value three.
 
-um, you know, it does everything that you want it to do.
+And we could say y equals four. And now we have stored the value four under the name y.
 
-So that is helpful to know, um, we'll talk more about what what what the code chunks are, etc., as well.
+And it has appeared in our environment. Um, and if I then say x plus y, um, and press enter,
 
-Uh, at a later stage, um, and another button that is useful to know about is this kind of pancake thing here that's called outline.
+then it will tell me that if it adds those things up and you get the value seven it's just kind of an example of something that the console can do.
 
-So at the moment there is, uh, almost nothing in our little script here.
+It can do way more things.
 
-Um, but once you have more code and you've defined it that into sections, it will have these section headers here.
+Um, but for now, the main point to remember is that if you want to do something once, you can write it in the console, um, a bit of code.
 
-So this bit makes it easier to navigate your script.
+For instance, if you want to, um, be able to come back to two bits of code,
 
-Okay. So, um, that's the source quadrant.
+then put the bits of code in in your script, because then you can save it and you can come back to it later.
 
-So we could just save this. Um, this script lets, um, you know, my first script.
+Um, now this bit here is, uh, of relevance because here you can see what the directory is.
 
-Well, this is fine. It should go into that project, so we'll say.
+So what the location is of where R is looking for your files.
 
-And now you can see, uh, there it is. So we've just used that save button over there.
+So this shows what is called a working directory. Um, so if you, uh, write a bit of code to ask, ah, to read in a certain data file,
 
-Okay. Um, bottom left we have the console quadrant.
+um, then that data file needs to be in the file in the folder that you see here.
 
-So that is where the output from the script goes.
+Otherwise ah, can't find it. So, um, here you can see what folder R will be looking in for your files.
 
-So you can think of the console as telling you what is, um, being run and showing you what the output is.
+Okay. Let's move on to the environment window. So that is where your data will appear when you've read them in uh,
 
-Now, you can also use the console to do things such as pretty simple maths or, uh, you can create variables in, uh, the environment via the console.
+you can create new data frames or variables and in R and they will all appear here like this x and y things that I created.
 
-So I could put my cursor there and I could say x equals four.
+So basically it is where all the objects, um, that you've read in or created during the session live.
 
-Um, so I have now you can see in your environment you now have a value stored in a place called X, and the value of that thing is four.
+Now the environment does have a broom symbol here.
 
-And I could say y is three. And there you have it.
+And if you click that it cleans your environment. And that can be quite handy actually,
 
-It's in our environment. And then I could say x plus y.
+because sometimes you've read in multiple files and they all have slightly different names and it all gets very confusing.
 
-And it tells me that if it adds those two numbers up, the outcome is seven.
+And you can just click this broom symbol and then it will, um, remove all objects from the environment.
 
-Um, the console can do lots of other things too.
+So now it's empty clean slate. And then you know what you're looking at.
 
-But the main thing to remember at this point is that the console is helpful to do things, um, that you only want to do once.
+So that is the environment window. Another tab in the environment quadrant here that is useful is the history.
 
-If you want to do it more often, you want to stick it. That code in your in your script.
+So if I click on that you can see what lines of code I have run in that session.
 
-Um, okay. The console does have a little broom symbol here in the top, top corner.
+So if you want to go back to something that you did earlier and you didn't write it in your script, you can go to the history and you can look it up.
 
-And if you click that, um, it will clean the console for you.
+Okay. Now in the bottom right quadrant we have multiple tabs.
 
-So let's do that. And so if you basically want to have a clean slate and start over or something, you can click that and it gives you a clean window.
+Um, it will start with the files tab. Usually that's where it takes you.
 
-Okay. Um. Here in the kind of in this part of the console, it tells you what are things you're working directory is.
+Uh, so this, um, this is where your files live, and this is where you can see, uh, our project file that we created earlier called psych 4141. r proj.
 
-So the working directory is the folder that it thinks your files are in.
+Our project is the extension that, um, for an R project.
 
-So. Or it assumes your files are in. So at the moment that's it is are 64141.
+So that extension shows us what type of file that is.
 
-So um that is where it will be looking for any files if you ask.
+Now, later on, there will be data files in here. And there might be, uh, you might have made a plot and saved that.
 
-Ah, at some point to read in some data from, from a file. This is the player, this is the folder.
+And it will all be stored in this particular, um, folder.
 
-It will, um, look in for that file. Okay.
+Um, so, yeah. And you can see here this, this file path here.
 
-Um, I think that's everything we need to talk about in terms of the console for now.
+Um, so that shows you, uh, where, where that folder sits in relation to your home directory.
 
-Then let's go to the environment quadrant.
+Now, there's a couple of other tabs here that might come in handy at some point.
 
-So this is where your data will appear when you've read them in um you can create new data frames or new variables.
+Um, when you use with, when you work with a quarter document, you're,
 
-And all of the all of these objects, as they're called, um, will appear in the environment.
+when you create the plot, it will you will see it in, in your quarter document as well.
 
-So this is where you will see, uh, objects like DataFrames, variables, values, um, that you've read in or created during the session.
+But, um, there is a occasions where, uh, you might it might appear here or you might want to open a plot and it appears here.
 
-Now, the um, environment also has a broom symbol here.
+Um, so that can be handy. Um, then we have the packages tab.
 
-Um, and if, uh, kind of similarly to the way this works in a console in the environment,
+Um, this contains a list of all the packages that are installed on the server.
 
-if you want to start with a clean slate, click the broom symbol and it will remove all the objects from the environment.
+Um, it's not currently something that you need to worry about.
 
-And that is sometimes helpful because you might have created, done a lot of work,
+We'll talk about packages in a different video, but we can see that, um, which ones have been installed here?
 
-created lots of new variables, and something is not working, um, in your code.
+We can also see which ones are currently active or loaded, as we call that.
 
-And that has more often than not something to do with, um, stuff being in the environment that shouldn't be there.
+If there is a little tick here in front of the name of the the package, it means that it is currently active.
 
-So we can click that. Um, and we say, yes, we are sure that we want to delete all of that.
+And then there's the help tab. Um, there is a links here to various online, uh, help resources.
 
-And there you go. Clean slate. Now, another type that is helpful in this quadrant is the history tab and the history tab.
+Um, yeah, they can be useful. Um, we'll, we'll, we'll have a look at maybe at some of them later.
 
-It basically shows you what lines of code you ran earlier in the session.
+And we'll also talk about what are good places to look for kind of help with coding.
 
-Um, and you can see what, what, what we put in the console here.
+Okay. So, um, I think that's all I need to talk about in terms of the quadrants.
 
-So x is for y is three x plus y. So you might have written a line of code.
+Now, there is just one thing, um, setting that I think, uh, would be helpful to change.
 
-You're happy with that line of code. Um you don't then have to retype it all into your, um, script.
+Um, now, yes, this is under tools and you go to Global Options.
 
-You can just say, um, that line, I want that to go into my, uh, into my into my script.
+And in basic you can see how it handles different bits of pieces to do with your sessions.
 
-So that is, that is an option. You can also send it back to the console so that that is helpful to know too.
+This is all fine actually. And also your workspace. So your workspace is your workspace.
 
-I wouldn't worry at the moment about these other two tabs.
+So each of you has their own workspace on the R server.
 
-Um, in the bottom right we have multiple tabs.
+And sometimes this is ticked. Restored our data into workspace at Start-Up.
 
-Um, so it usually goes automatically to the files tab.
+This needs to be untick.
 
-And here you can see your files. So we are in uh, the psych for one for one folder.
+So if it looks like this you need to click here to make sure that this box is empty and then safe workspace to our data on exit.
 
-Um, and you can see then we have a project there and we have a quarter document or script there.
+Instead of saying always or instead of saying ask, you need to make sure that never is selected.
 
-Um, at the top of this pane, it is, it gives me, it tells me what the file path is.
+Um, so in that way, your workspace will be kind of clean every time you come back to to the our server.
 
-Um, and then in the same quadrant, there are a few other panes that are useful or tabs.
+Does that mean that your your scripts that are obviously will be will be stored?
 
-So when you've created plots, they will appear here. So figures.
+That is a separate thing. This is just the workspace and the R data.
 
-Um, what else. There is um a term for packages.
+Um, the R data in the workspace just kind of sit behind that. Um, and it prevents problems.
 
-So this lists all the different um packages basically collections of code that are on the server.
+Uh, if you kind of choose these two settings.
 
-And um, if they have a little tick here then it has also been been loaded.
+So once you've made sure that this, um, little box is empty and here it says never, you need to say apply.
 
-So we'll talk about what that means. Um, later. But you can.
+And then you say okay. And then it will remember that those are your preferences.
 
-You can see them here easily as well. Um, then we have a help tab.
-
-Um, and these are links to kind of some online resources that that may, may helpful.
-
-Uh, when you're trying to work out, uh, how something works in, in our studio.
-
-Um, okay. So that's that. Finally, let's adjust some settings to make your life with our studio a little easier.
-
-So some people, um, like our studio to remember stuff from session to session.
-
-So, um, we think that is a little dangerous because it often messes up code.
-
-So to a few, to kind of avoid any future hassle, we recommend that you change two settings.
-
-So if we go to I think it's called profile. This might be a little different on the server.
-
-I am here global options. Sorry. So this is under tools and under Global options.
-
-Um and we um so we have lots of different things here.
-
-This is all fine. Um. If this is ticked we want you to untick that.
-
-And here save workspace to our data on exit.
-
-We want it to say never. So these are the two important settings that we need you to change.
-
-And this is what it should look like. So this should be unchecked and this should say never.
-
-Then you say apply. And that will kind of apply to all your future.
-
-Our studio sessions kind of click okay. And there we go.
-
-So that's all for now.
+That is it for now.
 
