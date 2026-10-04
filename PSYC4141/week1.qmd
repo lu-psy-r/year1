@@ -171,12 +171,14 @@ Next, you can see the lecture elements. We recommend that you watch them in sequ
 Video will follow soon.
 
 ```{=html}
-
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=55ee0462-0cde-432a-91ee-b4d901594894&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_wk1_howtoplot"></iframe>
+</div>
 ```
 
 \newline
-
-- [How to build a plot walkthrough transcript](files/week1/4141_how_to_plot_transcript.txt)
+- [How to build a plot slides](files/week1/4141_wk1_howtoplot_slides.pdf)
+- [How to build a plot walkthrough transcript](files/week1/4141_wk1_howtoplot_transcript.txt)
 
 ## Reading {#sec-4141-w1-reading}
 

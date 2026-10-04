@@ -1,0 +1,493 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+In this video, we are going to look at what a cute quarto document is and how we can use it.
+
+And I will also talk you through how to run code, to read in data and build a plot.
+
+Now, before we do that, we first need to make sure that we download the files that we need and then upload them to the server.
+
+So let's go to, um, the handbook pages.
+
+Um, I'm in Lab activity one.
+
+So you can just use this navigation bar on the right to get there quickly.
+
+Um, there is a little bit of background for you to read.
+
+Um, it just explains what kind of data we're working with today.
+
+Um, so I do recommend that you read that and have a look at the questionnaire where it comes from.
+
+Um, and then the aims of this activity are to download the files to set everything up in our studio.
+
+Then we're going to read in the data. And then we are going to build our first plot.
+
+So step one download the files. We will be working with an example script um called this.
+
+And you can see a Schmid file extension. So that means that it is a quarter document.
+
+And we will also need a data file called data underscore BMW three.
+
+So that file contains the responses of the participants, um that we will be working with.
+
+Now that is a file of the type CSV, which means that the individual bits of data are separated by commas.
+
+Um, we'll often use CSV files. It's a reliable kind of format to store data in.
+
+So to download these two files 2001 go we.
+
+You just click on this zip folder. There we go.
+
+This should have put it in my download a downloads folder.
+
+So let's see whether it's there. We go to downloads and indeed there it is.
+
+So far so good. So the next step is to go to the RStudio window here.
+
+Um, and now we're going to upload that zip folder.
+
+So in the bottom right quadrant in the files tab there is an upload button in the middle.
+
+So we click that. Now in here it asks you where you want the zip folder to end up.
+
+And this is fine. This is inside our psych for one for one project.
+
+So that's excellent. So here we need to choose the file.
+
+We can just choose that zip folder and say upload.
+
+And then okay. And there we go. Here it is.
+
+Now some of you might wonder, um, about the zip folder.
+
+So a zip folder is a folder in which the files have been compressed.
+
+And usually when you have a zip folder you need to unzip it or decompress it.
+
+But the answer, if it does that for you. So you don't need to worry about that.
+
+You can just upload that zip folder in one go and the decompression will happen automatically.
+
+So here we have the four one for one week one lab folder.
+
+And inside it we have the Schmid file and the data file.
+
+Excellent. Now let's click on let's open the quarter document.
+
+And we do that by just clicking on this here um and it opens up the source quadrant that we talked about in a previous video.
+
+So here we have a quarter document.
+
+And um, a quarter document is basically a single file that combines your written text with the AR code that runs your analysis.
+
+Um, so when you render it, that's just a particular word to kind of process it.
+
+Quarto runs the code and produces a finished report.
+
+And you can tell, um, quarter what type of report you want.
+
+So that will have your results, your tables, your figures. And it will automatically, uh, those will automatically be included alongside your writing.
+
+Now that takes a little bit of practice to, to to make that all work smoothly.
+
+Um, but it is well worth investing a little bit of time in that because it means that your analysis,
+
+your analysis is fully reproducible because anyone can rerun the documents and get exactly the same numbers that you got when you run your analysis.
+
+Now you will have heard Rob talk about why reproducibility is important.
+
+So that is why we teach you how to write a fully reproducible report using quarter.
+
+Okay, so I have written this lab activity in a quarter document.
+
+So you will see text like the background or the aims. Um, but then down here you will also see these grey boxes.
+
+And this is an R code chunk.
+
+So you can tell that it's an R code chunk because it has R here in the corner.
+
+Theoretically you could write code in different programming languages, but we're not going to do that.
+
+So here we have our first r uh code chunk.
+
+Um, and then, you know, you can add a bit more text and then there is a next chunk.
+
+Etc., etc.. Now, um, as I mentioned, uh, in an earlier video, you have this outline here on the side.
+
+So if I click on this it goes away. But it is really helpful to have it here.
+
+So you can easily navigate through this document.
+
+Instead of having to scroll up and down, you can just click on on let's say step two.
+
+And there you are. So um, whenever we share an example script like this,
+
+it is a good idea to read through it from kind of from top to bottom and do the things where we say like action.
+
+Run the code below to load the libraries. Um, so there will be different actions for different bits.
+
+Um, so yeah, start at the top and work your way through it.
+
+Um, kind of bit by bit.
+
+And of course, if you have questions about something, then, um, do, uh, ask one of us, uh, during the labs about the code chunk.
+
+So, um, in the top right corner of the code chunk here, you can see a few buttons.
+
+Um, so this green arrow, which very much looks like the run thing up here.
+
+That is, that is the the kind of the button that makes, uh, that allows you to if you click it, it a quarter will run that code chunk.
+
+So, um, is there any reason not to do that?
+
+No. I think we can do that. Let's do it. So it has now done it.
+
+So it has now loaded those libraries. Um, so just as an example.
+
+Um, okay, I think so.
+
+This is quarto has two views. So we're currently in a visual view.
+
+Um, and that is probably the easiest to read in a way.
+
+Um, but it also has a source view and that kind of has the code, uh, that sits underneath.
+
+So you can just click on that and then um, you can see what the code is that sits underneath,
+
+um, the, the kind of thing that produces the visual output.
+
+So this is basically this is written in something called markdown.
+
+So if headers have, um, two hashtags in front of them, um, if you want to produce, uh, that, that grey box, you can do something like that.
+
+Um. Importantly here you have the R code chunk.
+
+So there's three back ticks and then curly brackets with an R, and you need to close that code chunk again by again producing these three brackets.
+
+Now in this because this is your very first script.
+
+We have kind of written code for you, and we've explained a bit kind of line by line, what each line of code does.
+
+Um, you know, when the weeks go by and, um, you will be asked to write more of this code yourself, but, um, as you've never done it before.
+
+In this first example script, you kind of have the code here.
+
+And the task for this week really is the kind of work through that and understand what each line does.
+
+Okay. I think that is all that I wanted to explain about, um, the quarto document at this point.
+
+Um, so now I'm going to walk you through, uh, the different bits of code.
+
+Okay. So we have downloaded the data, we've uploaded the data, and, um, now we need to set up a few things in our studio.
+
+Um, specifically, we need to load the libraries.
+
+Um, now, you might wonder, um, what what that is about.
+
+Um, so I think previously I described, uh, kind of r as the kitchen and all the different packages as the cookbooks.
+
+Um, and you need to tell r which cookbooks it needs to use for what you want to do right now.
+
+So we want to use two libraries for this particular activity, the library here and a library called Tidy Verse.
+
+So the library here is um, is a very useful thing that a very useful package that helps you find your files.
+
+Um, and the tidy verse is a set of packages that handles almost everything you want to do with data.
+
+Um, so if you want to learn more about a tidy verse, you can go to go to this website.
+
+But we'll encounter a kind of packages that are part of this larger set.
+
+That's called the tidy verse a lot during this module.
+
+So that is what these two lines of code do.
+
+Okay. Now we've set things up in the sense that we've kind of told our which packages to use.
+
+Now we are ready to load to read in the data.
+
+Um, so step three, that is and this is the bit of code that does that, does that job.
+
+It. I just realised that the file path in the file that I've shared with you looks a little bit different.
+
+Um. This is because I made this on my machine. And if it needs to find the files on my machine, this is what the file path needs to look like.
+
+Whereas I've adapted the file path in the file that you've downloaded.
+
+Um, so that it works on the server. Uh, but the, the, the principles are, of course, the same.
+
+So to read in, um, the data, we use what is called a function that's called read underscore CSV.
+
+Now you might remember that it is the file type is CSV.
+
+So that makes a little sense. It's a sense read underscore CSV.
+
+Mind you there is also a version um that is called readcsv. We do not want to use that.
+
+We recommend that you use read underscore CSV.
+
+That is part of our part of the tiny verse, and it keeps the data in a particular format that is easy to work with.
+
+Okay, so, um, if we use this function, we need to tell our where the files, where the file is and what it is called.
+
+So we, uh, here is where we tell it, where the file is.
+
+And this is the bit that spells out what the file is called.
+
+You can see that we use this other function called hey in front of the file path.
+
+And that just, um, helps R to locate this file path a little bit more easily.
+
+Okay. So we have told our what we want to do.
+
+We want to read in a CSV file. We have told our where that file is and what it is called.
+
+Um and then you have this kind of arrow to the left that is called an assignment arrow.
+
+And it is basically saying put that data in an object or data frame, um,
+
+that I have called data underscore MW for mind wandering because this is data from a mind wandering questionnaire.
+
+You can call this something else, whatever you like. I would.
+
+It should not contain any spaces or any funny characters. So I would stick with, with, um, letters and underscores.
+
+Um, but other than that, you can call it whatever you like. Okay, so let's just go back to the, um, RStudio window and, um, actually do this.
+
+So we have already, uh, loaded the libraries.
+
+Now we go to the next code chunk. We run that. Let's see.
+
+Okay. Um, that works. And now you can see that in the environment.
+
+Uh, quadrant in the top right, we have a data file called data underscore MW.
+
+um, so that's because that's what we've asked.
+
+Ah. To put it in. Um, you can also see that, uh, this has 215 observations of 22 variables, which means that it contains data of 215 participants.
+
+Now you can look at this data either by clicking on it and it will open it.
+
+Here you can see subject 1 to 215.
+
+Uh yes 215. Um, and then there's various other um, variables age, gender, education.
+
+And here we have the responses of each participant to the different questions on the questionnaire.
+
+And we will be working with the first question. So BMW W3 UN.
+
+Zero one. You can also kind of preview this.
+
+What's in this data file by clicking on this white arrow. And then you can see the different variables here.
+
+And kind of a little preview of what is in that variable.
+
+It's very handy if you're writing code in your document here to not have to constantly look at the actual data file,
+
+but you can say, okay, what was that? You know, what was that exact variable name.
+
+And you can you can see it in the environment window. Okay.
+
+Now, um, let's go back here.
+
+So now we have read in the data. That's very good. Now we're going to build our plot.
+
+Now to build our plot. We will use um the ggplot2 package um, which is part of the tidy verse.
+
+So we don't need to load anything additional for that.
+
+It is already available because we've loaded the first package.
+
+Um, inside, uh, kind of a function from the ggplot2 package is called ggplot.
+
+Now the GG stands for a grammar of graphics.
+
+Um, so there is actually a philosophy behind, um, kind of how to, uh,
+
+behind all the code that comes from that, that sits in ggplot2 of how best to create graphics.
+
+Um, so the grammar of graphics is kind of the rules of how to make good plots.
+
+Um, so we have ggplot is the function that we use to tell r that we want to create a plot.
+
+Um, and if we do that we need to tell R as well what data we want to use and what it is from within that data that we want to,
+
+uh, kind of put in the plot. So here you can see kind of that we are, um, using the, the variable name for that first question in the questionnaire.
+
+Um, and I'm planning to create something that's called a histogram.
+
+And for that we only need to specify something that we want on the x axis.
+
+So the axis that it goes from left to right. Now S stands for aesthetic.
+
+So that's kind of that's just what it's called. So we we um say that we want to plot something.
+
+We tell it which data we want to use, and then we have exactly what it is that we want to map.
+
+Um, so let's just go briefly, go back to that.
+
+If you, um, just do that, you will actually get an empty plot.
+
+So if we look at the plot, um, it has created kind of the background and it has said, okay, you want to put that thing on the x axis.
+
+Um, but there is nothing else to see. Now, why is that?
+
+Because we haven't told R what type of plot it is that we want.
+
+So that is what we need to do next. Um, and as I said, we want to you to create a histogram.
+
+So then we need to say geom histogram.
+
+So um. Geom stands for a geometric object.
+
+So we wanted to use the geometric object object histogram to create the plot.
+
+Now there are there are many different types of geometric objects and will encounter a few during this module.
+
+During this module. Um, the other thing to notice is, is this plus sign here at the end of line one.
+
+So this is very important because otherwise, um, r would not know what to do.
+
+Uh, so basically you can think of, uh, a the way a plot is built in, uh, R is in layers.
+
+So you can kind of think of this, what's in the first line of code as the first layer, kind of the basics.
+
+And on top of that we then create another layer that um, contains the um, the actual histogram.
+
+And later on you will see we'll keep adding layers. And each time we do that we need to add a plus at the end of the previous line of code.
+
+So do we now have a histogram. We do indeed.
+
+So a histogram is a plot that shows you count data.
+
+So it basically shows how many people how many participants responded, um, with this response option.
+
+Um, for instance, uh, on on this first question.
+
+So just under 100 people, uh, selected option number three, um, and just under, well,
+
+just about ten people, uh, selected option zero will figure out what the what those options actually mean.
+
+Uh, a little later. Now, I don't like the background very much with this grey and white line.
+
+So I would quite like to change that. And that's what we're going to do next.
+
+So we are going to um, add another layer you see plus sign here.
+
+And this is called theme underscore BW for black and white.
+
+So there are there are many. There are many different themes and you can explore them.
+
+Um, in the ggplot uh documentation.
+
+Uh, but here I've gone for a simple black and white background.
+
+So what does that look like? Here we go. So now, instead of grey with white lines, we have white with grey lines.
+
+And I find that a little easier to read. Next.
+
+I don't particularly like these grey bars. I would like to change that to something, um, different.
+
+So I'm going to change the colour of the bars.
+
+And to do that, I need to add a little bit of additional code to this first line.
+
+So inside the mapping part of the ggplot function I um Add comma fill equals and then a colour.
+
+And there are many different colours as well that you can, you can choose something else.
+
+Um in the quarto document that you will be working with, I've added a link so that you can go to a website that specifies the different colours.
+
+I would say pick one that you like. Um, so instead of the default grey, I'm telling our to fill in the bars with a kind of a tomato red colour.
+
+And this is what that looks like. I think that's a lot prettier.
+
+Um, now we have this annoying legend here.
+
+If you have multiple groups, for instance, that would be really useful.
+
+Um, so there is occasions where you do want a legend on the side, but in this case we do not.
+
+So we are going to remove that legend. And that's what we do in this next layer.
+
+So basically I'm saying, hey, the position of the legend should be none.
+
+So that is um, basically it removes the legend here on line four of this code, and indeed it is gone already.
+
+It looks much better, I think. Then.
+
+This kind of. Here we have the file, the variable name of um, of this first question.
+
+But if you're looking at that or if you're presenting your data and somebody else sees that figure it, they're not going to know what that is.
+
+So how about we put a more informative title on the x axis.
+
+We can do that. We add a layer here with the plus.
+
+And then we say labs x equals and whatever we wanted to call it.
+
+So this is data from the brief mind wandering three factor skill.
+
+Um, and it is question one. So that is what I've put there. If you want to keep it simpler, you could just say mind wandering question.
+
+What? Um, so, yeah, put something, uh, informative on your axes.
+
+Always label your axes so that it is clear to whoever is looking at it what is on your axes, and then use a title that is informative.
+
+So here we go. Already much more informative.
+
+Now I would so these um value labels go from zero, one, two, three and four.
+
+And that is what the data look like.
+
+So if we go back to our studio here and we go back to our data file, you can see here that this is every response has a numerical, um code in it.
+
+But it is a code. It stands for something else. Because if um, in the in the kind of at the beginning of the if we go to the background,
+
+um, it specifies, I believe, um, what, what it is that people did somewhere.
+
+I think I put this in in here somewhere. Um.
+
+Or maybe I put it somewhere else. I think in this document somewhere. I put what, what each of these codes mean.
+
+So, um, again, if you are looking at a graph like this, it is helpful to actually have a more informative label here.
+
+So that is what we're going to do next. So lines 6 to 9 here do that.
+
+So it um uses this function called skill x continuous.
+
+And then it says we have um labels that go from zero to 1 to 2 to 3 to 4.
+
+That's what the colon just says. Take everything from 0 to 4.
+
+Um, and instead of having those numbers, we want labels that go from fully disagree,
+
+to somewhat disagree, to neutral, to somewhat agree and to fully agree.
+
+Um, so lines 6 to 9, they replace the numerical values with text labels.
+
+Um, and if we run that bit of code, this is what it looks like.
+
+So now you, uh, have a much more informative plot that shows the responses on this first question of the brief mind wandering three factor skill.
+
+And I believe that question was something along the lines of when I listen to a presentation, my mind wanders.
+
+Um, I put a link to the questionnaire in the quarter document so you can have a look.
+
+Um, so almost a hundred people responded with somewhat agree to that question.
+
+Very few said fully disagree or somewhat disagree.
+
+So to get there, probably about 25 people. Um, and then a few people said neutral and then another 75 people said, fully agree.
+
+Um, okay. That is all I wanted to show you.
+
+Um, yeah. Work your way through that quota document. Run the bits of code.
+
+Try to remind yourself what each line does. Play around.
+
+Change the colour. Um. And, you know, do something else that you think should be changed.
+
+Um, and if you want more practice, you could create a similar plot for, let's say, question two.
+
+Thank you for watching.
+
