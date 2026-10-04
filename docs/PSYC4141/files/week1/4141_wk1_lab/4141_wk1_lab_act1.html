@@ -318,7 +318,7 @@ Watch the ‘How to’ video
 </section>
 <section id="step-3-reading-in-the-data" class="level2">
 <h2 class="anchored" data-anchor-id="step-3-reading-in-the-data">Step 3: Reading in the data</h2>
-<p>The next step is to read in a data file. Here we’ll use a subset of the data collected by Schubert and colleagues. It contains responses from 215 students on a questionnaire that measures mind wandering. It is a file of the type <code>.csv</code>, so we’ll use the function <code>read_csv()</code> to do this. Inside the function, we tell R where to find the file. This is the bit that comes after <code>here()</code>: <code>PSYC4141/files/week1/</code>; it specifies the filepath. After the comma, we tell R what the file is called, including the extension (<code>data_bmw3.csv</code>). Both of these bits (where it is and what it is called) need to be in double quotation marks (““).</p>
+<p>The next step is to read in a data file. Here we’ll use a subset of the data collected by Schubert and colleagues. It contains responses from 215 students on a questionnaire that measures mind wandering. It is a file of the type <code>.csv</code>, so we’ll use the function <code>read_csv()</code> to do this. Inside the function, we tell R where to find the file. This is the bit that comes after <code>here()</code>: <code>4141_wk1_lab</code>; it specifies the filepath. After the comma, we tell R what the file is called, including the extension (<code>data_bmw3.csv</code>). Both of these bits (where it is and what it is called) need to be in double quotation marks (““).</p>
 <blockquote class="blockquote">
 <p>Action: Run the code below to read in the data</p>
 </blockquote>
@@ -335,7 +335,7 @@ dbl (18): subject, id, Age, BMW3_UN_01, BMW3_UN_02, BMW3_UN_03, BMW3_UN_04, ...
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
 </div>
-<p>You may wonder what the bit is that comes before <code>read_csv()</code>. There we have the name of the object we are assigning the data file to. I’ve called it <code>data</code>, but you can give it any name you like. The <code>&lt;-</code> in between is called an assignment arrow. It basically means that R puts the content of the data file <code>data_bmw3.csv</code> stored at location <code>PSYC4141/files/week1</code> in an object called <code>data</code>. Once you’ve run the code, you should see it in your Environment (top right quadrant).</p>
+<p>You may wonder what the bit is that comes before <code>read_csv()</code>. There we have the name of the object we are assigning the data file to. I’ve called it <code>data</code>, but you can give it any name you like. The <code>&lt;-</code> in between is called an assignment arrow. It basically means that R puts the content of the data file <code>data_bmw3.csv</code> stored at location <code>4141_wk1_lab</code> in an object called <code>data_mw</code>. Once you’ve run the code, you should see it in your Environment (top right quadrant).</p>
 </section>
 <section id="step-4-build-a-plot" class="level2">
 <h2 class="anchored" data-anchor-id="step-4-build-a-plot">Step 4: Build a plot</h2>

@@ -47,7 +47,7 @@ library(tidyverse) # the 'tidyverse' is a set of packages that handles almost ev
 
 ## Step 3: Reading in the data
 
-The next step is to read in a data file. Here we'll use a subset of the data collected by Schubert and colleagues. It contains responses from 215 students on a questionnaire that measures mind wandering. It is a file of the type `.csv`, so we'll use the function `read_csv()` to do this. Inside the function, we tell R where to find the file. This is the bit that comes after `here()`: `PSYC4141/files/week1/`; it specifies the filepath. After the comma, we tell R what the file is called, including the extension (`data_bmw3.csv`). Both of these bits (where it is and what it is called) need to be in double quotation marks ("").
+The next step is to read in a data file. Here we'll use a subset of the data collected by Schubert and colleagues. It contains responses from 215 students on a questionnaire that measures mind wandering. It is a file of the type `.csv`, so we'll use the function `read_csv()` to do this. Inside the function, we tell R where to find the file. This is the bit that comes after `here()`: `4141_wk1_lab`; it specifies the filepath. After the comma, we tell R what the file is called, including the extension (`data_bmw3.csv`). Both of these bits (where it is and what it is called) need to be in double quotation marks ("").
 
 > Action: Run the code below to read in the data
 
@@ -56,7 +56,7 @@ The next step is to read in a data file. Here we'll use a subset of the data col
 data_mw <- read_csv(here("4141_wk1_lab", "data_bmw3.csv"))
 ```
 
-You may wonder what the bit is that comes before `read_csv()`. There we have the name of the object we are assigning the data file to. I've called it `data`, but you can give it any name you like. The `<-` in between is called an assignment arrow. It basically means that R puts the content of the data file `data_bmw3.csv` stored at location `PSYC4141/files/week1` in an object called `data`. Once you've run the code, you should see it in your Environment (top right quadrant).
+You may wonder what the bit is that comes before `read_csv()`. There we have the name of the object we are assigning the data file to. I've called it `data`, but you can give it any name you like. The `<-` in between is called an assignment arrow. It basically means that R puts the content of the data file `data_bmw3.csv` stored at location `4141_wk1_lab` in an object called `data_mw`. Once you've run the code, you should see it in your Environment (top right quadrant).
 
 ## Step 4: Build a plot
 
