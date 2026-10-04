@@ -224,7 +224,7 @@ We are going to:
 4.  Build a plot
 
 :::{.callout-tip title="Watch the 'How to' lecture"}
-If you haven't done so already, this is a good time to watch the 'How to' video (here @sec-4141-w1-lectures-intro-how-r) on 'How to create a plot'.
+If you haven't done so already, this is a good time to watch the 'How to' video (here @sec-4141-w1-lectures-intro-how-r) on 'How to build a plot'.
 :::
 
 #### Step 1: Download the files
@@ -236,7 +236,7 @@ To complete this lab activity you will need two files:
 
 You can download the files here: [`4141_wk1_lab.zip`](files/week1/4141_wk1_lab.zip){download="4141_wk1_lab.zip"}. Usually they will be saved in your 'Downloads' folder.
 
-Next, upload both files to your Files space on the R-server (bottom right quadrant). You could put them in the 'week1' folder you created in the previous lab activity.
+Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).
 
 Finally, open the example script by clicking on the file called `4141_wk1_lab_act1.qmd` in the Files space on the R-server.
 

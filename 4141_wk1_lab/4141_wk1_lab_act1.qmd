@@ -53,7 +53,7 @@ The next step is to read in a data file. Here we'll use a subset of the data col
 
 ```{r}
 #| label: read_data
-data_mw <- read_csv(here("4141_wk1_lab", "data_bmw3.csv"))
+data_mw <- read_csv(here("4141_wk1_lab/", "data_bmw3.csv"))
 ```
 
 You may wonder what the bit is that comes before `read_csv()`. There we have the name of the object we are assigning the data file to. I've called it `data`, but you can give it any name you like. The `<-` in between is called an assignment arrow. It basically means that R puts the content of the data file `data_bmw3.csv` stored at location `PSYC4141/files/week1` in an object called `data`. Once you've run the code, you should see it in your Environment (top right quadrant).
