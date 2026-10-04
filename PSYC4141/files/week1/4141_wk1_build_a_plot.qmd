@@ -1,0 +1,317 @@
+---
+title: "How to build a plot"
+author: "Dr. Margriet Groen"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    transition: fade
+    incremental: false
+    view-distance: 999
+---
+
+```{=html}
+<style>
+.reveal h2 { font-size: 1.3em; }
+</style>
+```
+
+## Overview
+
+-   What is a Quarto document and how do we use it?
+-   How to run code to read in data and build a plot
+
+::: notes
+In this video we'll talk about what a Quarto document is and we'll start looking at how you can use it. I'll also walk through how we use code to get R to read in data and build a plot
+:::
+
+## Step 2: Setup - load libraries
+
+```{r}
+#| label: load_libraries
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+library(here)
+library(tidyverse)
+```
+
+1.  The `here` package helps with finding your files.
+2.  The `tidyverse` is a set of packages that handles almost everything you need to do with data.
+
+Learn more about the `tidyverse` here: [https://tidyverse.org](https://tidyverse.org)
+
+## Step 3: Reading in the data
+
+```{r}
+#| label: read_data
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
+```
+
+1. `read_csv` is function that reads in data that are stored in a file of the type `.csv`. We need to tell R where the file is and what it is called.
+
+`<-` is an assignment arrow, telling R that we want to put the data in an object (or dataframe) called `data_mw`
+
+## Step 4: Build the plot
+
+::: panel-tabset
+
+### Code
+
+```{r}
+#| label: plot-code
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01))
+```
+1. We use `ggplot()` to tell R that we want to create a plot and we tell R the data the use and the variable to plot
+
+### Plot
+
+```{r}
+#| label: plot-output
+#| echo: false
+#| eval: true
+#| fig-width: 5
+library(here)
+library(tidyverse)
+data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) 
+```
+
+:::
+
+## Step 4: a simple histogram
+
+::: panel-tabset
+
+### Code
+
+```{r}
+#| label: simple_histogram-code
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) +   
+  geom_histogram()
+```
+
+2. We tell R what type of plot to use
+
+::: notes
+If you just had the code on line 1, you would not see a plot.
+You have to tell R what type of plot to use. Here we'll use a 'histogram', so we tell it to use the geometric object 'histogram'. There are many different types of geometric objects. We'll encounter a few during this module. 
+Plus adds a layer
+:::
+
+### Plot
+
+```{r}
+#| label: simple_histogram-output
+#| echo: false
+#| eval: true
+#| fig-width: 5
+library(here)
+library(tidyverse)
+data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) +
+  geom_histogram()
+```
+
+:::
+
+## Step 4: Build the plot - different background
+
+::: panel-tabset
+
+### Code
+
+```{r}
+#| label: different_background-code
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) +
+  geom_histogram()  +                                     
+  theme_bw()                                             
+```
+
+3. Changes the background
+
+::: notes
+There are many different themes. Here I've gone for a simple black and white theme.
+Note: layer
+:::
+
+### Plot
+
+```{r}
+#| label: different_background-output
+#| echo: false
+#| eval: true
+#| fig-width: 5
+library(here)
+library(tidyverse)
+data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) +
+  geom_histogram() +
+  theme_bw()
+```
+:::
+
+## Step 4: Build the plot - change the colours of the bars
+
+::: panel-tabset
+
+### Code
+
+```{r}
+#| label: colour_bars-code
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + 
+  geom_histogram()  + 
+  theme_bw()
+```
+
+1. Specify an additional bit of code (or `argumment`) inside the `mapping` part of the function `ggplot()`. Instead of using the default grey, I'm telling R to 'fill in' the bars with a tomato red.
+
+### Plot
+
+```{r}
+#| label: colour_bars-output
+#| echo: false
+#| eval: true
+#| fig-width: 5
+library(here)
+library(tidyverse)
+data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +
+  geom_histogram() +
+  theme_bw()
+```
+:::
+
+## Step 4: Build the plot - remove the legend
+
+::: panel-tabset
+
+### Code
+
+```{r}
+#| label: remove_legend-code
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + 
+  geom_histogram()  + 
+  theme_bw() +
+  theme(legend.position = "none")
+```
+
+4. Removes the legend
+
+### Plot
+
+```{r}
+#| label: remove_legend-output
+#| echo: false
+#| eval: true
+#| fig-width: 5
+library(here)
+library(tidyverse)
+data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +
+  geom_histogram() +
+  theme_bw() +
+  theme(legend.position = "none")
+```
+:::
+
+## Step 4: Build the plot - change the title of the x-axis
+
+::: panel-tabset
+
+### Code
+
+```{r}
+#| label: title_x_axis-code
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + 
+  geom_histogram()  + 
+  theme_bw() +
+  theme(legend.position = "none") +
+  labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1")
+```
+
+5.  Adds a more informative title for the x-axis.
+
+### Plot
+
+```{r}
+#| label: title_x_axis-output
+#| echo: false
+#| eval: true
+#| fig-width: 5
+library(here)
+library(tidyverse)
+data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +
+  geom_histogram() +
+  theme_bw() +
+  theme(legend.position = "none") +
+  labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1")
+```
+:::
+
+## Step 4: Build the plot - change the value labels
+
+::: panel-tabset
+
+### Code
+
+```{r}
+#| label: add_text_labels_x-axis-code
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + 
+  geom_histogram()  + 
+  theme_bw() +
+  theme(legend.position = "none") +
+  labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1") +
+  scale_x_continuous(
+    breaks = 0:4,
+    labels = c("Fully disagree", "Somewhat disagree", "Neutral", "Somewhat agree", "Fully agree")
+  )
+```
+
+Lines 6. to 9.  Replaces numerical values with text labels
+
+### Plot
+
+```{r}
+#| label: add_text_labels_x_axis-output
+#| echo: false
+#| eval: true
+#| fig-width: 5
+library(here)
+library(tidyverse)
+data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +
+  geom_histogram() +
+  theme_bw() +
+  theme(legend.position = "none") +
+  labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1") +
+  scale_x_continuous(
+    breaks = 0:4,
+    labels = c("Fully disagree", "Somewhat disagree", "Neutral", "Somewhat agree", "Fully agree")
+  )
+```

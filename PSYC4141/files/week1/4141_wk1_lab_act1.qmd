@@ -11,15 +11,15 @@ We've all been there: you may be trying to focus on a lecture, but a thought on 
 
 We are going to:
 
-1.  Setup the appropriate bits and pieces in RStudio that we need.
-2.  Download the data
-3.  Read in the data and have a quick look what is in the file
-4.  Create a plot and make it look nice
+1.  Download the data
+2.  Setup the appropriate bits and pieces in RStudio
+3.  Read in the data
+4.  Build a plot and make it look nice
 
 ::: callout-important
 ## Watch the 'How to' video
 
-If you haven't done so already, this is a good time to watch the 'How to' video on the handbook page on 'How to create a plot'.
+If you haven't done so already, this is a good time to watch the 'How to' video on the handbook page on 'How to build a plot'.
 :::
 
 ## Step 1: Download the files
@@ -29,7 +29,7 @@ To complete this lab activity you will need two files:
 1.  We'll work with an example script called `4141_wk1_lab_act1.qmd`. This is a Quarto document.
 2.  We need a data file called `data_bmw3.csv`. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This means that individual bits of data are separated by comma's. We'll often use `.csv` files.
 
-You can download the files from the handbook (see Step 1 under Lab activity 3). Usually they will be saved in your 'Downloads' folder.
+You can download the files from the handbook (see Step 1 under Lab activity). Usually they will be saved in your 'Downloads' folder.
 
 ## Step 2: Setup
 
@@ -40,7 +40,7 @@ The code (or instructions to R) to load the libraries is in the bit below. This 
 > Action: Run the code below to load the libraries.
 
 ```{r}
-#| label: Load relevant libraries # tells you what this chunk does
+#| label: load_libraries # tells you what this chunk does
 library(here) # the 'here' package helps with finding your files
 library(tidyverse) # the 'tidyverse' is a set of packages that handles almost everything you need to do with data
 ```
@@ -52,23 +52,23 @@ The next step is to read in a data file. Here we'll use a subset of the data col
 > Action: Run the code below to read in the data
 
 ```{r}
-#| label: Read in the data
+#| label: read_data
 data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
 ```
 
 You may wonder what the bit is that comes before `read_csv()`. There we have the name of the object we are assigning the data file to. I've called it `data`, but you can give it any name you like. The `<-` in between is called an assignment arrow. It basically means that R puts the content of the data file `data_bmw3.csv` stored at location `PSYC4141/files/week1` in an object called `data`. Once you've run the code, you should see it in your Environment (top right quadrant).
 
-## Step 4: Create a plot
+## Step 4: Build a plot
 
 Now we are ready to create our first plot. Let's say we'd like to visualise how many people selected each response option for question 1 of the questionnaire. Question 1 was "While listening to a presentation, my thoughts start to trail off unintentionally." Participants were asked to decide to what extent they agreed or disagreed with that statement. They chose one of the following options: "Fully disagree", "Somewhat disagree", "Neutral", "Somewhat agree" or "Fully agree".
 
 We can do that by creating a histogram. The function we use for that (and for a lot of other plots you'll make for research methods and stats) is `ggplot()`. Inside the function we tell R which data to use and which variable to map onto the x-axis of the histogram.
 
-> Action: Run the code below to create a histogram
+> Action 4a: Run the code below to create a histogram
 
 ```{r}
-#| label: A very simple histogram
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) + # specifies data and variable to plot
+#| label: simple_histogram
+ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) +   # specifies data and variable to plot
   geom_histogram()                                        # specifies what type of plot
 ```
 
@@ -76,10 +76,10 @@ In a histogram, the height of the bar indicates the number of observations, in t
 
 Now, this does the job, but it doesn't quite look the way I'd like it to look. Let's change that. I don't particularly like the grey background. I can change that by adding a layer to the plot specifying a different background. There are lots of different 'themes' in `ggplot()` that you can use. Have a look at <https://ggplot2.tidyverse.org/reference/ggtheme.html>.
 
-> Action: Run the code below see the change in background
+> Action 4b: Run the code below see the change in background
 
 ```{r}
-#| label: With a different background
+#| label: different_background
 ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) + # specifies data and variable to plot
   geom_histogram()  +                                     # specifies what type of plot
   theme_bw()                                              # changes the background
@@ -87,10 +87,10 @@ ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) + # specifies data and var
 
 I would like the bars to be red instead of grey. I can make that happen, by specifying an additional bit of code (or 'argument' in the `ggplot()` part. There are lots of different colours and colour schemes available within `ggplot()`. Have a look at [this overview](https://r-charts.com/colors/) and choose one you like for your plot. There is more to say about which colour schemes to use, but we'll save that for another day.
 
-> Action: Run the code below to change the colour of the bars
+> Action 4c: Run the code below to change the colour of the bars
 
 ```{r}
-#| label: The bars are now red
+#| label: colour_bars
 ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...and makes the bars red
   geom_histogram()  +                                                      # specifies what type of plot
   theme_bw()                                                               # changes the background
@@ -98,10 +98,10 @@ ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...an
 
 To avoid the legend on the right getting printed (because we don't need it in this case), we can tell R not to include it.
 
-> Action: Run the code below to remove the legend
+> Action 4d: Run the code below to remove the legend
 
 ```{r}
-#| label: Remove the legend
+#| label: remove_legend
 ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...and makes the bars red
   geom_histogram()  +                                                      # specifies what type of plot
   theme_bw() +                                                             # changes the background
@@ -110,23 +110,23 @@ ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...an
 
 Now, it would be good to have a more informative label for what we've plotted on the x-axis. Instead of the variable name `BMW3_UN_01`, we'll add 'Brief Mind Wandering Three-factor Scale - Question 1'.
 
-> Action: Run the code below to change the label of the x-axis
+> Action 4e: Run the code below to change the title of the x-axis
 
 ```{r}
-#| label: Add informative x-axis label
+#| label: change_x-axis_title
 ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...and makes the bars red
   geom_histogram()  +                                                      # specifies what type of plot
   theme_bw() +                                                             # changes the background
   theme(legend.position = "none") +                                        # removes the legend
-  labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1")        # add more informative label for the x-axis
+  labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1")        # add more informative title for the x-axis
 ```
 
 Finally, instead of the numerical values 0 to 4 that are currently on the x-axis, we'll add the labels that are associated with each of these values.
 
-> Action: Run the code below to change the value labels
+> Action 4f: Run the code below to change the value labels
 
 ```{r}
-#| label: Add text labels to x-axis
+#| label: add_text_labels_x-axis
 ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + # ...and makes the bars red
   geom_histogram()  +                                                      # specifies what type of plot
   theme_bw() +                                                             # changes the background
