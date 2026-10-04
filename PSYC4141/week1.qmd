@@ -208,46 +208,39 @@ We often ask you to do a few things in RStudio before you attend your lab sessio
 
 ## Lab activities {#sec-4141-w1-lab-activities}
 
-Information about what you will be doing in the lab activities will follow shortly.
+### Lab activity 1: Reading in data and creating a plot
 
-<!-- ### Lab activity 1: -->
+#### Background
 
-<!-- ### Lab activity 2: Logging into the R-server -->
+We've all been there: you may be trying to focus on a lecture, but a thought on what you would like to have for lunch pops into your mind. Mind wandering describes the common experience of one's thoughts drifting away from the task at hand towards self-generated thoughts and feelings (Smallwood & Schooler, 2006). Today, we'll work with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf).
 
+#### Aims of the activity
 
-<!-- ### Lab activity 3: Reading in data and creating a plot -->
+We are going to:
 
-<!-- #### Background -->
+1.  Download the files
+2.  Setup the appropriate bits and pieces in RStudio
+3.  Read in the data
+4.  Build a plot
 
-<!-- We've all been there: you may be trying to focus on a lecture, but a thought on what you would like to have for lunch pops into your mind. Mind wandering describes the common experience of one's thoughts drifting away from the task at hand towards self-generated thoughts and feelings (Smallwood & Schooler, 2006). Today, we'll work with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). -->
+:::{.callout-tip title="Watch the 'How to' lecture"}
+If you haven't done so already, this is a good time to watch the 'How to' video (here @sec-4141-w1-lectures-intro-how-r) on 'How to create a plot'.
+:::
 
-<!-- #### Aims of the activity -->
+#### Step 1: Download the files
 
-<!-- We are going to: -->
+To complete this lab activity you will need two files:
 
-<!-- 1.  Download the files -->
-<!-- 2.  Setup the appropriate bits and pieces in RStudio -->
-<!-- 3.  Read in the data -->
-<!-- 4.  Build a plot -->
+1. We'll work with an example script called [`4141_wk1_lab_act1.qmd`](files/week1/4141_wk1_lab_act1.qmd){download="4141_wk1_lab_act1.qmd"}. This is a Quarto document.
+2. We need a data file called [`data_bmw3.csv`](files/week1/data_bmw3.csv){download="data_bmw3.csv"}. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This  means that individual bits of data are separated by comma's. We'll often use `.csv` files.
 
-<!-- :::{.callout-tip title="Watch the 'How to' lecture"} -->
-<!-- If you haven't done so already, this is a good time to watch the 'How to' video (here @sec-4141-w1-lectures-intro-how-r) on 'How to create a plot'. -->
-<!-- ::: -->
+You can download the files by clicking on each of them. Usually they will be saved in your 'Downloads' folder.
 
-<!-- #### Step 1: Download the files -->
+Next, upload both files to your Files space on the R-server (bottom right quadrant). You could put them in the 'week1' folder you created in the previous lab activity.
 
-<!-- To complete this lab activity you will need two files: -->
+Finally, open the example script by clicking on the file called `4141_wk1_lab_act1.qmd` in the Files space on the R-server.
 
-<!-- 1. We'll work with an example script called [`4141_wk1_lab_act1.qmd`](files/week1/4141_wk1_lab_act1.qmd){download="4141_wk1_lab_act1.qmd"}. This is a Quarto document. -->
-<!-- 2. We need a data file called [`data_bmw3.csv`](files/week1/data_bmw3.csv){download="data_bmw3.csv"}. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This  means that individual bits of data are separated by comma's. We'll often use `.csv` files. -->
+#### Steps 2, 3 and 4
+For **steps 2, 3 and 4**, you'll be working in RStudio.
 
-<!-- You can download the files by clicking on each of them. Usually they will be saved in your 'Downloads' folder. -->
-
-<!-- Next, upload both files to your Files space on the R-server (bottom right quadrant). You could put them in the 'week1' folder you created in the previous lab activity. -->
-
-<!-- Finally, open the example script by clicking on the file called `4141_wk1_lab_act1.qmd` in the Files space on the R-server. -->
-
-<!-- #### Steps 2, 3 and 4 -->
-<!-- For **steps 2, 3 and 4**, you'll be working in RStudio.  -->
-
-<!-- **References** -->
+**References**

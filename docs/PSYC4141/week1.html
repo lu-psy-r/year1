@@ -187,7 +187,10 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#sec-4141-w1-reading" id="toc-sec-4141-w1-reading" class="nav-link" data-scroll-target="#sec-4141-w1-reading">Reading</a></li>
   <li><a href="#sec-4141-w1-prelab-activities" id="toc-sec-4141-w1-prelab-activities" class="nav-link" data-scroll-target="#sec-4141-w1-prelab-activities">Pre-lab activities</a></li>
-  <li><a href="#sec-4141-w1-lab-activities" id="toc-sec-4141-w1-lab-activities" class="nav-link" data-scroll-target="#sec-4141-w1-lab-activities">Lab activities</a></li>
+  <li><a href="#sec-4141-w1-lab-activities" id="toc-sec-4141-w1-lab-activities" class="nav-link" data-scroll-target="#sec-4141-w1-lab-activities">Lab activities</a>
+  <ul class="collapse">
+  <li><a href="#lab-activity-1-reading-in-data-and-creating-a-plot" id="toc-lab-activity-1-reading-in-data-and-creating-a-plot" class="nav-link" data-scroll-target="#lab-activity-1-reading-in-data-and-creating-a-plot">Lab activity 1: Reading in data and creating a plot</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -408,33 +411,54 @@ Easy access to readings
 </section>
 <section id="sec-4141-w1-lab-activities" class="level2">
 <h2 class="anchored" data-anchor-id="sec-4141-w1-lab-activities">Lab activities</h2>
-<p>Information about what you will be doing in the lab activities will follow shortly.</p>
-<!-- ### Lab activity 1: -->
-<!-- ### Lab activity 2: Logging into the R-server -->
-<!-- ### Lab activity 3: Reading in data and creating a plot -->
-<!-- #### Background -->
-<!-- We've all been there: you may be trying to focus on a lecture, but a thought on what you would like to have for lunch pops into your mind. Mind wandering describes the common experience of one's thoughts drifting away from the task at hand towards self-generated thoughts and feelings (Smallwood & Schooler, 2006). Today, we'll work with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). -->
-<!-- #### Aims of the activity -->
-<!-- We are going to: -->
-<!-- 1.  Download the files -->
-<!-- 2.  Setup the appropriate bits and pieces in RStudio -->
-<!-- 3.  Read in the data -->
-<!-- 4.  Build a plot -->
-<!-- :::{.callout-tip title="Watch the 'How to' lecture"} -->
-<!-- If you haven't done so already, this is a good time to watch the 'How to' video (here @sec-4141-w1-lectures-intro-how-r) on 'How to create a plot'. -->
-<!-- ::: -->
-<!-- #### Step 1: Download the files -->
-<!-- To complete this lab activity you will need two files: -->
-<!-- 1. We'll work with an example script called [`4141_wk1_lab_act1.qmd`](files/week1/4141_wk1_lab_act1.qmd){download="4141_wk1_lab_act1.qmd"}. This is a Quarto document. -->
-<!-- 2. We need a data file called [`data_bmw3.csv`](files/week1/data_bmw3.csv){download="data_bmw3.csv"}. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This  means that individual bits of data are separated by comma's. We'll often use `.csv` files. -->
-<!-- You can download the files by clicking on each of them. Usually they will be saved in your 'Downloads' folder. -->
-<!-- Next, upload both files to your Files space on the R-server (bottom right quadrant). You could put them in the 'week1' folder you created in the previous lab activity. -->
-<!-- Finally, open the example script by clicking on the file called `4141_wk1_lab_act1.qmd` in the Files space on the R-server. -->
-<!-- #### Steps 2, 3 and 4 -->
-<!-- For **steps 2, 3 and 4**, you'll be working in RStudio.  -->
-<!-- **References** -->
+<section id="lab-activity-1-reading-in-data-and-creating-a-plot" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-1-reading-in-data-and-creating-a-plot">Lab activity 1: Reading in data and creating a plot</h3>
+<section id="background" class="level4">
+<h4 class="anchored" data-anchor-id="background">Background</h4>
+<p>We’ve all been there: you may be trying to focus on a lecture, but a thought on what you would like to have for lunch pops into your mind. Mind wandering describes the common experience of one’s thoughts drifting away from the task at hand towards self-generated thoughts and feelings (Smallwood &amp; Schooler, 2006). Today, we’ll work with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire <a href="files/week1/BMW-3_eng.pdf">here</a>.</p>
+</section>
+<section id="aims-of-the-activity" class="level4">
+<h4 class="anchored" data-anchor-id="aims-of-the-activity">Aims of the activity</h4>
+<p>We are going to:</p>
+<ol type="1">
+<li>Download the files</li>
+<li>Setup the appropriate bits and pieces in RStudio</li>
+<li>Read in the data</li>
+<li>Build a plot</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Watch the 'How to' lecture">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Watch the ‘How to’ lecture
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you haven’t done so already, this is a good time to watch the ‘How to’ video (here <a href="#sec-4141-w1-lectures-intro-how-r" class="quarto-xref">Section&nbsp;1.3</a>) on ‘How to create a plot’.</p>
+</div>
+</div>
+</section>
+<section id="step-1-download-the-files" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-download-the-files">Step 1: Download the files</h4>
+<p>To complete this lab activity you will need two files:</p>
+<ol type="1">
+<li>We’ll work with an example script called <a href="../PSYC4141/files/week1/4141_wk1_lab_act1.html" download="4141_wk1_lab_act1.qmd"><code>4141_wk1_lab_act1.qmd</code></a>. This is a Quarto document.</li>
+<li>We need a data file called <a href="files/week1/data_bmw3.csv" download="data_bmw3.csv"><code>data_bmw3.csv</code></a>. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al.&nbsp;(2024). It is a file of the type <code>.csv</code>. This means that individual bits of data are separated by comma’s. We’ll often use <code>.csv</code> files.</li>
+</ol>
+<p>You can download the files by clicking on each of them. Usually they will be saved in your ‘Downloads’ folder.</p>
+<p>Next, upload both files to your Files space on the R-server (bottom right quadrant). You could put them in the ‘week1’ folder you created in the previous lab activity.</p>
+<p>Finally, open the example script by clicking on the file called <code>4141_wk1_lab_act1.qmd</code> in the Files space on the R-server.</p>
+</section>
+<section id="steps-2-3-and-4" class="level4">
+<h4 class="anchored" data-anchor-id="steps-2-3-and-4">Steps 2, 3 and 4</h4>
+<p>For <strong>steps 2, 3 and 4</strong>, you’ll be working in RStudio.</p>
+<p><strong>References</strong></p>
 
 
+</section>
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
