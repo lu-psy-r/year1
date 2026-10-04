@@ -166,7 +166,7 @@ Next, you can see the lecture elements. We recommend that you watch them in sequ
 
 - [RStudio walkthrough transcript](files/week1/4141_rstudio_transcript.txt)
 
-2. **How to create a plot**(~ minutes)
+2. **How to build a plot**(~ minutes)
 
 Video will follow soon.
 
@@ -176,7 +176,7 @@ Video will follow soon.
 
 \newline
 
-- [How to create a plot walkthrough transcript](files/week1/4141_how_to_plot_transcript.txt)
+- [How to build a plot walkthrough transcript](files/week1/4141_how_to_plot_transcript.txt)
 
 ## Reading {#sec-4141-w1-reading}
 
