@@ -14,7 +14,6 @@ website:
 
 format:
   html:
-    number-sections: true
     include-in-header:
       - text: |
           <script>window.onload = function() {document.getElementById("autocomplete-0-input").placeholder = "Search Year 1";};</script>

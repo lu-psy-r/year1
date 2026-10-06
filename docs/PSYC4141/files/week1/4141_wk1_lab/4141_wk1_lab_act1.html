@@ -217,12 +217,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background"><span class="header-section-number">1</span> Background</a></li>
-  <li><a href="#aims-of-the-activity" id="toc-aims-of-the-activity" class="nav-link" data-scroll-target="#aims-of-the-activity"><span class="header-section-number">2</span> Aims of the activity</a></li>
-  <li><a href="#step-1-download-the-files" id="toc-step-1-download-the-files" class="nav-link" data-scroll-target="#step-1-download-the-files"><span class="header-section-number">3</span> Step 1: Download the files</a></li>
-  <li><a href="#step-2-setup" id="toc-step-2-setup" class="nav-link" data-scroll-target="#step-2-setup"><span class="header-section-number">4</span> Step 2: Setup</a></li>
-  <li><a href="#step-3-reading-in-the-data" id="toc-step-3-reading-in-the-data" class="nav-link" data-scroll-target="#step-3-reading-in-the-data"><span class="header-section-number">5</span> Step 3: Reading in the data</a></li>
-  <li><a href="#step-4-build-a-plot" id="toc-step-4-build-a-plot" class="nav-link" data-scroll-target="#step-4-build-a-plot"><span class="header-section-number">6</span> Step 4: Build a plot</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#aims-of-the-activity" id="toc-aims-of-the-activity" class="nav-link" data-scroll-target="#aims-of-the-activity">Aims of the activity</a></li>
+  <li><a href="#step-1-download-the-files" id="toc-step-1-download-the-files" class="nav-link" data-scroll-target="#step-1-download-the-files">Step 1: Download the files</a></li>
+  <li><a href="#step-2-setup" id="toc-step-2-setup" class="nav-link" data-scroll-target="#step-2-setup">Step 2: Setup</a></li>
+  <li><a href="#step-3-reading-in-the-data" id="toc-step-3-reading-in-the-data" class="nav-link" data-scroll-target="#step-3-reading-in-the-data">Step 3: Reading in the data</a></li>
+  <li><a href="#step-4-build-a-plot" id="toc-step-4-build-a-plot" class="nav-link" data-scroll-target="#step-4-build-a-plot">Step 4: Build a plot</a></li>
   </ul>
 </nav>
     </div>
@@ -248,12 +248,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="background" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="background"><span class="header-section-number">1</span> Background</h2>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
 <p>We’ve all been there: you may be trying to focus on a lecture, but a thought on what you would like to have for lunch pops into your mind. Mind wandering describes the common experience of one’s thoughts driting away form the task at hand towards self-generated thoughts and feelings (Smallwood &amp; Schooler, 2006). Today, we’ll work with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens.</p>
 </section>
-<section id="aims-of-the-activity" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="aims-of-the-activity"><span class="header-section-number">2</span> Aims of the activity</h2>
+<section id="aims-of-the-activity" class="level2">
+<h2 class="anchored" data-anchor-id="aims-of-the-activity">Aims of the activity</h2>
 <p>We are going to:</p>
 <ol type="1">
 <li>Download the data</li>
@@ -275,8 +275,8 @@ Watch the ‘How to’ video
 </div>
 </div>
 </section>
-<section id="step-1-download-the-files" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="step-1-download-the-files"><span class="header-section-number">3</span> Step 1: Download the files</h2>
+<section id="step-1-download-the-files" class="level2">
+<h2 class="anchored" data-anchor-id="step-1-download-the-files">Step 1: Download the files</h2>
 <p>To complete this lab activity you will need two files:</p>
 <ol type="1">
 <li>We’ll work with an example script called <code>4141_wk1_lab_act1.qmd</code>. This is a Quarto document.</li>
@@ -284,8 +284,8 @@ Watch the ‘How to’ video
 </ol>
 <p>You can download the files from the handbook (see Step 1 under Lab activity). Usually they will be saved in your ‘Downloads’ folder.</p>
 </section>
-<section id="step-2-setup" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="step-2-setup"><span class="header-section-number">4</span> Step 2: Setup</h2>
+<section id="step-2-setup" class="level2">
+<h2 class="anchored" data-anchor-id="step-2-setup">Step 2: Setup</h2>
 <p>Before we can do anything, we need tell R what packages we want to use. You may wonder what a package is. If R is your kitchen with basic equipment, a package is a specialist cookbook that adds new recipes. All the packages that you’ll need have already been installed on the R-server, but you have to tell R which cookbooks to get off the shelf for what you want to do right now. We use the function <code>library()</code> to do that. It is useful to have a section at the top of your script where you get all the cookbooks you need for this script off the shelf (…or load all the relevant libraries).</p>
 <p>The code (or instructions to R) to load the libraries is in the bit below. This is called a ‘code chunk’. You can run the code in the chunk by clicking on the green arrow in the top right corner of the code chunk.</p>
 <blockquote class="blockquote">
@@ -322,8 +322,8 @@ Watch the ‘How to’ video
 </div>
 </div>
 </section>
-<section id="step-3-reading-in-the-data" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="step-3-reading-in-the-data"><span class="header-section-number">5</span> Step 3: Reading in the data</h2>
+<section id="step-3-reading-in-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="step-3-reading-in-the-data">Step 3: Reading in the data</h2>
 <p>The next step is to read in a data file. Here we’ll use a subset of the data collected by Schubert and colleagues. It contains responses from 215 students on a questionnaire that measures mind wandering. It is a file of the type <code>.csv</code>, so we’ll use the function <code>read_csv()</code> to do this. Inside the function, we tell R where to find the file. This is the bit that comes after <code>here()</code>: <code>4141_wk1_lab</code>; it specifies the filepath. After the comma, we tell R what the file is called, including the extension (<code>data_bmw3.csv</code>). Both of these bits (where it is and what it is called) need to be in double quotation marks (““).</p>
 <blockquote class="blockquote">
 <p>Action: Run the code below to read in the data</p>
@@ -343,8 +343,8 @@ dbl (18): subject, id, Age, BMW3_UN_01, BMW3_UN_02, BMW3_UN_03, BMW3_UN_04, ...
 </div>
 <p>You may wonder what the bit is that comes before <code>read_csv()</code>. There we have the name of the object we are assigning the data file to. I’ve called it <code>data</code>, but you can give it any name you like. The <code>&lt;-</code> in between is called an assignment arrow. It basically means that R puts the content of the data file <code>data_bmw3.csv</code> stored at location <code>4141_wk1_lab</code> in an object called <code>data_mw</code>. Once you’ve run the code, you should see it in your Environment (top right quadrant).</p>
 </section>
-<section id="step-4-build-a-plot" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="step-4-build-a-plot"><span class="header-section-number">6</span> Step 4: Build a plot</h2>
+<section id="step-4-build-a-plot" class="level2">
+<h2 class="anchored" data-anchor-id="step-4-build-a-plot">Step 4: Build a plot</h2>
 <p>Now we are ready to create our first plot. Let’s say we’d like to visualise how many people selected each response option for question 1 of the questionnaire. Question 1 was “While listening to a presentation, my thoughts start to trail off unintentionally.” Participants were asked to decide to what extent they agreed or disagreed with that statement. They chose one of the following options: “Fully disagree”, “Somewhat disagree”, “Neutral”, “Somewhat agree” or “Fully agree”.</p>
 <p>We can do that by creating a histogram. The function we use for that (and for a lot of other plots you’ll make for research methods and stats) is <code>ggplot()</code>. Inside the function we tell R which data to use and which variable to map onto the x-axis of the histogram.</p>
 <blockquote class="blockquote">
