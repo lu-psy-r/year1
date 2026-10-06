@@ -239,7 +239,7 @@ d.  We cannot tell from the mean alone
 ### Pre-lab activity 2: Revisit the video on how to get started in RStudio
 RStudio is the software that we'll use to work with data, visualise data and analyse data. It is an important tool when learning to do psychological science.
 
-If you haven't watched it yet, or would like to remind yourself, please revisit last week's video on [How to work with RStudio](week1-lectures.qmd#sec-4141-w1-lectures-intro-how-r).
+If you haven't watched it yet, or would like to remind yourself, please revisit last week's video on [How to work with RStudio](week1.qmd#sec-4141-w1-lectures-intro-how-r).
 
 ## Lab activities {#sec-4141-w2-lab-activities}
 
