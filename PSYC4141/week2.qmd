@@ -1,0 +1,237 @@
+---
+title: 2. Week 2 - Measuring, describing, and visualising psychological concepts
+subtitle: Written by Carly Anderson and featuring lectures from John Towse
+order: 3 # ensure this is one more than the previous script
+---
+
+::: {.callout-note title="Overview"}
+This week we focus on two strands of learning:
+
+A. Psychological measurement - how we turn psychological concepts into measurable data, and how we can summarise those data using numbers. B. Variability and distributions - why differences between people and observations matter, and how we can measure and visualise information that a single average might hide.
+
+The materials we have prepared to support your learning are arranged in four parts:
+
+-   Lectures
+-   Reading
+-   Pre-lab activities
+-   Lab activities
+
+You can navigate to each in the side bar on the right
+:::
+
+<!-- Note: I think it is helpful to have a list of the different sections in a week for cross-referencing. I don't think it helps readability it this is visible to the students (hence I've commented them out) as the outline in the sidebar on the right already provides this info. -->
+
+<!-- - @sec-4141-w2-lectures: Lectures: watch these before the lab session -->
+
+<!-- - @sec-4141-w2-lectures-measurement: Section A: Psychological measurement and central tendency -->
+
+<!-- - @sec-4141-w2-lectures-variability: Section B: Variability and distributions -->
+
+<!-- - @sec-4141-w2-reading: Recommended readings -->
+
+<!-- - @sec-4141-w2-prelab-activities: Activities to do before you attend your lab session -->
+
+<!-- - @sec-4141-w2-lab-activities: Activities you do during your lab session -->
+
+## Lectures {#sec-4141-w2-lectures}
+
+Last week, you looked at some of the bigger questions that sit behind psychological science: how theories are linked to observable evidence, why our observations provide estimates rather than direct access to the “truth”, and why the complexity and variability of human behaviour matter.
+
+**This week, we move from those ideas to some of the practical tools that allow us to gather and make sense of evidence.** We’ll look at how psychological concepts can be represented as data, and how choices about measurement, summary and visualisation shape the evidence we use to evaluate scientific claims. This week, the lectures are grouped into section A and B (relating to the two strands of learning stated above). Each section is split into short videos so you can work through them at your own pace. It’s a good idea to take notes as you go and to have a 10-minute break between section A and section B.
+
+This week, the lectures are grouped into section A and B (relating to the two strands of learning stated above). Each section is split into short videos so you can work through them at your own pace. It’s a good idea to take notes as you go and to have a 10-minute break between section A and section B.
+
+:::(.callout-note title="A note about the recordings") The recordings were originally delivered by Prof John Towse and have been selected and reorganised for this week's teaching. If you hear references to a different week or to something covered "last week" don't worry about these references! I've reviewed the materials and you will never be expected to know anything that you haven't yet covered. All questions should be posted on the discussion forum and will be answered by Carly. Please do not contact John about his content. :::
+
+::: {.callout-tip title="Questions?"}
+Make a note of questions as you work through the material. These might be answered later in the recordings, or in your lab. Otherwise, please bring them to the live online Q&A session on Friday or post them on the [Q&A forum on Moodle](https://modules.lancaster.ac.uk/mod/forum/view.php?id=2918081).
+:::
+
+### Section A: Psychological measurement and central tendency {#sec-4141-w2-lectures-measurement}
+
+You can watch the lecture for the video using the video playback windows shown next. Section A is broken into three parts that should be watched in sequence:
+
+1.  Types of data
+2.  Scales of measurement
+3.  Central tendency and notations
+
+Download the slides for sections A and B in one go [here](files/week2/4141_wk2_slides.pdf). The transcript for all the videos is [here](files/week2/4141_wk2_transcript.pdf).
+
+**1. Types of data** (~10 minutes)
+
+What types of data can we use to measure psychological concepts that we are interested in? This includes nominal and numerical data. 
+
+```{r}
+#| label: Do not remove. It prevents Quarto from thinking it needs to involve Python.
+```
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=46ed23d6-6877-4f9b-a533-b4d700bcf0ae&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 2 (2026) section A part 1"></iframe>
+```
+
+**2. Scales of Measurement** (~9 minutes) Four different scales that we commonly use to measure our data. These include nominal, ordinal, interval, and ratio.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=e7bd5025-3287-4911-9277-b4d700c634db&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 2 (2026) section A part 2"></iframe>
+```
+
+**3. Measures of central tendency and key notations** (~10 minutes) Why measurement matters, and how to describe your data using numbers and appropriate measures. This includes the mean, median and mode.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=7066607a-b340-4185-a413-b4d700e01ea3&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 2 (2026) section A part 3"></iframe>
+```
+
+:::{callout-tip title="Take a break!"} Before continuing, we recommend you take a **15-minute break away from your computer**. Remember to note down any questions to bring to the Q&A, lab or discussion forum whilst you’re watching the lectures. :::
+
+### Section B: Variability and distributions {#sec-4141-w2-lectures-variability}
+
+Section B is broken into four parts that should be watched in sequence:
+
+1.  Variability in numbers
+2.  Variability in words
+3.  The standard deviation and distribution curves
+4.  The normal distribution curve
+
+**1. Variability in numbers** (~19 minutes) Why does variability or ‘spread’ in our data matter? How can we measure and express variability using numbers? This includes range, interquartile range, deviance, variance and standard deviation.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=e469992d-adc3-4b37-a331-b4d700ed2268&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 2 (2026) section B part 1"></iframe>
+```
+
+**2. Variability in words** (~5 minutes) A short reflection on what numerical measures of variability can actually tell us about our data.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=aa25355a-79fa-480d-8b5b-b4d700f3affc&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 2 (2026) section B part 2"></iframe>
+```
+
+:::{callout-tip title="Formulae and calculations"} John has just introduced the notion of using calculations to measure variability and the broader concepts behind them. You can download the key formulae for calculating variance and standard deviation and other measures [here](files/week2/4141_formulae1.pdf). You may come across slightly different versions of these formulae (computational and conceptual) so it is useful to be aware of them. **You do not need to memorise these formulae. The important thing is to understand what each measure tells us about our data and the basic idea behind how it is calculated.** In the next recording, John will take you through a worked example of calculating a standard deviation. :::
+
+**3. The standard deviation and distribution curves** (~15 minutes) An example of how to calculate standard deviation, and how we can look at variability visually using histogram plots. An overview of the shape of data distributions, with features including symmetry, skew, and bimodality.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=611d2c3a-01e8-4d08-b783-b4d8011f26e7&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&start=59&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 2 (2026) section B part 3"></iframe>
+```
+
+**4. The normal distribution** (~9 minutes) Basic properties of the normal distribution curve and linking central tendency and standard deviation to the normal curve.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=f942c658-2bc1-4b37-95be-b4d800ac3367&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 2 (2026) section B part 4"></iframe>
+```
+
+## Reading {#sec-4141-w2-reading}
+
+::: {.callout-tip title="Easy access to readings"}
+All reading is accessible via the library. You can go to Moodle -\> Library Resources -\> Resource List or you can follow [**this link**](https://lancaster.alma.exlibrisgroup.com/leganto/nui/lists/93496942590001221). Readings have one of the following tags:
+
+-   **Essential**: We expect you to be familiar with these reading. You will be assessed on this.
+-   **Recommended**: We highly recommend these readings. They often provide a different perspective, or explain things in a different way.
+-   **Optional**: Further readings for those interested.
+
+The reading list is divided into multiple sections:
+
+-   **Reading associated with statistics**: this contains links to readings useful for the development of statistical concepts and skills. The main textbook *Fundamental statistics for the behavioral sciences* by Howell (Essential) lives here.
+-   **Reading associated with psychological research principles and design**: this contains links to readings that provide a good basis for foundational knowledge around research design.
+-   **Reading associated with Open Science principles and practices**: this contains links to key literature on the Open Science movement.
+-   **Week by week**: these contain links to key reading for that week that are not listed on any of the more general lists above.
+:::
+
+For **week 2**, the reading is:
+
+-   Keck, S., & Tang, W. (2020). Enhancing the wisdom of the crowd with cognitive-process diversity: The benefits of aggregating intuitive and analytical judgments. *Psychological Science, 31*(10), 1272-1282. **Essential**
+-   Lorenz, J., Rauhut, H., Schweitzer, F., & Helbing, D. (2011). How social influence can undermine the wisdom of crowd effect. *Proceedings of the National Academy of Sciences of the United States of America, 108*(22), 9020–9025. **Recommended**
+-   Howell, D. C. (2017). Fundamental statistics for the behavioral sciences (9th ed.). Cengage Learning. Chapters 2, 4, 5 and 6. **Recommended**
+
+## Pre-lab activities {#sec-4141-w2-prelab-activities}
+
+The lecture mateerial is designed to deliver important ideas and procedures for learning about psychological science and analysis. Pre-lab material is then designed to help consolidate this learning, or enhance, expand and apply it in ways that set the scene for the lab session activity. We want to prepare you to be ready to go in the session itself and make the most of your time there.
+
+Information about a pre-lab activity will be added soon.
+
+### Pre-lab activity 1: From psychological claims to measurements
+
+Last week, you considered psychological claims that we might encounter in everyday life. One example is the claim that “screen time negatively impacts mental health in adolescents”. Before we could investigate this claim, we would need to decide what we actually mean by screen time and how we could turn that concept into something we can observe and measure.
+
+One simple approach might be to ask people: “Approximately how many hours did you spend looking at a screen yesterday?”
+
+Imagine we asked a small group of adolescents and received the following sample of responses:
+
+6 8 5 9 7 4 11 6 7 8 10 5 6 12 7 8 4 9 6 7 14 5 8 6 10 7 3 9
+
+Take a moment to think about what these numbers actually represent.
+
+:::: {.callout-note title="Pre-lab question 1"}
+1.  What scale of measurement best describes the number of hours of screen time reported here?
+
+<!-- -->
+
+a.  Nominal
+b.  Ordinal
+c.  Interval
+d.  Ratio
+
+::: {.callout-tip title="Show answer" collapse="true"}
+**d.** Ratio. Time measured in hours has equal intervals, and zero hours represents the absence of the measured quantity. This means that differences and ratios between values are meaningful.
+:::
+::::
+
+Once we have collected observations like these, how can we describe them in a useful way? One way is to summarise the data to find the mean or average value. You'll learn how to do that in RStudio during the lab, but for now, have a look at [this website](https://istats.shinyapps.io/EDA_quantitative/).
+
+Choose the following options:
+
+- Under 'Enter Data', select 'Your Own'
+- Under 'Name of Variable', enter a sensible label (such as 'Screen time')
+- Under 'Enter observations', add the numbers of the observations
+- Under 'Choose Type of Plot', click the box to select a 'Histogram'.
+
+Now have a look:
+
+- On the right, you'll see key descriptive statistics such as the mean and the standard deviation (Std. Dev.).
+- Below it, you can see a histogram.
+
+::: {.callout-note title="What is a histogram?"}
+A histogram is a graph that shows how the values of a continuous (or finely measured) variable are distributed. The values are divided into consecutive, equal-width intervals called bins, and a bar is drawn for each bin with its height showing how many observations fall inside it (or the proportion or density). Because the bins are adjacent, the bars touch, which distinguishes a histogram from a bar chart of separate categories. Histograms make it easy to see the shape of a distribution, including its centre, spread, skew, and any outliers or multiple peaks.
+:::
+
+Play around:
+
+- What happens if you add more observations? How does it change the mean and the standard deviation? What happens to the histogram?
+- Try adding 10 observations of lower screen time values.
+- Try adding an impossible large observation (like 89).
+- You can also click the option to see a boxplot as well as a histogram. Can you work out how key descriptive statistics are represented in a boxplot?
+
+:::: {.callout-note title="Pre-lab question 2"}
+2.  The mean reported screen time in this sample was approximately 7.4 hours. Which of the following would **NOT** be justified from these data?
+
+a.  Participants reported an average of 7.4 hours of screen time.
+b.  There was variation in reported screen time between participants.
+c.  Adolescents who use screens more have poorer mental health.
+d.  Some participants reported more screen time than others.
+
+::: {.callout-tip title="Show answer" collapse="true"}
+**c.** Here, our measure of screen time is self-reported hours of screen use on one day. We have not measured mental health, so these observations cannot tell us whether greater screen use is associated with poorer mental health. Our measure of “screen time” is also only one possible way of representing a complex behaviour. For example, it does not distinguish between different activities or content, such as studying, gaming, messaging friends or watching videos. This illustrates an important challenge in psychological science: the questions and theories we are interested in are often complex, while the data we collect are particular observations produced by the choices we make about what and how to measure. So, even when we can accurately describe a set of observations, we still need to be careful about what those observations allow us to conclude.
+:::
+::::
+
+:::: {.callout-note title="Pre-lab question 3"}
+3.  If two sets of data have exactly the same mean, what can we conclude about their variability?
+
+<!-- -->
+
+a.  They must have the same variability
+b.  They must have the same standard deviation
+c.  One must have a larger range
+d.  We cannot tell from the mean alone
+
+::: {.callout-tip title="Show answer" collapse="true"}
+**d.**
+:::
+::::
+
+### Pre-lab activity 2: Revisit the video on how to get started in RStudio
+RStudio is the software that we'll use to work with data, visualise data and analyse data. It is an important tool when learning to do psychological science.
+
+If you haven't watched it yet, or would like to remind yourself, please revisit last week's video on @sec-4141-w1-lectures-intro-how-r: 'How to work with RStudio'.
+
+## Lab activities {#sec-4141-w2-lab-activities}
+
+Information on the lab activities will follow soon.
