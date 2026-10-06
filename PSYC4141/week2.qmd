@@ -90,7 +90,7 @@ What types of data can we use to measure psychological concepts that we are inte
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=7066607a-b340-4185-a413-b4d700e01ea3&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 2 (2026) section A part 3"></iframe>
 ```
 
-:::{callout-tip title="Take a break!"}
+::: {.callout-tip title="Take a break!"}
 Before continuing, we recommend you take a **15-minute break away from your computer**. Remember to note down any questions to bring to the Q&A, lab or discussion forum whilst you’re watching the lectures.
 :::
 
@@ -115,7 +115,7 @@ Section B is broken into four parts that should be watched in sequence:
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=aa25355a-79fa-480d-8b5b-b4d700f3affc&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 2 (2026) section B part 2"></iframe>
 ```
 
-:::{callout-tip title="Formulae and calculations"}
+::: {.callout-tip title="Formulae and calculations"}
 John has just introduced the notion of using calculations to measure variability and the broader concepts behind them. You can download the key formulae for calculating variance and standard deviation and other measures [here](files/week2/4141_formulae1.pdf){download="4141_formulae1.pdf"} You may come across slightly different versions of these formulae (computational and conceptual) so it is useful to be aware of them. **You do not need to memorise these formulae. The important thing is to understand what each measure tells us about our data and the basic idea behind how it is calculated.** In the next recording, John will take you through a worked example of calculating a standard deviation.
 :::
 
@@ -158,8 +158,6 @@ For **week 2**, the reading is:
 
 The lecture mateerial is designed to deliver important ideas and procedures for learning about psychological science and analysis. Pre-lab material is then designed to help consolidate this learning, or enhance, expand and apply it in ways that set the scene for the lab session activity. We want to prepare you to be ready to go in the session itself and make the most of your time there.
 
-Information about a pre-lab activity will be added soon.
-
 ### Pre-lab activity 1: From psychological claims to measurements
 
 Last week, you considered psychological claims that we might encounter in everyday life. One example is the claim that “screen time negatively impacts mental health in adolescents”. Before we could investigate this claim, we would need to decide what we actually mean by screen time and how we could turn that concept into something we can observe and measure.
@@ -185,7 +183,7 @@ d.  Ratio
 :::
 ::::
 
-Once we have collected observations like these, how can we describe them in a useful way? One way is to summarise the data to find the mean or average value. You'll learn how to do that in RStudio during the lab, but for now, have a look at this website: [https://istats.shinyapps.io/EDA_quantitative/](https://istats.shinyapps.io/EDA_quantitative/){target="_blank" rel="noopener"}. The website 'Describing and Exploring Quantitative Variables' should open in a new window. You may be offered a free trial of the 'Art of Stat Mobile App'; you can dismiss that.
+Once we have collected observations like these, how can we describe them in a useful way? One way is to summarise the data to find the mean or average value. You'll learn how to do that in RStudio during the lab, but for now, have a look at the website app: [**Describing and Exploring Quantitative Variables**: https://istats.shinyapps.io/EDA_quantitative/](https://istats.shinyapps.io/EDA_quantitative/){target="_blank" rel="noopener"}. The website  should open in a new window. You may be offered a free trial of the 'Art of Stat Mobile App'; you can dismiss that.
 
 Choose the following options:
 
