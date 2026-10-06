@@ -7,8 +7,8 @@ order: 3 # ensure this is one more than the previous script
 ::: {.callout-note title="Overview"}
 This week we focus on two strands of learning:
 
-A. Psychological measurement - how we turn psychological concepts into measurable data, and how we can summarise those data using numbers.
-B. Variability and distributions - why differences between people and observations matter, and how we can measure and visualise information that a single average might hide.
+A.  Psychological measurement - how we turn psychological concepts into measurable data, and how we can summarise those data using numbers.
+B.  Variability and distributions - why differences between people and observations matter, and how we can measure and visualise information that a single average might hide.
 
 The materials we have prepared to support your learning are arranged in four parts:
 
@@ -40,10 +40,13 @@ Last week, you looked at some of the bigger questions that sit behind psychologi
 
 **This week, we move from those ideas to some of the practical tools that allow us to gather and make sense of evidence.** We’ll look at how psychological concepts can be represented as data, and how choices about measurement, summary and visualisation shape the evidence we use to evaluate scientific claims.
 
+\newline
 The lectures are grouped into section A and B (relating to the two strands of learning stated above). Each section is split into short videos so you can work through them at your own pace. It’s a good idea to take notes as you go and to have a 10-minute break between section A and section B.
 
 
-:::{.callout-note title="A note about the recordings"} The recordings were originally delivered by Prof John Towse and have been selected and reorganised for this week's teaching. If you hear references to a different week or to something covered "last week" don't worry about these references! I've reviewed the materials and you will never be expected to know anything that you haven't yet covered. All questions should be posted on the discussion forum and will be answered by Carly. Please do not contact John about his content. :::
+:::{.callout-note title="A note about the recordings"}
+The recordings were originally delivered by Prof John Towse and have been selected and reorganised for this week's teaching. If you hear references to a different week or to something covered "last week" don't worry about these references! I've reviewed the materials and you will never be expected to know anything that you haven't yet covered. All questions should be posted on the discussion forum and will be answered by Carly. Please do not contact John about his content.
+:::
 
 ::: {.callout-tip title="Questions?"}
 Make a note of questions as you work through the material. These might be answered later in the recordings, or in your lab. Otherwise, please bring them to the live online Q&A session on Friday or post them on the [Q&A forum on Moodle](https://modules.lancaster.ac.uk/mod/forum/view.php?id=2918081).
@@ -58,6 +61,10 @@ You can watch the lecture for the video using the video playback windows shown n
 3.  Central tendency and notations
 
 Download the slides for sections A and B in one go [here](files/week2/4141_wk2_slides.pdf){download="4141_wk2_slides.pdf"}. The transcript for all the videos is [here](files/week2/4141_wk2_transcript.pdf){download="4141_wk2_transcript.pdf"}.
+
+:::{.callout-tip title="Downloading files"}
+If the file doesn't download when you click on it, try right-clicking on it instead. You should than see multiple options and you can select 'Download linked file'.
+:::
 
 **1. Types of data** (~10 minutes)
 
@@ -83,7 +90,8 @@ What types of data can we use to measure psychological concepts that we are inte
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=7066607a-b340-4185-a413-b4d700e01ea3&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 2 (2026) section A part 3"></iframe>
 ```
 
-:::{callout-tip title="Take a break!"} Before continuing, we recommend you take a **15-minute break away from your computer**. Remember to note down any questions to bring to the Q&A, lab or discussion forum whilst you’re watching the lectures.
+:::{callout-tip title="Take a break!"}
+Before continuing, we recommend you take a **15-minute break away from your computer**. Remember to note down any questions to bring to the Q&A, lab or discussion forum whilst you’re watching the lectures.
 :::
 
 ### Section B: Variability and distributions {#sec-4141-w2-lectures-variability}
@@ -107,7 +115,8 @@ Section B is broken into four parts that should be watched in sequence:
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=aa25355a-79fa-480d-8b5b-b4d700f3affc&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 2 (2026) section B part 2"></iframe>
 ```
 
-:::{callout-tip title="Formulae and calculations"} John has just introduced the notion of using calculations to measure variability and the broader concepts behind them. You can download the key formulae for calculating variance and standard deviation and other measures [here](files/week2/4141_formulae1.pdf){download="4141_formulae1.pdf"} You may come across slightly different versions of these formulae (computational and conceptual) so it is useful to be aware of them. **You do not need to memorise these formulae. The important thing is to understand what each measure tells us about our data and the basic idea behind how it is calculated.** In the next recording, John will take you through a worked example of calculating a standard deviation.
+:::{callout-tip title="Formulae and calculations"}
+John has just introduced the notion of using calculations to measure variability and the broader concepts behind them. You can download the key formulae for calculating variance and standard deviation and other measures [here](files/week2/4141_formulae1.pdf){download="4141_formulae1.pdf"} You may come across slightly different versions of these formulae (computational and conceptual) so it is useful to be aware of them. **You do not need to memorise these formulae. The important thing is to understand what each measure tells us about our data and the basic idea behind how it is calculated.** In the next recording, John will take you through a worked example of calculating a standard deviation.
 :::
 
 **3. The standard deviation and distribution curves** (~15 minutes) An example of how to calculate standard deviation, and how we can look at variability visually using histogram plots. An overview of the shape of data distributions, with features including symmetry, skew, and bimodality.
