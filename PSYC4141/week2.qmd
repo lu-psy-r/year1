@@ -241,6 +241,11 @@ RStudio is the software that we'll use to work with data, visualise data and ana
 
 If you haven't watched it yet, or would like to remind yourself, please revisit last week's video on [How to work with RStudio](week1.qmd#sec-4141-w1-lectures-intro-how-r).
 
+### Pre-lab activity 3: Make sure your device is connected to the eduroam Wi-fi
+Most people find it easier to use a laptop to engage in the lab activities. 
+- If you don't have a laptop, you can borrow one from the locker in the Levy lab with your Lancaster University ID card.
+- If you prefer to use your own device, please make sure you have set it up to be connected to eduroam Wi-fi before you come to your lab session. Instructions on how to do that can be found on this website: [https://portal.lancaster.ac.uk/ask/connect-eduroam/](https://portal.lancaster.ac.uk/ask/connect-eduroam/){target="_blank" rel="noopener"}.
+
 ## Lab activities {#sec-4141-w2-lab-activities}
 
 Information on the lab activities will follow soon.
