@@ -195,7 +195,7 @@ Choose the following options:
 Now have a look:
 
 - On the right, you'll see key descriptive statistics such as the mean and the standard deviation (Std. Dev.).
-- Below it, you can see a histogram.
+- Below it, you can see a histogram. If the histogram looks funny, try adjusting the bin size.
 
 ::: {.callout-note title="What is a histogram?"}
 A histogram is a graph that shows how the values of a continuous (or finely measured) variable are distributed. The values are divided into consecutive, equal-width intervals called bins, and a bar is drawn for each bin with its height showing how many observations fall inside it (or the proportion or density). Because the bins are adjacent, the bars touch, which distinguishes a histogram from a bar chart of separate categories. Histograms make it easy to see the shape of a distribution, including its centre, spread, skew, and any outliers or multiple peaks.
