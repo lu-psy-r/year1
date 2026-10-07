@@ -205,7 +205,7 @@ Play around:
 
 - What happens if you add more observations? How does it change the mean and the standard deviation? What happens to the histogram?
 - Try adding 10 observations of lower screen time values.
-- Try adding an impossible large observation (like 89).
+- Try adding an impossibly large observation, like 89. That is, of course, far larger than there are hours in the day, but data entry errors like that do happen. How does it effect the mean and the standard deviation?
 - You can also click the option to see a boxplot as well as a histogram. Can you work out how key descriptive statistics are represented in a boxplot?
 
 :::: {.callout-note title="Pre-lab question 2"}
