@@ -280,46 +280,48 @@ If you haven't watched it yet, or would like to remind yourself, please revisit 
 
 ### Lab activity 2: Reading in data, creating a plot and calculating descriptive statistics
 
-#### Background
+Instructions will follow soon.
 
-Last week, we worked with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). This week, we'll revisit how to create a histogram and then calculate descriptive statistics for the questionnaire responses.
+<!-- #### Background -->
 
-**Reference**
+<!-- Last week, we worked with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). This week, we'll revisit how to create a histogram and then calculate descriptive statistics for the questionnaire responses. -->
 
-Schubert, A.-L., Frischkorn, G. T., Sadus, K., Welhaf, M. S., Kane, M. J., & Rummel, J. (2024). The brief mind wandering three-factor scale (BMW-3). *Behavior Research Methods, 56*(8), 8720-8744. [https://doi.org/10.3758/s13428-024-02500-6](https://doi.org/10.3758/s13428-024-02500-6){target="_blank" rel="noopener"}
+<!-- **Reference** -->
 
-#### Aims of the activity
+<!-- Schubert, A.-L., Frischkorn, G. T., Sadus, K., Welhaf, M. S., Kane, M. J., & Rummel, J. (2024). The brief mind wandering three-factor scale (BMW-3). *Behavior Research Methods, 56*(8), 8720-8744. [https://doi.org/10.3758/s13428-024-02500-6](https://doi.org/10.3758/s13428-024-02500-6){target="_blank" rel="noopener"} -->
 
-We are going to:
+<!-- #### Aims of the activity -->
 
-1.  Download the files
-2.  Setup the appropriate bits and pieces in RStudio
-3.  Read in the data
-4.  Build a histogram
-5.  Calculate the mean, median and standard deviation
-6.  Create a new variable that combines responses from several questions
-7.  Build a histogram and calculate descriptive statistics using the combined score.
+<!-- We are going to: -->
 
-::: callout-tip
-We combine multiple questions into one score because several items together capture a construct more reliably than any single question can.
-:::
+<!-- 1.  Download the files -->
+<!-- 2.  Setup the appropriate bits and pieces in RStudio -->
+<!-- 3.  Read in the data -->
+<!-- 4.  Build a histogram -->
+<!-- 5.  Calculate the mean, median and standard deviation -->
+<!-- 6.  Create a new variable that combines responses from several questions -->
+<!-- 7.  Build a histogram and calculate descriptive statistics using the combined score. -->
 
-#### Step 1: Download the files
+<!-- ::: callout-tip -->
+<!-- We combine multiple questions into one score because several items together capture a construct more reliably than any single question can. -->
+<!-- ::: -->
 
-To complete this lab activity you will need two files:
+<!-- #### Step 1: Download the files -->
 
-1.  We'll work with an example script called `4141_wk2_lab_act2.qmd`. This is a Quarto document.
-2.  We need a data file called `data_bmw3.csv`. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This means that individual bits of data are separated by comma's. We'll often use `.csv` files.
+<!-- To complete this lab activity you will need two files: -->
 
-You can download the files here: [`4141_wk2_lab.zip`](files/week2/4141_wk2_lab.zip){download="4141_wk2_lab.zip"}. Usually they will be saved in your 'Downloads' folder.
+<!-- 1.  We'll work with an example script called `4141_wk2_lab_act2.qmd`. This is a Quarto document. -->
+<!-- 2.  We need a data file called `data_bmw3.csv`. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This means that individual bits of data are separated by comma's. We'll often use `.csv` files. -->
 
-Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).
+<!-- You can download the files here: [`4141_wk2_lab.zip`](files/week2/4141_wk2_lab.zip){download="4141_wk2_lab.zip"}. Usually they will be saved in your 'Downloads' folder. -->
 
-Finally, open the example script by clicking on the file called `4141_wk2_lab_act2.qmd` in the Files space on the R-server.
+<!-- Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first). -->
 
-#### Steps 2 to 7
+<!-- Finally, open the example script by clicking on the file called `4141_wk2_lab_act2.qmd` in the Files space on the R-server. -->
 
-For **steps 2 to 7**, you'll be working in RStudio.
+<!-- #### Steps 2 to 7 -->
+
+<!-- For **steps 2 to 7**, you'll be working in RStudio. -->
 
 ### Lab activity 3: Get started on collecting SONA credits
 
@@ -351,16 +353,12 @@ Sections 1 to 3 on the SONA page explain:
 2. What SONA is and how you go about collecting SONA credits
 3. How SONA credits contribute to your grade
 
-> Action: We went through that in the in-person lab in week 2 as well, so if you attended that, you can skip this part. If you didn't attend or you'd like to review the information, please watch the videos.
+> Action: We went through sections 1 to 3 during the first part of the in-person lab in week 2, so if you attended that, you can skip this step. If you didn't attend or you'd like to review the information, please watch the videos on [**the SONA page**](sona.qmd#sec-4141-sona-importance), starting in section 1.
 
 #### Step 2: Get setup and collect your first SONA credits
 
 Section 4 on the SONA page talks you through how to set up your account and take part in your first study.
 
-> Action:
-- Please navigate to the SONA page
-- Watch the videos in section 4
-- Login to SONA
-- Participate in your first study
+> Action: Please navigate to [**the SONA page**](sona.qmd#sec-4141-sona-first-study), watch the video in section 4.1, login to SONA and complete your first study.
 
-Once you've done that, there is another video with tips on how to collect your SONA credits on time.
+Once you've done that, there is another video with tips on how to collect your SONA credits on time (section 4.2).
