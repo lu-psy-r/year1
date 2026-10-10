@@ -1,7 +1,7 @@
 ---
-title: 11. Everthing you need to know about research participation and SONA
+title: 3. Everthing you need to know about research participation and SONA
 author: "Ruth Hurley & Margriet Groen"
-order: 12 # this places it at the bottom
+order: 4 # this places it at the bottom
 ---
 
 :::{.callout-note title="Overview"}
