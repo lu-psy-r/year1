@@ -1,0 +1,119 @@
+---
+title: "Everthing you need to know about research participation and SONA"
+author: "Ruth Hurley & Margriet Groen"
+order: 12 # this places it at the bottom
+---
+
+:::{.callout-note title="Overview"}
+Here we summarise everything you need to know about the research participation component of the research methods and stats modules in your first year (PSYC4141 and PSYC4242).
+
+We explain:
+
+1. Why research participation is important
+2. What SONA is and how you go about collecting SONA credits
+3. How SONA credits contribute to your grade
+4. Your first study ... collect your first two SONA credits
+5. What to do if you want to report an issue or you have a question
+
+You can navigate to each in the side bar on the right
+:::
+
+<!-- Note: I think it is helpful to have a list of the different sections in a week for cross-referencing. I don't think it helps readability it this is visible to the students (hence I've commented them out) as the outline in the sidebar on the right already provides this info. -->
+<!-- - @sec-4141-sona-importance: Why research participation is important -->
+<!-- - @sec-4141-sona-howto: What is SONA and how to collect SONA credits -->
+<!-- - @sec-4141-sona-assessment: The lecture: How do SONA credits contribute to your grade -->
+<!-- - @sec-4141-sona-first-study: How to collect your first two SONA credits -->
+<!-- - @sec-4141-sona-questions: What to do if you want to report an issue or you have a question -->
+
+
+## 1. Why research participation is important {#sec-4141-sona-importance}
+
+::: {.callout-note title="Why take part in research as a participant?"}
+Taking part in psychological research is one of the most direct ways to understand how research works. A textbook or lecture can only take you so far. Experiencing a study from the inside shows you things that are hard to appreciate otherwise.
+
+As a participant, you see how researchers turn abstract ideas into something measurable: how instructions are worded, how tasks are designed, how conditions are manipulated and how responses are recorded. You may notice how your own expectations shape what you do. These are the same issues you'll need to think critically about in your own designs, such as demand characteristics, operationalisation and measurement validity.
+
+You also see research ethics in practice, from information sheets and informed consent to the right to withdraw and debriefing. Knowing what it feels like to be on the receiving end helps you design studies that treat participants with care.
+
+Finally, participation shows you why sample size and representativeness matter, and why your own research will depend on others being willing to take part. Seeing a range of studies can also spark ideas for your own projects, including your dissertation.
+
+In short, being a participant helps you become a better researcher. It connects what you learn in class to real practice.
+:::
+
+```{r}
+#| label: Do not remove. It prevents Quarto from thinking it needs to involve Python.
+```
+
+You can download the slides for all the pre-recorded lecture parts on research participation and SONA here: [**Sona slides**](files/sona/4141_sona_slides.pdf)
+
+**Introduction and research examples** (~3 minutes)
+The SONA coordinator introduces the scheme.
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=4ca3e1a0-d421-496f-a90a-b4d301009a75&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&start=0&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="28 September 2026 at 15:51:19"></iframe>
+</div>
+```
+
+## 2. What is SONA and how to collect SONA credits {#sec-4141-sona-howto}
+
+**Study participation via SONA** (~7 minutes)
+About how the SONA system works, who the researchers and the participants are.
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=486d9e92-9a1c-4f92-9af5-b4d301038d75&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&start=0&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="28 September 2026 at 16:38:16"></iframe>
+</div>
+```
+
+## 3. How do SONA credits contribute to your grade {#sec-4141-sona-assessment}
+
+**Course requirements and learning outcomes** (~6 minutes)
+Explains how many SONA credits you need and how they contribute to your grade. It also talks you through what you'll learn from completing the research participation requirement.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=f87782ac-1269-46d6-b83b-b4d30106a2b2&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&start=0&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="28 September 2026 at 16:55:42"></iframe>
+</div>
+
+```
+
+## 4. Your first study ... collect your first two SONA credits {#sec-4141-sona-first-study}
+
+**4.1 Taking part in your first study** (~9 minutes)
+Talks you through how to set up your account and take part in your first study.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=cd23228b-9486-4e36-a992-b4d3010a5aa9&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&start=0&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="28 September 2026 at 17:08:23"></iframe>
+</div>
+```
+
+::: {.callout-important}
+Link to the SONA system: [https://lancs.sona-systems.com/](https://lancs.sona-systems.com/){target="_blank" rel="noopener"}
+:::
+
+**4.2 Tips on collecting SONA credits and SONA Support** (~ minutes)
+Provides tips on how to make sure you collect your SONA credits on time
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=afaf1cf6-a242-4e86-9b09-b4dd00858ae6&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&start=0&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="SONA Lecture Part 5&amp;6"></iframe>
+</div>
+
+```
+
+## 5. What to do if you want to report an issue or you have a question {#sec-4141-sona-questions}
+
+If you have problems with your SONA account in the first 3 weeks of term, use [**this form**](https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Ec2bnHqXnE6poLxzQJAWSlDMlov4w-NBm9EsdMzuhKtUM1JZNUFFWE4wR1U1SjNGMVRYMjdBSjVZVC4u){target="_blank" rel="noopener"} to report them.
+
+This includes issues such as:
+
+- you are unable to create an account
+- you accidentally created an account using a non-LU email address
+- your course needs to be changed
+
+For general SONA queries, you can email the SONA coordinator (Dr. Ruth Hurley) on: <SONA@lancaster.ac.uk>.
+
+
+
+
+

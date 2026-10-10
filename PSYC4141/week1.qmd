@@ -244,3 +244,7 @@ Finally, open the example script by clicking on the file called `4141_wk1_lab_ac
 For **steps 2, 3 and 4**, you'll be working in RStudio.
 
 **References**
+
+Schubert, A.-L., Frischkorn, G. T., Sadus, K., Welhaf, M. S., Kane, M. J., & Rummel, J. (2024). The brief mind wandering three-factor scale (BMW-3). *Behavior Research Methods, 56*(8), 8720-8744. [https://doi.org/10.3758/s13428-024-02500-6](https://doi.org/10.3758/s13428-024-02500-6){target="_blank" rel="noopener"}
+
+Smallwood, J., & Schooler, J. W. (2006). The restless mind. *Psychological Bulletin, 132*(6),{target="_blank" rel="noopener"}
