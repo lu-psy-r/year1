@@ -1,5 +1,5 @@
 ---
-title: 11. The SONA page - Everthing you need to know about research participation and SONA
+title: 11. The SONA page - Everything you need to know about research participation and SONA
 author: "Ruth Hurley & Margriet Groen"
 order: 12 # this places it at the bottom
 ---
