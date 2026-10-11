@@ -9,7 +9,7 @@ data_bmw3 <- read_csv(here("PSYC4141/files/week1/mxn3v-osfstorage-archive/PrepDa
 
 # Keep only what's necessary + some tidying
 data_bmw3 <- data_bmw3 %>%
-  select(subject:BMW3_IN) %>%
+  select(subject:BMW3_IN_04) %>%
   mutate(location = as.factor(location),
          type = as.factor(type),
          gender = as.factor(gender),
@@ -17,3 +17,4 @@ data_bmw3 <- data_bmw3 %>%
 
 # Safe smaller data file
 write_csv(data_bmw3, here("PSYC4141/files/week1/", "data_bmw3.csv"))
+write_csv(data_bmw3, here("PSYC4141/files/week2/4141_wk2_lab/", "data_bmw3.csv"))

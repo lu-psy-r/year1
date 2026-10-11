@@ -91,7 +91,7 @@ Talks you through how to set up your account and take part in your first study.
 Link to the SONA system: [https://lancs.sona-systems.com/](https://lancs.sona-systems.com/){target="_blank" rel="noopener"}
 :::
 
-**4.2 Tips on collecting SONA credits and SONA Support** (~ minutes)
+**4.2 Tips on collecting SONA credits and SONA Support** (~10 minutes)
 Provides tips on how to make sure you collect your SONA credits on time
 
 ```{=html}
@@ -113,7 +113,14 @@ This includes issues such as:
 
 For general SONA queries, you can email the SONA coordinator (Dr. Ruth Hurley) on: <SONA@lancaster.ac.uk>.
 
+<!-- ## 6. Study debrief -->
 
+<!-- In this video the SONA coordinator Dr. Ruth Hurley revisits the study you completed last week on 'The Relationship Between Executive Functions and Risk-taking Behaviour'. -->
+<!-- ```{=html} -->
+<!-- <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%"> -->
+<!-- 	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=8b09cc14-67f6-4032-94d1-b4d30113ed42&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=true&start=0&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="28 September 2026 at 17:31:17"></iframe> -->
+<!-- </div> -->
+<!-- ``` -->
 
-
+<!-- - [Study debrief slides](files/sona/4141_study_debrief_slides.pdf) -->
 
