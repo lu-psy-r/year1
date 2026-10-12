@@ -1,0 +1,1430 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+
+[Section A, part 1]
+So in terms of what we're going to be covering in this set of lectures, what I want to do is help you to understand some distinctions between types of data.
+
+That is not just the numbers as the values, but also what they mean, where they come from, and therefore the sorts of things that we can use them for,
+
+and the sorts of things where it wouldn't be appropriate to use them or analyse them in a particular way.
+
+We're also going to cover in this lecture some key notations, some key terms for discussing numbers and data.
+
+That gives us a common language. And that common language is really useful for building up your understanding and your confidence with analysis.
+
+And then we're also going to start to cover this topic that I mentioned before called Central Tendency.
+
+I think this will be familiar to quite a lot of you, but we're just going to go over it again to get some key ideas around it,
+
+and so that we can use some, um, uh, important terms and think about,
+
+uh, then, uh, and allied things that we're going to be doing this week, how we can get the, uh,
+
+computer resources, uh, and the analysis tools, uh, to do the hard work of a number crunching.
+
+But we need to understand what it is that those, uh, number crunchers, uh,
+
+those computers are going to be doing in order to be able to interpret what comes out the other end.
+
+So one of the things that I said was we're going to look at types of data.
+
+So, uh, numbers, uh, aren't just numbers.
+
+And since they come from different, uh, places, they come from different sources.
+
+And broadly speaking, we can think of two types of data.
+
+I think in later slides I'm going to, uh, revise that and add some, uh, distinctions.
+
+But let's to start with just think of two types of data.
+
+The first, uh, is called nominal data, uh, in which the uh individuals fall into one of a set of categories.
+
+Uh, just to give you some examples of what we mean by this, we can think of something like eye colour,
+
+where typically people would have blue eyes or people would have hazel eyes, or people would have green eyes and so on.
+
+That is. Uh, that is the, the the data fall into these different categories.
+
+And these categories are exclusive. So generally, uh, if you have if you fall into one of the categories, you won't be in one of the others.
+
+You might put people into socio economic status.
+
+Um, broadly speaking, people fall into the working class or the middle class.
+
+And so again, these are different categories that might be used for psychological purposes.
+
+You might need to record, uh, information about marital status.
+
+Is somebody single? Is somebody married? Uh, is, uh, somebody cohabiting and so on.
+
+Uh, you might need to understand some of these nationalities.
+
+Uh, are they, uh, British? Uh, they, uh, French.
+
+Uh, they African. Uh, and so on.
+
+Uh, and again, uh, typically these are different categories.
+
+And it may be important because you may want at some point to separate out the responses from the people whose nationality is British,
+
+from the people whose nationality is not British,
+
+because you may have a psychological reason for thinking that the, uh, the, the, uh, responses on some measure are going to be different.
+
+Or you may want to look at how similar or how different, uh, responses are as a function of this nominal category of nationality.
+
+I mean, I can't imagine too many instances where you would think of some large psychological differences on the basis of eye colour.
+
+But again, remember that these are just examples of different sorts of nominal categories that you might come across.
+
+So nominal data is also, uh, sometimes referred to as a categorical variable because these are about categories or qualitative variables.
+
+Uh, because it's about different types of, um, a thing that you're measuring.
+
+So. First type of data which I've just described is nominal data.
+
+The second type is called numerical data. And here, uh, each case each person is assigned a numerical value.
+
+Let me just think of some examples. Um, some are more, uh, psychologically obvious than others.
+
+But, uh, you can think of an example like age, uh, where the number, the numerical value, uh, has a meaning.
+
+Bigger numbers means, uh, somebody is older or hunt where bigger numbers means that somebody, uh,
+
+is taller weight, uh, IQ score, uh, test score, salary, income, um, distance from one place to another and so on.
+
+Uh, these are situations where the data, uh, with a numerical have a numerical value and that is meaningful.
+
+These are also referred to as scores or quantitative variables.
+
+Now to go back to the previous example, imagine a nominal data of nationality in which, uh,
+
+let's say for sake of argument, anybody who, um, that we you collected data, we came from the UK was given category one.
+
+And, um, anybody who say, um, came from China was given a value two.
+
+Now there's nothing about the one or the two that is designed to imply that the people in category two are more or less than the category one.
+
+They just they're just different numbers to distinguish the different groups.
+
+However, with these numerical data, then there is an implication or meaning to the different value.
+
+So obviously with um, something like age, a larger number means that somebody is older,
+
+means have been around for longer, and that may or may not be important in some respect.
+
+Um, but even here what we see is by distinguishing.
+
+Between nominal and numerical data. Uh, there are going to be important implications of what we can do with the numbers and how we interpret them.
+
+So let's try and consolidate that by just thinking about some of these different examples.
+
+So as you go through this note down to yourself what your answer would be.
+
+Let's say we want to know whether somebody is a user of Facebook.
+
+Um, they say either yes or no.
+
+What if we ask them about being a user of Facebook by putting down the number of hours per day they spend on that social media platform?
+
+What if we ask you about that, uh, social network?
+
+We ask about the number of friends that they have on that social media platform.
+
+What if we ask them about how they access Facebook? Otherwise do they?
+
+Uh, do they typically access it on their mobile phone?
+
+Uh, on a PC or on a laptop or, you know, other devices if you think that's going to be relevant?
+
+What if we ask them about their use of Facebook in terms of whether,
+
+in terms of whether they use it for less than five hours per day or at least five hours per day?
+
+Okay, so once you've, uh, made your own answers to those questions, now let's go back to them and think about them.
+
+So the first instance is a nominal data.
+
+It's a category of yes or no. Whereas the second example where you ask somebody about the number of hours per day,
+
+you've got a numerical variable where the more hours per day means, the more time spent.
+
+Um, in this case, Facebook. Likewise, the size of the network is a numerical variable, whereas the means to access Facebook is a nominal variable.
+
+These are different categories. Uh, that may be important for a whole series of, uh, reasons.
+
+Uh, but it's not numerical data per se.
+
+And the final example of, uh, use of Facebook is also a nominal category because you're dividing, um, uh, things up into, into two groups.
+
+Uh, but note that that's actually a sort of a reconfiguration of the second question, which is a numerical question.
+
+So, uh, the point about this is to show that actually, although we we normally understand these nominal, um,
+
+numerical variables, um, in quite simple terms, they can sometimes be reconfigured to be variants of each other.
+
+And that may be important, um, in a number of cases.
+
+
+[Section A, part 2]
+Hopefully you're still with me.
+
+The idea that we can think of data in two forms in these next slides, what I want to do is add a layer of sophistication or a level of detail to that.
+
+It's useful to think of that nominal numerical distinction, but also we need for various reasons.
+
+And I'll explain shortly to think about the numerical side of those in a more sophisticated or a more detailed form.
+
+So actually we used to think about four different scales of measurement nominal categorisation.
+
+We've just covered that right placing cases into named categories.
+
+And I'm going to use a kind of sports example to think about some of these different scales as we go through.
+
+So we could, uh, measure high jumpers, uh, in terms of their nationality, um, when they start to take place in an event.
+
+We've also got an ordinal scale on ordinal categorisation.
+
+Uh, and that involves ranks, uh, based on, for example, performance.
+
+So let's keep with our high jumpers. We can rank the high jumpers in terms of, uh.
+
+Uh, the biggest clearance they make when they jump over the pole.
+
+Okay. So the person who wins the high jump moment, the first, the person who came closest to them.
+
+Second and third and fourth all the way through the number of competitors.
+
+Now this is numerical data.
+
+And the numbers tell us something important.
+
+But also what we know about ordinal categorisation is there's not necessarily any specific relationship between the numbers.
+
+In other words, the high jumper who came first and the high jumper who came second could have been very close to each other.
+
+Or actually the high jumper who came first might have been, you know,
+
+head and shoulders, uh, literally a metre metaphorically, uh, ahead of the next person.
+
+Likewise, if you think of a different example, let's imagine a sales of, uh, music, uh, in a pop chart.
+
+The number one, the biggest selling, uh, or biggest streamed music of the week might be, uh, essentially the same as the value that came second.
+
+Or it might be just like a completely different universe in terms of, uh, streams and sales.
+
+We don't know that. All we do know is the order.
+
+And that's why it's an ordinal categorisation.
+
+Third scalar measurement is an integral categorisation.
+
+Well, now the distances between the data values.
+
+The sequential points on the scale are equal and meaningful.
+
+So, uh, let's imagine we measured the temperature at the time of the high jump event.
+
+Well, it's might seem a bit artificial, but just to stay with me for now, right?
+
+Um, now, the thing about the temperature is there is something meaningful about a temperature of ten degrees, um, Celsius and, uh, 15°C.
+
+That is the same difference as between 15 degrees and 20, right?
+
+They're both five degrees different. And whereas with the ordinal categorisation, we just know the placement but not the gaps between them.
+
+With an interval categorisation we do know about these distances.
+
+And then the final scale of measurement. That is a bit confusing, but makes sense once you just start to think through it.
+
+It's what's called a ratio categorisation. Now ratio categorisation is much the same as an interval categorisation.
+
+But the important point is it has an absolute zero value.
+
+So zero means nothing. Now, uh, one of the reasons that I chose temperature in the previous example is that,
+
+um, a temperature of zero doesn't mean no temperature, uh, in centigrade.
+
+Zero means freezing point. But you can have negative values, right?
+
+You can have a minus, uh, temperature as well as a plus temperature with a ratio categorisation.
+
+Uh, zero is the lowest point. So if we go back to the the height that is successfully jumped, then, uh,
+
+a data of zero means they didn't they didn't make any jumps, whereas a value of two means they jump two metres or whatever.
+
+Um, measure we use. Now, in some cases, uh, we collect data that is of a in a ratio scale where the zero is meaningful.
+
+For example, uh, somebody made zero errors on a test that we created as a psychologist.
+
+But in other cases, the zero might not be, um, the end point.
+
+For example, you might ask people whether they like, uh, musician, uh, or dislike them.
+
+And uh, zero might just mean, you know, the like somebody know you dislike them,
+
+but it's not it's not an absolute point because you can go above it and below it.
+
+Right. And that matters for some of the ways that you might handle, uh, the data and get computers to process them.
+
+So we need to distinguish between those two points. A little bit tricky sometimes to understand the distinction.
+
+So, uh, think through it. But once you start to get it, uh, it, it does make sense.
+
+Now, one of the reasons that we've taken you through these different scales of measurement is because once
+
+you understand what type of data that you've got and what scale of measurement you're working with,
+
+then some of the ways that you analyse and use and interpret data, uh, make more sense.
+
+Uh, and some of them, uh, just won't be appropriate for that type of scale of measurement.
+
+So what are the sorts of things that we're going to be doing with numbers and with data this term?
+
+Well, we're going to be doing descriptive statistics.
+
+And as you would guess, that's about describing the information that's collected.
+
+We were also going to be moving towards an understanding of what's called inferential statistics and inferential statistics,
+
+or about the confidence with which we can generalise from a particular sample to a bigger population of interest.
+
+Okay. Uh, we might get some information from a group of first year students.
+
+We might sample some of you. And of course, we're interested in those people that we talked to.
+
+But of more importance in some ways is whether we can generalise from those young people to all of that first year psychologists,
+
+or all of first year at university at Lancaster, or all of first year universities.
+
+Inferential statistics is about how confident we can be in generalising from a
+
+sample to the actual population that we're interested in and how we do that.
+
+Links to the sorts of statistics we work with, and also the sample that we've got,
+
+how big the sample is and the information about that, the variability that we find within it.
+
+Okay. And then the third thing that, uh, is important is about data reduction techniques.
+
+So you might have a large amount of data, many, many variables.
+
+Um, many, many, uh, interval or ratio scale, uh, scores that you're working with.
+
+Uh, and you might use of a whole variety of techniques in order to make sense of that to, to capture it with a smaller number of descriptions.
+
+Uh, and those data reduction techniques might allow you to simmer down or, um, simplify the big complexity of data with some simpler,
+
+uh, themes, ideas, uh, issues that can be used for, um, uh, for psychological thinking.
+
+So we need our scales of measurement,
+
+and we need a good grounding in the sorts of things we do with that in order to make appropriate decisions about how to handle data.
+
+Okay. Where are we so far? Initially started by saying data comes in two broad forms.
+
+I think a good starting point is just this initial binary choice between nominal variables and numerical variables.
+
+And it's important to understand we gave some examples of different types of nominal and numerical variable.
+
+But also we can elaborate that to act, to have full scales of measurement nominal, ordinal, interval and ratio.
+
+And also we can do different things with these types of data.
+
+They can be descriptive work. They can be inferential work and they can be, uh, data reduction work.
+
+All of those things, uh, have different components. Uh, um, in different cases will work in different ways.
+
+But we need to know that those are the range of possibilities of things that we do.
+
+Okay. Make sure you're comfortable with the terms we used.
+
+And then the next section, um, will make sense as we take that journey further.
+
+
+
+
+
+[Section A, part 3]
+
+Now for the next this next section of the lecture, we're going to need to think about some notation.
+
+We need to, um, a common language for describing some procedures in order to make sense of some of the things we're going to go through.
+
+So when we talk about data, when we talk about scores, uh, in statistics we generally refer to scores abstractly with the letter X.
+
+So we have a set of scores. Um, we have a set of these x values.
+
+If we have two variables that we need to know about and these are different, we'll referred them as x the first case but then y in the second.
+
+And yes you guessed it if we need it three it will generally be x, y and z.
+
+We usually, we very often need to talk about the number of schools that we're working with in a particular data set or particular distribution,
+
+and we use the capital letter N to identify the number of these schools that we have.
+
+And then uh, typically we use a notation called sigma x sigma being the Greek uh symbol to refer to the sum of the x equals.
+
+That is, we add up these scores. Together.
+
+Uh, because the total of the sum is important for things that we do.
+
+But we refer to that as sigma x, the sum of the more.
+
+And then the mean arithmetic mean of these scores is generally referred to as,
+
+uh, the capital letter M, uh, sometimes uh, as an X with a bar on the top.
+
+So uh, some websites, some, uh, statistics manuals sometimes use x bar instead of m bit confusing.
+
+It's a shame we don't have a single standard, but historically, um, these different terms have been used.
+
+Uh, on this module, we typically use m uh as the notation.
+
+Okay. Make sure you're comfortable with those notation terms or maybe even write them down, uh,
+
+to help as we go through the next section because we're going to get we've got set of numbers,
+
+uh, as a psychologist and we want to be able to describe or tell other people about those numbers.
+
+Um, one of the simple things that we can do is we can identify the average from a set of scores that tells you about,
+
+um, a central, uh, number, uh, that captures something of the data set.
+
+And in order to calculate the mean.
+
+Remember, we're using the letter M, we add up all of the values.
+
+So that's the sum of x or sigma x. And we divide that sum by the number of scores that we have or the m.
+
+So now we have this notation. And it looks like well this is just a bunch of letters.
+
+But that's just a summary of the process in order to find the mean.
+
+So here are a bunch of numbers. Uh 728723A1, two, six and nine.
+
+A three and an eight. Let's say we need to know the mean or the average of these numbers.
+
+Well, all we need to do is to add up all of these numbers.
+
+So we take the seven at the eight at the eight and the seven and so on.
+
+And you'll see that if we add them all up they come to 60.
+
+So sigma x the sum of these x values is 60.
+
+We look at how many numbers we have. There are ten of these.
+
+And so the mean score is 60 divided by ten.
+
+First value divided by the second value. And that's six. So that's the mean value.
+
+And you can see that actually quite straightforward to do.
+
+It's quite straightforward to do by hand.
+
+And uh in the accompanying uh sessions in the lab lab we'll look at how to use statistical software to do this.
+
+Uh, it's okay to do it by hand in these cases.
+
+But as we deal with more numbers or as we deal with other things, you'll see the value of getting the computer to do the number crunching for you.
+
+There are other ways of trying to describe a set of schools, and in some cases, the mean might not be the best tool to use.
+
+We'll come onto that later. Um, instead, we might want to identify the median.
+
+What's the median? Well, the median is the middle school.
+
+When all are arranged from lowest to highest. Okay.
+
+This is the set of numbers that I showed you before when we did the previous calculation on the previous slide.
+
+If we're going to calculate the median, then the first thing we do is take all of those numbers and we rearrange them from smallest to largest.
+
+We can also do it the other way around. Do you go from largest to smallest.
+
+But we place them in order. Now the median is the middle school in this arrangement of, uh, increasing or decreasing values.
+
+So I've put an arrow here, uh, the median point, because there are five numbers to the left of this red arrow one, three, three, six and seven.
+
+And there are five numbers to the right a seven and eight and eight and eight and a nine.
+
+Okay. So the median is in this case the average of these two values seven and seven.
+
+And the average of the seven is a seven.
+
+Because there are going to be other examples where that red arrow, the number on the left and the number on the right might be different.
+
+And then we just take the average.
+
+And there will also be cases, um, where there is an odd number of responses where the median is not between two values but is a value.
+
+So if we had nine numbers, then the median would be the fifth of those, and that would be four to the left and four to the right.
+
+And we just take that value. So the median here is seven.
+
+It's not that different from the mean six, but it isn't the same.
+
+And as we'll see I mean the medians can be very similar in some cases can be different.
+
+Sometimes the median isn't a good, uh measure of central tendency.
+
+So we have a third way of doing this. Uh, typically.
+
+And that's the mode. The mode is just the most common single number in a distribution.
+
+It's the value that occurs most often. Okay.
+
+So let's take our same set of ten numbers that we were working with before.
+
+Uh, and on the previous slide to calculate the median, we arranged them from smallest to largest.
+
+But this arrangement also them makes it much easier to see which is the most popular.
+
+Uh, x value, which is the most popular score?
+
+Um, we can see that that is eight. There are three eights in this set.
+
+Um, and that is more than any other of these values.
+
+There are two threes that are two sevens and so on, but there are three, eight.
+
+So the mode. The most popular value is eight.
+
+Okay, so what we've got there is three measures of central tendency.
+
+They're not terribly complicated but they're a little bit different.
+
+And they tell us something, uh, a little bit separate or distinguishable about the data.
+
+We've got the mean, the median and the mode.
+
+And what you should do is make sure, as I've gone through these, that you're comfortable both with the calculation but also the underlying,
+
+um, objective and purpose of these different measures of central tendency now.
+
+Okay. A fairly common response would be to say, well, of these three, which one should I use?
+
+Which is the best? And think one of the key points that I want to get across in this lecture is there isn't necessarily a best.
+
+They will work differently in different circumstances, and sometimes some of them will be more appropriate, uh, more representative than the others.
+
+The mean is the one that people probably default to first, but the mean might not be the best way to represent the values.
+
+One of the reasons we need three measures is because in any particular case,
+
+one of these measures of central tendency might distort or misrepresent some key information,
+
+but also in some cases, it just might not be possible to calculate some measures of central tendency.
+
+So, as it says, in some cases you can't calculate the mean.
+
+One example we could think about. Imagine you were measuring.
+
+How long it took somebody to solve some psychological problem.
+
+And what if somebody didn't solve the problem at all in the in the time that you could give them?
+
+Um, if you don't have a, uh, a solution, time for that person, you can't calculate the mean for the distribution.
+
+However, um. If you gave everybody a maximum of ten minutes to solve this problem, you know, they took at least 60s.
+
+So you can arrange the solution times from quickest to longest.
+
+Knowing that they took at least, um, at least 60s,
+
+you could also potentially calculate the mode without having to know, um, the value of that non solved time.
+
+Sometimes the meaning isn't particularly meaningful.
+
+Uh, a common example of this type of situation is where, uh, one might describe the mean household size.
+
+What's the mean average size of a house?
+
+Uh, in terms of the people living in it. And it might be something like 2.7.
+
+Okay, now that's the average of cases where there's one person living in a house and two and three and so on.
+
+But that doesn't really, uh, describe something meaningful,
+
+because there aren't any cases where there's actually 2.7 people in a house because you can't point anything of a person.
+
+Have I ever enact in that sort of situation? If you use the mode.
+
+What's the most common number of people in a house that might be more useful as a measure of,
+
+um, you know, uh, housing density and so on in a particular case?
+
+And also sometimes the research questions or the psychological questions.
+
+I don't have a simple answer.
+
+And what I mean by that is that sometimes the mean score might be telling you one thing, but the median school might be telling you another.
+
+Now, here's one example of how that might play out or did play out, um,
+
+in American politics where people were, um, some time ago trying to understand differences in, um, income.
+
+Uh, and uh, at one time, one political group was pointing to changes in the main income, which was showing that that had risen.
+
+So people were now better off.
+
+The average income had increased, whereas another political party was saying, well, if you look at the median income that's gone down,
+
+the median income being the income, um, that is halfway between the least and the most.
+
+Um, one of the issues is that the if the rich, the very rich people are getting richer.
+
+That will be reflected in the mean, because those very large values will pull things higher,
+
+even if, um, for the average person, uh, the wages might be getting, well, lower.
+
+So, uh, the details, the political, uh, details of that aren't so important as the general idea that sometimes schools are like a mean,
+
+and a schools like a median might actually tell us something different about what's going on in a distribution.
+
+And we might need to know about that for how we describe schools to others,
+
+but also we need to know about and how we think about what other people are telling us.
+
+Right. So if somebody gives you, um, the main school and some psychological problem or study or they give you the median school,
+
+we need to be able to think, well, what does that represent?
+
+What does it tell us? Um, does it tell us the whole story, or are there other things that we should be asking about that situation?
+
+So yeah, some cases, some mixtures might be misleading or controversial if you like being used to, um, uh,
+
+hide or disguise some aspects of the of the, uh, data or the study that people maybe don't want you to to think too much about.
+
+They might be trying to mislead you. So thinking carefully and understanding central tendency can be important is uh,
+
+a non, uh, research example of how you think about statistics carefully.
+
+It's an advert from a number of years ago for a, uh, car insurance company, uh, that referred to the cost of car insurance.
+
+And you'll see here you're encouraged to get a car quote, and you're told the majority of our customers pay less than £305 for car insurance.
+
+This is this is not, uh, an advert to this, uh, current is from a little while ago.
+
+But the point about this advert and the context of these statistics is, um, we often think about averages is what we're being told.
+
+But this isn't an average. This isn't saying the average, uh, car insurance quote is £305.
+
+This is saying something a bit like where the median is for car insurance quotes.
+
+And that's probably because for, for many companies, there are going to be quotes that people have which are very, very high.
+
+In fact, young uh, drivers, uh, coverage chance quotes are often extremely high because that because they're seen as um, uh, high risk clients.
+
+But if the company just gave them mean value, it would reflect those high quotes.
+
+They don't want you to think about that.
+
+So they use a different measure of central tendency, all of which is to say, think carefully about what these things might mean.
+
+Okay, thanks for watching these lectures. Let me summarise what I've been saying.
+
+We're going to be thinking about data. We're going to be using data.
+
+We're going to be interpreting data from other people. And so we need to think about data in different ways.
+
+Um, the sorts of data, um, what people, uh, make of it.
+
+Uh, the sorts of data, including the scales of measurement and what people do with it.
+
+Well, central tendency is, um, an almost ubiquitous way of, um, telling people information about data.
+
+It describes representative values. But we can do that in different ways.
+
+There are different types of central tendency measure, and they might work best in different circumstances.
+
+
+
+[Section B, part 1]
+
+Okay. So just before we we get to the core of the material, I've got a slide here just to provide some reflection.
+
+And it's about evidence in psychology, and it's taken from a quotation by John Paulos, who noted the following.
+
+He said, In listening to stories, we tend to suspend disbelief in order to be entertained,
+
+whereas in evaluating statistics, we generally have an opposite inclination to suspend belief in order not to be beguiled.
+
+And the reason for putting this slide up is as a further motivation,
+
+additional to the material from last week as to why thinking about statistics is important.
+
+And it's just a reminder that in everyday conversations or in everyday activities,
+
+we have a fairly natural predisposition towards being able to suspend belief.
+
+We know that a film isn't true.
+
+We know that the story we're reading isn't a true story, but that doesn't matter because we're trying where we're hoping to be entertained.
+
+And so some of the things we know aren't actually true.
+
+We can cast them aside in order to enjoy what what we're being presented with.
+
+But when it comes to psychology and psychological knowledge and psychological evidence,
+
+what we need to do is make sure we don't just cast aside things that we actually know to be true real world knowledge about the likelihood of things,
+
+the way things work.
+
+Instead, we need to make sure we apply reasoning and we apply evidence to think about the psychological situation that we're dealing with.
+
+And that was something that I covered in the lectures last week.
+
+And then we started to look at descriptive data and in particular, as it says here, to think about central tendency.
+
+So last week we covered the definition and the calculation of this of central tendency measures like the mean, the median and the mode.
+
+And I made the point that I think each of them can be useful.
+
+They are calculated in different ways and they have different properties.
+
+So in different circumstances,
+
+each one of them might be more or less meaningful or more or less misleading as a reflection of the bunch of data that you're working with.
+
+So it's important to know how they operate and the way that they might convey information so that you can convey information in the best way.
+
+But also when you hear other people talk about measures,
+
+the central tendency that you have an understanding of what it is that you're being presented with.
+
+So certainly, absolutely. Each of them describe something potentially meaningful, potentially important about a sample or a population,
+
+about a set of numbers that you take from a population or that population itself.
+
+However, one of the key themes for the material this week is on their own or even together.
+
+They don't tell us the whole story. It's not everything that we should be interested or seeking to find out about a set of data.
+
+One way of thinking about this is to think of some real world examples of the importance of variability instead.
+
+And so I thought here about some questions that maybe you or your parents or somebody that you were with might
+
+have been thinking about asking a university when you visited universities for open days or their equivalent,
+
+or at least you were reading material and you were thinking about whether to apply to a particular university to study psychology.
+
+And of course you come to Lancaster, which is great,
+
+but if you came to Lancaster or you visited other places, what sort of things might you have asked?
+
+Okay. Well, of course, as a whole, my whole range of things that you could ask,
+
+but here are some sample questions that hopefully you can see are kind of meaningful and justifiable.
+
+Okay. What's the average cost of living going to University X?
+
+Cost of living is important. How are we going to be able to afford to be in a particular place?
+
+What's the most common degree outcome that students get?
+
+You want to know whether if you go to a university and study psychology, what's a reasonable expectation of what degree you might come out with?
+
+How long does it take for students to find a graduate level job when they leave?
+
+So when they graduate, when they graduate, are they well equipped to go and get a job and a graduate level job afterwards?
+
+Or you might ask on average, how many hours of teaching will there be in the first year?
+
+And in my experience, sometimes parents asking this question at open days are particularly keen on
+
+finding out about a large number of hours of teaching in terms of value for money.
+
+Whereas students might also be thinking about the load of those contact towers and
+
+also thinking about the opportunity to be doing other things in their first year.
+
+Okay. Now the point about these questions is that hopefully you see them as reasonable questions,
+
+as kind of appropriate questions and may be relevant in some way to the choices that some people might make about going to university.
+
+Yeah, and they're perfectly good questions.
+
+I've heard them from potential to university or, you know, it's the sort of thing that one might be interested in.
+
+So the questions themselves are fine.
+
+But the point about this slide is also to emphasise that we might also want to know about variability or differences.
+
+So knowing about the average cost of living in a certain place is one thing, but what's the range?
+
+Is it is it feasible to live in a place with less money than the average?
+
+Is there a big spread with some people having very large cost of living expenses whereas other people manage one way or another to reduce that?
+
+Was everybody paying the same amount in the same place? And that's important because some people might be constrained as to how much money they have.
+
+Some people might have constraints about the sorts of places they'd be comfortable in staying.
+
+What's the most common degree outcome? No, just that that's a kind of question about the mode, Right.
+
+And again, that's important. But what's the spread?
+
+So are there people doing other significant number of people doing really well?
+
+And so getting first, are there quite a lot of people who get lower degrees?
+
+And that might be important because they still might be supported to do as well as they can.
+
+But just knowing about the most common degree doesn't tell you about the range of experiences that they might be.
+
+How long does it take students to get a graduate job?
+
+If you just look at a mean or an average of that. It doesn't tell you about what's the shortest time, what's the longest time.
+
+And those might be important as well for a whole variety of reasons.
+
+Likewise, how many hours of teaching are there?
+
+One might also be interested in is to what are the situations where there's there's fewer teaching hours?
+
+What are the situations where there are more across the term, across a degree course and so on.
+
+And just having the average might not tell you about the peaks and troughs.
+
+So what this slide really does is try and emphasise to you that as well as thinking about central tendency,
+
+which is important, we also need to think about variability.
+
+How much spread is in the schools? Are the schools pretty much all the same or are they very different?
+
+And this is an important question and also finding ways to understand how we measure and represent
+
+variability is important and we're going to be coming on to look at that later on in these lectures.
+
+So just finally to, to emphasise some graphical illustrations of the importance of variability.
+
+So screenshot here from stock market prices and stock market prices go up and down and they go through micro cycles and they go through macro cycles.
+
+So the stock price might go up and down during a day, but also might go up and down over weeks,
+
+months and years as a function of economic conditions and and how well companies are doing and so on.
+
+But that variability is really important.
+
+It isn't just about understanding the average stock price, but when is a good price to buy stocks?
+
+When do they keep when are they expensive?
+
+If you sell stocks, when they're cheap, if you buy them when they're expensive, then you end up paying more money than the other way round.
+
+This is a engineering example looking at data of electricity demand over a period of a week and over the course of a day.
+
+Electricity demand in a country or in a region changes, and it goes through a cycle during the day, sort of nine till five.
+
+There's quite a lot of electricity used in terms of domestic use.
+
+After 5:00, that use might go up as people come back from work overnight.
+
+Electricity use goes down, people turn off the lights, people turn off the television.
+
+People aren't cooking. And so.
+
+But the point is, in terms of electricity supply, it isn't enough for companies to know about what they what the average demand is,
+
+because the average demand isn't going to help them with their electricity production.
+
+They need to know about the peaks so that they can supply enough electricity to meet demand.
+
+When everybody's watching a particular program on television or during an advert, they all go off, switch, put the kettle on to make a cup of tea.
+
+They also need to know about the lower levels of electricity demand so that they can wind down the amount of supply or find ways to store it.
+
+For those occasions when there are peaks. So again, it's clearly this.
+
+There's a need to understand variability as well as the central tendency.
+
+Okay. So hopefully I've convinced you that understanding variability is important.
+
+Next, we're going to look at how we do it, how we express it.
+
+So one way of doing it is to describe it visually, and that's important.
+
+In the previous slide, I've shown you some graphical depictions of data and that allows us to see variability.
+
+We can see a peak in electricity demand, we can see a trough, we can see the cycles over a day and across a week and so on.
+
+Those things are important and it's one of the reasons why in the workshops over time we're going to be looking at
+
+ways to visually depict data in our with our studio because it's a really good way of communicating key information.
+
+A visual depiction in particular can tell us about the amount of a spread.
+
+And as we'll see in the workshops,
+
+things like histograms which plot the frequency with which different segments of
+
+a distribution occur are a very good way of showing how much spread there is.
+
+But also the visual depiction can give us an idea of the shape,
+
+the shape of a distribution where most of the schools live, where outliers or unusual schools lie and so on.
+
+But as well as things like the visual depiction, it's often very important to be able to capture variability numerically,
+
+to be able to express it and understand it when other people are talking about it.
+
+So numerically, how might we assess variability?
+
+Well, one way a more obvious way that can be effective is to calculate the range,
+
+to identify what the lowest values are and what the highest values are.
+
+And the range will tell us about those values or the gap between the lowest and the highest, the minimum and the maximum.
+
+We can also calculate variables such as the into quartile range,
+
+which refers to the gap between the lower quarter of the numbers and the upper quarter of the numbers.
+
+So we can start to focus on what is going on more in the middle but will still give us a measure of spread.
+
+However, both of these, whilst they're they can be really useful, both of these are also inherently affected by the extreme scores.
+
+So if you measure the range, if you get the minimum score, the worst score that a population does on a test as well as the best score.
+
+Okay, you focusing on the outliers, you're focusing on the school that was the very worst and the score that was the very best.
+
+And for all sorts of reasons, those scores might not be terribly representative.
+
+And if you only know about the extremes, it might tell you about what what's happening for most of the data.
+
+Well,
+
+another way that we can think about variability is to focus on deviations and statistically deviations simply refer to the distance from the mean.
+
+Now, remember from last week we refer to the mean as M.
+
+We refer to an individual score as X. So if we have an X value and we take away the mean, that gives us the distance of that value from the mean.
+
+So is it a long way from the main X minus M is big or is it close to the mean in which case x minus M will be small?
+
+Okay, that stops deviation and starts to tell us about the amount of spread.
+
+However, if we then just calculate the average deviation, the problem is that it's always going to end up being zero.
+
+Why is it going to be zero?
+
+Because the average deviation is going to reflect the balance of the scores smaller than the mean with the scores larger than the mean.
+
+After all, the mean is the average. The mean encompasses small schools and big scores.
+
+Okay, So the mean deviation is going to reflect and is going to it has to mathematically be that balance of scores less than scores,
+
+more than the mean. The mean deviation will always be zero, which isn't helpful because we want to know about differences.
+
+And the statistical solution to that is that when we get a deviation, we square it.
+
+Okay. Because when you square a negative number, it becomes a positive number.
+
+Okay. And that means that instead of having minus numbers balanced by positive numbers,
+
+we now just have a whole bunch of positive numbers because they're also larger numbers because we've squared each value.
+
+But it fundamentally changes that issue of the negative and positive values.
+
+Now the statistical term variance is the mean squared deviation, and that just means the average of these squared deviations.
+
+So we add up all of these squared deviations, which are all positive numbers.
+
+We divide it by the number of these deviations we have, and that gives us the variance.
+
+The more variability there is, the more deviations there will be and the bigger the squared deviations, so the more the variance will grow.
+
+I'm more commonly used as a measure of variability, however, is the standard deviation.
+
+And the standard deviation is the square root of the variance term, which I was talking about in the previous bullet point.
+
+And I hopefully that makes sense in that I said earlier that to get rid of the minus numbers,
+
+we've squared all of the values, so that's inflated them.
+
+So standard deviation compensates for that by taking the square root of the variance to bring the scores back into a reasonably comparable range.
+
+Now, there are things that happen between squaring the deviation and taking the square root of the variance,
+
+but nonetheless, it, it, it it's a reasonable adjustment to try to bring the scores back into scale.
+
+
+
+
+
+[Section B, part 2]
+What I had looked at at the end of the previous section was different ways to assess variability in a dataset.
+
+And I took you through, as you can see in this slide, a number of stages and a justification for a statistical approach to measure of variability.
+
+And that statistical approach is to calculate something called the standard deviation.
+
+And we get to the standard deviation by square, by getting square root of a other term called variance.
+
+And we get the variance by calculating mean squared deviations.
+
+And so you work back over those lines. Okay.
+
+So what I really want to emphasise in this section is how we should see these bullet points in two different ways.
+
+Okay? One way is a set of numerical commands or numerical instructions that you can
+
+carry out that will give you or deliver a term called standard deviation.
+
+Okay. And one can follow this as a recipe. And later slides will will show you that with the numerical example.
+
+But you can sort of follow this as a recipe in order to get the standard deviation.
+
+Okay. As it shows in the bullet points, first of all,
+
+you square the deviations and then you get the mean of those squared deviations, and then you take the square root of that.
+
+So we need to know how it's done, but we also need to think about what it is doing.
+
+Okay? Not just each step of the recipe, but what we're looking to achieve.
+
+What's what's the goal? What's the. If it's a recipe, what's the thing that we're cooking and that we're seeking to try and do?
+
+Okay. And for that, we need to remember that variability is about how much spread there is in the scores that we're working with,
+
+in particular, how much spread around the mean. Are all the scores tightly clustered around the main?
+
+So pretty much everybody gets the same score, which is the which is close to the mean or is there more variability?
+
+So there is more spread or there is more variety of scores?
+
+Around the main, there are some scores much lower than the mean and some schools much larger than the main.
+
+In the first case where there's little variability.
+
+Of course, that means that what that says is schools are very similar.
+
+But if we know some of the schools, we also have a pretty good idea what the other ones are because they're all clustered together.
+
+On the other hand, in situations where there's a large amount of variance and a large amount of variability,
+
+then that is telling us that we can't predict other data points from those that we already have because the spread means that they can vary a lot.
+
+So variance tells you about how spread out the scores are.
+
+The standard deviations are the average amount that scores differ from the mean.
+
+And so if we think about what what variants and standard deviation are trying to achieve, that helps us to interpret the answers that we get.
+
+And what you will see in the later segment towards the end is a section where we can look at a table from a research paper and we
+
+can interpret what what the meaning or the implication might be of having a small standard deviation or a large standard deviation.
+
+For a psychological research study. So we need to bear in mind both the calculations involved so we know how to do it.
+
+We can do it. We can do it in principle, but also think a little bit more broadly about what we're attempting to accomplish.
+
+Conceptually, what we're looking to get, because sometimes we'll need to know about the calculations.
+
+Sometimes we'll need to know about the broader concept.
+
+Okay. That's all I've got for this section.
+
+Okay, so review where we've got so far, and then when you're ready,
+
+look at the third segment for this video where we'll look at the process of calculating a standard deviation using a worked example.
+
+And that will also allow us to summarise and conclude this section.
+
+
+[Section B, part 3]
+But as I said at the end of the last section,
+
+what I wanted to do was to concentrate on giving you a worked example to see how these formulae play out
+
+and how you can break them down into relatively easy stages so you can start with a simple set of data.
+
+So eight numbers 8 6 6 9 6 5 6 2.
+
+And we're gonna try and find the standard deviation for these numbers.
+
+So first thing we do in a list like this is to produce the numbers in a vertical column.
+
+So all those numbers are now going from top to bottom.
+
+Now, why have I done that?
+
+Well, it makes it easy to add up those scores to get the sum of X so that 8 and 6 and 6 and the 9, 6, 5, 6 to add them up, to give us 48.
+
+And there are eight numbers, which means the mean is six.
+
+Forty eight divided by eight is six.
+
+Now I've also written this down this way because what we do next is to calculate and write down the deviation scores.
+
+How far away from the mean of or six are each of these values?
+
+So we take our score of eight, we subtract six.
+
+And that gives us a deviation of two. So the next value is six.
+
+The deviation from the mean of six is zero. And that six is also zero.
+
+And again and again at across the list.
+
+So you see in this new column, we've got a set of deviation scores.
+
+If we add them up, you can see that there are two positive values, two and three that adds to five.
+
+And there are two negative values, minus one and minus four that come to minus five.
+
+So as I said previously, the minus numbers will balance out the positive numbers.
+
+But we don't need to worry about that. That's just to reinforce what I was saying before.
+
+What we what we do, though, is square the deviations. We take each of these numbers, multiply it by itself.
+
+So the two becomes four. The zero stays at zero, the three becomes nine, the minus one becomes plus one and the minus four becomes sixteen.
+
+We now have a column of squared deviation values.
+
+And from that we can add up these squared deviations and divide it by the number that we're dealing with.
+
+So we add up these numbers that comes to 30 and we divide that thirty by eight because there are eight scores.
+
+And that gives us three point seven five.
+
+So that is our variance score. And if that's the variance score,
+
+then the standard deviation is just the square root of that number to square root of 3.75 five being one point nine for.
+
+Phew. Now, I've gone through quite a few numbers on this slide, but I've taken you from a set of initial scores,
+
+the initial data set on the left three to a value for the standard deviation on the right.
+
+And although I've had to do quite a few calculations because there are eight numbers to do a set of calculations on each time.
+
+What I've also tried to emphasize is each of those individual steps is relatively simple,
+
+subtracting the mean from the original score or squaring a deviation score or adding up the squared deviations.
+
+So says quite a bit to do, but none of the individual elements.
+
+I hope you'll agree are too complex. Of course.
+
+What? Later, what we're doing is looking at ways of using statistical software like ah to do this number crunching.
+
+But it's important to understand some of the principles of what and stages of what's being involved
+
+with with smaller datasets to help understand where the state the standard deviation comes from.
+
+Now, I mentioned before about the sample data on variability from questions about the percentage of immigrants in the UK.
+
+Just also want to show you another couple of example data points from the survey, which again,
+
+when I produced these slides, this was only a partial set of data that was available.
+
+But one of the questions that everybody was asked was, what's your age?
+
+And what you can see here is with the sample data.
+
+The average age was a little bit over 18 and the standard deviation was a little bit more than one.
+
+Now, what I want to do is emphasize that that sort of makes sense as net, doesn't it?
+
+Because most of the first year students, though not all of them,
+
+most of them are going to ofview are going to be students who've recently done their A-levels.
+
+And you're not going to get many people doing their A-levels at age 10 or 11.
+
+Okay. It'll be a standard, but there will be some students who are older because they've taken a gap year or they've been working for a little bit.
+
+And there may be also be some mature students and so on. So we expect some variability, some spread.
+
+But the standard deviation is quite small relative to the mean.
+
+Now, contrast that with another question that everybody was asked. How many friends do you have on Facebook?
+
+Now, the mean is larger. It's just something out there tends to be a higher count of 200.
+
+But the standard deviation here is very much larger.
+
+In fact, the standard deviation, as you can see here, is larger than the mean.
+
+Now we've gone through calculations of the standard deviation.
+
+The point is not to emphasize here those calculations, but the outcome and its interpretation.
+
+There is much more spread in how many friends people have on Facebook than how old you are.
+
+Now, that I think completely makes sense in terms of what we know about age and student age and
+
+what we know about social media and the way people engage with it and have friends with it.
+
+My point is that we can start to think now about how we go beyond central tendency.
+
+Just the mean to also incorporate measures of variability.
+
+The standard deviation being the average amount around the mean that schools tend to differ and that is clearly much smaller.
+
+For a factor like age than it is for Facebook friends.
+
+Now, having spent a bit of time talking about numerical expression and variability and the standard deviation,
+
+I wanted to go back to previous remarks about the visual depiction of variability through forms of histogram or frequency plot.
+
+I've got full graphs that I want to show you and talk you three through the top left is a normal distribution.
+
+This is actually a reasonably typical insight in psychology, but in a normal distribution you can see the peak.
+
+The common values fall in the middle of the distribution and there is spread.
+
+But as you go further and further away from the middle, the frequencies,
+
+the number of of these values falls away, falls away equally to the right hand side and to the left.
+
+Looking down at the red bars, a positive skewed distribution is where there is a right hand tail to the distribution.
+
+That is, you get fewer you get a more rapid drop off in the frequency of smaller values and a slower drop off in the frequency of longer values.
+
+And indeed, I would expect a positive skew around the age distribution that we saw some data on on the previous slide.
+
+It's it's less likely that you're going to find first year students who are younger than the average.
+
+Then you find students who are older than the average because.
+
+Is it going to be unusual to go through an education system and be ahead of your chronological peers, or certainly not by much.
+
+Whereas there are a whole variety of reasons why people might start a university degree after their peers or others have started,
+
+and then they the lower graph. Here is the negative skewed distribution, which simply shows the reverse pattern.
+
+That is, there is a tail that extends out to the left of the distribution more than to the right.
+
+And then finally, on the right hand side, this is a proto-typically bimodal distribution because there are two modes.
+
+Possibly because there are two underlying distributions, each of which is reasonably normal.
+
+But one of those distributions has larger values than the others.
+
+All of which is to say that these frequency plots,
+
+these distributions can be important in telling us about the relationships between data and whilst these are idealized distributions,
+
+real histograms, frequency plots often look less neat or less exact than this.
+
+It can be really useful to pick out some of these main- the main features in these sorts of distributions.
+
+So I've already said that it can be useful not only to calculate the standard deviation, but to interpret a standard deviation.
+
+And in order to do that, I want to comment on a influential paper in developmental psychology from Simon
+
+Baron-Cohen and colleagues in 1985 who wanted to study children with autism
+
+and understand whether they could distinguish between a concept of knowledge
+
+and a concept of false belief are erroneous beliefs that somebody might have.
+
+Now, I'm not going to concentrate on the psychology of those tests,
+
+but instead I just want to briefly take note of the fact that they tested 20 children who had a diagnosis of autism.
+
+They had 14 children who had a diagnosis of Down's syndrome, and they also had 14 typically developing children.
+
+And here is a table of those three groups.
+
+Now, the point that I want to emphasize here is just that the table also gives us information about the standard deviation.
+
+So here is the chronological age, how old the group of children with autism are.
+
+And we can see that the standard deviation is much larger for this group than it is for the typically developing children.
+
+So they got a sample of typically developing children who are very similar to each other, very homogenous in their chronological age,
+
+whereas they got a sample that was much less homogenous, more widely spread for the group with autism.
+
+Now, this is not surprising from a research point of view because it is often harder to find and recruit to children with autism into a sample.
+
+But my point is that we can use a table like this.
+
+And what we now have started to understand about variability, to understand that,
+
+you know, that might make a difference or play out in how we understand the performance,
+
+or at least it's something we can more easily note and appreciate in data that we work with and interpret and come across.
+
+OK. Let's summarize what we've covered this week.
+
+Starting point is central tendency is important. Central tendency describes representative values.
+
+So we want to know different ways of capturing central tendency and where some values or some approaches are more useful than others.
+
+But variability is also important. Variability can provide lots of important complementary evidence about data and apparent distributions.
+
+Variability describes the spread of scores. We've looked at examples where it's important.
+
+We've looked at how it can be calculated in different ways, particularly through variance as well as the standard deviation.
+
+We've also looked at visual depictions, but also remember that the standard deviation is the most widely used to measure
+
+of variability that is available to psychologists and to statisticians.
+
+
+
+[Section B, part 4]
+So what I've got here is a graph of an idealised distribution.
+
+So. How often we find a particular score in a distribution.
+
+Uh, in a, in a data set. And what we find is that on the left hand side, as you're looking at this graph on the left hand side or the lower scores,
+
+um, uh, of a distribution, there are only occasional occurrences of those values.
+
+And on the right hand side, there are also only occasional occurrences of those really high scores.
+
+These are the tails of the distribution. The end points and the frequency of those scores is relatively low.
+
+But in the middle, uh, where the where of course, the mode is, uh, most of these values lie at that frequency.
+
+Uh, scores here are much higher. And the normal curve, uh, tells us a lot about a distribution of scores.
+
+Um, and as I say, most of the numbers are packed in the middle,
+
+and then progressively fewer are found the further away from the middle, uh, the central area that we go.
+
+We can add some details to that, to that general, um, message about a normal curve.
+
+In particular, a key aspect of the normal curve is that the, um, the curve is bilaterally symmetrical.
+
+In other words, what you see on the left hand side is mirrored with what you see on the right hand side.
+
+And one way to, uh, represent, uh, this is to take that image.
+
+Imagine it was on a piece of paper and you were folding it down the middle.
+
+Where the peak of the distribution is.
+
+And then you close that piece of paper as you do so the the line on the right hand side is going to superimpose or match up with the line on the left.
+
+And the fact that you can, um, you can draw a line down the middle and,
+
+and see a mirror of what's on the left and what's on the right is actually quite important,
+
+particularly when we begin to think about, um, working with particular areas, uh, of this distribution,
+
+knowing that on the other side of the midpoint, the same thing is going to be happening.
+
+Another function of the normal curve is that these end points, uh, they, uh, approach but don't actually touch the x axis.
+
+So frequencies become uh, lower at the further away you get from the midpoint.
+
+Uh, although they, they might not reach zero.
+
+Uh, and then the other thing that we're going to be discussing and working with this week is the fact that if we think about the area under the graph,
+
+that is, if you coloured the space underneath the blue line, excuse me, that area is considered to have a unit of 1 or 100%.
+
+So we can talk about 100% of the area underneath that hat, underneath that curve.
+
+And that's an important starting point, because we say that with all of that is 100%.
+
+Then if we're interested in a particular area, a particular zone,
+
+particular space within that, um, how much of that total, 100% might we be talking about?
+
+And then, uh, also, uh, uh, an important property of the normal curve.
+
+Uh, as has been mentioned before, uh, in psych 1 to 1, is that, um, the mean,
+
+the median and mode are all the same value and all in the middle of this graph.
+
+Um, and that comes from the properties of being bilaterally symmetrical.
+
+Um, uh, that those, those things will be true.
+
+Now. What I've shown you, there is an idealised distribution.
+
+It's a smoothed curve. When we look at real data, we often find that we've got something that is approximately normal.
+
+We might not have something, um, that is exactly normal.
+
+Um, that is, it won't perfectly, uh, form a smooth line like that,
+
+but it will have many of those broad features of smaller numbers of, um, scores in the tails.
+
+Extreme small, extreme high values, most of the numbers in the middle and a, uh,
+
+a falling off in those scores as you go from the middle to the tail or to the edge of the distribution.
+
+Uh, also, uh, you'll have the modal values towards the middle, and the drop off, uh, will have a rank, uh, a statistical regularity around it.
+
+And these things are important because we also know that many variables in psychology also approximate the normal curve.
+
+So many of the things we might be interested in, uh, as psychological.
+
+Uh, uh, variables are things that, uh, have this, have this distribution, uh, have the properties of the normal curve.
+
+Also, some of the ways that we want to examine data and test data.
+
+Some of the, the ways that we want to make arguments require, uh, that the data we're working with, uh, are normally distributed.
+
+So, uh, uh, uh, it's, it's an, a broad assumption for these tests to work in the way that they should, that we have, uh, reasonably normal data.
+
+So what this says is distributions are important.
+
+And it also says that, uh, uh, visualisation of these distributions is important.
+
+And, um, in the workshops we've shown you how to do distributions such as histograms and box plots.
+
+Uh,
+
+but one of the reasons they're important is it allows you to look and see the extent to which your data or if you're plotting somebody else's data,
+
+their data, um, are normal or not. And if they're not the ways in which they're not.
+
+And then you can begin to think about how that might impact, um, the appropriateness validity of,
+
+uh, various sorts of tests or arguments that people are using with those data.
+
+Let's stick with a, uh, an idealised distribution, uh, of a, uh, a normal distribution.
+
+As we've, as I've already noted, the mean, the median and the mode will be in the middle of that distribution.
+
+So if we just draw a line from the peak of the frequency distribution in the middle drawn line,
+
+uh, down, uh, to the x axis, uh, we know that that's where the mean will be.
+
+And then. For any set of schools, there will be a amount of variability and there will be a standard deviation.
+
+So what we can do is take a segment or a slice of that graph,
+
+and we can shade it to as as you can see here a grey shaded area from the
+
+middle and out about halfway down on the right hand side of that of the curve.
+
+And uh, what you can then do is this is as is illustrated here, shade that area, but also represented, uh, by a standard deviation.
+
+So we've got some, uh, hypothetical numbers here.
+
+We're imagining that a particular variable has a mean of 40 and has a standard deviation of four.
+
+This is just hypothetical data for the purposes of graphing it.
+
+But, um, roughly speaking, um, if we go if we go up, around about halfway down that, that,
+
+uh, that graph on the right hand side, uh, that will give us about one standard deviation.
+
+So this means we can just draw a very rough graph or think about a very rough graph
+
+in which that grey space represents the area between the midpoint and the mean,
+
+uh, and one standard deviation to the right.
+
+And of course, if the standard deviation in this hypothetical data is four points, given that the mean is four,
+
+that also means that the right hand edge of that grey line is going to be at a score of 44,
+
+because you've got one standard deviation of four points going from 40.
+
+So it goes out to 44.
+
+

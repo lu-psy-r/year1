@@ -1,0 +1,23 @@
+MW_Unintentional =~  BMW3_UN_01_z + BMW3_UN_02_z + BMW3_UN_03_z + BMW3_UN_04_z
+MW_intentional =~ BMW3_IN_01_z + BMW3_IN_02_z + BMW3_IN_03_z + BMW3_IN_04_z
+MW_MetaAwareness =~ BMW3_ME_01_z + BMW3_ME_02_z + BMW3_ME_03_z + BMW3_ME_04_z
+
+g =~ zPC_Sum + zM_Sum + zPS_Sum + zC_Sum
+
+# fix intercepts to zero
+BMW3_UN_01_z ~ 0
+BMW3_UN_02_z ~ 0
+BMW3_UN_03_z ~ 0
+BMW3_UN_04_z ~ 0
+BMW3_IN_01_z ~ 0
+BMW3_IN_02_z ~ 0
+BMW3_IN_03_z ~ 0
+BMW3_IN_04_z ~ 0
+BMW3_ME_01_z ~ 0
+BMW3_ME_02_z ~ 0
+BMW3_ME_03_z ~ 0
+BMW3_ME_04_z ~ 0
+zPC_Sum ~ 0
+zM_Sum ~ 0
+zPS_Sum ~ 0
+zC_Sum ~ 0

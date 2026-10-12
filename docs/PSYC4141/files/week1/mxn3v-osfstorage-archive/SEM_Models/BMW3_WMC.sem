@@ -1,0 +1,24 @@
+MW_Unintentional =~  BMW3_UN_01_z + BMW3_UN_02_z + BMW3_UN_03_z + BMW3_UN_04_z
+MW_intentional =~ BMW3_IN_01_z + BMW3_IN_02_z + BMW3_IN_03_z + BMW3_IN_04_z
+MW_MetaAwareness =~ BMW3_ME_01_z + BMW3_ME_02_z + BMW3_ME_03_z + BMW3_ME_04_z
+
+SSpan =~ 1*SspanPartialScoreBlock1_z + 1*SspanPartialScoreBlock2_z
+OSpan =~ 1*OspanPartialScoreBlock1_z + 1*OspanPartialScoreBlock2_z
+WMC =~ 1*SSpan + 1*OSpan
+                  
+BMW3_UN_01_z ~ 0
+BMW3_UN_02_z ~ 0
+BMW3_UN_03_z ~ 0
+BMW3_UN_04_z ~ 0
+BMW3_IN_01_z ~ 0
+BMW3_IN_02_z ~ 0
+BMW3_IN_03_z ~ 0
+BMW3_IN_04_z ~ 0
+BMW3_ME_01_z ~ 0
+BMW3_ME_02_z ~ 0
+BMW3_ME_03_z ~ 0
+BMW3_ME_04_z ~ 0
+SspanPartialScoreBlock1_z ~ 0
+SspanPartialScoreBlock2_z ~ 0
+OspanPartialScoreBlock1_z ~ 0
+OspanPartialScoreBlock2_z ~ 0

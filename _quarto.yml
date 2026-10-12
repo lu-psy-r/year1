@@ -17,3 +17,10 @@ format:
     include-in-header:
       - text: |
           <script>window.onload = function() {document.getElementById("autocomplete-0-input").placeholder = "Search Year 1";};</script>
+
+project:
+  render:
+    - "**/*.qmd"
+    - "!files/"
+  resources:
+    - files/**

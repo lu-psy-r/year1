@@ -122,7 +122,7 @@ The complete code chunk should look like this:
 
 ```{r}
 #| label: read_data
-data_mw <- read_csv(here("4141_wk2_lab", "data_bmw3.csv"))
+data_mw <- read_csv(here("PSYC4141/files/week2/4141_wk2_lab", "data_bmw3.csv"))
 ```
 
 > Action: Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') that is named `data_mw` in the Environment (top right quadrant).
