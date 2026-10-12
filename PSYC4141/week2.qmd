@@ -303,6 +303,7 @@ We are going to:
 7.  Build a histogram and calculate descriptive statistics using the combined score.
 
 #### Step 1: Download the files
+CHECHK
 
 To complete this lab activity you will need two files:
 
@@ -310,6 +311,12 @@ To complete this lab activity you will need two files:
 2.  We need a data file called `data_bmw3.csv`. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This means that individual bits of data are separated by comma's. We'll often use `.csv` files.
 
 You can download the files here: [`4141_wk2_lab.zip`](PSYC4141/files/week2/4141_wk2_lab.zip){download="4141_wk2_lab.zip"}. Usually they will be saved in your 'Downloads' folder.
+
+```{r}
+download.file("https://github.com/lu-psy-r/year1/blob/9606fdd9bc5f81d8d2178743b93d78db68c61716/4141_wk2_lab/data_bmw3.csv?raw=true", destfile = "data_bmw3.csv")
+
+download.file("https://github.com/lu-psy-r/year1/blob/9606fdd9bc5f81d8d2178743b93d78db68c61716/4141_wk2_lab/4141_wk2_lab.qmd?raw=true", destfile = "4141_wk2_lab.qmd")
+```
 
 Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).
 

@@ -138,7 +138,7 @@ The function we use for that (and for a lot of other plots you'll make for resea
 ::: {.callout-note title="Hint"}
 ## Hint
 
-Use the function `ggplot()`. Start by writing `ggplot()` on the next line of the code chunk. Inside the `ggplot()` function, we need to tell R which data-frame (`data=`) and which variable to use (`mapping=aes(x=))`). 
+Use the function `ggplot()`. Start by writing `ggplot()` on the next line of the code chunk. Inside the `ggplot()` function, we need to tell R which data-frame (`data=`) and which variable to use (`mapping=aes(x=))`).
 
 Then, we need to tell R what type of plot we want. We do this by adding a `+` to the line on which you've written `ggplot()`, then on the next line you add a 'geometric object', in this case `geom_histogram()`.
 
@@ -163,7 +163,7 @@ So far, we've summarised the data in a histogram and from it, we get an idea of 
 
 > Action: Have another look at the histogram you made for `BMW3_UN_03`. Can you estimate values for the mean, median and range?
 
-To calculate the descriptive statistics, we simply need to tell R what dataset we want to use and, within the dataset, which variable. This is done by providing the name of the data-frame (`data_bmw3`) followed by a $ (that is a dollar sign) and then the variable name.
+To calculate the descriptive statistics, we simply need to tell R what dataset we want to use and, within the dataset, which variable. This is done by providing the name of the data-frame (`data_bmw3`) followed by a \$ (that is a dollar sign) and then the variable name.
 
 > Action: Run the code below to calculate the descriptive statistics.
 
@@ -174,6 +174,7 @@ median(data_mw$BMW3_UN_03)  # provides the median
 range(data_mw$BMW3_UN_03)   # provides the range
 sd(data_mw$BMW3_UN_03)      # provides the standard deviation
 ```
+
 Instead of just seeing the values in the Console, we can store them. In that case, we need to assign the output from each function to an 'object'.
 
 ```{r}
@@ -188,7 +189,7 @@ bmw3_un_03_sd <- sd(data_mw$BMW3_UN_03)
 
 ## Step 6: Create a new variable that combines responses from several questions
 
-So far we have look at the responses to individual items. However, single questionnaire items are noisy. A person's answer to one question can be shaped by how they read the wording, or how they happened to interpret the response options. If several items tap the same underlying construct, combining them into one score (usually a mean or sum) lets these item-specific quirks average out, so the score is more reliable and a better reflection of the thing we care about. 
+So far we have look at the responses to individual items. However, single questionnaire items are noisy. A person's answer to one question can be shaped by how they read the wording, or how they happened to interpret the response options. If several items tap the same underlying construct, combining them into one score (usually a mean or sum) lets these item-specific quirks average out, so the score is more reliable and a better reflection of the thing we care about.
 
 The Brief Mind Wandering Three-Factor Scale (BMW-3; Schubert et al., 2024) is a good example. It is a 12-item questionnaire that treats mind wandering as task-unrelated thought and measures three dimensions: unintentional mind wandering, intentional mind wandering, and meta-awareness of mind wandering. Rather than asking one question about mind wandering and hoping it captures everything, the scale uses four items for each dimension and combines them into a subscale score by averaging.
 
@@ -217,4 +218,3 @@ Now, let's apply what we learned earlier to these subscales.
 > Action: Build a histogram for the responses on 'unintentional mind wandering' in a new code chunk below. You can use code you wrote before, but will have to change the variable name.
 
 > Action: Similarly, calculate the mean, median range and standard deviation for 'unintentional mind wandering' in a new code chunk below. You can use code you wrote before, but will have to change the variable name.
-
