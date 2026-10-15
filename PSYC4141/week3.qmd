@@ -82,12 +82,13 @@ The lecture refers to a 'WBA' score. This stands for 'web-based assessment' and 
 :::
 
 \newline
+
 [Correlation: Theory slides](files/week3/4141_wk3_correlation_slides.pdf){download="4141_wk3_correlation_slides.pdf"}.
 [Correlation: Theory transcript](files/week3/4141_wk3_correlation_transcript.txt){download="4141_wk3_correlation_transcript.txt"}.
 
 **2. Correlation: How to run and report a correlation analysis** (~ minutes) A worked example showing how to calculate a correlation in RStudio and how to report a statistical result in American Psychological Association (APA) format.
 
-::: {. callout-note title="APA Style"}
+::: {.callout-note title="APA Style"}
 APA stands for the American Psychological Association. APA style provides shared conventions and guidelines for how to report write a research report in psychology. This includes how to report statistical results clearly and consistently. You can read the APA style (7th edition) [here](https://apastyle.apa.org){target="_blank" rel="noopener"}. A useful summary on reporting numbers and statists in APA style can be found [here](files/week3/apa_report_stats.pdf){download="apa_numbers-statistics-guide.pdf"}).
 :::
 
