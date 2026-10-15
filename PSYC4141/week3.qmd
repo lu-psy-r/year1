@@ -1,0 +1,253 @@
+---
+title: 3. Week 3 - Correlation and ethical research practice
+subtitle: Written by Carly Anderson and Margriet Groen
+order: 3 # ensure this is one more than the previous script
+---
+
+::: {.callout-note title="Overview"}
+This week we focus on two strands of learning:
+
+A.  Correlation - how we investigate the association between two numerical variables, visualise patterns using scatterplots, and interpret the direction and strength of a relationship.
+B.  Ethical research practice - how we respect participants' choices, collect and protect appropriate data, and interpret and communicate research findings responsibly.
+
+Building on last week’s work with individual numerical variables (e.g. screen time), we will now look at how **two numerical variables** can vary together. We will also consider why an observed association between two variables does not establish causation.
+
+The materials we have prepared to support your learning are arranged in four parts:
+
+-   Lectures
+-   Reading
+-   Pre-lab activities
+-   Lab activities
+
+You can navigate to each in the side bar on the right
+:::
+
+<!-- Note: I think it is helpful to have a list of the different sections in a week for cross-referencing. I don't think it helps readability it this is visible to the students (hence I've commented them out) as the outline in the sidebar on the right already provides this info. -->
+
+<!-- - @sec-4141-w3-lectures: Watch these before your lab session -->
+
+<!-- - @sec-4141-w3-lectures-correlation: Correlation theory -->
+
+<!-- - @sec-4141-w3-lectures-research-ethics: Ethical research practice and participation -->
+
+<!-- - @sec-4141-w3-reading: Recommended readings -->
+
+<!-- - @sec-4141-w3-prelab-activities: Activities to do before you attend your lab session -->
+
+<!-- - @sec-4141-w3-lab-activities: Activities you do during your lab session -->
+
+## Lectures {#sec-4141-w3-lectures}
+
+Last week, we explored how psychological concepts can be measured and represented as data. You practised summarising one numerical variable at a time, using measures of central tendency and variability, and created histograms to visualise distributions. We also considered why it is important to look at the data rather than rely on summary statistics alone.
+
+**This week, we move from examining one numerical variable to two**. We will introduce correlation as a measure of association between two variables, create scatterplots, calculate a correlation coefficient in RStudio, and practise interpreting and reporting the results.
+
+We will also consider what it means to conduct ethical psychological research, from informed consent and data protection to inclusive recruitment and responsible interpretation. These ideas connect directly to correlation, as finding a relationship between X and Y is not the same as demonstrating that a change in X causes a change in Y.
+
+\newline
+
+::: {.callout-important}
+**Please watch the lecture material, complete the essential reading and then the pre-lab activities before attending your lab.** As a reminder, the lectures and pre-labs introduce the concepts and give you some initial practice, and the lab gives you the opportunity to apply these skills in-person with our support.
+:::
+
+::: {.callout-tip title="Questions?"}
+Make a note of questions as you work through the material. These might be answered later in the recordings, or in your lab. Otherwise, please bring them to the live online Q&A session on Friday or post them on the [Q&A forum on Moodle](https://modules.lancaster.ac.uk/mod/forum/view.php?id=2918081).
+:::
+
+::: {.callout-note title="A note about the recordings"}
+The recordings were originally delivered by Dr Margriet Groen as part of a different module and have been selected and reorganised for this week's teaching. If you hear references to a different week or to something covered "last week" don't worry about these references! We've reviewed the materials and you will never be expected to know anything that you haven't yet covered. Also, the lecture refers to a 'WBA' score. This stands for 'web-based assessment' and you can think of this as a weekly online quiz to check your learning.
+:::
+
+### Section A: Correlation {#sec-4141-w3-lectures-correlation}
+
+You can watch the lecture for the video using the video playback windows shown next. Section A is broken into two parts that should be watched in sequence:
+
+1.  Correlation: Theory
+2.  Correlation: How to run and report a correlation analysis
+
+::: {.callout-tip title="Downloading files"}
+If the file doesn't download when you click on it, try right-clicking on it instead. You should than see multiple options and you can select 'Download linked file'.
+:::
+
+**1. Correlation: Theory** (~30 minutes)
+
+What is correlation? How can we describe the direction and strength of a relationship between two numerical variables? Why does correlation not infer causation?
+
+```{r}
+#| label: Do not remove. It prevents Quarto from thinking it needs to involve Python.
+```
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=a5942176-0e7f-44ab-a2d0-b4e300fbae86&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 3 (2026) section A part 1"></iframe>
+```
+
+[Correlation: Theory slides](files/week3/4141_wk3_correlation_slides.pdf){download="4141_wk3_correlation_slides.pdf"}.
+[Correlation: Theory transcript](files/week3/4141_wk3_correlation_transcript.txt){download="4141_wk3_correlation_transcript.txt"}.
+
+**2. Correlation: How to run and report a correlation analysis** (~ minutes) A worked example showing how to calculate a correlation in RStudio and how to report a statistical result in American Psychological Association (APA) format.
+
+::: {. callout-tip title="APA Style"}
+APA stands for the American Psychological Association. APA style provides shared conventions and guidelines for how to report write a research report in psychology. This includes how to report statistical results clearly and consistently. You can read the APA style (7th edition) [here](https://apastyle.apa.org){target="_blank" rel="noopener"}. A useful summary on reporting numbers and statists in APA style can be found [here](files/week3/apa_report_stats.pdf){download="apa_numbers-statistics-guide.pdf"}).
+:::
+
+```{=html}
+
+```
+
+
+::: {.callout-tip title="Take a break!"}
+Before continuing, we recommend you take a **15-minute break away from your computer**. Remember to note down any questions to bring to the Q&A, lab or discussion forum whilst you’re watching the lectures.
+:::
+
+### Section B: Ethical research practice and participation {#sec-4141-w3-lectures-research-ethics}
+
+Section B is broken into two parts:
+
+1.  Participating in psychological research: SONA
+2.  What makes psychological research ethical?
+
+::: {.callout-tip}
+There is a research participation component to this module. The credits that you receive for taking part in research at Lancaster University count toward your grade.
+:::
+
+**1.  Participating in psychological research: SONA**
+
+Please watch the videos on the [SONA page](sona.qmd#sec-4141-sona-importance), starting in section 1. Everything you need to know about this research participation component is summarised here. 
+
+::: {.callout-tip}
+Please note that it is not a requirement to take part in the study that is suggested in these recordings. This is just a suggestion so that you can get started earning your credits. 
+:::
+
+**2. What makes psychological research ethical?** (15-20 minutes) This lecture introduces the principles of ethical psychological research, including informed consent, deception and debriefing, privacy and data protection, and the importance of inclusive recruitment. We will also consider why ethical responsibility continues beyond data collection, into the analysis, interpretation and communication of findings.
+
+[VIDEO TO FOLLOW SOON]
+
+::: {.callout-tip}
+As you watch, think about the responsibilities researchers have towards participants before, during and after a study.
+:::
+
+<!-- ```{=html} -->
+
+<!-- ``` -->
+
+## Reading {#sec-4141-w3-reading}
+
+::: {.callout-tip title="Easy access to readings"}
+All reading is accessible via the library. You can go to Moodle -\> Library Resources -\> Resource List or you can follow [**this link**](https://lancaster.alma.exlibrisgroup.com/leganto/nui/lists/93496942590001221). Readings have one of the following tags:
+
+-   **Essential**: We expect you to be familiar with these reading. You will be assessed on this.
+-   **Recommended**: We highly recommend these readings. They often provide a different perspective, or explain things in a different way.
+-   **Optional**: Further readings for those interested.
+
+The reading list is divided into multiple sections:
+
+-   **Reading associated with statistics**: this contains links to readings useful for the development of statistical concepts and skills. The main textbook *Fundamental statistics for the behavioral sciences* by Howell (Essential) lives here.
+-   **Reading associated with psychological research principles and design**: this contains links to readings that provide a good basis for foundational knowledge around research design.
+-   **Reading associated with Open Science principles and practices**: this contains links to key literature on the Open Science movement.
+-   **Week by week**: these contain links to key reading for that week that are not listed on any of the more general lists above.
+:::
+
+For **week 3**, the reading is:
+
+-   Howell, D. C. (2017). Fundamental statistics for the behavioral sciences (9th ed.). Cengage Learning. Chapter 9. **Essential** Focus on sections 9.1 to 9.4, 9.8, 9.9 and 9.15. These sections support the concepts introduced in the pre-recorded lectures on correlation.
+- Wright, D. B., Barnett, J., & Breakwell, G. M. (2020). Chapter 2: Ethics. In G. M. Breakwell, D. B. Wright, & J. Barnett (Eds.), *Research methods in psychology* (5th ed., pp. 31-50). SAGE Publications. **Recommended**
+- British Psychological Society. (2021). BPS Code of Human Research Ethics (2nd ed.). [https://doi.org/10.53841/bpsrep.2021.inf180](https://doi.org/10.53841/bpsrep.2021.inf180){target="_blank" rel="noopener"} or [here](files/week3/bps_codeofhumanresearchethics_2021.pdf){download="bps_codeofhumanresearchethics_2021.pdf"} if you prefer to download it as a pdf.
+
+## Pre-lab activities {#sec-4141-w2-prelab-activities}
+
+The lecture material is designed to deliver important ideas and procedures for learning about psychological science and analysis. Pre-lab material is then designed to help consolidate this learning, or enhance, expand and apply it in ways that set the scene for the lab session activity. We want to prepare you to be ready to go in the session itself and make the most of your time there.
+
+These short activities will help you connect Week 2’s emphasis on data visualisation to this week’s work with understanding relationships between two numerical variables.
+
+### Pre-lab activity 1: Why visualise data? Anscombe’s quartet
+
+Last week, we considered the importance of visualising your data and not to just rely on the summary numbers. These measures of central tendency (e.g., mean, median, mode) are also referred to as ‘descriptive statistics’ or ‘summary statistics’. This is because we use them to summarise and describe our data, but we do not use them to make any inferences about our data.
+
+Anscombe’s quartet (1973) showed that four different sets of bivariate data (where X and Y are both recorded for each participant) with **very similar summary statistics** (including means, variances and Pearson correlation coefficients) can look **very different when plotted**. You can read more about this and explore the four plots [**here**](https://en.wikipedia.org/wiki/Anscombe%27s_quartet){target="_blank" rel="noopener"}.
+
+Look closely at the plots. Which one looks approximately linear? Which shows a curved pattern? Where does a single unusual observation have a particularly strong influence?
+
+::: {.callout-note title="Takeaway"}
+A correlation coefficient is useful, but looking at a scatterplot helps us spot features that one number cannot show.
+:::
+
+### Pre-lab activity 2: Visualising correlations interactively
+
+Have a look at [**this visualisation of correlations**](https://rpsychologist.com/correlation/){target="_blank" rel="noopener"} by Kristoffer Magnusson.
+
+After having read the relevant sections of Howell (2017) Chapter 9 (see under @sec-4141-w3-reading), use this visualisation page to visually replicate the scatterplots in Figures 9.1 and 9.2 - use a sample of 100. After that, visually replicate the scatterplots in Figure 9.3.
+
+Each time you change the correlation, pay attention to the shared variance (the overlap between the two variables, based on R²) and see how this changes with the changing level of relationship between the two variables. The greater the shared variance, the stronger the relationship.
+
+Also, try setting the correlation to r = .5 and then moving a single dot to see how one data point, a potential outlier, can change the stated correlation value between two variables.
+
+
+### Pre-lab activity 3: Guess the correlation
+
+Try this [**online app on guessing the correlation**](https://www.rossmanchance.com/applets/2021/guesscorrelation/GuessCorrelation.html){target="_blank" rel="noopener"}.
+
+This allows you to see how accurately you can estimate r (correlation strengths) from a scatterplot. Click on “Track Performance” first so you can keep an overview of your overall bias to underestimate or overestimate the strength of a correlation.
+
+Is this all just a bit of fun? Well, yes, because stats is actually fun, and no, because it serves a purpose of helping you determine if the correlations you see in your own data are real, and to help you see if correlations in published research match with what you are being told. As you will have seen from the above examples, one data point can lead to a misleading relationship and even what might be considered a medium to strong relationship may actually have only limited relevance in the real world. It is our responsibility as psychological scientists to interpret our findings appropriately and to not overstate our results. We will think more about this in the lab this week.
+
+## Lab activities {#sec-4141-w3-lab-activities}
+
+Information on the lab activities will follow soon.
+
+<!-- ### Lab activity 1: Finish week 2 lab activities (Recap - skip if completed succesfully last week) -->
+
+<!-- #### Background -->
+<!-- Last week, we worked with some publicly available data from a research project on mind wandering. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). -->
+
+<!-- If you did not successfully finish last week’s lab activities, you might want to complete these first. You can log into the R server and open the Week 2 Quarto file (`4141_wk2_lab.qmd`) to continue to work through these. -->
+
+<!-- #### Aims of the activity -->
+<!-- Ensure you are familiar with reading in a `.csv`-file, creating a histogram anc calculating summary statistics.  -->
+
+<!-- #### Steps -->
+
+<!-- 1. Login to the R-server -->
+<!-- 2. Navigate to your `4141_wk2_lab folder` in the Files tab (right bottom quadrant) -->
+<!-- 3. Open the example script by clicking on the file called `4141_wk2_lab_act2.qmd` -->
+<!-- 4. Complete any remaining activities -->
+
+<!-- ### Lab activity 2: Visualising, calculating and reporting correlations -->
+
+<!-- <!-- Instructions will follow soon. --> -->
+
+<!-- #### Background -->
+
+<!-- Last week, we worked with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). This week, we'll revisit how to create a histogram and then calculate descriptive statistics for the questionnaire responses. -->
+
+<!-- **Reference** -->
+
+<!-- Schubert, A.-L., Frischkorn, G. T., Sadus, K., Welhaf, M. S., Kane, M. J., & Rummel, J. (2024). The brief mind wandering three-factor scale (BMW-3). *Behavior Research Methods, 56*(8), 8720-8744. [https://doi.org/10.3758/s13428-024-02500-6](https://doi.org/10.3758/s13428-024-02500-6){target="_blank" rel="noopener"} -->
+
+<!-- #### Aims of the activity -->
+
+<!-- We are going to: -->
+
+<!-- 1.  Download and organise your files -->
+<!-- 2.  Setup the appropriate bits and pieces in RStudio -->
+<!-- 3.  Read in the data -->
+<!-- 4.  Build scatterplots with `geom_point()`, and add a line of best fit using `geom_smooth()` -->
+<!-- 5.  Calculate and interpret Pearson's r using `correlation()` -->
+<!-- 6.  Practise reporting the results in APA format -->
+
+<!-- #### Step 1: Download the files -->
+<!-- To complete this lab activity you will need two files: -->
+
+<!-- 1.  We'll work with an example script called `4141_wk3_lab.qmd`. This is a Quarto document. -->
+<!-- 2.  We need a data file called `data_bmw3.csv`. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This means that individual bits of data are separated by comma's. We'll often use `.csv` files. -->
+
+<!-- You can download the files here: [`4141_wk3_lab.zip`](files/week3/4141_wk3_lab.zip){download="4141_wk3_lab.zip"}. Usually they will be saved in your 'Downloads' folder. -->
+
+<!-- Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first). -->
+
+<!-- Finally, open the example script by clicking on the file called `4141_wk3_lab.qmd` in the Files space on the R-server. -->
+
+<!-- #### Steps 2 to 7 -->
+
+<!-- For **steps 2 to 7**, you'll be working in RStudio. -->
+
+<!-- ### Lab activity 3:  -->

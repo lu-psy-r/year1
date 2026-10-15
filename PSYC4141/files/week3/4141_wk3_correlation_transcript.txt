@@ -1,0 +1,373 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Okay. What is a correlation. Um, it really is a measure of the relationship between two continuous or numeric variables.
+
+So by numeric or continuous we mean variables that can be or that are measured on the ordinal or the rational scale.
+
+So examples are height and weight. You can put a number of that.
+
+We can measure somebody's weight. And that number means something in relation to other numbers on that scale.
+
+Um, so does height relate to weight or is stamina absence related to WBA score?
+
+Or does the number of cats that you own relate to how violent you are?
+
+Now, some of these examples may sound a little silly, but all of these questions can be tested using correlation analysis.
+
+So in other words, if something happens to x, what happens to y?
+
+That is what you get an answer to. If you do a correlation analysis. Okay.
+
+The scatterplot. So we assess the relationship between two variables visually via a scatter plot or a scatter gram.
+
+You can see what that looks like on the slide here.
+
+So each single point in this graph indicates the two values for one individual on the two variables of interest.
+
+So this participant here, for instance, at the end of this arrow,
+
+um scores about 23 on the variable on the X-axis and about 60 on the, on the variable on the y axis.
+
+Now the first step in the correlation analysis is constructing and interpreting a scatter plot.
+
+Now, two aspects of the relationship between our two variables of interest are reflected in the scatter plot.
+
+So the first one is the strength of the relationship, and the second one is the direction of the relationship.
+
+So here we have six different scatter plots.
+
+And so the strength of the correlation can be visually interpreted from the
+
+scatter plot by looking at the proximity of the scores to the line of best fit.
+
+So how closely these points are to this line,
+
+and the direction of the correlation can be visually interpreted from the scatter plot by looking at the direction of the line.
+
+Does it go up as in here, or does it go down as in here?
+
+So let's start maybe with the example here at the bottom right of this slide.
+
+So here the the scores are very close to the line of best fit which suggests it is a strong correlation.
+
+And the line starts kind of in the top left and goes down to the bottom right, which suggests that the correlation is negative.
+
+So another example. Um, here the graph at the top right shows scores that fall further away from the line of best fit.
+
+So there is more scatter around this line.
+
+But overall you can still see that it that there is a is a positive relationship because it's kind of starts at the top,
+
+the bottom left and it goes to the top right. So if x increases so does y.
+
+So that's why we call it a positive relationship.
+
+Now the graph in the top right hand middle shows scores that fall even further away from the line of best fit,
+
+which is indicative of a weaker relationship. And here, um, the line goes down again indicative of a negative relationship.
+
+So weak negative relationship would look like this.
+
+Now finally, the graph in the top row here on the left shows a situation where there is a null correlation.
+
+It's it's basically just a cloud of dots without a clear direction.
+
+So the use of of scatter plots is a really good example of the importance of visualising your data.
+
+So graphs are not just some end product or a pretty addition to your report.
+
+They allow us to familiarise ourselves with the data and identify the distribution of the data and the initial relationships.
+
+Um, and they also actually allow us to identify outliers.
+
+And we'll talk a bit more about that next week. Okay.
+
+The statistic that we use to quantify a linear relationship between two variables is called Pearson's product moment correlation coefficients,
+
+or Pearson's are. So this is a number that ranges from -1 to 1.
+
+So it can fall anywhere between -1 and 1.
+
+And the same two aspects that are visible in the scatter plot are also reflected in the correlation coefficient.
+
+So the value of the correlation coefficient, kind of ignoring the plus minus sign, reflects the strength of the relationship.
+
+So the closer to 1 or -1, the stronger the correlation.
+
+The sign reflects the direction of the relationship.
+
+So a positive coefficient reflects a positive correlation and a negative coefficient reflects a negative correlation.
+
+Now a coefficient close to zero reflects a null correlation.
+
+Now let's look at some extreme examples of different types of correlation.
+
+Here we have a positive correlation. So when x increases y also increases.
+
+So the line starts at the bottom left of the plot and goes up to the top right corner.
+
+So this suggests that a higher score on one on x.
+
+So in this case height um is associated with a higher score of weight on y axis.
+
+This is actually a perfect positive correlation because all the dots fall exactly on the line of best fit.
+
+And that's why R is one. This doesn't usually happen in real life.
+
+And we'll look at some more realistic, uh, scatter plot.
+
+Later on in the lab. Another type of correlation is the negative correlation.
+
+So a negative correlation is one x increases and y decreases.
+
+So the line starts in the top left corner of the plot and goes down to the bottom right.
+
+This suggests that a higher score on the variable on the x axis is associated with a lower score on the variable on the y axis.
+
+So here you would say a seminar since increases w ba score decreases.
+
+So seminar absence is negatively correlated with WBA score.
+
+And here again we have a perfect negative correlation with an R of minus one.
+
+So the perfect positive and negative correlations are really the two extremes.
+
+Now when the correlation is null So R is zero or close to zero.
+
+An increase in the variable on the x axis. Doesn't really have.
+
+It's not associated with a consistent change in the variable on the y axis.
+
+So as the number of cats owned increases, the level of violence doesn't change in a kind of systematic way.
+
+Now here we have those scatter plots again. And this time you can also see the correlation coefficients that characterise these relationships.
+
+So the strong negative correlation at the bottom right here has an R of minus 0.99.
+
+And the data in the graph in the top row on the right here has an R of 0.5.
+
+And this one and r -0.3.
+
+So notice negative sign which indicates that the correlation is negative.
+
+Now you might have heard of the term effect size, and effect size indicates how relevant an effect is.
+
+So Pearson's r is an effect size in itself.
+
+And there is a rule of thumb which is useful when describing your correlation or the results of your correlation analysis.
+
+So the rule of thumb suggests that correlations bigger than 0.5 are referred to as as large or strong um.
+
+Correlations between 0.3 and 0.5 are referred to as medium or moderate, and correlations between 0.1 and 0.3 are referred to as a small or weak.
+
+Now, as is often the case with rules of thumb, there are different opinions about how useful they are.
+
+But I think when you're starting out in psychology as you are, it is a useful way of describing correlations.
+
+And so these indications, uh, these rules of bumps obviously apply to both the negative and positive correlation coefficients.
+
+Now we've looked at the scatter plot and at the statistic Pearson's. Ah.
+
+Let's now have a look at how you actually derive this correlation coefficient.
+
+So if you think back to statistics last term psych 1121 um, you were taught how to derive a measure of variance.
+
+Um, so of how much variation in scores there is around a mean in a sample?
+
+Um, to do so, you use this formula. Um, so you have the score of a participant X.
+
+From that, you subtract the mean score on that variable across the sample, and you square that number.
+
+You do that for every participant in the sample. You add up all those totals and you divide by um, that's the sigma sign.
+
+And then you divide by the number of participants in the sample.
+
+And. So that is how you compute the variance of the sample.
+
+And related to variance is something called covariance which we need for calculating the correlation coefficient.
+
+The covariance is the extent to which two variables vary together.
+
+So instead of multiplying the scores by by itself as you do here, by squaring it, you multiply it by the score on the y variable.
+
+So we'll multiply it with the other variable which gives us kind of this this formula.
+
+So let's have a look at that. So to compute the covariance, you take a participant score on variable x.
+
+Subtract the mean of x across the sample and you do the same for y.
+
+So you have the stats participant score for y, and you subtract the mean for y across the sample.
+
+You multiply these two numbers and you do that for each participant.
+
+And then you add up all those numbers. The sigma sign here.
+
+And then you divide the outcome by n the number of participants.
+
+That's n minus one. Okay. Let's look at an example.
+
+So here we have some data. Um so here we have data for 15 participants here in these rows um are visible.
+
+So and we have data on four different variables. So here in the columns the first column we have job performance scores.
+
+The second column we have IQ scores. In the third column we have motivation scores.
+
+And in the fourth column we have scores for social support.
+
+So participant one scores 85 on job performance, 109 on IQ, 89 on motivation and 73 on social support.
+
+And down here we have calculated earlier and the means and standard deviations for two of these variables.
+
+So if you want to compute the covariance between job performance and motivation you would do the following.
+
+We have the formula here at the top. Um so for participant one.
+
+Participant one scores 85 um job performance.
+
+Our first variable from that we subtract the mean across the sample of job performance, which is 78.
+
+We do the same for Y. So participant one scores 89 on motivation.
+
+And from that we subtract the mean on motivation across the sample.
+
+That is 67. So if we do the same thing we end up with a number of 154 for participant one.
+
+And you do you don't do this for each participant, separate exhibit two, etc.,
+
+etc., etc. then you add up all of those totals and you divide by n minus one.
+
+Now this is how you compute covariance by hand.
+
+Of course, we wouldn't usually do it by hand, but it is helpful to kind of understand the principle.
+
+Just to keep in mind, unlike variance that um covariance may have a positive or a negative value because we're not squaring basically.
+
+so it can have a positive value and or a negative value, suggesting the direction of the variance.
+
+So that kind of maps onto the positive and negative correlation coefficients that we looked at earlier.
+
+So our example of covariance for job performance and motivation we get a number of 69.24.
+
+And from this from this covariance we'll derive Pearson's r.
+
+Now you might ask why do we need Pearson's r.
+
+Isn't the covariance enough? Now the thing is that the size of the covariance is affected by the size of variances of the variables in the sample.
+
+So depending on how big that is, um, the covariance could be really big or really small.
+
+And that makes it very difficult to compare covariances across different measures or across different samples.
+
+So the correlation coefficient Pearson's are improved that situation by dividing by the standard deviations.
+
+So the standard deviation, not the thing that you might have remember from last term.
+
+So you could say that Pearson's r is a standardised version of the covariance.
+
+So down here you can see how it works.
+
+So to calculate r Pearson's r we divide the covariance by the standard deviation of x multiplied by the standard deviation for y.
+
+Now if we do that here we have our covariance. Here we have our standard deviations that we've calculated earlier.
+
+And then we end up with an R of 0.63. Now as I mentioned previously, Pearson's r can range from -1 to 1 making it really easy to interpret.
+
+So as I said, the covariance could have any value depending on the variances of the sample that are always is between -1 and 1.
+
+So the important bits to remember from this part are that the covariance tells you to what extent one variable changes,
+
+when the other variable changes, and the correlation coefficient is derived from the covariance by standardising it.
+
+So you end up with a number that falls between -1 and 1.
+
+the proportion of variance in one variable that can be accounted for by the other variable.
+
+So to calculate the coefficient of determination or r squared is what it's also called.
+
+You simply square the correlation coefficient. So because it's squared r squared is always positive.
+
+So it doesn't matter whether a number is positive or negative.
+
+If you square it it's always becomes positive. So r squared or the coefficient of determination is always a positive number.
+
+So in our example we had an R of 0.63. If we square that we get an R squared.
+
+Or coefficient of determination of 0.4. So this tells us that 40% of the variance in job performance is accounted for by variance in motivation,
+
+giving us more information to interpret that relationship.
+
+Okay, we're almost there. Why does correlation not infer causation.
+
+So correlation only tells you whether there is a relationship between two variables.
+
+It doesn't tell you anything about the direction of that relationship,
+
+in the sense that you can't conclude, um, that if X goes up, it causes Y to go up.
+
+It is associated it might be associated with y going up in case of a positive correlation,
+
+but we don't know whether one thing causes the other or the other way around.
+
+The only way to infer causation is to do an experiment in which you manipulate
+
+an independent variable and measure what that does to your dependent variable.
+
+So only in that case, um, can you say that this manipulation caused any variation observed in the dependent variable.
+
+So for example, let's say we want to understand how children learn to read something that I'm interested in.
+
+So in a group of children,
+
+we observed a significant positive correlation between how much time they spend reading every day and their reading proficiency.
+
+So from that correlation, we can tell that there is a relationship,
+
+but we can't tell whether spending more time reading causes reading proficiency to go up
+
+or whether children with higher reading proficiency choose to spend more time reading.
+
+It could be either if we do an experiment.
+
+We can figure this out, right? So imagine we we have a measure of how accurately children read a list of words.
+
+And this is our measure of reading proficiency. That is our dependent variable.
+
+We then divide the sample into two groups. One group continues with normal classroom reading instruction,
+
+and the other group receives an intervention in which they read a book at their reading level together with uh,
+
+with an older, with an older and older child, um, who reads fluently.
+
+So after six weeks, we measure the children's reading proficiency again.
+
+And if the children in the group who received the intervention improved more than
+
+the group of children who received the kind of standard classroom instruction.
+
+Then can we conclude that spending more time reading causes reading proficiency to go up?
+
+Okay, so let's look at another example of kind of a significant positive correlation and why we cannot infer causation.
+
+So here we have a scatter plot with the number of ice creams sold on the x axis here and the number of shark attacks on the y axis here.
+
+So this would be a relatively strong positive correlation as the line goes up and
+
+the individual dots are relatively close to that line and to that line of best fit.
+
+So that suggests that shark attacks are related to ice cream sales.
+
+Now, does that mean that eating ice cream causes you to be attacked by a shark?
+
+No. And in this scenario, it is much more likely that there is a third factor or a third variable that affects both measures.
+
+So hot weather results in more people swimming in the sea.
+
+Which leads to, uh, which makes it more likely that more people are attacked by a shark.
+
+Hot weather also leads to people eating more ice cream.
+
+So there's this third factor, or weather, that influences both shark attacks and ice cream sold.
+
+So the bottom line is you need to be careful in how you interpret it,
+
+a significant correlation and really think about, um, what what a significant correlation means.
+
