@@ -55,7 +55,7 @@ Make a note of questions as you work through the material. These might be answer
 :::
 
 ::: {.callout-note title="A note about the recordings"}
-The recordings were originally delivered by Dr Margriet Groen as part of a different module and have been selected and reorganised for this week's teaching. If you hear references to a different week or to something covered "last week" don't worry about these references! We've reviewed the materials and you will never be expected to know anything that you haven't yet covered. Also, the lecture refers to a 'WBA' score. This stands for 'web-based assessment' and you can think of this as a weekly online quiz to check your learning.
+The recordings were originally delivered by Dr Margriet Groen as part of a different module and have been selected and reorganised for this week's teaching. If you hear references to a different week or to something covered "last week" don't worry about these references! We've reviewed the materials and you will never be expected to know anything that you haven't yet covered. 
 :::
 
 ### Section A: Correlation {#sec-4141-w3-lectures-correlation}
@@ -65,11 +65,7 @@ You can watch the lecture for the video using the video playback windows shown n
 1.  Correlation: Theory
 2.  Correlation: How to run and report a correlation analysis
 
-::: {.callout-tip title="Downloading files"}
-If the file doesn't download when you click on it, try right-clicking on it instead. You should than see multiple options and you can select 'Download linked file'.
-:::
-
-**1. Correlation: Theory** (~30 minutes)
+**1. Correlation: Theory** (~23 minutes)
 
 What is correlation? How can we describe the direction and strength of a relationship between two numerical variables? Why does correlation not infer causation?
 
@@ -81,19 +77,21 @@ What is correlation? How can we describe the direction and strength of a relatio
 <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=a5942176-0e7f-44ab-a2d0-b4e300fbae86&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; width: 720px; height: 405px;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="Week 3 (2026) section A part 1"></iframe>
 ```
 
+::: {.callout-note}
+The lecture refers to a 'WBA' score. This stands for 'web-based assessment' and you can think of this as a weekly online quiz to check your learning.
+:::
+
+\newline
 [Correlation: Theory slides](files/week3/4141_wk3_correlation_slides.pdf){download="4141_wk3_correlation_slides.pdf"}.
 [Correlation: Theory transcript](files/week3/4141_wk3_correlation_transcript.txt){download="4141_wk3_correlation_transcript.txt"}.
 
 **2. Correlation: How to run and report a correlation analysis** (~ minutes) A worked example showing how to calculate a correlation in RStudio and how to report a statistical result in American Psychological Association (APA) format.
 
-::: {. callout-tip title="APA Style"}
+::: {. callout-note title="APA Style"}
 APA stands for the American Psychological Association. APA style provides shared conventions and guidelines for how to report write a research report in psychology. This includes how to report statistical results clearly and consistently. You can read the APA style (7th edition) [here](https://apastyle.apa.org){target="_blank" rel="noopener"}. A useful summary on reporting numbers and statists in APA style can be found [here](files/week3/apa_report_stats.pdf){download="apa_numbers-statistics-guide.pdf"}).
 :::
 
-```{=html}
-
-```
-
+[VIDEO WILL FOLLOW SOON]
 
 ::: {.callout-tip title="Take a break!"}
 Before continuing, we recommend you take a **15-minute break away from your computer**. Remember to note down any questions to bring to the Q&A, lab or discussion forum whilst you’re watching the lectures.
@@ -120,15 +118,11 @@ Please note that it is not a requirement to take part in the study that is sugge
 
 **2. What makes psychological research ethical?** (15-20 minutes) This lecture introduces the principles of ethical psychological research, including informed consent, deception and debriefing, privacy and data protection, and the importance of inclusive recruitment. We will also consider why ethical responsibility continues beyond data collection, into the analysis, interpretation and communication of findings.
 
-[VIDEO TO FOLLOW SOON]
+[VIDEO WILL FOLLOW SOON]
 
 ::: {.callout-tip}
 As you watch, think about the responsibilities researchers have towards participants before, during and after a study.
 :::
-
-<!-- ```{=html} -->
-
-<!-- ``` -->
 
 ## Reading {#sec-4141-w3-reading}
 
@@ -151,7 +145,7 @@ For **week 3**, the reading is:
 
 -   Howell, D. C. (2017). Fundamental statistics for the behavioral sciences (9th ed.). Cengage Learning. Chapter 9. **Essential** Focus on sections 9.1 to 9.4, 9.8, 9.9 and 9.15. These sections support the concepts introduced in the pre-recorded lectures on correlation.
 - Wright, D. B., Barnett, J., & Breakwell, G. M. (2020). Chapter 2: Ethics. In G. M. Breakwell, D. B. Wright, & J. Barnett (Eds.), *Research methods in psychology* (5th ed., pp. 31-50). SAGE Publications. **Recommended**
-- British Psychological Society. (2021). BPS Code of Human Research Ethics (2nd ed.). [https://doi.org/10.53841/bpsrep.2021.inf180](https://doi.org/10.53841/bpsrep.2021.inf180){target="_blank" rel="noopener"} or [here](files/week3/bps_codeofhumanresearchethics_2021.pdf){download="bps_codeofhumanresearchethics_2021.pdf"} if you prefer to download it as a pdf.
+- British Psychological Society. (2021). BPS Code of Human Research Ethics (2nd ed.). [https://doi.org/10.53841/bpsrep.2021.inf180](https://doi.org/10.53841/bpsrep.2021.inf180){target="_blank" rel="noopener"} or [here](files/week3/bps_codeofhumanresearchethics_2021.pdf){download="bps_codeofhumanresearchethics_2021.pdf"} if you prefer to download it as a pdf. **Optional**
 
 ## Pre-lab activities {#sec-4141-w2-prelab-activities}
 
@@ -175,7 +169,7 @@ A correlation coefficient is useful, but looking at a scatterplot helps us spot 
 
 Have a look at [**this visualisation of correlations**](https://rpsychologist.com/correlation/){target="_blank" rel="noopener"} by Kristoffer Magnusson.
 
-After having read the relevant sections of Howell (2017) Chapter 9 (see under @sec-4141-w3-reading), use this visualisation page to visually replicate the scatterplots in Figures 9.1 and 9.2 - use a sample of 100. After that, visually replicate the scatterplots in Figure 9.3.
+After having read the relevant sections of Howell (2017) Chapter 9 (see under [Reading](#sec-4141-w3-reading)), use this visualisation page to visually replicate the scatterplots in Figures 9.1 and 9.2 - use a sample of 100. After that, visually replicate the scatterplots in Figure 9.3.
 
 Each time you change the correlation, pay attention to the shared variance (the overlap between the two variables, based on R²) and see how this changes with the changing level of relationship between the two variables. The greater the shared variance, the stronger the relationship.
 
