@@ -40,7 +40,7 @@ You can navigate to each in the side bar on the right
 
 Last week, we explored how psychological concepts can be measured and represented as data. You practised summarising one numerical variable at a time, using measures of central tendency and variability, and created histograms to visualise distributions. We also considered why it is important to look at the data rather than rely on summary statistics alone.
 
-**This week, we move from examining one numerical variable to two**. We will introduce correlation as a measure of association between two variables, create scatterplots, calculate a correlation coefficient in RStudio, and practise interpreting and reporting the results.
+**This week, we move from examining one numerical variable to two**. We will introduce correlation as a measure of association between two variables, create scatterplots, calculate a correlation coefficient in RStudio, and practise interpreting the results.
 
 We will also consider what it means to conduct ethical psychological research, from informed consent and data protection to inclusive recruitment and responsible interpretation. These ideas connect directly to correlation, as finding a relationship between X and Y is not the same as demonstrating that a change in X causes a change in Y.
 
@@ -86,11 +86,11 @@ The lecture refers to a 'WBA' score. This stands for 'web-based assessment' and 
 [Correlation: Theory slides](files/week3/4141_wk3_correlation_slides.pdf){download="4141_wk3_correlation_slides.pdf"}.
 [Correlation: Theory transcript](files/week3/4141_wk3_correlation_transcript.txt){download="4141_wk3_correlation_transcript.txt"}.
 
-**2. Correlation: How to run and report a correlation analysis** (~ minutes) A worked example showing how to calculate a correlation in RStudio and how to report a statistical result in American Psychological Association (APA) format.
+**2. Correlation: How to run and report a correlation analysis** (~ minutes) A worked example showing how to calculate a correlation in RStudio.
 
-::: {.callout-note title="APA Style"}
-APA stands for the American Psychological Association. APA style provides shared conventions and guidelines for how to report write a research report in psychology. This includes how to report statistical results clearly and consistently. You can read the APA style (7th edition) [here](https://apastyle.apa.org){target="_blank" rel="noopener"}. A useful summary on reporting numbers and statists in APA style can be found [here](files/week3/apa_report_stats.pdf){download="apa_numbers-statistics-guide.pdf"}).
-:::
+<!-- ::: {.callout-note title="APA Style"} -->
+<!-- APA stands for the American Psychological Association. APA style provides shared conventions and guidelines for how to report write a research report in psychology. This includes how to report statistical results clearly and consistently. You can read the APA style (7th edition) [here](https://apastyle.apa.org){target="_blank" rel="noopener"}. A useful summary on reporting numbers and statists in APA style can be found [here](files/week3/apa_report_stats.pdf){download="apa_numbers-statistics-guide.pdf"}). -->
+<!-- ::: -->
 
 [VIDEO WILL FOLLOW SOON]
 
@@ -227,7 +227,6 @@ Information on the lab activities will follow soon.
 <!-- 3.  Read in the data -->
 <!-- 4.  Build scatterplots with `geom_point()`, and add a line of best fit using `geom_smooth()` -->
 <!-- 5.  Calculate and interpret Pearson's r using `correlation()` -->
-<!-- 6.  Practise reporting the results in APA format -->
 
 <!-- #### Step 1: Download the files -->
 <!-- To complete this lab activity you will need two files: -->
