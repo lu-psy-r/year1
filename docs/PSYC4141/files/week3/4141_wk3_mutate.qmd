@@ -1,0 +1,160 @@
+---
+title: "How to use `mutate()`"
+author: "Dr. Margriet Groen"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    transition: fade
+    incremental: false
+    view-distance: 999
+---
+
+```{=html}
+<style>
+.reveal h2 { font-size: 1.3em; }
+</style>
+```
+
+## Overview
+
+-   How to create a new variable
+
+::: notes
+In this video I'll walk you through how to create a new variable using the `mutate()` function. We'll use an example of combining the responses of several questions into a combined score.
+:::
+
+## Step 1: Setup - load libraries
+
+```{r}
+#| label: load_libraries
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+library(here)
+library(tidyverse)
+```
+
+1.  The `here` package helps with finding your files.
+2.  The `tidyverse` is a set of packages that handles almost everything you need to do with data.
+
+## Step 2: Reading in the data
+
+```{r}
+#| label: read_data
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+data_mw <- read_csv(here("PSYC4141/files/week3", "data_bmw3.csv"))
+```
+
+1. `read_csv` is a function that reads in data that are stored in a file of the type `.csv`. We need to tell R where the file is and what it is called.
+
+`<-` is an assignment arrow, telling R that we want to put the data in an object (or dataframe) called `data_mw`
+
+## Step 3a: Compute a single score for unintentional mind wandering {.smaller}
+
+```{r}
+#| label: unintentional_mw
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+data_mw <- mutate(
+  data_mw, 
+  unintentional_mw = (BMW3_UN_01 + BMW3_UN_02 + BMW3_UN_03 + BMW3_UN_04) / 4
+  )
+```
+
+1. `mutate()` is a function that we use to create a new variable.
+2. We need to tell R which data to use;
+3. What the new variable is called and how it is computed. 
+
+**Unintentional mind wandering**
+
+- BMW3_UN_01: While listening to a presentation, my thoughts start to trail off unintentionally.
+- BMW3_UN_02: When watching TV, other things inadvertently cross my mind.
+- BMW3_UN_03: I am often absentminded.
+- BMW3_UN_04: When I am engaged in an activity, my thoughts wander to other things all by themselves.
+
+::: notes
+So far we have looked at the responses to individual items. However, single questionnaire items are noisy. A person's answer to one question can be shaped by how they read the wording, or how they happened to interpret the response options. Or they may be distracted while answering that item. If several items tap the same underlying construct, combining them into one score (usually a mean or sum) lets these item-specific quirks average out, so the score is more reliable and a better reflection of the thing we care about.
+
+The Brief Mind Wandering Three-Factor Scale (BMW-3; Schubert et al., 2024) is a good example. It is a 12-item questionnaire that treats mind wandering as task-unrelated thought and measures three dimensions: unintentional mind wandering, intentional mind wandering, and meta-awareness of mind wandering. Rather than asking one question about mind wandering and hoping it captures everything, the scale uses four items for each dimension and combines them into a subscale score by averaging.
+
+Next, we're going to calculate a score for 'unintentional mind wandering'. Schubert et al. (2024) define this as task-unrelated thoughts that occur spontaneously. This contrasts with 'intentional mind wandering'; defined as task-unrelated thoughts where attention is deliberately redirected away from the current activity.
+:::
+
+## Step 3b: Compute a single score for meta-awareness of mind wandering {.smaller}
+
+```{r}
+#| label: meta-awareness_mw
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+data_mw <- mutate(
+  data_mw, 
+  meta-awareness_mw = (BMW3_ME_01 + BMW3_ME_02 + BMW3_ME_03 + BMW3_ME_04) / 4
+  )
+```
+
+1. `mutate()` is a function that we use to create a new variable.
+2. We need to tell R which data to use,
+3. what the new variable is called and how it is computed. 
+
+**Meta-awareness of mind wandering**
+
+- BMW3_ME_01: [It takes a very long time for me to notice that my thoughts have wandered off.]{style="color: red;"}
+- BMW3_ME_02: I quickly catch myself when I am not listening attentively.
+- BMW3_ME_03: [It takes a while before I realise that I zoned out.]{style="color: red;"}
+- BMW3_ME_04: I immediately notice when my thoughts are not in the here and now.
+
+::: notes
+If you look at the questions that make up the meta-awareness of mind wandering scale, you'll notice that the black ones and the red ones are phrased in opposite directions. Let me explain what I mean by that. To understand this, we need to go back to have another look at the answer options:
+:::
+
+## Reverse scoring {.smaller}
+
+| **Answer option** | Fully disagree | Somewhat disagree | Neutral | Somewhat agree | Fully agree |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| **Score** | 0 | 1 | 2 | 3 | 4 |
+
+- BMW3_ME_02: I quickly catch myself when I am not listening attentively.
+- BMW3_ME_01: [It takes a very long time for me to notice that my thoughts have wandered off.]{style="color: red;"}
+
+BMW3_ME_01Reverse = 4 - BMW3_ME_01
+
+## Step 3c: Compute a single score for intentional mind wandering {.smaller}
+
+```{r}
+#| label: intentional_mw
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+data_mw <- mutate(
+  data_mw,
+  intentional_mw = (BMW3_IN_01 + BMW3_IN_02 + BMW3_IN_03 + BMW3_IN_04) / 4
+  )
+```
+
+1. `mutate()` is a function that we use to create a new variable.
+2. We need to tell R which data to use,
+3. what the new variable is called and how it is computed. 
+
+**Intentional mind wandering**
+
+- I make my thoughts wander so that time passes faster.
+- I deliberately allow my mind to wander to escape the daily grind.
+- I distract myself in monotonous situations by letting my thoughts run free.
+- I actively use the time during routine tasks to mull over other things in the meanwhile.
+
+## Step 4: Save the combined scores to a new datafile
+
+```{r}
+#| label: save_file
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+write_csv(data_bmw3_subscales, here("PSYC4141/files/week1/", "data_bmw3_subscales.csv"))
+```
+
+1. We use the `write_csv()` function to create a file. We need to tell R which dataframe to include, where to safe it and what to call the file.

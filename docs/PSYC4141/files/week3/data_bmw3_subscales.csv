@@ -1,0 +1,216 @@
+subject,location,type,id,Age,gender,education,BMW3_UN_01,BMW3_UN_02,BMW3_UN_03,BMW3_UN_04,BMW3_ME_01,BMW3_ME_02,BMW3_ME_03,BMW3_ME_04,BMW3_IN_01,BMW3_IN_02,BMW3_IN_03,BMW3_IN_04,BMW3_UN,BMW3_ME,BMW3_IN
+1,Greensboro,online,1,19,female,high school,4,4,3,3,2,2,1,2,2,3,3,3,3.5,1.75,2.75
+2,Greensboro,online,1,26,female,Bachelor's degree,4,4,4,4,3,4,3,4,4,4,4,4,4,3.5,4
+3,Greensboro,online,1,18,male,high school,2,3,1,2,3,3,3,3,1,1,1,1,2,3,1
+4,Greensboro,online,1,18,male,high school,3,4,3,3,2,2,2,2,3,3,2,3,3.25,2,2.75
+5,Greensboro,online,1,19,male,high school,3,3,2,1,3,2,2,3,1,1,1,3,2.25,2.5,1.5
+6,Greensboro,online,1,18,female,high school,4,4,3,4,1,4,1,3,4,3,4,1,3.75,2.25,3
+7,Greensboro,online,1,18,female,high school,3,3,4,2,1,3,1,2,4,4,3,3,3,1.75,3.5
+8,Greensboro,online,1,18,female,high school,3,3,2,3,2,2,2,2,3,3,3,3,2.75,2,3
+9,Greensboro,online,1,31,female,Master's degree,3,4,3,3,1,1,2,3,4,3,4,4,3.25,1.75,3.75
+10,Greensboro,online,1,18,female,high school,3,2,1,1,4,3,3,3,4,2,3,2,1.75,3.25,2.75
+11,Greensboro,online,1,18,male,high school,4,4,2,3,3,1,3,1,3,3,3,3,3.25,2,3
+12,Greensboro,online,1,18,female,high school,2,3,3,3,3,2,3,3,1,1,0,1,2.75,2.75,0.75
+13,Greensboro,online,1,34,female,Bachelor's degree,1,3,2,3,3,3,1,3,4,4,4,4,2.25,2.5,4
+14,Greensboro,online,1,19,female,high school,3,3,1,3,3,3,3,3,3,3,2,3,2.5,3,2.75
+15,Greensboro,online,1,19,male,high school,4,3,2,2,1,1,1,2,3,4,3,3,2.75,1.25,3.25
+16,Greensboro,online,1,19,female,high school,4,4,2,3,3,2,3,3,4,3,3,3,3.25,2.75,3.25
+17,Greensboro,online,1,21,male,Bachelor's degree,3,4,2,1,1,2,1,2,4,4,4,4,2.5,1.5,4
+18,Greensboro,online,1,18,female,high school,3,3,3,3,1,1,3,0,3,3,3,2,3,1.25,2.75
+19,Greensboro,online,1,18,male,high school,3,3,2,3,2,3,3,3,2,1,3,3,2.75,2.75,2.25
+20,Greensboro,online,1,18,female,high school,3,4,2,3,3,3,1,4,3,1,3,3,3,2.75,2.5
+21,Greensboro,online,1,18,male,high school,2,1,2,1,3,2,2,1,1,2,2,2,1.5,2,1.75
+22,Greensboro,online,1,20,female,high school,3,3,1,3,3,1,3,1,3,3,3,3,2.5,2,3
+23,Greensboro,online,1,21,female,high school,4,2,3,3,3,3,2,2,4,3,3,2,3,2.5,3
+24,Greensboro,online,1,18,female,high school,4,3,2,2,3,4,3,4,0,0,2,4,2.75,3.5,1.5
+25,Greensboro,online,1,18,female,high school,3,3,3,3,1,2,1,3,3,1,1,3,3,1.75,2
+26,Greensboro,online,1,27,female,Bachelor's degree,4,4,0,4,3,3,3,1,3,3,3,3,3,2.5,3
+27,Greensboro,online,1,28,female,high school,3,3,2,3,3,3,3,1,3,3,3,3,2.75,2.5,3
+28,Greensboro,online,1,19,female,high school,3,3,3,3,3,3,3,1,3,4,4,3,3,2.5,3.5
+29,Greensboro,online,1,22,male,high school,3,3,1,1,4,4,4,4,2,0,1,4,2,4,1.75
+30,Greensboro,online,1,24,female,Bachelor's degree,3,4,4,3,3,3,1,3,3,3,3,4,3.5,2.5,3.25
+31,Greensboro,online,1,18,female,high school,4,4,2,3,1,1,1,2,3,4,1,2,3.25,1.25,2.5
+32,Greensboro,online,1,19,female,high school,4,4,3,4,2,2,2,3,1,1,1,2,3.75,2.25,1.25
+33,Greensboro,online,1,19,non-binary,high school,4,4,4,4,1,2,2,1,3,3,4,2,4,1.5,3
+34,Greensboro,online,1,19,female,high school,4,2,0,0,4,0,4,3,1,0,0,2,1.5,2.75,0.75
+35,Greensboro,online,1,21,female,high school,4,4,4,4,0,0,0,0,3,4,4,4,4,0,3.75
+36,Greensboro,online,1,20,female,other,4,3,0,3,4,4,3,3,2,0,2,2,2.5,3.5,1.5
+37,Greensboro,online,1,19,female,high school,4,4,3,4,2,3,1,3,1,1,3,3,3.75,2.25,2
+38,Greensboro,online,1,19,female,high school,3,1,2,1,4,3,4,4,3,3,3,2,1.75,3.75,2.75
+39,Greensboro,online,1,20,female,high school,4,4,4,4,0,4,0,4,1,4,4,4,4,2,3.25
+40,Greensboro,online,1,21,male,high school,3,3,2,2,2,2,2,3,3,3,3,3,2.5,2.25,3
+41,Greensboro,online,1,19,male,high school,4,3,3,2,2,3,3,2,3,3,3,1,3,2.5,2.5
+42,Greensboro,online,1,19,female,other,3,3,2,1,3,3,4,3,3,2,2,2,2.25,3.25,2.25
+43,Greensboro,online,1,18,female,high school,4,4,4,4,2,3,2,2,4,3,4,3,4,2.25,3.5
+44,Greensboro,online,1,28,female,Bachelor's degree,3,2,1,1,4,3,4,3,0,1,0,3,1.75,3.5,1
+45,Greensboro,online,1,20,male,other,3,3,2,3,2,3,3,4,3,3,3,3,2.75,3,3
+46,Greensboro,online,1,19,male,high school,4,4,1,1,2,3,3,3,0,0,1,4,2.5,2.75,1.25
+47,Greensboro,online,1,19,male,high school,1,0,0,0,2,1,3,2,1,1,2,1,0.25,2,1.25
+48,Greensboro,online,1,19,female,high school,3,3,2,2,2,3,2,2,3,3,3,2,2.5,2.25,2.75
+49,Greensboro,online,1,22,female,high school,3,4,3,3,3,3,3,2,4,3,4,3,3.25,2.75,3.5
+50,Greensboro,online,1,18,female,high school,3,3,2,3,3,3,3,3,3,3,3,3,2.75,3,3
+51,Greensboro,online,1,25,female,Bachelor's degree,3,3,3,3,3,2,3,1,0,1,1,3,3,2.25,1.25
+52,Greensboro,online,1,19,prefer not to answer,high school,4,4,3,4,3,3,4,3,1,3,4,4,3.75,3.25,3
+53,Greensboro,online,1,25,female,Bachelor's degree,3,4,1,0,3,3,3,0,1,1,3,4,2,2.25,2.25
+54,Greensboro,online,1,25,male,Bachelor's degree,3,1,1,3,3,3,3,2,3,3,3,4,2,2.75,3.25
+55,Greensboro,online,1,22,female,high school,3,4,1,1,4,4,4,3,3,3,3,3,2.25,3.75,3
+56,Greensboro,online,1,18,female,high school,4,4,2,3,2,1,2,1,4,3,3,3,3.25,1.5,3.25
+57,Greensboro,online,1,19,female,high school,4,3,2,2,2,1,2,1,2,1,3,3,2.75,1.5,2.25
+58,Greensboro,online,1,18,female,high school,3,3,2,4,1,1,1,0,3,2,3,3,3,0.75,2.75
+59,Greensboro,online,1,20,non-binary,high school,4,4,4,4,2,1,1,1,3,4,4,4,4,1.25,3.75
+60,Greensboro,online,1,19,female,high school,2,3,3,3,1,2,2,1,2,1,1,2,2.75,1.5,1.5
+61,Greensboro,online,1,20,male,high school,4,4,2,3,3,2,3,2,2,3,3,1,3.25,2.5,2.25
+62,Greensboro,online,1,20,female,high school,3,4,3,3,1,2,2,1,1,1,3,1,3.25,1.5,1.5
+63,Greensboro,online,1,19,female,high school,3,1,2,1,2,3,2,2,0,0,0,0,1.75,2.25,0
+64,Greensboro,online,1,18,female,high school,3,3,2,2,1,2,2,1,1,0,2,2,2.5,1.5,1.25
+65,Greensboro,online,1,18,female,high school,3,3,0,3,1,2,1,3,3,4,4,2,2.25,1.75,3.25
+66,Greensboro,online,1,19,female,high school,3,1,3,3,3,3,3,3,0,0,0,1,2.5,3,0.25
+67,Greensboro,online,1,19,female,high school,4,2,2,3,3,3,3,4,3,1,0,0,2.75,3.25,1
+68,Greensboro,online,1,19,male,high school,3,2,2,3,4,3,4,4,3,3,3,2,2.5,3.75,2.75
+69,Greensboro,online,1,19,female,high school,0,4,2,4,1,1,4,4,4,4,4,1,2.5,2.5,3.25
+70,Greensboro,online,1,20,male,Bachelor's degree,3,3,3,2,3,3,3,3,3,3,3,3,2.75,3,3
+71,Greensboro,online,1,18,male,high school,0,4,3,1,1,1,1,1,4,4,4,2,2,1,3.5
+72,Greensboro,online,1,18,female,high school,3,4,3,3,1,1,1,1,4,4,4,4,3.25,1,4
+73,Greensboro,online,1,19,female,high school,3,2,2,3,2,1,2,2,3,2,2,1,2.5,1.75,2
+74,Greensboro,online,1,19,male,high school,3,3,1,0,4,3,3,2,3,1,3,1,1.75,3,2
+75,Greensboro,online,1,19,female,high school,0,2,0,2,4,4,2,2,2,3,2,2,1,3,2.25
+76,Greensboro,online,1,19,male,high school,3,3,1,2,3,3,2,3,3,2,2,2,2.25,2.75,2.25
+77,Greensboro,online,1,18,NA,prefer not to answer,3,3,2,3,3,2,2,3,3,3,3,3,2.75,2.5,3
+78,Greensboro,online,1,21,male,high school,4,3,2,3,3,3,3,3,4,4,3,4,3,3,3.75
+79,Greensboro,online,1,18,male,high school,3,4,0,3,4,4,4,2,4,4,4,4,2.5,3.5,4
+80,Greensboro,online,1,18,male,high school,4,3,1,3,3,3,2,4,3,1,4,1,2.75,3,2.25
+81,Greensboro,online,1,19,female,high school,3,4,1,1,4,3,3,3,0,0,1,2,2.25,3.25,0.75
+82,Greensboro,online,1,18,female,high school,0,3,2,0,4,4,4,3,1,2,2,1,1.25,3.75,1.5
+83,Greensboro,online,1,22,male,Bachelor's degree,0,1,0,0,4,0,4,3,2,0,1,1,0.25,2.75,1
+84,Greensboro,online,1,18,male,high school,4,4,3,4,2,1,3,0,3,3,3,1,3.75,1.5,2.5
+85,Greensboro,online,1,20,male,high school,4,1,3,2,2,2,2,2,3,3,2,2,2.5,2,2.5
+86,Greensboro,online,1,18,male,high school,4,4,4,3,3,3,3,3,4,4,4,4,3.75,3,4
+87,Greensboro,online,1,19,male,high school,1,1,0,1,1,2,1,1,1,2,3,2,0.75,1.25,2
+88,Greensboro,online,1,22,female,high school,3,4,2,3,3,2,3,2,0,2,2,3,3,2.5,1.75
+89,Greensboro,online,1,20,female,high school,4,4,4,4,0,2,1,1,4,2,4,1,4,1,2.75
+90,Greensboro,online,1,19,male,high school,3,3,0,3,3,4,3,3,3,3,4,4,2.25,3.25,3.5
+91,Greensboro,online,1,20,male,high school,4,4,2,4,0,1,2,3,2,0,1,2,3.5,1.5,1.25
+92,Greensboro,online,1,18,male,high school,1,3,0,1,3,1,3,3,0,1,1,3,1.25,2.5,1.25
+93,Greensboro,online,1,30,female,prefer not to answer,2,3,0,1,4,4,4,3,2,1,2,0,1.5,3.75,1.25
+94,Greensboro,online,1,18,female,high school,4,4,4,4,1,3,2,3,4,4,4,4,4,2.25,4
+95,Greensboro,online,1,18,female,high school,3,3,2,2,3,3,3,2,2,1,1,2,2.5,2.75,1.5
+96,Greensboro,online,1,22,male,high school,3,4,4,2,3,3,2,3,3,3,3,2,3.25,2.75,2.75
+97,Greensboro,online,1,19,male,high school,2,3,2,3,4,3,3,3,3,4,4,3,2.5,3.25,3.5
+98,Greensboro,online,1,19,male,high school,2,3,2,3,3,3,3,4,3,1,3,2,2.5,3.25,2.25
+99,Greensboro,online,1,20,female,high school,2,2,2,2,3,3,2,1,2,2,3,2,2,2.25,2.25
+100,Greensboro,online,1,19,female,high school,3,3,3,3,1,3,1,2,2,2,2,3,3,1.75,2.25
+101,Greensboro,online,1,23,female,Bachelor's degree,3,1,3,3,1,1,1,1,2,3,3,3,2.5,1,2.75
+102,Greensboro,online,1,21,male,high school,4,2,1,1,3,0,2,2,0,0,2,2,2,1.75,1
+103,Greensboro,online,1,22,female,Bachelor's degree,0,2,1,1,3,4,3,3,0,0,0,0,1,3.25,0
+104,Greensboro,online,1,18,female,high school,4,4,3,4,1,2,1,1,1,1,3,3,3.75,1.25,2
+105,Greensboro,online,1,18,female,high school,4,1,2,3,2,2,2,2,3,3,3,1,2.5,2,2.5
+106,Greensboro,online,1,18,female,high school,4,4,2,4,4,3,4,4,4,4,4,4,3.5,3.75,4
+107,Greensboro,online,1,18,female,high school,4,4,3,2,4,3,4,3,4,3,3,4,3.25,3.5,3.5
+108,Greensboro,online,1,20,female,high school,4,4,2,3,3,3,3,4,0,3,4,3,3.25,3.25,2.5
+109,Greensboro,online,1,21,female,high school,4,4,3,3,2,1,1,2,2,2,3,3,3.5,1.5,2.5
+110,Greensboro,online,1,18,male,high school,3,3,3,2,2,1,1,0,0,0,0,1,2.75,1,0.25
+111,Greensboro,online,1,27,female,Bachelor's degree,3,3,1,0,4,3,4,4,2,3,3,0,1.75,3.75,2
+112,Greensboro,online,1,20,male,high school,4,3,3,3,3,2,3,3,3,2,4,3,3.25,2.75,3
+113,Greensboro,online,1,27,male,high school,4,3,3,2,1,2,0,3,1,1,2,2,3,1.5,1.5
+114,Greensboro,online,1,22,male,high school,4,4,4,4,1,1,0,1,2,2,2,3,4,0.75,2.25
+115,Greensboro,online,1,19,female,high school,3,3,3,3,2,2,2,2,3,3,2,2,3,2,2.5
+116,Greensboro,online,1,21,female,high school,3,3,3,3,2,4,4,3,3,3,3,2,3,3.25,2.75
+117,Greensboro,online,1,18,female,high school,0,2,0,0,4,1,4,4,0,0,0,0,0.5,3.25,0
+118,Greensboro,online,1,21,female,other,3,2,2,3,4,4,3,4,0,2,0,2,2.5,3.75,1
+119,Greensboro,online,1,22,female,high school,3,3,1,1,4,1,4,3,2,0,0,3,2,3,1.25
+120,Greensboro,online,1,19,male,high school,3,0,4,1,1,0,0,0,1,1,1,2,2,0.25,1.25
+121,Greensboro,online,1,18,male,some high school,4,3,3,3,2,3,2,2,2,1,3,2,3.25,2.25,2
+122,Greensboro,online,1,20,male,high school,3,3,1,3,3,2,3,3,1,2,2,2,2.5,2.75,1.75
+123,Greensboro,online,1,21,female,high school,4,4,3,3,2,2,2,2,3,3,3,3,3.5,2,3
+124,Greensboro,online,1,19,female,high school,3,4,1,4,3,3,3,3,4,4,4,1,3,3,3.25
+125,Greensboro,online,1,20,male,high school,3,3,3,1,2,2,3,1,3,2,3,3,2.5,2,2.75
+126,Greensboro,online,1,20,female,high school,4,3,2,1,3,3,1,3,3,2,2,0,2.5,2.5,1.75
+127,Greensboro,online,1,19,female,Bachelor's degree,4,3,3,4,2,1,1,2,3,3,4,2,3.5,1.5,3
+128,Greensboro,online,1,20,non-binary,high school,3,3,1,3,4,3,3,3,1,3,2,2,2.5,3.25,2
+129,Greensboro,online,2,30,female,other,4,4,4,1,1,3,1,1,0,0,0,2,3.25,1.5,0.5
+130,Greensboro,online,2,19,male,high school,4,4,3,2,2,3,2,2,1,1,1,2,3.25,2.25,1.25
+131,Greensboro,online,2,20,female,high school,2,3,4,4,2,3,3,1,4,4,4,4,3.25,2.25,4
+132,Greensboro,online,2,25,female,high school,3,3,0,1,4,4,4,2,0,0,0,0,1.75,3.5,0
+133,Greensboro,online,2,20,female,high school,4,3,3,3,3,4,2,1,0,1,3,4,3.25,2.5,2
+134,Greensboro,online,2,19,female,high school,2,3,1,2,1,2,1,2,1,0,2,2,2,1.5,1.25
+135,Greensboro,online,2,20,female,high school,3,3,2,3,3,3,3,2,1,0,0,2,2.75,2.75,0.75
+136,Greensboro,online,2,27,female,high school,3,3,1,0,4,4,4,4,0,0,2,0,1.75,4,0.5
+137,Greensboro,online,2,26,male,other,3,3,1,2,3,3,3,3,2,1,3,3,2.25,3,2.25
+138,Greensboro,online,2,19,female,high school,4,4,4,4,0,1,0,0,3,1,4,4,4,0.25,3
+139,Greensboro,online,2,30,female,Trade School,4,3,2,3,2,2,2,2,1,1,2,4,3,2,2
+140,Greensboro,online,2,19,male,high school,2,2,2,2,2,4,2,2,2,2,2,3,2,2.5,2.25
+141,Greensboro,online,2,19,male,high school,1,4,1,2,4,4,3,4,3,0,3,4,2,3.75,2.5
+142,Greensboro,online,2,18,female,high school,4,3,3,4,1,2,1,1,4,2,4,4,3.5,1.25,3.5
+143,Greensboro,online,2,20,male,high school,4,0,2,3,4,0,4,4,4,4,4,4,2.25,3,4
+144,Greensboro,online,2,33,male,Master's degree,4,1,0,3,3,4,4,3,0,2,3,3,2,3.5,2
+145,Greensboro,online,2,19,female,high school,3,3,1,1,4,4,4,4,3,3,1,2,2,4,2.25
+146,Greensboro,online,2,22,male,high school,4,3,2,0,4,1,1,4,4,3,4,4,2.25,2.5,3.75
+147,Greensboro,online,2,31,male,high school,3,3,3,1,1,1,1,1,3,3,3,3,2.5,1,3
+148,Greensboro,online,2,37,female,other,4,4,0,4,4,2,2,2,0,0,4,0,3,2.5,1
+149,Greensboro,online,2,NA,NA,high school,3,2,1,0,4,3,4,0,0,0,1,0,1.5,2.75,0.25
+150,Greensboro,online,2,37,female,other,4,4,3,4,2,2,2,2,0,0,0,2,3.75,2,0.5
+151,Greensboro,online,2,19,female,high school,4,4,4,4,0,0,0,0,3,3,1,3,4,0,2.5
+152,Greensboro,online,2,27,female,high school,3,3,0,4,3,3,3,3,2,0,0,4,2.5,3,1.5
+153,Greensboro,online,2,28,NA,Trade School,3,4,1,4,2,3,3,3,4,4,3,3,3,2.75,3.5
+154,Greensboro,online,2,28,NA,Trade School,3,4,1,3,3,3,1,3,4,4,4,3,2.75,2.5,3.75
+155,Greensboro,online,2,18,non-binary,high school,3,4,3,4,1,3,2,2,3,3,3,1,3.5,2,2.5
+156,Greensboro,online,2,41,male,Trade School,4,4,4,4,4,4,4,4,0,0,0,4,4,4,1
+157,Greensboro,online,2,18,female,high school,4,4,4,4,1,2,1,1,3,3,3,3,4,1.25,3
+158,Greensboro,online,2,18,male,high school,3,3,2,1,1,4,2,4,3,2,4,3,2.25,2.75,3
+159,Greensboro,online,2,27,female,prefer not to answer,3,4,0,3,4,4,4,3,0,1,0,2,2.5,3.75,0.75
+160,Greensboro,online,2,27,female,prefer not to answer,1,1,1,3,1,3,1,1,1,1,1,1,1.5,1.5,1
+161,Greensboro,online,2,30,male,high school,4,4,0,3,2,3,1,2,3,3,3,4,2.75,2,3.25
+162,Greensboro,online,2,19,male,high school,4,3,3,4,3,3,3,3,0,0,3,2,3.5,3,1.25
+163,Greensboro,online,2,34,female,high school,3,3,1,3,3,3,3,3,0,0,1,3,2.5,3,1
+164,Greensboro,online,2,19,male,high school,4,3,1,0,4,3,3,3,1,0,0,2,2,3.25,0.75
+165,Greensboro,online,2,25,female,high school,1,0,0,2,2,2,2,2,1,3,3,3,0.75,2,2.5
+166,Greensboro,online,2,27,female,Trade School,1,4,0,3,4,3,3,3,4,4,3,3,2,3.25,3.5
+167,Greensboro,online,2,25,non-binary,high school,4,3,4,3,0,1,0,0,4,4,4,4,3.5,0.25,4
+168,Greensboro,online,2,19,male,high school,3,3,1,1,3,3,3,3,1,1,2,2,2,3,1.5
+169,Greensboro,online,2,30,male,other,1,0,2,3,2,3,3,2,3,1,2,3,1.5,2.5,2.25
+170,Greensboro,online,2,NA,non-binary,some high school,4,4,2,4,1,1,1,0,3,2,4,3,3.5,0.75,3
+171,Greensboro,online,2,23,female,Bachelor's degree,4,3,4,4,1,1,1,1,2,3,1,0,3.75,1,1.5
+172,Greensboro,online,2,33,male,high school,3,1,1,1,4,4,4,4,3,2,3,3,1.5,4,2.75
+173,Greensboro,online,2,19,female,high school,4,2,1,3,2,2,3,2,3,2,1,0,2.5,2.25,1.5
+174,Greensboro,online,2,19,male,high school,3,3,2,1,2,2,2,2,1,0,3,3,2.25,2,1.75
+175,Greensboro,online,2,27,female,high school,3,3,1,3,4,4,4,3,2,4,3,2,2.5,3.75,2.75
+176,Greensboro,online,2,22,female,Bachelor's degree,2,1,1,1,3,3,3,3,2,1,2,2,1.25,3,1.75
+177,Greensboro,online,2,20,male,high school,4,3,2,3,2,3,3,2,3,3,3,3,3,2.5,3
+178,Greensboro,online,2,18,female,high school,2,3,1,4,2,3,1,1,4,4,4,3,2.5,1.75,3.75
+179,Greensboro,online,2,27,female,high school,3,3,3,3,2,3,3,3,3,3,3,3,3,2.75,3
+180,Greensboro,online,2,18,female,high school,3,3,2,3,3,1,3,3,1,1,1,1,2.75,2.5,1
+181,Greensboro,online,2,20,male,some high school,3,4,2,3,4,2,2,2,2,1,2,2,3,2.5,1.75
+182,Greensboro,online,2,18,non-binary,high school,3,2,3,3,1,3,1,3,2,2,3,3,2.75,2,2.5
+183,Greensboro,online,2,28,female,high school,1,2,1,1,3,4,4,4,4,4,4,4,1.25,3.75,4
+184,Greensboro,online,2,26,female,high school,3,4,1,3,3,4,4,4,1,1,1,3,2.75,3.75,1.5
+185,Greensboro,online,2,18,male,high school,1,3,3,3,3,3,3,3,1,2,1,3,2.5,3,1.75
+186,Greensboro,online,2,30,female,high school,3,1,1,3,4,4,4,4,1,1,1,3,2,4,1.5
+187,Greensboro,online,2,18,female,high school,4,3,2,3,0,2,1,0,4,0,2,3,3,0.75,2.25
+188,Greensboro,online,2,19,male,high school,2,2,2,1,3,2,3,1,3,3,3,2,1.75,2.25,2.75
+189,Greensboro,online,2,28,female,high school,2,3,3,3,4,0,4,4,0,0,0,0,2.75,3,0
+190,Greensboro,online,2,18,female,high school,3,2,3,3,2,2,3,2,0,0,0,2,2.75,2.25,0.5
+191,Greensboro,online,2,18,male,high school,4,4,2,3,3,3,3,2,1,2,4,3,3.25,2.75,2.5
+192,Greensboro,online,2,18,female,high school,4,4,2,3,2,1,2,2,0,0,1,1,3.25,1.75,0.5
+193,Greensboro,online,2,19,male,high school,3,0,3,3,4,2,3,3,3,4,4,3,2.25,3,3.5
+194,Greensboro,online,2,20,female,high school,3,2,1,2,2,2,2,1,1,0,3,0,2,1.75,1
+195,Greensboro,online,2,18,non-binary,high school,2,2,3,3,1,3,1,2,2,2,2,3,2.5,1.75,2.25
+196,Greensboro,online,2,19,male,high school,4,4,0,4,0,0,0,0,0,0,4,4,3,0,2
+197,Greensboro,online,2,24,female,high school,0,0,0,0,4,1,4,4,0,0,0,0,0,3.25,0
+198,Greensboro,online,2,18,female,high school,3,2,1,1,3,2,1,1,3,2,3,3,1.75,1.75,2.75
+199,Greensboro,online,2,18,male,high school,4,4,3,3,4,1,1,4,2,3,3,4,3.5,2.5,3
+200,Greensboro,online,2,20,male,high school,3,3,2,1,3,3,4,4,2,1,2,2,2.25,3.5,1.75
+201,Greensboro,online,2,18,male,high school,3,2,3,3,1,4,3,4,4,3,2,4,2.75,3,3.25
+202,Greensboro,online,2,21,male,Trade School,4,4,2,4,3,1,3,1,0,0,3,4,3.5,2,1.75
+203,Greensboro,online,2,27,female,high school,3,3,3,3,0,1,0,1,1,1,1,0,3,0.5,0.75
+204,Greensboro,online,2,18,female,high school,3,2,0,4,4,4,4,4,4,4,4,4,2.25,4,4
+205,Greensboro,online,2,21,female,other,0,0,0,0,4,0,4,0,0,0,0,0,0,2,0
+206,Greensboro,online,2,21,female,other,3,3,3,3,2,3,3,3,3,3,3,4,3,2.75,3.25
+207,Greensboro,online,2,NA,female,high school,3,3,3,2,1,3,2,1,0,0,0,4,2.75,1.75,1
+208,Greensboro,online,2,35,male,Trade School,3,3,2,1,3,2,1,3,3,2,2,3,2.25,2.25,2.5
+209,Greensboro,online,2,35,male,Trade School,3,4,3,2,4,3,3,3,0,0,0,0,3,3.25,0
+210,Greensboro,online,2,35,female,high school,2,3,1,2,3,3,3,3,2,1,2,2,2,3,1.75
+211,Greensboro,online,2,29,female,Trade School,3,3,1,3,3,3,3,1,1,1,1,3,2.5,2.5,1.5
+212,Greensboro,online,2,NA,NA,prefer not to answer,0,0,0,0,4,0,4,0,0,0,0,0,0,2,0
+213,Greensboro,online,2,23,female,prefer not to answer,3,3,4,3,3,3,3,3,4,3,4,4,3.25,3,3.75
+214,Greensboro,online,2,34,male,prefer not to answer,0,3,2,1,2,2,2,2,3,3,3,3,1.5,2,3
+215,Greensboro,online,2,NA,female,high school,1,1,2,1,2,2,2,1,3,1,3,2,1.25,1.75,2.25

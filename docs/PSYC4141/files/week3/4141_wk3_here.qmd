@@ -1,0 +1,138 @@
+---
+title: "How to use `here()`"
+author: "Dr. Margriet Groen"
+format:
+  revealjs:
+    theme: simple
+    slide-number: true
+    transition: fade
+    incremental: false
+    view-distance: 999
+---
+
+```{=html}
+<style>
+.reveal h2 { font-size: 1.3em; }
+</style>
+```
+
+## Overview
+
+-   How to use the `here()` function
+
+::: notes
+In this video I'll walk you through how to use the. `here()` function to help R find your files.
+:::
+
+
+## The problem `here()` solves
+
+Your code runs on *your* computer, but file paths are specific to *your* folders
+
+```{r}
+#| label: read_data1
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+data_mw <- read_csv("groen/stats/2627_year1/PSYC4141/files/week3", "data_bmw3.csv")
+```
+
+::: notes
+Absolute file paths only work on the computer they were written on. If you share your project or move it, the code fails with 'file not found'.
+:::
+
+## What `here()` does
+
+- `here()` finds the **root folder of your project** automatically
+- It then builds file paths **relative to that root**
+- Same code works across computers
+
+::: notes
+Think of it as a 'home base' for your project. You describe wheter a file is *within* the project, and `here()` works out the rest.
+:::
+
+## Step 1: Work in a project
+
+- Create a project
+- Your project folder now has a `.Rproj` file
+- This file marks the project root
+
+::: notes
+`here()` looks for clues liek a `.Rproj` file to identify the root. Open the project by double-clicking the `.Rproj` file, rather than opening scripts on their own.
+:::
+
+## Step 2: Load the package
+
+```{r}
+#| label: load_libraries
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+library(here)
+```
+
+1.  The `here` package helps with finding your files.
+
+::: notes
+Load the `here` package by using the `library()` function. On loading, `here` prints a message showing the project root it found. Check this is the folder you expect.
+:::
+
+## Step 3: Check where 'home' is
+
+```{r}
+#| label: check_home
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+here()
+```
+
+1. Returns the full path to your project root
+
+If it is the wrong folder, you're probably not working inside your project.
+
+::: notes
+This is the best first troubleshooting step. If the path isn't your project folder, close R and repoen via the `Rproj` file.
+:::
+
+## Step 4: Build a file path
+
+```{r}
+#| label: build_filepath
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+here("folder", "file.csv")
+```
+
+1. Use the `here()` function and give it the path to the *folder*, followed by a comma and then the *file name* including the file extension.
+
+Each folder or file name is a separate part and needs to be in double quotation marks (`""`). This is called a 'quoted argument'.
+
+## Step 5: Use it to read a file
+
+```{r}
+#| label: read_data2
+#| echo: true
+#| eval: false
+#| code-line-numbers: true
+data_mw <- read_csv(here("PSYC4141/files/week2", "data_bmw3.csv"))
+```
+
+::: notes
+A common use is within the `read_csv()` function to read in a file.
+:::
+
+## Common mistakes
+
+- [✘]{style="color: red;"} Use `here("folder/filename.csv")` works on some systems, but separate arguments separated by a comma are safer.
+- [✘]{style="color: red;"} Open a script on its own. Instead open the project.
+- [✘]{style="color: red;"} Typos in folder or file names (check capitalisation and extensions)
+- [✔]{style="color: green;"} Run `here()` to check your root
+
+## Summary
+
+1. Work inside a project (`.Rproj`)
+2. `library(here)`
+3. Use `here("folder", "file.csv")` to point to files
+4. Share your project, and the code works

@@ -1,0 +1,201 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+In this video, I'll walk you through how to use the hair function to help you r find your files.
+
+Okay, so let's first talk about what the problem actually is and how here helps to solve that.
+
+So your code runs on your computer. But file paths that you specify um, are kind of specific to your folder folders and your folder structure.
+
+So if we look at this bit of code we're trying to read in a data file in this line of code.
+
+Right. We've got the readcsv function here.
+
+And then we need to tell our where to look and what the file is called.
+
+Now this bit is specific to my machine. This is my home directory.
+
+And then I go through a series of folders, um, until I get to the to the one where this particular, um, file is.
+
+Now, if you, um, specify what is called an absolute file path like this, then it will only work on this computer.
+
+And and if I somehow move any part of it, the file path will break.
+
+And then, um, when you try to run this code, you will get an error message saying file not found.
+
+Okay. So what does here do here?
+
+Finds the root folder of your project automatically. And then it builds file paths relative to that root.
+
+So if um, you move that project to kind of a different location on your computer or to a different computer, the file path will still work.
+
+Okay, so what do we need to do for this to work? Um, step one is to work in a project.
+
+So you need to create a project in R so your project folder, when you've done that, we'll have, um, a file that has the our proj extension.
+
+So that particular file marks the project route.
+
+And here looks for clues like a project, um, an R proj files or a project file to identify the route.
+
+So, um, when you then open that project by double clicking on that file, um,
+
+then it will know, um, to look for to, to kind of start looking for files from there.
+
+So it's important that when you start work in our studio, you open that project file.
+
+Rather than opening scripts on their own. Then we need to load the package.
+
+Write as we've been doing in the labs. Um, we need to tell our which packages to use.
+
+So we would do this in, in this way. We'd say library and then here.
+
+So the here package um, yeah. Needs to be loaded for it to work.
+
+Now when you load the here package, it will print a message to the console showing the project where the project root is.
+
+So, um, it is worth checking that that folder is what you expect it to be.
+
+If you want to check where home is.
+
+So where here starts, um, you can put this little bit of code here and just the opening closing bracket into the console.
+
+run that and then it will give you the path to your project route.
+
+So if it is the wrong folder, you're probably not working inside your project.
+
+Okay, so the next step then is to build your relative file path.
+
+So um, the kind of the main ingredients for that are as follows.
+
+We use the function here followed by opening brackets.
+
+And then we need to tell it okay. We'll start looking in in the project route.
+
+But from there I want you to go to a particular folder.
+
+So um, we give it the path to the folder and then we add a comma, and then we give it the the name of the file including the file extension.
+
+So each folder of file name is separate is a separate part in here and it needs to be in double quotation marks.
+
+That's called, um, a quoted argument. Um, and something that it is often used for is to read in a file.
+
+That's why how we've been using it. Right.
+
+Um, so if we go, uh, kind of back to our readcsv function, if we use here, this is what the file path would look like.
+
+So, um, I would, it would, you would give it the function here, and then it would start looking in my project route.
+
+And from there it needs to go to, to this folder. And then I in there I have a folder called files.
+
+And in there I have a folder called week two. And that is where that file sits.
+
+So in this particular example the here function sits inside the readcsv function.
+
+So that's a very common use. Now there are a few things that often.
+
+Um. A few common mistakes that I wanted to point out here.
+
+So sometimes people try this, they kind of have the folder and then a slash and then a file name.
+
+That might work on some systems, but using separate arguments separated by a comma is much safer.
+
+That will work on any machine. Um, if you open a script on its own rather than from inside a project, then things also might not work.
+
+So you don't want to do that. And another common mistake is kind of typos in the folder name or the file name.
+
+And so it needs to be um the file path.
+
+And the file name needs need to be exactly, uh, like they are on your machine,
+
+including the use of capitals or spaces or any of those things and extensions.
+
+So yeah, if you get file mode found for something, then these are three things to look for.
+
+Have you accidentally added a slash instead of a comma? Um, are you working from inside a project?
+
+If not, then just start over and open a project. And that or the project in which these folders should be sitting.
+
+Um, and are there any typos?
+
+Um, and as I mentioned before, if you need to check where our starts looking when you run here, then you can use this bit of code.
+
+Just put that in the console and it will show you what the root is.
+
+Okay. So to summarise work inside a project.
+
+So we created the project kind of in week one.
+
+Um if you want to revisit that uh, so you need to be looking for a file that has this extension.
+
+So it might be something like a psych for one for one project.
+
+Um, so when you start up RStudio. Uh, you've logged into the R server.
+
+Then open that project, and from there, upload your files and start working.
+
+Remember to load the here library and then, um, use this kind of general format to, to point towards your files.
+
+So the function and then the folder structure might be more than one folder comma.
+
+And then the file name including the extension.
+
+Now as I said if you have to kind of move your that project around or if you need to share it with other people, the code will still work.
+
+All right. Now let's do, uh, have a look at that in our studio.
+
+So, um, here we are looking at the R server.
+
+And you can see here that I am inside my psych 4141 project.
+
+So if it says none here next to this cube, uh, you can open a project.
+
+If you don't have a project, you can create a new one. But I'm currently inside that project, so that's the first thing to check.
+
+Um, right. So I'm inside my project and I'm going to open a script.
+
+I'm going to go to the source View because I'm going to be doing some writing, some code and let's say, uh, there is some code here to load libraries.
+
+Um, so here is this is where we load the here package.
+
+Might be a little bit confusing that both the package is called here.
+
+And the function that we use is also called here.
+
+So I run that. So now it tells me where he starts, right?
+
+So it says home. This is me and this is my project folder.
+
+So that is something that I need to remember if I want to look that up.
+
+Um. I've forgotten. Right. Then I go to the console and type here.
+
+Press enter and it will give me that that home directory kind.
+
+So if I then want to read in a file, um, like in this code here, eh.
+
+Um, so I've got my read underscore, csv, uh, opening brackets for that function.
+
+And inside there I say okay I'm going to use here. So I type here opening brackets.
+
+Um, and I it automatically starts looking in this folder.
+
+Right. So that's over there. So you can kind of see home that's at the bottom as well.
+
+Um and well that's my name, then R and then psych for one for one.
+
+So I don't have to specify that in um in here because it already knows that.
+
+But that is not where that file sits. That file sits in another folder.
+
+And I can get to that folder by pointing it to week two.
+
+And then for one, for one week two lab. So I need to add here week week two for one for one week two underscore lab.
+
+Then we have the comma here. So this is the location. Then we have the comma.
+
+And then we give the file name. And let's just check that that file name is correct.
+
+So data underscore BMW three dot CSV.
+
+So if I now run this it should all work. And indeed it does.
+
+It has read in that file okay that's it for now.
+

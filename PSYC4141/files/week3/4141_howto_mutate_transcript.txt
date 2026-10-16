@@ -1,0 +1,209 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+So in this video, I'll walk you through how to create a new variable using the mutate function.
+
+Now we'll use an example of combining the responses of several questions into a combined score.
+
+But you can use mutate for many other things as well.
+
+Any kind of new variable that you want to create. First things first we need to load the libraries.
+
+So we've done that before. So we'll we need the library here.
+
+And we need the library tidy verse. Then we need to read in the data again.
+
+We've done that before so I won't dwell on it here. But we used to read underscore CSV function.
+
+We tell our where to look and what the file is called.
+
+And we assign that to a data frame called data under the underscore.
+
+MW. Okay.
+
+So so far when we've used that data we've looked at the responses to individual items.
+
+So question one for instance. However, single questionnaire items are noisy,
+
+so a person's answer on to one question could be shaped by how they read the wording of that particular question,
+
+or how they applied the response options to that particular question.
+
+Or maybe they were distracted while they answered that question.
+
+So if you had, it is much better to have several items that tap into the same underlying construct.
+
+And then if that's the case, you can combine the responses to those items into one score.
+
+So that would usually be a mean or a kind of you would add them up.
+
+So some. And that lets these item specific quirks average out.
+
+So the score is more reliable. And it is a better reflection of the thing that we care about.
+
+Um, so the, uh, the brief mind wandering three factor skill that we've been working with, the BMW three is a good example of that.
+
+So it has 12. Um. It has. It's a questionnaire with 12 items.
+
+Um, so it treats mind wandering as kind of task, unrelated thought, but it measures three sub dimensions.
+
+So unintentional mind wandering, um, intentional mind wandering and matter awareness of mind wandering.
+
+So rather than asking one question about mind wandering and hoping, it captures everything, uh,
+
+the skill uses four items for each dimension and combines them into a subscale score by averaging.
+
+So we're going to calculate a score for unintentional mind wandering first.
+
+So and the authors of this questionnaire, they define this as task unrelated thoughts um that occur spontaneously.
+
+So that is in contrast to intentional mind wandering which they define as task unrelated thoughts,
+
+where attention is deliberately redirected away from the current activity.
+
+Okay, so let's compute a single score for unintentional mind wandering.
+
+Now, to do that, we use the mutate function. Um, and this is what it requires.
+
+So if you want to create a new variable you can use mutate.
+
+Um, and then here on line two we tell it which data to use.
+
+So that is our data frame. And then we tell it what the new variable should be called.
+
+So that is unintentional underscore MW in this case then an equal sign.
+
+And then we specify how that variable is computed.
+
+So in this case we're going to calculate the average of the responses to these four items.
+
+So this is item unintentional mind wandering two and 123 and four.
+
+So we add those up. We divide it by four. And that gives us the average.
+
+So unintentional mind wandering will be the average of the responses across those four items.
+
+So I've just listed the those different items here at the bottom.
+
+Um, to kind of make it a little, a little bit more concrete.
+
+So the first item was while listening to a presentation, my thoughts started to trail off unintentionally.
+
+Um, the second is when watching T.V., other things inadvertently cross my mind.
+
+Um, I am often absent minded is the third item, and the fourth one is when I am engaged in an activity.
+
+My thoughts wandered to other things all by themselves. You can kind of see how each of those kind of taps into that same, um,
+
+construct of unintentional mind wandering that is thought, a task, unrelated thoughts, that happens spontaneously.
+
+Now we can do the same thing for the second dimension of this questionnaire meta awareness of mind wandering.
+
+Um, but if you look at the questions that make up the meta awareness of mind wandering skill,
+
+you'll notice that the black ones and the red ones as listed on the slide are phrased kind of in opposite directions.
+
+So, um, we need to do so.
+
+So let's let's read them quickly. So, um, the black ones say I quickly catch myself when I am not listening attentively,
+
+uh, or I immediately notice when my thoughts are not in here and now.
+
+So if you score higher on that, um, you would be more show more awareness of your mind wandering.
+
+In contrast, the items that are red on the slide are kind of read in the other direction.
+
+So it takes a very long time for me to notice that my thoughts have wandered off, and it takes me a while before I realise that I zoned out.
+
+So if we look at the scoring. So these were the response options that are available to the participants.
+
+Right. So, um, and they are translated into a score of zero, one, two, 3 or 4.
+
+Um, so if you look at item two, for instance, I quickly catch myself on.
+
+I am not listening attentively. Um, if you would say fully agree, that would give you four, uh, points.
+
+So, um, that would increase your score on that subscale of matter awareness of mind wandering.
+
+So you would it would indicate that you're more aware of when you mind wander.
+
+But if we take one of the read items, so it takes a very long time for me to notice that my thoughts have wandered off.
+
+If you fully agree with that, that is kind of shows the opposite, right?
+
+That you are not very aware that you that your your thoughts have wandered off.
+
+Um, and we do we include items that are phrased in these opposite directions in a questionnaire to make sure that, um,
+
+People actually read the questions and don't just, you know, circle,
+
+select all the same response options on the same side of the, um, of the questionnaire.
+
+Um, so yeah, that but but when we then come to calculating a combined score,
+
+we need to pay attention to that because we need to reverse the scoring for that.
+
+So if somebody's selected for, for this item in red and said yes, I fully agree with that, they would get four points.
+
+So it would mean that it take a very long time to notice that their faults have wandered off.
+
+We want to show that, um, we want to kind of make sure that that contributes to that overall score as showing,
+
+um, little matter awareness of mind wandering. So we then need to reverse score that.
+
+And we do that by calculating it in this way.
+
+So if you have an item like that, you would create a new variable and say, okay, um, I'm going to take the maximum of the of the response options.
+
+So for in this case and I'm going to um, subtract whatever their score on that item is.
+
+So if they select it for, um, it would be four minus four.
+
+So that is zero. So that translate is as a low score on metta awareness of mind wandering.
+
+And that is what we need right for that particular red item.
+
+Okay. So if I just quickly go back um, once we've done that we can do exactly the same thing as we did for unintentional mind wandering, right?
+
+So then we would use mutate, tell it which data to use, tell it what the new variable is called,
+
+and then explain a kind of write out how that variable is computed.
+
+So we add the responses on all of these items. Divide by four and there you go.
+
+You will see that. So the variable names here don't reflect that.
+
+It is the reverse score but it is the reverse score. So that had already been done on that or in that particular data set.
+
+Now finally, we have the dimension of intentional mind wandering.
+
+And we do exactly the same thing there. So if we want to compute a single score for intentional mind wandering,
+
+we again use mutate talent which data to use and tell it what the new variable name is, and explain how that is computed.
+
+And there is no reverse scoring for any of those items. Um, yeah.
+
+So that would give us a score that reflects the the kind of average response across these four items that you can see here at the bottom of the slide.
+
+Now, once we've done that, we often want to save that file so that we don't have to do all of that again.
+
+And this is how we do that. So we've used read underscore CSV a number of times already.
+
+Now we're going to use write underscore CSV and that does the equivalent.
+
+It basically writes a CSV file for you. So what we then need to do is that we specify, um, which data we want to use.
+
+Um, we tell it where we wanted to store that file.
+
+So here we use the here function again that we've encountered previously.
+
+We specify the file path as which folder we want this file to go separated by a comma.
+
+And then we specify the file name including the extension.
+
+And just the same way as with read underscore CSV.
+
+These um these the file path and the file name need to be in double quotation marks.
+
+So we need to tell our which data frame to include. That is this first bit and then where to save it and what to call it.
+
+And that's it for now.
+

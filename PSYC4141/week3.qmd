@@ -86,6 +86,41 @@ The lecture refers to a 'WBA' score. This stands for 'web-based assessment' and 
 [Correlation: Theory slides](files/week3/4141_wk3_correlation_slides.pdf){download="4141_wk3_correlation_slides.pdf"}.
 [Correlation: Theory transcript](files/week3/4141_wk3_correlation_transcript.txt){download="4141_wk3_correlation_transcript.txt"}.
 
+Before we move onto how to run a correlation analysis, it is useful to review two functions in RStudio:
+
+- `here()` helps you find your files
+- `mutate()` allows you to create a new variable
+
+In the two videos below, I'll talk you through how to use each one.
+
+**How to use `here()`** (~12 minutes) An explanation of how to use `here()` to specify relative file paths.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=f4f88ef9-1edb-4d26-bfc3-b4e500ed90b6&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_howto_here"></iframe>
+</div>
+```
+
+\newline
+
+[How to use `here()`: slides](files/week3/4141_howto_here_slides.pdf){download="4141_howto_here_slides.pdf"}.
+
+[How to use `here()`: transcript](files/week3/4141_howto_here_transcript.txt){download="4141_howto_here_transcript.txt"}.
+
+**How to use `mutate()** (~12 minutes) A walkthrough and example of how to use `mutate()` to create a new variable. In the example we compute a single score for each of the subscales of the mind wandering questionnaire. We need those for the correlation analysis.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=7e0179bf-cffc-43a0-968b-b4e500ef9e75&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_howto_mutate"></iframe>
+</div>
+```
+
+\newline
+
+[How to use `mutate()`: slides](files/week3/4141_howto_mutate_slides.pdf){download="4141_howto_mutate_slides.pdf"}.
+
+[How to use `mutate()`: transcript](files/week3/4141_howto_mutate_transcript.txt){download="4141_howto_mutate_transcript.txt"}.
+
 **2. Correlation: How to run and report a correlation analysis** (~ minutes) A worked example showing how to calculate a correlation in RStudio.
 
 <!-- ::: {.callout-note title="APA Style"} -->
@@ -119,7 +154,7 @@ Please note that it is not a requirement to take part in the study that is sugge
 
 **2. What makes psychological research ethical?** (15-20 minutes) This lecture introduces the principles of ethical psychological research, including informed consent, deception and debriefing, privacy and data protection, and the importance of inclusive recruitment. We will also consider why ethical responsibility continues beyond data collection, into the analysis, interpretation and communication of findings.
 
-[VIDEO WILL FOLLOW SOON]
+[VIDEO WILL FOLLOW NEXT WEEK]
 
 ::: {.callout-tip}
 As you watch, think about the responsibilities researchers have towards participants before, during and after a study.

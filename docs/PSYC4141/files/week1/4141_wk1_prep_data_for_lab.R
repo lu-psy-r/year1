@@ -18,3 +18,15 @@ data_bmw3 <- data_bmw3 %>%
 # Safe smaller data file
 write_csv(data_bmw3, here("PSYC4141/files/week1/", "data_bmw3.csv"))
 write_csv(data_bmw3, here("PSYC4141/files/week2/4141_wk2_lab/", "data_bmw3.csv"))
+
+# Safe separate file with subscales added
+data_bmw3_subscales <- read_csv(here("PSYC4141/files/week1/mxn3v-osfstorage-archive/PrepData/", "cleanData_UNCG_personality_merged.txt"))
+
+data_bmw3_subscales <- data_bmw3_subscales %>%
+  select(subject:BMW3_IN) %>%
+  mutate(location = as.factor(location),
+         type = as.factor(type),
+         gender = as.factor(gender),
+         education = as.factor(education))
+
+write_csv(data_bmw3_subscales, here("PSYC4141/files/week3/", "data_bmw3_subscales.csv"))  

@@ -205,8 +205,7 @@ So, to calculate one score for 'intentional mind wandering', we calculate the me
 #| label: unintentional_mw
 data_mw <- mutate(
   data_mw,
-  unintentional_mw = (BMW3_UN_01 + BMW3_UN_02 + BMW3_UN_03 + BMW3_UN_04) / 4
-)
+  unintentional_mw = (BMW3_UN_01 + BMW3_UN_02 + BMW3_UN_03 + BMW3_UN_04) / 4)
 ```
 
 > Action: Now do the same for the 'intentional mind wandering' and 'meta-awareness of mind wandering' subscales. Create new code chunks to do so below.
