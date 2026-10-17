@@ -428,272 +428,156 @@ Dr.&nbsp;Margriet Groen
           display:block!important;
       }</style></aside>
 </section>
-<section id="step-2-setup---load-libraries" class="slide level2">
-<h2>Step 2: Setup - load libraries</h2>
+<section id="step-1-setup---load-libraries" class="slide level2">
+<h2>Step 1: Setup - load libraries</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(here)</span>
 <span id="cb1-2"><a href=""></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a href=""></a><span class="fu">library</span>(correlation)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href=""></a><span class="fu">library</span>(easystats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol type="1">
-<li>The <code>here</code> package helps with finding your files.</li>
-<li>The <code>tidyverse</code> is a set of packages that handles almost everything you need to do with data.</li>
-<li>The <code>correlation</code> package contains the functions that we need to run correlation analysis.</li>
+<li><span style="color: grey;">The <code>here</code> package helps with finding your files</span></li>
+<li><span style="color: grey;">The <code>tidyverse</code> is a set of packages that handles almost everything you need to do with data</span></li>
+<li><code>easystats</code> is a set of packages that handles many statistical analyses; including the function that we need to run correlation analysis</li>
 </ol>
 </section>
-<section id="step-3-reading-in-the-data" class="slide level2">
-<h2>Step 3: Reading in the data</h2>
+<section id="step-2-reading-in-the-data" class="slide level2">
+<h2>Step 2: Reading in the data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>data_mw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"PSYC4141/files/week3"</span>, <span class="st">"data_bmw3.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>data_mw_subscales <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"PSYC4141/files/week3"</span>, <span class="st">"data_bmw3_subscales.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol type="1">
-<li><code>read_csv</code> is function that reads in data that are stored in a file of the type <code>.csv</code>. We need to tell R where the file is and what it is called.</li>
+<li><code>read_csv</code> reads in data; we need to tell R where the file is and what it is called</li>
 </ol>
-<p><code>&lt;-</code> is an assignment arrow, telling R that we want to put the data in an object (or dataframe) called <code>data_mw</code></p>
+<p><code>&lt;-</code> is an assignment arrow, telling R that we want to put the data in an object (or dataframe) called <code>data_mw_subscales</code></p>
 </section>
-<section id="step-4-create-a-new-variable-that-combines-responses-from-several-questions" class="slide level2">
-<h2>Step 4: Create a new variable that combines responses from several questions</h2>
-<p><strong>Unintentional mind wandering</strong></p>
+<section id="step-3a-build-a-scatterplot" class="slide level2">
+<h2>Step 3a: Build a scatterplot</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Code</a></li><li><a href="#tabset-1-2">Plot</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_mw_subscales, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN, <span class="at">y=</span> BMW3_ME)) <span class="sc">+</span></span>
+<span id="cb3-2"><a href=""></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <ol type="1">
-<li>While listening to a presentation, my thoughts start to trail off unintentionally.</li>
-<li>When watching TV, other things inadvertently cross my mind.</li>
-<li>I am often absentminded.</li>
-<li>When I am engaged in an activity, my thoughts wander to other things all by themselves.</li>
+<li>We use <code>ggplot()</code> to tell R what data to plot and which variables to use</li>
+<li>We use <code>geom_point()</code> to tell R that we want a scatterplot</li>
 </ol>
-<p><strong>Meta-awareness of mind wandering</strong></p>
-<ol start="5" type="1">
-<li>It takes a very long time for me to notic that my thoughts have wandered off.</li>
-<li>I quickly catch myself when I am not listening attentively.</li>
-<li>It takes a while before I realise that I zoned out.</li>
-<li>I immediately notice when my thoughts are not in the here and now.</li>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="4141_wk3_scatterplot_and_correlation_files/figure-revealjs/scatterplot_output-1.png" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3b-add-a-line-of-best-fit" class="slide level2">
+<h2>Step 3b: Add a line of best fit</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Code</a></li><li><a href="#tabset-2-2">Plot</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_mw_subscales, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN, <span class="at">y=</span> BMW3_ME)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href=""></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-3"><a href=""></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="3" type="1">
+<li>We use <code>geom_smooth()</code>, with the <code>method = "lm"</code> to add a line of best fit; <code>se</code> refers to the standard error around the line</li>
 </ol>
-<p><strong>Intentional mind wandering</strong></p>
-<ol start="9" type="1">
-<li>I make my thoughts wander so that time passes faster.</li>
-<li>I deliberately allow my mind to wander to escape the daily grind.</li>
-<li>I distract myself in monotonous situations by letting my thoughts run free.</li>
-<li>I actively use the time during routine tasks to mull over other things in the meanwhile.</li>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="4141_wk3_scatterplot_and_correlation_files/figure-revealjs/scatterplot_withline_output-1.png" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3c-tidy-up-the-scatterplot" class="slide level2">
+<h2>Step 3c: Tidy up the scatterplot</h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Code</a></li><li><a href="#tabset-3-2">Plot</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_mw_subscales, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> BMW3_UN, <span class="at">y=</span> BMW3_ME)) <span class="sc">+</span></span>
+<span id="cb5-2"><a href=""></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb5-3"><a href=""></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb5-4"><a href=""></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb5-5"><a href=""></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Unintentional mind wandering"</span>, <span class="at">y =</span> <span class="st">"Meta-awareness of mind wandering"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ol start="4" type="1">
+<li>We use <code>theme_bw()</code> to change the background</li>
+<li>We use <code>labs()</code> to add informative titles to the axes</li>
 </ol>
-<!-- ::: notes -->
-<!-- So far we have look at the responses to individual items. However, single questionnaire items are noisy. A person's answer to one question can be shaped by how they read the wording, or how they happened to interpret the response options. If several items tap the same underlying construct, combining them into one score (usually a mean or sum) lets these item-specific quirks average out, so the score is more reliable and a better reflection of the thing we care about. -->
-<!-- The Brief Mind Wandering Three-Factor Scale (BMW-3; Schubert et al., 2024) is a good example. It is a 12-item questionnaire that treats mind wandering as task-unrelated thought and measures three dimensions: unintentional mind wandering, intentional mind wandering, and meta-awareness of mind wandering. Rather than asking one question about mind wandering and hoping it captures everything, the scale uses four items for each dimension and combines them into a subscale score by averaging. -->
-<!-- Next, we're going to calculate a score for 'unintentional mind wandering'. Schubert et al. (2024) define this as task-unrelated thoughts that occur spontaneously. This contrasts with 'intentional mind wandering'; defined as task-unrelated thoughts where attention is deliberately redirected away from the current activity. -->
-<!-- ::: -->
-<!-- > Action: Have another look at the questionnaire items [here](files/week1/BMW-3_eng.pdf). The first four items measure 'unintentional mind wandering, while items 9-12 measure 'intentional mind wandering'. Finally, items 5-8 measure 'meta-awareness of mind wandering'. -->
-<!-- So, to calculate one score for 'intentional mind wandering', we calculate the mean across the responses to the four items used to measure that construct (`BMW3_UN_01`, `BMW3_UN_02`, `BMW3_UN_03`, and `BMW3_UN_04`). We do this by creating a new variable using the function `mutate()`. -->
-<!-- > Action: Run the code below to create a score for 'unintentional mind wandering'. Have a look at the data-frame `data_bmw3`. It will now have an additional variable. -->
-<!-- <!-- ```{r} -->
-<p>–&gt; <!-- <!-- #| label: unintentional_mw --> –&gt; <!-- <!-- data_mw <- mutate( --> –&gt; <!-- <!--   data_mw, --> –&gt; <!-- <!--   unintentional_mw = (BMW3_UN_01 + BMW3_UN_02 + BMW3_UN_03 + BMW3_UN_04) / 4) --> –&gt; <!-- <!-- ``` --> –&gt;</p>
-<!-- > Action: Now do the same for the 'intentional mind wandering' and 'meta-awareness of mind wandering' subscales. Create new code chunks to do so below. -->
-<!-- ## Step 4: Build the plot -->
-<!-- ::: panel-tabset -->
-<!-- ### Code -->
-<!-- ```{r} -->
-<!-- #| label: plot-code -->
-<!-- #| echo: true -->
-<!-- #| eval: false -->
-<!-- #| code-line-numbers: true -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) -->
-<!-- ``` -->
-<!-- 1. We use `ggplot()` to tell R that we want to create a plot and we tell R the data the use and the variable to plot -->
-<!-- ### Plot -->
-<!-- ```{r} -->
-<!-- #| label: plot-output -->
-<!-- #| echo: false -->
-<!-- #| eval: true -->
-<!-- #| fig-width: 5 -->
-<!-- library(here) -->
-<!-- library(tidyverse) -->
-<!-- data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv")) -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01))  -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- ## Step 4: a simple histogram -->
-<!-- ::: panel-tabset -->
-<!-- ### Code -->
-<!-- ```{r} -->
-<!-- #| label: simple_histogram-code -->
-<!-- #| echo: true -->
-<!-- #| eval: false -->
-<!-- #| code-line-numbers: true -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) +    -->
-<!--   geom_histogram() -->
-<!-- ``` -->
-<!-- 2. We tell R what type of plot to use -->
-<!-- ::: notes -->
-<!-- If you just had the code on line 1, you would not see a plot. -->
-<!-- You have to tell R what type of plot to use. Here we'll use a 'histogram', so we tell it to use the geometric object 'histogram'. There are many different types of geometric objects. We'll encounter a few during this module.  -->
-<!-- Plus adds a layer -->
-<!-- ::: -->
-<!-- ### Plot -->
-<!-- ```{r} -->
-<!-- #| label: simple_histogram-output -->
-<!-- #| echo: false -->
-<!-- #| eval: true -->
-<!-- #| fig-width: 5 -->
-<!-- library(here) -->
-<!-- library(tidyverse) -->
-<!-- data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv")) -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) + -->
-<!--   geom_histogram() -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- ## Step 4: Build the plot - different background -->
-<!-- ::: panel-tabset -->
-<!-- ### Code -->
-<!-- ```{r} -->
-<!-- #| label: different_background-code -->
-<!-- #| echo: true -->
-<!-- #| eval: false -->
-<!-- #| code-line-numbers: true -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) + -->
-<!--   geom_histogram()  +                                      -->
-<!--   theme_bw()                                              -->
-<!-- ``` -->
-<!-- 3. Changes the background -->
-<!-- ::: notes -->
-<!-- There are many different themes. Here I've gone for a simple black and white theme. -->
-<!-- Note: layer -->
-<!-- ::: -->
-<!-- ### Plot -->
-<!-- ```{r} -->
-<!-- #| label: different_background-output -->
-<!-- #| echo: false -->
-<!-- #| eval: true -->
-<!-- #| fig-width: 5 -->
-<!-- library(here) -->
-<!-- library(tidyverse) -->
-<!-- data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv")) -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) + -->
-<!--   geom_histogram() + -->
-<!--   theme_bw() -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- ## Step 4: Build the plot - change the colours of the bars -->
-<!-- ::: panel-tabset -->
-<!-- ### Code -->
-<!-- ```{r} -->
-<!-- #| label: colour_bars-code -->
-<!-- #| echo: true -->
-<!-- #| eval: false -->
-<!-- #| code-line-numbers: true -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +  -->
-<!--   geom_histogram()  +  -->
-<!--   theme_bw() -->
-<!-- ``` -->
-<!-- 1. Specify an additional bit of code (or `argumment`) inside the `mapping` part of the function `ggplot()`. Instead of using the default grey, I'm telling R to 'fill in' the bars with a tomato red. -->
-<!-- ### Plot -->
-<!-- ```{r} -->
-<!-- #| label: colour_bars-output -->
-<!-- #| echo: false -->
-<!-- #| eval: true -->
-<!-- #| fig-width: 5 -->
-<!-- library(here) -->
-<!-- library(tidyverse) -->
-<!-- data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv")) -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + -->
-<!--   geom_histogram() + -->
-<!--   theme_bw() -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- ## Step 4: Build the plot - remove the legend -->
-<!-- ::: panel-tabset -->
-<!-- ### Code -->
-<!-- ```{r} -->
-<!-- #| label: remove_legend-code -->
-<!-- #| echo: true -->
-<!-- #| eval: false -->
-<!-- #| code-line-numbers: true -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +  -->
-<!--   geom_histogram()  +  -->
-<!--   theme_bw() + -->
-<!--   theme(legend.position = "none") -->
-<!-- ``` -->
-<!-- 4. Removes the legend -->
-<!-- ### Plot -->
-<!-- ```{r} -->
-<!-- #| label: remove_legend-output -->
-<!-- #| echo: false -->
-<!-- #| eval: true -->
-<!-- #| fig-width: 5 -->
-<!-- library(here) -->
-<!-- library(tidyverse) -->
-<!-- data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv")) -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + -->
-<!--   geom_histogram() + -->
-<!--   theme_bw() + -->
-<!--   theme(legend.position = "none") -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- ## Step 4: Build the plot - change the title of the x-axis -->
-<!-- ::: panel-tabset -->
-<!-- ### Code -->
-<!-- ```{r} -->
-<!-- #| label: title_x_axis-code -->
-<!-- #| echo: true -->
-<!-- #| eval: false -->
-<!-- #| code-line-numbers: true -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +  -->
-<!--   geom_histogram()  +  -->
-<!--   theme_bw() + -->
-<!--   theme(legend.position = "none") + -->
-<!--   labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1") -->
-<!-- ``` -->
-<!-- 5.  Adds a more informative title for the x-axis. -->
-<!-- ### Plot -->
-<!-- ```{r} -->
-<!-- #| label: title_x_axis-output -->
-<!-- #| echo: false -->
-<!-- #| eval: true -->
-<!-- #| fig-width: 5 -->
-<!-- library(here) -->
-<!-- library(tidyverse) -->
-<!-- data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv")) -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + -->
-<!--   geom_histogram() + -->
-<!--   theme_bw() + -->
-<!--   theme(legend.position = "none") + -->
-<!--   labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1") -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- ## Step 4: Build the plot - change the value labels -->
-<!-- ::: panel-tabset -->
-<!-- ### Code -->
-<!-- ```{r} -->
-<!-- #| label: add_text_labels_x-axis-code -->
-<!-- #| echo: true -->
-<!-- #| eval: false -->
-<!-- #| code-line-numbers: true -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +  -->
-<!--   geom_histogram()  +  -->
-<!--   theme_bw() + -->
-<!--   theme(legend.position = "none") + -->
-<!--   labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1") + -->
-<!--   scale_x_continuous( -->
-<!--     breaks = 0:4, -->
-<!--     labels = c("Fully disagree", "Somewhat disagree", "Neutral", "Somewhat agree", "Fully agree") -->
-<!--   ) -->
-<!-- ``` -->
-<!-- Lines 6. to 9.  Replaces numerical values with text labels -->
-<!-- ### Plot -->
-<!-- ```{r} -->
-<!-- #| label: add_text_labels_x_axis-output -->
-<!-- #| echo: false -->
-<!-- #| eval: true -->
-<!-- #| fig-width: 5 -->
-<!-- library(here) -->
-<!-- library(tidyverse) -->
-<!-- data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv")) -->
-<!-- ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) + -->
-<!--   geom_histogram() + -->
-<!--   theme_bw() + -->
-<!--   theme(legend.position = "none") + -->
-<!--   labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1") + -->
-<!--   scale_x_continuous( -->
-<!--     breaks = 0:4, -->
-<!--     labels = c("Fully disagree", "Somewhat disagree", "Neutral", "Somewhat agree", "Fully agree") -->
-<!--   ) -->
-<!-- ``` -->
+</div>
+<div id="tabset-3-2">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="4141_wk3_scatterplot_and_correlation_files/figure-revealjs/scatterplot_tidy_output-1.png" width="480"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-4-correlation-analysis" class="slide level2">
+<h2>Step 4: Correlation analysis</h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Code</a></li><li><a href="#tabset-4-2">Output</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">correlation</span>(<span class="at">data =</span> data_mw_subscales,</span>
+<span id="cb6-2"><a href=""></a>            <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"BMW3_UN"</span>, <span class="st">"BMW3_ME"</span>),</span>
+<span id="cb6-3"><a href=""></a>            <span class="at">method =</span> <span class="st">"pearson"</span>,</span>
+<span id="cb6-4"><a href=""></a>            <span class="at">p_adjust =</span> <span class="st">"none"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div style="font-size: 0.7em">
+<ol type="1">
+<li>We use the <code>correlation()</code> function and tell R what data to use</li>
+<li>We specify the variables we want to correlate using <code>select()</code></li>
+<li>We specify which method to use; <code>"pearson"</code> is the default</li>
+<li><span style="color: grey;">We’ll talk about that in a couple of weeks</span></li>
+</ol>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># Correlation Matrix (pearson-method)
+
+Parameter1 | Parameter2 |     r |         95% CI | t(213) |         p
+---------------------------------------------------------------------
+BMW3_UN    |    BMW3_ME | -0.32 | [-0.44, -0.20] |  -4.94 | &lt; .001***
+
+p-value adjustment method: none
+Observations: 215</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 

@@ -37,9 +37,9 @@ library(tidyverse)
 library(easystats)
 ```
 
-1.  The `here` package helps with finding your files.
-2.  The `tidyverse` is a set of packages that handles almost everything you need to do with data.
-3.  The `easystats` is a set of packages that handles many statistical analyses. This includes functions that we need to run correlation analysis.
+1.  [The `here` package helps with finding your files]{style="color: grey;"}
+2.  [The `tidyverse` is a set of packages that handles almost everything you need to do with data]{style="color: grey;"}
+3.  `easystats` is a set of packages that handles many statistical analyses; including the function that we need to run correlation analysis
 
 ## Step 2: Reading in the data
 
@@ -51,268 +51,159 @@ library(easystats)
 data_mw_subscales <- read_csv(here("PSYC4141/files/week3", "data_bmw3_subscales.csv"))
 ```
 
-1. `read_csv` is a function that reads in data that are stored in a file of the type `.csv`. We need to tell R where the file is and what it is called.
+1. `read_csv` reads in data; we need to tell R where the file is and what it is called
 
-`<-` is an assignment arrow, telling R that we want to put the data in an object (or dataframe) called `data_mw`
+`<-` is an assignment arrow, telling R that we want to put the data in an object (or dataframe) called `data_mw_subscales`
 
 
-## Step 5: Build the plot
+## Step 3a: Build a scatterplot
 
 ::: panel-tabset
 
 ### Code
 
 ```{r}
-#| label: plot-code
+#| label: scatterplot_code
 #| echo: true
 #| eval: false
 #| code-line-numbers: true
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01))
+ggplot(data = data_mw_subscales, mapping = aes(x = BMW3_UN, y= BMW3_ME)) +
+  geom_point()
 ```
-1. We use `ggplot()` to tell R that we want to create a plot and we tell R the data the use and the variable to plot
+1. We use `ggplot()` to tell R what data to plot and which variables to use
+2. We use `geom_point()` to tell R that we want a scatterplot
 
 ### Plot
 
 ```{r}
-#| label: plot-output
+#| label: scatterplot_output
 #| echo: false
 #| eval: true
 #| fig-width: 5
-library(here)
+library (here)
 library(tidyverse)
-data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01))
+
+data_mw_subscales <- read_csv(here("PSYC4141/files/week3", "data_bmw3_subscales.csv"))
+
+ggplot(data = data_mw_subscales, mapping = aes(x = BMW3_UN, y= BMW3_ME)) +
+  geom_point() 
 ```
 
 :::
 
-## Step 4: a simple histogram
+## Step 3b: Add a line of best fit
 
 ::: panel-tabset
 
 ### Code
 
 ```{r}
-#| label: simple_histogram-code
+#| label: scatterplot_withline_code
 #| echo: true
 #| eval: false
 #| code-line-numbers: true
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) +
-  geom_histogram()
+
+ggplot(data = data_mw_subscales, mapping = aes(x = BMW3_UN, y= BMW3_ME)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE)
 ```
 
-2. We tell R what type of plot to use
-
-::: notes
-If you just had the code on line 1, you would not see a plot.
-You have to tell R what type of plot to use. Here we'll use a 'histogram', so we tell it to use the geometric object 'histogram'. There are many different types of geometric objects. We'll encounter a few during this module.
-Plus adds a layer
-:::
+3. We use `geom_smooth()`, with the `method = "lm"` to add a line of best fit; `se` refers to the standard error around the line
 
 ### Plot
 
 ```{r}
-#| label: simple_histogram-output
+#| label: scatterplot_withline_output
 #| echo: false
 #| eval: true
 #| fig-width: 5
-library(here)
-library(tidyverse)
-data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) +
-  geom_histogram()
+
+ggplot(data = data_mw_subscales, mapping = aes(x = BMW3_UN, y= BMW3_ME)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE)
 ```
 
 :::
 
-## Step 4: Build the plot - different background
+## Step 3c: Tidy up the scatterplot
 
 ::: panel-tabset
 
 ### Code
 
 ```{r}
-#| label: different_background-code
+#| label: scatterplot_tidy_code
 #| echo: true
 #| eval: false
 #| code-line-numbers: true
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) +
-  geom_histogram()  +
-  theme_bw()
-```
 
-3. Changes the background
-
-::: notes
-There are many different themes. Here I've gone for a simple black and white theme.
-Note: layer
-:::
-
-### Plot
-
-```{r}
-#| label: different_background-output
-#| echo: false
-#| eval: true
-#| fig-width: 5
-library(here)
-library(tidyverse)
-data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01)) +
-  geom_histogram() +
-  theme_bw()
-```
-:::
-
-## Step 4: Build the plot - change the colours of the bars
-
-::: panel-tabset
-
-### Code
-
-```{r}
-#| label: colour_bars-code
-#| echo: true
-#| eval: false
-#| code-line-numbers: true
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +
-  geom_histogram()  +
-  theme_bw()
-```
-
-1. Specify an additional bit of code (or `argumment`) inside the `mapping` part of the function `ggplot()`. Instead of using the default grey, I'm telling R to 'fill in' the bars with a tomato red.
-
-### Plot
-
-```{r}
-#| label: colour_bars-output
-#| echo: false
-#| eval: true
-#| fig-width: 5
-library(here)
-library(tidyverse)
-data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +
-  geom_histogram() +
-  theme_bw()
-```
-:::
-
-## Step 4: Build the plot - remove the legend
-
-::: panel-tabset
-
-### Code
-
-```{r}
-#| label: remove_legend-code
-#| echo: true
-#| eval: false
-#| code-line-numbers: true
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +
-  geom_histogram()  +
+ggplot(data = data_mw_subscales, mapping = aes(x = BMW3_UN, y= BMW3_ME)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
   theme_bw() +
-  theme(legend.position = "none")
+  labs(x = "Unintentional mind wandering", y = "Meta-awareness of mind wandering")
 ```
 
-4. Removes the legend
+4. We use `theme_bw()` to change the background
+5. We use `labs()` to add informative titles to the axes
 
 ### Plot
 
 ```{r}
-#| label: remove_legend-output
+#| label: scatterplot_tidy_output
 #| echo: false
 #| eval: true
 #| fig-width: 5
-library(here)
-library(tidyverse)
-data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +
-  geom_histogram() +
+
+ggplot(data = data_mw_subscales, mapping = aes(x = BMW3_UN, y= BMW3_ME)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
   theme_bw() +
-  theme(legend.position = "none")
+  labs(x = "Unintentional mind wandering", y = "Meta-awareness of mind wandering")
 ```
+
 :::
 
-## Step 4: Build the plot - change the title of the x-axis
+## Step 4: Correlation analysis
 
 ::: panel-tabset
 
 ### Code
 
 ```{r}
-#| label: title_x_axis-code
+#| label: correlation_code
 #| echo: true
 #| eval: false
 #| code-line-numbers: true
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +
-  geom_histogram()  +
-  theme_bw() +
-  theme(legend.position = "none") +
-  labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1")
+
+correlation(data = data_mw_subscales,
+            select = c("BMW3_UN", "BMW3_ME"),
+            method = "pearson",
+            p_adjust = "none")
 ```
 
-5.  Adds a more informative title for the x-axis.
-
-### Plot
-
-```{r}
-#| label: title_x_axis-output
-#| echo: false
-#| eval: true
-#| fig-width: 5
-library(here)
-library(tidyverse)
-data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +
-  geom_histogram() +
-  theme_bw() +
-  theme(legend.position = "none") +
-  labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1")
-```
+::: {style="font-size: 0.7em"}
+1. We use the `correlation()` function and tell R what data to use
+2. We specify the variables we want to correlate using `select()`
+3. We specify which method to use; `"pearson"` is the default
+4. [We'll talk about that in a couple of weeks]{style="color: grey;"}
 :::
 
-## Step 4: Build the plot - change the value labels
-
-::: panel-tabset
-
-### Code
+### Output
 
 ```{r}
-#| label: add_text_labels_x-axis-code
-#| echo: true
-#| eval: false
-#| code-line-numbers: true
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +
-  geom_histogram()  +
-  theme_bw() +
-  theme(legend.position = "none") +
-  labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1") +
-  scale_x_continuous(
-    breaks = 0:4,
-    labels = c("Fully disagree", "Somewhat disagree", "Neutral", "Somewhat agree", "Fully agree")
-  )
-```
-
-Lines 6. to 9.  Replaces numerical values with text labels
-
-### Plot
-
-```{r}
-#| label: add_text_labels_x_axis-output
+#| label: correlation_output
 #| echo: false
 #| eval: true
-#| fig-width: 5
-library(here)
-library(tidyverse)
-data_mw <- read_csv(here("PSYC4141/files/week1/", "data_bmw3.csv"))
-ggplot(data = data_mw, mapping = aes(x = BMW3_UN_01, fill = "tomato")) +
-  geom_histogram() +
-  theme_bw() +
-  theme(legend.position = "none") +
-  labs(x = "Brief Mind Wandering Three-Factor Scale - Question 1") +
-  scale_x_continuous(
-    breaks = 0:4,
-    labels = c("Fully disagree", "Somewhat disagree", "Neutral", "Somewhat agree", "Fully agree")
-  )
+
+library (easystats)
+
+correlation(data = data_mw_subscales,
+            select = c("BMW3_UN", "BMW3_ME"),
+            method = "pearson",
+            p_adjust = "none")
 ```
+
+:::
+
+

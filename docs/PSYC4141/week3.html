@@ -209,7 +209,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#pre-lab-activity-2-visualising-correlations-interactively" id="toc-pre-lab-activity-2-visualising-correlations-interactively" class="nav-link" data-scroll-target="#pre-lab-activity-2-visualising-correlations-interactively">Pre-lab activity 2: Visualising correlations interactively</a></li>
   <li><a href="#pre-lab-activity-3-guess-the-correlation" id="toc-pre-lab-activity-3-guess-the-correlation" class="nav-link" data-scroll-target="#pre-lab-activity-3-guess-the-correlation">Pre-lab activity 3: Guess the correlation</a></li>
   </ul></li>
-  <li><a href="#sec-4141-w3-lab-activities" id="toc-sec-4141-w3-lab-activities" class="nav-link" data-scroll-target="#sec-4141-w3-lab-activities">Lab activities</a></li>
+  <li><a href="#sec-4141-w3-lab-activities" id="toc-sec-4141-w3-lab-activities" class="nav-link" data-scroll-target="#sec-4141-w3-lab-activities">Lab activities</a>
+  <ul class="collapse">
+  <li><a href="#lab-activity-1-finish-week-2-lab-activities-recap---skip-if-completed-succesfully-last-week" id="toc-lab-activity-1-finish-week-2-lab-activities-recap---skip-if-completed-succesfully-last-week" class="nav-link" data-scroll-target="#lab-activity-1-finish-week-2-lab-activities-recap---skip-if-completed-succesfully-last-week">Lab activity 1: Finish week 2 lab activities (Recap - skip if completed succesfully last week)</a></li>
+  <li><a href="#lab-activity-2-visualising-and-calculating-correlations" id="toc-lab-activity-2-visualising-and-calculating-correlations" class="nav-link" data-scroll-target="#lab-activity-2-visualising-and-calculating-correlations">Lab activity 2: Visualising and calculating correlations</a></li>
+  <li><a href="#lab-activity-3-interpreting-correlation" id="toc-lab-activity-3-interpreting-correlation" class="nav-link" data-scroll-target="#lab-activity-3-interpreting-correlation">Lab activity 3: Interpreting correlation</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -501,43 +506,120 @@ Takeaway
 <section id="sec-4141-w3-lab-activities" class="level2">
 <h2 class="anchored" data-anchor-id="sec-4141-w3-lab-activities">Lab activities</h2>
 <p>Information on the lab activities will follow soon.</p>
-<!-- ### Lab activity 1: Finish week 2 lab activities (Recap - skip if completed succesfully last week) -->
-<!-- #### Background -->
-<!-- Last week, we worked with some publicly available data from a research project on mind wandering. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). -->
-<!-- If you did not successfully finish last week’s lab activities, you might want to complete these first. You can log into the R server and open the Week 2 Quarto file (`4141_wk2_lab.qmd`) to continue to work through these. -->
-<!-- #### Aims of the activity -->
-<!-- Ensure you are familiar with reading in a `.csv`-file, creating a histogram anc calculating summary statistics.  -->
-<!-- #### Steps -->
-<!-- 1. Login to the R-server -->
-<!-- 2. Navigate to your `4141_wk2_lab folder` in the Files tab (right bottom quadrant) -->
-<!-- 3. Open the example script by clicking on the file called `4141_wk2_lab_act2.qmd` -->
-<!-- 4. Complete any remaining activities -->
-<!-- ### Lab activity 2: Visualising, calculating and reporting correlations -->
-<!-- <!-- Instructions will follow soon. -->
-<p>–&gt;</p>
-<!-- #### Background -->
-<!-- Last week, we worked with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). This week, we'll revisit how to create a histogram and then calculate descriptive statistics for the questionnaire responses. -->
-<!-- **Reference** -->
-<!-- Schubert, A.-L., Frischkorn, G. T., Sadus, K., Welhaf, M. S., Kane, M. J., & Rummel, J. (2024). The brief mind wandering three-factor scale (BMW-3). *Behavior Research Methods, 56*(8), 8720-8744. [https://doi.org/10.3758/s13428-024-02500-6](https://doi.org/10.3758/s13428-024-02500-6){target="_blank" rel="noopener"} -->
-<!-- #### Aims of the activity -->
-<!-- We are going to: -->
-<!-- 1.  Download and organise your files -->
-<!-- 2.  Setup the appropriate bits and pieces in RStudio -->
-<!-- 3.  Read in the data -->
-<!-- 4.  Build scatterplots with `geom_point()`, and add a line of best fit using `geom_smooth()` -->
-<!-- 5.  Calculate and interpret Pearson's r using `correlation()` -->
-<!-- #### Step 1: Download the files -->
-<!-- To complete this lab activity you will need two files: -->
-<!-- 1.  We'll work with an example script called `4141_wk3_lab.qmd`. This is a Quarto document. -->
-<!-- 2.  We need a data file called `data_bmw3.csv`. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This means that individual bits of data are separated by comma's. We'll often use `.csv` files. -->
-<!-- You can download the files here: [`4141_wk3_lab.zip`](files/week3/4141_wk3_lab.zip){download="4141_wk3_lab.zip"}. Usually they will be saved in your 'Downloads' folder. -->
-<!-- Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first). -->
-<!-- Finally, open the example script by clicking on the file called `4141_wk3_lab.qmd` in the Files space on the R-server. -->
-<!-- #### Steps 2 to 7 -->
-<!-- For **steps 2 to 7**, you'll be working in RStudio. -->
-<!-- ### Lab activity 3:  -->
+<section id="lab-activity-1-finish-week-2-lab-activities-recap---skip-if-completed-succesfully-last-week" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-1-finish-week-2-lab-activities-recap---skip-if-completed-succesfully-last-week">Lab activity 1: Finish week 2 lab activities (Recap - skip if completed succesfully last week)</h3>
+<section id="background" class="level4">
+<h4 class="anchored" data-anchor-id="background">Background</h4>
+<p>Last week, we worked with some publicly available data from a research project on mind wandering. You can have a look at the questionnaire <a href="files/week1/BMW-3_eng.pdf">here</a>.</p>
+<p>If you did not successfully finish last week’s lab activities, you might want to complete these first. You can log into the R server and open the Week 2 Quarto file (<code>4141_wk2_lab.qmd</code>) to continue to work through these.</p>
+</section>
+<section id="aims-of-the-activity" class="level4">
+<h4 class="anchored" data-anchor-id="aims-of-the-activity">Aims of the activity</h4>
+<p>Ensure you are familiar with reading in a <code>.csv</code>-file, creating a histogram anc calculating summary statistics.</p>
+</section>
+<section id="steps" class="level4">
+<h4 class="anchored" data-anchor-id="steps">Steps</h4>
+<ol type="1">
+<li>Login to the R-server</li>
+<li>Navigate to your <code>4141_wk2_lab folder</code> in the Files tab (right bottom quadrant)</li>
+<li>Open the example script by clicking on the file called <code>4141_wk2_lab_act2.qmd</code></li>
+<li>Complete any remaining activities</li>
+</ol>
+</section>
+</section>
+<section id="lab-activity-2-visualising-and-calculating-correlations" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-2-visualising-and-calculating-correlations">Lab activity 2: Visualising and calculating correlations</h3>
+<section id="background-1" class="level4">
+<h4 class="anchored" data-anchor-id="background-1">Background</h4>
+<p>Last week, we worked with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire <a href="files/week1/BMW-3_eng.pdf">here</a>. This week, we’ll revisit how to create a histogram and then calculate descriptive statistics for the questionnaire responses.</p>
+<p><strong>Reference</strong></p>
+<p>Schubert, A.-L., Frischkorn, G. T., Sadus, K., Welhaf, M. S., Kane, M. J., &amp; Rummel, J. (2024). The brief mind wandering three-factor scale (BMW-3). <em>Behavior Research Methods, 56</em>(8), 8720-8744. <a href="https://doi.org/10.3758/s13428-024-02500-6" target="_blank" rel="noopener">https://doi.org/10.3758/s13428-024-02500-6</a></p>
+</section>
+<section id="aims-of-the-activity-1" class="level4">
+<h4 class="anchored" data-anchor-id="aims-of-the-activity-1">Aims of the activity</h4>
+<p>We are going to:</p>
+<ol type="1">
+<li>Download and organise your files</li>
+<li>Setup the appropriate bits and pieces in RStudio</li>
+<li>Read in the data</li>
+<li>Build scatterplots with <code>geom_point()</code>, and add a line of best fit using <code>geom_smooth()</code></li>
+<li>Calculate and interpret Pearson’s r using <code>correlation()</code></li>
+</ol>
+</section>
+<section id="step-1-download-the-files" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-download-the-files">Step 1: Download the files</h4>
+<p>To complete this lab activity you will need two files:</p>
+<ol type="1">
+<li>We’ll work with an example script called <code>4141_wk3_lab.qmd</code>. This is a Quarto document.</li>
+<li>We need a data file called <code>data_bmw3.csv</code>. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al.&nbsp;(2024). It is a file of the type <code>.csv</code>. This means that individual bits of data are separated by comma’s. We’ll often use <code>.csv</code> files.</li>
+</ol>
+<p>You can download the files here: <a href="files/week3/4141_wk3_lab.zip" download="4141_wk3_lab.zip"><code>4141_wk3_lab.zip</code></a>. Usually they will be saved in your ‘Downloads’ folder.</p>
+<p>Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).</p>
+<p>Finally, open the example script by clicking on the file called <code>4141_wk3_lab.qmd</code> in the Files space on the R-server.</p>
+</section>
+<section id="steps-2-to-6" class="level4">
+<h4 class="anchored" data-anchor-id="steps-2-to-6">Steps 2 to 6</h4>
+<p>For <strong>steps 2 to 6</strong>, you’ll be working in RStudio.</p>
+</section>
+</section>
+<section id="lab-activity-3-interpreting-correlation" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-3-interpreting-correlation">Lab activity 3: Interpreting correlation</h3>
+<section id="question-1" class="level4">
+<h4 class="anchored" data-anchor-id="question-1">Question 1</h4>
+<p>Below are scatterplots that show the relationship between ‘how much you know about correlation and how attractive you appear to members of the opposite (&amp;/or same) sex’. Choose the type of correlation (strength and direction) displayed in each graph using one of the following:</p>
+<ul>
+<li>Perfect positive correlation</li>
+<li>Perfect negative correlation</li>
+<li>Strong positive correlation</li>
+<li>Strong negative correlation</li>
+<li>Moderate positive correlation</li>
+<li>Moderate negative correlation</li>
+<li>Null correlation</li>
+</ul>
+<p><strong>Figure A</strong> <img src="files/week3/lab_act3_a.png" class="img-fluid"></p>
+<p><strong>Figure B</strong> <img src="files/week3/lab_act3_b.png" class="img-fluid"></p>
+<p><strong>Figure C</strong> <img src="files/week3/lab_act3_c.png" class="img-fluid"></p>
+<p><strong>Figure D</strong> <img src="files/week3/lab_act3_d.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For the following questions, explain your chosen answer based on the statistic given, not on why you think the correlation may or may note make ‘logical’ sense.</p>
+</div>
+</div>
+</section>
+<section id="question-2" class="level4">
+<h4 class="anchored" data-anchor-id="question-2">Question 2</h4>
+<p>Suppose it was observed that there is a correlation of r = -.81 between a driver’s age and the cost of car insurance. This correlation would mean that, in general, older people pay more for car insurance.</p>
+<p><strong>TRUE or FALSE? Explain why.</strong></p>
+</section>
+<section id="question-3" class="level4">
+<h4 class="anchored" data-anchor-id="question-3">Question 3</h4>
+<p>Suppose that there is a correlation of r = .87 between the length of time a person is in prison and the amount of aggression the person displays on a psychological inventory administered at release. This means that spending a longer amount of time in prison <em>causes</em> people to become more aggressive.</p>
+<p><strong>TRUE or FALSE? Explain why.</strong></p>
+</section>
+<section id="question-4" class="level4">
+<h4 class="anchored" data-anchor-id="question-4">Question 4</h4>
+<p>A significant correlation was found between having great hair and performance in correlation labs. The correlation coefficient was .7. How much variance in correlation lab performance can the ‘greatness’ of your hair explain?</p>
+<ul>
+<li>51%</li>
+<li>70%</li>
+<li>49%</li>
+<li>30%</li>
+<li>Who cares I’ve got great hair.</li>
+</ul>
+<p>What was the reason for your answer?</p>
+<p>There is a name for the coefficient that reflects how much variance in one variable can be explained by the other variable. What is this coefficient called?</p>
 
 
+</section>
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

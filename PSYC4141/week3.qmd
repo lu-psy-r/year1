@@ -225,59 +225,108 @@ Is this all just a bit of fun? Well, yes, because stats is actually fun, and no,
 
 Information on the lab activities will follow soon.
 
-<!-- ### Lab activity 1: Finish week 2 lab activities (Recap - skip if completed succesfully last week) -->
+### Lab activity 1: Finish week 2 lab activities (Recap - skip if completed succesfully last week)
 
-<!-- #### Background -->
-<!-- Last week, we worked with some publicly available data from a research project on mind wandering. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). -->
+#### Background
+Last week, we worked with some publicly available data from a research project on mind wandering. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf).
 
-<!-- If you did not successfully finish last week’s lab activities, you might want to complete these first. You can log into the R server and open the Week 2 Quarto file (`4141_wk2_lab.qmd`) to continue to work through these. -->
+If you did not successfully finish last week’s lab activities, you might want to complete these first. You can log into the R server and open the Week 2 Quarto file (`4141_wk2_lab.qmd`) to continue to work through these.
 
-<!-- #### Aims of the activity -->
-<!-- Ensure you are familiar with reading in a `.csv`-file, creating a histogram anc calculating summary statistics.  -->
+#### Aims of the activity
+Ensure you are familiar with reading in a `.csv`-file, creating a histogram anc calculating summary statistics.
 
-<!-- #### Steps -->
+#### Steps
 
-<!-- 1. Login to the R-server -->
-<!-- 2. Navigate to your `4141_wk2_lab folder` in the Files tab (right bottom quadrant) -->
-<!-- 3. Open the example script by clicking on the file called `4141_wk2_lab_act2.qmd` -->
-<!-- 4. Complete any remaining activities -->
+1. Login to the R-server
+2. Navigate to your `4141_wk2_lab folder` in the Files tab (right bottom quadrant)
+3. Open the example script by clicking on the file called `4141_wk2_lab_act2.qmd`
+4. Complete any remaining activities
 
-<!-- ### Lab activity 2: Visualising, calculating and reporting correlations -->
+### Lab activity 2: Visualising and calculating correlations
 
-<!-- <!-- Instructions will follow soon. --> -->
+#### Background
 
-<!-- #### Background -->
+Last week, we worked with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). This week, we'll revisit how to create a histogram and then calculate descriptive statistics for the questionnaire responses.
 
-<!-- Last week, we worked with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). This week, we'll revisit how to create a histogram and then calculate descriptive statistics for the questionnaire responses. -->
+**Reference**
 
-<!-- **Reference** -->
+Schubert, A.-L., Frischkorn, G. T., Sadus, K., Welhaf, M. S., Kane, M. J., & Rummel, J. (2024). The brief mind wandering three-factor scale (BMW-3). *Behavior Research Methods, 56*(8), 8720-8744. [https://doi.org/10.3758/s13428-024-02500-6](https://doi.org/10.3758/s13428-024-02500-6){target="_blank" rel="noopener"}
 
-<!-- Schubert, A.-L., Frischkorn, G. T., Sadus, K., Welhaf, M. S., Kane, M. J., & Rummel, J. (2024). The brief mind wandering three-factor scale (BMW-3). *Behavior Research Methods, 56*(8), 8720-8744. [https://doi.org/10.3758/s13428-024-02500-6](https://doi.org/10.3758/s13428-024-02500-6){target="_blank" rel="noopener"} -->
+#### Aims of the activity
 
-<!-- #### Aims of the activity -->
+We are going to:
 
-<!-- We are going to: -->
+1.  Download and organise your files
+2.  Setup the appropriate bits and pieces in RStudio
+3.  Read in the data
+4.  Build scatterplots with `geom_point()`, and add a line of best fit using `geom_smooth()`
+5.  Calculate and interpret Pearson's r using `correlation()`
 
-<!-- 1.  Download and organise your files -->
-<!-- 2.  Setup the appropriate bits and pieces in RStudio -->
-<!-- 3.  Read in the data -->
-<!-- 4.  Build scatterplots with `geom_point()`, and add a line of best fit using `geom_smooth()` -->
-<!-- 5.  Calculate and interpret Pearson's r using `correlation()` -->
+#### Step 1: Download the files
+To complete this lab activity you will need two files:
 
-<!-- #### Step 1: Download the files -->
-<!-- To complete this lab activity you will need two files: -->
+1.  We'll work with an example script called `4141_wk3_lab.qmd`. This is a Quarto document.
+2.  We need a data file called `data_bmw3.csv`. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This means that individual bits of data are separated by comma's. We'll often use `.csv` files.
 
-<!-- 1.  We'll work with an example script called `4141_wk3_lab.qmd`. This is a Quarto document. -->
-<!-- 2.  We need a data file called `data_bmw3.csv`. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This means that individual bits of data are separated by comma's. We'll often use `.csv` files. -->
+You can download the files here: [`4141_wk3_lab.zip`](files/week3/4141_wk3_lab.zip){download="4141_wk3_lab.zip"}. Usually they will be saved in your 'Downloads' folder.
 
-<!-- You can download the files here: [`4141_wk3_lab.zip`](files/week3/4141_wk3_lab.zip){download="4141_wk3_lab.zip"}. Usually they will be saved in your 'Downloads' folder. -->
+Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).
 
-<!-- Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first). -->
+Finally, open the example script by clicking on the file called `4141_wk3_lab.qmd` in the Files space on the R-server.
 
-<!-- Finally, open the example script by clicking on the file called `4141_wk3_lab.qmd` in the Files space on the R-server. -->
+#### Steps 2 to 6
 
-<!-- #### Steps 2 to 7 -->
+For **steps 2 to 6**, you'll be working in RStudio.
 
-<!-- For **steps 2 to 7**, you'll be working in RStudio. -->
+### Lab activity 3: Interpreting correlation
 
-<!-- ### Lab activity 3:  -->
+#### Question 1
+
+Below are scatterplots that show the relationship between 'how much you know about correlation and how attractive you appear to members of the opposite (&/or same) sex'. Choose the type of correlation (strength and direction) displayed in each graph using one of the following:
+
+-   Perfect positive correlation
+-   Perfect negative correlation
+-   Strong positive correlation
+-   Strong negative correlation
+-   Moderate positive correlation
+-   Moderate negative correlation
+-   Null correlation
+
+**Figure A** ![](files/week3/lab_act3_a.png)
+
+**Figure B** ![](files/week3/lab_act3_b.png)
+
+**Figure C** ![](files/week3/lab_act3_c.png)
+
+**Figure D** ![](files/week3/lab_act3_d.png)
+
+::: {.callout-note}
+For the following questions, explain your chosen answer based on the statistic given, not on why you think the correlation may or may note make 'logical' sense.
+:::
+
+#### Question 2
+
+Suppose it was observed that there is a correlation of r = -.81 between a driver's age and the cost of car insurance. This correlation would mean that, in general, older people pay more for car insurance.
+
+**TRUE or FALSE? Explain why.**
+
+#### Question 3
+
+Suppose that there is a correlation of r = .87 between the length of time a person is in prison and the amount of aggression the person displays on a psychological inventory administered at release. This means that spending a longer amount of time in prison *causes* people to become more aggressive.
+
+**TRUE or FALSE? Explain why.**
+
+#### Question 4
+
+A significant correlation was found between having great hair and performance in correlation labs. The correlation coefficient was .7. How much variance in correlation lab performance can the 'greatness' of your hair explain?
+
+-   51%
+-   70%
+-   49%
+-   30%
+-   Who cares I've got great hair.
+
+What was the reason for your answer?
+
+There is a name for the coefficient that reflects how much variance in one variable can be explained by the other variable. What is this coefficient called?
+
