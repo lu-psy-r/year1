@@ -223,7 +223,7 @@ Is this all just a bit of fun? Well, yes, because stats is actually fun, and no,
 
 ## Lab activities {#sec-4141-w3-lab-activities}
 
-Information on the lab activities will follow soon.
+<!-- Information on the lab activities will follow soon. -->
 
 ### Lab activity 1: Finish week 2 lab activities (Recap - skip if completed succesfully last week)
 
@@ -239,7 +239,7 @@ Ensure you are familiar with reading in a `.csv`-file, creating a histogram anc 
 
 1. Login to the R-server
 2. Navigate to your `4141_wk2_lab folder` in the Files tab (right bottom quadrant)
-3. Open the example script by clicking on the file called `4141_wk2_lab_act2.qmd`
+3. Open the example script by clicking on the file called `4141_wk2_lab.qmd`
 4. Complete any remaining activities
 
 ### Lab activity 2: Visualising and calculating correlations
@@ -266,7 +266,7 @@ We are going to:
 To complete this lab activity you will need two files:
 
 1.  We'll work with an example script called `4141_wk3_lab.qmd`. This is a Quarto document.
-2.  We need a data file called `data_bmw3.csv`. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This means that individual bits of data are separated by comma's. We'll often use `.csv` files.
+2.  We need a data file called `data_bmw3_subscales.csv`. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This means that individual bits of data are separated by comma's. We'll often use `.csv` files.
 
 You can download the files here: [`4141_wk3_lab.zip`](files/week3/4141_wk3_lab.zip){download="4141_wk3_lab.zip"}. Usually they will be saved in your 'Downloads' folder.
 
@@ -318,7 +318,7 @@ Suppose that there is a correlation of r = .87 between the length of time a pers
 
 #### Question 4
 
-A significant correlation was found between having great hair and performance in correlation labs. The correlation coefficient was .7. How much variance in correlation lab performance can the 'greatness' of your hair explain?
+A significant correlation was found between having great hair and performance in research methods and stats labs. The correlation coefficient was .7. How much variance in research methods and stats lab performance can the 'greatness' of your hair explain?
 
 -   51%
 -   70%
@@ -330,3 +330,42 @@ What was the reason for your answer?
 
 There is a name for the coefficient that reflects how much variance in one variable can be explained by the other variable. What is this coefficient called?
 
+## Answers
+
+*The answers to the questions will be available after the final lab session has taken place.*
+
+<!-- ### Lab activity 3: Interpreting correlation -->
+
+<!-- 1.  Below are scatterplots that show the relationship between 'how much you know about correlation and how attractive you appear to members of the opposite (&/or same) sex'. Choose the type of correlation (strength and direction) displayed in each graph. -->
+
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+
+<!-- a.  strong positive correlation -->
+<!-- b.  null correlation -->
+<!-- c.  moderate positive correlation -->
+<!-- d.  perfect negative correlation -->
+
+<!-- ::: -->
+
+
+<!-- 2. Suppose it was observed that there is a correlation of *r* = -.81 between a driver's age and the cost of car insurance. This correlation would mean that, in general, older people pay more for car insurance. -->
+
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- FALSE Explanation: The correlation coefficient is negative and therefore infers a negative correlation. As such, older people pay less for car insurance: as age increases, car insurance costs decrease. -->
+<!-- ::: -->
+
+<!-- 3. Suppose that there is a correlation of *r* = .87 between the length of time a person is in prison and the amount of aggression the person displays on a psychological inventory administered at release. This means that spending a longer amount of time in prison *causes* people to become more aggressive. -->
+
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- FALSE Explanation: This is a bit of trick question as it has the sneaky 'cause' word in. The correlation coefficient is a positive number, suggesting a positive relationship between length of time in prison and aggression. However, causation cannot be inferred from correlation and therefore we cannot know whether time spent in prison CAUSES aggression, and rather we suggest a relationship between the two: as length of time in prison increases, aggression increases. -->
+<!-- ::: -->
+
+<!-- 4. A significant correlation was found between having great hair and performance in research methods and stats labs. The correlation coefficient was .7. How much variance in research methods and stats lab performance can the 'greatness' of your hair explain? -->
+
+<!-- ::: {.callout-note icon=false collapse="true"} -->
+<!-- ## Answer -->
+<!-- c 49% The 'coefficient of determination' or 'R-squared' tells us the proportion or variance in one variable that can be predicted if we know the other variable. We can determine this by squaring the *r*. Therefore, .7^2^ = .49, *R^2^* = .49. -->
+<!-- ::: -->
