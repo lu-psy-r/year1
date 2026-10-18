@@ -122,13 +122,23 @@ In the two videos below, I'll talk you through how to use each one.
 
 [How to use `mutate()`: transcript](files/week3/4141_howto_mutate_transcript.txt){download="4141_howto_mutate_transcript.txt"}.
 
-**2. Correlation: How to run and report a correlation analysis** (~ minutes) A worked example showing how to calculate a correlation in RStudio.
+**2. Correlation: How to build a scatterplot and run a correlation analysis** (~ minutes) A worked example showing how to build a scatterplot and calculate a correlation in RStudio.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=3846065c-f7b9-4e00-a71b-b4e700a12228&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_howto_scatterplotcorrelation"></iframe>
+</div>
+```
+
+\newline
+
+[How to scatterplot and correlation: slides](files/week3/4141_howto_scatterplotcorrelation_slides.pdf){download="4141_howto_scatterplotcorrelation_slides.pdf"}.
+
+[How to scatterplot and correlation: transcript](files/week3/4141_howto_scatterplotcorrelation_transcript.txt){download="4141_4141_howto_scatterplotcorrelation_transcript.txt"}.
 
 <!-- ::: {.callout-note title="APA Style"} -->
 <!-- APA stands for the American Psychological Association. APA style provides shared conventions and guidelines for how to report write a research report in psychology. This includes how to report statistical results clearly and consistently. You can read the APA style (7th edition) [here](https://apastyle.apa.org){target="_blank" rel="noopener"}. A useful summary on reporting numbers and statists in APA style can be found [here](files/week3/apa_report_stats.pdf){download="apa_numbers-statistics-guide.pdf"}). -->
 <!-- ::: -->
-
-[VIDEO WILL FOLLOW SOON]
 
 ::: {.callout-tip title="Take a break!"}
 Before continuing, we recommend you take a **15-minute break away from your computer**. Remember to note down any questions to bring to the Q&A, lab or discussion forum whilst you’re watching the lectures.

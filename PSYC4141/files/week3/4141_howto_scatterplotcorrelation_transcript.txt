@@ -1,0 +1,221 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+So in this video I'll walk you through how to build a scatterplot in R and how to conduct a correlation analysis and interpret the results.
+
+First things first. As always, we need to tell R which libraries to load or which packages to use.
+
+Now we as before we use the library function for this.
+
+And previously we have used the here package and the tidy first package.
+
+So those are the ones that we've been loading so far. Um to be able to do correlation analysis we also need to load the easy stats package.
+
+So easy stats is really a set of packages that handles many different types of statistical analyses.
+
+Um, and it includes the function that we need to run correlation analysis.
+
+So as always what we do is we um type library and then the name of the package in brackets.
+
+After that, we need to read in the data.
+
+I won't dwell on that too long either, because we've done that before, and you can watch other videos to remind you of how to do that.
+
+But very briefly we use the read the read underscore CSV function and then um, yeah,
+
+we need to tell our where to look here and what the name of the data file is, including the extension here.
+
+And this time we are reading in a data file that is called data underscore BMW three underscore subscales.
+
+Now as we've been talking about it's really important to visualise your data.
+
+Um first or and to do visualise an association between two variables.
+
+A scatter plot is a really good way to do it. Um, so far we've been using ggplot in combination with geom histogram to create a histogram.
+
+Um, to build a scatter plot we again use ggplot, and we tell it what the data is that we want to use.
+
+And then we tell it what the mapping is. Now for a histogram you only have to specify what's needed to go on on the x axis.
+
+So that is the axis that goes from left to right.
+
+Um for a scatter plot you need to tell R what to put on the x axis, but also what to put on the y axis.
+
+So this is in this scatter plot we are visualising the association between two variables um present in this data set.
+
+Um one is BMW three underscore un for unintentional mind wandering.
+
+So kind of combined score for unintentional mind wandering is on the x axis and on the y axis.
+
+We use the combined score of meta awareness of mind wandering.
+
+Um, as I said previously, we've used geom point to create a histogram.
+
+This time we want to use this to create a scatter plot. So we need to use a, a different a geometrical object.
+
+And we use geom point for that. So make sure to add a plus sign at the end of this first line and then geom point.
+
+And this is what that looks like. So one variable BMW three underscore un or unintentional mind wandering on the x axis.
+
+And BMW three underscore m e or meta awareness of mind wandering on the y axis from the bottom to the top.
+
+Now, each data point that you see here is, um, kind of indicates the responses of one participant on both of these measures.
+
+So for instance, this one here, um, scored two on, uh, kind of an average of two on the questions that measured unintentional mind wandering.
+
+And it's they scored well, about 0.25 on average on the questions of on meta awareness of mind wandering.
+
+So that's why they end up in this position. Um, if we take another kind of extreme case,
+
+then we have somebody who scored four on average on the questions on unintentional
+
+mind wandering and also four on questions on meta awareness of mind wandering.
+
+Um, so that's that particular participant. So each of these data points represents the responses of one participant.
+
+Um, now you can kind of see a bit of a pattern in this in these data.
+
+So I have a think about what you think this what kind of of association or what kind of correlation this might turn out to be.
+
+Um, there's kind of a clear lack of data points in this bottom left corner.
+
+So it is kind of. Yeah, a concentration over over here.
+
+Right. This is where most of them are now to visualise kind of a trend in the data.
+
+Um, you can add a line of best fit.
+
+And we do that by adding a layer. So we add a plus sign here on the, on the line of geom point.
+
+So we basically say plot the data points using the geom point.
+
+And then and as in plus add another layer where you add a line of best fit.
+
+And we use GM smooth um to add a line of best fit.
+
+And you can use different types of line of best fit. And we use the method that we use is called LM, which stands for linear model,
+
+which basically means that you get a straight line rather than a curvy one or something else.
+
+So we specify that and then we say standard error.
+
+S stands for standard error around a line and we say true.
+
+Um, and that basically means that it um, plots the um, standard error around the line of best fit on the plot as well.
+
+So this is what that looks like. So the blue line here is the line of best fit.
+
+And this grey band is the standard error.
+
+So if you would say in the code standard errors equals false or SSE equals false instead of true, we wouldn't get this grey band.
+
+So this line of best fit gives you an idea of the trend in the data.
+
+And we can see that it kind of starts higher at the top left and then ends lower at kind of towards the bottom right.
+
+So kind of indicative of a negative association between these two variables.
+
+So if people score higher on unintentional mind wandering they score lower on, um, meta awareness of mind wandering.
+
+Now let's tidy that up a bit. Let's tidy up that scatterplot a bit.
+
+Um, to make it more informative and easier to read.
+
+Um, I have changed the background by using a different theme, and I have added, um, informative labels to the x axis and the y axis.
+
+Um, revisit one of the other How-To videos if you want to kind of change more of those features.
+
+In for instance, the colour or something else. So this is what that looks like.
+
+Uh, I don't like that grey background. So I've created the white background and I've added unintentional mind wandering at the bottom here,
+
+and metta awareness of mind wandering for the y axis title so that it is easier to understand for the reader who might not know what you know.
+
+The the previous variable names that we had here, um, refer to.
+
+Okay. Then the correlation analysis. So we use the function correlation to tell to to do the correlation analysis.
+
+And there are four bits of information that you need to kind of specify within that function.
+
+Um, to to tell exactly how you want the correlation analysis to be conducted.
+
+We need to tell it what data to use. So this refers to the data frame.
+
+Then we need to tell it which two variables to correlate.
+
+So again we've specified here um unintentional mind wandering and better awareness of mind wandering.
+
+So those are the two variables between which we want to calculate a pairwise correlation.
+
+And then there are different methods to use to to calculate the correlation.
+
+The default is Pearson. I've specified it here so that I can show you where to do that.
+
+Because sometimes you want to use a different method. And we'll talk about that in later weeks.
+
+So the default is Pearson. And.
+
+Then there is a additional um argument that you need that, that, that you can specify or that you sometimes need to specify.
+
+And we'll talk about that in a couple of weeks time. So don't worry about that for now.
+
+Um, at the moment we basically don't want to adjust the p value okay.
+
+So remember this is a function from the correlation from the easy stats um package.
+
+So make sure that that that you have loaded that package. Um and then yeah this is the code to run a correlation analysis.
+
+And when we run that this is what we get. This is the output.
+
+So you will see that in your console or also in your quarter document.
+
+And it tells you um a number of things.
+
+It tells you what methods, what method you used. It tells you which two variables you correlate it.
+
+And then importantly here we have the R value.
+
+So this is Pearson's r. And here it says -0.32.
+
+So that is the value for Pearson's are. And there is two key bits of information.
+
+It is it specifies whether that is positive or negative.
+
+Um and it is negative in this case and the strength of the correlation.
+
+So how far this is removed from zero. So in this case that is 0.32.
+
+It gives you some other information as well. Um it gives you the 90% 95% confidence interval and the t value and a p value.
+
+We'll talk about those in a few weeks time. Now then, it reminds you that you have not used an adjustment method, which is fine in this case.
+
+And it tells you how many observations there were.
+
+And we will that is relevant information as well, because you do need to, um, kind of report that or a number related to it.
+
+Um, this is the degrees of freedom. Um, sorry.
+
+You derive the degrees of freedom from that. The degrees of freedom is here.
+
+Um, but for now, I want you to focus on these kind of key bits of information,
+
+the two variables that you have calculated a correlation between and this R value.
+
+So in this case that was -0.32. And if we go back to the scatter plot then then that makes sense right.
+
+We did see that the line is kind of is indicative of a negative correlation, because it is higher on the left than it is on the right.
+
+Um, and 0.32 also suggests that it is not a particularly strong association or correlation,
+
+because quite a few data points are relatively far removed from the line of best fit.
+
+Um, but yeah, it does suggest that if people who score higher an unintentional mind wandering score score lower on matter awareness of mind wandering,
+
+and in a way that that makes sense, right?
+
+Because if you would score high on meta awareness of mind wandering, you would notice quite quickly when your mind wanders.
+
+Um, an unintentional mind wandering kind of happens spontaneously where you don't notice that very much.
+
+So that kind of makes conceptual sense as well.
+
+Okay, that's it for now.
+
