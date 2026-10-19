@@ -26,13 +26,12 @@ We are going to:
 
 If you haven't done so already, this is a good time to watch the 'How to' videos on how to:
 
-- Use RStudio - [in this section](week1.qmd#sec-4141-w1-lectures-intro-how-r)
-- Build a plot - [in this section](week1.qmd#sec-4141-w1-lectures-intro-how-r)
-- Use `here()` - [in this section](week3.qmd#sec-4141-w3-lectures-correlation)
-- Use `mutate()` - [in this section](week3.qmd#sec-4141-w3-lectures-correlation)
-- Conduct and interpret correlation analysis - [in this section](week3.qmd#sec-4141-w3-lectures-correlation)
+-   Use RStudio - [in this section](week1.qmd#sec-4141-w1-lectures-intro-how-r)
+-   Build a plot - [in this section](week1.qmd#sec-4141-w1-lectures-intro-how-r)
+-   Use `here()` - [in this section](week3.qmd#sec-4141-w3-lectures-correlation)
+-   Use `mutate()` - [in this section](week3.qmd#sec-4141-w3-lectures-correlation)
+-   Conduct and interpret correlation analysis - [in this section](week3.qmd#sec-4141-w3-lectures-correlation)
 :::
-
 
 #### Step 1: Download the files (skip if you've already done this)
 
@@ -58,7 +57,7 @@ In this lab activity, we'll practice:
 
 We first used some of these functions in earlier. This week you'll have the opportunity to consolidate your understanding of these functions and get practice with them. Instead of asking you to run code that we've written for you, you'll need to write it yourself. You don't have to remember everything, though; we will give you hints along the way. Of course you can also revisit lab activities from previous weeks and the 'How to ... ' videos to remind yourself.
 
-Then, you will learn how to run a correlation analysis. We will explain the code for these line by line. 
+Then, you will learn how to run a correlation analysis. We will explain the code for these line by line.
 :::
 
 ## Step 2: Setup
@@ -86,12 +85,7 @@ The next step is to read in a data file. It is a file of the type `.csv`, so we'
 
 Your code should include:
 
-dataframe: the name of the object you want to save the data in (such as `data_mw_subscales`)
-<- : assignment arrow
-read_csv() : the `read_csv()` function
-here(): the `here() function
-"filepath to folder": the folders that you need to point R to starting from your project root folder
-"filename.extentions": the name of the datafile, including the extension
+dataframe: the name of the object you want to save the data in (such as `data_mw_subscales`) \<- : assignment arrow read_csv() : the `read_csv()` function here(): the \`here() function "filepath to folder": the folders that you need to point R to starting from your project root folder "filename.extentions": the name of the datafile, including the extension
 :::
 
 > Action: Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') that is named `data_mw_subscales` in the Environment (top right quadrant).
@@ -114,7 +108,6 @@ Then, we need to tell R what type of plot we want. We do this by adding a `+` to
 We also want to add a line of best fit. We do this by adding a `+` to the line on which you've written `geom_point()`, then on the next line you add another 'geometric object', in this case `geom_smooth()`. We want to specify what type of line of best fit, we do this by adding `method="lm", se=TRUE` inside the brackets of `geom_smooth()`.
 
 This will give you a basic scatterplot. Revisit the lab activity code from week 1 to remind yourself how to change any of the features (such as the colour, the background, add titles to the axes etc.).
-
 :::
 
 The complete code chunk for the basic histogram should look like this:
@@ -140,7 +133,7 @@ The code below runs the correlation analysis.
 
 ```{r}
 #| label: correlation
-correlation(data = data_mw_subscales,         # use the `correlation()` function and tell R what data to use
+results <- correlation(data = data_mw_subscales, # use the `correlation()` function and tell R what data to use
             select = c("BMW3_UN", "BMW3_ME"), # specify the variables we want to correlate using `select()`
             method = "pearson",               # specify which method to use; `"pearson"` is the default
             p_adjust = "none")                # we'll come back to this in a couple of weeks
@@ -152,5 +145,5 @@ correlation(data = data_mw_subscales,         # use the `correlation()` function
 
 Repeat steps 4 and 5 for the relationship between:
 
-- unintentional mind wandering and intentional mind wandering
-- intentional mind wandering and meta-awareness of mind wandering
+-   unintentional mind wandering and intentional mind wandering
+-   intentional mind wandering and meta-awareness of mind wandering
