@@ -5,7 +5,7 @@ editor: visual
 
 ## Background
 
-In the past couple of weeks, we worked with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). This week, we'll create a scatterplot and conduct a correlation analysis using the subscale scores.
+In the past couple of weeks, we worked with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). This week, we'll create a scatterplot and conduct a correlation analysis using the three subscale scores (unintentional mind wandering, intentional mind wandering, meta-awareness of mind wandering).
 
 **Reference**
 
