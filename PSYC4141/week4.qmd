@@ -80,6 +80,8 @@ The slides presented in the next videos can be downloaded as a web page: `hypoth
 - [Lecture slides](files/week4/hypothesis-testing-significance.html)
 
 When you download the file, double click on it to open it in your usual web browser for viewing.
+
+There are many slides but not all slides are discussed in-depth in the lecture, some are there to help to visually support transitions between points.
 :::
 
 Next, you can see the lecture elements. We recommend that you watch them in sequence.
@@ -197,7 +199,8 @@ The reading list is divided into multiple sections:
 
 For **week 4**, the reading is:
 
--   Howell, D. C. (2017). Fundamental statistics for the behavioral sciences (9th ed.). Cengage Learning. Chapter 9. **Essential** Focus on sections 9.10 and 9.11. These sections support the concepts introduced in the pre-recorded lecture on applying the hypothesis testing framework to correlation and reporting the results correctly.
+-   Howell, D. C. (2017). Fundamental statistics for the behavioral sciences (9th ed.). Cengage Learning. Chapter 9. **Essential** 
+- Focus on sections 9.10 and 9.11. These sections support the concepts introduced in the pre-recorded lecture on applying the hypothesis testing framework to correlation and reporting the results correctly.
 
 ## Pre-lab activities {#sec-4141-w4-prelab-activities}
 
