@@ -342,40 +342,40 @@ There is a name for the coefficient that reflects how much variance in one varia
 
 ## Answers
 
-*The answers to the questions will be available after the final lab session has taken place.*
+<!-- *The answers to the questions will be available after the final lab session has taken place.* -->
 
-<!-- ### Lab activity 3: Interpreting correlation -->
+### Lab activity 3: Interpreting correlation
 
-<!-- 1.  Below are scatterplots that show the relationship between 'how much you know about correlation and how attractive you appear to members of the opposite (&/or same) sex'. Choose the type of correlation (strength and direction) displayed in each graph. -->
+1.  Below are scatterplots that show the relationship between 'how much you know about correlation and how attractive you appear to members of the opposite (&/or same) sex'. Choose the type of correlation (strength and direction) displayed in each graph.
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
 
-<!-- a.  strong positive correlation -->
-<!-- b.  null correlation -->
-<!-- c.  moderate positive correlation -->
-<!-- d.  perfect negative correlation -->
+a.  strong positive correlation
+b.  null correlation
+c.  moderate positive correlation
+d.  perfect negative correlation
 
-<!-- ::: -->
+:::
 
 
-<!-- 2. Suppose it was observed that there is a correlation of *r* = -.81 between a driver's age and the cost of car insurance. This correlation would mean that, in general, older people pay more for car insurance. -->
+2. Suppose it was observed that there is a correlation of *r* = -.81 between a driver's age and the cost of car insurance. This correlation would mean that, in general, older people pay more for car insurance.
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- FALSE Explanation: The correlation coefficient is negative and therefore infers a negative correlation. As such, older people pay less for car insurance: as age increases, car insurance costs decrease. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+FALSE Explanation: The correlation coefficient is negative and therefore infers a negative correlation. As such, older people pay less for car insurance: as age increases, car insurance costs decrease.
+:::
 
-<!-- 3. Suppose that there is a correlation of *r* = .87 between the length of time a person is in prison and the amount of aggression the person displays on a psychological inventory administered at release. This means that spending a longer amount of time in prison *causes* people to become more aggressive. -->
+3. Suppose that there is a correlation of *r* = .87 between the length of time a person is in prison and the amount of aggression the person displays on a psychological inventory administered at release. This means that spending a longer amount of time in prison *causes* people to become more aggressive.
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- FALSE Explanation: This is a bit of trick question as it has the sneaky 'cause' word in. The correlation coefficient is a positive number, suggesting a positive relationship between length of time in prison and aggression. However, causation cannot be inferred from correlation and therefore we cannot know whether time spent in prison CAUSES aggression, and rather we suggest a relationship between the two: as length of time in prison increases, aggression increases. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+FALSE Explanation: This is a bit of trick question as it has the sneaky 'cause' word in. The correlation coefficient is a positive number, suggesting a positive relationship between length of time in prison and aggression. However, causation cannot be inferred from correlation and therefore we cannot know whether time spent in prison CAUSES aggression, and rather we suggest a relationship between the two: as length of time in prison increases, aggression increases.
+:::
 
-<!-- 4. A significant correlation was found between having great hair and performance in research methods and stats labs. The correlation coefficient was .7. How much variance in research methods and stats lab performance can the 'greatness' of your hair explain? -->
+4. A significant correlation was found between having great hair and performance in research methods and stats labs. The correlation coefficient was .7. How much variance in research methods and stats lab performance can the 'greatness' of your hair explain?
 
-<!-- ::: {.callout-note icon=false collapse="true"} -->
-<!-- ## Answer -->
-<!-- c 49% The 'coefficient of determination' or 'R-squared' tells us the proportion or variance in one variable that can be predicted if we know the other variable. We can determine this by squaring the *r*. Therefore, .7^2^ = .49, *R^2^* = .49. -->
-<!-- ::: -->
+::: {.callout-note icon=false collapse="true"}
+## Answer
+c 49% The 'coefficient of determination' or 'R-squared' tells us the proportion or variance in one variable that can be predicted if we know the other variable. We can determine this by squaring the *r*. Therefore, .7^2^ = .49, *R^2^* = .49.
+:::
