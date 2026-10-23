@@ -7,10 +7,10 @@ order: 4 # ensure this is one more than the previous script
 ::: {.callout-note title="Overview"}
 This week we focus on two strands of learning:
 
-A.  Correlation - how we investigate the association between two numerical variables, visualise patterns using scatterplots, and interpret the direction and strength of a relationship.
-B.  Ethical research practice - how we respect participants' choices, collect and protect appropriate data, and interpret and communicate research findings responsibly.
+A.  Hypothesis testing and significance testing and to apply this to correlation analysis
+B.  Getting started on the group project: Getting into groups and plan the project
 
-Building on last week’s work with individual numerical variables (e.g. screen time), we will now look at how **two numerical variables** can vary together. We will also consider why an observed association between two variables does not establish causation.
+Building on last week’s work on how **two numerical variables** can vary together, we will apply hypothesis testing and significance testing to correlation analysis. We will also start the group project in which you will investigate the question: *Is mind wandering related to screen time?*.
 
 The materials we have prepared to support your learning are arranged in four parts:
 
@@ -26,9 +26,11 @@ You can navigate to each in the side bar on the right
 
 <!-- - @sec-4141-w4-lectures: Watch these before your lab session -->
 
-<!-- - @sec-4141-w4-lectures-:  -->
+<!-- - @sec-4141-w4-lectures-theory:  -->
 
 <!-- - @sec-4141-w4-lectures-report-correlation: Hypothesis testing and correlation -->
+
+<!-- - @sec-4141-w4-lectures-project: An overview of the project -->
 
 <!-- - @sec-4141-w4-reading: Recommended readings -->
 
@@ -38,11 +40,11 @@ You can navigate to each in the side bar on the right
 
 ## Lectures {#sec-4141-w4-lectures}
 
-Last week, we explored how psychological concepts can be measured and represented as data. You practised summarising one numerical variable at a time, using measures of central tendency and variability, and created histograms to visualise distributions. We also considered why it is important to look at the data rather than rely on summary statistics alone.
+Last week, we explored how two measures can vary together. You practised visualising the relationship using scatterplots and estimating Pearson's r. We also talked about how we respect participants' choices, collect and protect appropriate data, and interpret and communicate research findings responsibly.
 
-**This week, we move from examining one numerical variable to two**. We will introduce correlation as a measure of association between two variables, create scatterplots, calculate a correlation coefficient in RStudio, and practise interpreting the results.
+**This week, we learn about hypothesis testing and significance testing and apply this correlation analysis. We will also practice reporting correlation analysis following APA conventions.
 
-We will also consider what it means to conduct ethical psychological research, from informed consent and data protection to inclusive recruitment and responsible interpretation. These ideas connect directly to correlation, as finding a relationship between X and Y is not the same as demonstrating that a change in X causes a change in Y.
+We will make a start with the group project.
 
 \newline
 
@@ -54,16 +56,16 @@ We will also consider what it means to conduct ethical psychological research, f
 Make a note of questions as you work through the material. These might be answered later in the recordings, or in your lab. Otherwise, please bring them to the live online Q&A session on Friday or post them on the [Q&A forum on Moodle](https://modules.lancaster.ac.uk/mod/forum/view.php?id=2918081).
 :::
 
-### Section A:  {#sec-4141-w4-lectures-}
+### Section A:  {#sec-4141-w4-lectures-theory}
 
-You can watch the lecture for the video using the video playback windows shown next. Section A is broken into two parts that should be watched in sequence:
+You can watch the lecture for the video using the video playback windows shown next. Section A is broken into ? parts that should be watched in sequence:
 
-1.  Correlation: Theory
-2.  Correlation: How to run and report a correlation analysis
+1.  Hypothesis testing and significance testing
 
-**1. Correlation: Theory** (~23 minutes)
+2.  Correlation: How to report a correlation analysis
 
-What is correlation? How can we describe the direction and strength of a relationship between two numerical variables? Why does correlation not infer causation?
+**1. Hypothesis testing and significance testing** (~ minutes)
+
 
 ```{r}
 #| label: Do not remove. It prevents Quarto from thinking it needs to involve Python.
@@ -80,14 +82,6 @@ What is correlation? How can we describe the direction and strength of a relatio
 [Correlation: Theory transcript](files/week3/4141_wk3_correlation_transcript.txt){download="4141_wk3_correlation_transcript.txt"}.
 
 
-::: {.callout-tip title="Take a break!"}
-Before continuing, we recommend you take a **15-minute break away from your computer**. Remember to note down any questions to bring to the Q&A, lab or discussion forum whilst you’re watching the lectures.
-:::
-
-### Section B: How to apply hypothesis testing to correlation and report a correlation analysis {#sec-4141-w4-lectures-report-correlation}
-
-Section B has one part:
-
 **1. How to report a correlation analysis** (~ minutes)
 
 How to apply the hypothesis testing framework to correlation and report the results of a correlation analysis following APA conventions.
@@ -99,6 +93,29 @@ How to apply the hypothesis testing framework to correlation and report the resu
 ::: {.callout-note title="APA Style"}
 APA stands for the American Psychological Association. APA style provides shared conventions and guidelines for how to write a research report in psychology. This includes how to report statistical results clearly and consistently. You can read about the APA style (7th edition) [here](https://apastyle.apa.org){target="_blank" rel="noopener"}. A useful summary on reporting numbers and statists in APA style can be found [here](files/week3/apa_report_stats.pdf){download="apa_numbers-statistics-guide.pdf"}).
 :::
+
+::: {.callout-tip title="Take a break!"}
+Before continuing, we recommend you take a **15-minute break away from your computer**. Remember to note down any questions to bring to the Q&A, lab or discussion forum whilst you’re watching the lectures.
+:::
+
+### Section B: An overview of the project {#sec-4141-w4-lectures-project}
+
+
+Section B has one part:
+
+**1. The project: An overview** (~ minutes)
+
+An overview of the project you will carry out and the research report you will write.
+
+```{=html}
+
+```
+
+\newline
+
+[Project overview - slides](files/week4/4141_wk4_project_slides.pdf){download="4141_wk4_project_slides.pdf"}.
+
+[Project overview - transcript](files/week4/4141_wk4_project_transcript.txt){download="4141_wk4_project_transcript.txt"}.
 
 ## Reading {#sec-4141-w4-reading}
 
