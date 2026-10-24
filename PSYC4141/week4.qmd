@@ -247,26 +247,26 @@ This allows you to see how accurately you can estimate r (correlation strengths)
 <!-- Information on the lab activities will follow soon. -->
 <!-- ::: -->
 
-<!-- ### Lab activity 1: Finish lab activities from previous weeks (Recap - skip if completed succesfully last week) -->
+### Lab activity 1: Finish lab activities from previous weeks (Recap - skip if completed succesfully last week)
 
-<!-- #### Background -->
-<!-- Over the past few weeks, we worked with some publicly available data from a research project on mind wandering. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). -->
+#### Background
+Over the past few weeks, we worked with some publicly available data from a research project on mind wandering. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf).
 
-<!-- If you did not successfully finish the lab activities for weeks 1, 2 or 3, you may want to complete these first. You can log into the R server, open your project (the `.Rproj` file) and open the Quarto file (ending with `.qmd`) to continue to work through these. -->
+If you did not successfully finish the lab activities for weeks 1, 2 or 3, you may want to complete these first. You can log into the R server, open your project (the `.Rproj` file) and open the Quarto file (ending with `.qmd`) to continue to work through these.
 
-<!-- #### Aims of the activity -->
-<!-- Ensure you are familiar with reading in a `.csv`-file, creating a histogram and calculating summary statistics. -->
+#### Aims of the activity
+Ensure you are familiar with reading in a `.csv`-file, creating a histogram and calculating summary statistics.
 
-<!-- #### Steps -->
+#### Steps
 
-<!-- 1. Login to the R-server -->
-<!-- 2. Click on the R-project (the `Rproj`) file to open it -->
-<!-- 3. In the Files tab (right bottom quadrant), navigate to the example script for that week's lab activities. This is the Quarto file (ending with `.qmd`). Click on it to open it. -->
-<!-- 4. Complete any remaining activities -->
+1. Login to the R-server
+2. Click on the R-project (the `Rproj`) file to open it
+3. In the Files tab (right bottom quadrant), navigate to the example script for that week's lab activities. This is the Quarto file (ending with `.qmd`). Click on it to open it.
+4. Complete any remaining activities
 
-<!-- ### Lab activity 2: Hypothesis testing for correlation -->
+### Lab activity 2: Hypothesis testing for correlation
 
-<!-- #### Background -->
+#### Background
 
 <!-- Last week, we worked with some publicly available data from a research project on mind wandering. Anna Schubert and colleagues (Schubert et al., 2024) conducted a study in which they created a 12-item questionnaire that measures how often your mind wanders without meaning to, how often you let it wander on purpose, and how aware you are when it happens. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf). This week, we'll revisit how to create a histogram and then calculate descriptive statistics for the questionnaire responses. -->
 
