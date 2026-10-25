@@ -129,7 +129,7 @@ Next, you can see the lecture elements. We recommend that you watch them in the 
 
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=31051ec9-183a-4001-8f88-b4ec00ddd8d4&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="nhst-three-revised"></iframe>
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=31051ec9-183a-4001-8f88-b4ec00ddd8d4&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&start=3&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="nhst-three-revised"></iframe>
 </div>
 ```
 
