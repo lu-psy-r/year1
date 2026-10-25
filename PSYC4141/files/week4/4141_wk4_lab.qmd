@@ -144,34 +144,103 @@ If you have downloaded the .zip folder, and you have found where that folder is,
 
 ## Step 4: Edit your scatterplots to make them look good
 
-Now we are ready to create a scatterplot to visualise the relationship between two of the variables. We are going to look at the relationship between 'unintentional mind wandering' and 'meta-awareness of mind wandering'
+In the handbook week 4 chapter, in section **Lab activity 3: Beautifying scatterplots**, we ask you to work on edits to change or improve the look of your scatterplots.
+
+This activity builds on the work you did previously, learning how to create a scatterplot to visualise the relationship between two variables.
+
+- In week 3, you looked at the relationship between 'unintentional mind wandering' and 'meta-awareness of mind wandering'. 
+- **This week**, you look at the relationship between reading experience and vocabulary knowledge.
 
 The function we use for that (and for a lot of other plots you'll make for research methods and stats) is `ggplot()`. Inside the function we tell R which data to use and which variables to map onto the x-axis and the y-axis of the scatterplot.
 
-> Action: Insert a new code chunk and use `ggplot()` to tell R what data to plot and which variables tot use. The 'unintentional mind wandering' score is stored in the variable `BMW3_UN`; we'll put that variable on the x-axis. The 'meta-awareness of mind wandering' score is stored in the variable `BMW3_ME`; we'll put that variable on the y-axis. Then, add layers to plot the datapoints (use `geom_point()`) and the line of best fit (use `geom_smooth(method="lm", se=TRUE)`).
+> Action: Insert a new code chunk and use `ggplot()` to tell R what data to plot and which variables to use.
+> Then add layers to plot the datapoints (use `geom_point()`).
+> Then add arguments inside `geom_point(...)` -- inside the brackets, replacing the dots in `geom_point(...)` -- to tell R how you want it to change the appearance of the points.
 
-::: {.callout-note title="Hint"}
-## Hint
+::: {.callout-note title="Code steps"}
+## Code steps
+This week, we learn how to change the appearance of the points in a scatterplot: the colour, size and transparency of the points.
 
-Use the function `ggplot()`. Start by writing `ggplot()` on the next line of the code chunk. Inside the `ggplot()` function, we need to tell R which data-frame (`data=`) and which variable to use (`mapping=aes(x= , y= ))`).
+1. Read in the data and give it a name.
 
-Then, we need to tell R what type of plot we want. We do this by adding a `+` to the line on which you've written `ggplot()`, then on the next line you add a 'geometric object', in this case `geom_point()`.
+`thirty <- read_csv(here("filepath to folder", ("correlation-data-n030.csv")`
 
-We also want to add a line of best fit. We do this by adding a `+` to the line on which you've written `geom_point()`, then on the next line you add another 'geometric object', in this case `geom_smooth()`. We want to specify what type of line of best fit, we do this by adding `method="lm", se=TRUE` inside the brackets of `geom_smooth()`.
+2. Check the column names in the data. In the `thirty` dataset, you will see columns called (with explanations):
 
-This will give you a basic scatterplot. Revisit the lab activity code from week 1 to remind yourself how to change any of the features (such as the colour, the background, add titles to the axes etc.).
-:::
+- `vocab.pos.lar.sma` -- vocabulary.positive.large.small -- vocabulary scores, a large positive correlation, for a small dataset of 30 people
+- `exper.pos.lar.sma`	-- experience.positive.large.small -- experience scores, a large positive correlation, for a small dataset of 30 people
 
-The complete code chunk for the basic histogram should look like this:
+3. Draw a scatterplot
 
-```{r}
-#| label: simple_scatterplot
-ggplot(data = data_mw_subscales, mapping = aes(x = BMW3_UN, y = BMW3_ME)) + 
+```{}
+ggplot(data = thirty, aes(x = exper.pos.lar.sma, y = vocab.pos.lar.sma)) +
   geom_point() +
-  geom_smooth(method="lm", se=TRUE)
+  labs(x = "experience", y = "vocabulary") +
+  theme_bw()
 ```
 
+Note, here:
+
+- We edit the labels with `labs(x = "experience", y = "vocabulary")`
+- We edit the background with `theme_bw()`
+
+4. Edit the scatterplot to change the colour of the points
+
+```{}
+ggplot(data = thirty, aes(x = exper.pos.lar.sma, y = vocab.pos.lar.sma)) +
+  geom_point(colour = "limegreen") +
+  labs(x = "experience", y = "vocabulary") +
+  theme_bw()
+```
+
+Note, here:
+
+- We add the argument `colour = ...` and use an English colour name to specify colour.
+
+5. Edit the scatterplot to change the size of the points
+
+```{}
+ggplot(data = thirty, aes(x = exper.pos.lar.sma, y = vocab.pos.lar.sma)) +
+  geom_point(size = 5) +
+  labs(x = "experience", y = "vocabulary") +
+  theme_bw()
+```
+
+Note, here:
+
+- We add the argument `size = ...` and enter an integer to specify how many times the point size should be increased (from default, `size = 1`).
+
+6. Edit the scatterplot to change the transparency of the points
+
+```{}
+ggplot(data = thirty, aes(x = exper.pos.lar.sma, y = vocab.pos.lar.sma)) +
+  geom_point(alpha = 5) +
+  labs(x = "experience", y = "vocabulary") +
+  theme_bw()
+```
+
+Note, here:
+
+- We add the argument `alpha = ...` and enter a decimal fraction to specify how the transparency of the point size should be increased: from default `alpha = 1` (printed in full opacity) to increasing levels of transparency by making the fraction smaller (e.g., `alpha = .2` is more transparent than `alpha = .8`).
+:::
+
 > Action: Make sure you've run the above code.
+> Action: Can you combine arguments to change colour, size and transparency at the same time?
+
+::: {.callout-tip title="Why are we doing this?"}
+In R, you do things with functions: `function()` like `library(tidyverse)`.
+
+When you put things inside the brackets in `function` you are telling R:
+
+- what to do the thing to
+- or how to do the thing
+
+These bits of information (what to do the thing to, how to do the thing) are specified as *arguments* and learning to work with arguments is an important step up in coding skill.
+
+- Normally, when you do *not* add arguments, R will just do the thing in the way most of the time by default it is OK to do the thing.
+- Learning to specify exactly *what* or *how* you want R to work *gives you more control* over R.
+:::
+
 
 ## Step 5: Run a correlation analysis
 
