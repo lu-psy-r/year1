@@ -848,6 +848,8 @@ We created a Shiny web app so that you can reflect critically on some of the ide
 Access the app by clicking on [this link](https://robayedavies.github.io/teaching-nhst-corr-demo-shiny/){target="_blank" rel="noopener"}
 
 The app works in **Chrome** but not (yet) in **Safari**. It is under development.
+
+You can copy the link <https://robayedavies.github.io/teaching-nhst-corr-demo-shiny/> and paste it into Chrome to access the app there, if you are not already using Chrome
 :::
 
 ![A shiny web app for exploring correlations](files/week4/nhst-demo-shiny-app-chrome.png){fig-alt="Image of a web page with plots showing correlations" width="100%"}
