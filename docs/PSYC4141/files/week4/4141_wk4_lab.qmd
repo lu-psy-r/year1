@@ -105,23 +105,44 @@ We need to load two packages (`here` and `tidyverse`) using the `library()` func
 
 ## Step 3: Reading in the data
 
-The next step is to read in a data file. It is a file of the type `.csv`, so we'll use the function `read_csv()` to do this. Inside the function, we tell R where to find the file and what it is called.
+The next step is to read in the data files. These are files of the type `.csv`, so we'll use the function `read_csv()` to do this. Inside the function, we tell R where to find the file and what it is called.
 
-> Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'. Inside the chunk, use `read_csv()` to read in the data. The datafile is called `data_bmw3_subscales.csv`. Make sure to run the code.
+> Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'. Inside the chunk, use `read_csv()` to read in the data.
+
+The datafiles are called:
+
+- `correlation-data-n030.csv`
+- `correlation-data-n100.csv`
+- `correlation-data-n1000.csv`
+
+These files all hold scores on tests of vocabulary knowledge or of reading experience.
+
+Make sure to run the code.
 
 ::: {.callout-note title="Hint"}
-## Hint
-
-`dataframe <- read_csv(here("filepath to folder", "filename.extension))`
+`dataframe <- read_csv(here("filepath to folder", "filename.extension"))`
 
 Your code should include:
 
-dataframe: the name of the object you want to save the data in (such as `data_mw_subscales`) \<- : assignment arrow read_csv() : the `read_csv()` function here(): the \`here() function "filepath to folder": the folders that you need to point R to starting from your project root folder "filename.extentions": the name of the datafile, including the extension
+- `dataframe`: give the data a name so you can refer to it later e.g. when you read in `correlation-data-n030.csv` you can call it `thirty`.
+- `<-` this is the assignment arrow, it tells R to give the name (you enter on the left of the arrow) to the thing you create (using `read_csv()`) doing what you do on the right of the arrow.
+- `read_csv()`: read in the dataset you specify, e.g. `correlation-data-n030.csv`.
+- `read_csv(here("filepath to folder" ...))`: we use `here()` to tell R where the datafile is (the location of the file is given by `"filepath to folder" ...))`. We use `here()` to tell R where the datafile is (the location of the file is given by`).
+- `read_csv(here(... "filename.extension"))`:  `"filename.extension"` is the name of the datafile, including the extension. The extension here is `.csv` and it tells R what type the file is.
 :::
 
-> Action: Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') that is named `data_mw_subscales` in the Environment (top right quadrant).
+> Action: Make sure you've run the code chunk. Then, check that you can see the 'object' (the 'data-frame') in the Environment (top right quadrant).
 
-## Step 4: Build a scatterplot
+::: {.callout-note title="Example code"}
+`thirty <- read_csv(here("filepath to folder", ("correlation-data-n030.csv")`
+
+If you have downloaded the .zip folder, and you have found where that folder is, you should be able to run code like the code in this example to read the datafile into R.
+
+- You will need to replace `"filepath to folder"` with a filepath to your folder for your computer.
+- Once you run the code, you will see the dataframe in the R environment, and it will have the name you give it, here: thirty`.
+:::
+
+## Step 4: Edit your scatterplots to make them look good
 
 Now we are ready to create a scatterplot to visualise the relationship between two of the variables. We are going to look at the relationship between 'unintentional mind wandering' and 'meta-awareness of mind wandering'
 
