@@ -119,7 +119,7 @@ Next, you can see the lecture elements. We recommend that you watch them in the 
 
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=c4c1f0fa-3673-48e2-ae62-b4ec00d344fc&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="nhst-two"></iframe>
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=c4c1f0fa-3673-48e2-ae62-b4ec00d344fc&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&start=0&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="nhst-two"></iframe>
 </div>
 ```
 
@@ -129,7 +129,7 @@ Next, you can see the lecture elements. We recommend that you watch them in the 
 
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=31051ec9-183a-4001-8f88-b4ec00ddd8d4&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="nhst-three-revised"></iframe>
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=31051ec9-183a-4001-8f88-b4ec00ddd8d4&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&start=0&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="nhst-three-revised"></iframe>
 </div>
 ```
 
@@ -139,7 +139,7 @@ Next, you can see the lecture elements. We recommend that you watch them in the 
 
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=eb63ea9a-9779-460b-9ace-b4ec00e416dc&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="nhst-four"></iframe>
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=eb63ea9a-9779-460b-9ace-b4ec00e416dc&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&start=0&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="nhst-four"></iframe>
 </div>
 ```
 
@@ -149,7 +149,7 @@ Next, you can see the lecture elements. We recommend that you watch them in the 
 
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=1dc19dad-6e89-4bd1-8c72-b4ec00e86063&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="nhst-five"></iframe>
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=1dc19dad-6e89-4bd1-8c72-b4ec00e86063&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&start=0&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="nhst-five"></iframe>
 </div>
 ```
 
@@ -159,7 +159,7 @@ Next, you can see the lecture elements. We recommend that you watch them in the 
 
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=4efc9b0e-5c11-4043-993f-b4ec00efe2f3&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="nhst-six"></iframe>
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=4efc9b0e-5c11-4043-993f-b4ec00efe2f3&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&start=0&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="nhst-six"></iframe>
 </div>
 ```
 
