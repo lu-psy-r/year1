@@ -310,6 +310,7 @@ We are going to:
 5.  Calculate and interpret significance tests for correlation when you use `correlation()`.
 
 #### Download the files
+
 To complete this lab activity you will need *four* files:
 
 1.  We'll work with an example script called `4141_wk4_lab.qmd`. This is a Quarto document.
