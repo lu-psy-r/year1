@@ -224,7 +224,12 @@ Note, here:
 - We add the argument `alpha = ...` and enter a decimal fraction to specify how the transparency of the point size should be increased: from default `alpha = 1` (printed in full opacity) to increasing levels of transparency by making the fraction smaller (e.g., `alpha = .2` is more transparent than `alpha = .8`).
 :::
 
-> Action: Make sure you've run the above code.
+> Action: Pick a dataset. Pick a pair of variables: a `vocab` column and an `exper` column. Make a scatterplot.
+
+> Action: Pick a different dataset. Pick a different pair of variables: a `vocab` column and an `exper` column. Make a scatterplot.
+
+> Action: Pick a different dataset. Pick a different pair of variables: a `vocab` column and an `exper` column. Make a scatterplot.
+
 > Action: Can you combine arguments to change colour, size and transparency at the same time?
 
 ::: {.callout-tip title="Why are we doing this?"}
@@ -244,27 +249,79 @@ These bits of information (what to do the thing to, how to do the thing) are spe
 
 ## Step 5: Run a correlation analysis
 
-So far, we've visualised the data in a scatterplot.
+So far, we've visualised the data in a scatterplot using code like this:
+
+```{}
+ggplot(data = thirty, aes(x = exper.pos.lar.sma, y = vocab.pos.lar.sma)) +
+  geom_point() +
+  labs(x = "experience", y = "vocabulary") +
+  theme_bw()
+```
 
 > Action: Have a look at the scatterplot. Do you think the correlation between these two variables with be positive or negative? How large do you estimate the correlation to be?
 
-The code below runs the correlation analysis.
+Notice here that we are working with the `thirty` dataset (this is the name I used in the example code) and the variables `exper.pos.lar.sma` and `vocab.pos.lar.sma`.
 
-> Action: Run the code below to calculate the descriptive statistics.
+Now we want to estimate the correlation between two variables.
+
+The code below runs a correlation analysis for the variables `exper.pos.lar.sma` and `vocab.pos.lar.sma`.
+
+> Action: Run the code below to calculate the correlation estimate and to test its significance
 
 ```{r}
 #| label: correlation
-results <- correlation(data = data_mw_subscales, # use the `correlation()` function and tell R what data to use
-            select = c("BMW3_UN", "BMW3_ME"), # specify the variables we want to correlate using `select()`
-            method = "pearson",               # specify which method to use; `"pearson"` is the default
-            p_adjust = "none")                # we'll come back to this in a couple of weeks
+results <- correlation(data = thirty,
+            select = c("exper.pos.med.sma", "vocab.pos.med.sma"),
+            method = "pearson",
+            p_adjust = "none")
+
+results
 ```
 
-> Action: After running the code above, have a look at the output. What is the value for r? Is it positive or negative? What does that mean? Can you describe the relationship between unintentional mind wandering in words along the lines of 'People who scored higher on ..., scored .... on ...'. Fill in the dots.
+> Action: After running the code above, have a look at the output.
+> What is the value for r? 
+> Is it positive or negative? What does that mean?
+> Can you describe the relationship between reading experience and vocabulary in words along the lines of 'People who scored higher on ..., scored .... on ...'. Fill in the dots.
 
 ## Step 6: Create scatterplots and run correlation analyses for the relationships between the other subscale scores
 
-Repeat steps 4 and 5 for the relationship between:
+Repeat steps 4 and 5 across datasets and pairs of variables.
 
--   unintentional mind wandering and intentional mind wandering
--   intentional mind wandering and meta-awareness of mind wandering
+We have shared three datasets:
+
+- `correlation-data-n030.csv`
+- `correlation-data-n100.csv`
+- `correlation-data-n1000.csv`
+
+because these datasets are different in the size of the participant sample ($N = 30, 100, 1000$). 
+
+> Examining scatterplots to visualize associations for different sample sizes, and estimating and testing the corresponding correlations, tells you a lot about the impact of sample size.
+
+In each dataset, we have shared vocabulary (`vocab`) or reading experience (`exper`) scores where the correlation between these variables will vary in sign (positive = `pos` or negative = `neg`) and in size (the correlation can be small (`sma`), medium (`med`), or large (`lar`)). Where the correlation is null, we call it `zer.zer` (for zero sign, zero size).
+
+> Examining variables that vary in the sign and the size of the correlations, when everything else is the same, trains you in how to spot correlation sign or size just by looking (using scatterplots) and about the ways in which the "look" of an association is (or is not) mirrored in the correlation estimate.
+
+As a guide, for `correlation-data-n100.csv`, the columns have names that look like this:
+
+- `vocab.neg.lar.med` -- vocabulary.negative.large.medium
+- `exper.neg.lar.med`	-- experience.negative.large.medium
+
+- `vocab.neg.med.med`	-- vocabulary.negative.medium.medium
+- `exper.neg.med.med`	-- experience.negative.medium.medium	
+
+- `vocab.neg.sma.med`	-- vocabulary.negative.small.medium	
+- `exper.neg.sma.med`	-- experience.negative.small.medium	
+
+- `vocab.zer.zer.med`	-- vocabulary.zero.zero.medium	
+- `exper.zer.zer.med`	-- experience.zero.zero.medium	
+
+- `vocab.pos.sma.med`	-- vocabulary.positive.large.medium	
+- `exper.pos.sma.med`	-- experience.positive.large.medium	
+
+- `vocab.pos.med.med`	-- vocabulary.positive.medium.medium	
+- `exper.pos.med.med`	-- experience.positive.medium.medium	
+
+- `vocab.pos.lar.med`	-- vocabulary.positive.small.medium	
+- `exper.pos.lar.med`	-- experience.positive.small.medium
+
+> Action: explore the datasets, and the pairs of variables, to learn about working with --- seeing, estimating and testing --- the correlations.
