@@ -386,22 +386,22 @@ You will often need to change things like:
 #| fig-height: 4
 #| label: fig-scatter-colour
 
-thirty.small <- ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
+thirty.green <- ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
   geom_point(colour = "limegreen") +
   labs(x = "experience", y = "vocabulary") +
   theme_bw()
 
-thirty.medium <- ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
+thirty.purple <- ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
   geom_point(colour = "purple") +
   labs(x = "experience", y = "vocabulary") +
   theme_bw()
   
-thirty.large <- ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
+thirty.orange <- ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
   geom_point(colour = "orange") +
   labs(x = "experience", y = "vocabulary") +
   theme_bw()
   
-thirty.small + thirty.medium + thirty.large
+thirty.green + thirty.purple + thirty.orange
 ```
 
 :::  {.callout-note collapse="true"}
@@ -476,22 +476,22 @@ ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
 #| fig-height: 4
 #| label: fig-scatter-alpha
 
-thirty.small <- ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
+thirty.default <- ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
   geom_point(size = 5, alpha = 1) +
   labs(x = "experience", y = "vocabulary") +
   theme_bw()
 
-thirty.medium <- ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
+thirty.dark <- ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
   geom_point(size = 5, alpha = .75) +
   labs(x = "experience", y = "vocabulary") +
   theme_bw()
   
-thirty.large <- ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
+thirty.light <- ggplot(data = thirty, aes(x = exper.pos.sma.sma, y = vocab.pos.sma.sma)) +
   geom_point(size = 5, alpha = .25) +
   labs(x = "experience", y = "vocabulary") +
   theme_bw()
   
-thirty.small + thirty.medium + thirty.large
+thirty.default + thirty.dark + thirty.light
 ```
 
 :::  {.callout-note collapse="true"}
