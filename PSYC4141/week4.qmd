@@ -849,7 +849,9 @@ Access the app by clicking on [this link](https://robayedavies.github.io/teachin
 
 The app works in **Chrome** but not (yet) in **Safari**. It is under development.
 
-You can copy the link <https://robayedavies.github.io/teaching-nhst-corr-demo-shiny/> and paste it into Chrome to access the app there, if you are not already using Chrome
+You can copy the link <https://robayedavies.github.io/teaching-nhst-corr-demo-shiny/> and paste it into Chrome to access the app there, if you are not already using Chrome.
+
+Paste the link into Chrome, or click to access (if you are already working in Chrome), wait a few seconds, and you should see a webpage somewhat like the image shown next.
 :::
 
 ![A shiny web app for exploring correlations](files/week4/nhst-demo-shiny-app-chrome.png){fig-alt="Image of a web page with plots showing correlations" width="100%"}
