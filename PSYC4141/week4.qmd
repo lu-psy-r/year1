@@ -26,9 +26,9 @@ thousand <- read_csv("correlation-data-n1000.csv")
 This week we focus on two strands of learning:
 
 A.  Hypothesis testing and significance testing and how we think about evidence in the context of correlation analysis
-B.  Getting started on the group project: Getting into groups and plan the project
+B.  Getting started on the group project: Getting into groups and planning the project
 
-Building on last week’s work on how **two numerical variables** can vary together, we will apply hypothesis testing and significance testing to correlation analysis.
+Building on last week’s work on how **two numerical variables** can vary together, **this week** we will apply hypothesis testing and significance testing to correlation analysis.
 
 We will also start the group project in which you will investigate the question: *Is mind wandering related to screen time?*
 
@@ -60,7 +60,7 @@ You can navigate to each in the side bar on the right
 
 ## Lectures {#sec-4141-w4-lectures}
 
-Last week, we explored how two measures can vary together. You practised visualising the relationship using scatterplots and estimating Pearson's r. We also talked about how we respect participants' choices, collect and protect appropriate data, and interpret and communicate research findings responsibly.
+Last week, we explored how two measures can vary together. You practised visualising the relationship using scatterplots and estimating Pearson's $r$. We also talked about how we respect participants' choices, collect and protect appropriate data, and interpret and communicate research findings responsibly.
 
 **This week, we learn about hypothesis testing and significance testing** and apply this to correlation analysis. We will also practise reporting correlation analysis following APA conventions.
 
@@ -78,15 +78,14 @@ Make a note of questions as you work through the material. These might be answer
 
 ### Section A: Hypothesis testing, significance testing  {#sec-4141-w4-lectures-theory}
 
-You can watch the lecture for the video using the video playback windows shown next. Section A is broken into six parts that should be watched in sequence:
+You can watch the lecture for the video using the video playback windows shown next. 
+Our lecture on hypothesis testing and significance testing, shown next, is split into six short parts that you should watch in sequence.
 
 <!-- 1.  Hypothesis testing and significance testing -->
 
 <!-- 2.  Correlation: How to report a correlation analysis -->
 
 **1. Hypothesis testing and significance testing** (~70 minutes in total)
-
-Our lecture on hypothesis testing and significance testing is split into six short parts.
 
 You can download the lecture slides as a .html file you can open in any browser.
 
@@ -102,7 +101,7 @@ When you download the file, double click on it to open it in your usual web brow
 There are many slides but not all slides are discussed in-depth in the lecture, some are there to help to visually support transitions between points.
 :::
 
-Next, you can see the lecture elements. We recommend that you watch them in sequence.
+Next, you can see the lecture elements. We recommend that you watch them in the order they are shown in.
 
 1.1. **We are going to learn about hypothesis or significance testing** (~5 minutes). This is a challenging topic. We can meet this challenge by enriching our perspectives to take in historical, philosophical, and psychological viewpoints.
 
@@ -116,7 +115,7 @@ Next, you can see the lecture elements. We recommend that you watch them in sequ
 
 \newline
 
-1.2. **What is NHST and where does it come from?** (~13 minutes). We are going to learn about hypothesis testing and significance from two different perspectives: (1.) The perspective of an individual researcher, asking what they can learn from the evidence from their study. (2.) The perspective of someone looking at errors that we (in general) could make as we make decisions based on the evidence from multiple repeated studies. We begin with Ronald Fisher's ideas.
+1.2. **What is NHST and where does it come from?** (~13 minutes). We are going to learn about hypothesis testing and significance from two different perspectives: (1.) The perspective of an individual researcher, asking what they can learn from the evidence from their study. (2.) The perspective of someone looking at errors that we (in general) could make as we make decisions based on the evidence from multiple repeated studies. We begin with the first perspective, based on Ronald Fisher's ideas.
 
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
@@ -136,7 +135,7 @@ Next, you can see the lecture elements. We recommend that you watch them in sequ
 
 \newline
 
-1.4. **Hypothesis testing** (~10 minutes). We switch to a different philosophy and a different view of the psychology of researchers: we look at the ideas of Jerzy Neyman and Egon Pearson.
+1.4. **Hypothesis testing** (~10 minutes). We switch to a different philosophy and a different view of the psychology of researchers. We take a second perspective, grounded in thinking about error rates, based on the ideas of Jerzy Neyman and Egon Pearson.
 
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
@@ -146,7 +145,7 @@ Next, you can see the lecture elements. We recommend that you watch them in sequ
 
 \newline
 
-1.5. **Seeing the Neyman-Pearson approach at work** (24 minutes). To help us to build understanding, we work through demonstrations based on simulations of Psychology studies of correlation.
+1.5. **Seeing the Neyman-Pearson approach at work** (24 minutes). To help us to build understanding, we work through demonstrations that build on realistic simulations of the kind of evidence we collect in psychological studies of correlation.
 
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
@@ -237,10 +236,10 @@ Last week, we worked on how you can examine the potential associations between v
 - visualizing potential associations between variables using scatterplots;
 - estimating the associations as correlations $r$.
 
-We showed you a couple of web apps you can use to visualize potential associations.
+We showed you a couple of web apps you can use to visualize potential associations. We add a **new** one for this week.
 
 ::: callout-tip
-Make sure you have tried these out.
+Make sure you have tried these apps out.
 
 - The purpose of playing with these apps is quite serious: you are training your visualization skills, and tuning your intuitions. The only way to do this is by looking at lots of plots.
 :::
@@ -257,7 +256,7 @@ Also, try setting the correlation to r = .5 and then moving a single dot to see 
 
 This allows you to see how accurately you can estimate r (correlation strengths) from a scatterplot. Click on “Track Performance” first so you can keep an overview of your overall bias to underestimate or overestimate the strength of a correlation.
 
-3. New: Try this [**Guessing correlation coefficients app**](https://shiney.zoology.ubc.ca/whitlock/Guessing_correlation/){target="_blank" rel="noopener"} because it doesn't hurt to look at a different kind of app.
+3. **New**: Try this [**Guessing correlation coefficients app**](https://shiney.zoology.ubc.ca/whitlock/Guessing_correlation/){target="_blank" rel="noopener"} because it doesn't hurt to look at a different kind of app.
 
 ## Lab activities {#sec-4141-w4-lab-activities}
 
@@ -265,7 +264,7 @@ This allows you to see how accurately you can estimate r (correlation strengths)
 <!-- Information on the lab activities will follow soon. -->
 <!-- ::: -->
 
-### Lab activity 1: Finish lab activities from previous weeks (Recap - skip if completed succesfully last week)
+### Lab activity 1: Finish lab activities from previous weeks (Recap - skip if completed successfully last week)
 
 #### Background
 Over the past few weeks, we worked with some publicly available data from a research project on mind wandering. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf).
@@ -325,9 +324,9 @@ These files all hold scores on tests of vocabulary knowledge or of reading exper
 - Different (simulated) participants' scores are on different rows of each spreadsheet.
 - Different kinds of scores are in different columns of each spreadsheet.
 
-Column names are shown at the top of the columns. The names encode information about what the column data are about:
+Column names are shown at the top of the columns. The names encode information about what the column data are about in a `[..].[..].[..].[..]` four-part naming scheme:
 
-- [what test? vocabulary or experience].[is r positive or negative or zero?].[is r large, medium, small in size?].[how big is the participant sample? small (30) medium (100) large (1000)]
+- `[`what test? vocabulary or experience`].[`is r positive or negative or zero?`].[`is r large, medium, small in size?`].[`how big is the participant sample? small (30) medium (100) large (1000)`]`
 
 :::  {.callout-note collapse="true"}
 ## Click here for examples of  column names
@@ -357,7 +356,7 @@ The columns have names that look like this (from `correlation-data-n100.csv`):
 
 You can download the files here: [`4141_wk4_lab.zip`](files/week4/4141_wk4_lab.zip){download="4141_wk4_lab.zip"}. Usually they will be saved in your 'Downloads' folder.
 
-Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).
+Next, upload the zip-folder as it is to your Files space on the R-server: Look at bottom right quadrant of the R-server web window. There is no need to extract the files first.
 
 Finally, open the example script by clicking on the file called `4141_wk4_lab.qmd` in the Files space on the R-server.
 
@@ -571,7 +570,7 @@ The important change is to add alpha: `geom_point(alpha = ...)`. Add in the `alp
 #| message: false
 
 ggplot(data = thirty, aes(x = exper.neg.med.sma, y = vocab.neg.med.sma)) +
-  geom_point(alpha = .7) +
+  geom_point(alpha = .5) +
   labs(x = "experience", y = "vocabulary") +
   theme_bw()
 ```
@@ -598,6 +597,24 @@ ggplot(data = thirty, aes(x = exper.neg.lar.sma, y = vocab.neg.lar.sma)) +
 ```
 :::
 
+#### Tips: Where to find further information
+
+::: {.callout-tip title="Further information" collapse="true"}
+**1. General advice**
+
+You can find guidance on anything you want to do in R by typing words like `ggplot2 reference guide geom_point`. That kind of search will get you a webpage like:
+
+<https://ggplot2.tidyverse.org/reference/geom_point.html#ref-examples>
+
+- where you can find examples of code for doing things. Usually, you can scroll through the examples to find a match for what you want to achieve, and then adapt the code to your own situation.
+
+**2. Find out about colour**
+
+There are lots of guide to colour, here's one:
+
+<https://r-graph-gallery.com/ggplot2-color.html>
+:::
+
 #### Answers
 
 *The answers to the questions will be available after the final lab session has taken place.*
@@ -615,7 +632,7 @@ What we are doing when we do significance testing is explained in the lectures. 
 :::
 
 :::  {.callout-note collapse="true"}
-## Click here to see the answer
+## To work with the answer code examples, make sure you have read in the data
 
 In the answers, I assume you have done this to read in the datasets:
 
@@ -837,7 +854,7 @@ The app works in **Chrome** but not (yet) in **Safari**. It is under development
 The app allows you to control:
 
 1. The number of people tested: `Participants per study (N)` button.
-2. The correlation: `Population correlation (r)` button.
+2. The correlation: `Population correlation (r)` slider.
 3. You can get new samples as many time as you like: `Draw new samples` button.
 
 ::: callout-tip
@@ -845,31 +862,104 @@ What we are doing when we do significance testing is explained in the lectures. 
 
 1. The `Our observed dataset` on the left shows a single simulated dataset with the correlation and the participant sample you selected.
 2. The `Six more datasets` in the middle show six further datasets with the same correlation, but each shows how the correlation can vary, given different random samples of data.
-3. The piles-of-dots on the top right of the web page show comparisons between the $r$ correlation for the "observed" dataset and distributions of  $r$ correlations for (2.) lots of samples, taken at random, assuming the null hypothesis is true.
-4. The piles-of-dots on the bottom right of the web page show comparisons between the $r$ correlation for the "observed" dataset and distributions of  $r$ correlations for (2.) lots of samples, taken at random, assuming the alternative hypothesis is true.
+
+- These datasets are simulated every time you click on the `Participants per study (N)` button or move the `Population correlation (r)` slider button to a new correlation value.
+- You can also get new simulations each time you click on the `Draw new samples` button (see top right of the webpage.)
+
+3. The piles-of-dots on the top right of the web page show comparisons between the $r$ correlation for `Our observed dataset` and distributions of  $r$ correlations for (2.) lots of samples, taken at random, assuming the null hypothesis `H0` is true.
+4. The piles-of-dots on the bottom right of the web page show comparisons between the $r$ correlation for the "observed" dataset and distributions of  $r$ correlations for (2.) lots of samples, taken at random, assuming the alternative hypothesis `HA` is true.
 
 Have a play with the web app and then answer the following questions.
 :::
 
+1. Pick any correlation value using the `Population correlation (r) slider`. Compare the scatterplot for `1. Our observed dataset` with the six scatterplots for `2. Six more datasets, same population`. Look at the plots and compare: 
 
+- the scatter (spread) of points
+- the trend shown by the points (are high experience values associated with high vocabulary scores, or not).
 
+Here's the question for reflection: What does this comparison tell you about the ways in which things like association vary between different samples of people?
 
-
+- Discuss your answer with your group, and write a brief reflection down in words in your `.qmd`.
 
 :::  {.callout-note collapse="true"}
 ## Click here to see the answer
+Two insights are illustrated here and they are both about what we can expect to see when we observe people.
 
-In the answers, I assume you have done this to read in the datasets:
+1. When we take scores for people on measures of individual differences in dimensions like vocabulary and reading experience, even if the measures are valid and reliable, the scores **will *vary*** between different samples of people.
+2. This means that even if there is some *true* association\* between the variables, the correlation that estimates that association **will *vary*** between samples.
 
-```{r}
-#| eval: false
-
-thirty <- read_csv("correlation-data-n030.csv")
-hundred <- read_csv("correlation-data-n100.csv")
-thousand <- read_csv("correlation-data-n1000.csv")
-```
-
-This matters because code examples refer to the datasets by name: `thirty, hundred, thousand` -- and you need to use the right names to get the code to work.
+- \*Here, by "true association" we mean that all simulated datasets are generated in a process assumes that vocabulary and experience are correlated, with a correlation equal to the correlation you selected.
 :::
 
+2. Keeping the correlation value you selected, click on the `Draw new samples` button a few times.
+
+(i.) Look at the plots every time you do this and compare: 
+
+- the scatter (spread) of points
+- the trend shown by the points.
+
+(ii.) Also, look at the pile-of-dots plots on the right of the screen. Notice the red line move about every time you click on the `Draw new samples` button.
+
+- The red line indicates the `r` correlation estimated for the `1. Our observed dataset` sample.
+
+Here's the question for reflection: What does this comparison tell you about the ways in which things like association vary between different samples of people?
+
+- Discuss your answer with your group, and write a brief reflection down in words in your `.qmd`.
+
+:::  {.callout-note collapse="true"}
+## Click here to see the answer
+The same two insights are illustrated here that were observed previously but it does not hurt to emphasize the point because these are important things to see about how we work with evidence about people.
+
+1. When we take scores for people on measures of individual differences in dimensions like vocabulary and reading experience, even if the measures are valid and reliable, the scores **will *vary*** between different samples of people.
+2. This means that even if there is some *true* association\* between the variables, the correlation that estimates that association **will *vary*** between samples.
+
+- \*Here, by "true association" we mean that all simulated datasets are generated in a process assumes that vocabulary and experience are correlated, with a correlation equal to the correlation you selected.
+:::
+
+3. Now select a correlation of 0 by moving the `Population correlation (r)` slider, and click on the `Draw new samples` button a few times. Keep looking at the scatterplots and at `r` correlation and `t` (t-test statistic) values shown above the plots.
+
+- Note that if $t > 2$ (roughly) we may expect the test statistic to be significant.
+
+Here's the question for reflection: We know for a fact that there is no true correlation in the population because we set the correlation value ourselves. What do the simulations suggest about what we may observe nevertheless in the samples we collect when we test people?
+
+- Discuss your answer with your group, and write a brief reflection down in words in your `.qmd`.
+
+:::  {.callout-note collapse="true"}
+## Click here to see the answer
+What we see will depend on random variation but we may sometimes see the following:
+
+- Even if we set the population correlation to $r = 0$, we will get samples where the correlation is not, in fact, $r = 0$.
+- We may well see positive or negative non-zero correlations in our observed sample or in one of the six other samples.
+- The $t$ statistic associated with the sample may well be $t >= 2$.
+- This shows us that *simply because of random variation*, even if there is no true correlation in the population, the sample of people we look at in our study may well appear to present a correlation.
+:::
+
+4. Now it's time to see what happens when we vary the size of our sample. Keep the population correlation value the same: pick any correlation you like. For this exercise, a value of $r = .30$ is illustrative. Now click on the `Participants per study (N)` button to reveal a drop down menu. Choose a sample size. Try this a few times: increase the sample size up to 1000. Look at three things:
+
+- Look at the scatter of points in each scatterplot;
+- Look at the $r, t, p$ statistics above each plot;
+- Look at the pile-of-dots plots, both the piles themselves (the shape or spread of the pile) and the red line marking the `observed r`.
+
+There is a lot going on but we can pick out the key insights.
+
+Here are the questions for reflection:
+
+- You selected the correlation value yourself, so you know what the correlation *should be* in the different samples: what do you see?
+- I expect you will see the correlation values will vary across samples (as we have seen already): what happens to this variation when you go from smaller to larger samples?
+- How does the per-sample correlation compare to the population correlation you selected?
+- What do you see happen to the piles-of-dots?
+
+Discuss your answers with your group, and write a brief reflection down in words in your `.qmd`.
+
+:::  {.callout-note collapse="true"}
+## Click here to see the answer
+We have seen how the sample correlation varies between samples.
+
+- As the sample size increases, this variation will narrow. 
+- With larger samples, the sample correlation will tend increasingly to be similar to the population correlation you specify.
+- With larger samples, values of correlation estimates will be more similar between samples (compare $r$ across the six samples).
+- With larger samples, the red line showing the `observed r` will move around a lot less.
+- With larger samples, the pile-of-dots will get narrower and the difference between the `observed r` and the pile-of-dots when the null hypothesis is true will become clearer.
+- With larger samples, the $t$ statistics will tend to get larger: it will become more and more likely that the correlation will be significant.
+:::
 
