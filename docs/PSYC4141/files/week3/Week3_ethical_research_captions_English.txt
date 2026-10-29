@@ -1,0 +1,357 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Hi everyone, and welcome to this lecture which is an introduction to ethical research Practice.
+
+So the aim of this, what I'm focusing on today, and that I hope you can take away, is an understanding of the core principles of ethical research,
+
+an awareness of some of the key ethical practice that we use throughout the research cycle,
+
+for you to think critically about who is included and represented in research and our research findings,
+
+as well as appreciating the wider impact of how we interpret and communicate
+
+our research findings and what those impacts can have on people and society.
+
+So ethics isn't just something that happens before we start the research.
+
+So we often think think of ethics as an application that we make before the research study starts.
+
+And also. Informed consent, which takes place before someone takes part in the research.
+
+But as researchers, we have to make ethical decisions that run all through the research cycle.
+
+So this can include what questions to ask, making sure that these are theoretically grounded and ethically sound,
+
+as well as how we design our study, how we'll measure these concepts, how we will recruit people and who we will recruit when we collect data,
+
+how we collect that, how we safely store that,
+
+as well as making decisions around the best and most appropriate ways to analyse our data as well as, and interpret and report it appropriately.
+
+So to guide all these ethical decisions that we have to make,
+
+we follow some key principles that are outlined by the British Psychological Society are the principles of ethical research.
+
+So there are four key principles of the Code of human research ethics.
+
+And the first one is respect for autonomy, privacy and dignity.
+
+So this means that participants in our research, it reminds us that they are people.
+
+So they're not data subjects. We don't just gain data from them, but they have a right to choose what they do or do not take part in,
+
+as well as their right to privacy of their information and their dignity as well.
+
+Okay. So in terms of scientific integrity,
+
+we've spoken about this earlier on in the module around things like making sure our claims are rooted in solid theory and evidence,
+
+as well as conducting and communicating research in an honest and rigorous way.
+
+And for that to be transparent so that other researchers and people can really interrogate it.
+
+For social responsibility, this really asks us to step out of our small niche little research,
+
+study or area and consider the wider consequences of our research.
+
+So that is our responsibility as psychological researchers to really educate ourselves and to
+
+be thinking about the societal context and the potential impact that our work could have.
+
+And lastly, maximising benefit and minimising harm.
+
+So we are often rightly focussed on minimising harm.
+
+So reducing any risks to participants, of course.
+
+But we should also be thinking about how we can maximise the benefits of our research as well.
+
+So really, um, helping and making sure that we pull out any potential impacts that come from our findings
+
+so that we do the best work possible for the people who we actually do research for,
+
+which is our participants, and making sure that benefit comes out of our research.
+
+And hopefully you'll be able to see how those principles I've just spoken about are embedded and align with these practices.
+
+So firstly informed consent. So you may all be familiar with this.
+
+Informed consent in its simplest and practical sense, is when a participant thinks about taking part in a research study,
+
+they will read a participant information sheet, and that information sheet will tell them what they will do and what the risks?
+
+And the benefits are of the research?
+
+Um, whether they can change their mind and how they can change their mind and withdraw their data at any point in the study.
+
+And, um, when the participant has read and understood these, these things in the participant information sheet,
+
+then they will be asked to sign a consent form to say that they agree to take part, and then they're happy with all of this.
+
+But beyond kind of what's going to happen to them in the study, they also have the right to understand why the study is being conducted.
+
+So why we are doing this research and how their data will be used.
+
+Okay. So it's our responsibility to make sure that our potential participants have all the all of this information so that they can decide,
+
+um, if they want their information to be, to be used that way.
+
+So I'll just give you a brief example here from my research.
+
+So I do research with people who are profoundly deaf and also people who are profoundly deaf and use cochlear implants to access sound.
+
+So cochlear implantation can be quite a controversial topic in the deaf community.
+
+And I won't go into all those reasons why. But when I conduct research with people who are deaf and who don't have a cochlear implant,
+
+even though my study isn't directly about cochlear implants,
+
+I have to think about whether their data could inform cochlear implant care in the future.
+
+So can the scientific findings from a group of deaf individuals inform this area in the future?
+
+And so it's my responsibility to think about that,
+
+and to explain the wider purpose sufficiently so that participants can decide if they want to take part or not.
+
+So in terms of the information that you give your participants,
+
+this also needs to be provided in an accessible format, so using plain language that everyone can understand.
+
+And in my example, I would need to provide this information in British Sign Language rather than written English.
+
+So my key takeaway for you here is that meaningful,
+
+informed consent really involves providing both full and accessible information
+
+to participants so that they can decide whether they want to take part.
+
+Okay, so it's not for us to convince people to take part in our study,
+
+but it's our role to give them the information in a way that they can understand so that they can make their own decision.
+
+Okay, so debriefing and deception. So debriefing takes place when the participant has conducted or taking part in the study.
+
+So it is our responsibility to explain what's happened to them, what they've just done, why they've done it.
+
+And just kind of close, close the loop for them.
+
+Remind them of key information, for example, um, how they can withdraw from the study and withdraw their data if they want to.
+
+This is also the place where we can provide them with some signposting, for example to support services.
+
+So if the research study brought up emotional topics, then signposting them to wellbeing services for example.
+
+So debriefing is really valuable even when there's no deception involved.
+
+Okay, so it matters even when we don't withhold information from participants.
+
+So sometimes we, um, we might withhold some information from participants at the beginning of the study because it might bias their responses.
+
+And it might mean that we can't answer our research question.
+
+But this withholding of information must be justified, and the risks must be minimal to participants.
+
+So with debriefing and deception, it's important to remember that the participants rights matter more than scientific convenience.
+
+Okay, so if they want to withdraw, then that is absolutely their right.
+
+Again, we shouldn't be trying to convince them to stay in the study.
+
+Okay. So when we do collect data from our participants, it's our responsibility to protect this information that we collect.
+
+And we have a legal obligation to do this responsibly.
+
+In the UK we're governed by the UK GDPR, General Data Protection Regulation and the Data Protection Act.
+
+So these are quite hefty pieces of legislation. So you don't need to, um, read and understand all of these.
+
+But I'm just introducing you to these today because this is what we follow as researchers and the university help us to do this as well.
+
+So they give us guidance and support as researchers to make sure that we are collecting
+
+and storing data and using data responsibly and in line with these principles.
+
+So there's a few principles of GDPR.
+
+I'm just highlighting three for you today that I think are particularly relevant, especially at this point in your studies.
+
+So firstly then transparency, which we've spoken about previously, this means being clear about what data are being collected and also why.
+
+So how they're going to be used. Okay. And so you can see that this links in and is sort of covered by the informed consent and debriefing processes.
+
+Secondly then data minimisation. So this means collecting only the information from participants that is necessary to answer your research question.
+
+So we can't just collect everything and anything that we think might be interesting.
+
+Um, we've had discussions, uh, earlier in the module about, for example, looking at the links between amount of screen time and mental health.
+
+And we spoke about these being quite broad concepts.
+
+And so for data minimisation, we really need to be thinking specifically about what it is exactly that we're going to measure.
+
+So what is screen time for us. What is mental health for us.
+
+And we need to be thinking about how to measure that in a way that answers your questions, but doesn't collect more data than you need.
+
+Security and confidentiality. So this means protecting the data that we collect and limiting access to it so we can password protect, we can encrypt.
+
+We can also make sure that only the research team has access to this data.
+
+Okay, so one way and a common way that we help to protect participant information is by removing the participants name or not using their name at all.
+
+So we often use participant ID codes such as this 10012.
+
+And we might have a document where we have the participants names and then their codes linked to them.
+
+And what this means. It doesn't mean that the data is anonymous, because we're only using the data code stored against their research data.
+
+And this is because this this link, this key exists between their name and the code.
+
+Okay. So all the time that this link exists, it means that the information that their research information,
+
+their research responses to questionnaires, for example, it means that that information is pseudonymous and it still requires a protection.
+
+So it's not fully anonymous. And typically, um, most data from humans is not ever fully anonymous.
+
+And this is because even if we didn't collect a a participant's name and have this key linking the name to the code,
+
+we often collect other data about other characteristics.
+
+And when these are put together this could identify someone.
+
+So for example date of birth ethnicity IP addresses which are commonly um acquired during online studies.
+
+So it's just an important distinction here to make,
+
+just to make you aware that just by giving someone a code doesn't necessarily make their data anonymous, if it can in any way be identified.
+
+so we can think about who can actually access the study.
+
+So, you know, we need to advertise our studies widely so that anyone who might be interested can access the opportunity to take part.
+
+We need to think about things such as travel costs and reimbursing them to make sure that, again,
+
+those people who want to take part can that there aren't any unfair barriers to taking part.
+
+So advertising widely and thinking about appropriate measures like that.
+
+We also need to ask who is included or excluded from our studies and whether this is intentional or unintentional.
+
+So quite often this is intentional.
+
+And when we think about inclusion and exclusion criteria for our studies, and this is because of the scientific question that we're asking.
+
+So again, with my example, if I am conducting a study with people who are profoundly deaf,
+
+then I will have exclusion criteria and inclusion criteria around levels of deafness and I won't be able to test.
+
+Hearing people, for example, unless I want or need a control group.
+
+So that's very intentional. But other times we often include or exclude people.
+
+Somewhat unintentionally.
+
+And this is because you haven't explicitly decided to do this, but they're excluded due to other systemic factors and barriers that exist.
+
+And so it's our responsibility to be thinking about these barriers in our research and
+
+how we can reduce them so that we ensure a large variety and representative sample.
+
+So I just want to give you a Example from my research area where I've been working with my fantastic team
+
+here to think about how we can make our neuroimaging practices more inclusive and not exclude people.
+
+And even if that is unintentional exclusion. So very briefly, I use a neuroimaging method called functional near-infrared spectroscopy, or fNIRs.
+
+And this uses light to measure participants brain activity. So the participant will will come in, they'll put this cap on their head.
+
+And we'll clip these lights in all these optodes in.
+
+And these optodes need to have good clear contact with the scalp in order to measure brain activation.
+
+So what this means is that because of the way that the technology has actually been designed and with these lights and how thick they are,
+
+it means that the technology doesn't work the same way for everyone.
+
+And this is because the amount of contact that we can get between those optodes and the scalp depends on participants hair type,
+
+hair volume, density, and current hairstyle. And so for example,
+
+we can see in this image here an illustration that curly and coily hair types are more likely to push the optodes away from the scalp.
+
+And so measurement quality and our ability to measure using this equipment can be reduced.
+
+But this may not be the case for someone who has a straight, um, type one hair.
+
+So what this means then, is that people with textured hair are often excluded from these types of neuroimaging studies,
+
+and this disproportionately affects global majority ethnic groups because these physical hair characteristics are more prevalent in those groups.
+
+And so that really matters on multiple levels, because not only does it weaken our science by not including a large population of people,
+
+but it also perpetuates systemic marginalisation and leaves and leaves this data and people out of important scientific research.
+
+So inclusion in research is a core ethical and scientific issue.
+
+We really need to be considering whose data can enter the evidence base and how our methods and our processes impact that.
+
+Okay. So lastly I'm going to highlight that we need to consider how we interpret our findings and
+
+the impact that these interpretations and how we communicate our research findings can have.
+
+Okay, so ethics doesn't end once we've collected the data.
+
+So we need to select appropriate analysis methods.
+
+And when we think about correlation for example we know that correlation does not establish causation.
+
+And so if we have a finding such as this one here screen time and anxiety are positively correlated.
+
+It would be an over claim for us to say that screen time causes anxiety.
+
+Okay. So reporting that goes beyond what correlation analysis can tell us.
+
+And that is an ethical concern. So we really shouldn't be making these claims as researchers.
+
+These claims can shape media stories. They can shape policy.
+
+They can shape public attitudes and views about people.
+
+So in terms of when we think about the principles of ethical research, scientific integrity and social responsibility, again,
+
+it's our responsibility as psychologists to both analyse the data appropriately, but also interpret it and report it appropriately.
+
+So not selectively present data,
+
+not exaggerate our results and distinguish association from causation and acknowledge any uncertainty and limitations of our findings.
+
+So we really need to bear in mind that how we interpret and communicate findings has consequences and can affect individuals and communities.
+
+So on a final note, I want to acknowledge and make you aware that some foundational statistical techniques that we use today,
+
+such as correlation and the developers such as Karl Pearson, are um,
+
+or used these methods historically in attempts to quantify human differences in support of eugenic ideas.
+
+So the statistics and the mathematics that we use today are, you know, they haven't inherited those political aims as such.
+
+But it is important that we're aware of how some of these techniques have been used.
+
+And it's a really powerful reminder that statistics don't just describe society, but they can actively shape it.
+
+And the responsibility lies with us as scientists and psychologists to make sure that we interpret and communicate these responsibilities responsibly,
+
+because they do have and can have large consequences.
+
+So I just wanted to point this out to you. I think it's important that we're aware of it.
+
+And if you do want to find out more, then this link provided here to the UCL website is a good place to start to look at the history of that.
+
+the message that I really want you to take away from all of this is that ethics isn't just a box to tick on a consent form before a study starts.
+
+It's really part of how we design, how we conduct, how we analyse,
+
+and how we communicate research as well as who we recruit and how we recruit people.
+
+And so we really need to be thinking about the ethics of our research practice through the whole research cycle.
+
