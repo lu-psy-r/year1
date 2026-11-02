@@ -221,6 +221,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#lab-activity-2-finish-lab-activities-from-previous-weeks-recap---skip-if-completed-successfully-last-week" id="toc-lab-activity-2-finish-lab-activities-from-previous-weeks-recap---skip-if-completed-successfully-last-week" class="nav-link" data-scroll-target="#lab-activity-2-finish-lab-activities-from-previous-weeks-recap---skip-if-completed-successfully-last-week">Lab activity 2: Finish lab activities from previous weeks (Recap - skip if completed successfully last week)</a></li>
   <li><a href="#lab-activity-3" id="toc-lab-activity-3" class="nav-link" data-scroll-target="#lab-activity-3">Lab activity 3:</a></li>
   </ul></li>
+  <li><a href="#background-1" id="toc-background-1" class="nav-link" data-scroll-target="#background-1">Background</a>
+  <ul class="collapse">
+  <li><a href="#last-week-recap" id="toc-last-week-recap" class="nav-link" data-scroll-target="#last-week-recap">Last week: recap</a></li>
+  <li><a href="#this-week" id="toc-this-week" class="nav-link" data-scroll-target="#this-week"><strong>This week</strong></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -533,10 +538,21 @@ Tip
 </section>
 </section>
 <section id="lab-activity-3" class="level3">
-<h3 class="anchored">Lab activity 3:</h3>
-<section id="background-1" class="level4">
-<h4 class="anchored" data-anchor-id="background-1">Background</h4>
+<h3 class="anchored" data-anchor-id="lab-activity-3">Lab activity 3:</h3>
 </section>
+</section>
+<section id="background-1" class="level2">
+<h2 class="anchored" data-anchor-id="background-1">Background</h2>
+<section id="last-week-recap" class="level3">
+<h3 class="anchored" data-anchor-id="last-week-recap">Last week: recap</h3>
+<p>Last week, you worked with data that we generated (through simulations) based on data from a real project looking at how psychologists measure vocabulary knowledge.</p>
+<p>Hanke Vermeiren and colleagues (Vermeiren et al., 2023) completed a series of studies to develop a vocabulary test for English-speaking university students. Among the tests they developed were measures of vocabulary knowledge (what you know about word meanings) and of reading experience (print exposure, based on recognition of author names).</p>
+<p><strong>Reference</strong></p>
+<p>Vermeiren, H., Vandendaele, A., &amp; Brysbaert, M. (2023). Validated tests for language research with university students whose native language is English: Tests of vocabulary, general knowledge, author recognition, and reading comprehension. <em>Behavior Research Methods</em>, 55(3), 1036–1068. <a href="https://doi.org/10.3758/s13428-022-01856-x" target="_blank" rel="noopener">https://doi.org/10.3758/s13428-022-01856-x</a>.</p>
+</section>
+<section id="this-week" class="level3">
+<h3 class="anchored" data-anchor-id="this-week"><strong>This week</strong></h3>
+<p>This week, you’ll work with similar data. We’ll check for missing data and for outliers before creating scatterplots and deciding which correlation coefficient to use.</p>
 <section id="aims-of-the-activity-1" class="level4">
 <h4 class="anchored" data-anchor-id="aims-of-the-activity-1">Aims of the activity</h4>
 <p>We are going to:</p>
@@ -549,123 +565,69 @@ Tip
 <li>Remove outliers using <code>filter()</code></li>
 <li>Calculate and interpret Pearson’s r using <code>correlation()</code></li>
 </ol>
-</section>
-<section id="step-1-download-the-files" class="level4">
-<h4 class="anchored" data-anchor-id="step-1-download-the-files">Step 1: Download the files</h4>
-<p>To complete this lab activity you will need two files:</p>
-<ol type="1">
-<li>We’ll work with an example script called <code>4141_wk3_lab.qmd</code>. This is a Quarto document.</li>
-<li>We need a data file called <code>data_bmw3_subscales.csv</code>. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al.&nbsp;(2024). It is a file of the type <code>.csv</code>. This means that individual bits of data are separated by comma’s. We’ll often use <code>.csv</code> files.</li>
-</ol>
-<p>You can download the files here: <a href="files/week5/4141_wk5_lab.zip" download="4141_wk5_lab.zip"><code>4141_wk5_lab.zip</code></a>. Usually they will be saved in your ‘Downloads’ folder.</p>
-<p>Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).</p>
-<p>Finally, open the example script by clicking on the file called <code>4141_wk3_lab.qmd</code> in the Files space on the R-server.</p>
-<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Watch the ‘How to’ videos
+Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you haven’t done so already, this is a good time to watch the ‘How to’ videos on how to:</p>
-<ul>
-<li>Use RStudio - <a href="../PSYC4141/week1.html#sec-4141-w1-lectures-intro-how-r">in this section</a></li>
-<li>Build a plot - <a href="../PSYC4141/week1.html#sec-4141-w1-lectures-intro-how-r">in this section</a></li>
-<li>Use <code>here()</code> - <a href="../PSYC4141/week3.html#sec-4141-w3-lectures-correlation">in this section</a></li>
-<li>Use <code>mutate()</code> - <a href="../PSYC4141/week3.html#sec-4141-w3-lectures-correlation">in this section</a></li>
-<li>Conduct and interpret correlation analysis - <a href="../PSYC4141/week3.html#sec-4141-w3-lectures-correlation">in this section</a></li>
-</ul>
+<p>Information on this lab activity will follow soon.</p>
 </div>
 </div>
-</section>
-<section id="step-2-setup-the-appropriate-bits-and-pieces-in-rstudio" class="level4">
-<h4 class="anchored">Step 2: Setup the appropriate bits and pieces in RStudio</h4>
-<p>Before we can do anything, we need tell R what packages we want to use. We use the function <code>library()</code> to do that. It is useful to have a section at the top of your script where you load all the relevant libraries.</p>
-<blockquote class="blockquote">
-<p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’.In the code chunk, write code to load the libraries by using the <code>library()</code> function. We need the packages <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. After you’ve written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk).</p>
-</blockquote>
-<div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hint
-</div>
-</div>
-<section id="hint" class="level2 callout-body-container callout-body">
-<h2 class="anchored" data-anchor-id="hint">Hint</h2>
-<p>We need to load two packages (<code>here</code> and <code>tidyverse</code>) using the <code>library()</code> function. First, inside the code chunk, write <code>library()</code> and put <code>here</code> inside the brackets. On the next line in the code chunk, write <code>library()</code> and put <code>tidyverse</code> inside the brackets. On a third line in the code chunk, write <code>library()</code> and put <code>easystats</code> inide the brackets.</p>
-</section>
-</div>
-</section>
-<section id="step-3-read-in-the-data" class="level4">
-<h4 class="anchored">Step 3: Read in the data</h4>
-<div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hint
-</div>
-</div>
-<section id="hint-1" class="level2 callout-body-container callout-body">
-<h2 class="anchored" data-anchor-id="hint-1">Hint</h2>
-<p><code>dataframe &lt;- read_csv(here("filepath to folder", "filename.extension))</code></p>
-<p>Your code should include:</p>
-<p>dataframe: the name of the object you want to save the data in (such as <code>data_mw_subscales</code>) &lt;- : assignment arrow read_csv() : the <code>read_csv()</code> function here(): the `here() function “filepath to folder”: the folders that you need to point R to starting from your project root folder “filename.extention”: the name of the datafile, including the extension</p>
-</section>
-</div>
-<blockquote class="blockquote">
-<p>Action: Make sure you’ve run the code chunk. Then, check that you can see the ‘object’ (also called ‘data-frame’) that is named <code>data_mw_subscales</code> in the Environment (top right quadrant).</p>
-</blockquote>
-</section>
-<section id="step-4-check-for-missing-data" class="level4">
-<h4 class="anchored" data-anchor-id="step-4-check-for-missing-data">Step 4: Check for missing data</h4>
-</section>
-<section id="step-5-build-scatterplots" class="level4">
-<h4 class="anchored">Step 5: Build scatterplots</h4>
-<p>Now we are ready to create a scatterplot to visualise the relationship between two of the variables. We are going to look at the relationship between ‘unintentional mind wandering’ and ‘meta-awareness of mind wandering’</p>
-<p>The function we use for that (and for a lot of other plots you’ll make for research methods and stats) is <code>ggplot()</code>. Inside the function we tell R which data to use and which variables to map onto the x-axis and the y-axis of the scatterplot.</p>
-<blockquote class="blockquote">
-<p>Action: Insert a new code chunk and use <code>ggplot()</code> to tell R what data to plot and which variables tot use. The ‘unintentional mind wandering’ score is stored in the variable <code>BMW3_UN</code>; we’ll put that variable on the x-axis. The ‘meta-awareness of mind wandering’ score is stored in the variable <code>BMW3_ME</code>; we’ll put that variable on the y-axis. Then, add layers to plot the datapoints (use <code>geom_point()</code>) and the line of best fit (use <code>geom_smooth(method="lm", se=TRUE)</code>).</p>
-</blockquote>
-<div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hint
-</div>
-</div>
-<section id="hint-2" class="level2 callout-body-container callout-body">
-<h2 class="anchored" data-anchor-id="hint-2">Hint</h2>
-<p>Use the function <code>ggplot()</code>. Start by writing <code>ggplot()</code> on the next line of the code chunk. Inside the <code>ggplot()</code> function, we need to tell R which data-frame (<code>data=</code>) and which variable to use (<code>mapping=aes(x= , y= ))</code>).</p>
-<p>Then, we need to tell R what type of plot we want. We do this by adding a <code>+</code> to the line on which you’ve written <code>ggplot()</code>, then on the next line you add a ‘geometric object’, in this case <code>geom_point()</code>.</p>
-<p>We also want to add a line of best fit. We do this by adding a <code>+</code> to the line on which you’ve written <code>geom_point()</code>, then on the next line you add another ‘geometric object’, in this case <code>geom_smooth()</code>. We want to specify what type of line of best fit, we do this by adding <code>method="lm", se=TRUE</code> inside the brackets of <code>geom_smooth()</code>.</p>
-<p>This will give you a basic scatterplot. Revisit the lab activity code from week 1 to remind yourself how to change any of the features (such as the colour, the background, add titles to the axes etc.).</p>
-</section>
-</div>
-</section>
-<section id="step-6-build-qq-plots" class="level4">
-<h4 class="anchored" data-anchor-id="step-6-build-qq-plots">Step 6: Build qq-plots</h4>
-</section>
-<section id="step-7-remove-outliers-using-filter" class="level4">
-<h4 class="anchored" data-anchor-id="step-7-remove-outliers-using-filter">Step 7: Remove outliers using <code>filter()</code></h4>
-</section>
-<section id="step-8-calculate-and-interpret-pearsons-r-using-correlation" class="level4">
-<h4 class="anchored" data-anchor-id="step-8-calculate-and-interpret-pearsons-r-using-correlation">Step 8: Calculate and interpret Pearson’s r using <code>correlation()</code></h4>
-</section>
-<section id="step-9-calculate-and-interpret-spearmans-rho-using-correlation" class="level4">
-<h4 class="anchored" data-anchor-id="step-9-calculate-and-interpret-spearmans-rho-using-correlation">Step 9: Calculate and interpret Spearman’s rho using <code>correlation()</code></h4>
-</section>
-<section id="step-10-report-the-correlation-analysis-following-apa-conventions" class="level4">
-<h4 class="anchored" data-anchor-id="step-10-report-the-correlation-analysis-following-apa-conventions">Step 10: Report the correlation analysis following APA conventions</h4>
+<!-- #### Step 1: Download the files -->
+<!-- To complete this lab activity you will need two files: -->
+<!-- 1.  We'll work with an example script called `4141_wk5_lab.qmd`. This is a Quarto document. -->
+<!-- 2.  We need a data file called `correlation-data-n030_modified.csv`. This file holds scores on tests of vocabulary knowledge and reading experience. Different (simulated) participants' scores are on different rows of each spreadsheet. Different kinds of scores are in different columns of each spreadsheet. -->
+<!-- You can download the files here: [`4141_wk5_lab.zip`](files/week5/4141_wk5_lab.zip){download="4141_wk5_lab.zip"}. Usually they will be saved in your 'Downloads' folder. -->
+<!-- Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first). -->
+<!-- Finally, open the example script by clicking on the file called `4141_wk5_lab.qmd` in the Files space on the R-server. -->
+<!-- ::: callout-important -->
+<!-- ## Watch the 'How to' videos -->
+<!-- If you haven't done so already, this is a good time to watch the 'How to' videos on how to: -->
+<!-- -   Use RStudio - [in this section](week1.qmd#sec-4141-w1-lectures-intro-how-r) -->
+<!-- -   Build a plot - [in this section](week1.qmd#sec-4141-w1-lectures-intro-how-r) -->
+<!-- -   Use `here()` - [in this section](week3.qmd#sec-4141-w3-lectures-correlation) -->
+<!-- -   Use `mutate()` - [in this section](week3.qmd#sec-4141-w3-lectures-correlation) -->
+<!-- -   Conduct and interpret correlation analysis - [in this section](week3.qmd#sec-4141-w3-lectures-correlation) -->
+<!-- ::: -->
+<!-- #### Step 2: Setup the appropriate bits and pieces in RStudio -->
+<!-- Before we can do anything, we need tell R what packages we want to use. We use the function `library()` to do that. It is useful to have a section at the top of your script where you load all the relevant libraries. -->
+<!-- > Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'.In the code chunk, write code to load the libraries by using the `library()` function. We need the packages `here`, `tidyverse` and `easystats`. After you've written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk). -->
+<!-- ::: {.callout-note title="Hint"} -->
+<!-- ## Hint -->
+<!-- We need to load two packages (`here` and `tidyverse`) using the `library()` function. First, inside the code chunk, write `library()` and put `here` inside the brackets. On the next line in the code chunk, write `library()` and put `tidyverse` inside the brackets. On a third line in the code chunk, write `library()` and put `easystats` inide the brackets. -->
+<!-- ::: -->
+<!-- #### Step 3: Read in the data -->
+<!-- The next step is to read in the data file. This is a file of the type `.csv`, so we'll use the function `read_csv()` to do this. Inside the function, we tell R where to find the file and what it is called. -->
+<!-- > Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'. Inside the chunk, use `read_csv()` to read in the data. -->
+<!-- ::: {.callout-note title="Hint"} -->
+<!-- ## Hint -->
+<!-- `dataframe <- read_csv(here("filepath to folder", "filename.extension))` -->
+<!-- Your code should include: -->
+<!-- dataframe: the name of the object you want to save the data in (such as `data_mw_subscales`) \<- : assignment arrow read_csv() : the `read_csv()` function here(): the \`here() function "filepath to folder": the folders that you need to point R to starting from your project root folder "filename.extention": the name of the datafile, including the extension -->
+<!-- ::: -->
+<!-- > Action: Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') that is named `data_mw_subscales` in the Environment (top right quadrant). -->
+<!-- #### Step 4: Check for missing data -->
+<!-- #### Step 5: Build scatterplots -->
+<!-- Now we are ready to create a scatterplot to visualise the relationship between two of the variables. We are going to look at the relationship between 'unintentional mind wandering' and 'meta-awareness of mind wandering' -->
+<!-- The function we use for that (and for a lot of other plots you'll make for research methods and stats) is `ggplot()`. Inside the function we tell R which data to use and which variables to map onto the x-axis and the y-axis of the scatterplot. -->
+<!-- > Action: Insert a new code chunk and use `ggplot()` to tell R what data to plot and which variables tot use. The 'unintentional mind wandering' score is stored in the variable `BMW3_UN`; we'll put that variable on the x-axis. The 'meta-awareness of mind wandering' score is stored in the variable `BMW3_ME`; we'll put that variable on the y-axis. Then, add layers to plot the datapoints (use `geom_point()`) and the line of best fit (use `geom_smooth(method="lm", se=TRUE)`). -->
+<!-- ::: {.callout-note title="Hint"} -->
+<!-- ## Hint -->
+<!-- Use the function `ggplot()`. Start by writing `ggplot()` on the next line of the code chunk. Inside the `ggplot()` function, we need to tell R which data-frame (`data=`) and which variable to use (`mapping=aes(x= , y= ))`). -->
+<!-- Then, we need to tell R what type of plot we want. We do this by adding a `+` to the line on which you've written `ggplot()`, then on the next line you add a 'geometric object', in this case `geom_point()`. -->
+<!-- We also want to add a line of best fit. We do this by adding a `+` to the line on which you've written `geom_point()`, then on the next line you add another 'geometric object', in this case `geom_smooth()`. We want to specify what type of line of best fit, we do this by adding `method="lm", se=TRUE` inside the brackets of `geom_smooth()`. -->
+<!-- This will give you a basic scatterplot. Revisit the lab activity code from week 1 to remind yourself how to change any of the features (such as the colour, the background, add titles to the axes etc.). -->
+<!-- ::: -->
+<!-- #### Step 6: Build qq-plots -->
+<!-- #### Step 7: Remove outliers using `filter()` -->
+<!-- #### Step 8: Calculate and interpret Pearson's r using `correlation()` -->
+<!-- #### Step 9: Calculate and interpret Spearman's rho using `correlation()` -->
+<!-- #### Step 10: Report the correlation analysis following APA conventions -->
 
 
 </section>

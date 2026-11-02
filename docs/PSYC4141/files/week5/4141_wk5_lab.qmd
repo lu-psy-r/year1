@@ -1,0 +1,200 @@
+---
+title: "4141-w5-lab"
+editor: visual
+---
+
+## Step 2: Setup
+
+> Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'.In the code chunk, write code to load the libraries by using the `library()` function. We need the packages `here`, `tidyverse` and `easystats`. After you've written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk).
+
+
+## Step 3: Reading in the data
+
+> Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'. Inside the chunk, use `read_csv()` to read in the data. Make sure you've run the code chunk. Then, check that you can see the 'object' (the 'data-frame') in the Environment (top right quadrant).
+
+
+## Step 4: Edit your scatterplots to make them look good
+
+In the handbook week 4 chapter, in section **Lab activity 3: Beautifying scatterplots**, we ask you to work on edits to change or improve the look of your scatterplots.
+
+This activity builds on the work you did previously, learning how to create a scatterplot to visualise the relationship between two variables.
+
+-   In week 3, you looked at the relationship between 'unintentional mind wandering' and 'meta-awareness of mind wandering'.
+-   **This week**, you look at the relationship between reading experience and vocabulary knowledge.
+
+The function we use for that (and for a lot of other plots you'll make for research methods and stats) is `ggplot()`. Inside the function we tell R which data to use and which variables to map onto the x-axis and the y-axis of the scatterplot.
+
+> Action: Insert a new code chunk and use `ggplot()` to tell R what data to plot and which variables to use. Then add layers to plot the datapoints (use `geom_point()`). Then add arguments inside `geom_point(...)` -- inside the brackets, replacing the dots in `geom_point(...)` -- to tell R how you want it to change the appearance of the points.
+
+::: {.callout-note title="Code steps"}
+## Code steps
+
+This week, we learn how to change the appearance of the points in a scatterplot: the colour, size and transparency of the points.
+
+1.  Read in the data and give it a name.
+
+`thirty <- read_csv(here("filepath to folder", ("correlation-data-n030.csv")`
+
+2.  Check the column names in the data. In the `thirty` dataset, you will see columns called (with explanations):
+
+-   `vocab.pos.lar.sma` -- vocabulary.positive.large.small -- vocabulary scores, a large positive correlation, for a small dataset of 30 people
+-   `exper.pos.lar.sma` -- experience.positive.large.small -- experience scores, a large positive correlation, for a small dataset of 30 people
+
+3.  Draw a scatterplot
+
+```         
+ggplot(data = thirty, aes(x = exper.pos.lar.sma, y = vocab.pos.lar.sma)) +
+  geom_point() +
+  labs(x = "experience", y = "vocabulary") +
+  theme_bw()
+```
+
+Note, here:
+
+-   We edit the labels with `labs(x = "experience", y = "vocabulary")`
+-   We edit the background with `theme_bw()`
+
+4.  Edit the scatterplot to change the colour of the points
+
+```         
+ggplot(data = thirty, aes(x = exper.pos.lar.sma, y = vocab.pos.lar.sma)) +
+  geom_point(colour = "limegreen") +
+  labs(x = "experience", y = "vocabulary") +
+  theme_bw()
+```
+
+Note, here:
+
+-   We add the argument `colour = ...` and use an English colour name to specify colour.
+
+5.  Edit the scatterplot to change the size of the points
+
+```         
+ggplot(data = thirty, aes(x = exper.pos.lar.sma, y = vocab.pos.lar.sma)) +
+  geom_point(size = 5) +
+  labs(x = "experience", y = "vocabulary") +
+  theme_bw()
+```
+
+Note, here:
+
+-   We add the argument `size = ...` and enter an integer to specify how many times the point size should be increased (from default, `size = 1`).
+
+6.  Edit the scatterplot to change the transparency of the points
+
+```         
+ggplot(data = thirty, aes(x = exper.pos.lar.sma, y = vocab.pos.lar.sma)) +
+  geom_point(alpha = 5) +
+  labs(x = "experience", y = "vocabulary") +
+  theme_bw()
+```
+
+Note, here:
+
+-   We add the argument `alpha = ...` and enter a decimal fraction to specify how the transparency of the point size should be increased: from default `alpha = 1` (printed in full opacity) to increasing levels of transparency by making the fraction smaller (e.g., `alpha = .2` is more transparent than `alpha = .8`).
+:::
+
+> Action: Pick a dataset. Pick a pair of variables: a `vocab` column and an `exper` column. Make a scatterplot.
+
+> Action: Pick a different dataset. Pick a different pair of variables: a `vocab` column and an `exper` column. Make a scatterplot.
+
+> Action: Pick a different dataset. Pick a different pair of variables: a `vocab` column and an `exper` column. Make a scatterplot.
+
+> Action: Can you combine arguments to change colour, size and transparency at the same time?
+
+::: {.callout-tip title="Why are we doing this?"}
+In R, you do things with functions: `function()` like `library(tidyverse)`.
+
+When you put things inside the brackets in `function` you are telling R:
+
+-   what to do the thing to
+-   or how to do the thing
+
+These bits of information (what to do the thing to, how to do the thing) are specified as *arguments* and learning to work with arguments is an important step up in coding skill.
+
+-   Normally, when you do *not* add arguments, R will just do the thing in the way most of the time by default it is OK to do the thing.
+-   Learning to specify exactly *what* or *how* you want R to work *gives you more control* over R.
+:::
+
+## Step 5: Run a correlation analysis
+
+So far, we've visualised the data in a scatterplot using code like this:
+
+```         
+ggplot(data = thirty, aes(x = exper.pos.lar.sma, y = vocab.pos.lar.sma)) +
+  geom_point() +
+  labs(x = "experience", y = "vocabulary") +
+  theme_bw()
+```
+
+> Action: Have a look at the scatterplot. Do you think the correlation between these two variables with be positive or negative? How large do you estimate the correlation to be?
+
+Notice here that we are working with the `thirty` dataset (this is the name I used in the example code) and the variables `exper.pos.lar.sma` and `vocab.pos.lar.sma`.
+
+Now we want to estimate the correlation between two variables.
+
+The code below runs a correlation analysis for the variables `exper.pos.lar.sma` and `vocab.pos.lar.sma`.
+
+> Action: Run the code below to calculate the correlation estimate and to test its significance
+
+```{r}
+#| label: correlation
+results <- correlation(data = thirty,
+            select = c("exper.pos.med.sma", "vocab.pos.med.sma"),
+            method = "pearson",
+            p_adjust = "none")
+
+results
+```
+
+> Action: After running the code above, have a look at the output. What is the value for r? Is it positive or negative? What does that mean? Can you describe the relationship between reading experience and vocabulary in words along the lines of 'People who scored higher on ..., scored .... on ...'. Fill in the dots.
+
+## Step 6: Create scatterplots and run correlation analyses for the relationships between the other subscale scores
+
+Repeat steps 4 and 5 across datasets and pairs of variables.
+
+We have shared three datasets:
+
+-   `correlation-data-n030.csv`
+-   `correlation-data-n100.csv`
+-   `correlation-data-n1000.csv`
+
+because these datasets are different in the size of the participant sample ($N = 30, 100, 1000$).
+
+> Examining scatterplots to visualize associations for different sample sizes, and estimating and testing the corresponding correlations, tells you a lot about the impact of sample size.
+
+In each dataset, we have shared vocabulary (`vocab`) or reading experience (`exper`) scores where the correlation between these variables will vary in sign (positive = `pos` or negative = `neg`) and in size (the correlation can be small (`sma`), medium (`med`), or large (`lar`)). Where the correlation is null, we call it `zer.zer` (for zero sign, zero size).
+
+> Examining variables that vary in the sign and the size of the correlations, when everything else is the same, trains you in how to spot correlation sign or size just by looking (using scatterplots) and about the ways in which the "look" of an association is (or is not) mirrored in the correlation estimate.
+
+As a guide, for `correlation-data-n100.csv`, the columns have names that look like this:
+
+-   `vocab.neg.lar.med` -- vocabulary.negative.large.medium
+
+-   `exper.neg.lar.med` -- experience.negative.large.medium
+
+-   `vocab.neg.med.med` -- vocabulary.negative.medium.medium
+
+-   `exper.neg.med.med` -- experience.negative.medium.medium
+
+-   `vocab.neg.sma.med` -- vocabulary.negative.small.medium
+
+-   `exper.neg.sma.med` -- experience.negative.small.medium
+
+-   `vocab.zer.zer.med` -- vocabulary.zero.zero.medium\
+
+-   `exper.zer.zer.med` -- experience.zero.zero.medium
+
+-   `vocab.pos.sma.med` -- vocabulary.positive.large.medium
+
+-   `exper.pos.sma.med` -- experience.positive.large.medium
+
+-   `vocab.pos.med.med` -- vocabulary.positive.medium.medium\
+
+-   `exper.pos.med.med` -- experience.positive.medium.medium
+
+-   `vocab.pos.lar.med` -- vocabulary.positive.small.medium
+
+-   `exper.pos.lar.med` -- experience.positive.small.medium
+
+> Action: explore the datasets, and the pairs of variables, to learn about working with --- seeing, estimating and testing --- the correlations.
