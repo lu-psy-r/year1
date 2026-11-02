@@ -1,0 +1,509 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+In this lecture, I will talk about the assumptions that underlie correlation analysis, as we've looked at so far using Pearson's R.
+
+And we'll also talk about some issues with correlation analysis that you need to be aware of.
+
+And then we'll talk about how to overcome such problems.
+
+And finally we will talk about inter correlation where we look at multiple correlations between multiple variables.
+
+Okay. So what are assumptions. And more specifically what are the assumptions for Pearson's are.
+
+Now as the statistical test works,
+
+by comparing the result that you've found for your sample to what we would expect to see if only chance were operating,
+
+and to describe that expectation, we have to build a model of how the data would behave if only chance were operating.
+
+If you think back to the lectures in in in the last week.
+
+Um, Rob talked about, uh, how that is kind of the key logic of hypothesis testing on significance testing.
+
+Now, the assumptions are the conditions that that model relies on.
+
+So if your data meets those assumptions, the p value is an accurate answer to how surprising is this result?
+
+If they don't meet those conditions, then you can still calculate a p value.
+
+You won't. You won't get an error message, but the output will be misleading.
+
+So phrased another way, you could say that a test only um is only guaranteed to work as advertised in the conditions it was designed for.
+
+And the further your data strays away from those conditions.
+
+The less you can trust the have put, or the less you can be assured that you draw the correct conclusions from that output.
+
+Now, it's also important to realise that assumptions aren't kind of a pass fail situation.
+
+Um, there's things we need to check and and then we need to kind of get an accurate picture.
+
+Um, because many tests tolerate modest violations. So we need to look at how serious a violation is rather than just whether one exists.
+
+Okay. So what are the assumptions underlying Pearson's? Are some of them excuse me?
+
+Some of the um, some of those assumptions, uh, under relate to how the data were collected and some of them relate to the shape of the data.
+
+So we'll first look at the assumptions that relate to how the data were collected.
+
+Um, they have to do with that. Both variables should be continuous.
+
+So at an interval ratio level, and that observations need to be independent of one another.
+
+Now let's look at each of those in turn.
+
+A few weeks ago, in one of the earlier lectures, you learned about different types of variables, and we divided variables into categorical variables.
+
+So at the nominal or ordinal level and continuous variable variables at the interval or ratio level.
+
+So if we have categories um there can be at a nominal level where basically we have groups of things that have no inherent order.
+
+So I colour is is an example or diagnosis type.
+
+Um, so basically there are labels for different groups.
+
+Then a different type of categorical variable Is at the ordinal level.
+
+You still have categories of things, but you can order them in a meaningful way.
+
+Um, but the gaps between them are not necessarily equal.
+
+So an example of that would be a level highest level of education.
+
+So one, you could have one group of people who have completed their GCSEs.
+
+Another group of people who, as their highest level of education have completed their A-levels.
+
+And a third group who have completed a at their highest level of education, a university degree.
+
+Let's say bachelor's degree. Um, so you have groups of things and they are ordered.
+
+Um, because you could say that GCSE is lower than A-levels and A-levels is lower than a university education.
+
+Um, but the gaps between them are not necessarily equal.
+
+You can't really say that a university completing a university, uh, education is kind of twice as high and then completing your GCSEs.
+
+Another example is um, kind of groups of symptoms or kind of level of symptoms.
+
+So if symptoms or something could be cough it could be mild moderate or severe.
+
+So you could divide people into those categories. But again Sofia isn't necessarily twice as bad as mild.
+
+Okay. So those are categorical variables. Um when we look at continuous variables we have they can exist at the interval level or at a ratio level.
+
+At the interval level. A variable has ordered values with equal gaps between them.
+
+But there is no true zero. So an example of that is calendar year.
+
+Um, the gap between 1990 and 2000 is the is ten years, which is the same as between 2010 10 in 2020.
+
+Also ten years. So the gaps are equal. But what we mean by there isn't a true zero is that the year zero doesn't mean that no time has passed.
+
+It's basically an arbitrary starting point. Now a ratio, um, a variable at ratio level is continuous.
+
+It is ordered, it has equal intervals and it has a true zero.
+
+So examples of of that are reaction times in milliseconds or number of errors or height.
+
+Um zero. Mean reaction time of zero milliseconds truly means zero milliseconds.
+
+No errors. Zero errors means there are no errors. Um, and something can have a height of or of zero, I guess.
+
+Anyway, um, so that is the ratio level.
+
+Now Pearson's r and describes the relationship between two variables that are continuous so that are on an interval or ratio scale.
+
+You cannot use it for variables on a nominal or ordered ordinal scale.
+
+So you wouldn't try to correlate a continuous variable like the smell of cheese with a categorical variable like the type of cheese comparing,
+
+let's say cheddar, Brie, and some blue cheese. Similarly,
+
+you can't use Pearson's R to correlate a continuous variable like reading ability with an ordinal variable like the highest level of education.
+
+So how do you check this? You need to look carefully at the measurements used and think about what types of variables they are.
+
+Okay.
+
+The second assumption that has to do with how the data were collected is independent, is that the Pearson's are assumes independence of observations.
+
+So it each participant's data should be independent of every other participants data.
+
+So the T test for R treats every data point as new independent information.
+
+And if observations are linked in some way, you effectively have less information than your sample size suggests.
+
+So the p value may be misleading. Um, so an example of of this way where observations are independent is if we ask 100 university students,
+
+um, to complete, let's say, a stress questionnaire and a sleep diary once.
+
+So each university student contributes a kind of one data point on each of those measures.
+
+If we were to ask, um, those kind of 20 students, the same 20 students to complete both measures five separate times on five separate days,
+
+let's say we would also have 100 data points, but they would not be independent because they are basically repeated measures from the same person.
+
+So we could not use Pearson's R to look at the correlation between the stress questionnaire and the sleep diary.
+
+Similarly, if the data come from related people such as siblings, that would be a violation of the assumption.
+
+Now how do we check this? You need to kind of look carefully at how the data were collected.
+
+So who were the participants and is there anything about them to suggest that they are related?
+
+So this information you would usually find in the participants section of the method section of a published paper.
+
+Okay. So the first two assumptions related to the way the data were collected.
+
+That is the way the study was designed. The third assumption relates to the shape of the data itself.
+
+So correlation analysis using Pearson's r assumes that the pairs of schools come from a bivariate normal distribution.
+
+We'll talk about what that is. And in practice we check what is implies.
+
+So we check that the relationship follows a straight line. This is referred to as linearity.
+
+We check the spread that the spread of y is the same at every value of x.
+
+That's referred to as homogeneity city. And we check that Y scores are roughly normal at every value of x that is referred to as normality.
+
+So these three um aspects linearity and normality, um, are an implication of the data kind of being derived from a bivariate normal distribution.
+
+Now we'll look at each of these things in turn. Let's first remind ourselves what a normal distribution is.
+
+Now this is what it looks like. It's a bell shaped pattern that many measurements follow.
+
+And on the slide you see an example of a height. Most of the values are clustered around the middle.
+
+So this would be the mean or the average. Most of the observations are here.
+
+We're looking at a histogram here. Right. So each bar tells us how many people fall into this bin.
+
+Now the further away from the middle the rarer the values become.
+
+And another kind of, um, characteristic of the normal distribution is that it is symmetrical.
+
+So, um, you can see it's being ten centimetres taller than average is about as unusual as being ten centimetres, um, shorter.
+
+So. Two numbers describe this bell curve.
+
+There's the mean where the middle is of the bell. The bell of where?
+
+The middle of the bell sits. And the standard deviation. So how spread out the bell is roughly the typical pattern from the mean.
+
+Um, so if the mean is here, um, let's say it's 170cm.
+
+These are simulated data. They're not real data. Um, and, um, we have a standard deviation of ten centimetres.
+
+Then, uh, about two thirds of values would fall within one standard deviation of the mean.
+
+That means between 160 and 180. So about two thirds of all observations fall into this dark blue middle bit.
+
+About 95% of observations would fall in between two standard deviations from the mean.
+
+So in kind of the lighter blue, the part and almost all observations,
+
+99.7% of all observations would fall within three standard deviations of the mean.
+
+Now, you might you might wonder where is distribution where the normal distribution comes from?
+
+So why does this bell shape shape appear so often?
+
+And for that we need to look at um a mathematical theorem.
+
+So the central limit theorem is a result from probability theory.
+
+And it has been proven that when many in small independent influences are added up or averaged,
+
+the result is approximately normally distributed, distributed whatever the shape of the individual individual influences.
+
+Um, so The central limit theorem explains why things shaped by many small influences look bell shaped, and in the.
+
+In the 1870s, Francis Galton invented what is referred to as the.
+
+Galton board to illustrate this. So if we look at the slide here, um, this is.
+
+So this is a Galton board. It has lots of different pegs. A ball is dropped from the top here.
+
+And it falls through these rows of pegs and it bounces left and right at random and then pile up, um, in bins at the bottom.
+
+And the pile forms a bell shape. Uh, many small chance nudges add up to a normal distribution.
+
+And let's see whether we can briefly look at a demonstration of this.
+
+So, um, here we have our Galton board.
+
+And so a ball falls from the top, gets bounced, bounced left and right at random, and then add a kind of ends up in one of these pins at the bottom.
+
+We can do that for a one ball. Or we can do it for ten.
+
+Um, if we do it for lots of different balls, we will see that, um, together they build a bell shaped, um, distribution in these bins at the bottom.
+
+So, um, this here we have pals.
+
+We can also look at this from kind of a web where this looks more like a histogram.
+
+So, um, you know, that's that's.
+
+So now we have one ball fall down. So we have one observation in this bin.
+
+Now let's do many balls and see what happens.
+
+And let's say that this measure at the bottom here, um, that we're measuring reading ability of many children in the UK.
+
+So reading ability is shaped by many small influences, such as the number of books children have at home, uh, the school environment,
+
+how often a child reads, but also genes and how well a child learns it has to do is also influenced by nutrition.
+
+So you can think of each of these influences, um, as a kind of being represented, being represented by these pags.
+
+So the children are the bowls here. We have reading ability. Right.
+
+The children each each ball is, is a child. And these pegs are the different influences that affect, um, how well a child, um, learns to read.
+
+So each of these influences nudges a child's ability up or down a little.
+
+So picture each child as a ball falling through the Galton, a Galton board where each peg is one of those influences,
+
+and add up lots of small nudges, and the totals pile up in a bounce shape.
+
+So most children end up here in the middle and a few end up kind of at the extremes.
+
+So we've we've seen lots of children kind of go through this now and this this is what this,
+
+these blue lines is what kind of an ideal or, um, hypothetical normal distribution would look like.
+
+So you can see that the more observations you have, um, the closer it gets to that ideal version of the normal distribution.
+
+Now, a small note. Strictly speaking, the Golden boot illustrates a random process of independent factors.
+
+So with reading, with the reading example ability and not all of those factors are actually independent.
+
+And in real life the different factors can interact also in complicated way.
+
+So I wanted to give that example to make it less abstract, but it is a little bit of an approximation.
+
+Okay. Let's go back to the presentation. Okay.
+
+So we reminded ourselves what the normal distribution looks like.
+
+Um, next um, let's have a look at what we mean by bivariate a bivariate normal distribution.
+
+Basically, we can think of that as a normal distribution for two variables together.
+
+So for any value of x the y scores are normal centred on a straight line with the same spread.
+
+Um, so uh, you can picture that basically as a, as a hill, as you can see on the slide here.
+
+Um, so here we have x and here we have y.
+
+And each of these. So, so the distribution of x if you look from this side this is what that looks like.
+
+And as you can see that very much looks like a normal distribution.
+
+On this x axis we have y if you look at it from this side, uh this is what the distribution distribution of Y looks like.
+
+Also very much looks like a normal distribution together. They built kind of a 3D shape.
+
+Um, that looks like a hill. The higher the hill, the more common that pair of scores is.
+
+If you look at this from above. So we're kind of looking from here.
+
+Now then this is what you see. So the hill is, is an oval.
+
+Um, and it's, it kind of has a, yeah.
+
+This ellipse shaped form. So where most of the observations are here and then there's fewer towards the, the outer edges.
+
+Um. Now if we uh, instead of kind of looking at a simulation of it or picture of it like this,
+
+um, and we look at a sample from people that comes from this oval cloud dots.
+
+Then, then this is what it looks like, right? So if this each dot here, uh, is an observation, kind of an observation from one participant.
+
+So this participant here is called kind of in the middle of the on the x measure and quite low on the y measure, etc..
+
+So each dot here is from one participant. So this is a sample of people.
+
+And this is what a bivariate normal distribution would look like in a scatterplot.
+
+So each of the variables on its own is normally distributed.
+
+The bivariate normal distribution refers to kind of the normal distribution of these two variables together.
+
+So for any value of x the y scores are normal centred and on a straight line with the same spread.
+
+We will get into what that means exactly in a minute. Now it's the correlation.
+
+So this this looked at a positive correlation right. So when x goes up, the value of y also goes up.
+
+So you can kind of see yeah the relationship going from the bottom left to the top right.
+
+So this is a positive correlation. Um but it it the view is quite similar when you um look at a negative correlation.
+
+Right. Um, so the correlation sets kind of the tilt of, of, of the oval and the narrowness,
+
+the strength of the correlation, um, is, is you can see it in, in how thin this, this oval is.
+
+Um, but but the principles are the same.
+
+So from uh, if we, if we say okay, these are we could look at whether each variable is normally distributed by looking at a histogram.
+
+Those things would look the same independent of whether it is a positive or negative correlation.
+
+Okay, so now let's see how we check whether the pairs of schools that we are working with come from a bivariate normal distribution in practice.
+
+The first thing that we look at is linearity, or whether the relationship follows a straight line as um, yeah, as a general pattern.
+
+So Pearson's r assumes that the relationship between x and Y is linear, or that the points fall on a straight line,
+
+or the pattern follows a straight line, so not all of the points need to fall exactly on the straight line.
+
+Rather, the general trend should be described by a straight line. So here we have an example where the s h goes up.
+
+Language competence also goes up. So that would be a linear relationship.
+
+So it would be appropriate for the assumption of linearity is is met here.
+
+Pearson's R cannot provide a full picture of curvilinear relationships.
+
+So those are basically other types of relationship for M.
+
+And we'll look at two examples from language development in a minute that are not linear.
+
+They're curvy. There is a curve rather than a straight line.
+
+So for instance um, vocabulary or the number of word words a child knows grows rapidly at first and then flattens flattens out leaving,
+
+leading to kind of a curvilinear relationship like that.
+
+Or in contrast, um, if we look at how well children understand compound sentences, we see slow development at first and then a later growth spurt.
+
+So we have again a curvilinear relationship, but in the other direction,
+
+you would not be able to use Pearson's R to test or that relationship, or at least it would give an unreliable measure of it.
+
+Um, yet another curvilinear relationship is you can see on the slide here.
+
+Uh, so if we have H on the x axis again, and errors in language use on the y axis, uh, we, we,
+
+we observe something that is referred to as an inverted U-shape, kind of a U-shape on its head.
+
+So at a young age, children make few errors, then they start making more errors.
+
+And then when they get older, uh, the number of errors they make reduces again.
+
+If you were to calculate Pearson's r for, this relationship.
+
+For these two variables, you would get a value of 0.18 and it wouldn't be significant.
+
+So if you just looked at that number, you would say, well, um, there's no relationship between age and errors in language use.
+
+Uh, if you look at the scatterplot you can see that it clearly is a relationship.
+
+Um, but it is not a linear one, which is why Pearson's r doesn't pick it up.
+
+So how do you check for linearity. You have to have a look at the scatterplot.
+
+Okay. So what do we mean by that.
+
+Um it means that the spread of Y is similar at every level of x.
+
+So the spread around the line of best fit. If we think of this, um, you can think of, of, of these things as a scatter plot in a way.
+
+Um, and this has the line of best fit and the spread around it.
+
+Uh, around this line of best fit is, uh, kind of similar all the way across.
+
+So if we look at this orange example, this is a stick.
+
+So we have this the variance of of scores on this end of the variable is similar.
+
+The as it is at this value of the variable. And also at this extreme.
+
+So this, this kind of broad band of observations that have a similar spread across the whole range.
+
+Now in blue and green here we have two examples of heteroscedasticity um distributions.
+
+So um here the spread on the extremes is much wider here on the left and here on the right than it is in the middle.
+
+So that is a heteroscedasticity pattern. Um, in green we have another example of heteroscedasticity and where we kind of have a fan shaped pattern.
+
+So the spread of scores on one side is much wider than it is on the other side.
+
+Again how do we check this. We have to look at the scatter plot.
+
+Um. So then the third kind of implication for of of the pairs of scores coming from a bivariate normal distribution is to look, um,
+
+is to do with normality and a good approximation of whether the normality assumption
+
+is met is to check whether both variables are normally distributed using histograms.
+
+This is an approximation, but it is in practice what we do.
+
+Um, so we've been making histograms over the past few weeks.
+
+So we have a history. We have three histograms here right. The one here on the left shows you what's a kind of a normal distribution would look like.
+
+So here we have our bell shaped pattern that is roughly um symmetrical.
+
+And then in the middle here and on the right we have two histograms that look clearly not normally distributed.
+
+So in the middle we have highly skewed observations.
+
+So a lot of observations to the left and so of lower values.
+
+And then kind of this long tail of observations towards the right of the axis.
+
+So a lot of fast reaction times and then a long tail with some very slow reaction times.
+
+So reaction time data are often skewed. So the histogram will often kind of have this shape.
+
+So these this variable is not normally distributed.
+
+Um here on the right we have an example of a variable um that is uh kind of has very heavy tail.
+
+So it's very it's much thinner than a normal distribution. And it goes out further.
+
+So here this is an example of, uh, timing errors.
+
+Um, and as you can see, yeah, there's some people who have, uh, kind of timing errors in one direction and a few people out here.
+
+So it has. Yeah, it's called a kind of a distribution that has heavy tails.
+
+So we can look at the histogram for each variable that we are using in our correlation analysis
+
+individually and see what it I normally distributed to get an idea of whether that is the case.
+
+Um, we can also create a QQ plot, and that basically compares your data with what a perfectly normal distribution looks like.
+
+So, um, and we can see these at the bottom of, of the slide.
+
+Um, so each point in this in the, in the QQ plot.
+
+So like these ones here is an observation. And if the points full follow kind of this orange diagonal line the data are close to normal.
+
+So you can see that for this normal distribution example here the the points fall very close to the line will never be perfect because,
+
+you know real observations hardly ever are perfect.
+
+But so but so they might divert a little bit from that line.
+
+But broadly speaking it's kind of like a snake coiling around that orange line.
+
+Now here you can see, um, the QQ plot for the skewed data.
+
+So if this QQ plot goes with this histogram and you can see that here at the extremes,
+
+um, the data points very clearly divert away from the orange line.
+
+So that is a very clear indication that is not normally distributed. And similarly.
+
+Similarly um, we have for for this histogram with the heavy tails, you can see how at the extremes do data points go away from the orange line.
+
+So we can look at the histogram of each individual variable.
+
+And we can also create a QQ plot for each individual variable to to check whether the normality assumption has been met.
+
+Okay I will leave it at that for now. We will continue in a little bit.
+

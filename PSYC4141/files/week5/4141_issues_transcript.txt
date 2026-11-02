@@ -1,0 +1,623 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Okay, so we looked at what happens if, um, we violate the assumptions or the data violated the assumptions that underlie patients are.
+
+And next, I would like to look at some issues that you need to be aware of.
+
+So one issue that um, you need to be aware of is the presence of outliers.
+
+So correlation may be distorted by outliers with extreme scores.
+
+Um one definition of an outlier would be three or more standard deviations from the mean.
+
+So on this side of this slide we have a scenario.
+
+So this is a scatter plot again. And we have this one observation here that would be an outlier.
+
+So if you were to calculate a correlation for for these data it would actually give you an R of 0.86,
+
+so it would be suggestive of a strong, positive relationship.
+
+But if you look at the scatterplot, you can see that that might not be an accurate representation of what is going on with these data.
+
+Um, because we have this one, uh, outlier up here that this data point is really very,
+
+very different from all the others, and it's trying to fit a line of best fit through it like that.
+
+Um, whereas really when um, we look at the scatterplot, we would say, okay, there is this cluster of scores in the bottom left.
+
+And that is maybe a better, uh, a truer representation of what, um, of this relationship between, of the relationship between these two variables.
+
+So if we remove that, um, outlier, we would be left with this and we get an almost we get a perfect negative correlation.
+
+Now, this is a very extreme example. Um, but but it is to kind of illustrate the point.
+
+Um, there's a few issues here though, so there is different ways in which you could define an outlier.
+
+And it is important to do so before you look at your data, because we do not want to be in a situation where you could be accused of randomly,
+
+uh, removing data points just because the the correlation isn't quite what you expect it to be.
+
+So it's important to think about what what would be how you would define an outlier before you've looked at your data.
+
+It's also really important to think about what. You know, what is the reason that you that you might, um, remove a data point.
+
+So sometimes maybe a participant clearly didn't actually follow the instructions that you gave them, um,
+
+and if you have kind of evidence of that because let's say you ask them to respond in a particular task and they need to press one button,
+
+um, for one picture and another button for another picture, and they just press the same button the whole way through,
+
+then they clearly haven't, um, kind of complied with your instruction, and that will be a good reason to exclude them.
+
+So defining outliers is not necessarily straightforward,
+
+but it is definitely something that you need to think about and that you need to
+
+kind of write down how you're going to do that before you look at your data.
+
+Um, and yeah, if we have good reason to to remove an outlier, we can we can do so validly.
+
+Uh, the other point that I'm trying to make here is that it is important to look at your scatterplot to check that,
+
+um, the, the, not just add the number.
+
+If you would just have looked at the R value here, we would have concluded that there is a strong positive relationship.
+
+Really, that is not the case. There's one outlier that that kind of, um, causes that.
+
+Okay. So, um, if we.
+
+Um, so so let's look at outlier, the outlier scenario in a bit more detail.
+
+Um, here we have a similar set of plots that we looked at before when we were looking at the violation of various assumptions.
+
+Um, so we have two variables and I've chosen IQ and depression.
+
+Uh, here, um, they are unrelated.
+
+So we do not expect a significant correlation between these two things.
+
+Um, on the left here, we have our bivariate normal situation.
+
+That's what. It's what it would look like in the scatterplot. Each variable would be roughly normally distributed fine.
+
+On the right side we have three plots that illustrate an outlier scenario.
+
+So in this in the individual histograms of the of the two variables they look kind of okay don't they.
+
+They look roughly bell shaped. Okay. Maybe the tails are a bit long.
+
+That is a clue already. Um, but you it would be quite easy to miss that if you were just looking at the histograms.
+
+Right? Um, the scatter plot, on the other hand, has these kind of clusters of scores on the extremes.
+
+So head the bottom right, the top right, the top left and the bottom left.
+
+There are these pockets of scores of, of people there you do not see in a bivariate normal distribution, a situation.
+
+Okay.
+
+So if you were to look at the scatterplot you would see that there is kind of an unusual situation going on here that requires further investigation.
+
+So what if we were to calculate use Pearson's r in this scenario.
+
+What would happen. So this shows uh, the kind of the the number of times this shows a type one error rates.
+
+Right. So for the bivariate normal distribution it is very similar to to before.
+
+Um it's it's the same as before right.
+
+And if we um have data coming from a bivariate normal distribution and we know there is no relationship between these two variables,
+
+um, we would only be wrong in 5% of the cases are wrongly concluding that there is a relationship between these two.
+
+Just by chance. Right? Our error rate is 5%.
+
+Um, in a scenario where we have outliers in.
+
+As we looked at, um, that fastly goes up.
+
+So, uh, here we have we would conclude in almost 22% of cases,
+
+we would conclude that there is a significant correlation between these two variables when really there isn't.
+
+So a false positive. And you can see that again by kind of the grey bars going well above this red line.
+
+So we have we are not controlling our error rate properly here.
+
+So that is the problem. We are wrong too often and we would draw the wrong conclusions from our samples.
+
+Okay. So what do we do about this now one. Um, potential one.
+
+One alternative or one potential solution is using Spearman's rho.
+
+So Spearman's rho is a correlation coefficient that works on ranks instead of the raw data.
+
+So the raw scores. Pearson's r works on the raw scores. Pearson's rho is simply sorry.
+
+Spearman's rho is simply. Pearson's are calculated on those ranks.
+
+So it measures how consistently Y rises or falls as x rises.
+
+So it looks for what is called a monotonic relationship. Similar to Pearson's r, it runs from -1 to 1, and similar to Pearson's are.
+
+The sign and strength are read it as kind of showing the direction and the strength of the relationship,
+
+and and Spearman's rho can be used with ordinal data as well as with interval or ratio data.
+
+So how do we calculate Spearman's rho? Now this this just shows the principle.
+
+In practice you just ask R to do it right. Um, but the principle is that, uh.
+
+Let's say we have six different participants here.
+
+A to F, they have practised a certain task for a variable number of hours, ranging from one all the way to 60.
+
+And these are. So that is our our x variable.
+
+And here they have their test scores on that particular uh task.
+
+Right. So that's our Y.
+
+So what you do is you rank the X scores from lowest to highest.
+
+Um, and you would, um.
+
+So here, so lowest to highest. and you would rank the, uh, the test score.
+
+You would rank them on test score separately again from lowest to to highest.
+
+And that obviously doesn't necessarily have have to link up.
+
+Right. So participant D uh has hasn't done the highest number of hours of practice.
+
+It's fifth rather than top. That's participant F.
+
+Um but it does have the highest score. Um and then you calculate patients are on those two sets of ranks.
+
+And why does rank help. So the outlier scenario is is kind of quite nice to look at in this case.
+
+Um so here we have uh a scatter plot for the raw scores.
+
+So hours of practice on the x axis, test scores on the y axis.
+
+Um, and we have a line of best fit that goes like this because we have this one participant,
+
+participant f that practised way more than everybody else.
+
+Everybody else practised somewhere between 1 and 10 hours. And participant F practised 60 hours.
+
+So it is a clear outlier. Um, if you were to calculate Pearson's r, you would get 0.49, um, for, for these data.
+
+Um. Now you can see that, that Spearman's rho is influenced, influenced by um, this one outlier to a lot lesser extent.
+
+So we have the rank of practice hours on one on the x axis and the rank of test score on the y axis.
+
+And each participant, um, you know, has a rank for both, right.
+
+So if we go back, Woo hoo! Participant E has one hour of practice and scored one participant.
+
+Um, what was it? Participant A is is over here, etcetera, etcetera.
+
+Participant F is, um, over here.
+
+They had a very high number of their, the highest number of, of practice hours.
+
+Um, but they did not have the highest number of, they didn't have the highest rank in terms of test score.
+
+So you can see that by using the rankings, um,
+
+you can kind of deal with that extreme value of 60 because it translates into a rank that is, is kind of much more sensible.
+
+Um, if you were to calculate Spearman's royal dish, you would get a kind of a strong correlation,
+
+strong positive correlation, and a line of best fit that is much closer to where it should be.
+
+Um, just to keep in mind that so for Spearman's row to be an accurate representation of a relationship between two variables,
+
+the relationship needs to be monotonic. So that is not the same as linear, but it doesn't deal with curvilinear relationships.
+
+Okay, so or at least not with all of them I should say.
+
+So if we have data that, um, kind of very much follows a straight line pattern, then Pearson's r and Spearman's rho would, would, would, you know,
+
+the coefficients would agree if, um, the relationship is curved,
+
+but it only goes in one direction in that it is either all or it's always rising or it's always falling.
+
+Um, then you would you would get a smaller Pearson's r.
+
+It would not be a true representation of that relationship. But Spearman's road would still be one right, because it is only moving in one direction.
+
+Um, if you have a U-shaped situation, you both are zero because the relationship does not consistently rise or fall.
+
+Now, I'm not necessarily saying that you should use Spearman's rho in when there is,
+
+um, when you have a curvilinear relationship, there is other things. There's better ways to deal with that.
+
+But what I am trying to illustrate here is how monotonic and linear are, how they are similar and how they are different.
+
+Okay, so Spearman's rho um is appropriate where there is a monotonic relationship.
+
+So where it either goes always up or it always goes down. So when would we use Pearson's r and when would we use Spearman's rho.
+
+So or what are the what what what are the differences and what are the similarities?
+
+So payments are is calculated using the raw scores whereas Spearman's row uses the ranks of those scores.
+
+Um Pearson's r measures a straight line linear relationship.
+
+For Spearman's row it needs to be, um, kind of a consistently rising or falling or monotonic relationship.
+
+Um, Pearson's r can be used if both variables are on the interval or ratio level.
+
+Um but Spearman's rho can be used. Um also if, if the one, one or both of the variables are ordinal.
+
+So at the ordinal level, Pearson's r is quite susceptible to outliers.
+
+So they can have a large influence. And Spearman's row is much less influenced by outliers.
+
+Now to be able to, to kind of draw valid inferences from the test.
+
+Um, we need to look at what, uh, what kind of assumptions need to be met for the p value to be to,
+
+to be accurate, um, or be an accurate representation.
+
+So, so we looked at, uh, Pearson's r we looked at what the observations need to be independent.
+
+Um, plus then the data need to come from a bivariate normal distribution.
+
+So linearity equal spread and normality for Spearman's rho.
+
+The observations still need to be independent and there needs to be a monotonic relationship.
+
+But um it the data do not need to come from a bivariate normal distribution.
+
+This is um, so that is why Spearman's rho is called a non-parametric equivalent of patients.
+
+Ah. It doesn't make any kind of assumptions about the data generation process so or the data that it is derived from.
+
+So how does Spearman's rho um perform in these different scenarios that we looked at earlier.
+
+So here we have our skew and funnel scenarios.
+
+So in if the data come from a bivariate, uh, normal distribution and we have a kind of, uh, the Pearson's scenario here at the top with,
+
+with the grey bars and the Spearman, if we were to calculate Spearman's rho, um,
+
+we have those, uh, at the bottom three of the, of the, of the graph with the blue bars.
+
+Um, so again we are looking to at to what extent our type one error rate is controlled in these different scenarios.
+
+Now for if the data comes from a bivariate normal distribution, there isn't much of a difference.
+
+Fine. If there is a.
+
+If we were working with skewed data, we saw that Pearson's are is quite robust against that.
+
+So it tolerates quite severe violations of that.
+
+So our error type on error in terms of our type one error rate that is.
+
+So our type on error rate is actually kind of similar both for Spearman's rho and Pearson's Pearson's r and Spearman's rho.
+
+In that scenario earlier we saw that if our data, um, have this funnel shaped pattern in terms of spread,
+
+then, um, we saw that the type one error rate for patients R is considerably higher.
+
+So that's all. It's almost 12%. Um, if we use those same data.
+
+But to calculate Spearman's row, uh, it does a much better job of controlling our type one error rate.
+
+It's not perfect because it's 6.2 in these simulations, but it is much better.
+
+It's half um, of of that of the error rate that we would get from Pearson's r.
+
+Okay. So it is uh, it does a much better job at dealing with that, but it isn't perfect.
+
+What about our outlier scenario. So again here we have the bivariate normal situation.
+
+Um, similar kind of uh, in both Pearson's r and Spearman's rho.
+
+Um, deal equally well with that unsurprisingly. Um, so but as we saw when we have outliers in our data, um,
+
+The type one error rates when you use Pearson's R could go up very substantially here in this particular scenario to almost 22%.
+
+So almost in fifth of the cases we would be detecting a false positives are wrongly concluding that we need to reject the null hypothesis that
+
+wrongly concluding that there is a significant correlation or a significant association between these two variables when really there isn't.
+
+Um, again, Spearman's rho does a much better job at dealing with that.
+
+Um, but the type one error rate nevertheless is slightly inflated, so it's 6.1%, but instead of 20 almost 22%.
+
+Okay. So it does a much better job. But it's not perfect.
+
+So when should you use Spearman's rho. If your data are ordinal you should use Spearman's rho.
+
+Um, if the scatterplot shows outliers that you can't justify removing you should use
+
+Spearman's row if the relationship is curved but consistently rising or falling,
+
+so not in the case of a U-shaped or an inverted U-shaped scenario, but if there is a slight curve to it, you could use Spearman's rho um.
+
+But it's important to remember that the observations still need to be independent.
+
+You. It can't describe a U-shaped relationship or an inverted U-shape a relationship, and it only partly helps when the spread of Y changes across X.
+
+Okay, so when there is heteroscedasticity does a better job of controlling the type one error rate.
+
+But it isn't perfect. Okay.
+
+So what are other issues that you need to be aware of when, um, doing correlation analysis?
+
+One um, thing to be aware of, uh, seems quite basic, and maybe it's surprising that we only talk about it now, but it is.
+
+It's easy to overlook. So a correlation can only be computed for participants who contribute the data point on both variables.
+
+Right. So if we we have an example here. So with a data table with here it's called case.
+
+This could also be participants. So we have uh participants here for each.
+
+And each participant has a score on reading ability on IQ,
+
+on how much they read at home and on how much they want, how many minutes, for instance, they watch TV at home.
+
+And you can see that each participant has a score for each of these variables.
+
+And that allows us to create a scatterplot that shows the whole sample.
+
+If one of let's say participant four was uh, let's say they were, this child was um, ill.
+
+Um, so I was not in school when the IQ test was administered.
+
+Said they would not have have a score here instead of 100. It would be empty then.
+
+Um, that participant would not. I wouldn't see it in the scatterplot.
+
+And that participant also would not be included in the um calculation for the correlation coefficient.
+
+So um, that is what is called missing data.
+
+And those participants will be automatically excluded from scatterplot and from the correlation analysis.
+
+And the issue is that you may think that you are calculating a correlation based on a large sample.
+
+Um, but this is not the case if you have missing data. So this will show up in the degrees of freedom part of the output.
+
+So for Pearson's r the degrees of freedom is uh calculated as n minus two.
+
+So the sample size minus two. If you have missing data that will not match with your original sample size.
+
+So, um, that is that is an important thing to, to,
+
+to kind of be aware of and it is relevant to check that whether you have any missing data and see why that is the case if you do.
+
+Um, and if you have a missing data, it of course, it depends on how many data points are missing as to what to do next.
+
+The first step is to be aware whether you do have any missing data,
+
+and to be aware of what the sample size is that you can use for your correlation analysis.
+
+Now, another issue that, um, you need to be aware of when it comes to correlation analysis is what is referred to as range restrictions.
+
+So the sample used may not represent the true variation in the two variables present in the population.
+
+So what do we mean by that? Um, so let's say we have two variables IQ on the x axis and exam performance on the y axis.
+
+Well let's say um, you know, you've all just done your, your, your a level.
+
+So, uh, and let's say we expect a positive correlation between IQ and A-level results.
+
+So the more intelligent you are, the higher your A-level score.
+
+You know, it's just an example. Um if so.
+
+So we've we've we think that these two things are correlated across the whole population and that we maybe would see a correlation of 0.69.
+
+So it's quite a strong correlation. Um, if we were to look at, um, the whole population, but if we, um, you know, asked if we tested this in,
+
+uh, only university students, then the correlation is likely to be much smaller.
+
+And that is because we're only sampling from one part of the population.
+
+People who go to university are more likely to have a higher intelligence.
+
+So we would be kind of sampling from this side of the distribution.
+
+Um, but as you can see here, there is a lot of missing data on this side of the distribution.
+
+So if we were to calculate the correlation coefficient for this data it would be much smaller.
+
+So depending on your sample you might conclude either that the correlation is 0.27
+
+which isn't that strong um or 0.69 which is really quite a strong correlation.
+
+And the difference being that here, um, in the example of when you're only sampling from university students,
+
+you are sampling from a restricted section of the population.
+
+So there is, there is, yeah, there is. The correlation will be be smaller or it could even be different of course.
+
+So that is something to be aware of as well. And it is important that you plot your variables, um, plot the whole scale of your variables basically.
+
+So from, from kind of the beginning of a scale to, to, to the end and not just where your data points are,
+
+because this will illustrate very clearly that here you have a big data gap.
+
+A different kind of, uh,
+
+scenario when it comes to range restrictions is that if the range of one variable is unusually large and you end up with two very distinct clusters.
+
+So this is an example of the confidence that people have in maths and their, uh, let's say their part one statistics, uh, exam results.
+
+You can see two clusters of, of data points, one up here.
+
+Um, so people are quite confident in, in maths also do quite well in the statistics exam.
+
+Whereas people who are less confident in maths do less well. This is completely fictional data by the way.
+
+Um, I think I should probably include a different example. It's not very nice example, but it's only an example.
+
+Um, so if you have two really separate clusters, it is sometimes better to create a, to create a new variable.
+
+So you would and you would look in each of these groups separately at a relationship between these two things.
+
+This also happens quite a bit when you are, uh, investigating, uh, let's say differences in between typically and atypically developing children.
+
+By that I mean people, children who might may have a diagnosis.
+
+So if we compare children, uh, typically developing children, so typical readers with children with dyslexia.
+
+So they have a diagnosis of dyslexia. So they have a clear, um, problem with, with they found it hard to learn to read.
+
+And we are comparing dose to groups of children. We might um, we might end up with this scenario where we have two clusters of data points,
+
+and it is better to look at if we want to see the relationship between two things.
+
+Let's say, um, you know, uh, performance on a memory task or something.
+
+And, and, um, something else in those two groups that we kind of look at the correlations in each group separately.
+
+Okay. Finally, so far we have looked at, um, kind of a correlation between two variables.
+
+But what if you're interested in the association or correlation between more than two variables.
+
+So if you are interested in, uh, the in, in kind of how well somebody does their jobs and job performance,
+
+you might be interested in to see how these different, um, aspects contribute to that.
+
+So let's say our Motivation, IQ and their social support network might all contribute to how well they do in their job,
+
+or they might all be associated with how well they do in their job.
+
+Um, you might you might also be interested in the relationships between these other variables, right.
+
+So you might be interested in the extent to which motivation and social support are related,
+
+or the extent to which IQ and social support or IQ and motivation are related.
+
+So instead of being interested in like one correlation, you're all of a sudden interested in six correlations, which is quite different.
+
+So we could of course, um, calculate the correlate all of these correlations.
+
+Um, and if you were to report those and you might also have seen these in papers, you would do that like this.
+
+So you would kind of create a correlation matrix.
+
+So this is um the this table follows the APA conventions of how you are supposed to be reporting a correlation matrix.
+
+So the APA stands for the Association of um, the American Psychology Association, as you say.
+
+And we as a field, we use their guidance in how to, um, write research reports, empirical reports and how to report,
+
+um, how to refer to sources, but also how to refer, how to how to report statistics, including correlation results.
+
+So table would be laid out like this. Um, so along the top here and along this side here we have our different um variables.
+
+So we have job performance motivation IQ and social support.
+
+Um here along the top. I haven't written that out again because then the table would get too wide for the page.
+
+But this one matches up with this one here.
+
+So performance and performance and motivation and motivation and IQ, IQ and social support and social support.
+
+Now you can create this matrix here where we're not interested in the relationship between performance and performance.
+
+Right. That would just be one.
+
+Um, but we are interested in the correlation between performance and motivation and performance and IQ and performance and social support.
+
+Similarly between motivation and IQ and motivation and social support.
+
+And finally, um, between the between IQ and social support.
+
+So here we have 123456. These six correlations that we talked about here are all reported in this table.
+
+Now we we we would only fill out one half of this table kind of below the diagonal or above, but not usually both,
+
+because the correlation between job performance and motivation here would be um, is the same as the correlation between motivation and performance.
+
+So this would be 0.64 as well. We wouldn't represent that twice.
+
+That is redundant. That is confusing. So we would only fill out one half of, of the um matrix and usually the bottom half.
+
+Now here on the side, um, you can see that I've added the means and standard deviation.
+
+So this is not absolutely necessary. But it is um it is useful for the reader.
+
+So I've reported the means and the standard deviations for each of these variables here.
+
+Okay. So if we have many Correlations, then we have a we need to be careful with our type one error rate again,
+
+because if we calculate, um, many correlations then we also have more false positives.
+
+So if we have a correlation matrix that tests every pair of variables,
+
+and then the number of correlations that we could potentially calculate goes up very quickly.
+
+So you know, if we have three variables we could test three correlations.
+
+If we have five variables we could test ten correlations and and so forth.
+
+And each test has a 5% chance of a false positive when there is no real relationship.
+
+Right. Um, so across many tests that adds up.
+
+So the expected false positive or type one error rate goes up, um, very substantially.
+
+And so if you had five variables, you would have a 40% chance of finding at least one false positive.
+
+So that is that is a problem. Um, so.
+
+What do we do about that?
+
+First of all, it is important that you decide in advance which correlations, uh, you want to test your hypotheses and you would only test dose.
+
+So you make an informed decision rather than looking at everything. You make an informed decision about which correlations you wanted to test because.
+
+Because they are relevant to your hypotheses. The second thing you can do is adjust the threshold for the number of tests.
+
+So for example sample you can use what is called a Bonferroni adjustment.
+
+Um, and how that works is that, um, you divide the alpha levels of 0.05 by the number of tests.
+
+So each variable is correlated with three other variables.
+
+Then we would, uh, divide a point of five divided by three.
+
+So we would only conclude that something is significant if it is smaller than 0.016 rather than 0.05.
+
+Another thing that is important to do is report all the tests that you run,
+
+not just the significant ones, because you might give the impression that you only did those.
+
+So you need to report all the tests that you run, that you ran.
+
+Um, and finally, it is it is warranted to treat unexpected, significant correlations in a large, large matrix with caution.
+
+Okay. So we talked about assumptions that underlie Pearson's r some to do with how the data were collected.
+
+Variables need to be continuous and observations need to be independent. Other assumptions related to to the shape of the data.
+
+So we talked about bivariate normal distribution and how that shows up in linearity,
+
+homogeneity and normality, and how we check these things in scatter plots and histograms and QQ plots.
+
+Then we talked about issues that you need to be aware of.
+
+Um, so be aware of missing data and check the scatter plot for the influence of outliers and possible range restrictions.
+
+We talked about Spearman's rho as an alternative to Pearson's r.
+
+And finally we talked about inter correlation. So a correlation matrix can show you multiple correlations between variables at once.
+
+But beware of the multiple comparison problem.
+
+So if we do lots of tests using the kind of data from uh one sample, we increase our type one error rate.
+
+And we can avoid that by using the Bonferroni adjustment.
+
+That's it for now.
+

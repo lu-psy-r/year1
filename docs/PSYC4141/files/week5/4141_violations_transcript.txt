@@ -1,0 +1,327 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Okay, so we've looked at what it means for a distribution to or from data to come from a bivariate normal distribution.
+
+Um, but what happens if that is not the case?
+
+That is what I want to want to look at next. And I want to do that by looking at um, some visualisations.
+
+So on this slide you see four scatter plots.
+
+And in the top left here we have a scatter plot as we have from data that come from a bivariate normal distribution.
+
+Here we have our lovely ellipse shape with kind of a. The density of observations is higher in the middle than at the edges.
+
+And you could also tell from this scatter plot that it's a positive correlation.
+
+because when x goes up, y also goes up. Um, okay.
+
+So that is kind of the, the scenario that, um, this is what it looks like when the data comes from a bivariate normal distribution.
+
+Then we have three additional scatter plots, each showing kind of, um, violation of that of that assumption.
+
+Um, so here we have a scatter plot over whether relationship is not linear.
+
+In the bottom left, we have a relationship where we have this fan shaped pattern of, oh, so this is heteroscedasticity, so unequal spread.
+
+Um, and then here we have a situation of skewed data.
+
+Now I would like to look at each of these in turn to understand better what, um,
+
+what what what what this means for a kind of linearity, homosexuality and normality as we are able to check them.
+
+Okay, so let's first look at the bivariate normal scenario.
+
+Um, so in this on the on this on the screen.
+
+Now you can kind of see that same pattern of dots, grey dots kind of in the background.
+
+And on top of that we've um fitted a line of, of best fit.
+
+Um, we have um, we have taken a kind of slices through these, through these points where there is a yellow bar.
+
+And if we look at all the observation in this yellow bar and we create, um, and look at the distribution of those, that is this blue shape.
+
+So you're kind of looking at these observations that are in yellow here.
+
+Orange kind of. And when if you were to create some sort of histogram of those this is not a histogram.
+
+It's a density plot but it's the same principle. And then this is what the distribution looks like.
+
+And we've done that for three slices across this sample of data points.
+
+Okay. So bivariate normal normal distribution.
+
+We have a nice elliptical shape. Um and we have these um that, that we have been looking at.
+
+If we look at these different slices. Um so we can see that the means.
+
+So this is this diamond here shows, uh, the mean for the observations of this slice, the bit in yellow.
+
+You can see that these fall on a straight line, Right.
+
+So linearity principle.
+
+These look like a kind of, um. The linearity assumption has been met.
+
+Now, if we look at, um, the city, the spread of Y is kind of similar for every slice, right?
+
+So we can we can see that here in the distribution of the observations from this slice.
+
+If we can, you can almost kind of tilt your head and then uh, well probably that way actually.
+
+Um, and you can see the distribution in blue of the observations in yellow here.
+
+So the spread of Y is similar in each, um, slice.
+
+Right. So the spread is about this wide here and here and here.
+
+And you can also see that's why is kind of bell shaped for each slice.
+
+Sorry, this is a bell shape and this is a bell shape. And this is a bell shape.
+
+So that is the thing that we that that is what these things look like when the data come from a bivariate normal distribution.
+
+Okay. So what do things look like when the linearity assumption is violated.
+
+This means that the slice means. So these diamonds leave the straight line a straight line is here right.
+
+So if you fit a line of best fit through these data points that are in the background,
+
+right, you fit a line of straight fit a line of best fit through those.
+
+This is your straight line. The means are not on that line.
+
+Um, if we were to look at the the spread and the shape of the distribution of the slices.
+
+They actually look all right. You know, there's the spreads and the kind of going from the maximum to the minimum.
+
+The minimum of the maximum over here and over here and over here, that that spread is similar across the three slices.
+
+So that is okay in this scenario. And also these shapes look roughly bell shaped.
+
+So again it. Normality is of of y at each value of x is not the problem.
+
+The problem is that um the slice means leave the straight line.
+
+So uh, if you were to use Pearson's r, it would kind of mis describe this relationship because it is not linear.
+
+Okay. So then let's look at an example of unequal spread.
+
+So again we have our observations the grey dots in the background.
+
+Then we have taken slices through those kind of three points of, of x.
+
+And you can see that the spread and so kind of the width of this blue distribution here at
+
+this point for this for the most leftward slice is much narrower than the one in the middle.
+
+And, and the one on the right, the one on the right, the spread is really wide.
+
+So this is a scenario. We have a fan shaped pattern in the scatter plot.
+
+And what that means is that the spread is narrower on one side and wider on the other side.
+
+So this this this data are not homeostatic.
+
+And that is a problem. Um. When we look at linearity, that Seems to be fine, right?
+
+The means fall on the straight line. Um, but yeah, the city is is the problem.
+
+Okay, so what does this look like with skewed data?
+
+So we looked at reaction time data before. And um, this is an example of web kind of why.
+
+Did you know if you have reaction time for instance, on this variable, on this axis, this is um, yeah,
+
+this is what that would look like in, in a scatter plot if actually if both variables are highly skewed.
+
+So linearity is fine. The sample the slice means sit on a straight line.
+
+That's not the problem. The spread also looks similar across these three different slices.
+
+Right. And it's going to similarly this spread is similarly white hair as it is hair as it is hair.
+
+This is not an exact site, right? Because you can see that there's a longer tail here, here.
+
+But that this this is close enough. So linearity and homosexuality are fine.
+
+But as you can see, these are not normal distributions. Right?
+
+They are heavily skewed. So in this case um not the normality assumption isn't met.
+
+Okay. So here you have all four in on one slide. Uh, you know, just as a, as an illustration.
+
+And really you can tell a lot right from a scatter plot, which is why we keep telling you it's really important to make a scatterplot of your data.
+
+Okay. So why is any of this a problem? Um, I would like to kind of go back to, to that question, as Rob talked about in his earlier lecture.
+
+Significance testing and hypothesis testing is about checking how surprised you should be to find a correlation of the site that you did.
+
+Is it surprising enough to reject the null hypothesis? Um.
+
+So, um, we know what, uh, what no relationship data look like, right?
+
+And how R varies from sample to sample. That is the sampling distribution of R, and that is um, yeah.
+
+That's that's the model that we use. So with that bivariate normality model and a true correlation of zero.
+
+Mathematicians can work out exactly how R will vary across samples.
+
+So if our data look very different from the model the p value may not be trustworthy.
+
+Right. Um.
+
+And what this looks like is this.
+
+If we go back to our scenarios.
+
+So we have our bivariate scenario here, the skewed data here and kind of the funnel shaped here in the funnel is actually in the other direction now.
+
+But that's fine. So here we have one variable a histogram for let's say IQ.
+
+And we have another variable height here. Um and these things are not related.
+
+Okay. We know because this is how I've simulated the data. And also we know that this is actually true in real life.
+
+IQ score and height are not related. It's not the case that taller people are more intelligent okay.
+
+Or shorter people are more intelligent. Um, here we have the scatter plot.
+
+So IQ score on one axis. Height on the other axis.
+
+And as we can see it is a big cloud kind of in the middle which suggests there is no correlation.
+
+Both variables are normally distributed. We can can kind of check that in our histogram.
+
+And this is what the scatter plot looks like. So this is our bivariate normal situation of two unrelated variables.
+
+So if we were to calculate a Pearson's r here we would get something that's close to zero and not significant.
+
+Okay. So now let's look at that same situation.
+
+So we are looking at two variables that are not related a null hypothesis right.
+
+Um but in a situation where both variables are skewed.
+
+So let's look at a variable reaction time variables from reaction time on some sort of task and hours of social media use per week.
+
+Both are heavily skewed, as you can see in the histograms here.
+
+And this is what this looks like in the scatter plot. We have this collection of data points all on one side for the funnel um shaped situation.
+
+Um, this is what this is what it looks like, right? We have our histograms of hours of practice.
+
+Let's a scenario where we have, uh, you know, people practice something, um, some sort of task for a number of hours per week.
+
+Um, and then they get better at it so they have fewer timing errors.
+
+Um, and this, this is what the scatter plot looks like. So, um, for people who are have practice, practice less.
+
+There is a lot of variation in, in timing errors.
+
+Whereas for people who have practised a lot, they get a lot more consistent.
+
+So that's quite a realistic, um, situation of, of kind of people practising a particular task.
+
+And if you practice more, you get better at it and your your timing gets more consistent.
+
+So here we have a fan shaped situation. Okay.
+
+So now we look at um our type one error rates.
+
+So you might you may remember from last week we want we want to make sure that we're not wrong too often.
+
+So we say okay, um, we're going to be wrong sometimes, you know, we're going to find a correlation that is just random just by chance.
+
+But we are going to, um, as a field in psychology,
+
+we have agreed that we don't want to be wrong too often, and we've basically set that level at five 5%.
+
+Right. So that is um, when there is no relationship between two variables.
+
+And the data comes from a bivariate normal, bivariate normal distribution,
+
+the number of times that we are going to find significant correlation M will be in 5% of the samples.
+
+So P will be smaller than 0.05 in 5 percent of the samples.
+
+If you have a situation, um, where the data come from, a bivariate normal distribution and we as a field, we've decided that that that is acceptable.
+
+Now. When we have data that do not meet that bivariate normal, um, Distribution do not come from a bivariate normal distribution.
+
+So it violates one of these. Uh, if it violates that assumption, then it messes up a type one error rate.
+
+It increases our one type one error rate to different extents.
+
+So in the middle here we have kind of the. The number of times that we would find a significant correlation um, with our skewed data.
+
+And um in the red areas here.
+
+Um, it is it illustrates the situation that um is basically a type one error, right?
+
+So we find, we conclude that there is a significant correlation when really there isn't.
+
+So a false positive. And as you can see in the bivariate normal distribution that is controlled at 5%.
+
+And if we if our data are skewed we can if you can see that here there is just the bars are a little higher than the red line.
+
+But on the other side they're a little lower. So on average, even with highly skewed data, Pearson's R is pretty robust.
+
+Um, to that too. So even though that that, that, um assumption has been violated, it is really quite robust.
+
+And our error rate remains at about 5% on average.
+
+That is very different for the funnel shaped scenario. So if our data are not bivariate, do not come from a bivariate normal distribution.
+
+Instead we have a funnel shape like like this.
+
+Um, then the type one error rate really goes up.
+
+So instead of us being wrong 5% of the time.
+
+If there is no safety, we are wrong about almost 12% of the time.
+
+So you can see that here these grey bars are higher than the red line.
+
+If I zoom in on these things, this is what it looks like. So this is our bivariate normal situation.
+
+This is the skew the situation where our data are skewed.
+
+And this is the scenario where the data are not homeostatic or they are heteroscedasticity.
+
+Right. The funnel shaped pattern. And you can see in the bivariate normal distribution R error rate R type one error rate is nicely controlled.
+
+And we are If there is no relationship between the two variables.
+
+That's our null hypothesis. We we will only be wrong.
+
+We will only wrongly conclude that there is in 5% of the samples.
+
+So just by chance. And that is what as a field, we've agreed is acceptable.
+
+If you use Pearson's r to calculate correlation coefficient between two highly skewed variables,
+
+then it's not perfect because you can see that the the grey bars kind of do not fit into the red area on this side,
+
+but they that average out to to what's happening on the other side.
+
+So on average we are we're still controlling our type one error rate.
+
+And we're not wrong too often even if the data are highly skewed.
+
+What that means is that, um, Pearson's r is quite robust against violations of um, yeah, the kind of that not normality assumption.
+
+But if the, um, data come from, uh, uh, come from a distribution where we have this, uh, heteroscedasticity.
+
+So this funnel shaped pattern in the spread, um, that really messes up our type one error rate.
+
+As you can see on both sides, we we these grey bars go well above the red line,
+
+which means that instead of our error rate being 5%, our error rate is almost 12%.
+
+So it is much more likely that we conclude that there is a significant correlation between two variables in that,
+
+um, in that case, when really there isn't. So we make a type one error rate.
+
+We have a false positive.
+

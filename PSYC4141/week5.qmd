@@ -1,0 +1,379 @@
+---
+title: 5. Week 5 - More on correlation - Assumptions, issues, an alternative and intercorrelation
+subtitle: Written by Margriet Groen
+order: 5 # ensure this is one more than the previous script
+---
+
+```{r}
+#| eval: true
+#| echo: false
+#| warning: false
+#| message: false
+
+# -- get libraries
+library(easystats)
+library(here)
+library(tidyverse)
+
+```
+
+::: {.callout-note title="Overview"}
+This week we focus on two strands of learning:
+
+A.  More on correlation analysis
+B.  Research project: Refine research question, decide on measures, pre-register hypothesis
+
+Building on last week’s work on how hypothesis testing and significance testing, **this week** we will continue to look at correlation as a measure of association between two numerical variables. We will review assumptions associated with Pearson's r, discuss some issues important to be aware of when interpreting correlation results and finally, we'll talk about intercorrelation.
+
+We will also start the group project in which you will investigate the question: *Is mind wandering related to screen time?*
+
+The materials we have prepared to support your learning are arranged in four parts:
+
+-   Lectures
+-   Reading
+-   Pre-lab activities
+-   Lab activities
+
+You can navigate to each in the side bar on the right
+:::
+
+<!-- Note: I think it is helpful to have a list of the different sections in a week for cross-referencing. I don't think it helps readability it this is visible to the students (hence I've commented them out) as the outline in the sidebar on the right already provides this info. -->
+
+<!-- - @sec-4141-w5-lectures: Watch these before your lab session -->
+
+<!-- - @sec-4141-w5-lectures-theory:  -->
+
+<!-- - @sec-4141-w5-lectures-report-correlation: Hypothesis testing and correlation -->
+
+<!-- - @sec-4141-w5-lectures-project: An overview of the project -->
+
+<!-- - @sec-4141-w5-reading: Recommended readings -->
+
+<!-- - @sec-4141-w5-prelab-activities: Activities to do before you attend your lab session -->
+
+<!-- - @sec-4141-w5-lab-activities: Activities you do during your lab session -->
+
+## Lectures {#sec-4141-w5-lectures}
+
+\newline
+
+::: {.callout-important}
+**Please watch the lecture material, complete the essential reading and then the pre-lab activities before attending your lab.** As a reminder, the lectures and pre-labs introduce the concepts and give you some initial practice, and the lab gives you the opportunity to apply these skills in-person with our support.
+:::
+
+::: {.callout-tip title="Questions?"}
+Make a note of questions as you work through the material. These might be answered later in the recordings, or in your lab. Otherwise, please bring them to the live online Q&A session on Friday or post them on the [Q&A forum on Moodle](https://modules.lancaster.ac.uk/mod/forum/view.php?id=2918081).
+:::
+
+### Section A: More on correlation  {#sec-4141-w5-lectures-theory}
+
+You can watch the lecture for the video using the video playback windows shown next. The lecture is split into different sections. You can download the slides for all sections together here: [More on correlation: slides](files/week5/4141_moreoncorrelation_slides.pdf){download="4141_moreoncorrelation_slides.pdf"}.
+
+1.  **Theory -- Assumptions**(~35 minutes) 
+Watch this part before you complete the reading and the pre-lab activities. The video has captions, in case you find that helpful. You can download the slides and a transcript from the links below the video.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=b601d6f4-e545-43d3-a4a2-b4f6008fb65a&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_correlation_assumptions"></iframe>
+</div>
+```
+
+\newline
+
+[Assumptions: transcript](files/week5/4141_assumptions_transcript.txt){download="4141_assumptions_transcript.txt"}.
+
+2.  **Theory -- What happens if assumptions are violated**(~20 minutes) 
+You can download the slides and a transcript from the links below the video.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=376c1da8-0ca7-4046-91b1-b4f6009d85ba&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_correlation_what_happens"></iframe>
+</div>
+```
+
+\newline
+
+[What happens when assumptions are violated: transcript](files/week5/4141_violations_transcript.txt){download="4141_violations_transcript.txt"}.
+
+3.  **Theory -- Issues**(~35 minutes) 
+You can download the slides and a transcript from the links below the video.
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=e45d8b83-5b6a-4ec0-b5ef-b4f600a5938e&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&captions=false&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_correlation_issues"></iframe>
+</div>
+```
+
+\newline
+
+[Issues: transcript](files/week5/4141_issues_transcript.txt){download="4141_issues_transcript.txt"}.
+
+<!-- **2. How to report a correlation analysis** (~ minutes) -->
+
+<!-- How to apply the hypothesis testing framework to correlation and report the results of a correlation analysis following APA conventions. -->
+
+<!-- [How to report correlation: slides](files/week4/4141_howto_reportcorrelation_slides.pdf){download="4141_howto_reportcorrelation_slides.pdf"}. -->
+
+<!-- [How to report correlation: transcript](files/week4/4141_howto_reportcorrelation_transcript.txt){download="4141_4141_howto_reportcorrelation_transcript.txt"}. -->
+
+<!-- ::: {.callout-note title="APA Style"} -->
+<!-- APA stands for the American Psychological Association. APA style provides shared conventions and guidelines for how to write a research report in psychology. This includes how to report statistical results clearly and consistently. You can read about the APA style (7th edition) [here](https://apastyle.apa.org){target="_blank" rel="noopener"}. A useful summary on reporting numbers and statists in APA style can be found [here](files/week3/apa_report_stats.pdf){download="apa_numbers-statistics-guide.pdf"}). -->
+<!-- ::: -->
+
+::: {.callout-tip title="Take a break!"}
+Before continuing, we recommend you take a **15-minute break away from your computer**. Remember to note down any questions to bring to the Q&A, lab or discussion forum whilst you’re watching the lectures.
+:::
+
+<!-- ### Section B: An overview of the project {#sec-4141-w4-lectures-project} -->
+
+<!-- Section B has one part: -->
+
+<!-- **1. The project: An overview** (~ minutes) -->
+
+<!-- An overview of the project you will carry out and the research report you will write. -->
+
+<!-- ```{=html} -->
+
+<!-- ``` -->
+
+<!-- \newline -->
+
+<!-- [Project overview - slides](files/week4/4141_wk4_project_slides.pdf){download="4141_wk4_project_slides.pdf"}. -->
+
+<!-- [Project overview - transcript](files/week4/4141_wk4_project_transcript.txt){download="4141_wk4_project_transcript.txt"}. -->
+
+## Reading {#sec-4141-w5-reading}
+
+::: {.callout-tip title="Easy access to readings"}
+All reading is accessible via the library. You can go to Moodle -\> Library Resources -\> Resource List or you can follow [**this link**](https://lancaster.alma.exlibrisgroup.com/leganto/nui/lists/93496942590001221). Readings have one of the following tags:
+
+-   **Essential**: We expect you to be familiar with these reading. You will be assessed on this.
+-   **Recommended**: We highly recommend these readings. They often provide a different perspective, or explain things in a different way.
+-   **Optional**: Further readings for those interested.
+
+The reading list is divided into multiple sections:
+
+-   **Reading associated with statistics**: this contains links to readings useful for the development of statistical concepts and skills. The main textbook *Fundamental statistics for the behavioral sciences* by Howell (Essential) lives here.
+-   **Reading associated with psychological research principles and design**: this contains links to readings that provide a good basis for foundational knowledge around research design.
+-   **Reading associated with Open Science principles and practices**: this contains links to key literature on the Open Science movement.
+-   **Week by week**: these contain links to key reading for that week that are not listed on any of the more general lists above.
+:::
+
+For **week 5**, the reading is:
+
+-   Howell, D. C. (2017). Fundamental statistics for the behavioral sciences (9th ed.). Cengage Learning. Chapter 9. **Essential** 
+- Focus on sections 9.10 and 9.11. These sections support the concepts introduced in the pre-recorded lecture on applying the hypothesis testing framework to correlation and reporting the results correctly.
+
+## Pre-lab activities {#sec-4141-w5-prelab-activities}
+
+No pre-lab activities this week.
+
+## Lab activities {#sec-4141-w5-lab-activities}
+
+<!-- ::: callout-tip -->
+<!-- Information on the lab activities will follow soon. -->
+<!-- ::: -->
+
+### Lab activity 1: Assumptions of Correlation Analysis
+
+#### Question 1: Types of variables
+
+Correlation would be an appropriate form on analysis for researchers interested in the relationship between:
+
+a.  Dog (breed) and height (cm) of owner
+b.  Speed of swimming (mph) and area of tank (cm)
+c.  Number of cows sitting and rain fall (mm)
+d.  Total llama saliva (ml) expelled and gender of visitors
+e.  b and d
+f.  b and c
+
+#### Question 2: Spearman's *rho* vs. Pearson's *r*
+
+When would you use Spearman's rho analysis instead of Pearson's r?
+
+a.  When there are clear outliers in the data
+b.  When the data is not normally distributed
+c.  When the relationship between X and Y is curvilinear
+d.  a and b
+
+::: {.callout-tip}
+For Pearson's *r*, we hope the data look like a smooth, oval cloud: a **straight-line** relationship, **equal spread** of Y at every value of X, and a bell shape. We also watch for **outliers**: participants who don't fit the overall pattern.
+
+For each question below, look at the three plots (a histogram of X, a histogram of Y, and a scatterplot) and answer the questions. All the data are simulated for teaching.
+:::
+
+#### Question 3: Revision and exam marks
+
+Forty students reported how many hours per week they spent revising and then sat an exam.
+
+![](files/week5/fig1_outliers.png){fig-alt="Histogram of weekly revision hours, histogram of exam marks, and a scatterplot of exam mark against revision hours." width=100%}
+
+a. Look at the two histograms only. Does any student look unusual? Note anything you see.
+b. Now look at the scatterplot. Which students do not fit the overall pattern? Describe each one, giving their approximate revision hours and exam mark.
+c. Why can the scatterplot reveal something the histograms cannot?
+d. Before running any analysis, what should you check about these students? Give two possible explanations for their scores.
+e. If you calculated Pearson's *r* for all 40 students, and then again without these students, would *r* get higher, lower or stay the same? Explain your reasoning.
+
+#### Question 4: Arousal and task performance
+
+Sixty participants completed a memory task. Before the task, each was given a score for how aroused (alert and activated) they felt.
+
+![](files/week5/fig2_curved.png){fig-alt="Histogram of arousal scores, histogram of task performance, and a scatterplot of performance against arousal." width=100%}
+
+a. Describe the relationship between arousal and performance in words.
+b. Look at the histograms. Do they suggest any problem with using Pearson's *r*?
+c. Without calculating anything, would you expect Pearson's *r* to be strong and positive, strong and negative, or close to zero? Explain why.
+d. Which assumption is violated here? Would switching to Spearman's rho solve the problem? Why or why not?
+e. What does this example tell you about reporting a correlation coefficient without looking at the scatterplot?
+
+#### Question 5: Age and vocabulary
+
+Eighty children aged between 6 and 16 took a vocabulary test.
+
+![](files/week5/fig3_fan.png){fig-alt="Histogram of age, histogram of vocabulary size, and a scatterplot of vocabulary size against age." width=100%}
+
+a. Compare the spread of vocabulary scores for children aged about 7 to 8 with those aged about 13 to 15. Give approximate ranges for each group.
+b. Which assumption is violated? Name it and describe what is wrong in your own words.
+c. Could you have spotted this problem from the two histograms alone? Explain.
+d. Why might this problem affect the *p*-value and confidence interval for Pearson's *r*?
+e. The spread of vocabulary scores grows roughly in proportion to the average score. Suggest one thing you could try.
+
+#### Question 6: Reaction time and social media use
+
+Eighty participants completed a reaction-time task and reported how many hours per week they spend on social media. Figure 4a shows the raw data.
+
+![**Figure 4a.** Raw data.](files/week5/fig4a_skewed.png){fig-alt="Histogram of reaction time, histogram of social media hours per week, and a scatterplot of social media hours against reaction time." width=100%}
+
+a. Describe the shape of each histogram.
+b. Does the scatterplot look like an oval, bell-shaped cloud? Which assumption(s) appear to be violated?
+c. In the lecture simulations, what happened to the false-positive rate when variables were skewed but unrelated? What would you still want to check in the scatterplot?
+
+Figure 4b shows the same data after taking the natural log of both variables.
+
+![**Figure 4b.** The same data on a log scale.](files/week5/fig4b_logged.png){fig-alt="Histograms and a scatterplot of the same data after a log transformation." width=100%}
+
+d. What has changed? Has the transformation solved every problem?
+e. Give one advantage and one disadvantage of log-transforming the data.
+
+
+
+### Lab activity 2: Finish lab activities from previous weeks (Recap - skip if completed successfully last week)
+
+#### Background
+Over the past few weeks, we worked with some publicly available data from a research project on mind wandering. You can have a look at the questionnaire [here](files/week1/BMW-3_eng.pdf).
+
+If you did not successfully finish the lab activities for weeks 1, 2, 3, or 4 you may want to complete these first.
+
+You can log into the R server, open your project (the `.Rproj` file) and open the Quarto file (ending with `.qmd`) to continue to work through these.
+
+#### Aims of the activity
+Ensure you are familiar with reading in a `.csv`-file, creating a histogram and calculating summary statistics.
+
+#### Steps
+
+1. Login to the R-server
+2. Click on the R-project (the `Rproj`) file to open it
+3. In the Files tab (right bottom quadrant), navigate to the example script for that week's lab activities. This is the Quarto file (ending with `.qmd`). Click on it to open it.
+4. Complete any remaining activities
+
+### Lab activity 3: 
+
+#### Background
+
+#### Aims of the activity
+
+We are going to:
+
+1.  Download and organise your files
+2.  Setup the appropriate bits and pieces in RStudio
+3.  Read in the data
+4.  Check for missing data
+5.  Build scatterplots with `geom_point()`, and add a line of best fit using `geom_smooth()`
+6.  Remove outliers using `filter()`
+5.  Calculate and interpret Pearson's r using `correlation()`
+
+#### Step 1: Download the files
+
+To complete this lab activity you will need two files:
+
+1.  We'll work with an example script called `4141_wk3_lab.qmd`. This is a Quarto document.
+2.  We need a data file called `data_bmw3_subscales.csv`. This is a file that contains the responses of the participants in one of the studies reported on in the paper by Schubert et al. (2024). It is a file of the type `.csv`. This means that individual bits of data are separated by comma's. We'll often use `.csv` files.
+
+You can download the files here: [`4141_wk5_lab.zip`](files/week5/4141_wk5_lab.zip){download="4141_wk5_lab.zip"}. Usually they will be saved in your 'Downloads' folder.
+
+Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).
+
+Finally, open the example script by clicking on the file called `4141_wk3_lab.qmd` in the Files space on the R-server.
+
+::: callout-important
+## Watch the 'How to' videos
+
+If you haven't done so already, this is a good time to watch the 'How to' videos on how to:
+
+-   Use RStudio - [in this section](week1.qmd#sec-4141-w1-lectures-intro-how-r)
+-   Build a plot - [in this section](week1.qmd#sec-4141-w1-lectures-intro-how-r)
+-   Use `here()` - [in this section](week3.qmd#sec-4141-w3-lectures-correlation)
+-   Use `mutate()` - [in this section](week3.qmd#sec-4141-w3-lectures-correlation)
+-   Conduct and interpret correlation analysis - [in this section](week3.qmd#sec-4141-w3-lectures-correlation)
+:::
+
+#### Step 2: Setup the appropriate bits and pieces in RStudio
+
+Before we can do anything, we need tell R what packages we want to use. We use the function `library()` to do that. It is useful to have a section at the top of your script where you load all the relevant libraries.
+
+> Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'.In the code chunk, write code to load the libraries by using the `library()` function. We need the packages `here`, `tidyverse` and `easystats`. After you've written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk).
+
+::: {.callout-note title="Hint"}
+## Hint
+
+We need to load two packages (`here` and `tidyverse`) using the `library()` function. First, inside the code chunk, write `library()` and put `here` inside the brackets. On the next line in the code chunk, write `library()` and put `tidyverse` inside the brackets. On a third line in the code chunk, write `library()` and put `easystats` inide the brackets.
+:::
+
+#### Step 3: Read in the data
+
+::: {.callout-note title="Hint"}
+## Hint
+
+`dataframe <- read_csv(here("filepath to folder", "filename.extension))`
+
+Your code should include:
+
+dataframe: the name of the object you want to save the data in (such as `data_mw_subscales`) \<- : assignment arrow read_csv() : the `read_csv()` function here(): the \`here() function "filepath to folder": the folders that you need to point R to starting from your project root folder "filename.extention": the name of the datafile, including the extension
+:::
+
+> Action: Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') that is named `data_mw_subscales` in the Environment (top right quadrant).
+
+#### Step 4: Check for missing data
+
+#### Step 5: Build scatterplots
+
+Now we are ready to create a scatterplot to visualise the relationship between two of the variables. We are going to look at the relationship between 'unintentional mind wandering' and 'meta-awareness of mind wandering'
+
+The function we use for that (and for a lot of other plots you'll make for research methods and stats) is `ggplot()`. Inside the function we tell R which data to use and which variables to map onto the x-axis and the y-axis of the scatterplot.
+
+> Action: Insert a new code chunk and use `ggplot()` to tell R what data to plot and which variables tot use. The 'unintentional mind wandering' score is stored in the variable `BMW3_UN`; we'll put that variable on the x-axis. The 'meta-awareness of mind wandering' score is stored in the variable `BMW3_ME`; we'll put that variable on the y-axis. Then, add layers to plot the datapoints (use `geom_point()`) and the line of best fit (use `geom_smooth(method="lm", se=TRUE)`).
+
+::: {.callout-note title="Hint"}
+## Hint
+
+Use the function `ggplot()`. Start by writing `ggplot()` on the next line of the code chunk. Inside the `ggplot()` function, we need to tell R which data-frame (`data=`) and which variable to use (`mapping=aes(x= , y= ))`).
+
+Then, we need to tell R what type of plot we want. We do this by adding a `+` to the line on which you've written `ggplot()`, then on the next line you add a 'geometric object', in this case `geom_point()`.
+
+We also want to add a line of best fit. We do this by adding a `+` to the line on which you've written `geom_point()`, then on the next line you add another 'geometric object', in this case `geom_smooth()`. We want to specify what type of line of best fit, we do this by adding `method="lm", se=TRUE` inside the brackets of `geom_smooth()`.
+
+This will give you a basic scatterplot. Revisit the lab activity code from week 1 to remind yourself how to change any of the features (such as the colour, the background, add titles to the axes etc.).
+:::
+
+
+#### Step 6: Build qq-plots
+
+#### Step 7: Remove outliers using `filter()`
+
+#### Step 8: Calculate and interpret Pearson's r using `correlation()`
+
+
+
+#### Step 9: Calculate and interpret Spearman's rho using `correlation()`
+
+#### Step 10: Report the correlation analysis following APA conventions

@@ -85,7 +85,7 @@ The next step is to read in a data file. It is a file of the type `.csv`, so we'
 
 Your code should include:
 
-dataframe: the name of the object you want to save the data in (such as `data_mw_subscales`) \<- : assignment arrow read_csv() : the `read_csv()` function here(): the \`here() function "filepath to folder": the folders that you need to point R to starting from your project root folder "filename.extentions": the name of the datafile, including the extension
+dataframe: the name of the object you want to save the data in (such as `data_mw_subscales`) \<- : assignment arrow read_csv() : the `read_csv()` function here(): the \`here() function "filepath to folder": the folders that you need to point R to starting from your project root folder "filename.extention": the name of the datafile, including the extension
 :::
 
 > Action: Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') that is named `data_mw_subscales` in the Environment (top right quadrant).
