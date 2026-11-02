@@ -162,7 +162,8 @@ The reading list is divided into multiple sections:
 For **week 5**, the reading is:
 
 -   Howell, D. C. (2017). Fundamental statistics for the behavioral sciences (9th ed.). Cengage Learning. Chapter 9. **Essential** 
-- Focus on sections 9.10 and 9.11. These sections support the concepts introduced in the pre-recorded lecture on applying the hypothesis testing framework to correlation and reporting the results correctly.
+    - Focus on sections 9.5, 9.6, 9.7 and 9.12. These sections support the concepts introduced in the pre-recorded lecture on applying the hypothesis testing framework to correlation and reporting the results correctly.
+    
 
 ## Pre-lab activities {#sec-4141-w5-prelab-activities}
 
