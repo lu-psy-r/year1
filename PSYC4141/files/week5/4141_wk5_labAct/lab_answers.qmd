@@ -1,0 +1,80 @@
+---
+title: "Lab: Spotting outliers and checking bivariate normality (instructor key)"
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+Suggested time: about 6 to 8 minutes per question. All figures are drawn by `make_lab_figures.R`, and the datasets are saved in `data/`, so students can load them in the coding part of the session. The correlations quoted below were calculated from these exact datasets.
+
+---
+
+## Question 1: Revision and exam marks
+
+**a.** Nothing clearly wrong. There are isolated bars at the ends of both histograms (about 5 and 25 hours; about 35 and 88 per cent), but each value is plausible on its own and nothing says that those bars belong to the same students.
+
+**b.** Two students.
+
+- **Participant 7:** about 5 hours of revision but a mark of about 88%, much higher than the pattern predicts.
+- **Participant 23:** about 25 hours of revision but a mark of about 35%, much lower than the pattern predicts.
+
+Both go against the positive trend shown by the other students.
+
+**c.** The histograms show each variable on its own, and both students have values that are unusual but not impossible for each variable. They are only unusual in combination, which can only be seen when the two variables are plotted together.
+
+**d.** Check for data-entry errors, such as typos, swapped or mismatched IDs, and misread marks. Other possibilities are a genuine but atypical participant (for example, prior knowledge from an earlier course, illness on the exam day, or a resit student) and a misunderstanding of the question about revision. The key message is to investigate and document, and not to delete cases just because they make the result awkward.
+
+**e.** *r* would get higher. With all 40 students, *r* = .05; without participants 7 and 23, *r* = .67. Two students are enough to hide a strong relationship.
+
+*Link to the lecture:* in the simulation, a few participants who were extreme on both measures made about 20% of samples significant when there was no real relationship. Here the same kind of case has the opposite effect, masking a real relationship.
+
+---
+
+## Question 2: Arousal and task performance
+
+**a.** An inverted U. Performance is lowest at very low and very high arousal, and highest at moderate arousal (around 40 to 60). This is the classic Yerkes-Dodson pattern.
+
+**b.** Not really. The arousal histogram is roughly symmetrical, and the performance histogram has a slight tail towards low scores. Neither shows the curve.
+
+**c.** Close to zero (*r* = .01). The positive trend on the left of the plot cancels out the negative trend on the right, so a very clear pattern gives almost no linear correlation.
+
+**d.** **Linearity.** Spearman's rho will not help (rho = .03), because the relationship is not monotonic: it rises and then falls.
+
+**e.** A coefficient alone can hide a strong relationship. Always plot the data first. A correlation near zero means "no linear relationship", not "no relationship".
+
+---
+
+## Question 3: Age and vocabulary
+
+**a.** Around 7 to 8 years, scores are roughly 1,200 to 2,000 words (a range of about 800). Around 13 to 15 years, they are roughly 2,900 to 5,800 (a range of nearly 3,000). The spread is clearly larger for older children.
+
+**b.** **Homoscedasticity** (equal spread). The spread of Y is not constant across X: the scatter fans out as age increases.
+
+**c.** No. Both histograms look reasonably bell-shaped, and nothing about them suggests a problem. The unequal spread is a feature of the *relationship*, which only the scatterplot shows.
+
+**d.** The usual standard error for *r* assumes the spread is the same at every value of X. When it isn't, the *p*-value and confidence interval can be inaccurate. In the lecture simulation, funnel-shaped data produced about twice as many false positives as expected when there was no real relationship. In this example, the relationship is very strong (*r* = .87), so the conclusion is unlikely to change, but the confidence interval and any predictions will be less reliable.
+
+**e.** Because the spread grows in proportion to the mean, a log transformation of vocabulary is the natural option. Spearman's rho is another option, but it only partly helps with unequal spread (rho = .87 here, the same as *r*). Analysing age groups separately, or using robust standard errors in a regression, are possible extensions.
+
+---
+
+## Question 4: Reaction time and social media use
+
+**a.** Both are strongly right-skewed. Reaction time peaks around 300 to 400 ms with a long tail to about 1,700 ms. Social media use peaks at under 10 hours per week with a long tail to about 140 hours.
+
+**b.** No. Most points are crowded at the lower left, with a few extreme points scattered to the right and above. The main problem is **non-normality** of both variables (skew), and the few extreme points could have a large influence on *r*.
+
+**c.** When skewed variables were independent, the false-positive rate stayed at about 5%, so the test was robust to skew. However, you should still check the scatterplot for extreme points that might have a large influence, and for any curvature.
+
+**d.** Both histograms are more symmetrical, and the scatterplot is a more evenly spread cloud, with no extreme points dominating. It isn't perfect: reaction time is still slightly right-skewed after the log transform, because the data include a minimum response time. Correlations are almost unchanged (raw *r* = −.07, logged *r* = −.07, Spearman's rho = −.10), consistent with the finding that skew alone made little difference to the test.
+
+**e.** *Advantage:* it keeps all the information in the data, and often makes proportional relationships linear and spreads even. It is also common for variables like reaction times. *Disadvantage:* results are on a log scale, so they are harder to interpret and to explain, and it can't be used for zero or negative values without adjustment.
+
+---
+
+## Suggestions for the coding part
+
+- Load the four datasets from `data/` and ask students to reproduce the plots with `ggplot2`, then calculate Pearson's *r* and Spearman's rho with `cor()` and `cor.test()`.
+- For question 1, ask them to remove participants 7 and 23 and recalculate *r*.
+- For question 4, ask them to add `log()` versions of the variables and compare.

@@ -1,0 +1,74 @@
+---
+title: "Lab: Spotting outliers and checking bivariate normality"
+format:
+  html:
+    toc: true
+    embed-resources: true
+---
+
+## Before you start
+
+For Pearson's *r*, we hope the data look like a smooth, oval cloud: a **straight-line** relationship, **equal spread** of Y at every value of X, and a bell shape. We also watch for **outliers**: participants who don't fit the overall pattern.
+
+For each question below, look at the three plots (a histogram of X, a histogram of Y, and a scatterplot) and answer the questions. All the data are simulated for teaching.
+
+---
+
+## Question 1: Revision and exam marks
+
+Forty students reported how many hours per week they spent revising and then sat an exam.
+
+![](figures/fig1_outliers.png){fig-alt="Histogram of weekly revision hours, histogram of exam marks, and a scatterplot of exam mark against revision hours." width=100%}
+
+a. Look at the two histograms only. Does any student look unusual? Note anything you see.
+b. Now look at the scatterplot. Which students do not fit the overall pattern? Describe each one, giving their approximate revision hours and exam mark.
+c. Why can the scatterplot reveal something the histograms cannot?
+d. Before running any analysis, what should you check about these students? Give two possible explanations for their scores.
+e. If you calculated Pearson's *r* for all 40 students, and then again without these students, would *r* get higher, lower or stay the same? Explain your reasoning.
+
+---
+
+## Question 2: Arousal and task performance
+
+Sixty participants completed a memory task. Before the task, each was given a score for how aroused (alert and activated) they felt.
+
+![](figures/fig2_curved.png){fig-alt="Histogram of arousal scores, histogram of task performance, and a scatterplot of performance against arousal." width=100%}
+
+a. Describe the relationship between arousal and performance in words.
+b. Look at the histograms. Do they suggest any problem with using Pearson's *r*?
+c. Without calculating anything, would you expect Pearson's *r* to be strong and positive, strong and negative, or close to zero? Explain why.
+d. Which assumption is violated here? Would switching to Spearman's rho solve the problem? Why or why not?
+e. What does this example tell you about reporting a correlation coefficient without looking at the scatterplot?
+
+---
+
+## Question 3: Age and vocabulary
+
+Eighty children aged between 6 and 16 took a vocabulary test.
+
+![](figures/fig3_fan.png){fig-alt="Histogram of age, histogram of vocabulary size, and a scatterplot of vocabulary size against age." width=100%}
+
+a. Compare the spread of vocabulary scores for children aged about 7 to 8 with those aged about 13 to 15. Give approximate ranges for each group.
+b. Which assumption is violated? Name it and describe what is wrong in your own words.
+c. Could you have spotted this problem from the two histograms alone? Explain.
+d. Why might this problem affect the *p*-value and confidence interval for Pearson's *r*?
+e. The spread of vocabulary scores grows roughly in proportion to the average score. Suggest one thing you could try.
+
+---
+
+## Question 4: Reaction time and social media use
+
+Eighty participants completed a reaction-time task and reported how many hours per week they spend on social media. Figure 4a shows the raw data.
+
+![**Figure 4a.** Raw data.](figures/fig4a_skewed.png){fig-alt="Histogram of reaction time, histogram of social media hours per week, and a scatterplot of social media hours against reaction time." width=100%}
+
+a. Describe the shape of each histogram.
+b. Does the scatterplot look like an oval, bell-shaped cloud? Which assumption(s) appear to be violated?
+c. In the lecture simulations, what happened to the false-positive rate when variables were skewed but unrelated? What would you still want to check in the scatterplot?
+
+Figure 4b shows the same data after taking the natural log of both variables.
+
+![**Figure 4b.** The same data on a log scale.](figures/fig4b_logged.png){fig-alt="Histograms and a scatterplot of the same data after a log transformation." width=100%}
+
+d. What has changed? Has the transformation solved every problem?
+e. Give one advantage and one disadvantage of log-transforming the data.

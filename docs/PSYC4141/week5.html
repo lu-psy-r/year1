@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -214,18 +248,19 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#sec-4141-w5-lectures-theory" id="toc-sec-4141-w5-lectures-theory" class="nav-link" data-scroll-target="#sec-4141-w5-lectures-theory">Section A: More on correlation</a></li>
   </ul></li>
   <li><a href="#sec-4141-w5-reading" id="toc-sec-4141-w5-reading" class="nav-link" data-scroll-target="#sec-4141-w5-reading">Reading</a></li>
-  <li><a href="#sec-4141-w5-prelab-activities" id="toc-sec-4141-w5-prelab-activities" class="nav-link" data-scroll-target="#sec-4141-w5-prelab-activities">Pre-lab activities</a></li>
+  <li><a href="#sec-4141-w5-prelab-activities" id="toc-sec-4141-w5-prelab-activities" class="nav-link" data-scroll-target="#sec-4141-w5-prelab-activities">Pre-lab activities</a>
+  <ul class="collapse">
+  <li><a href="#pre-lab-activity-1-getting-ready" id="toc-pre-lab-activity-1-getting-ready" class="nav-link" data-scroll-target="#pre-lab-activity-1-getting-ready">Pre-lab activity 1: Getting ready</a></li>
+  </ul></li>
   <li><a href="#sec-4141-w5-lab-activities" id="toc-sec-4141-w5-lab-activities" class="nav-link" data-scroll-target="#sec-4141-w5-lab-activities">Lab activities</a>
   <ul class="collapse">
   <li><a href="#lab-activity-1-assumptions-of-correlation-analysis" id="toc-lab-activity-1-assumptions-of-correlation-analysis" class="nav-link" data-scroll-target="#lab-activity-1-assumptions-of-correlation-analysis">Lab activity 1: Assumptions of Correlation Analysis</a></li>
   <li><a href="#lab-activity-2-finish-lab-activities-from-previous-weeks-recap---skip-if-completed-successfully-last-week" id="toc-lab-activity-2-finish-lab-activities-from-previous-weeks-recap---skip-if-completed-successfully-last-week" class="nav-link" data-scroll-target="#lab-activity-2-finish-lab-activities-from-previous-weeks-recap---skip-if-completed-successfully-last-week">Lab activity 2: Finish lab activities from previous weeks (Recap - skip if completed successfully last week)</a></li>
-  <li><a href="#lab-activity-3" id="toc-lab-activity-3" class="nav-link" data-scroll-target="#lab-activity-3">Lab activity 3:</a></li>
+  <li><a href="#lab-activity-3-checking-for-missing-data" id="toc-lab-activity-3-checking-for-missing-data" class="nav-link" data-scroll-target="#lab-activity-3-checking-for-missing-data">Lab activity 3: Checking for missing data</a></li>
+  <li><a href="#lab-activity-4-outliers" id="toc-lab-activity-4-outliers" class="nav-link" data-scroll-target="#lab-activity-4-outliers">Lab activity 4: Outliers</a></li>
+  <li><a href="#lab-activity-5-spearmans-rho" id="toc-lab-activity-5-spearmans-rho" class="nav-link" data-scroll-target="#lab-activity-5-spearmans-rho">Lab activity 5: Spearman’s <em>rho</em></a></li>
   </ul></li>
-  <li><a href="#background-1" id="toc-background-1" class="nav-link" data-scroll-target="#background-1">Background</a>
-  <ul class="collapse">
-  <li><a href="#last-week-recap" id="toc-last-week-recap" class="nav-link" data-scroll-target="#last-week-recap">Last week: recap</a></li>
-  <li><a href="#this-week" id="toc-this-week" class="nav-link" data-scroll-target="#this-week"><strong>This week</strong></a></li>
-  </ul></li>
+  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a></li>
   </ul>
 </nav>
     </div>
@@ -407,7 +442,38 @@ Easy access to readings
 </section>
 <section id="sec-4141-w5-prelab-activities" class="level2">
 <h2 class="anchored" data-anchor-id="sec-4141-w5-prelab-activities">Pre-lab activities</h2>
-<p>No pre-lab activities this week.</p>
+<section id="pre-lab-activity-1-getting-ready" class="level3">
+<h3 class="anchored" data-anchor-id="pre-lab-activity-1-getting-ready">Pre-lab activity 1: Getting ready</h3>
+<p>To complete this week’s lab activities you will need several files:</p>
+<ol type="1">
+<li>We’ll work with an example script called <code>4141_wk5_lab.qmd</code>. This is a Quarto document.</li>
+<li>We need several data files.</li>
+</ol>
+<p>You can download the files here: <a href="files/week5/4141_wk5_lab.zip" download="4141_wk5_lab.zip"><code>4141_wk5_lab.zip</code></a>. Usually they will be saved in your ‘Downloads’ folder.</p>
+<p>Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).</p>
+<p>Finally, open the example script by clicking on the file called <code>4141_wk5_lab.qmd</code> in the Files space on the R-server.</p>
+<p>You are now ready to start work on the lab activities.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Watch the ‘How to’ videos
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you haven’t done so already, this is a good time to watch the ‘How to’ videos on how to:</p>
+<ul>
+<li>Use RStudio - <a href="../PSYC4141/week1.html#sec-4141-w1-lectures-intro-how-r">in this section</a></li>
+<li>Build a plot - <a href="../PSYC4141/week1.html#sec-4141-w1-lectures-intro-how-r">in this section</a></li>
+<li>Use <code>here()</code> - <a href="../PSYC4141/week3.html#sec-4141-w3-lectures-correlation">in this section</a></li>
+<li>Use <code>mutate()</code> - <a href="../PSYC4141/week3.html#sec-4141-w3-lectures-correlation">in this section</a></li>
+<li>Conduct and interpret correlation analysis - <a href="../PSYC4141/week3.html#sec-4141-w3-lectures-correlation">in this section</a></li>
+</ul>
+</div>
+</div>
+</section>
 </section>
 <section id="sec-4141-w5-lab-activities" class="level2">
 <h2 class="anchored" data-anchor-id="sec-4141-w5-lab-activities">Lab activities</h2>
@@ -418,7 +484,7 @@ Easy access to readings
 <h3 class="anchored" data-anchor-id="lab-activity-1-assumptions-of-correlation-analysis">Lab activity 1: Assumptions of Correlation Analysis</h3>
 <section id="question-1-types-of-variables" class="level4">
 <h4 class="anchored" data-anchor-id="question-1-types-of-variables">Question 1: Types of variables</h4>
-<p>Correlation would be an appropriate form on analysis for researchers interested in the relationship between:</p>
+<p>Correlation would be an appropriate form of analysis for researchers interested in the relationship between:</p>
 <ol type="a">
 <li>Dog (breed) and height (cm) of owner</li>
 <li>Speed of swimming (mph) and area of tank (cm)</li>
@@ -426,16 +492,6 @@ Easy access to readings
 <li>Total llama saliva (ml) expelled and gender of visitors</li>
 <li>b and d</li>
 <li>b and c</li>
-</ol>
-</section>
-<section id="question-2-spearmans-rho-vs.-pearsons-r" class="level4">
-<h4 class="anchored" data-anchor-id="question-2-spearmans-rho-vs.-pearsons-r">Question 2: Spearman’s <em>rho</em> vs.&nbsp;Pearson’s <em>r</em></h4>
-<p>When would you use Spearman’s rho analysis instead of Pearson’s r?</p>
-<ol type="a">
-<li>When there are clear outliers in the data</li>
-<li>When the data is not normally distributed</li>
-<li>When the relationship between X and Y is curvilinear</li>
-<li>a and b</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -452,8 +508,8 @@ Tip
 </div>
 </div>
 </section>
-<section id="question-3-revision-and-exam-marks" class="level4">
-<h4 class="anchored" data-anchor-id="question-3-revision-and-exam-marks">Question 3: Revision and exam marks</h4>
+<section id="question-2-revision-and-exam-marks" class="level4">
+<h4 class="anchored" data-anchor-id="question-2-revision-and-exam-marks">Question 2: Revision and exam marks</h4>
 <p>Forty students reported how many hours per week they spent revising and then sat an exam.</p>
 <p><img src="files/week5/fig1_outliers.png" class="img-fluid" style="width:100.0%" alt="Histogram of weekly revision hours, histogram of exam marks, and a scatterplot of exam mark against revision hours."></p>
 <ol type="a">
@@ -464,8 +520,8 @@ Tip
 <li>If you calculated Pearson’s <em>r</em> for all 40 students, and then again without these students, would <em>r</em> get higher, lower or stay the same? Explain your reasoning.</li>
 </ol>
 </section>
-<section id="question-4-arousal-and-task-performance" class="level4">
-<h4 class="anchored" data-anchor-id="question-4-arousal-and-task-performance">Question 4: Arousal and task performance</h4>
+<section id="question-3-arousal-and-task-performance" class="level4">
+<h4 class="anchored" data-anchor-id="question-3-arousal-and-task-performance">Question 3: Arousal and task performance</h4>
 <p>Sixty participants completed a memory task. Before the task, each was given a score for how aroused (alert and activated) they felt.</p>
 <p><img src="files/week5/fig2_curved.png" class="img-fluid" style="width:100.0%" alt="Histogram of arousal scores, histogram of task performance, and a scatterplot of performance against arousal."></p>
 <ol type="a">
@@ -476,25 +532,25 @@ Tip
 <li>What does this example tell you about reporting a correlation coefficient without looking at the scatterplot?</li>
 </ol>
 </section>
-<section id="question-5-age-and-vocabulary" class="level4">
-<h4 class="anchored" data-anchor-id="question-5-age-and-vocabulary">Question 5: Age and vocabulary</h4>
+<section id="question-4-age-and-vocabulary" class="level4">
+<h4 class="anchored" data-anchor-id="question-4-age-and-vocabulary">Question 4: Age and vocabulary</h4>
 <p>Eighty children aged between 6 and 16 took a vocabulary test.</p>
 <p><img src="files/week5/fig3_fan.png" class="img-fluid" style="width:100.0%" alt="Histogram of age, histogram of vocabulary size, and a scatterplot of vocabulary size against age."></p>
 <ol type="a">
 <li>Compare the spread of vocabulary scores for children aged about 7 to 8 with those aged about 13 to 15. Give approximate ranges for each group.</li>
 <li>Which assumption is violated? Name it and describe what is wrong in your own words.</li>
 <li>Could you have spotted this problem from the two histograms alone? Explain.</li>
-<li>Why might this problem affect the <em>p</em>-value and confidence interval for Pearson’s <em>r</em>?</li>
+<li>Why might this problem affect the <em>p</em>-value for Pearson’s <em>r</em>?</li>
 <li>The spread of vocabulary scores grows roughly in proportion to the average score. Suggest one thing you could try.</li>
 </ol>
 </section>
-<section id="question-6-reaction-time-and-social-media-use" class="level4">
-<h4 class="anchored" data-anchor-id="question-6-reaction-time-and-social-media-use">Question 6: Reaction time and social media use</h4>
+<section id="question-5-reaction-time-and-social-media-use" class="level4">
+<h4 class="anchored" data-anchor-id="question-5-reaction-time-and-social-media-use">Question 5: Reaction time and social media use</h4>
 <p>Eighty participants completed a reaction-time task and reported how many hours per week they spend on social media. Figure 4a shows the raw data.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="files/week5/fig4a_skewed.png" class="img-fluid figure-img" style="width:100.0%" alt="Histogram of reaction time, histogram of social media hours per week, and a scatterplot of social media hours against reaction time."></p>
-<figcaption><strong>Figure 4a.</strong> Raw data.</figcaption>
+<figcaption><strong>Figure 5a.</strong> Raw data.</figcaption>
 </figure>
 </div>
 <ol type="a">
@@ -502,11 +558,11 @@ Tip
 <li>Does the scatterplot look like an oval, bell-shaped cloud? Which assumption(s) appear to be violated?</li>
 <li>In the lecture simulations, what happened to the false-positive rate when variables were skewed but unrelated? What would you still want to check in the scatterplot?</li>
 </ol>
-<p>Figure 4b shows the same data after taking the natural log of both variables.</p>
+<p>Figure 4b shows the same data after taking the natural log of both variables. Transforming the the data in this way is common approach for heavily skewed data.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="files/week5/fig4b_logged.png" class="img-fluid figure-img" style="width:100.0%" alt="Histograms and a scatterplot of the same data after a log transformation."></p>
-<figcaption><strong>Figure 4b.</strong> The same data on a log scale.</figcaption>
+<figcaption><strong>Figure 5b.</strong> The same data on a log scale.</figcaption>
 </figure>
 </div>
 <ol start="4" type="a">
@@ -537,34 +593,420 @@ Tip
 </ol>
 </section>
 </section>
-<section id="lab-activity-3" class="level3">
-<h3 class="anchored" data-anchor-id="lab-activity-3">Lab activity 3:</h3>
-</section>
-</section>
-<section id="background-1" class="level2">
-<h2 class="anchored" data-anchor-id="background-1">Background</h2>
-<section id="last-week-recap" class="level3">
-<h3 class="anchored" data-anchor-id="last-week-recap">Last week: recap</h3>
-<p>Last week, you worked with data that we generated (through simulations) based on data from a real project looking at how psychologists measure vocabulary knowledge.</p>
-<p>Hanke Vermeiren and colleagues (Vermeiren et al., 2023) completed a series of studies to develop a vocabulary test for English-speaking university students. Among the tests they developed were measures of vocabulary knowledge (what you know about word meanings) and of reading experience (print exposure, based on recognition of author names).</p>
-<p><strong>Reference</strong></p>
-<p>Vermeiren, H., Vandendaele, A., &amp; Brysbaert, M. (2023). Validated tests for language research with university students whose native language is English: Tests of vocabulary, general knowledge, author recognition, and reading comprehension. <em>Behavior Research Methods</em>, 55(3), 1036–1068. <a href="https://doi.org/10.3758/s13428-022-01856-x" target="_blank" rel="noopener">https://doi.org/10.3758/s13428-022-01856-x</a>.</p>
-</section>
-<section id="this-week" class="level3">
-<h3 class="anchored" data-anchor-id="this-week"><strong>This week</strong></h3>
-<p>This week, you’ll work with similar data. We’ll check for missing data and for outliers before creating scatterplots and deciding which correlation coefficient to use.</p>
+<section id="lab-activity-3-checking-for-missing-data" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-3-checking-for-missing-data">Lab activity 3: Checking for missing data</h3>
 <section id="aims-of-the-activity-1" class="level4">
 <h4 class="anchored" data-anchor-id="aims-of-the-activity-1">Aims of the activity</h4>
 <p>We are going to:</p>
 <ol type="1">
-<li>Download and organise your files</li>
 <li>Setup the appropriate bits and pieces in RStudio</li>
-<li>Read in the data</li>
+<li>Read in the data files</li>
 <li>Check for missing data</li>
-<li>Build scatterplots with <code>geom_point()</code>, and add a line of best fit using <code>geom_smooth()</code></li>
-<li>Remove outliers using <code>filter()</code></li>
 <li>Calculate and interpret Pearson’s r using <code>correlation()</code></li>
 </ol>
+<!-- ::: callout-tip -->
+<!-- Information on this lab activity will follow soon. -->
+<!-- ::: -->
+</section>
+<section id="step-1-setup-the-appropriate-bits-and-pieces-in-rstudio" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-setup-the-appropriate-bits-and-pieces-in-rstudio">Step 1: Setup the appropriate bits and pieces in RStudio</h4>
+<p>Before we can do anything, we need tell R what packages we want to use. We use the function <code>library()</code> to do that. It is useful to have a section at the top of your script where you load all the relevant libraries.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’.In the code chunk, write code to load the libraries by using the <code>library()</code> function. We need the packages <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. After you’ve written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk).</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We need to load several packages (<code>here</code>, <code>tidyverse</code> and <code>easystats</code>) using the <code>library()</code> function. First, inside the code chunk, write <code>library()</code> and put <code>here</code> inside the brackets. On the next line in the code chunk, write <code>library()</code> and put <code>tidyverse</code> inside the brackets. On a third line in the code chunk, write <code>library()</code> and put <code>easystats</code> inside the brackets. Make sure to run the code chunk by clicking on the green arrow in the top corner of the code chunk.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-read-in-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-read-in-the-data">Step 2: Read in the data</h4>
+<p>For this lab activity, you’ll need the file named <code>correlation_n030_md.csv</code>.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’. Inside the chunk, use <code>read_csv()</code> to read in the data file named <code>correlation_n030_md.csv</code>; tell R where to find the file and what it is called. Make sure you’ve run the code chunk. Then, check that you can see the ‘object’ (also called ‘data-frame’) in the Environment (top right quadrant) for the file you read in. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><code>dataframe &lt;- read_csv(here("filepath to folder", "filename.extension))</code></p>
+<p>Your code should include:</p>
+<ul>
+<li>dataframe: the name of the object you want to save the data in (such as <code>data_mw_subscales</code>)</li>
+<li>&lt;- : assignment arrow</li>
+<li>read_csv() : the <code>read_csv()</code> function</li>
+<li>here(): the <code>here()</code> function</li>
+<li>“filepath to folder”: the folders that you need to point R to starting from whereever <em>here</em> starts</li>
+<li>“filename.extension”: the name of the datafile, including the extension</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data_thirty <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"4141_wk5_lab"</span>, <span class="st">"correlation_n030_md.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 2</strong> a. How many participants does the data frame <code>data_thirty</code> contain? b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables <code>vocabulary</code> and <code>experience</code> using the <code>data_thirty</code> data frame?</p>
+</section>
+<section id="step-3-check-for-missing-data" class="level4">
+<h4 class="anchored" data-anchor-id="step-3-check-for-missing-data">Step 3: Check for missing data</h4>
+<p>We can check whether there are any missing data in a data-frame in multiple ways:</p>
+<ol type="1">
+<li>We can click on the data frame in the Environment (upper right quadrant). The data frame will then open in the Source quadrant (upper left quadrant). Any ‘empty’ cells will have an <code>NA</code> (which stands for ‘Not available’) in them.</li>
+<li>We can use the <code>glimpse</code> function. This gives a compact overview of the data frame, showing the number of rows and columns, then each variable’s name, its type (such as <code>&lt;dbl&gt;</code> for numbers or <code>&lt;chr&gt;</code> for text) and its first few values, so you can quickly check that the data have been read in correctly. Missing data are shown as <span style="color: red"><code>NA</code></span>.</li>
+<li>We can use some code to check how many missing data points a data frame contains. For this we use the <code>is.na</code>() function inside the <code>sum</code>() function.</li>
+<li>We can use some code to check how many participants have complete data. For this we use the <code>complete.cases</code>() function inside the <code>sum</code>() function.</li>
+</ol>
+<blockquote class="blockquote">
+<p>Actions: 1. Click on the data frame in the Environment and have a look at it in the Source quadrant. 2. Use the <code>glimpse</code>() function to have a look at the data frame. 3. Use the <code>is.na</code>() function in combination with the <code>sum</code>() function to check how many NAs there are. 4. Use the <code>complete.cases</code>() function in combination with the <code>sum</code>() function to check how many participants have complete data. You can use the code below to do this. Have a look at each line of code and make sure you understand what the different bits are doing.</p>
+</blockquote>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Have a look at the data frame</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(data_thirty) </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the number of NAs in the data frame</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>check_n_NA <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(data_thirty))                 </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>check_n_NA</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the number of participants with complete data</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>check_n_complete <span class="ot">&lt;-</span> <span class="fu">sum</span>(<span class="fu">complete.cases</span>(data_thirty))</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>check_n_complete</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>Action: Run a correlation analysis with these data. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use the <code>correlation</code>() function we used last week. You need to specify the following information inside the <code>correlation</code>() function:</p>
+<ul>
+<li>data: data = <code>data_thirty</code></li>
+<li>variables: select = c(“vocabulary”, “experience”)</li>
+<li>method = “pearson”</li>
+<li>p_adjust = “none”</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">correlation</span>(<span class="at">data =</span> data_thirty,          <span class="co"># use the `correlation()` function and tell R what data to use</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"vocabulary"</span>, <span class="st">"experience"</span>), <span class="co"># specify the variables we want to correlate using `select()`</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">method =</span> <span class="st">"pearson"</span>,                     <span class="co"># specify which method to use; `"pearson"` is the default</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">p_adjust =</span> <span class="st">"none"</span>)                      <span class="co"># we'll come back to this in a couple of weeks</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 3</strong> a. How many data points are missing? b. How many participants have complete data? c.&nbsp;How many degrees of freedom are reported in the output from the correlation analysis. Explain how that number is derived. Does it match what you expected to see based on the number of participants?</p>
+</section>
+</section>
+<section id="lab-activity-4-outliers" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-4-outliers">Lab activity 4: Outliers</h3>
+<section id="aims-of-the-activity-2" class="level4">
+<h4 class="anchored" data-anchor-id="aims-of-the-activity-2">Aims of the activity</h4>
+<p>We are going to:</p>
+<ol type="1">
+<li>Read in the data file</li>
+<li>Build scatterplots with <code>geom_point()</code>, and add a line of best fit using <code>geom_smooth()</code></li>
+<li>Remove outliers using <code>filter()</code>, and create another scatterplot</li>
+<li>Calculate and interpret Pearson’s r using <code>correlation()</code> for data with and without outlier values</li>
+</ol>
+</section>
+<section id="step-1-read-in-the-data-file" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-read-in-the-data-file">Step 1: Read in the data file</h4>
+<p>For this lab activity, you’ll need the file named <code>revision_exam.csv</code>.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk and use <code>read_csv()</code> to read in the data file named <code>revision_exam.csv</code>; tell R where to find the file and what it is called. Make sure you’ve run the code chunk. Then, check that you can see the ‘object’ (also called ‘data-frame’) in the Environment (top right quadrant) for the file you read in.</p>
+</blockquote>
+</section>
+<section id="step-2-build-a-scatterplot" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-build-a-scatterplot">Step 2: Build a scatterplot</h4>
+<p>Now we are ready to build a scatterplot to visualise the relationship between two of the variables. We are going to look at the relationship between revision time and exam marks.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk and use <code>ggplot()</code> to tell R what data to plot and which variables tot use. Then, add layers to plot the datapoints (use <code>geom_point()</code>) and the line of best fit (use <code>geom_smooth(method="lm", se=TRUE)</code>). If you need more guidance on how to do this, look at the Hint below. If you are still stuck, you can look at the Code below.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use the function <code>ggplot()</code>. Start by writing <code>ggplot()</code> on the next line of the code chunk. Inside the <code>ggplot()</code> function, we need to tell R which data-frame (<code>data=</code>) and which variables to use (<code>mapping=aes(x= , y= ))</code>).</p>
+<p>Then, we need to tell R what type of plot we want. We do this by adding a <code>+</code> to the line on which you’ve written <code>ggplot()</code>, then on the next line you add a ‘geometric object’, in this case <code>geom_point()</code>.</p>
+<p>We also want to add a line of best fit. We do this by adding a <code>+</code> to the line on which you’ve written <code>geom_point()</code>, then on the next line you add another ‘geometric object’, in this case <code>geom_smooth()</code>. We want to specify what type of line of best fit, we do this by adding <code>method="lm", se=TRUE</code> inside the brackets of <code>geom_smooth()</code>.</p>
+<p>This will give you a basic scatterplot. Revisit the lab activity code from week 1 to remind yourself how to change any of the features (such as the colour, the background, add titles to the axes etc.).</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_revision_exam, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>revision_hours, <span class="at">y=</span>exam_mark)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-remove-outliers-using-filter-and-create-another-scatterplot" class="level4">
+<h4 class="anchored" data-anchor-id="step-3-remove-outliers-using-filter-and-create-another-scatterplot">Step 3: Remove outliers using <code>filter()</code>, and create another scatterplot</h4>
+<p>Now,we’ll remove the two participants with outlier values. We’ll do this using the <code>filter()</code> function from the <code>dplyr</code> package (part of the <code>tidyverse</code>).</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="How does `filter()` work">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How does <code>filter()</code> work
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>filter()</code> function allows you to select specific rows from a data frame based on one or more conditions.</p>
+<p>For example, imagine we have a dataset containing information about participants in a psychology study, including their age and gender. We might want to select only participants who are over 18 years old.</p>
+<p>We can do this using:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, age <span class="sc">&gt;</span> <span class="dv">18</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here: - <code>data</code> is the name of our data frame. - <code>age &gt; 18</code> is the condition we want to apply. - note these two bits of information are separated within the function by a comma. - only rows where the condition is <code>TRUE</code> are kept.</p>
+<p>We can also apply multiple conditions. For example, to select participants who are over 18 <strong>and</strong> identify as a woman:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, age <span class="sc">&gt;</span> <span class="dv">18</span>, gender <span class="sc">==</span> <span class="st">"Woman"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When we provide multiple conditions separated by commas, <code>filter()</code> keeps only rows that satisfy <strong>all</strong> of the conditions.</p>
+<p>Some useful operators for filtering data include:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>==</code></td>
+<td>Equal to</td>
+<td><code>gender == "Woman"</code></td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>Not equal to</td>
+<td><code>gender != "Woman"</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;</code></td>
+<td>Greater than</td>
+<td><code>age &gt; 18</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;</code></td>
+<td>Less than</td>
+<td><code>age &lt; 30</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;=</code></td>
+<td>Greater than or equal to</td>
+<td><code>age &gt;= 18</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;=</code></td>
+<td>Less than or equal to</td>
+<td><code>age &lt;= 30</code></td>
+</tr>
+</tbody>
+</table>
+<p>We can also use <code>&amp;</code> (AND) and <code>|</code> (OR) to combine conditions.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, age <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">&amp;</span> age <span class="sc">&lt;=</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This selects participants aged between 18 and 30 (inclusive).</p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Action: Use <code>filter()</code> to remove the two participants with outlier values. We can do this by specifying that we only want to keep data from participants who revised for more than 5, but less than 25 hours. The code on the handbook page does this. You can copy the code into your script. Please have a close look and, using the information above, make sure you understand what each part of the code does.</p>
+</blockquote>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>data_revision_exam_clean <span class="ot">&lt;-</span> <span class="fu">filter</span>(data_revision_exam, revision_hours <span class="sc">&gt;</span><span class="dv">5</span> <span class="sc">&amp;</span> revision_hours <span class="sc">&lt;</span> <span class="dv">25</span> )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p>Action: Now let make a scatterplot without the two participants with outlier values. As before, insert a new code chunk and use <code>ggplot()</code> to tell R what data to plot and which variables tot use. Make sure to use <code>data_revison_exam_clean</code>. Then, add layers to plot the datapoints (use <code>geom_point()</code>) and the line of best fit (use <code>geom_smooth(method="lm", se=TRUE)</code>).</p>
+</blockquote>
+<p><strong>Questions Step 3</strong> a. Looking at the line of best fit in the first scatterplot (which included the participants with outlier values), how would you describe the relationship between revision hours and exam mark? b. What do you estimate the value of the correlation coefficient to be? c.&nbsp;Looking at the line of best fit in the second scatterplot (without the participants with outlier values), how would you describe the relationship between revision hours and exam mark now? d.&nbsp;What do you estimate the value of the correlation coefficient to be now?</p>
+</section>
+<section id="step-4-calculate-and-interpret-pearsons-r-using-correlation-for-data-with-and-without-outlier-values" class="level4">
+<h4 class="anchored" data-anchor-id="step-4-calculate-and-interpret-pearsons-r-using-correlation-for-data-with-and-without-outlier-values">Step 4: Calculate and interpret Pearson’s r using <code>correlation()</code> for data with and without outlier values</h4>
+<blockquote class="blockquote">
+<p>Action: Run two correlation analyses: one with the data with (<code>data_revision_exam</code>) and one with the data without (<code>data_revision_exam_clean</code>) outlier values. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the code you wrote for Lab activity 3, Step 3.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use the <code>correlation</code>() function we used last week. You need to specify the following information inside the <code>correlation</code>() function:</p>
+<ul>
+<li>data: data = <code>data_revision_exam</code></li>
+<li>variables: select = c(“revision_hours”, “exam_mark”)</li>
+<li>method = “pearson”</li>
+<li>p_adjust = “none”</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="lab-activity-5-spearmans-rho" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-5-spearmans-rho">Lab activity 5: Spearman’s <em>rho</em></h3>
+<section id="aims-of-the-activity-3" class="level4">
+<h4 class="anchored" data-anchor-id="aims-of-the-activity-3">Aims of the activity</h4>
+<p>We are going to:</p>
+<ol type="1">
+<li>Read in the data file</li>
+<li>Build a scatterplot with <code>geom_point()</code>, and add a line of best fit using <code>geom_smooth()</code></li>
+<li>Calculate and interpret Pearson’s <em>r</em> and Spearman’s <em>rho</em> using <code>correlation()</code></li>
+</ol>
+</section>
+<section id="step-1-read-in-the-data-file-1" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-read-in-the-data-file-1">Step 1: Read in the data file</h4>
+<p>For this lab activity, you’ll need the file named <code>reading_enjoyment_books.csv</code>. It contains data from sixty adults who were asked how much they enjoy reading (variable name = <code>reading_enjoyment</code>), on a single item from 1 (not at all) to 5 (very much), and how many books they had read in the past 12 months (variable name = <code>books_read</code>).</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk and use <code>read_csv()</code> to read in the data file named <code>reading_enjoyment_books.csv</code>; tell R where to find the file and what it is called. Make sure you’ve run the code chunk. Then, check that you can see the ‘object’ (also called ‘data-frame’) in the Environment (top right quadrant) for the file you read in.</p>
+</blockquote>
+</section>
+<section id="step-2-build-a-scatterplot-using-geom_jitter-instead-of-geom_point" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-build-a-scatterplot-using-geom_jitter-instead-of-geom_point">Step 2: Build a scatterplot using <code>geom_jitter()</code> instead of <code>geom_point()</code></h4>
+<p>Now we are ready to build a scatterplot to visualise the relationship between reading enjoyment and number of books read.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk and use <code>ggplot()</code> to tell R what data to plot and which variables tot use. Then, add layers to plot the datapoints (use <code>geom_point()</code>) and the line of best fit (use <code>geom_smooth(method="lm", se=TRUE)</code>). If you need more guidance on how to do this, look at the Hint below. If you are still stuck, you can look at the code you wrote for Lab activity 4, Step 2.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use the function <code>ggplot()</code>. Start by writing <code>ggplot()</code> on the next line of the code chunk. Inside the <code>ggplot()</code> function, we need to tell R which data-frame (<code>data=</code>) and which variables to use (<code>mapping=aes(x= , y= ))</code>).</p>
+<p>Then, we need to tell R what type of plot we want. We do this by adding a <code>+</code> to the line on which you’ve written <code>ggplot()</code>, then on the next line you add a ‘geometric object’, in this case <code>geom_point()</code>.</p>
+<p>We also want to add a line of best fit. We do this by adding a <code>+</code> to the line on which you’ve written <code>geom_point()</code>, then on the next line you add another ‘geometric object’, in this case <code>geom_smooth()</code>. We want to specify what type of line of best fit, we do this by adding <code>method="lm", se=TRUE</code> inside the brackets of <code>geom_smooth()</code>.</p>
+<p>This will give you a basic scatterplot. Revisit the lab activity code from week 1 to remind yourself how to change any of the features (such as the colour, the background, add titles to the axes etc.).</p>
+</div>
+</div>
+</div>
+<p>Many of the participants gave the same rating and read the same number of books, so their points sit exactly on top of each other. <code>geom_jitter()</code> fixes this by moving each point a tiny random amount, so overlapping points spread out and you can see how many there are. You can tell R how to jitter the data points:</p>
+<ul>
+<li>width = 0.1 is the largest random nudge to the left or right. Ratings are whole numbers, so a point at 3 is moved to somewhere between 2.9 and 3.1. This is small enough that the five vertical stripes stay clearly separate.</li>
+<li>height = 0 means the points are not moved up or down. The number of books is a real count, so nudging points vertically would make the plot show values that aren’t in the data.</li>
+<li>alpha = 0.6 makes the points partly transparent (0 is invisible and 1 is solid). Where points overlap, the colour becomes darker, which gives a second clue about where the data are concentrated.</li>
+</ul>
+<p>Jittering only changes how the plot looks. The data and the correlation are not affected.</p>
+<blockquote class="blockquote">
+<p>Action: Instead of using <code>geom_point()</code> in the scatterplot, try <code>geom_jitter(width = 0.1, height = 0, alpha = 0.6)</code>.</p>
+</blockquote>
+</section>
+<section id="step-3-calculate-and-interpret-pearsons-r-and-spearmans-rho-using-correlation" class="level4">
+<h4 class="anchored" data-anchor-id="step-3-calculate-and-interpret-pearsons-r-and-spearmans-rho-using-correlation">Step 3: Calculate and interpret Pearson’s <em>r</em> and Spearman’s <em>rho</em> using <code>correlation()</code></h4>
+<blockquote class="blockquote">
+<p>Action: Run two correlation analyses: one with Pearson’s <em>r</em>, the other one with Spearman’s <em>rho</em>. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the code you wrote for Lab activity 3, Step 3. When calculating Spearman’s <em>rho</em>, specify “spearman” under method instead of “pearson”.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use the <code>correlation</code>() function we used last week. You need to specify the following information inside the <code>correlation</code>() function:</p>
+<ul>
+<li>data: data = <code>data_revision_exam</code></li>
+<li>variables: select = c(“revision_hours”, “exam_mark”)</li>
+<li>method = “pearson” or “spearman”</li>
+<li>p_adjust = “none”</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 3</strong> a. What is the value for Pearson’s <em>r</em>, is it significant? b. What is the value for Spearman’s <em>rho</em>, is it significant? c.&nbsp;What is the correct correlation coefficient to use. Explain why.</p>
+</section>
+</section>
+</section>
+<section id="answers" class="level2">
+<h2 class="anchored" data-anchor-id="answers">Answers</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -575,63 +1017,141 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Information on this lab activity will follow soon.</p>
+<p>Answers to the questions in lab activities will be shared after the final lab session of the week has concluded (Thursday afternoon)</p>
 </div>
 </div>
-<!-- #### Step 1: Download the files -->
-<!-- To complete this lab activity you will need two files: -->
-<!-- 1.  We'll work with an example script called `4141_wk5_lab.qmd`. This is a Quarto document. -->
-<!-- 2.  We need a data file called `correlation-data-n030_modified.csv`. This file holds scores on tests of vocabulary knowledge and reading experience. Different (simulated) participants' scores are on different rows of each spreadsheet. Different kinds of scores are in different columns of each spreadsheet. -->
-<!-- You can download the files here: [`4141_wk5_lab.zip`](files/week5/4141_wk5_lab.zip){download="4141_wk5_lab.zip"}. Usually they will be saved in your 'Downloads' folder. -->
-<!-- Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first). -->
-<!-- Finally, open the example script by clicking on the file called `4141_wk5_lab.qmd` in the Files space on the R-server. -->
-<!-- ::: callout-important -->
-<!-- ## Watch the 'How to' videos -->
-<!-- If you haven't done so already, this is a good time to watch the 'How to' videos on how to: -->
-<!-- -   Use RStudio - [in this section](week1.qmd#sec-4141-w1-lectures-intro-how-r) -->
-<!-- -   Build a plot - [in this section](week1.qmd#sec-4141-w1-lectures-intro-how-r) -->
-<!-- -   Use `here()` - [in this section](week3.qmd#sec-4141-w3-lectures-correlation) -->
-<!-- -   Use `mutate()` - [in this section](week3.qmd#sec-4141-w3-lectures-correlation) -->
-<!-- -   Conduct and interpret correlation analysis - [in this section](week3.qmd#sec-4141-w3-lectures-correlation) -->
+<!-- ### Lab activity 1: Assumptions of Correlation Analysis -->
+<!-- #### Question 1: Types of variables -->
+<!-- Correlation would be an appropriate form of analysis for researchers interested in the relationship between: -->
+<!-- a.  Dog (breed) and height (cm) of owner -->
+<!-- b.  Speed of swimming (mph) and area of tank (cm) -->
+<!-- c.  Number of cows sitting and rain fall (mm) -->
+<!-- d.  Total llama saliva (ml) expelled and gender of visitors -->
+<!-- e.  b and d -->
+<!-- f.  b and c -->
+<!-- ::: {.callout-note icon=false title="Question 1: Answer" collapse="true"} -->
+<!-- a.  Dog (breed) and height (cm) of owner -->
+<!-- b.  Speed of swimming (mph) and area of tank (cm) -->
+<!-- c.  Number of cows sitting and rain fall (mm) -->
+<!-- d.  Total llama saliva (ml) expelled and gender of visitors -->
+<!-- e.  b and d -->
+<!-- **f. b and c** **All variables in b anc c are continuous. Dog breed and gender are categorical.** -->
 <!-- ::: -->
-<!-- #### Step 2: Setup the appropriate bits and pieces in RStudio -->
-<!-- Before we can do anything, we need tell R what packages we want to use. We use the function `library()` to do that. It is useful to have a section at the top of your script where you load all the relevant libraries. -->
-<!-- > Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'.In the code chunk, write code to load the libraries by using the `library()` function. We need the packages `here`, `tidyverse` and `easystats`. After you've written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk). -->
-<!-- ::: {.callout-note title="Hint"} -->
-<!-- ## Hint -->
-<!-- We need to load two packages (`here` and `tidyverse`) using the `library()` function. First, inside the code chunk, write `library()` and put `here` inside the brackets. On the next line in the code chunk, write `library()` and put `tidyverse` inside the brackets. On a third line in the code chunk, write `library()` and put `easystats` inide the brackets. -->
+<!-- #### Question 2: Revision and exam marks -->
+<!-- Forty students reported how many hours per week they spent revising and then sat an exam. -->
+<!-- ![](files/week5/fig1_outliers.png){fig-alt="Histogram of weekly revision hours, histogram of exam marks, and a scatterplot of exam mark against revision hours." width=100%} -->
+<!-- a. Look at the two histograms only. Does any student look unusual? Note anything you see. -->
+<!-- b. Now look at the scatterplot. Which students do not fit the overall pattern? Describe each one, giving their approximate revision hours and exam mark. -->
+<!-- c. Why can the scatterplot reveal something the histograms cannot? -->
+<!-- d. Before running any analysis, what should you check about these students? Give two possible explanations for their scores. -->
+<!-- e. If you calculated Pearson's *r* for all 40 students, and then again without these students, would *r* get higher, lower or stay the same? Explain your reasoning. -->
+<!-- ::: {.callout-note title="Question 2: Answer" icon=false collapse="true"} -->
+<!-- **a.** Nothing clearly wrong. There are isolated bars at the ends of both histograms (about 5 and 25 hours; about 35 and 88 per cent), but each value is plausible on its own and nothing says that those bars belong to the same students. -->
+<!-- **b.** Two students. -->
+<!-- - **Participant 7:** about 5 hours of revision but a mark of about 88%, much higher than the pattern predicts. -->
+<!-- - **Participant 23:** about 25 hours of revision but a mark of about 35%, much lower than the pattern predicts. -->
+<!-- Both go against the positive trend shown by the other students. -->
+<!-- **c.** The histograms show each variable on its own, and both students have values that are unusual but not impossible for each variable. They are only unusual in combination, which can only be seen when the two variables are plotted together. -->
+<!-- **d.** Check for data-entry errors, such as typos, swapped or mismatched IDs, and misread marks. Other possibilities are a genuine but atypical participant (for example, prior knowledge from an earlier course, illness on the exam day, or a resit student) and a misunderstanding of the question about revision. The key message is to investigate and document, and not to delete cases just because they make the result awkward. -->
+<!-- **e.** *r* would get higher. It looks like there may be a strong positive relationship without participants 7 and 23. I'd estimate *r* to be between .55 and .70. With the two students included, *r* is likely to be smaller as their datapoints go against the pattern of the rest of the sample. -->
+<!-- *Link to the lecture:* in the simulation, a few participants who were extreme on both measures made about 20% of samples significant when there was no real relationship. Here the same kind of case has the opposite effect, masking a real relationship. -->
 <!-- ::: -->
-<!-- #### Step 3: Read in the data -->
-<!-- The next step is to read in the data file. This is a file of the type `.csv`, so we'll use the function `read_csv()` to do this. Inside the function, we tell R where to find the file and what it is called. -->
-<!-- > Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'. Inside the chunk, use `read_csv()` to read in the data. -->
-<!-- ::: {.callout-note title="Hint"} -->
-<!-- ## Hint -->
-<!-- `dataframe <- read_csv(here("filepath to folder", "filename.extension))` -->
-<!-- Your code should include: -->
-<!-- dataframe: the name of the object you want to save the data in (such as `data_mw_subscales`) \<- : assignment arrow read_csv() : the `read_csv()` function here(): the \`here() function "filepath to folder": the folders that you need to point R to starting from your project root folder "filename.extention": the name of the datafile, including the extension -->
+<!-- #### Question 3: Arousal and task performance -->
+<!-- Sixty participants completed a memory task. Before the task, each was given a score for how aroused (alert and activated) they felt. -->
+<!-- ![](files/week5/fig2_curved.png){fig-alt="Histogram of arousal scores, histogram of task performance, and a scatterplot of performance against arousal." width=100%} -->
+<!-- a. Describe the relationship between arousal and performance in words. -->
+<!-- b. Look at the histograms. Do they suggest any problem with using Pearson's *r*? -->
+<!-- c. Without calculating anything, would you expect Pearson's *r* to be strong and positive, strong and negative, or close to zero? Explain why. -->
+<!-- d. Which assumption is violated here? Would switching to Spearman's rho solve the problem? Why or why not? -->
+<!-- e. What does this example tell you about reporting a correlation coefficient without looking at the scatterplot? -->
+<!-- ::: {.callout-note title="Question 3: Answer" icon=false collapse="true"} -->
+<!-- **a.** An inverted U. Performance is lowest at very low and very high arousal, and highest at moderate arousal (around 40 to 60). -->
+<!-- **b.** Not really. The arousal histogram is roughly symmetrical, and the performance histogram has a slight tail towards low scores. Neither shows the curve. -->
+<!-- **c.** Close to zero. The positive trend on the left of the plot cancels out the negative trend on the right. -->
+<!-- **d.** **Linearity.** Spearman's rho will not help, because the relationship is not monotonic: it rises and then falls. -->
+<!-- **e.** A coefficient alone can hide a strong relationship. Always plot the data first. A correlation near zero means "no linear relationship", not "no relationship". -->
 <!-- ::: -->
-<!-- > Action: Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') that is named `data_mw_subscales` in the Environment (top right quadrant). -->
-<!-- #### Step 4: Check for missing data -->
-<!-- #### Step 5: Build scatterplots -->
-<!-- Now we are ready to create a scatterplot to visualise the relationship between two of the variables. We are going to look at the relationship between 'unintentional mind wandering' and 'meta-awareness of mind wandering' -->
-<!-- The function we use for that (and for a lot of other plots you'll make for research methods and stats) is `ggplot()`. Inside the function we tell R which data to use and which variables to map onto the x-axis and the y-axis of the scatterplot. -->
-<!-- > Action: Insert a new code chunk and use `ggplot()` to tell R what data to plot and which variables tot use. The 'unintentional mind wandering' score is stored in the variable `BMW3_UN`; we'll put that variable on the x-axis. The 'meta-awareness of mind wandering' score is stored in the variable `BMW3_ME`; we'll put that variable on the y-axis. Then, add layers to plot the datapoints (use `geom_point()`) and the line of best fit (use `geom_smooth(method="lm", se=TRUE)`). -->
-<!-- ::: {.callout-note title="Hint"} -->
-<!-- ## Hint -->
-<!-- Use the function `ggplot()`. Start by writing `ggplot()` on the next line of the code chunk. Inside the `ggplot()` function, we need to tell R which data-frame (`data=`) and which variable to use (`mapping=aes(x= , y= ))`). -->
-<!-- Then, we need to tell R what type of plot we want. We do this by adding a `+` to the line on which you've written `ggplot()`, then on the next line you add a 'geometric object', in this case `geom_point()`. -->
-<!-- We also want to add a line of best fit. We do this by adding a `+` to the line on which you've written `geom_point()`, then on the next line you add another 'geometric object', in this case `geom_smooth()`. We want to specify what type of line of best fit, we do this by adding `method="lm", se=TRUE` inside the brackets of `geom_smooth()`. -->
-<!-- This will give you a basic scatterplot. Revisit the lab activity code from week 1 to remind yourself how to change any of the features (such as the colour, the background, add titles to the axes etc.). -->
+<!-- #### Question 4: Age and vocabulary -->
+<!-- Eighty children aged between 6 and 16 took a vocabulary test. -->
+<!-- ![](files/week5/fig3_fan.png){fig-alt="Histogram of age, histogram of vocabulary size, and a scatterplot of vocabulary size against age." width=100%} -->
+<!-- a. Compare the spread of vocabulary scores for children aged about 7 to 8 with those aged about 13 to 15. Give approximate ranges for each group. -->
+<!-- b. Which assumption is violated? Name it and describe what is wrong in your own words. -->
+<!-- c. Could you have spotted this problem from the two histograms alone? Explain. -->
+<!-- d. Why might this problem affect the *p*-value for Pearson's *r*? -->
+<!-- e. The spread of vocabulary scores grows roughly in proportion to the average score. Suggest one thing you could try. -->
+<!-- ::: {.callout-note title="Question 4: Answer" icon=false collapse="true"} -->
+<!-- **a.** Around 7 to 8 years, scores are roughly 1,200 to 2,000 words (a range of about 800). Around 13 to 15 years, they are roughly 2,900 to 5,800 (a range of nearly 3,000). The spread is clearly larger for older children. -->
+<!-- **b.** **Homoscedasticity** (equal spread). The spread of Y is not constant across X: the scatter fans out as age increases. -->
+<!-- **c.** No. Both histograms look reasonably bell-shaped, and nothing about them suggests a problem. The unequal spread is a feature of the *relationship*, which only the scatterplot shows. -->
+<!-- **d.** Because Pearson's *r* assumes the spread is similar at every value of X. When it isn't, the *p*-value can be inaccurate. In the lecture simulation, funnel-shaped data produced about twice as many false positives as expected when there was no real relationship. -->
+<!-- **e.** Spearman's rho is an option, but it only partly helps with unequal spread. Analysing age groups separately is a possibility. There are other options you'll learn about later (using regression or log-transforming the data). -->
 <!-- ::: -->
-<!-- #### Step 6: Build qq-plots -->
-<!-- #### Step 7: Remove outliers using `filter()` -->
-<!-- #### Step 8: Calculate and interpret Pearson's r using `correlation()` -->
-<!-- #### Step 9: Calculate and interpret Spearman's rho using `correlation()` -->
-<!-- #### Step 10: Report the correlation analysis following APA conventions -->
+<!-- #### Question 5: Reaction time and social media use -->
+<!-- Eighty participants completed a reaction-time task and reported how many hours per week they spend on social media. Figure 4a shows the raw data. -->
+<!-- ![**Figure 5a.** Raw data.](files/week5/fig4a_skewed.png){fig-alt="Histogram of reaction time, histogram of social media hours per week, and a scatterplot of social media hours against reaction time." width=100%} -->
+<!-- a. Describe the shape of each histogram. -->
+<!-- b. Does the scatterplot look like an oval, bell-shaped cloud? Which assumption(s) appear to be violated? -->
+<!-- c. In the lecture simulations, what happened to the false-positive rate when variables were skewed but unrelated? What would you still want to check in the scatterplot? -->
+<!-- Figure 4b shows the same data after taking the natural log of both variables. Transforming the the data in this way is common approach for heavily skewed data. -->
+<!-- ![**Figure 5b.** The same data on a log scale.](files/week5/fig4b_logged.png){fig-alt="Histograms and a scatterplot of the same data after a log transformation." width=100%} -->
+<!-- d. What has changed? Has the transformation solved every problem? -->
+<!-- e. Give one advantage and one disadvantage of log-transforming the data. -->
+<!-- ::: {.callout-note title="Question 5: Answer icon=false collapse="true"} -->
+<!-- **a.** Both are strongly right-skewed. Reaction time peaks around 300 to 400 ms with a long tail to about 1,700 ms. Social media use peaks at under 10 hours per week with a long tail to about 140 hours. -->
+<!-- **b.** No. Most points are crowded at the lower left, with a few extreme points scattered to the right and above. The main problem is **non-normality** of both variables (skew), and the few extreme points could have a large influence on *r*. -->
+<!-- **c.** When skewed variables were independent, the false-positive rate stayed at about 5%, so the test was robust to skew. However, you should still check the scatterplot for extreme points that might have a large influence, and for any curvature. -->
+<!-- **d.** Both histograms are more symmetrical, and the scatterplot is a more evenly spread cloud, with no extreme points dominating. It isn't perfect: reaction time is still slightly right-skewed after the log transform. -->
+<!-- **e.** *Advantage:* it keeps all the information in the data, and often makes proportional relationships linear and spreads even. It is also common for variables like reaction times. *Disadvantage:* results are on a log scale, so they are harder to interpret and to explain, and it can't be used for zero or negative values without adjustment. -->
+<!-- ::: -->
+<!-- ### Lab activity 3: -->
+<!-- **Questions Step 2** -->
+<!-- a. How many participants does the data frame `data_thirty` contain? -->
+<!-- b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables `vocabulary` and `experience` using the `data_thirty` data frame? -->
+<!-- ::: {.callout-note title="Questions Step 3: Answers icon="false" collapse="true"} -->
+<!-- a. The `data_thirty` data frame contains data from 30 participants. We can see this from the number of rows (or obs.) it has. -->
+<!-- b. The degrees of freedom for a correlation analysis are determined by the sample size (N) minus 2. If all participants had complete data, we would expect the degrees of freedom to be 30-2 = 28. -->
+<!-- ::: -->
+<!-- **Questions Step 3** -->
+<!-- a. How many data points are missing? -->
+<!-- b. How many participants have complete data? -->
+<!-- c. How many degrees of freedom are reported in the output from the correlation analysis. Explain how that number is derived. Does it match what you expected to see based on the number of participants? -->
+<!-- ::: {.callout-note title="Questions Step 4: Answers" icon="false" collapse="true"} -->
+<!-- a. There are 6 missing data points. -->
+<!-- b. The data frame contains 25 participants who have complete data. -->
+<!-- c. The degrees of freedom reported in the output from the correlation analysis is 23. Because only 25 participants have complete data and correlation analysis requires participants to contribute a data point on each variable, the other participants are dropped from the analysis. This leaves us with N=25-2 = 23 degrees of freedom. -->
+<!-- ::: -->
+<!-- ### Lab activity 4: -->
+<!-- **Questions Step 3** -->
+<!-- a. Looking at the line of best fit in the first scatterplot (which included the participants with outlier values), how would you describe the relationship between revision hours and exam mark? -->
+<!-- b. What do you estimate the value of the correlation coefficient to be? -->
+<!-- c. Looking at the line of best fit in the second scatterplot (without the participants with outlier values), how would you describe the relationship between revision hours and exam mark now? -->
+<!-- d. What do you estimate the value of the correlation coefficient to be now? -->
+<!-- ::: {.callout-note title="Questions Step 3: Answers" icon="false" collapse="true"} -->
+<!-- a. The line of best fit is a horizontal line, suggesting there is no relationship between revision hours and exam mark. -->
+<!-- b. The correlation coefficient is likely around 0. -->
+<!-- c. The line of best fit suggest a positive relationship between revision hours and exam mark. People who spent more hours revising, performed better in the exam. -->
+<!-- d. As the datapoints are relatively close to the line, the correlation coefficient is likely to between .60 and .70. -->
+<!-- ::: -->
+<!-- **Questions Step 4** -->
+<!-- a. What is *r* for the relationship between revision hours and exam mark when using the data that includes participants with outlier values? Is it significant? -->
+<!-- b. What is *r* for the relationship between revision hours and exam mark when using the data that does not include participants with outlier values? Is it significant? -->
+<!-- ::: {.callout-note title="Questions Step 4: Answers" icon="false" collapse="true"} -->
+<!-- a. Using the full data set we found no significant correlation between weekly revision hours and exam marks, *r*(38) = .05, *p* = .757. -->
+<!-- b. After removing two participants, there was a strong positive correlation between weekly revision hours and exam marks, *r*(36) = .67, *p* < .001. People who revised for more hours, scored higher on the exam. -->
+<!-- ::: -->
+<!-- ### Lab activity 5: -->
+<!-- **Questions Step 3** -->
+<!-- a. What is the value for Pearson's *r*, is it significant? -->
+<!-- b. What is the value for Spearman's *rho*, is it significant? -->
+<!-- c. What is the correct correlation coefficient to use. Explain why. -->
+<!-- ::: {.callout-note title="Questions Step 3: Answers" icon="false" collapse="true"} -->
+<!-- a. Pearson: *r*(58) = .23, *p* = .079, which is not significant. -->
+<!-- b. Spearman: *rho*(58) = .60, p < .001, which is significant. -->
+<!-- c. The main reason is that one variable (`reading_enjoyment`) is ordinal. A single rating item has ordered categories, but nobody can say that the step from 1 to 2 equals the step from 4 to 5. Pearson’s *r* assumes equal intervals. In the scatterplot, the points fall in five vertical stripes instead of a cloud, which is a sign of ordinal data. -->
+<!-- Additionally, the other variable (`books_read`) is a skewed count. Most people read a handful of books, but two heavy readers (48 and 56 books) are far from everyone else. Those two sit at middling enjoyment ratings, so they pull a straight line away from the real trend. Because Spearman's *rho* is based on ranks, it is less affected by those values and the overall trend is captured more accurately. -->
+<!-- ::: -->
 
 
-</section>
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
