@@ -633,9 +633,9 @@ Hint
 </section>
 <section id="step-2-read-in-the-data" class="level4">
 <h4 class="anchored" data-anchor-id="step-2-read-in-the-data">Step 2: Read in the data</h4>
-<p>For this lab activity, you’ll need the file named <code>correlation_n030_md.csv</code>.</p>
+<p>For this lab activity, you’ll need the file named <code>vocabulary_experience.csv</code>.</p>
 <blockquote class="blockquote">
-<p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’. Inside the chunk, use <code>read_csv()</code> to read in the data file named <code>correlation_n030_md.csv</code>; tell R where to find the file and what it is called. Make sure you’ve run the code chunk. Then, check that you can see the ‘object’ (also called ‘data-frame’) in the Environment (top right quadrant) for the file you read in. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.</p>
+<p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’. Inside the chunk, use <code>read_csv()</code> to read in the data file named <code>vocabulary_experience.csv</code>; tell R where to find the file and what it is called. Make sure you’ve run the code chunk. Then, check that you can see the ‘object’ (also called ‘data-frame’) in the Environment (top right quadrant) for the file you read in. I’ve called the data-frame <code>data_thirty</code>. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
@@ -674,11 +674,11 @@ Code
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data_thirty <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"4141_wk5_lab"</span>, <span class="st">"correlation_n030_md.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data_thirty <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"4141_wk5_lab"</span>, <span class="st">"vocabulary_experience.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-<p><strong>Questions Step 2</strong> a. How many participants does the data frame <code>data_thirty</code> contain? b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables <code>vocabulary</code> and <code>experience</code> using the <code>data_thirty</code> data frame?</p>
+<p><strong>Questions Step 2</strong> a. How many participants does the data frame contain? b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables <code>vocabulary</code> and <code>experience</code> using this data frame?</p>
 </section>
 <section id="step-3-check-for-missing-data" class="level4">
 <h4 class="anchored" data-anchor-id="step-3-check-for-missing-data">Step 3: Check for missing data</h4>

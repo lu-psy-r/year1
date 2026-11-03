@@ -25,11 +25,12 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 ### Step 2: Reading in the data file
 
-> Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'. Inside the chunk, use `read_csv()` to read in the data. Repeat this for each data file. Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') in the Environment (top right quadrant) for the file you read in. If you can't remember how to do this, look at the Hint on the handbook pages. Give it a go. If you are still stuck, look at the Code on the handbook pages. You may have to adapt the filepath to match your setup.
+> Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'. Inside the chunk, use `read_csv()` to read in the data file named `vocabulary_experience.csv`; tell R where to find the file and what it is called. Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') in the Environment (top right quadrant) for the file you read in. I've called the data-frame `data_thirty`. If you can't remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.
 
 
-
-**Questions Step 2** a. How many participants does the data frame `data_thirty` contain? b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables `vocabulary` and `experience` using the `data_thirty` data frame?
+**Questions Step 2**
+a. How many participants does the data frame contain?
+b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables `vocabulary` and `experience` using this data frame?
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
@@ -88,3 +89,39 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 **Questions Step 4** a. What is *r* for the relationship between revision hours and exam mark when using the data that includes participants with outlier values? Is it significant? b. What is *r* for the relationship between revision hours and exam mark when using the data that does not include participants with outlier values? Is it significant?
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+## Lab activity 5: Spearman's rho
+
+#### Step 1:  Read in the data file
+
+> Action: Insert a new code chunk and use `read_csv()` to read in the data file named `reading_enjoyment_books.csv`; tell R where to find the file and what it is called. Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') in the Environment (top right quadrant) for the file you read in.
+
+
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 2: Build a scatterplot using `geom_jitter()` instead of `geom_point()`
+
+> Action: Insert a new code chunk and use `ggplot()` to tell R what data to plot and which variables tot use. Then, add layers to plot the datapoints (use `geom_point()`) and the line of best fit (use `geom_smooth(method="lm", se=TRUE)`). If you need more guidance on how to do this, look at the Hint below. If you are still stuck, you can look at the code you wrote for Lab activity 4, Step 2.
+
+
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+> Action: Instead of using `geom_point()` in the scatterplot, try `geom_jitter(width = 0.1, height = 0, alpha = 0.6)`.
+
+
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 3: Calculate and interpret Pearson's *r* and Spearman's *rho* using `correlation()`
+
+> Action: Run two correlation analyses: one with Pearson's *r*, the other one with Spearman's *rho*. If you can't remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the code you wrote for Lab activity 3, Step 3. When calculating Spearman's *rho*, specify "spearman" under method instead of "pearson".
+
+
+
+**Questions Step 3**
+a. What is the value for Pearson's *r*, is it significant?
+b. What is the value for Spearman's *rho*, is it significant?
+c. What is the correct correlation coefficient to use. Explain why.
+
