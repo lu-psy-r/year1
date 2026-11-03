@@ -313,9 +313,9 @@ We need to load several packages (`here`, `tidyverse` and `easystats`) using the
 
 #### Step 2: Read in the data
 
-For this lab activity, you'll need the file named `correlation_n030_md.csv`.
+For this lab activity, you'll need the file named `vocabulary_experience.csv`.
 
-> Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'. Inside the chunk, use `read_csv()` to read in the data file named `correlation_n030_md.csv`; tell R where to find the file and what it is called. Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') in the Environment (top right quadrant) for the file you read in. If you can't remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.
+> Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'. Inside the chunk, use `read_csv()` to read in the data file named `vocabulary_experience.csv`; tell R where to find the file and what it is called. Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') in the Environment (top right quadrant) for the file you read in. I've called the data-frame `data_thirty`. If you can't remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.
 
 ::: {.callout-note title="Hint" collapse="true"}
 `dataframe <- read_csv(here("filepath to folder", "filename.extension))`
@@ -332,13 +332,13 @@ Your code should include:
 
 ::: {.callout-note title="Code" collapse="true"}
 ```r
-data_thirty <- read_csv(here("4141_wk5_lab", "correlation_n030_md.csv"))
+data_thirty <- read_csv(here("4141_wk5_lab", "vocabulary_experience.csv"))
 ```
 :::
 
 **Questions Step 2**
-a. How many participants does the data frame `data_thirty` contain?
-b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables `vocabulary` and `experience` using the `data_thirty` data frame?
+a. How many participants does the data frame contain?
+b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables `vocabulary` and `experience` using this data frame?
 
 #### Step 3: Check for missing data
 
