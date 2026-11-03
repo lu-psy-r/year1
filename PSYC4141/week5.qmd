@@ -322,7 +322,7 @@ For this lab activity, you'll need the file named `vocabulary_experience.csv`.
 
 Your code should include:
 
-- dataframe: the name of the object you want to save the data in (such as `data_mw_subscales`) 
+- dataframe: the name of the object you want to save the data in (such as `data_thirty`) 
 - <- : assignment arrow
 - read_csv() : the `read_csv()` function
 - here(): the `here()` function
@@ -337,6 +337,7 @@ data_thirty <- read_csv(here("4141_wk5_lab", "vocabulary_experience.csv"))
 :::
 
 **Questions Step 2**
+
 a. How many participants does the data frame contain?
 b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables `vocabulary` and `experience` using this data frame?
 
@@ -345,15 +346,15 @@ b. How many degrees of freedom would you expect to see in the output if you were
 We can check whether there are any missing data in a data-frame in multiple ways:
 
 1. We can click on the data frame in the Environment (upper right quadrant). The data frame will then open in the Source quadrant (upper left quadrant). Any 'empty' cells will have an `NA` (which stands for 'Not available') in them.
-2. We can use the `glimpse` function. This gives a compact overview of the data frame, showing the number of rows and columns, then each variable's name, its type (such as `<dbl>` for numbers or `<chr>` for text) and its first few values, so you can quickly check that the data have been read in correctly. Missing data are shown as [`NA`]{style="color: red"}.
-3. We can use some code to check how many missing data points a data frame contains. For this we use the `is.na`() function inside the `sum`() function.
-4. We can use some code to check how many participants have complete data. For this we use the `complete.cases`() function inside the `sum`() function.
+2. We can use the `glimpse()` function. This gives a compact overview of the data frame, showing the number of rows and columns, then each variable's name, its type (such as `<dbl>` for numbers or `<chr>` for text) and its first few values, so you can quickly check that the data have been read in correctly. Missing data are shown as [NA]{style="color: red"}.
+3. We can use some code to check how many missing data points a data frame contains. For this we use the `is.na()` function inside the `sum()` function.
+4. We can use some code to check how many participants have complete data. For this we use the `complete.cases()` function inside the `sum()` function.
 
 > Actions:
 1. Click on the data frame in the Environment and have a look at it in the Source quadrant.
-2. Use the `glimpse`() function to have a look at the data frame.
-3. Use the `is.na`() function in combination with the `sum`() function to check how many NAs there are.
-4. Use the `complete.cases`() function in combination with the `sum`() function to check how many participants have complete data.
+2. Use the `glimpse()` function to have a look at the data frame.
+3. Use the `is.na()` function in combination with the `sum()` function to check how many NAs there are.
+4. Use the `complete.cases()` function in combination with the `sum()` function to check how many participants have complete data.
 You can use the code below to do this. Have a look at each line of code and make sure you understand what the different bits are doing.
 
 ```r
@@ -391,6 +392,7 @@ results
 :::
 
 **Questions Step 3**
+
 a. How many data points are missing?
 b. How many participants have complete data?
 c. How many degrees of freedom are reported in the output from the correlation analysis. Explain how that number is derived. Does it match what you expected to see based on the number of participants?
@@ -439,7 +441,7 @@ ggplot(data = data_revision_exam, mapping = aes(x=revision_hours, y=exam_mark)) 
 #### Step 3: Remove outliers using `filter()`, and create another scatterplot
 Now,we'll remove the two participants with outlier values. We'll do this using the `filter()` function from the `dplyr` package (part of the `tidyverse`).
 
-::: {.callout-tip title="How does `filter()` work"}
+::: {.callout-tip title="How does `filter()` work?"}
 The `filter()` function allows you to select specific rows from a data frame based on one or more conditions.
 
 For example, imagine we have a dataset containing information about participants in a psychology study, including their age and gender. We might want to select only participants who are over 18 years old.
@@ -496,6 +498,7 @@ data_revision_exam_clean <- filter(data_revision_exam, revision_hours >5 & revis
 
 
 **Questions Step 3**
+
 a. Looking at the line of best fit in the first scatterplot (which included the participants with outlier values), how would you describe the relationship between revision hours and exam mark?
 b. What do you estimate the value of the correlation coefficient to be?
 c. Looking at the line of best fit in the second scatterplot (without the participants with outlier values), how would you describe the relationship between revision hours and exam mark now?
@@ -546,13 +549,19 @@ We also want to add a line of best fit. We do this by adding a `+` to the line o
 This will give you a basic scatterplot. Revisit the lab activity code from week 1 to remind yourself how to change any of the features (such as the colour, the background, add titles to the axes etc.).
 :::
 
-Many of the participants gave the same rating and read the same number of books, so their points sit exactly on top of each other. `geom_jitter()` fixes this by moving each point a tiny random amount, so overlapping points spread out and you can see how many there are. You can tell R how to jitter the data points:
+Many of the participants gave the same rating and read the same number of books, so their points sit exactly on top of each other. `geom_jitter()` fixes this by moving each point a tiny random amount, so overlapping points spread out and you can see how many there are.
 
-- width = 0.1 is the largest random nudge to the left or right. Ratings are whole numbers, so a point at 3 is moved to somewhere between 2.9 and 3.1. This is small enough that the five vertical stripes stay clearly separate.
-- height = 0 means the points are not moved up or down. The number of books is a real count, so nudging points vertically would make the plot show values that aren’t in the data.
-- alpha = 0.6 makes the points partly transparent (0 is invisible and 1 is solid). Where points overlap, the colour becomes darker, which gives a second clue about where the data are concentrated.
+::: {.callout-tip title="How does `geom_jitter()` work?"}
+`geom_jitter()` moves each point a tiny random amount, so overlapping points spread out and you can see how many there are.
+
+You can tell R how to jitter the data points:
+
+- `width` = 0.1 is the largest random nudge to the left or right. Ratings are whole numbers, so a point at 3 is moved to somewhere between 2.9 and 3.1. This is small enough that the five vertical stripes stay clearly separate.
+- `height` = 0 means the points are not moved up or down. The number of books is a real count, so nudging points vertically would make the plot show values that aren’t in the data.
+- `alpha` = 0.6 makes the points partly transparent (0 is invisible and 1 is solid). Where points overlap, the colour becomes darker, which gives a second clue about where the data are concentrated.
 
 Jittering only changes how the plot looks. The data and the correlation are not affected.
+:::
 
 > Action: Instead of using `geom_point()` in the scatterplot, try `geom_jitter(width = 0.1, height = 0, alpha = 0.6)`.
 
@@ -571,6 +580,7 @@ Use the `correlation`() function we used last week. You need to specify the foll
 :::
 
 **Questions Step 3**
+
 a. What is the value for Pearson's *r*, is it significant?
 b. What is the value for Spearman's *rho*, is it significant?
 c. What is the correct correlation coefficient to use. Explain why.

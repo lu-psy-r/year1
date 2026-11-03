@@ -652,7 +652,7 @@ Hint
 <p><code>dataframe &lt;- read_csv(here("filepath to folder", "filename.extension))</code></p>
 <p>Your code should include:</p>
 <ul>
-<li>dataframe: the name of the object you want to save the data in (such as <code>data_mw_subscales</code>)</li>
+<li>dataframe: the name of the object you want to save the data in (such as <code>data_thirty</code>)</li>
 <li>&lt;- : assignment arrow</li>
 <li>read_csv() : the <code>read_csv()</code> function</li>
 <li>here(): the <code>here()</code> function</li>
@@ -678,19 +678,23 @@ Code
 </div>
 </div>
 </div>
-<p><strong>Questions Step 2</strong> a. How many participants does the data frame contain? b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables <code>vocabulary</code> and <code>experience</code> using this data frame?</p>
+<p><strong>Questions Step 2</strong></p>
+<ol type="a">
+<li>How many participants does the data frame contain?</li>
+<li>How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables <code>vocabulary</code> and <code>experience</code> using this data frame?</li>
+</ol>
 </section>
 <section id="step-3-check-for-missing-data" class="level4">
 <h4 class="anchored" data-anchor-id="step-3-check-for-missing-data">Step 3: Check for missing data</h4>
 <p>We can check whether there are any missing data in a data-frame in multiple ways:</p>
 <ol type="1">
 <li>We can click on the data frame in the Environment (upper right quadrant). The data frame will then open in the Source quadrant (upper left quadrant). Any ‘empty’ cells will have an <code>NA</code> (which stands for ‘Not available’) in them.</li>
-<li>We can use the <code>glimpse</code> function. This gives a compact overview of the data frame, showing the number of rows and columns, then each variable’s name, its type (such as <code>&lt;dbl&gt;</code> for numbers or <code>&lt;chr&gt;</code> for text) and its first few values, so you can quickly check that the data have been read in correctly. Missing data are shown as <span style="color: red"><code>NA</code></span>.</li>
-<li>We can use some code to check how many missing data points a data frame contains. For this we use the <code>is.na</code>() function inside the <code>sum</code>() function.</li>
-<li>We can use some code to check how many participants have complete data. For this we use the <code>complete.cases</code>() function inside the <code>sum</code>() function.</li>
+<li>We can use the <code>glimpse()</code> function. This gives a compact overview of the data frame, showing the number of rows and columns, then each variable’s name, its type (such as <code>&lt;dbl&gt;</code> for numbers or <code>&lt;chr&gt;</code> for text) and its first few values, so you can quickly check that the data have been read in correctly. Missing data are shown as <span style="color: red">NA</span>.</li>
+<li>We can use some code to check how many missing data points a data frame contains. For this we use the <code>is.na()</code> function inside the <code>sum()</code> function.</li>
+<li>We can use some code to check how many participants have complete data. For this we use the <code>complete.cases()</code> function inside the <code>sum()</code> function.</li>
 </ol>
 <blockquote class="blockquote">
-<p>Actions: 1. Click on the data frame in the Environment and have a look at it in the Source quadrant. 2. Use the <code>glimpse</code>() function to have a look at the data frame. 3. Use the <code>is.na</code>() function in combination with the <code>sum</code>() function to check how many NAs there are. 4. Use the <code>complete.cases</code>() function in combination with the <code>sum</code>() function to check how many participants have complete data. You can use the code below to do this. Have a look at each line of code and make sure you understand what the different bits are doing.</p>
+<p>Actions: 1. Click on the data frame in the Environment and have a look at it in the Source quadrant. 2. Use the <code>glimpse()</code> function to have a look at the data frame. 3. Use the <code>is.na()</code> function in combination with the <code>sum()</code> function to check how many NAs there are. 4. Use the <code>complete.cases()</code> function in combination with the <code>sum()</code> function to check how many participants have complete data. You can use the code below to do this. Have a look at each line of code and make sure you understand what the different bits are doing.</p>
 </blockquote>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Have a look at the data frame</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(data_thirty) </span>
@@ -747,7 +751,12 @@ Code
 </div>
 </div>
 </div>
-<p><strong>Questions Step 3</strong> a. How many data points are missing? b. How many participants have complete data? c.&nbsp;How many degrees of freedom are reported in the output from the correlation analysis. Explain how that number is derived. Does it match what you expected to see based on the number of participants?</p>
+<p><strong>Questions Step 3</strong></p>
+<ol type="a">
+<li>How many data points are missing?</li>
+<li>How many participants have complete data?</li>
+<li>How many degrees of freedom are reported in the output from the correlation analysis. Explain how that number is derived. Does it match what you expected to see based on the number of participants?</li>
+</ol>
 </section>
 </section>
 <section id="lab-activity-4-outliers" class="level3">
@@ -816,13 +825,13 @@ Code
 <section id="step-3-remove-outliers-using-filter-and-create-another-scatterplot" class="level4">
 <h4 class="anchored" data-anchor-id="step-3-remove-outliers-using-filter-and-create-another-scatterplot">Step 3: Remove outliers using <code>filter()</code>, and create another scatterplot</h4>
 <p>Now,we’ll remove the two participants with outlier values. We’ll do this using the <code>filter()</code> function from the <code>dplyr</code> package (part of the <code>tidyverse</code>).</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="How does `filter()` work">
+<div class="callout callout-style-default callout-tip callout-titled" title="How does `filter()` work?">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-How does <code>filter()</code> work
+How does <code>filter()</code> work?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -889,7 +898,13 @@ How does <code>filter()</code> work
 <blockquote class="blockquote">
 <p>Action: Now let make a scatterplot without the two participants with outlier values. As before, insert a new code chunk and use <code>ggplot()</code> to tell R what data to plot and which variables tot use. Make sure to use <code>data_revison_exam_clean</code>. Then, add layers to plot the datapoints (use <code>geom_point()</code>) and the line of best fit (use <code>geom_smooth(method="lm", se=TRUE)</code>).</p>
 </blockquote>
-<p><strong>Questions Step 3</strong> a. Looking at the line of best fit in the first scatterplot (which included the participants with outlier values), how would you describe the relationship between revision hours and exam mark? b. What do you estimate the value of the correlation coefficient to be? c.&nbsp;Looking at the line of best fit in the second scatterplot (without the participants with outlier values), how would you describe the relationship between revision hours and exam mark now? d.&nbsp;What do you estimate the value of the correlation coefficient to be now?</p>
+<p><strong>Questions Step 3</strong></p>
+<ol type="a">
+<li>Looking at the line of best fit in the first scatterplot (which included the participants with outlier values), how would you describe the relationship between revision hours and exam mark?</li>
+<li>What do you estimate the value of the correlation coefficient to be?</li>
+<li>Looking at the line of best fit in the second scatterplot (without the participants with outlier values), how would you describe the relationship between revision hours and exam mark now?</li>
+<li>What do you estimate the value of the correlation coefficient to be now?</li>
+</ol>
 </section>
 <section id="step-4-calculate-and-interpret-pearsons-r-using-correlation-for-data-with-and-without-outlier-values" class="level4">
 <h4 class="anchored" data-anchor-id="step-4-calculate-and-interpret-pearsons-r-using-correlation-for-data-with-and-without-outlier-values">Step 4: Calculate and interpret Pearson’s r using <code>correlation()</code> for data with and without outlier values</h4>
@@ -963,13 +978,27 @@ Hint
 </div>
 </div>
 </div>
-<p>Many of the participants gave the same rating and read the same number of books, so their points sit exactly on top of each other. <code>geom_jitter()</code> fixes this by moving each point a tiny random amount, so overlapping points spread out and you can see how many there are. You can tell R how to jitter the data points:</p>
+<p>Many of the participants gave the same rating and read the same number of books, so their points sit exactly on top of each other. <code>geom_jitter()</code> fixes this by moving each point a tiny random amount, so overlapping points spread out and you can see how many there are.</p>
+<div class="callout callout-style-default callout-tip callout-titled" title="How does `geom_jitter()` work?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How does <code>geom_jitter()</code> work?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>geom_jitter()</code> moves each point a tiny random amount, so overlapping points spread out and you can see how many there are.</p>
+<p>You can tell R how to jitter the data points:</p>
 <ul>
-<li>width = 0.1 is the largest random nudge to the left or right. Ratings are whole numbers, so a point at 3 is moved to somewhere between 2.9 and 3.1. This is small enough that the five vertical stripes stay clearly separate.</li>
-<li>height = 0 means the points are not moved up or down. The number of books is a real count, so nudging points vertically would make the plot show values that aren’t in the data.</li>
-<li>alpha = 0.6 makes the points partly transparent (0 is invisible and 1 is solid). Where points overlap, the colour becomes darker, which gives a second clue about where the data are concentrated.</li>
+<li><code>width</code> = 0.1 is the largest random nudge to the left or right. Ratings are whole numbers, so a point at 3 is moved to somewhere between 2.9 and 3.1. This is small enough that the five vertical stripes stay clearly separate.</li>
+<li><code>height</code> = 0 means the points are not moved up or down. The number of books is a real count, so nudging points vertically would make the plot show values that aren’t in the data.</li>
+<li><code>alpha</code> = 0.6 makes the points partly transparent (0 is invisible and 1 is solid). Where points overlap, the colour becomes darker, which gives a second clue about where the data are concentrated.</li>
 </ul>
 <p>Jittering only changes how the plot looks. The data and the correlation are not affected.</p>
+</div>
+</div>
 <blockquote class="blockquote">
 <p>Action: Instead of using <code>geom_point()</code> in the scatterplot, try <code>geom_jitter(width = 0.1, height = 0, alpha = 0.6)</code>.</p>
 </blockquote>
@@ -980,7 +1009,7 @@ Hint
 <p>Action: Run two correlation analyses: one with Pearson’s <em>r</em>, the other one with Spearman’s <em>rho</em>. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the code you wrote for Lab activity 3, Step 3. When calculating Spearman’s <em>rho</em>, specify “spearman” under method instead of “pearson”.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -989,7 +1018,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>correlation</code>() function we used last week. You need to specify the following information inside the <code>correlation</code>() function:</p>
 <ul>
@@ -1001,7 +1030,12 @@ Hint
 </div>
 </div>
 </div>
-<p><strong>Questions Step 3</strong> a. What is the value for Pearson’s <em>r</em>, is it significant? b. What is the value for Spearman’s <em>rho</em>, is it significant? c.&nbsp;What is the correct correlation coefficient to use. Explain why.</p>
+<p><strong>Questions Step 3</strong></p>
+<ol type="a">
+<li>What is the value for Pearson’s <em>r</em>, is it significant?</li>
+<li>What is the value for Spearman’s <em>rho</em>, is it significant?</li>
+<li>What is the correct correlation coefficient to use. Explain why.</li>
+</ol>
 </section>
 </section>
 </section>
