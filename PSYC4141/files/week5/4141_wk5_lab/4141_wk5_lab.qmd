@@ -3,15 +3,15 @@ title: "4141-w5-lab"
 editor: visual
 ---
 
-**IMPORTANT**
-How to use this script:
+**IMPORTANT** How to complete the lab activity and use the Quarto script:
 
-1) Open the handbook pages in a separate window or tab and navigate to Lab activity 3.
-2) Read the instructions on the handbook page for each step
-3) Carry out the actions, by inserting a code chunk in this script, below each Action.
-4) After having carried out an action and written a code chunk, go back to the handbook page and read the next bit of instruction, until you get to the next action.
-5) If you are stuck: Have a look at the 'Hints' and 'Code' examples on the handbook page.
-6) If you are still stuck: Ask for help (your peers on your table, the GTA or lecturer in the lab session, via the Moodle Q&A forum, during Friday's live online Q&A).
+1)  Open the handbook pages in a separate window or tab and navigate to *Lab activities*.
+2)  Read the instructions on the handbook page for each step.
+3)  Carry out the actions, by inserting a code chunk in the Quarto document, below each action.
+4)  If there are any questions associated with that step, please try to answer them. You can write your answer in the Quarto document, as plain text. Answers to the questions will be shared after the last lab session has taken place (on Thursday afternoon).
+5)  After having carried out an action, written a code chunk and answered any questions, go back to the handbook page and read the next bit of instruction, until you get to the next action.
+6)  If you are stuck: Have a look at the 'Hints' and 'Code' snippets on the handbook page.
+7)  If you are still stuck: Ask for help (your peers on your table, the GTA or lecturer in the lab session, via the Moodle Q&A forum, during Friday's live online Q&A).
 
 ## Lab activity 3: Checking missing data
 
@@ -19,18 +19,13 @@ How to use this script:
 
 > Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'.In the code chunk, write code to load the libraries by using the `library()` function. We need the packages `here`, `tidyverse` and `easystats`. After you've written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk).
 
-
-
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
 ### Step 2: Reading in the data file
 
 > Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'. Inside the chunk, use `read_csv()` to read in the data file named `vocabulary_experience.csv`; tell R where to find the file and what it is called. Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') in the Environment (top right quadrant) for the file you read in. I've called the data-frame `data_thirty`. If you can't remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.
 
-
-**Questions Step 2**
-a. How many participants does the data frame contain?
-b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables `vocabulary` and `experience` using this data frame?
+**Questions Step 2** a. How many participants does the data frame contain? b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables `vocabulary` and `experience` using this data frame?
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
@@ -38,11 +33,7 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Actions: 1. Click on the data frame in the Environment and have a look at it in the Source quadrant. 2. Use the `glimpse`() function to have a look at the data frame. 3. Use the `is.na`() function in combination with the `sum`() function to check how many NAs there are. 4. Use the `complete.cases`() function in combination with the `sum`() function to check how many participants have complete data. You can use the code on the handbook page to do this. Have a look at each line of code and make sure you understand what the different bits are doing.
 
-
-
 > Action: Run a correlation analysis with these data.
-
-
 
 **Questions Step 3** a. How many data points are missing? b. How many participants have complete data? c. How many degrees of freedom are reported in the output from the correlation analysis. Explain how that number is derived. Does it match what you expected to see based on the number of participants?
 
@@ -54,15 +45,11 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Insert a new code chunk and use `read_csv()` to read in the data file named `revision_exam.csv`; tell R where to find the file and what it is called. Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') in the Environment (top right quadrant) for the file you read in.
 
-
-
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
 ### Step 2: Build a scatterplot
 
 > Action: Insert a new code chunk and use `ggplot()` to tell R what data to plot and which variables tot use. Then, add layers to plot the datapoints (use `geom_point()`) and the line of best fit (use `geom_smooth(method="lm", se=TRUE)`). If you need more guidance on how to do this, look at the Hint on the handbook page. If you are still stuck, you can look at the Code on the handbook page.
-
-
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
@@ -70,11 +57,7 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Use `filter()` to remove the two participants with outlier values. We can do this by specifying that we only want to keep data from participants who revised for more than 5, but less than 25 hours. The code below does this. You can copy the code into your script. Please have a close look and, using the information above, make sure you understand what each part of the code does.
 
-
-
 > Action: Now let make a scatterplot without the two participants with outlier values. As before, insert a new code chunk and use `ggplot()` to tell R what data to plot and which variables tot use. Make sure to use `data_revision_exam_clean`. Then, add layers to plot the datapoints (use `geom_point()`) and the line of best fit (use `geom_smooth(method="lm", se=TRUE)`).
-
-
 
 **Questions Step 3** a. Looking at the line of best fit in the first scatterplot (which included the participants with outlier values), how would you describe the relationship between revision hours and exam mark? b. What do you estimate the value of the correlation coefficient to be? c. Lookinag at the line of best fit in the second scatterplot (without the participants with outlier values), how would you describe the relationship between revision hours and exam mark now? d. What do you estimate the value of the correlation coefficient to be now?
 
@@ -84,19 +67,15 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Run two correlation analyses: one with the data with (`data_revision_exam`) and one with the data without (`data_revision_exam_clean`) outlier values. If you can't remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the code you wrote for Lab activity 3, Step 3.
 
-
-
 **Questions Step 4** a. What is *r* for the relationship between revision hours and exam mark when using the data that includes participants with outlier values? Is it significant? b. What is *r* for the relationship between revision hours and exam mark when using the data that does not include participants with outlier values? Is it significant?
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
 ## Lab activity 5: Spearman's rho
 
-#### Step 1:  Read in the data file
+#### Step 1: Read in the data file
 
 > Action: Insert a new code chunk and use `read_csv()` to read in the data file named `reading_enjoyment_books.csv`; tell R where to find the file and what it is called. Make sure you've run the code chunk. Then, check that you can see the 'object' (also called 'data-frame') in the Environment (top right quadrant) for the file you read in.
-
-
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
@@ -104,13 +83,9 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Insert a new code chunk and use `ggplot()` to tell R what data to plot and which variables tot use. Then, add layers to plot the datapoints (use `geom_point()`) and the line of best fit (use `geom_smooth(method="lm", se=TRUE)`). If you need more guidance on how to do this, look at the Hint below. If you are still stuck, you can look at the code you wrote for Lab activity 4, Step 2.
 
-
-
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
 > Action: Instead of using `geom_point()` in the scatterplot, try `geom_jitter(width = 0.1, height = 0, alpha = 0.6)`.
-
-
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
@@ -118,10 +93,4 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Run two correlation analyses: one with Pearson's *r*, the other one with Spearman's *rho*. If you can't remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the code you wrote for Lab activity 3, Step 3. When calculating Spearman's *rho*, specify "spearman" under method instead of "pearson".
 
-
-
-**Questions Step 3**
-a. What is the value for Pearson's *r*, is it significant?
-b. What is the value for Spearman's *rho*, is it significant?
-c. What is the correct correlation coefficient to use. Explain why.
-
+**Questions Step 3** a. What is the value for Pearson's *r*, is it significant? b. What is the value for Spearman's *rho*, is it significant? c. What is the correct correlation coefficient to use. Explain why.

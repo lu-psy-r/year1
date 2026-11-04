@@ -297,9 +297,25 @@ We are going to:
 3.  Check for missing data
 4.  Calculate and interpret Pearson's r using `correlation()`
 
-<!-- ::: callout-tip -->
-<!-- Information on this lab activity will follow soon. -->
-<!-- ::: -->
+::: {.callout-tip title="Where are the download links?"}
+From now on, links to the files to be downloaded are in the [Pre-lab activities section](@sec-4141-w5-prelab-activities) under Getting ready.
+:::
+
+:::  {.callout-important title="How to use the Quarto document?"}
+Following feedback on the way we presented instructions and guidance across the handbook pages and the Quarto document, we've made the following change: **All instructions and guidance (including hints and code snippets) for lab activities are now presented on the handbook page.**
+
+The Quarto document is largely empty, only containing a copy of the section headers and the *Actions* to remind you of what you are meant to do. Sometimes there are questions associated with the code you've written or the output that follows from it. These can also be found on both the handbook page and in the Quarto document.
+
+How to complete the lab activity and use the Quarto script:
+
+1)  Open the handbook pages in a separate window or tab and navigate to *Lab activities*.
+2)  Read the instructions on the handbook page for each step.
+3)  Carry out the actions, by inserting a code chunk in the Quarto document, below each action.
+4)  If there are any questions associated with that step, please try to answer them. You can write your answer in the Quarto document, as plain text. Answers to the questions will be shared after the last lab session has taken place (on Thursday afternoon).
+5)  After having carried out an action, written a code chunk and answered any questions, go back to the handbook page and read the next bit of instruction, until you get to the next action.
+6)  If you are stuck: Have a look at the 'Hints' and 'Code' snippets on the handbook page.
+7)  If you are still stuck: Ask for help (your peers on your table, the GTA or lecturer in the lab session, via the Moodle Q&A forum, during Friday's live online Q&A).
+:::
 
 #### Step 1: Setup the appropriate bits and pieces in RStudio
 

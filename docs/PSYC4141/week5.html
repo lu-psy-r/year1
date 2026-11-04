@@ -604,9 +604,43 @@ Tip
 <li>Check for missing data</li>
 <li>Calculate and interpret Pearson’s r using <code>correlation()</code></li>
 </ol>
-<!-- ::: callout-tip -->
-<!-- Information on this lab activity will follow soon. -->
-<!-- ::: -->
+<div class="callout callout-style-default callout-tip callout-titled" title="Where are the download links?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Where are the download links?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>From now on, links to the files to be downloaded are in the <a href="@sec-4141-w5-prelab-activities">Pre-lab activities section</a> under Getting ready.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="How to use the Quarto document?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How to use the Quarto document?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Following feedback on the way we presented instructions and guidance across the handbook pages and the Quarto document, we’ve made the following change: <strong>All instructions and guidance (including hints and code snippets) for lab activities are now presented on the handbook page.</strong></p>
+<p>The Quarto document is largely empty, only containing a copy of the section headers and the <em>Actions</em> to remind you of what you are meant to do. Sometimes there are questions associated with the code you’ve written or the output that follows from it. These can also be found on both the handbook page and in the Quarto document.</p>
+<p>How to complete the lab activity and use the Quarto script:</p>
+<ol type="1">
+<li>Open the handbook pages in a separate window or tab and navigate to <em>Lab activities</em>.</li>
+<li>Read the instructions on the handbook page for each step.</li>
+<li>Carry out the actions, by inserting a code chunk in the Quarto document, below each action.</li>
+<li>If there are any questions associated with that step, please try to answer them. You can write your answer in the Quarto document, as plain text. Answers to the questions will be shared after the last lab session has taken place (on Thursday afternoon).</li>
+<li>After having carried out an action, written a code chunk and answered any questions, go back to the handbook page and read the next bit of instruction, until you get to the next action.</li>
+<li>If you are stuck: Have a look at the ‘Hints’ and ‘Code’ snippets on the handbook page.</li>
+<li>If you are still stuck: Ask for help (your peers on your table, the GTA or lecturer in the lab session, via the Moodle Q&amp;A forum, during Friday’s live online Q&amp;A).</li>
+</ol>
+</div>
+</div>
 </section>
 <section id="step-1-setup-the-appropriate-bits-and-pieces-in-rstudio" class="level4">
 <h4 class="anchored" data-anchor-id="step-1-setup-the-appropriate-bits-and-pieces-in-rstudio">Step 1: Setup the appropriate bits and pieces in RStudio</h4>
@@ -615,7 +649,7 @@ Tip
 <p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’.In the code chunk, write code to load the libraries by using the <code>library()</code> function. We need the packages <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. After you’ve written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk).</p>
 </blockquote>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -624,7 +658,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>We need to load several packages (<code>here</code>, <code>tidyverse</code> and <code>easystats</code>) using the <code>library()</code> function. First, inside the code chunk, write <code>library()</code> and put <code>here</code> inside the brackets. On the next line in the code chunk, write <code>library()</code> and put <code>tidyverse</code> inside the brackets. On a third line in the code chunk, write <code>library()</code> and put <code>easystats</code> inside the brackets. Make sure to run the code chunk by clicking on the green arrow in the top corner of the code chunk.</p>
 </div>
@@ -638,7 +672,7 @@ Hint
 <p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’. Inside the chunk, use <code>read_csv()</code> to read in the data file named <code>vocabulary_experience.csv</code>; tell R where to find the file and what it is called. Make sure you’ve run the code chunk. Then, check that you can see the ‘object’ (also called ‘data-frame’) in the Environment (top right quadrant) for the file you read in. I’ve called the data-frame <code>data_thirty</code>. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -647,7 +681,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><code>dataframe &lt;- read_csv(here("filepath to folder", "filename.extension))</code></p>
 <p>Your code should include:</p>
@@ -663,7 +697,7 @@ Hint
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -672,7 +706,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data_thirty <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"4141_wk5_lab"</span>, <span class="st">"vocabulary_experience.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -710,7 +744,7 @@ Code
 <p>Action: Run a correlation analysis with these data. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -719,7 +753,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>correlation</code>() function we used last week. You need to specify the following information inside the <code>correlation</code>() function:</p>
 <ul>
@@ -732,7 +766,7 @@ Hint
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -741,7 +775,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">correlation</span>(<span class="at">data =</span> data_thirty,          <span class="co"># use the `correlation()` function and tell R what data to use</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"vocabulary"</span>, <span class="st">"experience"</span>), <span class="co"># specify the variables we want to correlate using `select()`</span></span>
@@ -785,7 +819,7 @@ Code
 <p>Action: Insert a new code chunk and use <code>ggplot()</code> to tell R what data to plot and which variables tot use. Then, add layers to plot the datapoints (use <code>geom_point()</code>) and the line of best fit (use <code>geom_smooth(method="lm", se=TRUE)</code>). If you need more guidance on how to do this, look at the Hint below. If you are still stuck, you can look at the Code below.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -794,7 +828,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the function <code>ggplot()</code>. Start by writing <code>ggplot()</code> on the next line of the code chunk. Inside the <code>ggplot()</code> function, we need to tell R which data-frame (<code>data=</code>) and which variables to use (<code>mapping=aes(x= , y= ))</code>).</p>
 <p>Then, we need to tell R what type of plot we want. We do this by adding a <code>+</code> to the line on which you’ve written <code>ggplot()</code>, then on the next line you add a ‘geometric object’, in this case <code>geom_point()</code>.</p>
@@ -804,7 +838,7 @@ Hint
 </div>
 </div>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -813,7 +847,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-14" class="callout-14-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> data_revision_exam, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>revision_hours, <span class="at">y=</span>exam_mark)) <span class="sc">+</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
@@ -912,7 +946,7 @@ How does <code>filter()</code> work?
 <p>Action: Run two correlation analyses: one with the data with (<code>data_revision_exam</code>) and one with the data without (<code>data_revision_exam_clean</code>) outlier values. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the code you wrote for Lab activity 3, Step 3.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -921,7 +955,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>correlation</code>() function we used last week. You need to specify the following information inside the <code>correlation</code>() function:</p>
 <ul>
@@ -960,7 +994,7 @@ Hint
 <p>Action: Insert a new code chunk and use <code>ggplot()</code> to tell R what data to plot and which variables tot use. Then, add layers to plot the datapoints (use <code>geom_point()</code>) and the line of best fit (use <code>geom_smooth(method="lm", se=TRUE)</code>). If you need more guidance on how to do this, look at the Hint below. If you are still stuck, you can look at the code you wrote for Lab activity 4, Step 2.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -969,7 +1003,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the function <code>ggplot()</code>. Start by writing <code>ggplot()</code> on the next line of the code chunk. Inside the <code>ggplot()</code> function, we need to tell R which data-frame (<code>data=</code>) and which variables to use (<code>mapping=aes(x= , y= ))</code>).</p>
 <p>Then, we need to tell R what type of plot we want. We do this by adding a <code>+</code> to the line on which you’ve written <code>ggplot()</code>, then on the next line you add a ‘geometric object’, in this case <code>geom_point()</code>.</p>
@@ -1009,7 +1043,7 @@ How does <code>geom_jitter()</code> work?
 <p>Action: Run two correlation analyses: one with Pearson’s <em>r</em>, the other one with Spearman’s <em>rho</em>. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the code you wrote for Lab activity 3, Step 3. When calculating Spearman’s <em>rho</em>, specify “spearman” under method instead of “pearson”.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1018,7 +1052,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Use the <code>correlation</code>() function we used last week. You need to specify the following information inside the <code>correlation</code>() function:</p>
 <ul>
