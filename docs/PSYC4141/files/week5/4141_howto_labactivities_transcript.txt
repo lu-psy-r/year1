@@ -1,0 +1,281 @@
+[Auto-generated transcript. Edits may have been applied for clarity.]
+Hi, I thought I would do a quick walkthrough on how to use the handbook and the quarto script in
+
+conjunction to do the to carry out the lab activities that involve writing code in R and R studio.
+
+So from the Moodle page, um, you can open what we call the handbook.
+
+Um, that's this link. And so that I've opened that here in a separate tab.
+
+And you can open a window or a, or a tab for the RStudio server, um, following this link.
+
+And I've done that there. So this is what the handbook looks like.
+
+Um, we're going to year one module psych 4141.
+
+And let's go to kind of the week five lab activities.
+
+Um, so this is these are the week five materials.
+
+And on the right here you can navigate to the pre lab activities in the lab activities.
+
+So let's let's go there. Um.
+
+Actually so this first lab activity doesn't require any coding.
+
+So let's go to lab activity three. Now here it explains what what you'll be doing in this lab activity.
+
+So we're going to set up the appropriate bits and pieces in our studio.
+
+We're going to read in data files check for missing data and calculate and interpret.
+
+Pearson's are using correlation. That's just to give you a brief overview of what we'll be doing.
+
+Now you as you will know from previous weeks, you need some files to, um, to actually do all this work.
+
+And from now on, we'll stick those in the pre lab activities under the getting ready section.
+
+So I've outlined that here.
+
+Um, so let's go there first so I can either click on this link or I can navigate to the pre lab activities using the outline on the right here.
+
+So let's do that. And here we have our getting ready section. So um as in previous weeks um there is an example script for you.
+
+And there are several data files. And they sit all together in this zip file.
+
+So if we click on this link it gets it downloads to our downloads folder.
+
+And we need to upload that to our file space on the R server.
+
+So let's do that. So I log in.
+
+There we go. So um here I have my project and then I have week one, week two, week three and week four looks a little bit different.
+
+But let's upload this, the folder that I just downloaded into this folder.
+
+So it will sit in my downloads folder. There it is.
+
+And so I click on that zip folder I say upload and here it is.
+
+So um let's have a little look at what is in there.
+
+We have the script or the quarto document, and we have three different data files that we need for lab activities three,
+
+four and five for the week five materials. So if I open this Cuda document then basically I'm ready to go.
+
+Okay. But there's a few things that I would like to point out. So I've just navigated back to the handbook pages.
+
+I'm going to go to the lab activities. Lab activity three.
+
+Um, and here I summarise a few changes on how we present the instructions and the guidance for the lab activities.
+
+Um, and we've, we've, um, changed this in, in response to feedback and to respond in response to what we've observed during the lab sessions.
+
+Um, and we've observed and that was also reflected in the feedback that it.
+
+Um, students find it quite hard to work out what all of this text meant and how to how to use it most effectively.
+
+So from now on, um, all the instructions and the guidance,
+
+including hints and code snippets for the lab activities that are presented on the handbook page.
+
+So that is this page, right? Um, the quarto document is largely empty,
+
+and it only contains kind of a copy of the section headers and the actions to remind you of what you need to do.
+
+If a particular step in a lab activity is associated with questions.
+
+It comes with questions that are associated with the code that you've written, or the output that follows from the code that you've written.
+
+Then I've copied those into the quarter document as well.
+
+Okay. So how best to use it?
+
+On one tab you would need the handbook page open. So that is this page.
+
+Um and then the idea is that you read the instructions here for each step.
+
+So we're on lab activity three. We're going to be checking for missing data.
+
+And step one is set up the appropriate bits and pieces in RStudio.
+
+There's a little bit of text explaining why we we'd want to do that.
+
+And then here is our action. Here it tells you what to do whenever it says action.
+
+You need to do something in your quarto script. Okay. Um, so here you're at being asked to insert a new code on chunk.
+
+And in that code chunk, write code to load the libraries by using the library function.
+
+And it says here that we need two packages here. Tidy. If there's an easy stats, after you've written a code, you need to make sure that you run it.
+
+Now you've done that multiple times already, so you might you can just go ahead and do that if you remember how to do it.
+
+Um, so at that point we would go to our quarter document, which we've already opened,
+
+write the 4141 underscore WK5 for week five underscore lab d file.
+
+So that is our script or a quarter document Cuda script all the same thing.
+
+Um remember it has two views a visual view that is easy for reading and a source for you.
+
+That is much better when you have to write a code. So I would recommend that you go there.
+
+Um, as I said, so sorry, I've copied these instructions on how to use things.
+
+How to use this Cuda script in conjunction with the handbook pages here as well.
+
+And then we have the different section headers to help you kind of navigate where you are and the different steps, including the actions.
+
+So what you now need said we were on step one, right?
+
+So the action here is identical to the action on the handbook page.
+
+So what you now need to do is click on the line below the action.
+
+Create some space. And in here you're going to insert a code chunk.
+
+Now you can do that by clicking on code saying Insert chunk.
+
+Checking that your chunk looks like this.
+
+As in it is a grey box, has these back here, has R in the curly brackets, and importantly it has this green arrow on the top right corner.
+
+That means that you can run it. So this is great.
+
+We need to um type the relevant code here.
+
+So that was to do with library the library function. And we need to load the libraries here.
+
+We need the load of the library a tidy verse and we need to go to the library.
+
+Easy stats. So then we need to make sure that we run it.
+
+And that's all good that there we go.
+
+Now I've said I say here, make sure to go back to the handbook pages and read the next bit of instruction until you get to the next section.
+
+So at this point, we've completed this whole action. It's run without any trouble.
+
+So now we are going to go back to our tab that has the handbook pages.
+
+And we read on to the next instruction. Now we've included hints for you to to help you, um, if you can't quite remember how to how to do something.
+
+Okay. You've you've seen this code before. We've written this code before to use library to load the packages,
+
+which is why I don't give you a code snippet because you've done it multiple times before already.
+
+But there is a hint if you need a reminder.
+
+Now, if you click on this blue bar that says hint, it will kind of unfold and you can read about what you need to do,
+
+and it gives more information about what you need to do.
+
+So the best thing to do would be for you to, okay, have a look at the action and try to remember what what you think is the right code.
+
+And just just start writing that code in your script.
+
+If you think, oh, I can't quite remember how to do stuff.
+
+Um, yeah. You can click on the hint and have a look there. Okay.
+
+So then you would go to step two. Read the instructions here.
+
+You get to the next action and you navigate back to your script to um carry out that action.
+
+Again, if you need a reminder of how to do this, there is a hint that explains different bits of of about the code that you need to write.
+
+And in this case, I've also included a code snippet. So the code snippet is here.
+
+Um, and it basically gives you the code that you need to, uh, to carry out this action.
+
+Um, it you might have to change the file path here a little bit, but that depends on your setup on your machine.
+
+Um, so we'll give you a code snippet if we feel that it is a bit of code or a step that a lot of students,
+
+um, still struggle with, or if it is completely new code, right, that you haven't used before.
+
+It might be a function that you haven't used before.
+
+So here you have this code snippet and you can use if you hover over that you you can see this clipboard icon.
+
+And if you click on that it copies that code to the clip to the clipboard.
+
+So if I copy that it says copy it. I can go to my script.
+
+I can create a bit of space here, include insert a code um, a code chunk.
+
+And then I can say paste. And there is the that code snippet.
+
+Now this is the. On the one hand, this is really convenient because you don't have to type out all of that code and you know,
+
+your code running doesn't depend on one tiny little typo somewhere.
+
+So it is it is okay to use this sometimes, on the other hand.
+
+On the other hand, it is important to realise that actually typing out the commands will help you remember them and consolidate your learning.
+
+So I would really say have a go at writing the code and even typing out the code.
+
+Um, and if you're really stuck, then just kind of copy a code snippet, copy a code snippet over.
+
+Now, whenever you copy a code snippet. Um, it is really important that you have a look at it and check that you understand what each bit is doing.
+
+Okay. And if you don't understand that, um, ask questions or, you know, try to try to break it, remove it, see what happens, etc..
+
+Okay. Okay. So that's that.
+
+Um, and here we have an example of um, questions about this.
+
+Step two. So there's multiple questions here. It asks how many participants does the data frame contain.
+
+So you will only be able to answer that question once you've run this code.
+
+Um, and then how many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables,
+
+vocabulary and experience using this data frame? So that requires you to remember what degrees of freedom are.
+
+Um, and how do you know well how they are computed.
+
+Now, to answer these questions, you can just write in your quarter document, right.
+
+So here we have question A um and you can just type your answer here.
+
+Um, you know. And similarly for hey, you can you can type your answer in your Quarterman document.
+
+And once you've done that, I haven't even given you the answer.
+
+You will have to work it out yourself and type your answer there.
+
+You can type all of kind of nodes there as well. Right. You can save it by clicking on this disk icon here.
+
+Save current document. And that's um yeah.
+
+You can go back to it at a later time. Um, and if you want to kind of, you know, if you would now go to the visual view and we'd go to step two.
+
+Um, you know, we you have your notes here, right? So you can this is what I wrote.
+
+Right. Type your answer here. This is where you could type your answer. You can type any notes there.
+
+Um, anything that you think like. Oh, to remember this, that and the other, I would really, um.
+
+Kind of. Yeah. I need to write down a few things. Of how I arrived at the particular answer, where I looked, etc..
+
+You can put all of that information in your quarter document right there.
+
+Okay. So, um. At this point you would again here, go back to the handbook pages and read on.
+
+So step three check for missing data. It has information about what you you know what what is this about.
+
+And then it has an action. And here we actually have a have a code chunk that is new code.
+
+You've never used it before. You've never used glimpse. You've never used um, this code.
+
+So that's why we give you the code snippets in one way.
+
+But as I said, it's really important to kind of have a look at each bit and try to understand what it is doing.
+
+Okay. I think that is all that I need to say about this right now.
+
+Thank you.
+

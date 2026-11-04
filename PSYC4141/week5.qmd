@@ -315,6 +315,17 @@ How to complete the lab activity and use the Quarto script:
 5)  After having carried out an action, written a code chunk and answered any questions, go back to the handbook page and read the next bit of instruction, until you get to the next action.
 6)  If you are stuck: Have a look at the 'Hints' and 'Code' snippets on the handbook page.
 7)  If you are still stuck: Ask for help (your peers on your table, the GTA or lecturer in the lab session, via the Moodle Q&A forum, during Friday's live online Q&A).
+
+This is also demonstrated in this video
+
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=b1640d97-8b02-4d34-8368-b4f800c041d7&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&captions=true&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_howto_labactivities"></iframe>
+</div>
+```
+
+\newline
+- [How to complete the lab activities - transcript](files/week5/4141_howto_labactivities_transcript.txt)
 :::
 
 #### Step 1: Setup the appropriate bits and pieces in RStudio

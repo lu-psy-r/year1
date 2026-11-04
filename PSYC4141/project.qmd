@@ -1,0 +1,76 @@
+---
+title: 11. The Project page - Everything you need to know about the group research project
+author: "Margriet Groen"
+order: 13 # this places it at the bottom
+---
+
+:::{.callout-note title="Overview"}
+Here we summarise everything you need to know about the group research project that you'll carry out as part of PSYC4141.
+
+We provide:
+
+1. An overview: Key information on what you'll be expected to do, a rough timeline and how it links to assessment
+[Further sections will be added soon]
+<!-- 2. More in depth information about the research question, how to refine and operationalise it. -->
+<!-- 3. Information on how to get set up on and learn about using the Gorilla platform -->
+<!-- 4. Information on how to collect the data -->
+<!-- 5. Assessment information: How to write a research report -->
+
+You can navigate to each in the side bar on the right.
+:::
+
+<!-- Note: I think it is helpful to have a list of the different sections in a week for cross-referencing. I don't think it helps readability it this is visible to the students (hence I've commented them out) as the outline in the sidebar on the right already provides this info. -->
+<!-- - @sec-4141-project-overview: Key information on what you'll be expected to do, a rough timeline and how it links to assessment -->
+<!-- - @sec-4141-project-research-question: More in depth information about the research question, how to refine and operationalise it. -->
+<!-- - @sec-4141-project-gorilla: Information on how to get set up on and learn about using the Gorilla platform -->
+<!-- - @sec-4141-project-data-collection: Information on how to collect the data -->
+<!-- - @sec-4141-project-report: How to write a research report -->
+
+
+## 1. An overview {#sec-4141-project-overview}
+
+::: {.callout-note title="Why do we do a mini research project?"}
+Lectures and textbooks can only take you so far. Doing research shows you things that are hard to appreciate any other way.
+
+**You see how ideas become measurable.** From the inside, you see how researchers turn abstract ideas into measurable variables: how instructions are worded, questions are designed and responses are recorded. You may also notice how your own expectations shape what you do. These are the issues you’ll need to think critically about in your own designs, such as demand characteristics, operationalisation and measurement validity.
+
+**You see ethics in practice.** Information sheets, informed consent, the right to withdraw and debriefing make more sense once you’ve implemented them.
+
+**You see why sample size and representativeness matter.** Your own research will depend on others choosing to take part, and the project gives you a first-hand sense of that.
+
+In short, the mini project helps you become a better researcher by connecting what you learn in class to real research practice.
+:::
+
+```{r}
+#| label: Do not remove. It prevents Quarto from thinking it needs to involve Python.
+```
+
+**Overview** (~9 minutes)
+Key information on what you'll be expected to do, a rough timeline and how it links to assessment.
+```{=html}
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+	<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=24f7d55d-4a30-4d3e-b997-b4f800a91fcb&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&captions=true&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_project_overview"></iframe>
+</div>
+```
+
+\newline
+- [Project overview - slides](files/project/4141_project_overview_slides.pdf)
+- [Project overview - transcript](files/project/4141_project_overview_transcript.txt)
+
+
+
+<!-- ## 2. More in depth information about the research question, how to refine and operationalise it.{#sec-4141-project-research-question} -->
+
+<!-- **Mind wandering and screen time: Where to start** (~7 minutes) -->
+
+<!-- ```{=html} -->
+
+<!-- ``` -->
+
+<!-- \newline -->
+<!-- - [Project overview - slides](files/project/4141_project_overview_slides.pdf) -->
+<!-- - [Project overview - transcript](files/project/4141_project_overview_transcript.txt) -->
+
+
+
+
