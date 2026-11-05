@@ -266,7 +266,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#lab-activity-4-outliers" id="toc-lab-activity-4-outliers" class="nav-link" data-scroll-target="#lab-activity-4-outliers">Lab activity 4: Outliers</a></li>
   <li><a href="#lab-activity-5-spearmans-rho" id="toc-lab-activity-5-spearmans-rho" class="nav-link" data-scroll-target="#lab-activity-5-spearmans-rho">Lab activity 5: Spearman’s <em>rho</em></a></li>
   </ul></li>
-  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a></li>
+  <li><a href="#answers" id="toc-answers" class="nav-link" data-scroll-target="#answers">Answers</a>
+  <ul class="collapse">
+  <li><a href="#lab-activity-1-assumptions-of-correlation-analysis-1" id="toc-lab-activity-1-assumptions-of-correlation-analysis-1" class="nav-link" data-scroll-target="#lab-activity-1-assumptions-of-correlation-analysis-1">Lab activity 1: Assumptions of Correlation Analysis</a></li>
+  <li><a href="#lab-activity-3" id="toc-lab-activity-3" class="nav-link" data-scroll-target="#lab-activity-3">Lab activity 3:</a></li>
+  <li><a href="#lab-activity-4" id="toc-lab-activity-4" class="nav-link" data-scroll-target="#lab-activity-4">Lab activity 4:</a></li>
+  <li><a href="#lab-activity-5" id="toc-lab-activity-5" class="nav-link" data-scroll-target="#lab-activity-5">Lab activity 5:</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -1088,151 +1094,277 @@ Hint
 </section>
 <section id="answers" class="level2">
 <h2 class="anchored" data-anchor-id="answers">Answers</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<!-- ::: callout-tip -->
+<!-- Answers to the questions in lab activities will be shared after the final lab session of the week has concluded (Thursday afternoon) -->
+<!-- ::: -->
+<section id="lab-activity-1-assumptions-of-correlation-analysis-1" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-1-assumptions-of-correlation-analysis-1">Lab activity 1: Assumptions of Correlation Analysis</h3>
+<section id="question-1-types-of-variables-1" class="level4">
+<h4 class="anchored" data-anchor-id="question-1-types-of-variables-1">Question 1: Types of variables</h4>
+<p>Correlation would be an appropriate form of analysis for researchers interested in the relationship between:</p>
+<ol type="a">
+<li>Dog (breed) and height (cm) of owner</li>
+<li>Speed of swimming (mph) and area of tank (cm)</li>
+<li>Number of cows sitting and rain fall (mm)</li>
+<li>Total llama saliva (ml) expelled and gender of visitors</li>
+<li>b and d</li>
+<li>b and c</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 1: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Question 1: Answer
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Answers to the questions in lab activities will be shared after the final lab session of the week has concluded (Thursday afternoon)</p>
+<ol type="a">
+<li>Dog (breed) and height (cm) of owner</li>
+<li>Speed of swimming (mph) and area of tank (cm)</li>
+<li>Number of cows sitting and rain fall (mm)</li>
+<li>Total llama saliva (ml) expelled and gender of visitors</li>
+<li>b and d</li>
+</ol>
+<p><strong>f.&nbsp;b and c</strong> <strong>All variables in b anc c are continuous. Dog breed and gender are categorical.</strong></p>
 </div>
 </div>
-<!-- ### Lab activity 1: Assumptions of Correlation Analysis -->
-<!-- #### Question 1: Types of variables -->
-<!-- Correlation would be an appropriate form of analysis for researchers interested in the relationship between: -->
-<!-- a.  Dog (breed) and height (cm) of owner -->
-<!-- b.  Speed of swimming (mph) and area of tank (cm) -->
-<!-- c.  Number of cows sitting and rain fall (mm) -->
-<!-- d.  Total llama saliva (ml) expelled and gender of visitors -->
-<!-- e.  b and d -->
-<!-- f.  b and c -->
-<!-- ::: {.callout-note icon=false title="Question 1: Answer" collapse="true"} -->
-<!-- a.  Dog (breed) and height (cm) of owner -->
-<!-- b.  Speed of swimming (mph) and area of tank (cm) -->
-<!-- c.  Number of cows sitting and rain fall (mm) -->
-<!-- d.  Total llama saliva (ml) expelled and gender of visitors -->
-<!-- e.  b and d -->
-<!-- **f. b and c** **All variables in b anc c are continuous. Dog breed and gender are categorical.** -->
-<!-- ::: -->
-<!-- #### Question 2: Revision and exam marks -->
-<!-- Forty students reported how many hours per week they spent revising and then sat an exam. -->
-<!-- ![](files/week5/fig1_outliers.png){fig-alt="Histogram of weekly revision hours, histogram of exam marks, and a scatterplot of exam mark against revision hours." width=100%} -->
-<!-- a. Look at the two histograms only. Does any student look unusual? Note anything you see. -->
-<!-- b. Now look at the scatterplot. Which students do not fit the overall pattern? Describe each one, giving their approximate revision hours and exam mark. -->
-<!-- c. Why can the scatterplot reveal something the histograms cannot? -->
-<!-- d. Before running any analysis, what should you check about these students? Give two possible explanations for their scores. -->
-<!-- e. If you calculated Pearson's *r* for all 40 students, and then again without these students, would *r* get higher, lower or stay the same? Explain your reasoning. -->
-<!-- ::: {.callout-note title="Question 2: Answer" icon=false collapse="true"} -->
-<!-- **a.** Nothing clearly wrong. There are isolated bars at the ends of both histograms (about 5 and 25 hours; about 35 and 88 per cent), but each value is plausible on its own and nothing says that those bars belong to the same students. -->
-<!-- **b.** Two students. -->
-<!-- - **Participant 7:** about 5 hours of revision but a mark of about 88%, much higher than the pattern predicts. -->
-<!-- - **Participant 23:** about 25 hours of revision but a mark of about 35%, much lower than the pattern predicts. -->
-<!-- Both go against the positive trend shown by the other students. -->
-<!-- **c.** The histograms show each variable on its own, and both students have values that are unusual but not impossible for each variable. They are only unusual in combination, which can only be seen when the two variables are plotted together. -->
-<!-- **d.** Check for data-entry errors, such as typos, swapped or mismatched IDs, and misread marks. Other possibilities are a genuine but atypical participant (for example, prior knowledge from an earlier course, illness on the exam day, or a resit student) and a misunderstanding of the question about revision. The key message is to investigate and document, and not to delete cases just because they make the result awkward. -->
-<!-- **e.** *r* would get higher. It looks like there may be a strong positive relationship without participants 7 and 23. I'd estimate *r* to be between .55 and .70. With the two students included, *r* is likely to be smaller as their datapoints go against the pattern of the rest of the sample. -->
-<!-- *Link to the lecture:* in the simulation, a few participants who were extreme on both measures made about 20% of samples significant when there was no real relationship. Here the same kind of case has the opposite effect, masking a real relationship. -->
-<!-- ::: -->
-<!-- #### Question 3: Arousal and task performance -->
-<!-- Sixty participants completed a memory task. Before the task, each was given a score for how aroused (alert and activated) they felt. -->
-<!-- ![](files/week5/fig2_curved.png){fig-alt="Histogram of arousal scores, histogram of task performance, and a scatterplot of performance against arousal." width=100%} -->
-<!-- a. Describe the relationship between arousal and performance in words. -->
-<!-- b. Look at the histograms. Do they suggest any problem with using Pearson's *r*? -->
-<!-- c. Without calculating anything, would you expect Pearson's *r* to be strong and positive, strong and negative, or close to zero? Explain why. -->
-<!-- d. Which assumption is violated here? Would switching to Spearman's rho solve the problem? Why or why not? -->
-<!-- e. What does this example tell you about reporting a correlation coefficient without looking at the scatterplot? -->
-<!-- ::: {.callout-note title="Question 3: Answer" icon=false collapse="true"} -->
-<!-- **a.** An inverted U. Performance is lowest at very low and very high arousal, and highest at moderate arousal (around 40 to 60). -->
-<!-- **b.** Not really. The arousal histogram is roughly symmetrical, and the performance histogram has a slight tail towards low scores. Neither shows the curve. -->
-<!-- **c.** Close to zero. The positive trend on the left of the plot cancels out the negative trend on the right. -->
-<!-- **d.** **Linearity.** Spearman's rho will not help, because the relationship is not monotonic: it rises and then falls. -->
-<!-- **e.** A coefficient alone can hide a strong relationship. Always plot the data first. A correlation near zero means "no linear relationship", not "no relationship". -->
-<!-- ::: -->
-<!-- #### Question 4: Age and vocabulary -->
-<!-- Eighty children aged between 6 and 16 took a vocabulary test. -->
-<!-- ![](files/week5/fig3_fan.png){fig-alt="Histogram of age, histogram of vocabulary size, and a scatterplot of vocabulary size against age." width=100%} -->
-<!-- a. Compare the spread of vocabulary scores for children aged about 7 to 8 with those aged about 13 to 15. Give approximate ranges for each group. -->
-<!-- b. Which assumption is violated? Name it and describe what is wrong in your own words. -->
-<!-- c. Could you have spotted this problem from the two histograms alone? Explain. -->
-<!-- d. Why might this problem affect the *p*-value for Pearson's *r*? -->
-<!-- e. The spread of vocabulary scores grows roughly in proportion to the average score. Suggest one thing you could try. -->
-<!-- ::: {.callout-note title="Question 4: Answer" icon=false collapse="true"} -->
-<!-- **a.** Around 7 to 8 years, scores are roughly 1,200 to 2,000 words (a range of about 800). Around 13 to 15 years, they are roughly 2,900 to 5,800 (a range of nearly 3,000). The spread is clearly larger for older children. -->
-<!-- **b.** **Homoscedasticity** (equal spread). The spread of Y is not constant across X: the scatter fans out as age increases. -->
-<!-- **c.** No. Both histograms look reasonably bell-shaped, and nothing about them suggests a problem. The unequal spread is a feature of the *relationship*, which only the scatterplot shows. -->
-<!-- **d.** Because Pearson's *r* assumes the spread is similar at every value of X. When it isn't, the *p*-value can be inaccurate. In the lecture simulation, funnel-shaped data produced about twice as many false positives as expected when there was no real relationship. -->
-<!-- **e.** Spearman's rho is an option, but it only partly helps with unequal spread. Analysing age groups separately is a possibility. There are other options you'll learn about later (using regression or log-transforming the data). -->
-<!-- ::: -->
-<!-- #### Question 5: Reaction time and social media use -->
-<!-- Eighty participants completed a reaction-time task and reported how many hours per week they spend on social media. Figure 4a shows the raw data. -->
-<!-- ![**Figure 5a.** Raw data.](files/week5/fig4a_skewed.png){fig-alt="Histogram of reaction time, histogram of social media hours per week, and a scatterplot of social media hours against reaction time." width=100%} -->
-<!-- a. Describe the shape of each histogram. -->
-<!-- b. Does the scatterplot look like an oval, bell-shaped cloud? Which assumption(s) appear to be violated? -->
-<!-- c. In the lecture simulations, what happened to the false-positive rate when variables were skewed but unrelated? What would you still want to check in the scatterplot? -->
-<!-- Figure 4b shows the same data after taking the natural log of both variables. Transforming the the data in this way is common approach for heavily skewed data. -->
-<!-- ![**Figure 5b.** The same data on a log scale.](files/week5/fig4b_logged.png){fig-alt="Histograms and a scatterplot of the same data after a log transformation." width=100%} -->
-<!-- d. What has changed? Has the transformation solved every problem? -->
-<!-- e. Give one advantage and one disadvantage of log-transforming the data. -->
-<!-- ::: {.callout-note title="Question 5: Answer icon=false collapse="true"} -->
-<!-- **a.** Both are strongly right-skewed. Reaction time peaks around 300 to 400 ms with a long tail to about 1,700 ms. Social media use peaks at under 10 hours per week with a long tail to about 140 hours. -->
-<!-- **b.** No. Most points are crowded at the lower left, with a few extreme points scattered to the right and above. The main problem is **non-normality** of both variables (skew), and the few extreme points could have a large influence on *r*. -->
-<!-- **c.** When skewed variables were independent, the false-positive rate stayed at about 5%, so the test was robust to skew. However, you should still check the scatterplot for extreme points that might have a large influence, and for any curvature. -->
-<!-- **d.** Both histograms are more symmetrical, and the scatterplot is a more evenly spread cloud, with no extreme points dominating. It isn't perfect: reaction time is still slightly right-skewed after the log transform. -->
-<!-- **e.** *Advantage:* it keeps all the information in the data, and often makes proportional relationships linear and spreads even. It is also common for variables like reaction times. *Disadvantage:* results are on a log scale, so they are harder to interpret and to explain, and it can't be used for zero or negative values without adjustment. -->
-<!-- ::: -->
-<!-- ### Lab activity 3: -->
-<!-- **Questions Step 2** -->
-<!-- a. How many participants does the data frame `data_thirty` contain? -->
-<!-- b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables `vocabulary` and `experience` using the `data_thirty` data frame? -->
-<!-- ::: {.callout-note title="Questions Step 3: Answers icon="false" collapse="true"} -->
-<!-- a. The `data_thirty` data frame contains data from 30 participants. We can see this from the number of rows (or obs.) it has. -->
-<!-- b. The degrees of freedom for a correlation analysis are determined by the sample size (N) minus 2. If all participants had complete data, we would expect the degrees of freedom to be 30-2 = 28. -->
-<!-- ::: -->
-<!-- **Questions Step 3** -->
-<!-- a. How many data points are missing? -->
-<!-- b. How many participants have complete data? -->
-<!-- c. How many degrees of freedom are reported in the output from the correlation analysis. Explain how that number is derived. Does it match what you expected to see based on the number of participants? -->
-<!-- ::: {.callout-note title="Questions Step 4: Answers" icon="false" collapse="true"} -->
-<!-- a. There are 6 missing data points. -->
-<!-- b. The data frame contains 25 participants who have complete data. -->
-<!-- c. The degrees of freedom reported in the output from the correlation analysis is 23. Because only 25 participants have complete data and correlation analysis requires participants to contribute a data point on each variable, the other participants are dropped from the analysis. This leaves us with N=25-2 = 23 degrees of freedom. -->
-<!-- ::: -->
-<!-- ### Lab activity 4: -->
-<!-- **Questions Step 3** -->
-<!-- a. Looking at the line of best fit in the first scatterplot (which included the participants with outlier values), how would you describe the relationship between revision hours and exam mark? -->
-<!-- b. What do you estimate the value of the correlation coefficient to be? -->
-<!-- c. Looking at the line of best fit in the second scatterplot (without the participants with outlier values), how would you describe the relationship between revision hours and exam mark now? -->
-<!-- d. What do you estimate the value of the correlation coefficient to be now? -->
-<!-- ::: {.callout-note title="Questions Step 3: Answers" icon="false" collapse="true"} -->
-<!-- a. The line of best fit is a horizontal line, suggesting there is no relationship between revision hours and exam mark. -->
-<!-- b. The correlation coefficient is likely around 0. -->
-<!-- c. The line of best fit suggest a positive relationship between revision hours and exam mark. People who spent more hours revising, performed better in the exam. -->
-<!-- d. As the datapoints are relatively close to the line, the correlation coefficient is likely to between .60 and .70. -->
-<!-- ::: -->
-<!-- **Questions Step 4** -->
-<!-- a. What is *r* for the relationship between revision hours and exam mark when using the data that includes participants with outlier values? Is it significant? -->
-<!-- b. What is *r* for the relationship between revision hours and exam mark when using the data that does not include participants with outlier values? Is it significant? -->
-<!-- ::: {.callout-note title="Questions Step 4: Answers" icon="false" collapse="true"} -->
-<!-- a. Using the full data set we found no significant correlation between weekly revision hours and exam marks, *r*(38) = .05, *p* = .757. -->
-<!-- b. After removing two participants, there was a strong positive correlation between weekly revision hours and exam marks, *r*(36) = .67, *p* < .001. People who revised for more hours, scored higher on the exam. -->
-<!-- ::: -->
-<!-- ### Lab activity 5: -->
-<!-- **Questions Step 3** -->
-<!-- a. What is the value for Pearson's *r*, is it significant? -->
-<!-- b. What is the value for Spearman's *rho*, is it significant? -->
-<!-- c. What is the correct correlation coefficient to use. Explain why. -->
-<!-- ::: {.callout-note title="Questions Step 3: Answers" icon="false" collapse="true"} -->
-<!-- a. Pearson: *r*(58) = .23, *p* = .079, which is not significant. -->
-<!-- b. Spearman: *rho*(58) = .60, p < .001, which is significant. -->
-<!-- c. The main reason is that one variable (`reading_enjoyment`) is ordinal. A single rating item has ordered categories, but nobody can say that the step from 1 to 2 equals the step from 4 to 5. Pearson’s *r* assumes equal intervals. In the scatterplot, the points fall in five vertical stripes instead of a cloud, which is a sign of ordinal data. -->
-<!-- Additionally, the other variable (`books_read`) is a skewed count. Most people read a handful of books, but two heavy readers (48 and 56 books) are far from everyone else. Those two sit at middling enjoyment ratings, so they pull a straight line away from the real trend. Because Spearman's *rho* is based on ranks, it is less affected by those values and the overall trend is captured more accurately. -->
-<!-- ::: -->
+</div>
+</section>
+<section id="question-2-revision-and-exam-marks-1" class="level4">
+<h4 class="anchored" data-anchor-id="question-2-revision-and-exam-marks-1">Question 2: Revision and exam marks</h4>
+<p>Forty students reported how many hours per week they spent revising and then sat an exam.</p>
+<p><img src="files/week5/fig1_outliers.png" class="img-fluid" style="width:100.0%" alt="Histogram of weekly revision hours, histogram of exam marks, and a scatterplot of exam mark against revision hours."></p>
+<ol type="a">
+<li>Look at the two histograms only. Does any student look unusual? Note anything you see.</li>
+<li>Now look at the scatterplot. Which students do not fit the overall pattern? Describe each one, giving their approximate revision hours and exam mark.</li>
+<li>Why can the scatterplot reveal something the histograms cannot?</li>
+<li>Before running any analysis, what should you check about these students? Give two possible explanations for their scores.</li>
+<li>If you calculated Pearson’s <em>r</em> for all 40 students, and then again without these students, would <em>r</em> get higher, lower or stay the same? Explain your reasoning.</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 2: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 2: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>a.</strong> Nothing clearly wrong. There are isolated bars at the ends of both histograms (about 5 and 25 hours; about 35 and 88 per cent), but each value is plausible on its own and nothing says that those bars belong to the same students.</p>
+<p><strong>b.</strong> Two students.</p>
+<ul>
+<li><strong>Participant 7:</strong> about 5 hours of revision but a mark of about 88%, much higher than the pattern predicts.</li>
+<li><strong>Participant 23:</strong> about 25 hours of revision but a mark of about 35%, much lower than the pattern predicts.</li>
+</ul>
+<p>Both go against the positive trend shown by the other students.</p>
+<p><strong>c.</strong> The histograms show each variable on its own, and both students have values that are unusual but not impossible for each variable. They are only unusual in combination, which can only be seen when the two variables are plotted together.</p>
+<p><strong>d.</strong> Check for data-entry errors, such as typos, swapped or mismatched IDs, and misread marks. Other possibilities are a genuine but atypical participant (for example, prior knowledge from an earlier course, illness on the exam day, or a resit student) and a misunderstanding of the question about revision. The key message is to investigate and document, and not to delete cases just because they make the result awkward.</p>
+<p><strong>e.</strong> <em>r</em> would get higher. It looks like there may be a strong positive relationship without participants 7 and 23. I’d estimate <em>r</em> to be between .55 and .70. With the two students included, <em>r</em> is likely to be smaller as their datapoints go against the pattern of the rest of the sample.</p>
+<p><em>Link to the lecture:</em> in the simulation, a few participants who were extreme on both measures made about 20% of samples significant when there was no real relationship. Here the same kind of case has the opposite effect, masking a real relationship.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-3-arousal-and-task-performance-1" class="level4">
+<h4 class="anchored" data-anchor-id="question-3-arousal-and-task-performance-1">Question 3: Arousal and task performance</h4>
+<p>Sixty participants completed a memory task. Before the task, each was given a score for how aroused (alert and activated) they felt.</p>
+<p><img src="files/week5/fig2_curved.png" class="img-fluid" style="width:100.0%" alt="Histogram of arousal scores, histogram of task performance, and a scatterplot of performance against arousal."></p>
+<ol type="a">
+<li>Describe the relationship between arousal and performance in words.</li>
+<li>Look at the histograms. Do they suggest any problem with using Pearson’s <em>r</em>?</li>
+<li>Without calculating anything, would you expect Pearson’s <em>r</em> to be strong and positive, strong and negative, or close to zero? Explain why.</li>
+<li>Which assumption is violated here? Would switching to Spearman’s rho solve the problem? Why or why not?</li>
+<li>What does this example tell you about reporting a correlation coefficient without looking at the scatterplot?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 3: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 3: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>a.</strong> An inverted U. Performance is lowest at very low and very high arousal, and highest at moderate arousal (around 40 to 60).</p>
+<p><strong>b.</strong> Not really. The arousal histogram is roughly symmetrical, and the performance histogram has a slight tail towards low scores. Neither shows the curve.</p>
+<p><strong>c.</strong> Close to zero. The positive trend on the left of the plot cancels out the negative trend on the right.</p>
+<p><strong>d.</strong> <strong>Linearity.</strong> Spearman’s rho will not help, because the relationship is not monotonic: it rises and then falls.</p>
+<p><strong>e.</strong> A coefficient alone can hide a strong relationship. Always plot the data first. A correlation near zero means “no linear relationship”, not “no relationship”.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-4-age-and-vocabulary-1" class="level4">
+<h4 class="anchored" data-anchor-id="question-4-age-and-vocabulary-1">Question 4: Age and vocabulary</h4>
+<p>Eighty children aged between 6 and 16 took a vocabulary test.</p>
+<p><img src="files/week5/fig3_fan.png" class="img-fluid" style="width:100.0%" alt="Histogram of age, histogram of vocabulary size, and a scatterplot of vocabulary size against age."></p>
+<ol type="a">
+<li>Compare the spread of vocabulary scores for children aged about 7 to 8 with those aged about 13 to 15. Give approximate ranges for each group.</li>
+<li>Which assumption is violated? Name it and describe what is wrong in your own words.</li>
+<li>Could you have spotted this problem from the two histograms alone? Explain.</li>
+<li>Why might this problem affect the <em>p</em>-value for Pearson’s <em>r</em>?</li>
+<li>The spread of vocabulary scores grows roughly in proportion to the average score. Suggest one thing you could try.</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 4: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 4: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><strong>a.</strong> Around 7 to 8 years, scores are roughly 1,200 to 2,000 words (a range of about 800). Around 13 to 15 years, they are roughly 2,900 to 5,800 (a range of nearly 3,000). The spread is clearly larger for older children.</p>
+<p><strong>b.</strong> <strong>Homoscedasticity</strong> (equal spread). The spread of Y is not constant across X: the scatter fans out as age increases.</p>
+<p><strong>c.</strong> No.&nbsp;Both histograms look reasonably bell-shaped, and nothing about them suggests a problem. The unequal spread is a feature of the <em>relationship</em>, which only the scatterplot shows.</p>
+<p><strong>d.</strong> Because Pearson’s <em>r</em> assumes the spread is similar at every value of X. When it isn’t, the <em>p</em>-value can be inaccurate. In the lecture simulation, funnel-shaped data produced about twice as many false positives as expected when there was no real relationship.</p>
+<p><strong>e.</strong> Spearman’s rho is an option, but it only partly helps with unequal spread. Analysing age groups separately is a possibility. There are other options you’ll learn about later (using regression or log-transforming the data).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-5-reaction-time-and-social-media-use-1" class="level4">
+<h4 class="anchored" data-anchor-id="question-5-reaction-time-and-social-media-use-1">Question 5: Reaction time and social media use</h4>
+<p>Eighty participants completed a reaction-time task and reported how many hours per week they spend on social media. Figure 4a shows the raw data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="files/week5/fig4a_skewed.png" class="img-fluid figure-img" style="width:100.0%" alt="Histogram of reaction time, histogram of social media hours per week, and a scatterplot of social media hours against reaction time."></p>
+<figcaption><strong>Figure 5a.</strong> Raw data.</figcaption>
+</figure>
+</div>
+<ol type="a">
+<li>Describe the shape of each histogram.</li>
+<li>Does the scatterplot look like an oval, bell-shaped cloud? Which assumption(s) appear to be violated?</li>
+<li>In the lecture simulations, what happened to the false-positive rate when variables were skewed but unrelated? What would you still want to check in the scatterplot?</li>
+</ol>
+<p>Figure 4b shows the same data after taking the natural log of both variables. Transforming the the data in this way is common approach for heavily skewed data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="files/week5/fig4b_logged.png" class="img-fluid figure-img" style="width:100.0%" alt="Histograms and a scatterplot of the same data after a log transformation."></p>
+<figcaption><strong>Figure 5b.</strong> The same data on a log scale.</figcaption>
+</figure>
+</div>
+<ol start="4" type="a">
+<li>What has changed? Has the transformation solved every problem?</li>
+<li>Give one advantage and one disadvantage of log-transforming the data.</li>
+</ol>
+<p>::: {.callout-note title=“Question 5: Answer icon=false collapse=”true”} <strong>a.</strong> Both are strongly right-skewed. Reaction time peaks around 300 to 400 ms with a long tail to about 1,700 ms. Social media use peaks at under 10 hours per week with a long tail to about 140 hours.</p>
+<p><strong>b.</strong> No.&nbsp;Most points are crowded at the lower left, with a few extreme points scattered to the right and above. The main problem is <strong>non-normality</strong> of both variables (skew), and the few extreme points could have a large influence on <em>r</em>.</p>
+<p><strong>c.</strong> When skewed variables were independent, the false-positive rate stayed at about 5%, so the test was robust to skew. However, you should still check the scatterplot for extreme points that might have a large influence, and for any curvature.</p>
+<p><strong>d.</strong> Both histograms are more symmetrical, and the scatterplot is a more evenly spread cloud, with no extreme points dominating. It isn’t perfect: reaction time is still slightly right-skewed after the log transform.</p>
+<p><strong>e.</strong> <em>Advantage:</em> it keeps all the information in the data, and often makes proportional relationships linear and spreads even. It is also common for variables like reaction times. <em>Disadvantage:</em> results are on a log scale, so they are harder to interpret and to explain, and it can’t be used for zero or negative values without adjustment. :::</p>
+</section>
+</section>
+<section id="lab-activity-3" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-3">Lab activity 3:</h3>
+<p><strong>Questions Step 2</strong> a. How many participants does the data frame <code>data_thirty</code> contain? b. How many degrees of freedom would you expect to see in the output if you were to run a correlation analysis with the variables <code>vocabulary</code> and <code>experience</code> using the <code>data_thirty</code> data frame?</p>
+<p>::: {.callout-note title=“Questions Step 3: Answers icon=”false” collapse=“true”} a. The <code>data_thirty</code> data frame contains data from 30 participants. We can see this from the number of rows (or obs.) it has. b. The degrees of freedom for a correlation analysis are determined by the sample size (N) minus 2. If all participants had complete data, we would expect the degrees of freedom to be 30-2 = 28. :::</p>
+<p><strong>Questions Step 3</strong> a. How many data points are missing? b. How many participants have complete data? c.&nbsp;How many degrees of freedom are reported in the output from the correlation analysis. Explain how that number is derived. Does it match what you expected to see based on the number of participants?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 4: Answers">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions Step 4: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>There are 6 missing data points.</li>
+<li>The data frame contains 25 participants who have complete data.</li>
+<li>The degrees of freedom reported in the output from the correlation analysis is 23. Because only 25 participants have complete data and correlation analysis requires participants to contribute a data point on each variable, the other participants are dropped from the analysis. This leaves us with N=25-2 = 23 degrees of freedom.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="lab-activity-4" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-4">Lab activity 4:</h3>
+<p><strong>Questions Step 3</strong> a. Looking at the line of best fit in the first scatterplot (which included the participants with outlier values), how would you describe the relationship between revision hours and exam mark? b. What do you estimate the value of the correlation coefficient to be? c.&nbsp;Looking at the line of best fit in the second scatterplot (without the participants with outlier values), how would you describe the relationship between revision hours and exam mark now? d.&nbsp;What do you estimate the value of the correlation coefficient to be now?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 3: Answers">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions Step 3: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>The line of best fit is a horizontal line, suggesting there is no relationship between revision hours and exam mark.</li>
+<li>The correlation coefficient is likely around 0.</li>
+<li>The line of best fit suggest a positive relationship between revision hours and exam mark. People who spent more hours revising, performed better in the exam.</li>
+<li>As the datapoints are relatively close to the line, the correlation coefficient is likely to between .60 and .70.</li>
+</ol>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 4</strong> a. What is <em>r</em> for the relationship between revision hours and exam mark when using the data that includes participants with outlier values? Is it significant? b. What is <em>r</em> for the relationship between revision hours and exam mark when using the data that does not include participants with outlier values? Is it significant?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 4: Answers">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions Step 4: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Using the full data set we found no significant correlation between weekly revision hours and exam marks, <em>r</em>(38) = .05, <em>p</em> = .757.</li>
+<li>After removing two participants, there was a strong positive correlation between weekly revision hours and exam marks, <em>r</em>(36) = .67, <em>p</em> &lt; .001. People who revised for more hours, scored higher on the exam.</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="lab-activity-5" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-5">Lab activity 5:</h3>
+<p><strong>Questions Step 3</strong> a. What is the value for Pearson’s <em>r</em>, is it significant? b. What is the value for Spearman’s <em>rho</em>, is it significant? c.&nbsp;What is the correct correlation coefficient to use. Explain why.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 3: Answers">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions Step 3: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li>Pearson: <em>r</em>(58) = .23, <em>p</em> = .079, which is not significant.</li>
+<li>Spearman: <em>rho</em>(58) = .60, p &lt; .001, which is significant.</li>
+<li>The main reason is that one variable (<code>reading_enjoyment</code>) is ordinal. A single rating item has ordered categories, but nobody can say that the step from 1 to 2 equals the step from 4 to 5. Pearson’s <em>r</em> assumes equal intervals. In the scatterplot, the points fall in five vertical stripes instead of a cloud, which is a sign of ordinal data. Additionally, the other variable (<code>books_read</code>) is a skewed count. Most people read a handful of books, but two heavy readers (48 and 56 books) are far from everyone else. Those two sit at middling enjoyment ratings, so they pull a straight line away from the real trend. Because Spearman’s <em>rho</em> is based on ranks, it is less affected by those values and the overall trend is captured more accurately.</li>
+</ol>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
