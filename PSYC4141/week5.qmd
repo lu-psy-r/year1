@@ -737,7 +737,7 @@ Figure 4b shows the same data after taking the natural log of both variables. Tr
 d. What has changed? Has the transformation solved every problem?
 e. Give one advantage and one disadvantage of log-transforming the data.
 
-::: {.callout-note title="Question 5: Answer icon=false collapse="true"}
+::: {.callout-note title="Question 5: Answer" icon=false collapse=true}
 **a.** Both are strongly right-skewed. Reaction time peaks around 300 to 400 ms with a long tail to about 1,700 ms. Social media use peaks at under 10 hours per week with a long tail to about 140 hours.
 
 **b.** No. Most points are crowded at the lower left, with a few extreme points scattered to the right and above. The main problem is **non-normality** of both variables (skew), and the few extreme points could have a large influence on *r*.
@@ -748,6 +748,7 @@ e. Give one advantage and one disadvantage of log-transforming the data.
 
 **e.** *Advantage:* it keeps all the information in the data, and often makes proportional relationships linear and spreads even. It is also common for variables like reaction times. *Disadvantage:* results are on a log scale, so they are harder to interpret and to explain, and it can't be used for zero or negative values without adjustment.
 :::
+
 
 ### Lab activity 3:
 

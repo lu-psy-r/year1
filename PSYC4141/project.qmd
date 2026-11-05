@@ -1,5 +1,5 @@
 ---
-title: 11. The Project page - Everything you need to know about the group research project
+title: 12. The Project page - Everything you need to know about the group research project
 author: "Margriet Groen"
 order: 13 # this places it at the bottom
 ---
@@ -31,7 +31,7 @@ You can navigate to each in the side bar on the right.
 <!-- - @sec-4141-project-report: How to write a research report -->
 
 
-## 1. An overview {#sec-4141-project-overview}
+## 1. The mini research project {#sec-4141-project-overview}
 
 ::: {.callout-note title="Why do we do a mini research project?"}
 Lectures and textbooks can only take you so far. Doing research shows you things that are hard to appreciate any other way.
@@ -49,7 +49,7 @@ In short, the mini project helps you become a better researcher by connecting wh
 #| label: Do not remove. It prevents Quarto from thinking it needs to involve Python.
 ```
 
-**Overview** (~9 minutes)
+**The mini research project** (~9 minutes)
 Key information on what you'll be expected to do, a rough timeline and how it links to assessment.
 ```{=html}
 <div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
@@ -70,8 +70,7 @@ Smallwood, J., & Schooler, J. W. (2015). The science of mind wandering: Empirica
 Kaye, L. K., Orben, A., Ellis, D. A., Hunter, S. C., & Houghton, S. (2020). The conceptual and methodological mayhem of “screen time”. *International Journal of Environmental Research and Public Health, 17*(10), Article 3661. https://doi.org/10.3390/ijerph17103661
 
 :::{.callout-tip}
-All reading is accessible via the library. You can go to Moodle -> Library Resources -> Resource List or you can follow [**this link**](https://lancaster.alma.exlibrisgroup.com/leganto/nui/lists/93496942590001221).
-Look in the section "Research project".
+All reading is accessible via the library. You can go to Moodle -> Library Resources -> Resource List or you can follow [**this link**](https://eu.alma.exlibrisgroup.com/leganto/public/44LAN_INST/lists/93496942590001221?auth=SAML&section=94028195020001221).
 :::
 
 <!-- ## 2. More in depth information about the research question, how to refine and operationalise it.{#sec-4141-project-research-question} -->
