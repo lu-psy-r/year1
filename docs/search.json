@@ -192,11 +192,112 @@
     ]
   },
   {
+    "objectID": "PSYC4141/week6.html",
+    "href": "PSYC4141/week6.html",
+    "title": "6. Week 6 - Chi-Square",
+    "section": "",
+    "text": "Overview\n\n\n\nThis week we focus on two strands of learning:\n\nChi-square as a measure of association between categorical variables\nResearch project: Refine research question, decide on measures, pre-register hypothesis\n\nSo far, we’ve looked at measures of association between variables at the ordinal, interval or ratio level ((Spearman’ss rho or Pearson’s r). This week you will learn about a measure that can be used to measure an association between categorical variables.\nWe will also start the group project in which you will investigate the question: Is mind wandering related to screen time?\nThe materials we have prepared to support your learning are arranged in four parts:\n\nLectures\nReading\nPre-lab activities\nLab activities\n\nYou can navigate to each in the side bar on the right",
+    "crumbs": [
+      "Home",
+      "PSYC4141",
+      "6. Week 6 - Chi-Square"
+    ]
+  },
+  {
+    "objectID": "PSYC4141/week6.html#sec-4141-w6-lectures",
+    "href": "PSYC4141/week6.html#sec-4141-w6-lectures",
+    "title": "6. Week 6 - Chi-Square",
+    "section": "Lectures",
+    "text": "Lectures\n1. Theory - Associations between categorical variables (~23 min) Watch this part before you complete the reading and the pre-lab activities. The video has captions, in case you find that helpful. You can download the slides and a transcript from the links below the video.\n\n    \n\nAssociations between categorical variables - slides Associations between categorical variables - transcript\n2. The mini research project (~9 minutes) If you haven’t already, make sure you watch the overview video on the mini research project on the project page here.",
+    "crumbs": [
+      "Home",
+      "PSYC4141",
+      "6. Week 6 - Chi-Square"
+    ]
+  },
+  {
+    "objectID": "PSYC4141/week6.html#sec-4141-w6-reading",
+    "href": "PSYC4141/week6.html#sec-4141-w6-reading",
+    "title": "6. Week 6 - Chi-Square",
+    "section": "Reading",
+    "text": "Reading\n\n\n\n\n\n\nEasy access to readings\n\n\n\nAll reading is accessible via the library. You can go to Moodle -&gt; Library Resources -&gt; Resource List or you can follow this link. Readings have one of the following tags:\n\nEssential: We expect you to be familiar with these reading. You will be assessed on this.\nRecommended: We highly recommend these readings. They often provide a different perspective, or explain things in a different way.\nOptional: Further readings for those interested.\n\nThe reading list is divided into multiple sections:\n\nReading associated with statistics: this contains links to readings useful for the development of statistical concepts and skills. The main textbook Fundamental statistics for the behavioral sciences by Howell (Essential) lives here.\nReading associated with psychological research principles and design: this contains links to readings that provide a good basis for foundational knowledge around research design.\nReading associated with Open Science principles and practices: this contains links to key literature on the Open Science movement.\nWeek by week: these contain links to key reading for that week that are not listed on any of the more general lists above.\n\n\n\nFor week 6, the reading is:\n\nHowell, D. C. (2017). Fundamental statistics for the behavioral sciences (9th ed.). Cengage Learning. Chapter 19. Essential\nKey readings for the mini research project as outlined here.\n\n\n\n\n\n\n\nTip\n\n\n\nPlease note that I might mention an alternative textbook in the lectures. The content is highly similar, but this year, we’ve decided to use Howell (2017) as the core text. So no need to look at the book by Greene & D’Oliveira (2006).",
+    "crumbs": [
+      "Home",
+      "PSYC4141",
+      "6. Week 6 - Chi-Square"
+    ]
+  },
+  {
+    "objectID": "PSYC4141/week6.html#sec-4141-w6-prelab-activities",
+    "href": "PSYC4141/week6.html#sec-4141-w6-prelab-activities",
+    "title": "6. Week 6 - Chi-Square",
+    "section": "Pre-lab activities",
+    "text": "Pre-lab activities\nAfter having watched the lectures and read the textbook chapter you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.\n\nPre-lab activity 1: Refine the research question.\nEach group will investigate the following question: Is mind wandering related to screen time? Each group will refine this research question and decide:\n\nWhat aspect of mind wandering to focus on and how to measure it\nWhat aspect of screen time to focus on and how to measure it\n\nHaving read the key readings (here), come prepared to discuss your ideas about mind wandering and screen time, how to refine the research question and how to measure each construct with your group during the lab session.\n\n\nPre-lab activity 2: Calculating Chi-square by hand and interpreting the results\nIs there a relationship between the number of people who smoke and the number of people who drink? Please note that the question is the number of people (frequency) and not how much people drink/smoke. Also note that these are fictitious data. You’ll need a table of critical values for Chi-square. This can be found here, and also in the zip-folder you’ll be asked to download in the a later pre-lab activity.\n\nPre-lab activity questions:\n\nComplete the Pearson’s Chi-square test by hand using the data above and fill in the blanks:\n\n\\(\\chi 2\\) ( , N = ) = , p\n\nCan you reject the null hypothesis?\n\n\n\nPre-lab activity 3: Data visualisation - Creating a bar chart\nWe’ve been using the ggplot2 package for visualising data. You can read a great overview of the ggplot2 package here. It also links to a ‘cheatsheet’ that you can download as a .pdf document. Lots of useful info on there!\nWith regard to visualising relations between categorical variables, the geom_bar() function is important. The following ‘recipe’ summarises what it does and how to use it.\ngeom_bar() - create a bar chart - recipe\n\nHave a look at the ‘recipe’ and read through it. Try to understand each step. Going through the example is particularly helpful.\n\n\n\n\n\n\n\nRecipes - how to use them\n\n\n\nEach ‘recipe’ has the same structure. As an example, let’s have a look at one ( recipe) for a function that you have used each week: read_csv()\n\nFirst, it summarises what it is that you want to achieve when using that specific function. In the case of read_csvt() it says “You want to read a CSV file into your R session, where you can manipulate its contents. The file has the extension .csv. A CSV file is a text file that contains a table whose values are separated by commas, i.e. a Comma Separated Values file.”\nThen, it outlines a number of steps that you need to carry out when using this function. For read_csv() it outlines 3 steps: 1. Call the function. 2. Give the filepath to your file as a character string. 3. Save teh output to an object.\nFinally, there is an example talks you through using the function with some data. For read_csv() it uses an example with data about chickens.\nAdditional information appears in extra boxes with a light-bulb icon. If you find those confusing, don’t worry about them at this stage.\n\n\n\n\n\nPre-lab activity 4: Getting ready\nMore information and the download links will be shared as soon as possible.",
+    "crumbs": [
+      "Home",
+      "PSYC4141",
+      "6. Week 6 - Chi-Square"
+    ]
+  },
+  {
+    "objectID": "PSYC4141/week6.html#sec-4141-w6-lab-activities",
+    "href": "PSYC4141/week6.html#sec-4141-w6-lab-activities",
+    "title": "6. Week 6 - Chi-Square",
+    "section": "Lab activities",
+    "text": "Lab activities\n\n\n\n\n\n\nTip\n\n\n\nInformation about the lab activities will be added as soon as possible",
+    "crumbs": [
+      "Home",
+      "PSYC4141",
+      "6. Week 6 - Chi-Square"
+    ]
+  },
+  {
+    "objectID": "PSYC4141/week6.html#sec-4141-w6-answers",
+    "href": "PSYC4141/week6.html#sec-4141-w6-answers",
+    "title": "6. Week 6 - Chi-Square",
+    "section": "Answers",
+    "text": "Answers\n\n\n\n\n\n\n\nTip\n\n\n\nAnswers to the questions in lab activities will be shared after the final lab session of the week has concluded (Thursday afternoon)",
+    "crumbs": [
+      "Home",
+      "PSYC4141",
+      "6. Week 6 - Chi-Square"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Statistics for Psychologists",
+    "section": "",
+    "text": "Welcome to Year 1 research methods and statistics!\n\nThis year you will begin your journey through the world of research methods, and data coding and statistics with R with us. You will complete two research methods and statistics modules:\n\nPSYC4141: Introduction to Psychological Research, with Carly Anderson, Rob Davies, Sam Finnerty, and Margriet Groen (coordinator),\nPSYC4242: Foundations of Psychological Research, with Katie Alcock, Sam Finnerty and John Towse (coordinator)\n\nClick on the button below to access your module: Term 1: PSYC4141, Term 2: PSYC4242.\n\n\n  \n    \n\n    \n      PSYC4141\n    \n    \n      PSYC4242"
+  },
+  {
+    "objectID": "PSYC4141/index.html",
+    "href": "PSYC4141/index.html",
+    "title": "Introduction to Psychological Research",
+    "section": "",
+    "text": "Welcome\nWelcome to the PSYC4141 material for the academic year 2026-2027!\nHow do we determine what is a true finding in psychological science? How do we know which theories are well supported by evidence? This module introduces you to rigorous and transparent scientific practices. You will develop systematic ways of thinking about and approaching real-world issues. Using modern techniques, you will learn how to collect, present and analyse data. We will introduce key concepts and practices of research design and data analysis through lectures. Practical laboratory classes will teach you how to design studies, handle data, perform statistical analyses and report your findings. The laboratory classes will be hands-on, giving you direct experience of all stages of a research project, including the use of specialised software. Topics covered will include questionnaire design, collecting and working with observational data, and looking at relationships between variables using correlation and regression analysis.\n\n\nWorking at your own pace and seeking help\nWe have carefully prepared and refined the lab materials in this course over several years, and we feel that the pace of the materials is just about right for our students. Some students will complete them more quickly, and others more slowly - both of these scenarios are absolutely fine. You should work at the pace that suits you best, making sure you understand the materials before you move forward.\nIt is fairly inevitable that you will get stuck on the lab materials in this module at some point. This might be in Week 1, Week 2, or later. When you do, it’s important you reach out for help:\n\nAsk your friends on your table. We’ve designed this teaching space to help collaborative work. You are encouraged to work with other students. Make sure you ask others to explain how they’ve solved an exercise. Make sure you help out others where you can. Always make sure you understand the code and the exercise; don’t simply be satisfied that you’ve got the right answer.\nAsk a GTA or Lecturer. Our Graduate Teaching Assistants are there to help you. There are no “stupid questions” in statistics, so just ask the GTAs any question about what you’re doing. Likewise, ask the Lecturer.\nAsk on the Q&A Forum on Moodle. On the PSYC4141 moodle page you will find a Q&A Forum. This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don’t be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).\nAsk during live online Q & A session. Each week we hold an online “Q&A” session where we will try and resolve any general queries and problems. It’s an ideal time to discuss things that students are struggling with or confused about, and can share ideas and answers. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but also you can ask in the session itself.\n\nAsking good questions - It’s really important that you give us as much information as you can when you ask your questions (in class and especially on the forum). It’s so much harder to help respond to “I can’t do Exercise 5 in Week 7” (because we don’t know why it is that you can’t do it) than for example “In Exercise 5 of Week 7, I’ve managed to read in the data, but the graph looks quite odd. Here is the code I’m using…”\n\n\nCourse Contacts\nIf you have something that needs to be private, then please feel free to email the coordinator at the email addresses below:\n\n\n\n\nEmail Address\n\n\n\n\nMargriet Groen (coordinator)\nm.groen at lancaster dot ac dot uk\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "PSYC4141"
+    ]
+  },
+  {
+    "objectID": "PSYC4242/index.html",
+    "href": "PSYC4242/index.html",
+    "title": "Foundations of Psychological Research",
+    "section": "",
+    "text": "Welcome\nWelcome to PSYC4242!\nHow do we decide whether two groups differ in a psychological process or behaviour? This module builds on the knowledge and skills acquired in Introduction to Psychological Research (PSYC4141). You will continue to build your understanding of rigorous and transparent scientific practices and develop your thinking of real-world issues. Using modern techniques, learn more about how to collect, present and analyse data. You will be introduced to key concepts and practices of research design and data analysis through lectures. Practical laboratory classes will teach you how to design studies, handle data, perform statistical analyses and report your findings. The laboratory classes will be hands-on, giving you direct experience with all stages of a research project, including the use of specialised software. Topics covered will include experimental design, how to decide on your study participants, comparing groups for behaviours of psychological interest and hypothesis testing.\n\n\nAsking for help\nWe have carefully prepared and refined the lab materials in this course over several years, and we feel that the pace of the materials is just right for our students. Some students will complete them more quickly, and others more slowly - both of these scenarios are absolutely fine. You should work at the pace that suits you best, making sure you understand the materials before you move forward.\nIt is fairly inevitable that you will get stuck on the lab materials in this module at some point. This might be in Week 11, Week 12, or later. When you do, it’s important you reach out for help:\n\nAsk your peers on your table. We’ve designed this teaching space to help collaborative work. You are encouraged to work with other students. Make sure you ask others to explain how they’ve solved an exercise. Make sure you help out others where you can. Always make sure you understand the code and the exercise; don’t simply be satisfied that you’ve got the right answer.\nAsk a Lecturer. We are here to help you. There are no “stupid questions” in statistics, so just ask the Lecturer any question about what you’re doing.\nAsk on the Q&A Forum on Moodle. On the PSYC4242 moodle page you will find a Q&A Forum. This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don’t be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).\nAsk during live online Q & A session. Each week we hold an online “Q&A” session where we will try and resolve any general queries and problems. It’s an ideal time to discuss things that students are struggling with or confused about. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but you can also ask in the session itself.\n\n\n\nCourse Contacts\nIf you have something that needs to be private, then please feel free to email the coordinator at the email addresses below:\n\n\n\n\nEmail Address\n\n\n\n\nJohn Towse (coordinator)\nj.towse at lancaster dot ac dot uk\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Home",
+      "PSYC4242"
+    ]
+  },
+  {
     "objectID": "PSYC4141/project.html",
     "href": "PSYC4141/project.html",
     "title": "12. The Project page - Everything you need to know about the group research project",
     "section": "",
-    "text": "Overview\n\n\n\nHere we summarise everything you need to know about the group research project that you’ll carry out as part of PSYC4141.\nWe provide:\n\nAn overview: Key information on what you’ll be expected to do, a rough timeline and how it links to assessment\nKey readings: Start with these two papers to get a better understanding of the main concepts\n\n[Further sections will be added soon]\n\n\n\n\nYou can navigate to each in the side bar on the right.",
+    "text": "Overview\n\n\n\nHere we summarise everything you need to know about the group research project that you’ll carry out as part of PSYC4141.\nWe provide:\n\nAn overview: Key information on what you’ll be expected to do, a rough timeline and how it links to assessment\nKey readings: Start with these two papers to get a better understanding of the main concepts\n\n[Further sections will be added]\n\n\n\n\nYou can navigate to each in the side bar on the right.",
     "crumbs": [
       "Home",
       "PSYC4141",
@@ -226,35 +327,6 @@
       "PSYC4141",
       "12. The Project page - Everything you need to know about the group research project"
     ]
-  },
-  {
-    "objectID": "PSYC4242/index.html",
-    "href": "PSYC4242/index.html",
-    "title": "Foundations of Psychological Research",
-    "section": "",
-    "text": "Welcome\nWelcome to PSYC4242!\nHow do we decide whether two groups differ in a psychological process or behaviour? This module builds on the knowledge and skills acquired in Introduction to Psychological Research (PSYC4141). You will continue to build your understanding of rigorous and transparent scientific practices and develop your thinking of real-world issues. Using modern techniques, learn more about how to collect, present and analyse data. You will be introduced to key concepts and practices of research design and data analysis through lectures. Practical laboratory classes will teach you how to design studies, handle data, perform statistical analyses and report your findings. The laboratory classes will be hands-on, giving you direct experience with all stages of a research project, including the use of specialised software. Topics covered will include experimental design, how to decide on your study participants, comparing groups for behaviours of psychological interest and hypothesis testing.\n\n\nAsking for help\nWe have carefully prepared and refined the lab materials in this course over several years, and we feel that the pace of the materials is just right for our students. Some students will complete them more quickly, and others more slowly - both of these scenarios are absolutely fine. You should work at the pace that suits you best, making sure you understand the materials before you move forward.\nIt is fairly inevitable that you will get stuck on the lab materials in this module at some point. This might be in Week 11, Week 12, or later. When you do, it’s important you reach out for help:\n\nAsk your peers on your table. We’ve designed this teaching space to help collaborative work. You are encouraged to work with other students. Make sure you ask others to explain how they’ve solved an exercise. Make sure you help out others where you can. Always make sure you understand the code and the exercise; don’t simply be satisfied that you’ve got the right answer.\nAsk a Lecturer. We are here to help you. There are no “stupid questions” in statistics, so just ask the Lecturer any question about what you’re doing.\nAsk on the Q&A Forum on Moodle. On the PSYC4242 moodle page you will find a Q&A Forum. This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don’t be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).\nAsk during live online Q & A session. Each week we hold an online “Q&A” session where we will try and resolve any general queries and problems. It’s an ideal time to discuss things that students are struggling with or confused about. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but you can also ask in the session itself.\n\n\n\nCourse Contacts\nIf you have something that needs to be private, then please feel free to email the coordinator at the email addresses below:\n\n\n\n\nEmail Address\n\n\n\n\nJohn Towse (coordinator)\nj.towse at lancaster dot ac dot uk\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "PSYC4242"
-    ]
-  },
-  {
-    "objectID": "PSYC4141/index.html",
-    "href": "PSYC4141/index.html",
-    "title": "Introduction to Psychological Research",
-    "section": "",
-    "text": "Welcome\nWelcome to the PSYC4141 material for the academic year 2026-2027!\nHow do we determine what is a true finding in psychological science? How do we know which theories are well supported by evidence? This module introduces you to rigorous and transparent scientific practices. You will develop systematic ways of thinking about and approaching real-world issues. Using modern techniques, you will learn how to collect, present and analyse data. We will introduce key concepts and practices of research design and data analysis through lectures. Practical laboratory classes will teach you how to design studies, handle data, perform statistical analyses and report your findings. The laboratory classes will be hands-on, giving you direct experience of all stages of a research project, including the use of specialised software. Topics covered will include questionnaire design, collecting and working with observational data, and looking at relationships between variables using correlation and regression analysis.\n\n\nWorking at your own pace and seeking help\nWe have carefully prepared and refined the lab materials in this course over several years, and we feel that the pace of the materials is just about right for our students. Some students will complete them more quickly, and others more slowly - both of these scenarios are absolutely fine. You should work at the pace that suits you best, making sure you understand the materials before you move forward.\nIt is fairly inevitable that you will get stuck on the lab materials in this module at some point. This might be in Week 1, Week 2, or later. When you do, it’s important you reach out for help:\n\nAsk your friends on your table. We’ve designed this teaching space to help collaborative work. You are encouraged to work with other students. Make sure you ask others to explain how they’ve solved an exercise. Make sure you help out others where you can. Always make sure you understand the code and the exercise; don’t simply be satisfied that you’ve got the right answer.\nAsk a GTA or Lecturer. Our Graduate Teaching Assistants are there to help you. There are no “stupid questions” in statistics, so just ask the GTAs any question about what you’re doing. Likewise, ask the Lecturer.\nAsk on the Q&A Forum on Moodle. On the PSYC4141 moodle page you will find a Q&A Forum. This is a great way to ask a question outside of the lab sessions. It might seem scary to ask a question in the forum, but please don’t be afraid to do this. If you have a question, you can bet 30+ other students also have the same question! So by asking the question on the forum, you help out many more people on the module. A friendly GTA or Lecturer will be along to answer the question as soon as possible (we aim for within 48 hours during the working week).\nAsk during live online Q & A session. Each week we hold an online “Q&A” session where we will try and resolve any general queries and problems. It’s an ideal time to discuss things that students are struggling with or confused about, and can share ideas and answers. You can ask on the discussion forum above and then we might be able to pick up the issues and discuss them, but also you can ask in the session itself.\n\nAsking good questions - It’s really important that you give us as much information as you can when you ask your questions (in class and especially on the forum). It’s so much harder to help respond to “I can’t do Exercise 5 in Week 7” (because we don’t know why it is that you can’t do it) than for example “In Exercise 5 of Week 7, I’ve managed to read in the data, but the graph looks quite odd. Here is the code I’m using…”\n\n\nCourse Contacts\nIf you have something that needs to be private, then please feel free to email the coordinator at the email addresses below:\n\n\n\n\nEmail Address\n\n\n\n\nMargriet Groen (coordinator)\nm.groen at lancaster dot ac dot uk\n\n\n\n\n\n\n\n\n\n\n\n Back to top",
-    "crumbs": [
-      "Home",
-      "PSYC4141"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Statistics for Psychologists",
-    "section": "",
-    "text": "Welcome to Year 1 research methods and statistics!\n\nThis year you will begin your journey through the world of research methods, and data coding and statistics with R with us. You will complete two research methods and statistics modules:\n\nPSYC4141: Introduction to Psychological Research, with Carly Anderson, Rob Davies, Sam Finnerty, and Margriet Groen (coordinator),\nPSYC4242: Foundations of Psychological Research, with Katie Alcock, Sam Finnerty and John Towse (coordinator)\n\nClick on the button below to access your module: Term 1: PSYC4141, Term 2: PSYC4242.\n\n\n  \n    \n\n    \n      PSYC4141\n    \n    \n      PSYC4242"
   },
   {
     "objectID": "PSYC4141/week5.html",
