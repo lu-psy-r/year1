@@ -45,7 +45,7 @@ You can navigate to each in the side bar on the right
 
 ## Lectures {#sec-4141-w6-lectures}
 
-**1. Theory - Associations between categorical variables** (~23 min)
+**A. Theory - Associations between categorical variables** (~23 min)
 Watch this part before you complete the reading and the pre-lab activities. The video has captions, in case you find that helpful. You can download the slides and a transcript from the links below the video.
 
 ```{=html}
@@ -56,7 +56,7 @@ Watch this part before you complete the reading and the pre-lab activities. The 
 [Associations between categorical variables - slides](files/week6/4141_chisquare_slides.pdf)
 [Associations between categorical variables - transcript](files/week6/4141_chisquare_transcript.txt)
 
-**2. The mini research project** (~9 minutes)
+**B. The mini research project** (~9 minutes)
 If you haven't already, make sure you watch the overview video on the mini research project on the project page [here](project.qmd#sec-4141-project-overview).
 
 ## Reading {#sec-4141-w6-reading}
@@ -98,7 +98,7 @@ Each group will refine this research question and decide:
 - What aspect of mind wandering to focus on and how to measure it
 - What aspect of screen time to focus on and how to measure it
 
-Having read the key readings ([here](project.qmd#sec-4141-project-reading)), come prepared to discuss your ideas about mind wandering and screen time, how to refine the research question and how to measure each construct with your group during the lab session.
+Please read the key readings  ([more info on the project page here](project.qmd#sec-4141-project-reading)) before the lab session. In your group, you will discuss your ideas about mind wandering and screen time, how to refine the research question, and how to measure each construct.
 
 ### Pre-lab activity 2: Calculating Chi-square by hand and interpreting the results
 
@@ -128,9 +128,9 @@ With regard to visualising relations between categorical variables, the `geom_ba
 
 Each 'recipe' has the same structure. As an example, let's have a look at one ( [**recipe**](https://posit.cloud/learn/recipes/basics/ImportA1)) for a function that you have used each week: `read_csv()`
 
-1. First, it summarises what it is that you want to achieve when using that specific function. *In the case of `read_csvt()` it says "You want to read a CSV file into your R session, where you can manipulate its contents. The file has the extension .csv. A CSV file is a text file that contains a table whose values are separated by commas, i.e. a Comma Separated Values file."*
-2. Then, it outlines a number of steps that you need to carry out when using this function. *For `read_csv()` it outlines 3 steps: 1. Call the function. 2. Give the filepath to your file as a character string. 3. Save teh output to an object.*
-3. Finally, there is an example talks you through using the function with some data. *For `read_csv()` it uses an example with data about chickens.*
+1. First, it summarises what it is that you want to achieve when using that specific function. In the case of `read_csv()` it says *"You want to read a CSV file into your R session, where you can manipulate its contents. The file has the extension .csv. A CSV file is a text file that contains a table whose values are separated by commas, i.e. a Comma Separated Values file."*
+2. Then, it outlines a number of steps that you need to carry out when using this function. For `read_csv()` it outlines 3 steps: *1. Call the function. 2. Give the filepath to your file as a character string. 3. Save teh output to an object.*
+3. Finally, there is an example talks you through using the function with some data. For `read_csv()` it uses an example with data about chickens.
 4. Additional information appears in extra boxes with a light-bulb icon. If you find those confusing, don't worry about them at this stage.
 
 :::
