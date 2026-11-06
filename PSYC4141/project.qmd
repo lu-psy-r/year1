@@ -63,11 +63,13 @@ Key information on what you'll be expected to do, a rough timeline and how it li
 
 ## 2. Key readings: Start with these two papers to get a better understanding of the main concepts {#sec-4141-project-reading}
 
-These two papers are **essential reading** to get started on the research project. Focus on how concepts are defined, operationalised and measured. 
+These papers are **essential reading** to get started on the research project. Focus on how concepts are defined, operationalised and measured. 
 
 Smallwood, J., & Schooler, J. W. (2015). The science of mind wandering: Empirically navigating the stream of consciousness. *Annual Review of Psychology, 66*, 487–518. https://doi.org/10.1146/annurev-psych-010814-015331
 
 Kaye, L. K., Orben, A., Ellis, D. A., Hunter, S. C., & Houghton, S. (2020). The conceptual and methodological mayhem of “screen time”. *International Journal of Environmental Research and Public Health, 17*(10), Article 3661. https://doi.org/10.3390/ijerph17103661
+
+Baumgartner, S. E., Parry, D. A., Beyens, I., Wiradhany, W., Uncapher, M., Wagner, A. D., & Bavelier, D. (2024). The short- and long-term effects of digital media use on attention. In D. A. Christakis & L. Hale (Eds.), *Handbook of children and screens: Digital media, development, and well-being from birth through adolescence* (pp. 31-37). Springer. https://doi.org/10.1007/978-3-031-69362-5_5
 
 :::{.callout-tip}
 All reading is accessible via the library. You can go to Moodle -> Library Resources -> Resource List or you can follow [**this link**](https://eu.alma.exlibrisgroup.com/leganto/public/44LAN_INST/lists/93496942590001221?auth=SAML&section=94028195020001221).
