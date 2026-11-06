@@ -61,7 +61,7 @@ Key information on what you'll be expected to do, a rough timeline and how it li
 - [Project overview - slides](files/project/4141_project_overview_slides.pdf)
 - [Project overview - transcript](files/project/4141_project_overview_transcript.txt)
 
-## 2. Key readings: Start with these two papers to get a better understanding of the main concepts {#sec-4141-project-reading}
+## 2. Key readings: Start with these papers to get a better understanding of the main concepts {#sec-4141-project-reading}
 
 These papers are **essential reading** to get started on the research project. Focus on how concepts are defined, operationalised and measured. 
 
