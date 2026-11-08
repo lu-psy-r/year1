@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -259,7 +293,12 @@ window.Quarto = {
   <li><a href="#pre-lab-activity-3-data-visualisation---creating-a-bar-chart" id="toc-pre-lab-activity-3-data-visualisation---creating-a-bar-chart" class="nav-link" data-scroll-target="#pre-lab-activity-3-data-visualisation---creating-a-bar-chart">Pre-lab activity 3: Data visualisation - Creating a bar chart</a></li>
   <li><a href="#pre-lab-activity-4-getting-ready" id="toc-pre-lab-activity-4-getting-ready" class="nav-link" data-scroll-target="#pre-lab-activity-4-getting-ready">Pre-lab activity 4: Getting ready</a></li>
   </ul></li>
-  <li><a href="#sec-4141-w6-lab-activities" id="toc-sec-4141-w6-lab-activities" class="nav-link" data-scroll-target="#sec-4141-w6-lab-activities">Lab activities</a></li>
+  <li><a href="#sec-4141-w6-lab-activities" id="toc-sec-4141-w6-lab-activities" class="nav-link" data-scroll-target="#sec-4141-w6-lab-activities">Lab activities</a>
+  <ul class="collapse">
+  <li><a href="#lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check" id="toc-lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check" class="nav-link" data-scroll-target="#lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check">Lab activity 1: Refining your research question – Discuss, agree, swap and check</a></li>
+  <li><a href="#lab-activity-2-understanding-the-application-of-the-chi-square-test" id="toc-lab-activity-2-understanding-the-application-of-the-chi-square-test" class="nav-link" data-scroll-target="#lab-activity-2-understanding-the-application-of-the-chi-square-test">Lab activity 2: Understanding the application of the Chi-square test</a></li>
+  <li><a href="#lab-activity-3-reminders-through-association" id="toc-lab-activity-3-reminders-through-association" class="nav-link" data-scroll-target="#lab-activity-3-reminders-through-association">Lab activity 3: Reminders through association</a></li>
+  </ul></li>
   <li><a href="#sec-4141-w6-answers" id="toc-sec-4141-w6-answers" class="nav-link" data-scroll-target="#sec-4141-w6-answers">Answers</a></li>
   </ul>
 </nav>
@@ -441,6 +480,366 @@ Recipes - how to use them
 </section>
 <section id="sec-4141-w6-lab-activities" class="level2">
 <h2 class="anchored" data-anchor-id="sec-4141-w6-lab-activities">Lab activities</h2>
+<!-- :::{.callout-tip} -->
+<!-- Information about the lab activities will be added as soon as possible -->
+<!-- ::: -->
+<p>In this lab, you’ll</p>
+<ul>
+<li>work on refining your research question and decide on your measures</li>
+</ul>
+<p>you’ll also gain understanding of and practice with:</p>
+<ul>
+<li>conducting Pearson’s Chi-square in R</li>
+<li>interpreting Pearson’s Chi-square in R</li>
+<li>reporting the results in APA format</li>
+<li>when and why to apply Pearson’s Chi-square to answer questions in psychological science</li>
+</ul>
+<section id="lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check">Lab activity 1: Refining your research question – Discuss, agree, swap and check</h3>
+<ol type="1">
+<li><p><strong>Go and sit in your groups.</strong> Take a handout. You need 1 handout for every 2 or 3 people in your group. Write your group’s name or number in the “Author” box.</p></li>
+<li><p><strong>Agree on a question (~10 min).</strong> Discuss ideas and agree on one draft research question for your group. Write it in Section 1, with one line on who or what it’s about. Everyone should be able to explain why you chose it.</p></li>
+<li><p><strong>Pair up across groups (~1 min).</strong> Two (or three) of you from each group will go and join two (or three) people from another group.</p></li>
+<li><p><strong>Swap (~1 min).</strong> In your new foursome, swap handouts with the other pair, so each pair holds the other group’s question.</p></li>
+<li><p><strong>Review (~5 min).</strong> With your partner, read the other group’s question and complete Section 2 on their handout:</p>
+<ul>
+<li>Tick <strong>Yes</strong> or <strong>Unsure</strong> for each check, and add a note where you can.</li>
+<li>Write <strong>one assumption</strong> you can spot in the question.</li>
+<li>Write <strong>one thing you’d need to know</strong> to answer it.</li>
+</ul></li>
+<li><p><strong>Hand back and talk (~4 min).</strong> Return the handout to the group that wrote it. Talk it through in your foursome:</p>
+<ul>
+<li>What surprised each pair?</li>
+<li>How did the reviewers interpret the key terms?</li>
+</ul></li>
+<li><p><strong>Return and feed back (~7 min).</strong> Go back to your original group. Share the feedback with the rest of the group. Use the notes on your handout.</p></li>
+<li><p><strong>Revise together (~8 min).</strong> As a group, rewrite your question with <strong>at least one change</strong> for clarity or specificity. Complete Section 3 to record what you changed and why.</p></li>
+</ol>
+</section>
+<section id="lab-activity-2-understanding-the-application-of-the-chi-square-test" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-2-understanding-the-application-of-the-chi-square-test">Lab activity 2: Understanding the application of the Chi-square test</h3>
+<section id="question-1-difference-between-pearsons-chi-square-and-pearsons-correlation" class="level4">
+<h4 class="anchored" data-anchor-id="question-1-difference-between-pearsons-chi-square-and-pearsons-correlation">Question 1: Difference between Pearson’s chi-square and Pearson’s correlation</h4>
+<p>How does Pearson’s chi-square differ from Pearson’s correlation?</p>
+</section>
+<section id="question-2-when-is-chi-square-appropriate" class="level4">
+<h4 class="anchored" data-anchor-id="question-2-when-is-chi-square-appropriate">Question 2: When is Chi-square appropriate?</h4>
+<p>Chi-square test of independence would be appropriate when testing the following questions:</p>
+<ol type="a">
+<li>What is the relationship between gender and soft drink preference? True or False?</li>
+<li>How do males and females compare in terms of wanting to be a psychologist when they leave school? True or False?</li>
+</ol>
+</section>
+<section id="question-3-chi-square-formula" class="level4">
+<h4 class="anchored" data-anchor-id="question-3-chi-square-formula">Question 3: Chi-square formula</h4>
+<p>Write the chi-square formula below.</p>
+</section>
+<section id="question-4-answers-from-pre-lab-activity-2" class="level4">
+<h4 class="anchored" data-anchor-id="question-4-answers-from-pre-lab-activity-2">Question 4: Answers from pre-lab activity 2</h4>
+<p>What were your answers to the pre-lab activity 2 questions? Please compare them with other students at your table.</p>
+<ol type="a">
+<li>Complete the Pearson’s Chi-square test by hand using the data above and fill in the blanks:</li>
+</ol>
+<p><span class="math inline">\(\chi 2\)</span> ( , <em>N</em> = ) = , <em>p</em></p>
+<ol start="2" type="a">
+<li>Can you reject the null hypothesis?</li>
+</ol>
+</section>
+<section id="question-5-large-contingency-tables" class="level4">
+<h4 class="anchored" data-anchor-id="question-5-large-contingency-tables">Question 5: Large contingency tables</h4>
+<p>Why is it recommended to opt for multiple 2 x 2 chi-squares instead of chi-squares larger than 2 x 2?</p>
+</section>
+<section id="question-6-simplying-a-large-contingency-table" class="level4">
+<h4 class="anchored" data-anchor-id="question-6-simplying-a-large-contingency-table">Question 6: Simplying a large contingency table</h4>
+<p>How could you ‘modify’ the contingency table below for chi-square analysis to aid subsequent interpretation of the data/results?</p>
+<p><img src="files/week6/122_week14_labAc1_q6.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="lab-activity-3-reminders-through-association" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-3-reminders-through-association">Lab activity 3: Reminders through association</h3>
+<p>For this lab, we’re going to use data from <a href="https://journals.sagepub.com/stoken/default+domain/6XgDSfr6ZHSDs47tx5bu/full"><strong>Rogers, T. &amp; Milkman, K. L. (2016). Reminders through association. <em>Psychological Science, 27</em>, 973-986.</strong></a> You can read the full paper online but the short version is that the authors looked at how people remember to follow through with the intention of doing something.</p>
+<p>Although there are lots of potential reasons (e.g., some people may lack the self-control resources), Rogers and Milkman (2016) propose that some people fail to follow through simply because they forget about their good intentions. If this is the case, the authors argue, then having visual reminders to follow through on their intentions may help people remember to keep them. For example, a person may choose to put a sticker for their gym on their car window, so that every time they get in the car they remember to go to the gym.</p>
+<p>In Study 1 by Rogers and colleagues, participants took part in an unrelated experiment but at the start of the task they were asked to return a small stack of paper clips to the reception of the building at the end of the study and if they did so the researchers would donate $1 to a charity. They were then asked if they intended to do this. Those in the reminder-through-association (RTA) condition read “Thank you! To remind you to pick up a paper clip, an elephant statuette will be sitting on the counter as you collect your payment.” This message was followed by a picture of the elephant statuette. Those in the control condition simply read “Thank you!”.</p>
+<p>What we want to do is to run a chi-square analysis to determine whether those in the reminder-through-association condition were more likely to remember to return the paper-clips than those in the control condition.</p>
+<section id="aims-of-the-activity" class="level4">
+<h4 class="anchored" data-anchor-id="aims-of-the-activity">Aims of the activity</h4>
+<p>We are going to:</p>
+<ol type="1">
+<li>Setup the appropriate bits and pieces in RStudio</li>
+<li>Read in the data files</li>
+<li></li>
+<li></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Where are the download links?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Where are the download links?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Links to the files to be downloaded are in the <a href="@sec-4141-w6-prelab-activities">Pre-lab activities section</a> under Getting ready.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="How to use the Quarto document?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How to use the Quarto document?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Following feedback on the way we presented instructions and guidance across the handbook pages and the Quarto document, we’ve made the following change: <strong>All instructions and guidance (including hints and code snippets) for lab activities are now presented on the handbook page.</strong></p>
+<p>The Quarto document is largely empty, only containing a copy of the section headers and the actions to remind you of what you are meant to do. Sometimes there are questions associated with the code you’ve written or the output that follows from it. These can also be found on both the handbook page and in the Quarto document.</p>
+<p>How to complete the lab activity and use the Quarto script:</p>
+<ol type="1">
+<li>Open the handbook pages in a separate window or tab and navigate to <em>Lab activities</em>.</li>
+<li>Read the instructions on the handbook page for each step.</li>
+<li>Carry out the actions, by inserting a code chunk in the Quarto document, below each action.</li>
+<li>If there are any questions associated with that step, please try to answer them. You can write your answer in the Quarto document, as plain text. Answers to the questions will be shared after the last lab session has taken place (on Thursday afternoon).</li>
+<li>After having carried out an action, written a code chunk and answered any questions, go back to the handbook page and read the next bit of instruction, until you get to the next action.</li>
+<li>If you are stuck: Have a look at the ‘Hints’ and ‘Code’ snippets on the handbook page.</li>
+<li>If you are still stuck: Ask for help (your peers on your table, the GTA or lecturer in the lab session, via the Moodle Q&amp;A forum, during Friday’s live online Q&amp;A).</li>
+</ol>
+<p>This is also demonstrated in this video</p>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+    <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=b1640d97-8b02-4d34-8368-b4f800c041d7&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=false&amp;captions=true&amp;interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_howto_labactivities"></iframe>
+</div>
+<ul>
+<li><a href="files/week5/4141_howto_labactivities_transcript.txt">How to complete the lab activities - transcript</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="step-1-setup-the-appropriate-bits-and-pieces-in-rstudio" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-setup-the-appropriate-bits-and-pieces-in-rstudio">Step 1: Setup the appropriate bits and pieces in RStudio</h4>
+<p>Before we can do anything, we need tell R what packages we want to use. We use the function <code>library()</code> to do that. It is useful to have a section at the top of your script where you load all the relevant libraries.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’.In the code chunk, write code to load the libraries by using the <code>library()</code> function. We need the packages <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. After you’ve written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk).</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We need to load several packages (<code>here</code>, <code>tidyverse</code> and <code>easystats</code>) using the <code>library()</code> function. First, inside the code chunk, write <code>library()</code> and put <code>here</code> inside the brackets. On the next line in the code chunk, write <code>library()</code> and put <code>tidyverse</code> inside the brackets. On a third line in the code chunk, write <code>library()</code> and put <code>easystats</code> inside the brackets. Make sure to run the code chunk by clicking on the green arrow in the top corner of the code chunk.</p>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Step 1.</strong> Add the code to load the relevant libraries in a new code chunk. We need the following ones: <code>lsr</code> and <code>tidyverse</code>. If you are unsure, you can look at the ‘Hint’ below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the ‘Code’ section below.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use the <code>library()</code>function. Remember to put it inside a ‘code chunk’ in your script. The name of the package goes inside the brackets.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The code to do this is below.</p>
+<pre><code>library(lsr)
+library(tidyverse)</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-reading-in-the-data-file" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-reading-in-the-data-file">Step 2: Reading in the data file</h4>
+<p>For this lab activity, you’ll need the file named <code>RTA_study1.csv</code>.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’. Inside the chunk, use <code>read_csv()</code> to read in the data file named <code>RTA_study1.csv</code>; tell R where to find the file and what it is called. Make sure you’ve run the code chunk. Then, check that you can see the ‘object’ in the Environment (top right quadrant) for the file you read in. I’ve called the data-frame <code>intent_data</code>. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><code>dataframe &lt;- read_csv(here("filepath to folder", "filename.extension))</code></p>
+<p>Your code should include:</p>
+<ul>
+<li>dataframe: the name of the object you want to save the data in (such as <code>data_thirty</code>)</li>
+<li>&lt;- : assignment arrow</li>
+<li>read_csv() : the <code>read_csv()</code> function</li>
+<li>here(): the <code>here()</code> function</li>
+<li>“filepath to folder”: the folders that you need to point R to starting from whereever <em>here</em> starts</li>
+<li>“filename.extension”: the name of the datafile, including the extension</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>intent_data<span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"4141_wk6_lab"</span>, <span class="st">"RTA_study1.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>It is a fairly simple data file that contains four variables for 87 participants:</p>
+<ul>
+<li><code>condition</code>: this variable indicates which condition participants were in (1 = reminder-through-association condition, 2 = control condition)</li>
+<li><code>intend</code>: this variable indicates whether participants said they were intending to return the paper-clips (1 = yes, 0 = no)</li>
+<li><code>actualdonate</code>: this variable indicates whether participants actually ended up returning the paper-clips and therefore donating to charity (1 = yes, 0 = no)</li>
+<li><code>id</code>: this variable indicates the participant ID number</li>
+</ul>
+<p><strong>Questions Step 2</strong> The numbers in the first row across the four columns refer to the responses from participant 1.</p>
+<ol type="a">
+<li>What condition were they in?</li>
+<li>Did they intend to return the paper-clips?</li>
+<li>Did they actually return the paper-clips?</li>
+</ol>
+</section>
+<section id="step-3-some-data-wrangling---use-filter-to-keep-relevant-data" class="level4">
+<h4 class="anchored" data-anchor-id="step-3-some-data-wrangling---use-filter-to-keep-relevant-data">Step 3: Some data wrangling - Use <code>filter()</code> to keep relevant data</h4>
+<p>We need to do a little bit of wrangling to get our data into the format we need: First, we need to remove all the participants who said that they did not intend to return the paper-clips (intend = 0) as we are only interested in whether people follow through on an intention.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk and use <code>filter()</code> to remove all participants who said that they did not intend to return the paper-clips. Can a look below for a reminder on how <code>filter()</code> works. Give it a go. If you’re stuck, have a look at the Code below.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="How does `filter()` work?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How does <code>filter()</code> work?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>filter()</code> function allows you to select specific rows from a data frame based on one or more conditions.</p>
+<p>For example, imagine we have a dataset containing information about participants in a psychology study, including their age and gender. We might want to select only participants who are over 18 years old.</p>
+<p>We can do this using:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, age <span class="sc">&gt;</span> <span class="dv">18</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here: - <code>data</code> is the name of our data frame. - <code>age &gt; 18</code> is the condition we want to apply. - note these two bits of information are separated within the function by a comma. - only rows where the condition is <code>TRUE</code> are kept.</p>
+<p>We can also apply multiple conditions. For example, to select participants who are over 18 <strong>and</strong> identify as a woman:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, age <span class="sc">&gt;</span> <span class="dv">18</span>, gender <span class="sc">==</span> <span class="st">"Woman"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When we provide multiple conditions separated by commas, <code>filter()</code> keeps only rows that satisfy <strong>all</strong> of the conditions.</p>
+<p>Some useful operators for filtering data include:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>==</code></td>
+<td>Equal to</td>
+<td><code>gender == "Woman"</code></td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>Not equal to</td>
+<td><code>gender != "Woman"</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;</code></td>
+<td>Greater than</td>
+<td><code>age &gt; 18</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;</code></td>
+<td>Less than</td>
+<td><code>age &lt; 30</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;=</code></td>
+<td>Greater than or equal to</td>
+<td><code>age &gt;= 18</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;=</code></td>
+<td>Less than or equal to</td>
+<td><code>age &lt;= 30</code></td>
+</tr>
+</tbody>
+</table>
+<p>We can also use <code>&amp;</code> (AND) and <code>|</code> (OR) to combine conditions.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, age <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">&amp;</span> age <span class="sc">&lt;=</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This selects participants aged between 18 and 30 (inclusive).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>intent_data <span class="ot">&lt;-</span> <span class="fu">filter</span>(intent_data, intend <span class="sc">==</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question Step 3</strong></p>
+<ol type="a">
+<li>How many participants were removed because they didn’t intend to return the paper-clips?</li>
+</ol>
+</section>
+<section id="step-4-some-more-data-wrangling---use-recode_values-to-have-text-labels" class="level4">
+<h4 class="anchored" data-anchor-id="step-4-some-more-data-wrangling---use-recode_values-to-have-text-labels">Step 4: Some more data wrangling - Use <code>recode_values()</code> to have text labels</h4>
+<p>To make the output easier to read, we’re going to recode the values for our key variables (<code>condition</code> and <code>actualdonate</code>) to have text labels rather than numerical values.</p>
+<p>For this we can use the functions <code>mutate()</code> and <code>recode_values()</code>.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk and use <code>mutate()</code> and <code>recode_values()</code> to change the numerical values for <code>condition</code> and <code>actualdonate</code> to text labels. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.</p>
+</blockquote>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>intent_data <span class="ot">=</span> <span class="fu">mutate</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  intent_data,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">condition =</span> <span class="fu">recode_values</span>(condition, <span class="dv">1</span> <span class="sc">~</span> <span class="st">"rta"</span>, <span class="dv">2</span> <span class="sc">~</span> <span class="st">"control"</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">actualdonate =</span> <span class="fu">recode_values</span>(actualdonate, <span class="dv">1</span> <span class="sc">~</span> <span class="st">"donated"</span>, <span class="dv">0</span> <span class="sc">~</span> <span class="st">"no_donation"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -451,250 +850,171 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Information about the lab activities will be added as soon as possible</p>
+<p>Have a look at the recipe for <code>mutate()</code> for more information on this function <a href="https://posit.cloud/learn/recipes/transform/TransformF">here</a>.</p>
 </div>
 </div>
-<!-- In this lab, you'll gain understanding of and practice with: -->
-<!-- -   conducting Pearson's Chi-square in R -->
-<!-- -   interpreting Pearson's Chi-square in R -->
-<!-- -   reporting the results in APA format -->
-<!-- -   when and why to apply Pearson's Chi-square to answer questions in psychological science -->
-<!-- ### Lab activity 1: Understanding the application of the Chi-square test -->
-<!-- #### QUESTION 1 -->
-<!-- How does Pearson's chi-square differ from Pearson's correlation? -->
-<!-- #### QUESTION 2 -->
-<!-- Chi-square test of independence would be appropriate when testing the following questions: -->
-<!-- -    -->
-<!--     a.  What is the relationship between gender and soft drink preference? True or False? -->
-<!-- -   b.How do males and females compare in terms of wanting to be a psychologist when they leave school? True or False? -->
-<!-- #### QUESTION 3 -->
-<!-- Write the chi-square formula below. -->
-<!-- #### QUESTION 4 -->
-<!-- What were your answers to the pre-lab activity 1 questions? Please compare them with other students at your table. -->
-<!-- +a. Complete the Pearson's Chi-square test by hand using the data above and fill in the blanks: -->
-<!-- $\chi 2$ ( , *N* = ) = , *p* -->
-<!-- +b. Can you reject the null hypothesis? -->
-<!-- #### QUESTION 5 -->
-<!-- Why is it recommended to opt for multiple 2 x 2 chi-squares instead of chi-squares larger than 2 x 2? -->
-<!-- #### QUESTION 6 -->
-<!-- How could you 'modify' the contingency table below for chi-square analysis to aid subsequent interpretation of the data/results? -->
-<!-- ![](images/wk4/122_week14_labAc1_q6.png) -->
-<!-- ### Lab activity 2: Reminders through association -->
-<!-- For this lab, we're going to use data from [**Rogers, T. & Milkman, K. L. (2016). Reminders through association. *Psychological Science, 27*, 973-986.**](https://journals.sagepub.com/stoken/default+domain/6XgDSfr6ZHSDs47tx5bu/full) You can read the full paper online but the short version is that the authors looked at how people remember to follow through with the intention of doing something. -->
-<!-- Although there are lots of potential reasons (e.g., some people may lack the self-control resources), Rogers and Milkman (2016) propose that some people fail to follow through simply because they forget about their good intentions. If this is the case, the authors argue, then having visual reminders to follow through on their intentions may help people remember to keep them. For example, a person may choose to put a sticker for their gym on their car window, so that every time they get in the car they remember to go to the gym. -->
-<!-- In Study 1 by Rogers and colleagues, participants took part in an unrelated experiment but at the start of the task they were asked to return a small stack of paper clips to the reception of the building at the end of the study and if they did so the researchers would donate \$1 to a charity. They were then asked if they intended to do this. Those in the reminder-through-association (RTA) condition read "Thank you! To remind you to pick up a paper clip, an elephant statuette will be sitting on the counter as you collect your payment." This message was followed by a picture of the elephant statuette. Those in the control condition simply read "Thank you!". -->
-<!-- What we want to do is to run a chi-square analysis to determine whether those in the RTA condition were more likely to remember to return the paper-clips than those in the control condition.  -->
-<!-- ::: {.callout-warning}  -->
-<!-- ## Before we begin -->
-<!-- Let's put the basics in place: -->
-<!-- * Make sure you have started a new R Markdown script. If you need a reminder of how to do that, please revisit week 6 of PSYC121 ([here](https://lu-psy-r.github.io/statistics_for_psychologists/PSYC121/Week6.html#some-basic-rmarkdown)). -->
-<!-- * You'll need the data file `RTA_study1.csv` you downloaded when completing Pre-lab activity 3. If you experienced issues with uploading files to the server, follow the instructions below. -->
-<!-- * When starting a new analysis, it is a good idea to empty the R environment. This prevents objects and variables from previous analyses interfering with the current one.  -->
-<!-- * Finally, make sure your working directory is set to the folder in which you have stored the data files (`RTA_study1.csv`).  -->
-<!-- ::: -->
-<!-- ::: {.callout-important} -->
-<!-- ## If you couldn't upload files to the server, do this: -->
-<!-- If you experienced difficulties with uploading a folder or a file to the server, you can use the code below to directly download the file you need in this lab activity to the server (instead of first downloading it to you computer and then uploading it to the server). Remember that you can copy the code to your clipboard by clicking on the 'clipboard' in the top right corner. -->
-<!-- ::: -->
-<!-- ```{r eval=FALSE} -->
-<!-- download.file("https://github.com/lu-psy-r/statistics_for_psychologists/blob/main/PSYC122/data/week14/RTA_study1.csv?raw=true", destfile = "RTA_study1.csv") -->
-<!-- ``` -->
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Cleaning the R environment -->
-<!-- You can clean the R environment by clicking on the broom icon at the top right of the environment window, or you can use the code below. -->
-<!-- ```{r eval=FALSE} -->
-<!-- rm(list=ls()) -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Checking your working directory -->
-<!-- Use the code below to check what you working directory is currently set to. This is the folder that R will use to look for files. Is the file path that is written to the Console after you run the code snippet the one that contains the data file? You can check by nativating to the path you can see in the Console in the 'Files' pane on the right. Does it contain the data files? -->
-<!-- ```{r eval=FALSE} -->
-<!-- getwd() -->
-<!-- ``` -->
-<!-- If your working directory is not set to the folder that contains the data file, navigate to folder that contains the data file in the 'Files' pane, click 'More' and then on 'Set as working directory'. -->
-<!-- ::: -->
-<!-- >**Step 1.**  Add the code to load the relevant libraries in a new code chunk. We need the following ones: `lsr` and `tidyverse`. If you are unsure, you can look at the 'Hint' below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the 'Code' section below.  -->
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Hint -->
-<!-- Use the `library()`function. Remember to put it inside a 'code chunk' in your R Markdown script. -->
-<!-- ::: -->
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- The code to do this is below.  -->
-<!-- ``` -->
-<!-- library(lsr) -->
-<!-- library(tidyverse) -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- >**Step 2.**  Read in the data, have a look at the layout of the data and familiarise yourself with it. -->
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Hint -->
-<!-- Use the `read_csv()`function to read in the data and the `head()` function to have a quick look at each data frame. -->
-<!-- ::: -->
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- The code to do this is below.  -->
-<!-- ``` -->
-<!-- intent_data <- read_csv("RTA_study1.csv")                                 # Read in the data file -->
-<!-- head(intent_data)                                                         # Look at the table -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- It is a fairly simple data file that contains four variables for 87 participants: -->
-<!-- * `condition`: this variable indicates which condition participants were in (1 = reminder-through-association condition, 2 = control condition) -->
-<!-- * `intend`: this variable indicates whether participants said they were intending to return the paper-clips (1 = yes, 0 = no) -->
-<!-- * `actualdonate`: this variable indicates whether participants actually ended up returning the paper-clips and therefore donating to charity (1 = yes, 0 = no) -->
-<!-- * `id`: this variable indicates the participant ID number -->
-<!-- >*Question 2a:* What do the numbers in the first row across the four columns refer to? -->
-<!-- >**Step 3.**    Getting the data ready. We need to do a little bit of wrangling to get our data into the format we need: First, we need to remove all the participants who said that they did not intend to return the paper-clips (intend = 0) as we are only interested in whether people follow through on an intention. Second, to make the output easier to read, we’re going to recode condition to have text labels rather than numerical values.  -->
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Hint -->
-<!-- You can use `filter()` to remove all participants who said that they did not intend to return the paper-clips. You can use `mutate()` and `recode()` to recode the values in `condition` to make '1 = rta' and '2 = control', and the -->
-<!-- values in `actualdonate` to '1 = donated' and '0 = no_donation'. Finally, save the output to a new object. -->
-<!-- You can do this in two separate steps, or you can use pipes. Also, note that you will need to put -->
-<!-- both sides of each recode argument (i.e., 1 and rta) in quotation marks, even though 1 and 2 are numbers, they actually represent categories rather than numerical data. -->
-<!-- ::: -->
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- The code to do this is below: -->
-<!-- ``` -->
-<!-- intent_recode <- intent_data %>% -->
-<!--   filter(intend == 1) %>% -->
-<!--   mutate(condition = recode(condition, "1" = "rta", "2" = "control"), -->
-<!--          actualdonate = recode(actualdonate, "1" = "donated", "0" = "no_donation")) -->
-<!-- head(intent_recode) -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- >*Question 3a:* How many participants were removed because they didn't intend to return the paper-clips? -->
-<!-- >**Step 4.** Next you need to calculate descriptive statistics. For frequency data these are simply counts so we can use the function `count()` rather than having to use the `summarise()` function. We want to know how many participants are in each group (rta - donated, rta - didn’t donate, control - donated, control - didn’t donate) so we will need to use `group_by()` to display the results for all combinations of `condition` and `actualdonate`. -->
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Hint -->
-<!-- Use the code template below to develop the code. You need to replace the various bits in CAPITALS. -->
-<!-- ``` -->
-<!-- NEW_OBJECT <- DATA_TO_USE %>% -->
-<!-- group_by(FIRST_GROUPING_VARIABLE, SECOND_GROUPING_VARIABLE) %>% -->
-<!--   count() -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- The code to do this is below: -->
-<!-- ``` -->
-<!-- intent_counts <- intent_recode %>% -->
-<!-- group_by(condition, actualdonate) %>% -->
-<!--   count() -->
-<!-- intent_counts -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- >*Question 4a:* How many participants in the control condition didn’t donate?  -->
-<!-- >*Question 4b:* How many participants in the control condition donated? -->
-<!-- >*Question 4c:* How many participants in the rta condition didn’t donate? -->
-<!-- >*Question 4d:*  How many participants in the rta condition donated? -->
-<!-- You may also want to calculate the percentages of participants in each condition. Run this code to do this. Make sure to replace RECODED_DATA with the name of your dataframe in which you have recoded the original data values with string labels (in Step 3). -->
-<!-- ```{r eval=FALSE}   -->
-<!-- intent_percent <- intent_recode %>% -->
-<!--   group_by(condition, actualdonate) %>% -->
-<!--   count() %>% -->
-<!--   ungroup() %>% # ungroups the data -->
-<!--   group_by(condition) %>% # then groups it again but just by condition -->
-<!--   mutate(percent_condition = n/sum(n) * 100) -->
-<!-- intent_percent -->
-<!-- ``` -->
-<!-- >**Step 5.** Data visualiation. We want to create a simple bar plot of our count data. We'll use `ggplot()` for this in combination with the `geom_bar()` function. Use the code template below and make sure to fill in the relevant bits. -->
-<!-- ```{r eval=FALSE} -->
-<!-- ggplot(data = , aes(x = , fill = )) + -->
-<!--   geom_bar(position = "dodge") -->
-<!-- ``` -->
-<!-- ::: {.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- The code to do this is below: -->
-<!-- ``` -->
-<!-- ggplot(data = intent_recode, aes(x = condition, fill = actualdonate)) + -->
-<!--   geom_bar(position = "dodge") -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- >*Question 5a:* What does `position = "dodge"` do? Remove it and rerun the code to find out. -->
-<!-- As you can see, the plot makes it much easier to visualise the data - participants in the RTA condition appear to have been more likely to remember to donate than those in the control condition. -->
-<!-- The `ggplot2()` package allows you to customise all aspects of your plots, so let’s tidy ours up a little bit. We’re going to do the following: -->
-<!-- * Edit the labels on the x-axis, y-axis and fill. -->
-<!-- * Change the colours of the bars by using `scale_fill_manual()` and specifying the colours we want in the values argument -->
-<!-- * Change the theme of the plot to change how it looks -->
-<!-- The code below does this. -->
-<!-- >**TASK** Add a comment to each line to indicate what that line does. -->
-<!-- ```{r eval=FALSE} -->
-<!-- ggplot(data = intent_recode, aes(x = condition, fill = actualdonate)) + -->
-<!--   geom_bar(position = "dodge") + -->
-<!--   scale_x_discrete(name = "Condition", labels = c("Control", "RTA")) + -->
-<!--   scale_y_continuous(name = "Count") + -->
-<!--   scale_fill_manual(name = "Behaviour", labels = c("Donated", "Did not donate"), values = c("blue", "grey"))+ -->
-<!--   theme_classic() -->
-<!-- ``` -->
-<!-- There are a few things to note about the code we just added on: -->
-<!-- * If you use simple colour names then you are restricted in the options you can choose, however, if you want more flexibility you can use hexadecimal colour codes, see [**here**](http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/). -->
-<!-- * There are multiple themes that you can apply. Have a look at the `ggplot2()` cheatsheet for an overview ([**here**](https://rstudio.github.io/cheatsheets/html/data-visualization.html?_gl=1*7olq9v*_ga*MjEyNjQ2Nzk4MC4xNzA1NTg2MzI1*_ga_2C0WZ1JHG0*MTcwNjM1OTgzMi4xNC4xLjE3MDYzNjA1MjUuMC4wLjA.#themes). Try out a few and see which one you prefer. -->
-<!-- >**Step 6.** Now let's run that chi-square analysis to see whether our impression from the plot holds up and there is a significant association between the grouping variables.  -->
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Hint -->
-<!-- Use the `chisq.test()` function. Remember to use the recoded data to make the output easier to read. -->
-<!-- ::: -->
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- The code to do this is below: -->
-<!-- ``` -->
-<!-- results <- chisq.test(x = intent_recode$condition,        # the first grouping variable -->
-<!--                       y = intent_recode$actualdonate,     # the second grouping variable -->
-<!--                       correct = FALSE)                    # whether we want to apply the continuity correction (use if any of the expected cell frequencies < 10 in 2 x 2 table) -->
-<!-- results -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- >*Question 6a:* What do you conclude from the output?  -->
-<!-- >**Step 7.** Check the assumptions. -->
-<!-- The assumptions for chi-square are as follows: -->
-<!-- 1) The data in the cells should be frequencies, or counts of cases rather than percentages. -->
-<!-- 2) The levels (or categories) of the variables are mutually exclusive. That is, a particular participant fits into one and only one group of each of the variables. -->
-<!-- 3) Each participant may contribute data to one and only one cell. If, for example, the same participants are tested -->
-<!-- over time such that the comparisons are of the same subjects at Time 1, Time 2, Time 3, etc., then Chi-square may -->
-<!-- not be used. -->
-<!-- 4) The study groups must be independent. This means that a different test must be used if the two groups are related. For example, a different test must be used if the researcher’s data consists of paired samples, such as in studies in which a parent is paired with his or her child. -->
-<!-- 5) There are 2 variables, and both are measured as categories, usually at the nominal level. While Chi-square has no rule about limiting the number of cells (by limiting the number of categories for each variable), a very large number of cells (over 20) can make it difficult to meet assumption #6 below, and to interpret the meaning of the results. -->
-<!-- 6) The expected cell frequencies should be greater than 5. -->
-<!-- Assumptions 1) to 5) should be evaluated by reviewing the design of the study. The only assumption that we need to check with R is whether all expected frequencies are greater than 5. -->
-<!-- >**TASK** Write the code to check that all expected frequencies are greater than 5. -->
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Hint -->
-<!-- The information we need is in the object in which your stored the results of the Chi-square test. -->
-<!-- ::: -->
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Code -->
-<!-- The code to do this is below: -->
-<!-- ``` -->
-<!-- results$expected -->
-<!-- ``` -->
-<!-- ::: -->
-<!-- >*Question 7a:* What do you conclude from the output? -->
-<!-- >**Step 8.** The last step before writing up the results is to calculate an effect size so that we have a standardised measure of how large the association between our grouping variables is, the effect size measure for chi-square is Cramer’s V. To calculate Cramer’s V we’re going to use the function `cramersv()` from the `lsr` package. The code mirrors the code used for the Chi-square test itself: -->
-<!-- ```{r eval=FALSE} -->
-<!-- eff_size <- cramersV(x = intent_recode$condition,     # the first grouping variable -->
-<!--                      y = intent_recode$actualdonate,  # the second grouping variable -->
-<!--                      correct = FALSE)                  # whether we want to apply the continuity correction (use if any of the expected cell frequencies < 10 in 2 x 2 table) -->
-<!-- eff_size -->
-<!-- ``` -->
-<!-- We can square the effect size (or multiple it by itself) to see how much variance in one variable is accounted for by the other variable. Use the code snippet below to square the effect size. -->
-<!-- ```{r eval=FALSE} -->
-<!-- percentageAccountedFor <- eff_size * eff_size *100 -->
-<!-- percentageAccountedFor -->
-<!-- ``` -->
-<!-- >*Question 8a:* How large is the effect and how much variance is accounted for? -->
-<!-- >**Step 9.** To help with interpreting the relationships, it is useful to look at the standardised residuals. These are z-scores that indicate how many standard deviations above or below the expected count, an observed count is (thus indicating how much they differ). Remember, for z-scores the following holds: +/- 1.96, p <.05, +/- 2.58 p <.01, +/-3.29 p < .001 -->
-<!-- ```{r eval=FALSE} -->
-<!-- results$residuals   # check the standardised residuals -->
-<!-- ``` -->
-<!-- >*Question 9a:* What do you conclude from the output? -->
-<!-- >**Step 10.** Write up the results following APA guidelines. -->
-<!-- :::{.callout-tip collapse="true"} -->
-<!-- ## Hint -->
-<!-- The [**Purdue writing lab website**](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_numbers_statistics.html) is helpful for guidance on punctuating statistics. -->
-<!-- ::: -->
+</section>
+<section id="step-5-descriptive-statistics" class="level4">
+<h4 class="anchored" data-anchor-id="step-5-descriptive-statistics">Step 5: Descriptive statistics</h4>
+<p>Next you need to calculate descriptive statistics. For frequency data these are simply counts so we can use the function <code>count()</code> to do this. We want to know how many participants are in each group (rta - donated, rta - didn’t donate, control - donated, control - didn’t donate).</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk and use <code>count()</code> to check how many participants are in each group (rta - donated, rta - didn’t donate, control - donated, control - didn’t donate). You may also want to calculate the percentages of participants in each condition. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.</p>
+</blockquote>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>intent_counts <span class="ot">&lt;-</span> <span class="fu">mutate</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(intent_data, condition, actualdonate),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">percent =</span> <span class="dv">100</span> <span class="sc">*</span> n <span class="sc">/</span> <span class="fu">sum</span>(n),</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">.by =</span> condition)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>intent_counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Questions Step 5</strong></p>
+<ol type="a">
+<li>How many participants in the control condition didn’t donate?</li>
+<li>How many participants in the control condition donated?</li>
+<li>How many participants in the RTA condition didn’t donate?</li>
+<li>How many participants in the rta condition donated?</li>
+</ol>
+</section>
+<section id="step-6-data-visualisation-using-geom_bar" class="level4">
+<h4 class="anchored" data-anchor-id="step-6-data-visualisation-using-geom_bar">Step 6: Data visualisation using <code>geom_bar()</code></h4>
+<p>We want to create a simple bar plot of our count data. We’ll use <code>ggplot()</code> for this in combination with the <code>geom_bar()</code> function.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk and use the code template below to create a bar chart. Make sure to fill in the relevant bits.</p>
+</blockquote>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> , <span class="fu">aes</span>(<span class="at">x =</span> , <span class="at">fill =</span> )) <span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The code to do this is below:</p>
+<pre><code>ggplot(data = intent_data, aes(x = condition, fill = actualdonate)) +
+  geom_bar(position = "dodge")</code></pre>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 6</strong></p>
+<ol type="a">
+<li>What does <code>position = "dodge"</code> do? Remove it and rerun the code to find out.</li>
+<li>Describe the pattern in the data in your own words.</li>
+</ol>
+<p>As you can see, the plot makes it much easier to get your head around what the data mean: Participants in the RTA condition appear to have been more likely to remember to donate than those in the control condition.</p>
+<p>The <code>ggplot2()</code> package allows you to customise all aspects of your plots, so let’s tidy ours up a little bit. We’re going to do the following:</p>
+<ul>
+<li>Edit the labels on the x-axis, y-axis and fill</li>
+<li>Change the colours of the bars by using <code>scale_fill_manual()</code> and specifying the colours we want in the values argument</li>
+<li>Change the theme of the plot to change how it looks</li>
+</ul>
+<blockquote class="blockquote">
+<p>Action: Copy the code below to a new code chunk. In your Quarto document, write a comment to describe what each line of code does.</p>
+</blockquote>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> intent_data, <span class="fu">aes</span>(<span class="at">x =</span> condition, <span class="at">fill =</span> actualdonate)) <span class="sc">+</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">name =</span> <span class="st">"Condition"</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"RTA"</span>)) <span class="sc">+</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">"Count"</span>) <span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">name =</span> <span class="st">"Behaviour"</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Donated"</span>, <span class="st">"Did not donate"</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"grey"</span>))<span class="sc">+</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>There are a few things to note about the code we just added on:</p>
+<ul>
+<li>If you use simple colour names then you are restricted in the options you can choose, however, if you want more flexibility you can use hexadecimal colour codes, see <a href="http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/"><strong>here</strong></a>.</li>
+<li>There are multiple themes that you can apply. Have a look at the <code>ggplot2()</code> cheatsheet for an overview (<a href="https://rstudio.github.io/cheatsheets/html/data-visualization.html?_gl=1*7olq9v*_ga*MjEyNjQ2Nzk4MC4xNzA1NTg2MzI1*_ga_2C0WZ1JHG0*MTcwNjM1OTgzMi4xNC4xLjE3MDYzNjA1MjUuMC4wLjA.#themes"><strong>here</strong></a>. Try out a few and see which one you prefer.</li>
+</ul>
+</section>
+<section id="step-7-run-the-chi-square-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="step-7-run-the-chi-square-analysis">Step 7: Run the chi-square analysis</h4>
+<p>Now let’s run that chi-square analysis to see whether our impression from the plot holds up and there is a significant association between the grouping variables.</p>
+<blockquote class="blockquote">
+<p>Action: Copy the code snippet below to a new code chunk.</p>
+</blockquote>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(<span class="at">x =</span> intent_data<span class="sc">$</span>condition,</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> intent_data<span class="sc">$</span>actualdonate,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="at">correct =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled" title="How does `chisq.test()` work?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How does <code>chisq.test()</code> work?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>results &lt;- chisq.test(x = intent_recode$condition,        # the first grouping variable
+                      y = intent_recode$actualdonate,     # the second grouping variable
+                      correct = FALSE)                    # whether we want to apply the continuity correction (use if any of the expected cell frequencies &lt; 10 in 2 x 2 table)
+results</code></pre>
+</div>
+</div>
+<p><strong>Question Step 7:</strong> What do you conclude from the output?</p>
+</section>
+<section id="step-8-check-the-assumptions" class="level4">
+<h4 class="anchored" data-anchor-id="step-8-check-the-assumptions">Step 8: Check the assumptions</h4>
+<p>The assumptions for chi-square are as follows:</p>
+<ol type="1">
+<li>The data in the cells should be frequencies, or counts of cases rather than percentages.</li>
+<li>The levels (or categories) of the variables are mutually exclusive. That is, a particular participant fits into one and only one group of each of the variables.</li>
+<li>Each participant may contribute data to one and only one cell. If, for example, the same participants are tested over time such that the comparisons are of the same subjects at Time 1, Time 2, Time 3, etc., then Chi-square may not be used.</li>
+<li>The study groups must be independent. This means that a different test must be used if the two groups are related. For example, a different test must be used if the researcher’s data consists of paired samples, such as in studies in which a parent is paired with his or her child.</li>
+<li>There are 2 variables, and both are measured as categories, usually at the nominal level. While Chi-square has no rule about limiting the number of cells (by limiting the number of categories for each variable), a very large number of cells (over 20) can make it difficult to meet assumption #6 below, and to interpret the meaning of the results.</li>
+<li>The expected cell frequencies should be greater than 5.</li>
+</ol>
+<p>Assumptions 1) to 5) should be evaluated by reviewing the design of the study. The only assumption that we need to check with R is whether all expected frequencies are greater than 5. This information is in the object in which you stored the results of the Chi-square test, under <code>expected</code>.</p>
+<blockquote class="blockquote">
+<p>Action: Copy the code snippet below to a new code chunk.</p>
+</blockquote>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>results<span class="sc">$</span>expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Question Step 8:</strong> What do you conclude from the output?</p>
+</section>
+<section id="step-9-calculate-the-effect-size" class="level4">
+<h4 class="anchored" data-anchor-id="step-9-calculate-the-effect-size">Step 9: Calculate the effect size</h4>
+<p>The last step before writing up the results is to calculate an effect size so that we have a standardised measure of how large the association between our grouping variables is. The effect size measure for chi-square is Cramer’s V. To calculate Cramer’s V we’re going to use the function <code>cramers_v()</code> from the <code>easystats</code> package. The code mirrors the code used for the Chi-square test itself.</p>
+<blockquote class="blockquote">
+<p>Action: Copy the code snippet below to a new code chunk.</p>
+</blockquote>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>effect_size <span class="ot">&lt;-</span> <span class="fu">cramers_v</span>(<span class="at">x =</span> intent_data<span class="sc">$</span>condition,     </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                         <span class="at">y =</span> intent_data<span class="sc">$</span>actualdonate) </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>effect_size</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can square the effect size (or multiple it by itself) to see how much variance in one variable is accounted for by the other variable. Use the code snippet below to square the effect size.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>percentageAccountedFor <span class="ot">&lt;-</span> effect_size <span class="sc">*</span> effect_size <span class="sc">*</span><span class="dv">100</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>percentageAccountedFor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Question Step 9:</strong> How large is the effect and how much variance is accounted for?</p>
+</section>
+<section id="step-10-adjusted-standardised-residuals" class="level4">
+<h4 class="anchored" data-anchor-id="step-10-adjusted-standardised-residuals">Step 10: Adjusted standardised residuals</h4>
+<p>To help interpret the relationship, it is useful to look at the adjusted standardised residuals. These are z-scores showing how many standard deviations each observed count is above or below the count expected if the variables were unrelated, so they indicate which cells differ most from expectation. Because they approximately follow a standard normal distribution, values beyond ±1.96 indicate a difference at <em>p</em> &lt; .05 (two-tailed), beyond ±2.58 at <em>p</em> &lt; .01, and beyond ±3.29 at <em>p</em> &lt; .001.</p>
+<blockquote class="blockquote">
+<p>Action: Copy the code snippet below to a new code chunk.</p>
+</blockquote>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>results<span class="sc">$</span>residuals   <span class="co"># check the adjusted standardised residuals</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Question Step 10:</strong> What do you conclude from the output?</p>
+</section>
+<section id="step-11-write-up-the-results-following-apa-guidelines." class="level4">
+<h4 class="anchored" data-anchor-id="step-11-write-up-the-results-following-apa-guidelines.">Step 11:** Write up the results following APA guidelines.</h4>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The <a href="https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_numbers_statistics.html"><strong>Purdue writing lab website</strong></a> is helpful for guidance on punctuating statistics.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
 </section>
 <section id="sec-4141-w6-answers" class="level2">
 <h2 class="anchored" data-anchor-id="sec-4141-w6-answers">Answers</h2>
