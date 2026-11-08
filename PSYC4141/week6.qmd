@@ -139,18 +139,18 @@ Each 'recipe' has the same structure. As an example, let's have a look at one ( 
 
 More information and the download links will be shared as soon as possible.
 
-<!-- To complete this week's lab activities you will need several files: -->
+To complete this week's lab activities you will need several files:
 
-<!-- 1.  We'll work with an example script called `4141_wk6_lab.qmd`. This is a Quarto document. -->
-<!-- 2.  We need several data files. -->
+1.  We'll work with an example script called `4141_wk6_lab.qmd`. This is a Quarto document.
+2.  We'll also need a data file names `RTA_study1.csv`.
 
-<!-- You can download the files here: [`4141_wk6_lab.zip`](files/week6/4141_wk6_lab.zip){download="4141_wk6_lab.zip"}. Usually they will be saved in your 'Downloads' folder. -->
+You can download the files here: [`4141_wk6_lab.zip`](files/week6/4141_wk6_lab.zip){download="4141_wk6_lab.zip"}. Usually they will be saved in your 'Downloads' folder.
 
-<!-- Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first). -->
+Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).
 
-<!-- Finally, open the example script by clicking on the file called `4141_wk5_lab.qmd` in the Files space on the R-server. -->
+Finally, open the example script by clicking on the file called `4141_wk5_lab.qmd` in the Files space on the R-server.
 
-<!-- You are now ready to start work on the lab activities. -->
+You are now ready to start work on the lab activities.
 
 
 ## Lab activities {#sec-4141-w6-lab-activities}
