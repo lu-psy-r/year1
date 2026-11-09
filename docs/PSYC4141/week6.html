@@ -647,7 +647,7 @@ Hint
 </div>
 </div>
 <blockquote class="blockquote">
-<p><strong>Step 1.</strong> Add the code to load the relevant libraries in a new code chunk. We need the following ones: <code>lsr</code> and <code>tidyverse</code>. If you are unsure, you can look at the ‘Hint’ below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the ‘Code’ section below.</p>
+<p><strong>Step 1.</strong> Add the code to load the relevant libraries in a new code chunk. We need the following ones: <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. If you are unsure, you can look at the ‘Hint’ below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the ‘Code’ section below.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
@@ -678,8 +678,9 @@ Code
 <div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below.</p>
-<pre><code>library(lsr)
-library(tidyverse)</code></pre>
+<pre><code>library(here)
+library(tidyverse)
+library(easystats)</code></pre>
 </div>
 </div>
 </div>
@@ -705,7 +706,7 @@ Hint
 <p><code>dataframe &lt;- read_csv(here("filepath to folder", "filename.extension))</code></p>
 <p>Your code should include:</p>
 <ul>
-<li>dataframe: the name of the object you want to save the data in (such as <code>data_thirty</code>)</li>
+<li>dataframe: the name of the object you want to save the data in (such as <code>intent_data</code>)</li>
 <li>&lt;- : assignment arrow</li>
 <li>read_csv() : the <code>read_csv()</code> function</li>
 <li>here(): the <code>here()</code> function</li>
@@ -932,7 +933,7 @@ Code
 <p>There are a few things to note about the code we just added on:</p>
 <ul>
 <li>If you use simple colour names then you are restricted in the options you can choose, however, if you want more flexibility you can use hexadecimal colour codes, see <a href="http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/"><strong>here</strong></a>.</li>
-<li>There are multiple themes that you can apply. Have a look at the <code>ggplot2()</code> cheatsheet for an overview (<a href="https://rstudio.github.io/cheatsheets/html/data-visualization.html?_gl=1*7olq9v*_ga*MjEyNjQ2Nzk4MC4xNzA1NTg2MzI1*_ga_2C0WZ1JHG0*MTcwNjM1OTgzMi4xNC4xLjE3MDYzNjA1MjUuMC4wLjA.#themes"><strong>here</strong></a>. Try out a few and see which one you prefer.</li>
+<li>There are multiple themes that you can apply. Have a look at the <code>ggplot2()</code> cheatsheet for an overview (<a href="https://rstudio.github.io/cheatsheets/html/data-visualization.html?_gl=1*7olq9v*_ga*MjEyNjQ2Nzk4MC4xNzA1NTg2MzI1*_ga_2C0WZ1JHG0*MTcwNjM1OTgzMi4xNC4xLjE3MDYzNjA1MjUuMC4wLjA.#themes"><strong>here</strong></a>). Try out a few and see which one you prefer.</li>
 </ul>
 </section>
 <section id="step-7-run-the-chi-square-analysis" class="level4">

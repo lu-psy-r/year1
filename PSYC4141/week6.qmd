@@ -297,7 +297,7 @@ We need to load several packages (`here`, `tidyverse` and `easystats`) using the
 :::
 
 
->**Step 1.**  Add the code to load the relevant libraries in a new code chunk. We need the following ones: `lsr` and `tidyverse`. If you are unsure, you can look at the 'Hint' below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the 'Code' section below.
+>**Step 1.**  Add the code to load the relevant libraries in a new code chunk. We need the following ones: `here`, `tidyverse` and `easystats`. If you are unsure, you can look at the 'Hint' below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the 'Code' section below.
 
 ::: {.callout-note title="Hint" collapse="true"}
 Use the `library()`function. Remember to put it inside a 'code chunk' in your script. The name of the package goes inside the brackets.
@@ -306,8 +306,9 @@ Use the `library()`function. Remember to put it inside a 'code chunk' in your sc
 ::: {.callout-note title="Code" collapse="true"}
 The code to do this is below.
 ```
-library(lsr)
+library(here)
 library(tidyverse)
+library(easystats)
 ```
 :::
 
@@ -322,7 +323,7 @@ For this lab activity, you'll need the file named `RTA_study1.csv`.
 
 Your code should include:
 
-- dataframe: the name of the object you want to save the data in (such as `data_thirty`) 
+- dataframe: the name of the object you want to save the data in (such as `intent_data`) 
 - <- : assignment arrow
 - read_csv() : the `read_csv()` function
 - here(): the `here()` function
@@ -499,7 +500,7 @@ ggplot(data = intent_data, aes(x = condition, fill = actualdonate)) +
 There are a few things to note about the code we just added on:
 
 * If you use simple colour names then you are restricted in the options you can choose, however, if you want more flexibility you can use hexadecimal colour codes, see [**here**](http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/).
-* There are multiple themes that you can apply. Have a look at the `ggplot2()` cheatsheet for an overview ([**here**](https://rstudio.github.io/cheatsheets/html/data-visualization.html?_gl=1*7olq9v*_ga*MjEyNjQ2Nzk4MC4xNzA1NTg2MzI1*_ga_2C0WZ1JHG0*MTcwNjM1OTgzMi4xNC4xLjE3MDYzNjA1MjUuMC4wLjA.#themes). Try out a few and see which one you prefer.
+* There are multiple themes that you can apply. Have a look at the `ggplot2()` cheatsheet for an overview ([**here**](https://rstudio.github.io/cheatsheets/html/data-visualization.html?_gl=1*7olq9v*_ga*MjEyNjQ2Nzk4MC4xNzA1NTg2MzI1*_ga_2C0WZ1JHG0*MTcwNjM1OTgzMi4xNC4xLjE3MDYzNjA1MjUuMC4wLjA.#themes)). Try out a few and see which one you prefer.
 
 #### Step 7: Run the chi-square analysis
 

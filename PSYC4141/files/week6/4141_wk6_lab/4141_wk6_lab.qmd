@@ -19,29 +19,17 @@ editor: visual
 
 > Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'.In the code chunk, write code to load the libraries by using the `library()` function. We need the packages `here`, `tidyverse` and `easystats`. After you've written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk).
 
-```{r}
-library(here)
-library(tidyverse)
-library(easystats)
-```
-
-
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
 ### Step 2: Reading in the data file
 
 > Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'. Inside the chunk, use `read_csv()` to read in the data file named `RTA_study1.csv`; tell R where to find the file and what it is called. Make sure you've run the code chunk. Then, check that you can see the 'object' in the Environment (top right quadrant) for the file you read in. I've called the data-frame `intent_data`. If you can't remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.
 
-```{r}
-intent_data <- read_csv(here("PSYC4141/files/week6/4141_wk6_lab", "RTA_study1.csv"))
-```
+**Questions Step 2** The numbers in the first row across the four columns refer to the responses from participant 1.
 
-**Questions Step 2**
-The numbers in the first row across the four columns refer to the responses from participant 1.
-
-a. What condition were they in?
-b. Did they intend to return the paper-clips?
-c. Did they actually return the paper-clips?
+a.  What condition were they in?
+b.  Did they intend to return the paper-clips?
+c.  Did they actually return the paper-clips?
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
@@ -49,26 +37,15 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Insert a new code chunk and use `filter()` to remove all participants who said that they did not intend to return the paper-clips. Can a look below for a reminder on how `filter()` works. Give it a go. If you're stuck, have a look at the Code below.
 
-```{r}
-intent_data <- filter(intent_data, intend == 1)
-```
-
 **Question Step 3**
 
-a. How many participants were removed because they didn't intend to return the paper-clips?
+a.  How many participants were removed because they didn't intend to return the paper-clips?
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
 ### Step 4: Some more data wrangling - Use `recode_values()` to have text labels
 
-> Action: Insert a new code chunk and use `mutate()` and `recode_values()`  to change the numerical values for `condition` and `actualdonate` to text labels. The code to do this is on the handbook page. You can copy it, but have a good look to make sure you understand what each bit does.
-
-```{r}
-intent_data = mutate(
-  intent_data,
-  condition = recode_values(condition, 1 ~ "rta", 2 ~ "control"),
-  actualdonate = recode_values(actualdonate, 1 ~ "donated", 0 ~ "no_donation"))
-```
+> Action: Insert a new code chunk and use `mutate()` and `recode_values()` to change the numerical values for `condition` and `actualdonate` to text labels. The code to do this is on the handbook page. You can copy it, but have a good look to make sure you understand what each bit does.
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
@@ -76,20 +53,12 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Insert a new code chunk and use `count()` to check how many participants are in each group (rta - donated, rta - didn’t donate, control - donated, control - didn’t donate). The code to do this is on the handbook page. You can copy it, but have a good look to make sure you understand what each bit does.
 
-```{r}
-intent_counts <- mutate(
-  count(intent_data, condition, actualdonate),
-  percent = 100 * n / sum(n),
-  .by = condition)
-intent_counts
-```
-
 **Questions Step 5**
 
-a. How many participants in the control condition didn’t donate?
-b. How many participants in the control condition donated?
-c. How many participants in the RTA condition didn’t donate?
-d. How many participants in the rta condition donated?
+a.  How many participants in the control condition didn’t donate?
+b.  How many participants in the control condition donated?
+c.  How many participants in the RTA condition didn’t donate?
+d.  How many participants in the rta condition donated?
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
@@ -97,38 +66,20 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Insert a new code chunk and use the code template on the handbook page to create a bar chart. Make sure to fill in the relevant bits.
 
-```{r}
-ggplot(data = intent_data, aes(x = condition, fill = actualdonate)) +
-  geom_bar(position = "dodge")
-```
 
 > Action: Copy the code on the handbook page to a new code chunk. In your Quarto document, write a comment to describe what each line of code does.
 
-```{r}
-ggplot(data = intent_data, aes(x = condition, fill = actualdonate)) +
-  geom_bar(position = "dodge") +
-  scale_x_discrete(name = "Condition", labels = c("Control", "RTA")) +
-  scale_y_continuous(name = "Count") +
-  scale_fill_manual(name = "Behaviour", labels = c("Donated", "Did not donate"), values = c("blue", "grey"))+
-  theme_classic()
-```
+
 **Questions Step 6**
 
-a. What does `position = "dodge"` do? Remove it and rerun the code to find out.
-b. Describe the pattern in the data in your own words.
+a.  What does `position = "dodge"` do? Remove it and rerun the code to find out.
+b.  Describe the pattern in the data in your own words.
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
 ### Step 7: Run the chi-square analysis
 
 > Action: Copy the code snippet on the handbook page to a new code chunk.
-
-```{r}
-results <- chisq.test(x = intent_data$condition,
-                      y = intent_data$actualdonate,
-                      correct = FALSE)
-results
-```
 
 **Question Step 7:** What do you conclude from the output?
 
@@ -138,9 +89,6 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Copy the code snippet on the handbook page to a new code chunk.
 
-```{r}
-results$expected
-```
 
 **Question Step 8:** What do you conclude from the output?
 
@@ -151,11 +99,6 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 > Action: Copy the code snippet on the handbook page to a new code chunk.
 
 
-```{r}
-effect_size <- cramers_v(x = intent_data$condition,     
-                         y = intent_data$actualdonate) 
-effect_size
-```
 **Question Step 9:** How large is the effect and how much variance is accounted for?
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
@@ -164,14 +107,9 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Copy the code snippet on the handbook page to a new code chunk.
 
-```{r}
-results$stdres   # check the adjusted standardised residuals
-```
 
 **Question Step 10:** What do you conclude from the output?
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
-#### Step 11:** Write up the results following APA guidelines.
-
-
+#### Step 11: Write up the results following APA guidelines.
