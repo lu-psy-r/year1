@@ -43,9 +43,9 @@ a.  How many participants were removed because they didn't intend to return the 
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
-### Step 4: Some more data wrangling - Use `recode_values()` to have text labels
+### Step 4: Some more data wrangling - Use `case_match()` to have text labels
 
-> Action: Insert a new code chunk and use `mutate()` and `recode_values()` to change the numerical values for `condition` and `actualdonate` to text labels. The code to do this is on the handbook page. You can copy it, but have a good look to make sure you understand what each bit does.
+> Action: Insert a new code chunk and use `mutate()` and `case_match()`  to change the numerical values for `condition` and `actualdonate` to text labels. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
@@ -66,9 +66,7 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Insert a new code chunk and use the code template on the handbook page to create a bar chart. Make sure to fill in the relevant bits.
 
-
 > Action: Copy the code on the handbook page to a new code chunk. In your Quarto document, write a comment to describe what each line of code does.
-
 
 **Questions Step 6**
 
@@ -89,7 +87,6 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Copy the code snippet on the handbook page to a new code chunk.
 
-
 **Question Step 8:** What do you conclude from the output?
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
@@ -98,7 +95,6 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 > Action: Copy the code snippet on the handbook page to a new code chunk.
 
-
 **Question Step 9:** How large is the effect and how much variance is accounted for?
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
@@ -106,7 +102,6 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 ### Step 10: Adjusted standardised residuals
 
 > Action: Copy the code snippet on the handbook page to a new code chunk.
-
 
 **Question Step 10:** What do you conclude from the output?
 

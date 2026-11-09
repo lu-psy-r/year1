@@ -159,16 +159,6 @@ You are now ready to start work on the lab activities.
 <!-- Information about the lab activities will be added as soon as possible -->
 <!-- ::: -->
 
-In this lab:
-
--  you'll work on refining your research question
-
-you'll also gain understanding of and practice with:
-
-- conducting Pearson's Chi-square in R
-- interpreting Pearson's Chi-square in R
-- reporting the results in APA format
-- when and why to apply Pearson's Chi-square to answer questions in psychological science
 
 ### Lab activity 1: Refining your research question -- Discuss, agree, swap and check
 
@@ -414,19 +404,19 @@ intent_data <- filter(intent_data, intend == 1)
 
 a. How many participants were removed because they didn't intend to return the paper-clips?
 
-#### Step 4: Some more data wrangling - Use `recode_values()` to have text labels
+#### Step 4: Some more data wrangling - Use `case_match()` to have text labels
 
 To make the output easier to read, we’re going to recode the values for our key variables (`condition` and `actualdonate`) to have text labels rather than numerical values. 
 
-For this we can use the functions `mutate()` and `recode_values()`.
+For this we can use the functions `mutate()` and `case_match()`.
 
-> Action: Insert a new code chunk and use `mutate()` and `recode_values()`  to change the numerical values for `condition` and `actualdonate` to text labels. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.
+> Action: Insert a new code chunk and use `mutate()` and `case_match()`  to change the numerical values for `condition` and `actualdonate` to text labels. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.
 
 ```r
 intent_data = mutate(
   intent_data,
-  condition = recode_values(condition, 1 ~ "rta", 2 ~ "control"),
-  actualdonate = recode_values(actualdonate, 1 ~ "donated", 0 ~ "no_donation"))
+  condition = case_match(condition, 1 ~ "rta", 2 ~ "control"),
+  actualdonate = case_match(actualdonate, 1 ~ "donated", 0 ~ "no_donation"))
 ```
 
 :::{.callout-tip}
