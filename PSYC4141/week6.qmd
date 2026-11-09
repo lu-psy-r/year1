@@ -148,7 +148,7 @@ You can download the files here: [`4141_wk6_lab.zip`](files/week6/4141_wk6_lab.z
 
 Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).
 
-Finally, open the example script by clicking on the file called `4141_wk5_lab.qmd` in the Files space on the R-server.
+Finally, open the example script by clicking on the file called `4141_wk6_lab.qmd` in the Files space on the R-server.
 
 You are now ready to start work on the lab activities.
 
@@ -159,9 +159,9 @@ You are now ready to start work on the lab activities.
 <!-- Information about the lab activities will be added as soon as possible -->
 <!-- ::: -->
 
-In this lab, you'll
+In this lab:
 
-- work on refining your research question and decide on your measures 
+-  you'll work on refining your research question
 
 you'll also gain understanding of and practice with:
 
@@ -245,8 +245,15 @@ We are going to:
 
 1.  Setup the appropriate bits and pieces in RStudio
 2.  Read in the data files
-3.  
-4.  
+3.  Do some data wrangling using `filter()`
+4.  Do some more data wrangling using `mutate()` and `recode_values()`
+5.  Extract descriptive statistics
+6.  Visualise the data with a bar chart
+7.  Run the chi-square analysis
+8.  Check the assumptions
+9.  Calculate the effect size
+10. Check the adjusted standardised residuals
+11. Write up the results
 
 ::: {.callout-tip title="Where are the download links?"}
 Links to the files to be downloaded are in the [Pre-lab activities section](@sec-4141-w6-prelab-activities) under Getting ready.
@@ -573,7 +580,9 @@ results$residuals   # check the adjusted standardised residuals
 
 **Question Step 10:** What do you conclude from the output?
 
-#### Step 11:** Write up the results following APA guidelines.
+#### Step 11: Write up the results following APA guidelines.
+
+Using the guidance below, have a go at writing up the results for the Chi-square analysis following APA guidelines.
 
 :::{.callout-tip collapse="true"}
 ## Hint
