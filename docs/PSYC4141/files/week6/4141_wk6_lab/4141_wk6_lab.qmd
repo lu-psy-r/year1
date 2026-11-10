@@ -43,9 +43,9 @@ a.  How many participants were removed because they didn't intend to return the 
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
-### Step 4: Some more data wrangling - Use `case_match()` to have text labels
+### Step 4: Some more data wrangling - Use `recode_values()` to have text labels
 
-> Action: Insert a new code chunk and use `mutate()` and `case_match()`  to change the numerical values for `condition` and `actualdonate` to text labels. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.
+> Action: Insert a new code chunk and use `mutate()` and `recode_values()`  to change the numerical values for `condition` and `actualdonate` to text labels. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 

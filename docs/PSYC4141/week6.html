@@ -828,17 +828,17 @@ Code
 <li>How many participants were removed because they didn’t intend to return the paper-clips?</li>
 </ol>
 </section>
-<section id="step-4-some-more-data-wrangling---use-case_match-to-have-text-labels" class="level4">
-<h4 class="anchored" data-anchor-id="step-4-some-more-data-wrangling---use-case_match-to-have-text-labels">Step 4: Some more data wrangling - Use <code>case_match()</code> to have text labels</h4>
+<section id="step-4-some-more-data-wrangling---use-recode_values-to-have-text-labels" class="level4">
+<h4 class="anchored" data-anchor-id="step-4-some-more-data-wrangling---use-recode_values-to-have-text-labels">Step 4: Some more data wrangling - Use <code>recode_values()</code> to have text labels</h4>
 <p>To make the output easier to read, we’re going to recode the values for our key variables (<code>condition</code> and <code>actualdonate</code>) to have text labels rather than numerical values.</p>
-<p>For this we can use the functions <code>mutate()</code> and <code>case_match()</code>.</p>
+<p>For this we can use the functions <code>mutate()</code> and <code>recode_values()</code>.</p>
 <blockquote class="blockquote">
-<p>Action: Insert a new code chunk and use <code>mutate()</code> and <code>case_match()</code> to change the numerical values for <code>condition</code> and <code>actualdonate</code> to text labels. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.</p>
+<p>Action: Insert a new code chunk and use <code>mutate()</code> and <code>recode_values()</code> to change the numerical values for <code>condition</code> and <code>actualdonate</code> to text labels. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.</p>
 </blockquote>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>intent_data <span class="ot">=</span> <span class="fu">mutate</span>(</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  intent_data,</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">condition =</span> <span class="fu">case_match</span>(condition, <span class="dv">1</span> <span class="sc">~</span> <span class="st">"rta"</span>, <span class="dv">2</span> <span class="sc">~</span> <span class="st">"control"</span>),</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">actualdonate =</span> <span class="fu">case_match</span>(actualdonate, <span class="dv">1</span> <span class="sc">~</span> <span class="st">"donated"</span>, <span class="dv">0</span> <span class="sc">~</span> <span class="st">"no_donation"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">condition =</span> <span class="fu">recode_values</span>(condition, <span class="dv">1</span> <span class="sc">~</span> <span class="st">"rta"</span>, <span class="dv">2</span> <span class="sc">~</span> <span class="st">"control"</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">actualdonate =</span> <span class="fu">recode_values</span>(actualdonate, <span class="dv">1</span> <span class="sc">~</span> <span class="st">"donated"</span>, <span class="dv">0</span> <span class="sc">~</span> <span class="st">"no_donation"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
