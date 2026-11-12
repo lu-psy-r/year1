@@ -85,13 +85,13 @@ Once you have gained a foundational understanding of the key concepts mind wande
 ## 3. How to write a good research question ... and appropriate hypotheses?{#sec-4141-project-research-question}
 
 :::{.callout-important title=}
-Each group will investigate the broad question *Is mind wandering associated with screen time use*.
+Each group will investigate the broad question *Is mind wandering associated with screen time*.
 
 With your group you need to:
 
 1. Refine the research topic to hone in on specific aspects of the key concepts of mind wandering and screen time.
-2. Formulate a clear and specific research question
-3. Write a null hypothesis and alternative hypothesis
+2. Formulate a clear and specific research question.
+3. Write a null hypothesis and alternative hypothesis.
 :::
 
 The video below discusses why articulating a good research question is important and how to check that you've got one? It also discusses how to write hypotheses to go with your research question. We went over this during the week 6 lab session. 
@@ -118,14 +118,16 @@ The questionnaire needs to be:
 1. open access (that is, openly available and free to use);
 2. accompanied by a peer-reviewed article that discusses the construction, validity and reliability of the questionnaire.
 
-Below there are some examples, you can propose a different questionnaire you have found in the literature as long as it satisfies the above criteria. Asking people to report (a specific aspect of) their screen-time as recorded in the Screentime app on an iPhone is also acceptable.
+Below I've listed some examples, but you can propose a different questionnaire you have found in the literature as long as it satisfies the above criteria. Asking people to report (a specific aspect of) their screen-time as recorded in a screentime app is also acceptable.
 :::
 
 :::{.callout-tip}
 Fife-Schaw, C. (2020). 14: Questionnaire design. In G. M. Breakwell, D. B. Wright, & J. Barnett (Eds.), Research methods in psychology (5th ed., pp. 119–138). SAGE Publications. **Recommended**
 
-> This chapter provides a useful overview of things to consider when setting up a study that uses questionnaires.
+> This chapter provides a useful overview of things to consider when setting up a questionnaire study.
+:::
 
+:::{.callout-tip}
 All reading is accessible via the library. You can go to Moodle -\> Library Resources -\> Resource List or you can follow [**this link**](https://lancaster.alma.exlibrisgroup.com/leganto/nui/lists/93496942590001221).
 :::
 
@@ -133,11 +135,11 @@ All reading is accessible via the library. You can go to Moodle -\> Library Reso
 
 Carriere, J. S. A., Seli, P., & Smilek, D. (2013). Wandering in both mind and body: Individual differences in mind wandering and inattention predict fidgeting. *Canadian Journal of Experimental Psychology/Revue canadienne de psychologie expérimentale, 67*(1), 19–31. https://doi.org/10.1037/a0031438
 
-> The authors capture two forms of mind wandering using the Mind Wandering: Spontaneous (MW-S) and Mind Wandering: Deliberate (MW-D) scales.
+> Carriere et al. (2013) capture two forms of mind wandering using the Mind Wandering: Spontaneous (MW-S) and Mind Wandering: Deliberate (MW-D) scales.
 
 Mrazek, M. D., Phillips, D. T., Franklin, M. S., Broadway, J. M., & Schooler, J. W. (2013). Young and restless: Validation of the Mind-Wandering Questionnaire (MWQ) reveals disruptive impact of mind-wandering for youth. *Frontiers in Psychology, 4*, Article 560. https://doi.org/10.3389/fpsyg.2013.00560
 
-> The authors created a 5-item Mind-Wandering Questionnaire (MWQ) and showed across four studies that people who score higher on it report more task-unrelated thoughts during a reading test.
+> Mrazek et al. (2013) created a 5-item Mind-Wandering Questionnaire (MWQ) and showed across four studies that people who score higher on it report more task-unrelated thoughts during a reading test.
 
 Schubert, A.-L., Frischkorn, G. T., Sadus, K., Welhaf, M. S., Kane, M. J., & Rummel, J. (2024). The brief mind wandering three-factor scale (BMW-3). *Behavior Research Methods, 56*(8), 8720–8744. https://doi.org/10.3758/s13428-024-02500-6
 
@@ -149,16 +151,16 @@ In addition to the paper by Kaye et al. (2020) referred to in the section with k
 
 Baumgartner, S. E., Lemmens, J. S., Weeda, W. D., & Huizinga, M. (2017). Measuring media multitasking: Development of a short measure of media multitasking for adolescents. *Journal of Media Psychology, 29*(4), 188–197. https://doi.org/10.1027/1864-1105/a000167
 
-> The authors developed a short media multitasking measure (MMM-S) -- the simultaneous use of two or more media. 
+> Baumgartner et al. (2017) developed a short media multitasking measure (MMM-S) -- measuring the simultaneous use of two or more media. 
 
 Du, J., van Koningsbruggen, G. M., & Kerkhof, P. (2018). A brief measure of social media self-control failure. *Computers in Human Behavior, 84*, 68–75. https://doi.org/10.1016/j.chb.2018.02.002
 
-> The authors developed a 3-item scale, the Social Media Self-Control Failure (SMSCF) scale, to measure how often people give in to social media temptations. 
+> Du et al. (2018) developed a 3-item scale, the Social Media Self-Control Failure (SMSCF) scale, to measure how often people give in to social media temptations. 
 
 Marty-Dugas, J., Ralph, B. C., Oakman, J. M., & Smilek, D. (2018). The relation between smartphone use and everyday inattention. *Psychology of Consciousness: Theory, Research, and Practice, 5*(1), 46. https://psycnet.apa.org/doi/10.1037/cns0000131
 
-> The authors developed two different measures of smartphone use (general and absent-minded) and explore relationships with measures of everyday inattention.
+> Marty-Dugas et al. (2018) developed two different measures of smartphone use (general and absent-minded) and explore relationships with measures of everyday inattention.
 
 Ohme, J., Araujo, T., de Vreese, C. H., & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. *Mobile Media & Communication, 9*(2), 293-313.
 
-> Presents a new methodological approach—mobile data donations using screenshots of the iOS Screen Time function—and assesses its feasibility, sample biases, and the accuracy of self-reported smartphone usage compared to log data in a general population sample of Dutch citizens.
+> Ohme et al. (2021) present a new methodological approach: mobile data donations using screenshots of the iOS Screen Time function. They assesses its feasibility, sample biases, and the accuracy of self-reported smartphone usage compared to log data in a general population sample of Dutch citizens.
