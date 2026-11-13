@@ -172,9 +172,13 @@ Gorilla is an online experiment builder. It provides an easy-to-use graphical in
 
 [Link to the overview video on Gorilla's getting started page](https://support.gorilla.sc/support/tools/getting-started#overview)
 
-**How to build a questionnaire on Gorilla** (~2 minutes)
-Watch the short video on their support page for *Questionnaire Builder 2* to get a first impression of how to use it to build a questionnaire:
+**How to build a questionnaire on Gorilla**
+First, watch the short video on their support page for *Questionnaire Builder 2* to get a first impression of how to use it to build a questionnaire:
 
-[Link to short video on Questionnaire Builder 2](https://support.gorilla.sc/support/tools/questionnaire-builder-2)
+[Link to short video on Questionnaire Builder 2](https://support.gorilla.sc/support/tools/questionnaire-builder-2) (~2 minutes)
+
+Then watch **video number 4 *Create A Demographics Survey*** on their onboarding page:
+
+[Link to Gorilla onboarding videos](https://app.gorilla.sc/admin/onboarding-webinar/videos) (~13 minutes)
 
 
