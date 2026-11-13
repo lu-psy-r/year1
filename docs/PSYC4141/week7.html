@@ -1,0 +1,1659 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>7. Week 7 - The linear model – Research Methods and Statistics for Psychologists</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../PSYC4141/sona.html" rel="next">
+<link href="../PSYC4141/week6.html" rel="prev">
+<link href="../Images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>window.onload = function() {document.getElementById("autocomplete-0-input").placeholder = "Search Year 1";};</script>
+<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="https://lu-psy-r.github.io/essentials/index_24.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="https://lu-psy-r.github.io/">
+    <span class="navbar-title">Research Methods and Statistics for Psychologists</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year1/index.html"> 
+<span class="menu-text">Year 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year2/index.html"> 
+<span class="menu-text">Year 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year3/index.html"> 
+<span class="menu-text">Year 3</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/MSc/index.html"> 
+<span class="menu-text">MSc</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/more/index.html"> 
+<span class="menu-text">And More…</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC4141/index.html">PSYC4141</a></li><li class="breadcrumb-item"><a href="../PSYC4141/week7.html">7. Week 7 - The linear model</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../PSYC4141/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PSYC4141</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Week 1 - Being a scientist, doing a science</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Week 2 - Measuring, describing, and visualising psychological concepts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Week 3 - Correlation and ethical research practice</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Week 4 - Hypothesis testing, significance testing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Week 5 - More on correlation - Assumptions, issues, an alternative and intercorrelation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Week 6 - Chi-Square</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week7.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">7. Week 7 - The linear model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/sona.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11. The SONA page - Everything you need to know about research participation and SONA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12. The Project page - Everything you need to know about the group research project</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">PSYC4242</span></span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-4141-w7-lectures" id="toc-sec-4141-w7-lectures" class="nav-link active" data-scroll-target="#sec-4141-w7-lectures">Lectures</a></li>
+  <li><a href="#sec-4141-w7-reading" id="toc-sec-4141-w7-reading" class="nav-link" data-scroll-target="#sec-4141-w7-reading">Reading</a></li>
+  <li><a href="#sec-4141-w6-prelab-activities" id="toc-sec-4141-w6-prelab-activities" class="nav-link" data-scroll-target="#sec-4141-w6-prelab-activities">Pre-lab activities</a>
+  <ul class="collapse">
+  <li><a href="#pre-lab-activity-1-refine-the-research-question." id="toc-pre-lab-activity-1-refine-the-research-question." class="nav-link" data-scroll-target="#pre-lab-activity-1-refine-the-research-question.">Pre-lab activity 1: Refine the research question.</a></li>
+  <li><a href="#pre-lab-activity-2-calculating-chi-square-by-hand-and-interpreting-the-results" id="toc-pre-lab-activity-2-calculating-chi-square-by-hand-and-interpreting-the-results" class="nav-link" data-scroll-target="#pre-lab-activity-2-calculating-chi-square-by-hand-and-interpreting-the-results">Pre-lab activity 2: Calculating Chi-square by hand and interpreting the results</a></li>
+  <li><a href="#pre-lab-activity-3-data-visualisation---creating-a-bar-chart" id="toc-pre-lab-activity-3-data-visualisation---creating-a-bar-chart" class="nav-link" data-scroll-target="#pre-lab-activity-3-data-visualisation---creating-a-bar-chart">Pre-lab activity 3: Data visualisation - Creating a bar chart</a></li>
+  <li><a href="#pre-lab-activity-4-getting-ready" id="toc-pre-lab-activity-4-getting-ready" class="nav-link" data-scroll-target="#pre-lab-activity-4-getting-ready">Pre-lab activity 4: Getting ready</a></li>
+  </ul></li>
+  <li><a href="#sec-4141-w6-lab-activities" id="toc-sec-4141-w6-lab-activities" class="nav-link" data-scroll-target="#sec-4141-w6-lab-activities">Lab activities</a>
+  <ul class="collapse">
+  <li><a href="#lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check" id="toc-lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check" class="nav-link" data-scroll-target="#lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check">Lab activity 1: Refining your research question – Discuss, agree, swap and check</a></li>
+  <li><a href="#lab-activity-2-understanding-the-application-of-the-chi-square-test" id="toc-lab-activity-2-understanding-the-application-of-the-chi-square-test" class="nav-link" data-scroll-target="#lab-activity-2-understanding-the-application-of-the-chi-square-test">Lab activity 2: Understanding the application of the Chi-square test</a></li>
+  <li><a href="#lab-activity-3-reminders-through-association" id="toc-lab-activity-3-reminders-through-association" class="nav-link" data-scroll-target="#lab-activity-3-reminders-through-association">Lab activity 3: Reminders through association</a></li>
+  </ul></li>
+  <li><a href="#sec-4141-w6-answers" id="toc-sec-4141-w6-answers" class="nav-link" data-scroll-target="#sec-4141-w6-answers">Answers</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC4141/index.html">PSYC4141</a></li><li class="breadcrumb-item"><a href="../PSYC4141/week7.html">7. Week 7 - The linear model</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">7. Week 7 - The linear model</h1>
+<p class="subtitle lead">Written by Rob Davies and Margriet Groen</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled" title="Overview">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Overview
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This week we focus on two strands of learning:</p>
+<ol type="A">
+<li>The linear model</li>
+</ol>
+<p>So far, we’ve looked at measures of association between two variables using correlation. <strong>This week you will learn about regression and the linear model as a way of predicting one variable from knowledge of one or more other variables.</strong></p>
+<p>When considering one predictor, regression tells us a lot of the same things as correlation does. Regression becomes really useful when we have more than one predictor. We will talk about that in weeks 8 and 9. We will do all this in the context of the <strong>Clearly Understood</strong> project on how easy or difficult people find it to understand written health information.</p>
+<ol start="2" type="A">
+<li>Research project: Build the questionnaire study on Gorilla</li>
+</ol>
+<p>We will also continue the group project by focussing on building the study on Gorilla, ready for data collection next week.</p>
+<p>The materials we have prepared to support your learning are arranged in four parts:</p>
+<ul>
+<li>Lectures</li>
+<li>Reading</li>
+<li>Pre-lab activities</li>
+<li>Lab activities</li>
+</ul>
+<p>You can navigate to each in the side bar on the right</p>
+</div>
+</div>
+<!-- Note: I think it is helpful to have a list of the different sections in a week for cross-referencing. I don't think it helps readability it this is visible to the students (hence I've commented them out) as the outline in the sidebar on the right already provides this info. -->
+<!-- - @sec-4141-w7-lectures: Watch these before your lab session -->
+<!-- - @sec-4141-w7-reading: Recommended readings -->
+<!-- - @sec-4141-w7-prelab-activities: Activities to do before you attend your lab session -->
+<!-- - @sec-4141-w7-lab-activities: Activities you do during your lab session -->
+<!-- - @sec-4141-w7-answers: Answers to questions in pre-lab and lab activities -->
+<section id="sec-4141-w7-lectures" class="level2">
+<h2 class="anchored" data-anchor-id="sec-4141-w7-lectures">Lectures</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Please note that Rob may mention a different module code or different week during the lectures. I’ve reviewed the material and the content is highly relevant to the current module.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In week 7, we aim to further develop skills in <em>analysing</em> and in <em>visualising</em> psychological data. We will do so in the context of the <strong>Clearly Understood</strong> project.</p>
+<p>We will aim to answer the research question: What person attributes in adult readers predict success in understanding written health information?</p>
+<p>Research questions like this can be examined <strong>using linear models</strong>.</p>
+<p>When we do these analyses, we will need to think about how we report the results and decide:</p>
+<ul>
+<li>is the association significant?</li>
+<li>does the association reflect a positive or negative relationship between outcome and predictor?</li>
+<li>is the association relatively strong or weak?</li>
+</ul>
+<p>Our thinking, and our decision-making, will be helped by developing our data visualisation skills. At every stage, as we work, we will visualize the data to understand the shape of the relationships we may observe or predict.</p>
+</div>
+</div>
+<p>The lecture for <strong>part A</strong> for this week is presented in four short parts. You can view video recordings of the lectures using Panopto, by clicking on the links shown following.</p>
+<ol type="1">
+<li><strong>Overview</strong> (19 minutes): What we are doing in Week 7 – thinking critically about predicting people.</li>
+</ol>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=5c751906-33d0-4ebd-a49d-afb000ec09ce&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<ol start="2" type="1">
+<li><strong>Using linear models to do prediction</strong> (11 minutes): How we answer live research questions by using linear models to predict behaviour.</li>
+</ol>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=d9d5ade2-e10c-4e14-b938-afb000f2634c&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<ol start="3" type="1">
+<li><strong>How linear models work</strong> (9 minutes): How we can visualize and think about predictions, and about the difference between what we predict and what we observe when we study people.</li>
+</ol>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=44dfb2c3-80d3-4fa6-8978-afb000f63c17&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<ol start="4" type="1">
+<li><strong>Interpreting, reporting and visualizing</strong> linear model results (15 minutes): Identifying, interpreting and communicating the key statistics.</li>
+</ol>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=4a20cb70-618c-4bf3-999a-afb000f9bdcf&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The slides presented in the videos can be downloaded either as a web page. You can download the web page <code>.html</code> file and click on it to open it in any browser (e.g., Chrome, Edge or Safari). The slide images are high quality so the file is quite big and may take a few seconds to download.</p>
+</div>
+</div>
+<ul>
+<li><a href="files/week7/4141-linear-model-intro.html">The slides</a></li>
+</ul>
+<p><strong>B. The mini research project</strong></p>
+<p>If you haven’t already, make sure you watch the overview video on the mini research project on the project page.</p>
+<ol type="1">
+<li><p><strong>Overview</strong> (~9 minutes) Key information on what you’ll be expected to do, a rough timeline and how it links to assessment. You can view this video on the project page <a href="../PSYC4141/project.html#sec-4141-project-overview">here</a>.</p></li>
+<li><p><strong>What makes a good research question</strong> (~16 minutes) The video discusses why articulating a good research question is important and how to check that you’ve got one? It also discusses how to write hypotheses to go with your research question. We went over this during the week 6 lab session. You can view this video on the project page <a href="../PSYC4141/project.html#sec-4141-project-research-question">here</a>.</p></li>
+<li><p><strong>A short introduction on Gorilla</strong> (~7 minutes) Gorilla is an online experiment builder. It provides an easy-to-use graphical interface which allows you to create complex studies in an intuitive way. Check out their video introduction to see what’s possible. You can view this video on the project page <a href="../PSYC4141/project.html#sec-4141-project-gorilla">here</a></p></li>
+<li><p><strong>How to build a questionnaire on Gorilla</strong> (~2 minutes) Watch the short video on their support page for <em>Questionnaire Builder 2</em> to get a first impression of how to use it to build a questionnaire. You can view this video on the project page <a href="../PSYC4141/project.html#sec-4141-project-gorilla">here</a></p></li>
+</ol>
+</section>
+<section id="sec-4141-w7-reading" class="level2">
+<h2 class="anchored" data-anchor-id="sec-4141-w7-reading">Reading</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Easy access to readings">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Easy access to readings
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>All reading is accessible via the library. You can go to Moodle -&gt; Library Resources -&gt; Resource List or you can follow <a href="https://lancaster.alma.exlibrisgroup.com/leganto/nui/lists/93496942590001221"><strong>this link</strong></a>. Readings have one of the following tags:</p>
+<ul>
+<li><strong>Essential</strong>: We expect you to be familiar with these reading. You will be assessed on this.</li>
+<li><strong>Recommended</strong>: We highly recommend these readings. They often provide a different perspective, or explain things in a different way.</li>
+<li><strong>Optional</strong>: Further readings for those interested.</li>
+</ul>
+<p>The reading list is divided into multiple sections:</p>
+<ul>
+<li><strong>Reading associated with statistics</strong>: this contains links to readings useful for the development of statistical concepts and skills. The main textbook <em>Fundamental statistics for the behavioral sciences</em> by Howell (Essential) lives here.</li>
+<li><strong>Reading associated with psychological research principles and design</strong>: this contains links to readings that provide a good basis for foundational knowledge around research design.</li>
+<li><strong>Reading associated with Open Science principles and practices</strong>: this contains links to key literature on the Open Science movement.</li>
+<li><strong>Week by week</strong>: these contain links to key reading for that week that are not listed on any of the more general lists above.</li>
+</ul>
+</div>
+</div>
+<p>For <strong>week 7</strong>, the reading is:</p>
+<ul>
+<li><p>Howell, D. C. (2017). Fundamental statistics for the behavioral sciences (9th ed.). Cengage Learning. Chapter 10. <strong>Essential</strong></p></li>
+<li><p>Key readings for the mini research project as outlined <a href="../PSYC4141/project.html#sec-4141-project-reading">here</a> and reading about measuring mind wandering and screen time as outlined <a href="../PSYC4141/project.html#sec-4141-project-measures">here</a>.</p></li>
+</ul>
+</section>
+<section id="sec-4141-w6-prelab-activities" class="level2">
+<h2 class="anchored" data-anchor-id="sec-4141-w6-prelab-activities">Pre-lab activities</h2>
+<p>After having watched the lectures and read the textbook chapter you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.</p>
+<section id="pre-lab-activity-1-refine-the-research-question." class="level3">
+<h3 class="anchored" data-anchor-id="pre-lab-activity-1-refine-the-research-question.">Pre-lab activity 1: Refine the research question.</h3>
+<p>Each group will investigate the following question: <em>Is mind wandering related to screen time?</em> Each group will refine this research question and decide:</p>
+<ul>
+<li>What aspect of mind wandering to focus on and how to measure it</li>
+<li>What aspect of screen time to focus on and how to measure it</li>
+</ul>
+<p>Please read the key readings (<a href="../PSYC4141/project.html#sec-4141-project-reading">more info on the project page here</a>) before the lab session. In your group, you will discuss your ideas about mind wandering and screen time, how to refine the research question, and how to measure each construct.</p>
+</section>
+<section id="pre-lab-activity-2-calculating-chi-square-by-hand-and-interpreting-the-results" class="level3">
+<h3 class="anchored" data-anchor-id="pre-lab-activity-2-calculating-chi-square-by-hand-and-interpreting-the-results">Pre-lab activity 2: Calculating Chi-square by hand and interpreting the results</h3>
+<p>Is there a relationship between the number of people who smoke and the number of people who drink? Please note that the question is the number of people (frequency) and not how much people drink/smoke. Also note that these are fictitious data. You’ll need a table of critical values for Chi-square. This can be found <a href="files/week6/4141_chisquare_cheatsheet_and_table.pdf"><strong>here</strong></a>, and also in the zip-folder you’ll be asked to download in the a later pre-lab activity.</p>
+<p><img src="files/week6/chisquare_dataLabAct1.png" class="img-fluid"></p>
+<p>Pre-lab activity questions:</p>
+<ol type="1">
+<li>Complete the Pearson’s Chi-square test by hand using the data above and fill in the blanks:</li>
+</ol>
+<p><span class="math inline">\(\chi 2\)</span> ( , <em>N</em> = ) = , <em>p</em></p>
+<ol start="2" type="1">
+<li>Can you reject the null hypothesis?</li>
+</ol>
+</section>
+<section id="pre-lab-activity-3-data-visualisation---creating-a-bar-chart" class="level3">
+<h3 class="anchored" data-anchor-id="pre-lab-activity-3-data-visualisation---creating-a-bar-chart">Pre-lab activity 3: Data visualisation - Creating a bar chart</h3>
+<p>We’ve been using the <code>ggplot2</code> package for visualising data. You can read a great overview of the <code>ggplot2</code> package <a href="https://ggplot2.tidyverse.org">here</a>. It also links to a ‘cheatsheet’ that you can download as a .pdf document. Lots of useful info on there!</p>
+<p>With regard to visualising relations between categorical variables, the <code>geom_bar()</code> function is important. The following ‘recipe’ summarises what it does and how to use it.</p>
+<p><code>geom_bar()</code> - create a bar chart - <a href="https://posit.cloud/learn/recipes/visualize/VisualizeA4"><strong>recipe</strong></a></p>
+<blockquote class="blockquote">
+<p>Have a look at the ‘recipe’ and read through it. Try to understand each step. Going through the example is particularly helpful.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Recipes - how to use them">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Recipes - how to use them
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Each ‘recipe’ has the same structure. As an example, let’s have a look at one ( <a href="https://posit.cloud/learn/recipes/basics/ImportA1"><strong>recipe</strong></a>) for a function that you have used each week: <code>read_csv()</code></p>
+<ol type="1">
+<li>First, it summarises what it is that you want to achieve when using that specific function. In the case of <code>read_csv()</code> it says <em>“You want to read a CSV file into your R session, where you can manipulate its contents. The file has the extension .csv. A CSV file is a text file that contains a table whose values are separated by commas, i.e.&nbsp;a Comma Separated Values file.”</em></li>
+<li>Then, it outlines a number of steps that you need to carry out when using this function. For <code>read_csv()</code> it outlines 3 steps: <em>1. Call the function. 2. Give the filepath to your file as a character string. 3. Save teh output to an object.</em></li>
+<li>Finally, there is an example talks you through using the function with some data. For <code>read_csv()</code> it uses an example with data about chickens.</li>
+<li>Additional information appears in extra boxes with a light-bulb icon. If you find those confusing, don’t worry about them at this stage.</li>
+</ol>
+</div>
+</div>
+</section>
+<section id="pre-lab-activity-4-getting-ready" class="level3">
+<h3 class="anchored" data-anchor-id="pre-lab-activity-4-getting-ready">Pre-lab activity 4: Getting ready</h3>
+<p>More information and the download links will be shared as soon as possible.</p>
+<p>To complete this week’s lab activities you will need several files:</p>
+<ol type="1">
+<li>We’ll work with an example script called <code>4141_wk6_lab.qmd</code>. This is a Quarto document.</li>
+<li>We’ll also need a data file names <code>RTA_study1.csv</code>.</li>
+</ol>
+<p>You can download the files here: <a href="files/week6/4141_wk6_lab.zip" download="4141_wk6_lab.zip"><code>4141_wk6_lab.zip</code></a>. Usually they will be saved in your ‘Downloads’ folder.</p>
+<p>Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).</p>
+<p>Finally, open the example script by clicking on the file called <code>4141_wk6_lab.qmd</code> in the Files space on the R-server.</p>
+<p>You are now ready to start work on the lab activities.</p>
+</section>
+</section>
+<section id="sec-4141-w6-lab-activities" class="level2">
+<h2 class="anchored" data-anchor-id="sec-4141-w6-lab-activities">Lab activities</h2>
+<!-- :::{.callout-tip} -->
+<!-- Information about the lab activities will be added as soon as possible -->
+<!-- ::: -->
+<section id="lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check">Lab activity 1: Refining your research question – Discuss, agree, swap and check</h3>
+<ol type="1">
+<li><p><strong>Go and sit in your groups.</strong> Take a handout. You need 1 handout for every 2 or 3 people in your group. Write your group’s name or number in the “Author” box.</p></li>
+<li><p><strong>Agree on a question (~10 min).</strong> Discuss ideas and agree on one draft research question for your group. Write it in Section 1, with one line on who or what it’s about. Everyone should be able to explain why you chose it.</p></li>
+<li><p><strong>Pair up across groups (~1 min).</strong> Two (or three) of you from each group will go and join two (or three) people from another group.</p></li>
+<li><p><strong>Swap (~1 min).</strong> In your new foursome, swap handouts with the other pair, so each pair holds the other group’s question.</p></li>
+<li><p><strong>Review (~5 min).</strong> With your partner, read the other group’s question and complete Section 2 on their handout:</p>
+<ul>
+<li>Tick <strong>Yes</strong> or <strong>Unsure</strong> for each check, and add a note where you can.</li>
+<li>Write <strong>one assumption</strong> you can spot in the question.</li>
+<li>Write <strong>one thing you’d need to know</strong> to answer it.</li>
+</ul></li>
+<li><p><strong>Hand back and talk (~4 min).</strong> Return the handout to the group that wrote it. Talk it through in your foursome:</p>
+<ul>
+<li>What surprised each pair?</li>
+<li>How did the reviewers interpret the key terms?</li>
+</ul></li>
+<li><p><strong>Return and feed back (~7 min).</strong> Go back to your original group. Share the feedback with the rest of the group. Use the notes on your handout.</p></li>
+<li><p><strong>Revise together (~8 min).</strong> As a group, rewrite your question with <strong>at least one change</strong> for clarity or specificity. Complete Section 3 to record what you changed and why.</p></li>
+</ol>
+</section>
+<section id="lab-activity-2-understanding-the-application-of-the-chi-square-test" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-2-understanding-the-application-of-the-chi-square-test">Lab activity 2: Understanding the application of the Chi-square test</h3>
+<section id="question-1-difference-between-pearsons-chi-square-and-pearsons-correlation" class="level4">
+<h4 class="anchored" data-anchor-id="question-1-difference-between-pearsons-chi-square-and-pearsons-correlation">Question 1: Difference between Pearson’s chi-square and Pearson’s correlation</h4>
+<p>How does Pearson’s chi-square differ from Pearson’s correlation?</p>
+</section>
+<section id="question-2-when-is-chi-square-appropriate" class="level4">
+<h4 class="anchored" data-anchor-id="question-2-when-is-chi-square-appropriate">Question 2: When is Chi-square appropriate?</h4>
+<p>Chi-square test of independence would be appropriate when testing the following questions:</p>
+<ol type="a">
+<li>What is the relationship between gender and soft drink preference? True or False?</li>
+<li>How do males and females compare in terms of wanting to be a psychologist when they leave school? True or False?</li>
+</ol>
+</section>
+<section id="question-3-chi-square-formula" class="level4">
+<h4 class="anchored" data-anchor-id="question-3-chi-square-formula">Question 3: Chi-square formula</h4>
+<p>Write the chi-square formula below.</p>
+</section>
+<section id="question-4-answers-from-pre-lab-activity-2" class="level4">
+<h4 class="anchored" data-anchor-id="question-4-answers-from-pre-lab-activity-2">Question 4: Answers from pre-lab activity 2</h4>
+<p>What were your answers to the pre-lab activity 2 questions? Please compare them with other students at your table.</p>
+<ol type="a">
+<li>Complete the Pearson’s Chi-square test by hand using the data above and fill in the blanks:</li>
+</ol>
+<p><span class="math inline">\(\chi 2\)</span> ( , <em>N</em> = ) = , <em>p</em></p>
+<ol start="2" type="a">
+<li>Can you reject the null hypothesis?</li>
+</ol>
+</section>
+<section id="question-5-large-contingency-tables" class="level4">
+<h4 class="anchored" data-anchor-id="question-5-large-contingency-tables">Question 5: Large contingency tables</h4>
+<p>Why is it recommended to opt for multiple 2 x 2 chi-squares instead of chi-squares larger than 2 x 2?</p>
+</section>
+<section id="question-6-simplying-a-large-contingency-table" class="level4">
+<h4 class="anchored" data-anchor-id="question-6-simplying-a-large-contingency-table">Question 6: Simplying a large contingency table</h4>
+<p>How could you ‘modify’ the contingency table below for chi-square analysis to aid subsequent interpretation of the data/results?</p>
+<p><img src="files/week6/122_week14_labAc1_q6.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="lab-activity-3-reminders-through-association" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-3-reminders-through-association">Lab activity 3: Reminders through association</h3>
+<p>For this lab, we’re going to use data from <a href="https://journals.sagepub.com/stoken/default+domain/6XgDSfr6ZHSDs47tx5bu/full"><strong>Rogers, T. &amp; Milkman, K. L. (2016). Reminders through association. <em>Psychological Science, 27</em>, 973-986.</strong></a> You can read the full paper online but the short version is that the authors looked at how people remember to follow through with the intention of doing something.</p>
+<p>Although there are lots of potential reasons (e.g., some people may lack the self-control resources), Rogers and Milkman (2016) propose that some people fail to follow through simply because they forget about their good intentions. If this is the case, the authors argue, then having visual reminders to follow through on their intentions may help people remember to keep them. For example, a person may choose to put a sticker for their gym on their car window, so that every time they get in the car they remember to go to the gym.</p>
+<p>In Study 1 by Rogers and colleagues, participants took part in an unrelated experiment but at the start of the task they were asked to return a small stack of paper clips to the reception of the building at the end of the study and if they did so the researchers would donate $1 to a charity. They were then asked if they intended to do this. Those in the reminder-through-association (RTA) condition read “Thank you! To remind you to pick up a paper clip, an elephant statuette will be sitting on the counter as you collect your payment.” This message was followed by a picture of the elephant statuette. Those in the control condition simply read “Thank you!”.</p>
+<p>What we want to do is to run a chi-square analysis to determine whether those in the reminder-through-association condition were more likely to remember to return the paper-clips than those in the control condition.</p>
+<section id="aims-of-the-activity" class="level4">
+<h4 class="anchored" data-anchor-id="aims-of-the-activity">Aims of the activity</h4>
+<p>We are going to:</p>
+<ol type="1">
+<li>Setup the appropriate bits and pieces in RStudio</li>
+<li>Read in the data files</li>
+<li>Do some data wrangling using <code>filter()</code></li>
+<li>Do some more data wrangling using <code>mutate()</code> and <code>recode_values()</code></li>
+<li>Extract descriptive statistics</li>
+<li>Visualise the data with a bar chart</li>
+<li>Run the chi-square analysis</li>
+<li>Check the assumptions</li>
+<li>Calculate the effect size</li>
+<li>Check the adjusted standardised residuals</li>
+<li>Write up the results</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled" title="Where are the download links?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Where are the download links?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Links to the files to be downloaded are in the <strong>Pre-lab activities section</strong> under Getting ready.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="How to use the Quarto document?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How to use the Quarto document?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Following feedback on the way we presented instructions and guidance across the handbook pages and the Quarto document, we’ve made the following change: <strong>All instructions and guidance (including hints and code snippets) for lab activities are now presented on the handbook page.</strong></p>
+<p>The Quarto document is largely empty, only containing a copy of the section headers and the actions to remind you of what you are meant to do. Sometimes there are questions associated with the code you’ve written or the output that follows from it. These can also be found on both the handbook page and in the Quarto document.</p>
+<p>How to complete the lab activity and use the Quarto script:</p>
+<ol type="1">
+<li>Open the handbook pages in a separate window or tab and navigate to <em>Lab activities</em>.</li>
+<li>Read the instructions on the handbook page for each step.</li>
+<li>Carry out the actions, by inserting a code chunk in the Quarto document, below each action.</li>
+<li>If there are any questions associated with that step, please try to answer them. You can write your answer in the Quarto document, as plain text. Answers to the questions will be shared after the last lab session has taken place (on Thursday afternoon).</li>
+<li>After having carried out an action, written a code chunk and answered any questions, go back to the handbook page and read the next bit of instruction, until you get to the next action.</li>
+<li>If you are stuck: Have a look at the ‘Hints’ and ‘Code’ snippets on the handbook page.</li>
+<li>If you are still stuck: Ask for help (your peers on your table, the GTA or lecturer in the lab session, via the Moodle Q&amp;A forum, during Friday’s live online Q&amp;A).</li>
+</ol>
+<p>This is also demonstrated in this video</p>
+<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
+    <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=b1640d97-8b02-4d34-8368-b4f800c041d7&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=false&amp;showbrand=false&amp;captions=true&amp;interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_howto_labactivities"></iframe>
+</div>
+<ul>
+<li><a href="files/week5/4141_howto_labactivities_transcript.txt">How to complete the lab activities - transcript</a></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="step-1-setup-the-appropriate-bits-and-pieces-in-rstudio" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-setup-the-appropriate-bits-and-pieces-in-rstudio">Step 1: Setup the appropriate bits and pieces in RStudio</h4>
+<p>Before we can do anything, we need tell R what packages we want to use. We use the function <code>library()</code> to do that. It is useful to have a section at the top of your script where you load all the relevant libraries.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’.In the code chunk, write code to load the libraries by using the <code>library()</code> function. We need the packages <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. After you’ve written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk).</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We need to load several packages (<code>here</code>, <code>tidyverse</code> and <code>easystats</code>) using the <code>library()</code> function. First, inside the code chunk, write <code>library()</code> and put <code>here</code> inside the brackets. On the next line in the code chunk, write <code>library()</code> and put <code>tidyverse</code> inside the brackets. On a third line in the code chunk, write <code>library()</code> and put <code>easystats</code> inside the brackets. Make sure to run the code chunk by clicking on the green arrow in the top corner of the code chunk.</p>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Step 1.</strong> Add the code to load the relevant libraries in a new code chunk. We need the following ones: <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. If you are unsure, you can look at the ‘Hint’ below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the ‘Code’ section below.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use the <code>library()</code>function. Remember to put it inside a ‘code chunk’ in your script. The name of the package goes inside the brackets.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The code to do this is below.</p>
+<pre><code>library(here)
+library(tidyverse)
+library(easystats)</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-reading-in-the-data-file" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-reading-in-the-data-file">Step 2: Reading in the data file</h4>
+<p>For this lab activity, you’ll need the file named <code>RTA_study1.csv</code>.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’. Inside the chunk, use <code>read_csv()</code> to read in the data file named <code>RTA_study1.csv</code>; tell R where to find the file and what it is called. Make sure you’ve run the code chunk. Then, check that you can see the ‘object’ in the Environment (top right quadrant) for the file you read in. I’ve called the data-frame <code>intent_data</code>. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><code>dataframe &lt;- read_csv(here("filepath to folder", "filename.extension))</code></p>
+<p>Your code should include:</p>
+<ul>
+<li>dataframe: the name of the object you want to save the data in (such as <code>intent_data</code>)</li>
+<li>&lt;- : assignment arrow</li>
+<li>read_csv() : the <code>read_csv()</code> function</li>
+<li>here(): the <code>here()</code> function</li>
+<li>“filepath to folder”: the folders that you need to point R to starting from whereever <em>here</em> starts</li>
+<li>“filename.extension”: the name of the datafile, including the extension</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>intent_data<span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"4141_wk6_lab"</span>, <span class="st">"RTA_study1.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p>It is a fairly simple data file that contains four variables for 87 participants:</p>
+<ul>
+<li><code>condition</code>: this variable indicates which condition participants were in (1 = reminder-through-association condition, 2 = control condition)</li>
+<li><code>intend</code>: this variable indicates whether participants said they were intending to return the paper-clips (1 = yes, 0 = no)</li>
+<li><code>actualdonate</code>: this variable indicates whether participants actually ended up returning the paper-clips and therefore donating to charity (1 = yes, 0 = no)</li>
+<li><code>id</code>: this variable indicates the participant ID number</li>
+</ul>
+<p><strong>Questions Step 2</strong> The numbers in the first row across the four columns refer to the responses from participant 1.</p>
+<ol type="a">
+<li>What condition were they in?</li>
+<li>Did they intend to return the paper-clips?</li>
+<li>Did they actually return the paper-clips?</li>
+</ol>
+</section>
+<section id="step-3-some-data-wrangling---use-filter-to-keep-relevant-data" class="level4">
+<h4 class="anchored" data-anchor-id="step-3-some-data-wrangling---use-filter-to-keep-relevant-data">Step 3: Some data wrangling - Use <code>filter()</code> to keep relevant data</h4>
+<p>We need to do a little bit of wrangling to get our data into the format we need: First, we need to remove all the participants who said that they did not intend to return the paper-clips (intend = 0) as we are only interested in whether people follow through on an intention.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk and use <code>filter()</code> to remove all participants who said that they did not intend to return the paper-clips. Can a look below for a reminder on how <code>filter()</code> works. Give it a go. If you’re stuck, have a look at the Code below.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="How does `filter()` work?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How does <code>filter()</code> work?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The <code>filter()</code> function allows you to select specific rows from a data frame based on one or more conditions.</p>
+<p>For example, imagine we have a dataset containing information about participants in a psychology study, including their age and gender. We might want to select only participants who are over 18 years old.</p>
+<p>We can do this using:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, age <span class="sc">&gt;</span> <span class="dv">18</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here: - <code>data</code> is the name of our data frame. - <code>age &gt; 18</code> is the condition we want to apply. - note these two bits of information are separated within the function by a comma. - only rows where the condition is <code>TRUE</code> are kept.</p>
+<p>We can also apply multiple conditions. For example, to select participants who are over 18 <strong>and</strong> identify as a woman:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, age <span class="sc">&gt;</span> <span class="dv">18</span>, gender <span class="sc">==</span> <span class="st">"Woman"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>When we provide multiple conditions separated by commas, <code>filter()</code> keeps only rows that satisfy <strong>all</strong> of the conditions.</p>
+<p>Some useful operators for filtering data include:</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Operator</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>==</code></td>
+<td>Equal to</td>
+<td><code>gender == "Woman"</code></td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>Not equal to</td>
+<td><code>gender != "Woman"</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;</code></td>
+<td>Greater than</td>
+<td><code>age &gt; 18</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;</code></td>
+<td>Less than</td>
+<td><code>age &lt; 30</code></td>
+</tr>
+<tr class="odd">
+<td><code>&gt;=</code></td>
+<td>Greater than or equal to</td>
+<td><code>age &gt;= 18</code></td>
+</tr>
+<tr class="even">
+<td><code>&lt;=</code></td>
+<td>Less than or equal to</td>
+<td><code>age &lt;= 30</code></td>
+</tr>
+</tbody>
+</table>
+<p>We can also use <code>&amp;</code> (AND) and <code>|</code> (OR) to combine conditions.</p>
+<p>For example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(data, age <span class="sc">&gt;=</span> <span class="dv">18</span> <span class="sc">&amp;</span> age <span class="sc">&lt;=</span> <span class="dv">30</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This selects participants aged between 18 and 30 (inclusive).</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>intent_data <span class="ot">&lt;-</span> <span class="fu">filter</span>(intent_data, intend <span class="sc">==</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<p><strong>Question Step 3</strong></p>
+<ol type="a">
+<li>How many participants were removed because they didn’t intend to return the paper-clips?</li>
+</ol>
+</section>
+<section id="step-4-some-more-data-wrangling---use-recode_values-to-have-text-labels" class="level4">
+<h4 class="anchored" data-anchor-id="step-4-some-more-data-wrangling---use-recode_values-to-have-text-labels">Step 4: Some more data wrangling - Use <code>recode_values()</code> to have text labels</h4>
+<p>To make the output easier to read, we’re going to recode the values for our key variables (<code>condition</code> and <code>actualdonate</code>) to have text labels rather than numerical values.</p>
+<p>For this we can use the functions <code>mutate()</code> and <code>recode_values()</code>.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk and use <code>mutate()</code> and <code>recode_values()</code> to change the numerical values for <code>condition</code> and <code>actualdonate</code> to text labels. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.</p>
+</blockquote>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>intent_data <span class="ot">=</span> <span class="fu">mutate</span>(</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  intent_data,</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">condition =</span> <span class="fu">recode_values</span>(condition, <span class="dv">1</span> <span class="sc">~</span> <span class="st">"rta"</span>, <span class="dv">2</span> <span class="sc">~</span> <span class="st">"control"</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">actualdonate =</span> <span class="fu">recode_values</span>(actualdonate, <span class="dv">1</span> <span class="sc">~</span> <span class="st">"donated"</span>, <span class="dv">0</span> <span class="sc">~</span> <span class="st">"no_donation"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Have a look at the recipe for <code>mutate()</code> for more information on this function <a href="https://posit.cloud/learn/recipes/transform/TransformF">here</a>.</p>
+</div>
+</div>
+</section>
+<section id="step-5-descriptive-statistics" class="level4">
+<h4 class="anchored" data-anchor-id="step-5-descriptive-statistics">Step 5: Descriptive statistics</h4>
+<p>Next you need to calculate descriptive statistics. For frequency data these are simply counts so we can use the function <code>count()</code> to do this. We want to know how many participants are in each group (rta - donated, rta - didn’t donate, control - donated, control - didn’t donate).</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk and use <code>count()</code> to check how many participants are in each group (rta - donated, rta - didn’t donate, control - donated, control - didn’t donate). You may also want to calculate the percentages of participants in each condition. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.</p>
+</blockquote>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>intent_counts <span class="ot">&lt;-</span> <span class="fu">mutate</span>(</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(intent_data, condition, actualdonate),</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">percent =</span> <span class="dv">100</span> <span class="sc">*</span> n <span class="sc">/</span> <span class="fu">sum</span>(n),</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">.by =</span> condition)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>intent_counts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Questions Step 5</strong></p>
+<ol type="a">
+<li>How many participants in the control condition didn’t donate?</li>
+<li>How many participants in the control condition donated?</li>
+<li>How many participants in the RTA condition didn’t donate?</li>
+<li>How many participants in the rta condition donated?</li>
+</ol>
+</section>
+<section id="step-6-data-visualisation-using-geom_bar" class="level4">
+<h4 class="anchored" data-anchor-id="step-6-data-visualisation-using-geom_bar">Step 6: Data visualisation using <code>geom_bar()</code></h4>
+<p>We want to create a simple bar plot of our count data. We’ll use <code>ggplot()</code> for this in combination with the <code>geom_bar()</code> function.</p>
+<blockquote class="blockquote">
+<p>Action: Insert a new code chunk and use the code template below to create a bar chart. Make sure to fill in the relevant bits.</p>
+</blockquote>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> , <span class="fu">aes</span>(<span class="at">x =</span> , <span class="at">fill =</span> )) <span class="sc">+</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The code to do this is below:</p>
+<pre><code>ggplot(data = intent_data, aes(x = condition, fill = actualdonate)) +
+  geom_bar(position = "dodge")</code></pre>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 6</strong></p>
+<ol type="a">
+<li>What does <code>position = "dodge"</code> do? Remove it and rerun the code to find out.</li>
+<li>Describe the pattern in the data in your own words.</li>
+</ol>
+<p>As you can see, the plot makes it much easier to get your head around what the data mean: Participants in the RTA condition appear to have been more likely to remember to donate than those in the control condition.</p>
+<p>The <code>ggplot2()</code> package allows you to customise all aspects of your plots, so let’s tidy ours up a little bit. We’re going to do the following:</p>
+<ul>
+<li>Edit the labels on the x-axis, y-axis and fill</li>
+<li>Change the colours of the bars by using <code>scale_fill_manual()</code> and specifying the colours we want in the values argument</li>
+<li>Change the theme of the plot to change how it looks</li>
+</ul>
+<blockquote class="blockquote">
+<p>Action: Copy the code below to a new code chunk. In your Quarto document, write a comment to describe what each line of code does.</p>
+</blockquote>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> intent_data, <span class="fu">aes</span>(<span class="at">x =</span> condition, <span class="at">fill =</span> actualdonate)) <span class="sc">+</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>) <span class="sc">+</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">name =</span> <span class="st">"Condition"</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"RTA"</span>)) <span class="sc">+</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="st">"Count"</span>) <span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">name =</span> <span class="st">"Behaviour"</span>, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Donated"</span>, <span class="st">"Did not donate"</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"grey"</span>))<span class="sc">+</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>There are a few things to note about the code we just added on:</p>
+<ul>
+<li>If you use simple colour names then you are restricted in the options you can choose, however, if you want more flexibility you can use hexadecimal colour codes, see <a href="http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/"><strong>here</strong></a>.</li>
+<li>There are multiple themes that you can apply. Have a look at the <code>ggplot2()</code> cheatsheet for an overview (<a href="https://rstudio.github.io/cheatsheets/html/data-visualization.html?_gl=1*7olq9v*_ga*MjEyNjQ2Nzk4MC4xNzA1NTg2MzI1*_ga_2C0WZ1JHG0*MTcwNjM1OTgzMi4xNC4xLjE3MDYzNjA1MjUuMC4wLjA.#themes"><strong>here</strong></a>). Try out a few and see which one you prefer.</li>
+</ul>
+</section>
+<section id="step-7-run-the-chi-square-analysis" class="level4">
+<h4 class="anchored" data-anchor-id="step-7-run-the-chi-square-analysis">Step 7: Run the chi-square analysis</h4>
+<p>Now let’s run that chi-square analysis to see whether our impression from the plot holds up and there is a significant association between the grouping variables.</p>
+<blockquote class="blockquote">
+<p>Action: Copy the code snippet below to a new code chunk.</p>
+</blockquote>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>results <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(<span class="at">x =</span> intent_data<span class="sc">$</span>condition,</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> intent_data<span class="sc">$</span>actualdonate,</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="at">correct =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>results</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-note callout-titled" title="How does `chisq.test()` work?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How does <code>chisq.test()</code> work?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<pre><code>results &lt;- chisq.test(x = intent_recode$condition,        # the first grouping variable
+                      y = intent_recode$actualdonate,     # the second grouping variable
+                      correct = FALSE)                    # whether we want to apply the continuity correction (use if any of the expected cell frequencies &lt; 10 in 2 x 2 table)
+results</code></pre>
+</div>
+</div>
+<p><strong>Question Step 7:</strong> What do you conclude from the output?</p>
+</section>
+<section id="step-8-check-the-assumptions" class="level4">
+<h4 class="anchored" data-anchor-id="step-8-check-the-assumptions">Step 8: Check the assumptions</h4>
+<p>The assumptions for chi-square are as follows:</p>
+<ol type="1">
+<li>The data in the cells should be frequencies, or counts of cases rather than percentages.</li>
+<li>The levels (or categories) of the variables are mutually exclusive. That is, a particular participant fits into one and only one group of each of the variables.</li>
+<li>Each participant may contribute data to one and only one cell. If, for example, the same participants are tested over time such that the comparisons are of the same subjects at Time 1, Time 2, Time 3, etc., then Chi-square may not be used.</li>
+<li>The study groups must be independent. This means that a different test must be used if the two groups are related. For example, a different test must be used if the researcher’s data consists of paired samples, such as in studies in which a parent is paired with his or her child.</li>
+<li>There are 2 variables, and both are measured as categories, usually at the nominal level. While Chi-square has no rule about limiting the number of cells (by limiting the number of categories for each variable), a very large number of cells (over 20) can make it difficult to meet assumption #6 below, and to interpret the meaning of the results.</li>
+<li>The expected cell frequencies should be greater than 5.</li>
+</ol>
+<p>Assumptions 1) to 5) should be evaluated by reviewing the design of the study. The only assumption that we need to check with R is whether all expected frequencies are greater than 5. This information is in the object in which you stored the results of the Chi-square test, under <code>expected</code>.</p>
+<blockquote class="blockquote">
+<p>Action: Copy the code snippet below to a new code chunk.</p>
+</blockquote>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>results<span class="sc">$</span>expected</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Question Step 8:</strong> What do you conclude from the output?</p>
+</section>
+<section id="step-9-calculate-the-effect-size" class="level4">
+<h4 class="anchored" data-anchor-id="step-9-calculate-the-effect-size">Step 9: Calculate the effect size</h4>
+<p>The last step before writing up the results is to calculate an effect size so that we have a standardised measure of how large the association between our grouping variables is. The effect size measure for chi-square is Cramer’s V. To calculate Cramer’s V we’re going to use the function <code>cramers_v()</code> from the <code>easystats</code> package. The code mirrors the code used for the Chi-square test itself.</p>
+<blockquote class="blockquote">
+<p>Action: Copy the code snippet below to a new code chunk.</p>
+</blockquote>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>effect_size <span class="ot">&lt;-</span> <span class="fu">cramers_v</span>(<span class="at">x =</span> intent_data<span class="sc">$</span>condition,     </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                         <span class="at">y =</span> intent_data<span class="sc">$</span>actualdonate) </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>effect_size</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can square the effect size (or multiple it by itself) to see how much variance in one variable is accounted for by the other variable. Use the code snippet below to square the effect size.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>percentageAccountedFor <span class="ot">&lt;-</span> effect_size <span class="sc">*</span> effect_size <span class="sc">*</span><span class="dv">100</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>percentageAccountedFor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Question Step 9:</strong> How large is the effect and how much variance is accounted for?</p>
+</section>
+<section id="step-10-adjusted-standardised-residuals" class="level4">
+<h4 class="anchored" data-anchor-id="step-10-adjusted-standardised-residuals">Step 10: Adjusted standardised residuals</h4>
+<p>To help interpret the relationship, it is useful to look at the adjusted standardised residuals. These are z-scores showing how many standard deviations each observed count is above or below the count expected if the variables were unrelated, so they indicate which cells differ most from expectation. Because they approximately follow a standard normal distribution, values beyond ±1.96 indicate a difference at <em>p</em> &lt; .05 (two-tailed), beyond ±2.58 at <em>p</em> &lt; .01, and beyond ±3.29 at <em>p</em> &lt; .001.</p>
+<blockquote class="blockquote">
+<p>Action: Copy the code snippet below to a new code chunk.</p>
+</blockquote>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>results<span class="sc">$</span>residuals   <span class="co"># check the adjusted standardised residuals</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Question Step 10:</strong> What do you conclude from the output?</p>
+</section>
+<section id="step-11-write-up-the-results-following-apa-guidelines." class="level4">
+<h4 class="anchored" data-anchor-id="step-11-write-up-the-results-following-apa-guidelines.">Step 11: Write up the results following APA guidelines.</h4>
+<p>Using the guidance below, have a go at writing up the results for the Chi-square analysis following APA guidelines.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The <a href="https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_numbers_statistics.html"><strong>Purdue writing lab website</strong></a> is helpful for guidance on punctuating statistics.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="sec-4141-w6-answers" class="level2">
+<h2 class="anchored" data-anchor-id="sec-4141-w6-answers">Answers</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Answers to the questions in lab activities will be shared after the final lab session of the week has concluded (Thursday afternoon)</p>
+</div>
+</div>
+<!-- ### Lab activity 2 -->
+<!-- #### Question 1:  How does Pearson's Chi-square differ from Pearson's correlation? -->
+<!-- ::: {.callout-note icon=false title="Question 1: Answer" collapse="true"} -->
+<!-- Pearson's Chi-square assesses whether there is a relationship between categorical (or nominal) variables. Pearson's correlation assesses whether there is a relationship between continuous (or interval/ratio) variables. -->
+<!-- ::: -->
+<!-- #### Question 2:  Chi-square test of independence would be appropriate when testing the following questions: -->
+<!-- a.  What is the relationship between gender and soft drink preference? -->
+<!-- ::: {.callout-note icon=false title="Question 2a: Answer" collapse="true"} -->
+<!-- True -->
+<!-- ::: -->
+<!-- b.  How do males and females compare in terms of wanting to be a psychologist when they leave school? -->
+<!-- ::: {.callout-note icon=false title="Question 2b: Answer" collapse="true"} -->
+<!-- True -->
+<!-- ::: -->
+<!-- #### Question 3:  Write the chi-square formula below. -->
+<!-- ::: {.callout-note icon=false title="Question 3: Answer" collapse="true"} -->
+<!-- ![](files/week6/122_week14_chiSquareFormula.png) -->
+<!-- ::: -->
+<!-- #### Question 4:  What were your answers to the pre-lab activity 1 questions? Please compare them with other students at your table. Complete the Pearson's chi-square test by hand using the data above and fill in the blanks: -->
+<!-- ::: {.callout-note icon=false title="Question 4: Answer" collapse="true"} -->
+<!-- ![](files/week6/chisquare_dataLabAct1_answer.png) -->
+<!-- - First determine expected frequencies: **Smoke/drink: (70 x 65) / 110 = 41.36** **Smoke/don't drink (70 x 45) / 110 = 28.63** **Don't smoke/drink (40 x 65) / 110 = 23.63** **Don't smoke/don't drink (40 x 45) / 110 = 16.36** -->
+<!-- - Then calculate chi-square:** **Smoke/drink: (50-41.36)2 / 41.36 = 1.80** **Smoke/don't drink: (20-28.63)2 / 28.63 = 2.60** **Don't smoke/drink: (15-23.63)2 / 23.63 = 3.15** **Don't smoke/don't drink: (25-16.36)2 / 16.36 = 4.56** **1.80+2.60+3.15+4.56 = 12.11** -->
+<!-- $\chi 2$ (1, *N* = 110) = 12.11, *p* \< .001 -->
+<!-- Can you reject the null hypothesis? **Yes** -->
+<!-- ::: -->
+<!-- #### Question 5:  Why is it recommended to opt for multiple 2 x 2 chi-squares instead of chi-squares larger than 2 x 2? -->
+<!-- ::: {.callout-note icon=false title="Question 5: Answer" collapse="true"} -->
+<!-- It is easier to interpret and such a design requires a smaller sample size. -->
+<!-- ::: -->
+<!-- #### Question 6:  How could you 'modify' the contingency table below for chi-square analysis to aid subsequent interpretation of the data/results? -->
+<!-- ::: {.callout-note icon=false title="Question 6: Answer" collapse="true"} -->
+<!-- ![](files/week6/122_week14_labAc1_q6.png) -->
+<!-- By combining 'interested' and 'somewhat interested' or by partitioning (doing multiple 2 x 2 chi-squares, while using Bonferroni correction to account for running multiple tests. -->
+<!-- ::: -->
+<!-- ### Lab activity 3 -->
+<!-- #### Questions Step 2 -->
+<!-- The numbers in the first row across the four columns refer to the responses from participant 1. -->
+<!-- a. What condition were they in? -->
+<!-- b. Did they intend to return the paper-clips? -->
+<!-- c. Did they actually return the paper-clips? -->
+<!-- :::{.callout-note icon=false title="Questions Step 2: Answer" collapse="true"} -->
+<!-- condition = 1, intend = 1, actualdonate = 1 and id = 1 shows us that participant 1 was in the 'reminder-through-assocation' condition, reported that they intended to donate and also actually donated. -->
+<!-- ::: -->
+<!-- #### Question Step 3 -->
+<!-- a. How many participants were removed because they didn't intend to return the paper-clips? -->
+<!-- :::{.callout-note icon=false title="Question Step 3: Answer" collapse="true"} -->
+<!-- 10 participants. The table 'intent_data' contains 87 observations, after we have applied the `filter()` function to include only those participants who did intend to return the paper-clips, the table contains 77 observations. -->
+<!-- ::: -->
+<!-- #### Questions Step 5 -->
+<!-- a. How many participants in the control condition didn’t donate? -->
+<!-- b. How many participants in the control condition donated? -->
+<!-- c. How many participants in the RTA condition didn’t donate? -->
+<!-- d. How many participants in the rta condition donated? -->
+<!-- :::{.callout-note icon=false title="Questions Step 5: Answers" collapse="true"} -->
+<!-- a. 22 -->
+<!-- b. 16 -->
+<!-- c. 10 -->
+<!-- d. 29 -->
+<!-- ::: -->
+<!-- #### Questions Step 6 -->
+<!-- a. What does `position = "dodge"` do? Remove it and rerun the code to find out. -->
+<!-- b. Describe the pattern in the data in your own words. -->
+<!-- :::{.callout-note icon=false title="Questions Step 6: Answers" collapse="true"} -->
+<!-- a. "dodge" places the bars next to each other, rather than on top of each other. -->
+<!-- b. The number of participants in the reminders-through-association condition who donated seems to be substantially higher than participants in that condition who did not donate. Numbers of participants in the control condition who did and did not donate is more similar. -->
+<!-- ::: -->
+<!-- #### Question Step 7 -->
+<!-- What do you conclude from the output? -->
+<!-- :::{.callout-note icon=false title="Question Step 7: Answer" collapse="true"} -->
+<!-- As *p* is smaller than .005, you can conclude that there is a significant association between the grouping variables. -->
+<!-- ::: -->
+<!-- #### Question Step 8 -->
+<!-- What do you conclude from the output? -->
+<!-- :::{.callout-note icon=false title="Question Step 8: Answer" collapse="true"} -->
+<!-- The expected frequencies in all cells are greater than 5. The data therefore meet the assumption. -->
+<!-- ::: -->
+<!-- #### Questions Step 9 -->
+<!-- How large is the effect and how much variance is accounted for? -->
+<!-- :::{.callout-note icon=false title="Questions Step 9: Answers" collapse="true"} -->
+<!-- The effect size (Cramer's V) = 0.33 and the percentage variance accounted for = 11%. -->
+<!-- ::: -->
+<!-- #### Question Step 10 -->
+<!-- What do you conclude from the output? -->
+<!-- :::{.callout-note icon=false title="Question Step 10: Answer" collapse="true"} -->
+<!-- The adjusted standardised residuals show a significant association between condition and donating. Values beyond about ±1.96 indicate a cell that deviates from independence at roughly the .05 level (two-tailed), and ±2.87 is well past that. -->
+<!-- The direction is clear: -->
+<!-- RTA condition: more people donated than expected under independence (+2.87), and fewer didn’t donate than expected (-2.87). -->
+<!-- Control condition: fewer people donated than expected (-2.87), and more didn’t donate than expected (+2.87). -->
+<!-- The residuals are identical in magnitude and mirror each other because this is a 2x2 table. With only one degree of freedom, all four cells carry the same information, so you only need to interpret one of them. Don’t treat them as four separate findings. The adjusted standardised residuals would be more informative when interpreting a larger (e.g., 3x2) contingency table. -->
+<!-- The residuals tell you where and in which direction the association lies. -->
+<!-- ::: -->
+<!-- #### Question Step 11 -->
+<!-- Write up the results following APA guidelines. -->
+<!-- :::{.callout-note icon=false title="Question Step 11: Answer" collapse="true"} -->
+<!-- Those in the reminder-through-association condition performed the intended behaviour at a significantly higher rate (74%, 29 out of 39) than did those in the control condition (42%, 16 out of 38)), *χ2*(1, N = 77) = 8.24, *p* = 0.004, *V* = 0.33. The analysis showed that 11% of variance in intended behaviour could be accounted for by condition (reminder-through-association vs. control). -->
+<!-- ::: -->
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../PSYC4141/week6.html" class="pagination-link" aria-label="6. Week 6 - Chi-Square">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">6. Week 6 - Chi-Square</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../PSYC4141/sona.html" class="pagination-link" aria-label="11. The SONA page - Everything you need to know about research participation and SONA">
+        <span class="nav-page-text">11. The SONA page - Everything you need to know about research participation and SONA</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Website developed by Matthew Ivory</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../previous-content/index.html">
+<p>Previous Content</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
