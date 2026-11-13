@@ -11,9 +11,9 @@ We provide:
 
 1. An overview: Key information on what you'll be expected to do, a rough timeline and how it links to assessment
 2. Key readings: Start with these papers to get a better understanding of the main concepts
-3. How to write a good research question ... and appropriate hypotheses?
-4. Measuring mind wandering and screen time
-5. Information on how to get set up on and learn about using the Gorilla platform
+3. Information on how to write a good research question ... and appropriate hypotheses?
+4. Information on measuring mind wandering and screen time
+5. Using the Gorilla platform to build the questionnaire study
 
 [Further sections will be added]
 
@@ -164,3 +164,17 @@ Marty-Dugas, J., Ralph, B. C., Oakman, J. M., & Smilek, D. (2018). The relation 
 Ohme, J., Araujo, T., de Vreese, C. H., & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. *Mobile Media & Communication, 9*(2), 293-313.
 
 > Ohme et al. (2021) present a new methodological approach: mobile data donations using screenshots of the iOS Screen Time function. They assesses its feasibility, sample biases, and the accuracy of self-reported smartphone usage compared to log data in a general population sample of Dutch citizens.
+
+## 5. Using the Gorilla platform to build the questionnaire study {#sec-4141-project-gorilla}
+
+**A short introduction on Gorilla** (~7 minutes)
+Gorilla is an online experiment builder. It provides an easy-to-use graphical interface which allows you to create complex studies in an intuitive way. Check out their video introduction to see what's possible:
+
+[Link to the overview video on Gorilla's getting started page](https://support.gorilla.sc/support/tools/getting-started#overview)
+
+**How to build a questionnaire on Gorilla** (~2 minutes)
+Watch the short video on their support page for *Questionnaire Builder 2* to get a first impression of how to use it to build a questionnaire:
+
+[Link to short video on Questionnaire Builder 2](https://support.gorilla.sc/support/tools/questionnaire-builder-2)
+
+
