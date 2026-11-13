@@ -170,9 +170,11 @@ Ohme, J., Araujo, T., de Vreese, C. H., & Piotrowski, J. T. (2021). Mobile data 
 Gorilla is an online experiment builder. It provides an easy-to-use graphical interface which allows you to create complex studies in an intuitive way.
 
 **A short introduction on Gorilla** (~7 minutes)
+
 Check out [their video introduction](https://support.gorilla.sc/support/tools/getting-started#overview) to see what's possible.
 
 **How to build a questionnaire on Gorilla** (~13 minutes)
+
 Watch **video number 4 *Create A Demographics Survey*** on their [onboarding page](https://app.gorilla.sc/admin/onboarding-webinar/videos) 
 
 
