@@ -806,7 +806,7 @@ variance in one variable is accounted for by the other variable. Use the
 code snippet below to square the effect size.
 
 ``` r
-percentageAccountedFor <- effect_size * effect_size *100
+percentageAccountedFor <- effect_size$Cramers_v_adjusted * effect_size$Cramers_v_adjusted *100
 percentageAccountedFor
 ```
 
@@ -827,7 +827,7 @@ distribution, values beyond ±1.96 indicate a difference at *p* \< .05
 > Action: Copy the code snippet below to a new code chunk.
 
 ``` r
-results$residuals   # check the adjusted standardised residuals
+results$stdres   # check the adjusted standardised residuals
 ```
 
 **Question Step 10:** What do you conclude from the output?
@@ -845,201 +845,201 @@ is helpful for guidance on punctuating statistics.
 
 ## Answers {#sec-4141-w6-answers}
 
-::: callout-tip
-Answers to the questions in lab activities will be shared after the
-final lab session of the week has concluded (Thursday afternoon)
+<!-- ::: callout-tip -->
+<!-- Answers to the questions in lab activities will be shared after the -->
+<!-- final lab session of the week has concluded (Thursday afternoon) -->
+<!-- ::: -->
+
+### Lab activity 2
+
+#### Question 1:  How does Pearson's Chi-square differ from Pearson's correlation?
+
+::: {.callout-note icon=false title="Question 1: Answer" collapse="true"}
+
+Pearson's Chi-square assesses whether there is a relationship between categorical (or nominal) variables. Pearson's correlation assesses whether there is a relationship between continuous (or interval/ratio) variables.
+
 :::
 
-<!-- ### Lab activity 2 -->
+#### Question 2:  Chi-square test of independence would be appropriate when testing the following questions:
 
-<!-- #### Question 1:  How does Pearson's Chi-square differ from Pearson's correlation? -->
+a.  What is the relationship between gender and soft drink preference?
 
-<!-- ::: {.callout-note icon=false title="Question 1: Answer" collapse="true"} -->
+::: {.callout-note icon=false title="Question 2a: Answer" collapse="true"}
 
-<!-- Pearson's Chi-square assesses whether there is a relationship between categorical (or nominal) variables. Pearson's correlation assesses whether there is a relationship between continuous (or interval/ratio) variables. -->
+True
 
-<!-- ::: -->
+:::
 
-<!-- #### Question 2:  Chi-square test of independence would be appropriate when testing the following questions: -->
+b.  How do males and females compare in terms of wanting to be a psychologist when they leave school?
 
-<!-- a.  What is the relationship between gender and soft drink preference? -->
+::: {.callout-note icon=false title="Question 2b: Answer" collapse="true"}
 
-<!-- ::: {.callout-note icon=false title="Question 2a: Answer" collapse="true"} -->
+True
 
-<!-- True -->
+:::
 
-<!-- ::: -->
+#### Question 3:  Write the chi-square formula below.
 
-<!-- b.  How do males and females compare in terms of wanting to be a psychologist when they leave school? -->
+::: {.callout-note icon=false title="Question 3: Answer" collapse="true"}
 
-<!-- ::: {.callout-note icon=false title="Question 2b: Answer" collapse="true"} -->
+![](files/week6/122_week14_chiSquareFormula.png)
 
-<!-- True -->
+:::
 
-<!-- ::: -->
+#### Question 4:  What were your answers to the pre-lab activity 1 questions? Please compare them with other students at your table. Complete the Pearson's chi-square test by hand using the data above and fill in the blanks:
 
-<!-- #### Question 3:  Write the chi-square formula below. -->
+::: {.callout-note icon=false title="Question 4: Answer" collapse="true"}
 
-<!-- ::: {.callout-note icon=false title="Question 3: Answer" collapse="true"} -->
+![](files/week6/chisquare_dataLabAct1_answer.png)
 
-<!-- ![](files/week6/122_week14_chiSquareFormula.png) -->
+- First determine expected frequencies: **Smoke/drink: (70 x 65) / 110 = 41.36** **Smoke/don't drink (70 x 45) / 110 = 28.63** **Don't smoke/drink (40 x 65) / 110 = 23.63** **Don't smoke/don't drink (40 x 45) / 110 = 16.36**
 
-<!-- ::: -->
+- Then calculate chi-square:** **Smoke/drink: (50-41.36)2 / 41.36 = 1.80** **Smoke/don't drink: (20-28.63)2 / 28.63 = 2.60** **Don't smoke/drink: (15-23.63)2 / 23.63 = 3.15** **Don't smoke/don't drink: (25-16.36)2 / 16.36 = 4.56** **1.80+2.60+3.15+4.56 = 12.11**
 
-<!-- #### Question 4:  What were your answers to the pre-lab activity 1 questions? Please compare them with other students at your table. Complete the Pearson's chi-square test by hand using the data above and fill in the blanks: -->
+$\chi 2$ (1, *N* = 110) = 12.11, *p* \< .001
 
-<!-- ::: {.callout-note icon=false title="Question 4: Answer" collapse="true"} -->
+Can you reject the null hypothesis? **Yes**
 
-<!-- ![](files/week6/chisquare_dataLabAct1_answer.png) -->
+:::
 
-<!-- - First determine expected frequencies: **Smoke/drink: (70 x 65) / 110 = 41.36** **Smoke/don't drink (70 x 45) / 110 = 28.63** **Don't smoke/drink (40 x 65) / 110 = 23.63** **Don't smoke/don't drink (40 x 45) / 110 = 16.36** -->
+#### Question 5:  Why is it recommended to opt for multiple 2 x 2 chi-squares instead of chi-squares larger than 2 x 2?
 
-<!-- - Then calculate chi-square:** **Smoke/drink: (50-41.36)2 / 41.36 = 1.80** **Smoke/don't drink: (20-28.63)2 / 28.63 = 2.60** **Don't smoke/drink: (15-23.63)2 / 23.63 = 3.15** **Don't smoke/don't drink: (25-16.36)2 / 16.36 = 4.56** **1.80+2.60+3.15+4.56 = 12.11** -->
+::: {.callout-note icon=false title="Question 5: Answer" collapse="true"}
 
-<!-- $\chi 2$ (1, *N* = 110) = 12.11, *p* \< .001 -->
+It is easier to interpret and such a design requires a smaller sample size.
 
-<!-- Can you reject the null hypothesis? **Yes** -->
+:::
 
-<!-- ::: -->
+#### Question 6:  How could you 'modify' the contingency table below for chi-square analysis to aid subsequent interpretation of the data/results?
 
-<!-- #### Question 5:  Why is it recommended to opt for multiple 2 x 2 chi-squares instead of chi-squares larger than 2 x 2? -->
+::: {.callout-note icon=false title="Question 6: Answer" collapse="true"}
 
-<!-- ::: {.callout-note icon=false title="Question 5: Answer" collapse="true"} -->
+![](files/week6/122_week14_labAc1_q6.png)
 
-<!-- It is easier to interpret and such a design requires a smaller sample size. -->
+By combining 'interested' and 'somewhat interested' or by partitioning (doing multiple 2 x 2 chi-squares, while using Bonferroni correction to account for running multiple tests.
 
-<!-- ::: -->
+:::
 
-<!-- #### Question 6:  How could you 'modify' the contingency table below for chi-square analysis to aid subsequent interpretation of the data/results? -->
+### Lab activity 3
 
-<!-- ::: {.callout-note icon=false title="Question 6: Answer" collapse="true"} -->
+#### Questions Step 2
 
-<!-- ![](files/week6/122_week14_labAc1_q6.png) -->
+The numbers in the first row across the four columns refer to the responses from participant 1.
 
-<!-- By combining 'interested' and 'somewhat interested' or by partitioning (doing multiple 2 x 2 chi-squares, while using Bonferroni correction to account for running multiple tests. -->
+a. What condition were they in?
 
-<!-- ::: -->
+b. Did they intend to return the paper-clips?
 
-<!-- ### Lab activity 3 -->
+c. Did they actually return the paper-clips?
 
-<!-- #### Questions Step 2 -->
+:::{.callout-note icon=false title="Questions Step 2: Answer" collapse="true"}
 
-<!-- The numbers in the first row across the four columns refer to the responses from participant 1. -->
+condition = 1, intend = 1, actualdonate = 1 and id = 1 shows us that participant 1 was in the 'reminder-through-assocation' condition, reported that they intended to donate and also actually donated.
 
-<!-- a. What condition were they in? -->
+:::
 
-<!-- b. Did they intend to return the paper-clips? -->
+#### Question Step 3
 
-<!-- c. Did they actually return the paper-clips? -->
+a. How many participants were removed because they didn't intend to return the paper-clips?
 
-<!-- :::{.callout-note icon=false title="Questions Step 2: Answer" collapse="true"} -->
+:::{.callout-note icon=false title="Question Step 3: Answer" collapse="true"}
 
-<!-- condition = 1, intend = 1, actualdonate = 1 and id = 1 shows us that participant 1 was in the 'reminder-through-assocation' condition, reported that they intended to donate and also actually donated. -->
+10 participants. The table 'intent_data' contains 87 observations, after we have applied the `filter()` function to include only those participants who did intend to return the paper-clips, the table contains 77 observations.
 
-<!-- ::: -->
+:::
 
-<!-- #### Question Step 3 -->
+#### Questions Step 5
 
-<!-- a. How many participants were removed because they didn't intend to return the paper-clips? -->
+a. How many participants in the control condition didn’t donate?
 
-<!-- :::{.callout-note icon=false title="Question Step 3: Answer" collapse="true"} -->
+b. How many participants in the control condition donated?
 
-<!-- 10 participants. The table 'intent_data' contains 87 observations, after we have applied the `filter()` function to include only those participants who did intend to return the paper-clips, the table contains 77 observations. -->
+c. How many participants in the RTA condition didn’t donate?
 
-<!-- ::: -->
+d. How many participants in the rta condition donated?
 
-<!-- #### Questions Step 5 -->
+:::{.callout-note icon=false title="Questions Step 5: Answers" collapse="true"}
 
-<!-- a. How many participants in the control condition didn’t donate? -->
+a. 22
 
-<!-- b. How many participants in the control condition donated? -->
+b. 16
 
-<!-- c. How many participants in the RTA condition didn’t donate? -->
+c. 10
 
-<!-- d. How many participants in the rta condition donated? -->
+d. 29
 
-<!-- :::{.callout-note icon=false title="Questions Step 5: Answers" collapse="true"} -->
+:::
 
-<!-- a. 22 -->
+#### Questions Step 6
 
-<!-- b. 16 -->
+a. What does `position = "dodge"` do? Remove it and rerun the code to find out.
 
-<!-- c. 10 -->
+b. Describe the pattern in the data in your own words.
 
-<!-- d. 29 -->
+:::{.callout-note icon=false title="Questions Step 6: Answers" collapse="true"}
 
-<!-- ::: -->
+a. "dodge" places the bars next to each other, rather than on top of each other.
 
-<!-- #### Questions Step 6 -->
+b. The number of participants in the reminders-through-association condition who donated seems to be substantially higher than participants in that condition who did not donate. Numbers of participants in the control condition who did and did not donate is more similar.
 
-<!-- a. What does `position = "dodge"` do? Remove it and rerun the code to find out. -->
+:::
 
-<!-- b. Describe the pattern in the data in your own words. -->
+#### Question Step 7
 
-<!-- :::{.callout-note icon=false title="Questions Step 6: Answers" collapse="true"} -->
+What do you conclude from the output?
 
-<!-- a. "dodge" places the bars next to each other, rather than on top of each other. -->
+:::{.callout-note icon=false title="Question Step 7: Answer" collapse="true"}
 
-<!-- b. The number of participants in the reminders-through-association condition who donated seems to be substantially higher than participants in that condition who did not donate. Numbers of participants in the control condition who did and did not donate is more similar. -->
+As *p* is smaller than .005, you can conclude that there is a significant association between the grouping variables.
 
-<!-- ::: -->
+:::
 
-<!-- #### Question Step 7 -->
+#### Question Step 8
 
-<!-- What do you conclude from the output? -->
+What do you conclude from the output?
 
-<!-- :::{.callout-note icon=false title="Question Step 7: Answer" collapse="true"} -->
+:::{.callout-note icon=false title="Question Step 8: Answer" collapse="true"}
 
-<!-- As *p* is smaller than .005, you can conclude that there is a significant association between the grouping variables. -->
+The expected frequencies in all cells are greater than 5. The data therefore meet the assumption.
 
-<!-- ::: -->
+:::
 
-<!-- #### Question Step 8 -->
+#### Questions Step 9
 
-<!-- What do you conclude from the output? -->
+How large is the effect and how much variance is accounted for?
 
-<!-- :::{.callout-note icon=false title="Question Step 8: Answer" collapse="true"} -->
+:::{.callout-note icon=false title="Questions Step 9: Answers" collapse="true"}
 
-<!-- The expected frequencies in all cells are greater than 5. The data therefore meet the assumption. -->
+The effect size (Cramer's V) = 0.33 and the percentage variance accounted for = 11%.
 
-<!-- ::: -->
+:::
 
-<!-- #### Questions Step 9 -->
+#### Question Step 10
 
-<!-- How large is the effect and how much variance is accounted for? -->
+What do you conclude from the output?
 
-<!-- :::{.callout-note icon=false title="Questions Step 9: Answers" collapse="true"} -->
+:::{.callout-note icon=false title="Question Step 10: Answer" collapse="true"}
 
-<!-- The effect size (Cramer's V) = 0.33 and the percentage variance accounted for = 11%. -->
+The adjusted standardised residuals show a significant association between condition and donating. Values beyond about ±1.96 indicate a cell that deviates from independence at roughly the .05 level (two-tailed), and ±2.87 is well past that.
 
-<!-- ::: -->
+The direction is clear:
 
-<!-- #### Question Step 10 -->
+RTA condition: more people donated than expected under independence (+2.87), and fewer didn’t donate than expected (-2.87).
 
-<!-- What do you conclude from the output? -->
+Control condition: fewer people donated than expected (-2.87), and more didn’t donate than expected (+2.87).
 
-<!-- :::{.callout-note icon=false title="Question Step 10: Answer" collapse="true"} -->
+The residuals are identical in magnitude and mirror each other because this is a 2x2 table. With only one degree of freedom, all four cells carry the same information, so you only need to interpret one of them. Don’t treat them as four separate findings. The adjusted standardised residuals would be more informative when interpreting a larger (e.g., 3x2) contingency table.
 
-<!-- The adjusted standardised residuals show a significant association between condition and donating. Values beyond about ±1.96 indicate a cell that deviates from independence at roughly the .05 level (two-tailed), and ±2.87 is well past that. -->
+The residuals tell you where and in which direction the association lies.
 
-<!-- The direction is clear: -->
+:::
 
-<!-- RTA condition: more people donated than expected under independence (+2.87), and fewer didn’t donate than expected (-2.87). -->
+#### Question Step 11
 
-<!-- Control condition: fewer people donated than expected (-2.87), and more didn’t donate than expected (+2.87). -->
+Write up the results following APA guidelines.
 
-<!-- The residuals are identical in magnitude and mirror each other because this is a 2x2 table. With only one degree of freedom, all four cells carry the same information, so you only need to interpret one of them. Don’t treat them as four separate findings. The adjusted standardised residuals would be more informative when interpreting a larger (e.g., 3x2) contingency table. -->
+:::{.callout-note icon=false title="Question Step 11: Answer" collapse="true"}
 
-<!-- The residuals tell you where and in which direction the association lies. -->
+Those in the reminder-through-association condition performed the intended behaviour at a significantly higher rate (74%, 29 out of 39) than did those in the control condition (42%, 16 out of 38)), *χ2*(1, N = 77) = 8.24, *p* = 0.004, *V* = 0.33. The analysis showed that 11% of variance in intended behaviour could be accounted for by condition (reminder-through-association vs. control).
 
-<!-- ::: -->
-
-<!-- #### Question Step 11 -->
-
-<!-- Write up the results following APA guidelines. -->
-
-<!-- :::{.callout-note icon=false title="Question Step 11: Answer" collapse="true"} -->
-
-<!-- Those in the reminder-through-association condition performed the intended behaviour at a significantly higher rate (74%, 29 out of 39) than did those in the control condition (42%, 16 out of 38)), *χ2*(1, N = 77) = 8.24, *p* = 0.004, *V* = 0.33. The analysis showed that 11% of variance in intended behaviour could be accounted for by condition (reminder-through-association vs. control). -->
-
-<!-- ::: -->
+:::

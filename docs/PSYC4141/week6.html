@@ -305,7 +305,11 @@ window.Quarto = {
   <li><a href="#lab-activity-2-understanding-the-application-of-the-chi-square-test" id="toc-lab-activity-2-understanding-the-application-of-the-chi-square-test" class="nav-link" data-scroll-target="#lab-activity-2-understanding-the-application-of-the-chi-square-test">Lab activity 2: Understanding the application of the Chi-square test</a></li>
   <li><a href="#lab-activity-3-reminders-through-association" id="toc-lab-activity-3-reminders-through-association" class="nav-link" data-scroll-target="#lab-activity-3-reminders-through-association">Lab activity 3: Reminders through association</a></li>
   </ul></li>
-  <li><a href="#sec-4141-w6-answers" id="toc-sec-4141-w6-answers" class="nav-link" data-scroll-target="#sec-4141-w6-answers">Answers</a></li>
+  <li><a href="#sec-4141-w6-answers" id="toc-sec-4141-w6-answers" class="nav-link" data-scroll-target="#sec-4141-w6-answers">Answers</a>
+  <ul class="collapse">
+  <li><a href="#lab-activity-2" id="toc-lab-activity-2" class="nav-link" data-scroll-target="#lab-activity-2">Lab activity 2</a></li>
+  <li><a href="#lab-activity-3" id="toc-lab-activity-3" class="nav-link" data-scroll-target="#lab-activity-3">Lab activity 3</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -988,7 +992,7 @@ results</code></pre>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>                         <span class="at">y =</span> intent_data<span class="sc">$</span>actualdonate) </span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>effect_size</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>We can square the effect size (or multiple it by itself) to see how much variance in one variable is accounted for by the other variable. Use the code snippet below to square the effect size.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>percentageAccountedFor <span class="ot">&lt;-</span> effect_size <span class="sc">*</span> effect_size <span class="sc">*</span><span class="dv">100</span></span>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>percentageAccountedFor <span class="ot">&lt;-</span> effect_size<span class="sc">$</span>Cramers_v_adjusted <span class="sc">*</span> effect_size<span class="sc">$</span>Cramers_v_adjusted <span class="sc">*</span><span class="dv">100</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>percentageAccountedFor</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Question Step 9:</strong> How large is the effect and how much variance is accounted for?</p>
 </section>
@@ -998,7 +1002,7 @@ results</code></pre>
 <blockquote class="blockquote">
 <p>Action: Copy the code snippet below to a new code chunk.</p>
 </blockquote>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>results<span class="sc">$</span>residuals   <span class="co"># check the adjusted standardised residuals</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>results<span class="sc">$</span>stdres   <span class="co"># check the adjusted standardised residuals</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><strong>Question Step 10:</strong> What do you conclude from the output?</p>
 </section>
 <section id="step-11-write-up-the-results-following-apa-guidelines." class="level4">
@@ -1025,118 +1029,369 @@ Tip
 </section>
 <section id="sec-4141-w6-answers" class="level2">
 <h2 class="anchored" data-anchor-id="sec-4141-w6-answers">Answers</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<!-- ::: callout-tip -->
+<!-- Answers to the questions in lab activities will be shared after the -->
+<!-- final lab session of the week has concluded (Thursday afternoon) -->
+<!-- ::: -->
+<section id="lab-activity-2" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-2">Lab activity 2</h3>
+<section id="question-1-how-does-pearsons-chi-square-differ-from-pearsons-correlation" class="level4">
+<h4 class="anchored" data-anchor-id="question-1-how-does-pearsons-chi-square-differ-from-pearsons-correlation">Question 1: How does Pearson’s Chi-square differ from Pearson’s correlation?</h4>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 1: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Question 1: Answer
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Answers to the questions in lab activities will be shared after the final lab session of the week has concluded (Thursday afternoon)</p>
+<p>Pearson’s Chi-square assesses whether there is a relationship between categorical (or nominal) variables. Pearson’s correlation assesses whether there is a relationship between continuous (or interval/ratio) variables.</p>
 </div>
 </div>
-<!-- ### Lab activity 2 -->
-<!-- #### Question 1:  How does Pearson's Chi-square differ from Pearson's correlation? -->
-<!-- ::: {.callout-note icon=false title="Question 1: Answer" collapse="true"} -->
-<!-- Pearson's Chi-square assesses whether there is a relationship between categorical (or nominal) variables. Pearson's correlation assesses whether there is a relationship between continuous (or interval/ratio) variables. -->
-<!-- ::: -->
-<!-- #### Question 2:  Chi-square test of independence would be appropriate when testing the following questions: -->
-<!-- a.  What is the relationship between gender and soft drink preference? -->
-<!-- ::: {.callout-note icon=false title="Question 2a: Answer" collapse="true"} -->
-<!-- True -->
-<!-- ::: -->
-<!-- b.  How do males and females compare in terms of wanting to be a psychologist when they leave school? -->
-<!-- ::: {.callout-note icon=false title="Question 2b: Answer" collapse="true"} -->
-<!-- True -->
-<!-- ::: -->
-<!-- #### Question 3:  Write the chi-square formula below. -->
-<!-- ::: {.callout-note icon=false title="Question 3: Answer" collapse="true"} -->
-<!-- ![](files/week6/122_week14_chiSquareFormula.png) -->
-<!-- ::: -->
-<!-- #### Question 4:  What were your answers to the pre-lab activity 1 questions? Please compare them with other students at your table. Complete the Pearson's chi-square test by hand using the data above and fill in the blanks: -->
-<!-- ::: {.callout-note icon=false title="Question 4: Answer" collapse="true"} -->
-<!-- ![](files/week6/chisquare_dataLabAct1_answer.png) -->
-<!-- - First determine expected frequencies: **Smoke/drink: (70 x 65) / 110 = 41.36** **Smoke/don't drink (70 x 45) / 110 = 28.63** **Don't smoke/drink (40 x 65) / 110 = 23.63** **Don't smoke/don't drink (40 x 45) / 110 = 16.36** -->
-<!-- - Then calculate chi-square:** **Smoke/drink: (50-41.36)2 / 41.36 = 1.80** **Smoke/don't drink: (20-28.63)2 / 28.63 = 2.60** **Don't smoke/drink: (15-23.63)2 / 23.63 = 3.15** **Don't smoke/don't drink: (25-16.36)2 / 16.36 = 4.56** **1.80+2.60+3.15+4.56 = 12.11** -->
-<!-- $\chi 2$ (1, *N* = 110) = 12.11, *p* \< .001 -->
-<!-- Can you reject the null hypothesis? **Yes** -->
-<!-- ::: -->
-<!-- #### Question 5:  Why is it recommended to opt for multiple 2 x 2 chi-squares instead of chi-squares larger than 2 x 2? -->
-<!-- ::: {.callout-note icon=false title="Question 5: Answer" collapse="true"} -->
-<!-- It is easier to interpret and such a design requires a smaller sample size. -->
-<!-- ::: -->
-<!-- #### Question 6:  How could you 'modify' the contingency table below for chi-square analysis to aid subsequent interpretation of the data/results? -->
-<!-- ::: {.callout-note icon=false title="Question 6: Answer" collapse="true"} -->
-<!-- ![](files/week6/122_week14_labAc1_q6.png) -->
-<!-- By combining 'interested' and 'somewhat interested' or by partitioning (doing multiple 2 x 2 chi-squares, while using Bonferroni correction to account for running multiple tests. -->
-<!-- ::: -->
-<!-- ### Lab activity 3 -->
-<!-- #### Questions Step 2 -->
-<!-- The numbers in the first row across the four columns refer to the responses from participant 1. -->
-<!-- a. What condition were they in? -->
-<!-- b. Did they intend to return the paper-clips? -->
-<!-- c. Did they actually return the paper-clips? -->
-<!-- :::{.callout-note icon=false title="Questions Step 2: Answer" collapse="true"} -->
-<!-- condition = 1, intend = 1, actualdonate = 1 and id = 1 shows us that participant 1 was in the 'reminder-through-assocation' condition, reported that they intended to donate and also actually donated. -->
-<!-- ::: -->
-<!-- #### Question Step 3 -->
-<!-- a. How many participants were removed because they didn't intend to return the paper-clips? -->
-<!-- :::{.callout-note icon=false title="Question Step 3: Answer" collapse="true"} -->
-<!-- 10 participants. The table 'intent_data' contains 87 observations, after we have applied the `filter()` function to include only those participants who did intend to return the paper-clips, the table contains 77 observations. -->
-<!-- ::: -->
-<!-- #### Questions Step 5 -->
-<!-- a. How many participants in the control condition didn’t donate? -->
-<!-- b. How many participants in the control condition donated? -->
-<!-- c. How many participants in the RTA condition didn’t donate? -->
-<!-- d. How many participants in the rta condition donated? -->
-<!-- :::{.callout-note icon=false title="Questions Step 5: Answers" collapse="true"} -->
-<!-- a. 22 -->
-<!-- b. 16 -->
-<!-- c. 10 -->
-<!-- d. 29 -->
-<!-- ::: -->
-<!-- #### Questions Step 6 -->
-<!-- a. What does `position = "dodge"` do? Remove it and rerun the code to find out. -->
-<!-- b. Describe the pattern in the data in your own words. -->
-<!-- :::{.callout-note icon=false title="Questions Step 6: Answers" collapse="true"} -->
-<!-- a. "dodge" places the bars next to each other, rather than on top of each other. -->
-<!-- b. The number of participants in the reminders-through-association condition who donated seems to be substantially higher than participants in that condition who did not donate. Numbers of participants in the control condition who did and did not donate is more similar. -->
-<!-- ::: -->
-<!-- #### Question Step 7 -->
-<!-- What do you conclude from the output? -->
-<!-- :::{.callout-note icon=false title="Question Step 7: Answer" collapse="true"} -->
-<!-- As *p* is smaller than .005, you can conclude that there is a significant association between the grouping variables. -->
-<!-- ::: -->
-<!-- #### Question Step 8 -->
-<!-- What do you conclude from the output? -->
-<!-- :::{.callout-note icon=false title="Question Step 8: Answer" collapse="true"} -->
-<!-- The expected frequencies in all cells are greater than 5. The data therefore meet the assumption. -->
-<!-- ::: -->
-<!-- #### Questions Step 9 -->
-<!-- How large is the effect and how much variance is accounted for? -->
-<!-- :::{.callout-note icon=false title="Questions Step 9: Answers" collapse="true"} -->
-<!-- The effect size (Cramer's V) = 0.33 and the percentage variance accounted for = 11%. -->
-<!-- ::: -->
-<!-- #### Question Step 10 -->
-<!-- What do you conclude from the output? -->
-<!-- :::{.callout-note icon=false title="Question Step 10: Answer" collapse="true"} -->
-<!-- The adjusted standardised residuals show a significant association between condition and donating. Values beyond about ±1.96 indicate a cell that deviates from independence at roughly the .05 level (two-tailed), and ±2.87 is well past that. -->
-<!-- The direction is clear: -->
-<!-- RTA condition: more people donated than expected under independence (+2.87), and fewer didn’t donate than expected (-2.87). -->
-<!-- Control condition: fewer people donated than expected (-2.87), and more didn’t donate than expected (+2.87). -->
-<!-- The residuals are identical in magnitude and mirror each other because this is a 2x2 table. With only one degree of freedom, all four cells carry the same information, so you only need to interpret one of them. Don’t treat them as four separate findings. The adjusted standardised residuals would be more informative when interpreting a larger (e.g., 3x2) contingency table. -->
-<!-- The residuals tell you where and in which direction the association lies. -->
-<!-- ::: -->
-<!-- #### Question Step 11 -->
-<!-- Write up the results following APA guidelines. -->
-<!-- :::{.callout-note icon=false title="Question Step 11: Answer" collapse="true"} -->
-<!-- Those in the reminder-through-association condition performed the intended behaviour at a significantly higher rate (74%, 29 out of 39) than did those in the control condition (42%, 16 out of 38)), *χ2*(1, N = 77) = 8.24, *p* = 0.004, *V* = 0.33. The analysis showed that 11% of variance in intended behaviour could be accounted for by condition (reminder-through-association vs. control). -->
-<!-- ::: -->
+</div>
+</section>
+<section id="question-2-chi-square-test-of-independence-would-be-appropriate-when-testing-the-following-questions" class="level4">
+<h4 class="anchored" data-anchor-id="question-2-chi-square-test-of-independence-would-be-appropriate-when-testing-the-following-questions">Question 2: Chi-square test of independence would be appropriate when testing the following questions:</h4>
+<ol type="a">
+<li>What is the relationship between gender and soft drink preference?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 2a: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 2a: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>True</p>
+</div>
+</div>
+</div>
+<ol start="2" type="a">
+<li>How do males and females compare in terms of wanting to be a psychologist when they leave school?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 2b: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 2b: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>True</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-3-write-the-chi-square-formula-below." class="level4">
+<h4 class="anchored" data-anchor-id="question-3-write-the-chi-square-formula-below.">Question 3: Write the chi-square formula below.</h4>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 3: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 3: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><img src="files/week6/122_week14_chiSquareFormula.png" class="img-fluid"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-4-what-were-your-answers-to-the-pre-lab-activity-1-questions-please-compare-them-with-other-students-at-your-table.-complete-the-pearsons-chi-square-test-by-hand-using-the-data-above-and-fill-in-the-blanks" class="level4">
+<h4 class="anchored" data-anchor-id="question-4-what-were-your-answers-to-the-pre-lab-activity-1-questions-please-compare-them-with-other-students-at-your-table.-complete-the-pearsons-chi-square-test-by-hand-using-the-data-above-and-fill-in-the-blanks">Question 4: What were your answers to the pre-lab activity 1 questions? Please compare them with other students at your table. Complete the Pearson’s chi-square test by hand using the data above and fill in the blanks:</h4>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 4: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 4: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><img src="files/week6/chisquare_dataLabAct1_answer.png" class="img-fluid"></p>
+<ul>
+<li><p>First determine expected frequencies: <strong>Smoke/drink: (70 x 65) / 110 = 41.36</strong> <strong>Smoke/don’t drink (70 x 45) / 110 = 28.63</strong> <strong>Don’t smoke/drink (40 x 65) / 110 = 23.63</strong> <strong>Don’t smoke/don’t drink (40 x 45) / 110 = 16.36</strong></p></li>
+<li><p>Then calculate chi-square:** <strong>Smoke/drink: (50-41.36)2 / 41.36 = 1.80</strong> <strong>Smoke/don’t drink: (20-28.63)2 / 28.63 = 2.60</strong> <strong>Don’t smoke/drink: (15-23.63)2 / 23.63 = 3.15</strong> <strong>Don’t smoke/don’t drink: (25-16.36)2 / 16.36 = 4.56</strong> <strong>1.80+2.60+3.15+4.56 = 12.11</strong></p></li>
+</ul>
+<p><span class="math inline">\(\chi 2\)</span> (1, <em>N</em> = 110) = 12.11, <em>p</em> &lt; .001</p>
+<p>Can you reject the null hypothesis? <strong>Yes</strong></p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-5-why-is-it-recommended-to-opt-for-multiple-2-x-2-chi-squares-instead-of-chi-squares-larger-than-2-x-2" class="level4">
+<h4 class="anchored" data-anchor-id="question-5-why-is-it-recommended-to-opt-for-multiple-2-x-2-chi-squares-instead-of-chi-squares-larger-than-2-x-2">Question 5: Why is it recommended to opt for multiple 2 x 2 chi-squares instead of chi-squares larger than 2 x 2?</h4>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 5: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 5: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>It is easier to interpret and such a design requires a smaller sample size.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-6-how-could-you-modify-the-contingency-table-below-for-chi-square-analysis-to-aid-subsequent-interpretation-of-the-dataresults" class="level4">
+<h4 class="anchored" data-anchor-id="question-6-how-could-you-modify-the-contingency-table-below-for-chi-square-analysis-to-aid-subsequent-interpretation-of-the-dataresults">Question 6: How could you ‘modify’ the contingency table below for chi-square analysis to aid subsequent interpretation of the data/results?</h4>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 6: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 6: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><img src="files/week6/122_week14_labAc1_q6.png" class="img-fluid"></p>
+<p>By combining ‘interested’ and ‘somewhat interested’ or by partitioning (doing multiple 2 x 2 chi-squares, while using Bonferroni correction to account for running multiple tests.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="lab-activity-3" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-3">Lab activity 3</h3>
+<section id="questions-step-2" class="level4">
+<h4 class="anchored" data-anchor-id="questions-step-2">Questions Step 2</h4>
+<p>The numbers in the first row across the four columns refer to the responses from participant 1.</p>
+<ol type="a">
+<li><p>What condition were they in?</p></li>
+<li><p>Did they intend to return the paper-clips?</p></li>
+<li><p>Did they actually return the paper-clips?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 2: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions Step 2: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>condition = 1, intend = 1, actualdonate = 1 and id = 1 shows us that participant 1 was in the ‘reminder-through-assocation’ condition, reported that they intended to donate and also actually donated.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-step-3" class="level4">
+<h4 class="anchored" data-anchor-id="question-step-3">Question Step 3</h4>
+<ol type="a">
+<li>How many participants were removed because they didn’t intend to return the paper-clips?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question Step 3: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question Step 3: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>10 participants. The table ‘intent_data’ contains 87 observations, after we have applied the <code>filter()</code> function to include only those participants who did intend to return the paper-clips, the table contains 77 observations.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="questions-step-5" class="level4">
+<h4 class="anchored" data-anchor-id="questions-step-5">Questions Step 5</h4>
+<ol type="a">
+<li><p>How many participants in the control condition didn’t donate?</p></li>
+<li><p>How many participants in the control condition donated?</p></li>
+<li><p>How many participants in the RTA condition didn’t donate?</p></li>
+<li><p>How many participants in the rta condition donated?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 5: Answers">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions Step 5: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>22</p></li>
+<li><p>16</p></li>
+<li><p>10</p></li>
+<li><p>29</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="questions-step-6" class="level4">
+<h4 class="anchored" data-anchor-id="questions-step-6">Questions Step 6</h4>
+<ol type="a">
+<li><p>What does <code>position = "dodge"</code> do? Remove it and rerun the code to find out.</p></li>
+<li><p>Describe the pattern in the data in your own words.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 6: Answers">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions Step 6: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>“dodge” places the bars next to each other, rather than on top of each other.</p></li>
+<li><p>The number of participants in the reminders-through-association condition who donated seems to be substantially higher than participants in that condition who did not donate. Numbers of participants in the control condition who did and did not donate is more similar.</p></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="question-step-7" class="level4">
+<h4 class="anchored" data-anchor-id="question-step-7">Question Step 7</h4>
+<p>What do you conclude from the output?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question Step 7: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question Step 7: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>As <em>p</em> is smaller than .005, you can conclude that there is a significant association between the grouping variables.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-step-8" class="level4">
+<h4 class="anchored" data-anchor-id="question-step-8">Question Step 8</h4>
+<p>What do you conclude from the output?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question Step 8: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question Step 8: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The expected frequencies in all cells are greater than 5. The data therefore meet the assumption.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="questions-step-9" class="level4">
+<h4 class="anchored" data-anchor-id="questions-step-9">Questions Step 9</h4>
+<p>How large is the effect and how much variance is accounted for?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 9: Answers">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions Step 9: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The effect size (Cramer’s V) = 0.33 and the percentage variance accounted for = 11%.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-step-10" class="level4">
+<h4 class="anchored" data-anchor-id="question-step-10">Question Step 10</h4>
+<p>What do you conclude from the output?</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question Step 10: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question Step 10: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The adjusted standardised residuals show a significant association between condition and donating. Values beyond about ±1.96 indicate a cell that deviates from independence at roughly the .05 level (two-tailed), and ±2.87 is well past that.</p>
+<p>The direction is clear:</p>
+<p>RTA condition: more people donated than expected under independence (+2.87), and fewer didn’t donate than expected (-2.87).</p>
+<p>Control condition: fewer people donated than expected (-2.87), and more didn’t donate than expected (+2.87).</p>
+<p>The residuals are identical in magnitude and mirror each other because this is a 2x2 table. With only one degree of freedom, all four cells carry the same information, so you only need to interpret one of them. Don’t treat them as four separate findings. The adjusted standardised residuals would be more informative when interpreting a larger (e.g., 3x2) contingency table.</p>
+<p>The residuals tell you where and in which direction the association lies.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="question-step-11" class="level4">
+<h4 class="anchored" data-anchor-id="question-step-11">Question Step 11</h4>
+<p>Write up the results following APA guidelines.</p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Question Step 11: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question Step 11: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Those in the reminder-through-association condition performed the intended behaviour at a significantly higher rate (74%, 29 out of 39) than did those in the control condition (42%, 16 out of 38)), <em>χ2</em>(1, N = 77) = 8.24, <em>p</em> = 0.004, <em>V</em> = 0.33. The analysis showed that 11% of variance in intended behaviour could be accounted for by condition (reminder-through-association vs.&nbsp;control).</p>
+</div>
+</div>
+</div>
 
 
+</section>
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
