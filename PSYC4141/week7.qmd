@@ -63,7 +63,7 @@ You can navigate to each in the side bar on the right
 ## Lectures {#sec-4141-w7-lectures}
 
 ::: callout-note
-Please note that Rob may mention a different module code or different week during the lectures. I've reviewed the material and the content is highly relevant to the current module.
+Please note that Rob may mention a different module code or different week during the lectures. I've reviewed the material and the content is entirely relevant to the current module.
 :::
 
 ::: callout-tip
@@ -118,8 +118,9 @@ The slides presented in the videos can be downloaded either as a web page. You c
 
 **B. The mini research project**
 
-If you haven't already, make sure you watch the overview video on the mini research project on
-the project page.
+If you haven't already, make sure you watch the overview video on the mini research project and the video on what makes a good research question on the project page.
+
+After that, make sure to watch the videos introducing the Gorilla platform and on how to build a questionnaire on Gorilla.
 
 1. **Overview** (~9 minutes)
 Key information on what you'll be expected to do, a rough timeline and how it links to assessment. You can view this video on the project page [here](project.qmd#sec-4141-project-overview).
@@ -130,8 +131,8 @@ The video discusses why articulating a good research question is important and h
 3. **A short introduction on Gorilla** (~7 minutes)
 Gorilla is an online experiment builder. It provides an easy-to-use graphical interface which allows you to create complex studies in an intuitive way. Check out their video introduction to see what's possible. You can view this video on the project page [here](project.qmd#sec-4141-project-gorilla)
 
-4. **How to build a questionnaire on Gorilla** (~2 minutes)
-Watch the short video on their support page for *Questionnaire Builder 2* to get a first impression of how to use it to build a questionnaire. You can view this video on the project page [here](project.qmd#sec-4141-project-gorilla)
+4. **How to build a questionnaire on Gorilla** (~15 minutes)
+Watch these videos on their support pages to learn how to use Gorilla to build a questionnaire. You can view these videos on the project page [here](project.qmd#sec-4141-project-gorilla)
 
 ## Reading {#sec-4141-w7-reading}
 
