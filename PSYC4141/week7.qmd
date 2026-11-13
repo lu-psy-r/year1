@@ -172,206 +172,127 @@ For **week 7**, the reading is:
     [here](project.qmd#sec-4141-project-reading) and reading about measuring mind wandering and screen time as outlined [here](project.qmd#sec-4141-project-measures).
 
 
-## Pre-lab activities {#sec-4141-w6-prelab-activities}
+## Pre-lab activities {#sec-4141-w7-prelab-activities}
 
-After having watched the lectures and read the textbook chapter you'll
-be in a good position to try these activities. Completing them before
-you attend your lab session will help you to consolidate your learning
-and help move through the lab activities more smoothly.
+:::{.callout-tip}
 
-### Pre-lab activity 1: Refine the research question.
+Information about the pre-lab activities will be added as soon as possible.
 
-Each group will investigate the following question: *Is mind wandering
-related to screen time?* Each group will refine this research question
-and decide:
-
--   What aspect of mind wandering to focus on and how to measure it
--   What aspect of screen time to focus on and how to measure it
-
-Please read the key readings ([more info on the project page
-here](project.qmd#sec-4141-project-reading)) before the lab session. In
-your group, you will discuss your ideas about mind wandering and screen
-time, how to refine the research question, and how to measure each
-construct.
-
-### Pre-lab activity 2: Calculating Chi-square by hand and interpreting the results
-
-Is there a relationship between the number of people who smoke and the
-number of people who drink? Please note that the question is the number
-of people (frequency) and not how much people drink/smoke. Also note
-that these are fictitious data. You'll need a table of critical values
-for Chi-square. This can be found
-[**here**](files/week6/4141_chisquare_cheatsheet_and_table.pdf), and
-also in the zip-folder you'll be asked to download in the a later
-pre-lab activity.
-
-![](files/week6/chisquare_dataLabAct1.png)
-
-Pre-lab activity questions:
-
-1.  Complete the Pearson's Chi-square test by hand using the data above
-    and fill in the blanks:
-
-$\chi 2$ ( , *N* = ) = , *p*
-
-2.  Can you reject the null hypothesis?
-
-### Pre-lab activity 3: Data visualisation - Creating a bar chart
-
-We've been using the `ggplot2` package for visualising data. You can
-read a great overview of the `ggplot2` package
-[here](https://ggplot2.tidyverse.org). It also links to a 'cheatsheet'
-that you can download as a .pdf document. Lots of useful info on there!
-
-With regard to visualising relations between categorical variables, the
-`geom_bar()` function is important. The following 'recipe' summarises
-what it does and how to use it.
-
-\newline
-
-`geom_bar()` - create a bar chart -
-[**recipe**](https://posit.cloud/learn/recipes/visualize/VisualizeA4)
-
-> Have a look at the 'recipe' and read through it. Try to understand
-> each step. Going through the example is particularly helpful.
-
-::: {.callout-tip title="Recipes - how to use them"}
-Each 'recipe' has the same structure. As an example, let's have a look
-at one (
-[**recipe**](https://posit.cloud/learn/recipes/basics/ImportA1)) for a
-function that you have used each week: `read_csv()`
-
-1.  First, it summarises what it is that you want to achieve when using
-    that specific function. In the case of `read_csv()` it says *"You
-    want to read a CSV file into your R session, where you can
-    manipulate its contents. The file has the extension .csv. A CSV file
-    is a text file that contains a table whose values are separated by
-    commas, i.e. a Comma Separated Values file."*
-2.  Then, it outlines a number of steps that you need to carry out when
-    using this function. For `read_csv()` it outlines 3 steps: *1. Call
-    the function. 2. Give the filepath to your file as a character
-    string. 3. Save teh output to an object.*
-3.  Finally, there is an example talks you through using the function
-    with some data. For `read_csv()` it uses an example with data about
-    chickens.
-4.  Additional information appears in extra boxes with a light-bulb
-    icon. If you find those confusing, don't worry about them at this
-    stage.
 :::
 
-### Pre-lab activity 4: Getting ready
+<!-- ### Pre-lab activity 4: Getting ready -->
 
-More information and the download links will be shared as soon as
-possible.
+<!-- More information and the download links will be shared as soon as -->
+<!-- possible. -->
 
-To complete this week's lab activities you will need several files:
+<!-- To complete this week's lab activities you will need several files: -->
 
-1.  We'll work with an example script called `4141_wk6_lab.qmd`. This is
-    a Quarto document.
-2.  We'll also need a data file names `RTA_study1.csv`.
+<!-- 1.  We'll work with an example script called `4141_wk6_lab.qmd`. This is -->
+<!--     a Quarto document. -->
+<!-- 2.  We'll also need a data file names `RTA_study1.csv`. -->
 
-You can download the files here:
-[`4141_wk6_lab.zip`](files/week6/4141_wk6_lab.zip){download="4141_wk6_lab.zip"}.
-Usually they will be saved in your 'Downloads' folder.
+<!-- You can download the files here: -->
+<!-- [`4141_wk6_lab.zip`](files/week6/4141_wk6_lab.zip){download="4141_wk6_lab.zip"}. -->
+<!-- Usually they will be saved in your 'Downloads' folder. -->
 
-Next, upload the zip-folder as it is to your Files space on the R-server
-(bottom right quadrant; no need to extract the files first).
+<!-- Next, upload the zip-folder as it is to your Files space on the R-server -->
+<!-- (bottom right quadrant; no need to extract the files first). -->
 
-Finally, open the example script by clicking on the file called
-`4141_wk6_lab.qmd` in the Files space on the R-server.
+<!-- Finally, open the example script by clicking on the file called -->
+<!-- `4141_wk6_lab.qmd` in the Files space on the R-server. -->
 
-You are now ready to start work on the lab activities.
+<!-- You are now ready to start work on the lab activities. -->
 
-## Lab activities {#sec-4141-w6-lab-activities}
+## Lab activities {#sec-4141-w7-lab-activities}
 
-<!-- :::{.callout-tip} -->
+:::{.callout-tip}
 
-<!-- Information about the lab activities will be added as soon as possible -->
+Information about the lab activities will be added as soon as possible.
 
-<!-- ::: -->
+:::
 
-### Lab activity 1: Refining your research question -- Discuss, agree, swap and check
+<!-- ### Lab activity 1: Refining your research question -- Discuss, agree, swap and check -->
 
-1.  **Go and sit in your groups.** Take a handout. You need 1 handout
-    for every 2 or 3 people in your group. Write your group's name or
-    number in the "Author" box.
+<!-- 1.  **Go and sit in your groups.** Take a handout. You need 1 handout -->
+<!--     for every 2 or 3 people in your group. Write your group's name or -->
+<!--     number in the "Author" box. -->
 
-2.  **Agree on a question (\~10 min).** Discuss ideas and agree on one
-    draft research question for your group. Write it in Section 1, with
-    one line on who or what it's about. Everyone should be able to
-    explain why you chose it.
+<!-- 2.  **Agree on a question (\~10 min).** Discuss ideas and agree on one -->
+<!--     draft research question for your group. Write it in Section 1, with -->
+<!--     one line on who or what it's about. Everyone should be able to -->
+<!--     explain why you chose it. -->
 
-3.  **Pair up across groups (\~1 min).** Two (or three) of you from each
-    group will go and join two (or three) people from another group.
+<!-- 3.  **Pair up across groups (\~1 min).** Two (or three) of you from each -->
+<!--     group will go and join two (or three) people from another group. -->
 
-4.  **Swap (\~1 min).** In your new foursome, swap handouts with the
-    other pair, so each pair holds the other group's question.
+<!-- 4.  **Swap (\~1 min).** In your new foursome, swap handouts with the -->
+<!--     other pair, so each pair holds the other group's question. -->
 
-5.  **Review (\~5 min).** With your partner, read the other group's
-    question and complete Section 2 on their handout:
+<!-- 5.  **Review (\~5 min).** With your partner, read the other group's -->
+<!--     question and complete Section 2 on their handout: -->
 
-    -   Tick **Yes** or **Unsure** for each check, and add a note where
-        you can.
-    -   Write **one assumption** you can spot in the question.
-    -   Write **one thing you'd need to know** to answer it.
+<!--     -   Tick **Yes** or **Unsure** for each check, and add a note where -->
+<!--         you can. -->
+<!--     -   Write **one assumption** you can spot in the question. -->
+<!--     -   Write **one thing you'd need to know** to answer it. -->
 
-6.  **Hand back and talk (\~4 min).** Return the handout to the group
-    that wrote it. Talk it through in your foursome:
+<!-- 6.  **Hand back and talk (\~4 min).** Return the handout to the group -->
+<!--     that wrote it. Talk it through in your foursome: -->
 
-    -   What surprised each pair?
-    -   How did the reviewers interpret the key terms?
+<!--     -   What surprised each pair? -->
+<!--     -   How did the reviewers interpret the key terms? -->
 
-7.  **Return and feed back (\~7 min).** Go back to your original group.
-    Share the feedback with the rest of the group. Use the notes on your
-    handout.
+<!-- 7.  **Return and feed back (\~7 min).** Go back to your original group. -->
+<!--     Share the feedback with the rest of the group. Use the notes on your -->
+<!--     handout. -->
 
-8.  **Revise together (\~8 min).** As a group, rewrite your question
-    with **at least one change** for clarity or specificity. Complete
-    Section 3 to record what you changed and why.
+<!-- 8.  **Revise together (\~8 min).** As a group, rewrite your question -->
+<!--     with **at least one change** for clarity or specificity. Complete -->
+<!--     Section 3 to record what you changed and why. -->
 
-### Lab activity 2: Understanding the application of the Chi-square test
+<!-- ### Lab activity 2: Understanding the application of the Chi-square test -->
 
-#### Question 1: Difference between Pearson's chi-square and Pearson's correlation
+<!-- #### Question 1: Difference between Pearson's chi-square and Pearson's correlation -->
 
-How does Pearson's chi-square differ from Pearson's correlation?
+<!-- How does Pearson's chi-square differ from Pearson's correlation? -->
 
-#### Question 2: When is Chi-square appropriate?
+<!-- #### Question 2: When is Chi-square appropriate? -->
 
-Chi-square test of independence would be appropriate when testing the
-following questions:
+<!-- Chi-square test of independence would be appropriate when testing the -->
+<!-- following questions: -->
 
-a.  What is the relationship between gender and soft drink preference?
-    True or False?
-b.  How do males and females compare in terms of wanting to be a
-    psychologist when they leave school? True or False?
+<!-- a.  What is the relationship between gender and soft drink preference? -->
+<!--     True or False? -->
+<!-- b.  How do males and females compare in terms of wanting to be a -->
+<!--     psychologist when they leave school? True or False? -->
 
-#### Question 3: Chi-square formula
+<!-- #### Question 3: Chi-square formula -->
 
-Write the chi-square formula below.
+<!-- Write the chi-square formula below. -->
 
-#### Question 4: Answers from pre-lab activity 2
+<!-- #### Question 4: Answers from pre-lab activity 2 -->
 
-What were your answers to the pre-lab activity 2 questions? Please
-compare them with other students at your table.
+<!-- What were your answers to the pre-lab activity 2 questions? Please -->
+<!-- compare them with other students at your table. -->
 
-a.  Complete the Pearson's Chi-square test by hand using the data above
-    and fill in the blanks:
+<!-- a.  Complete the Pearson's Chi-square test by hand using the data above -->
+<!--     and fill in the blanks: -->
 
-$\chi 2$ ( , *N* = ) = , *p*
+<!-- $\chi 2$ ( , *N* = ) = , *p* -->
 
-b.  Can you reject the null hypothesis?
+<!-- b.  Can you reject the null hypothesis? -->
 
-#### Question 5: Large contingency tables
+<!-- #### Question 5: Large contingency tables -->
 
-Why is it recommended to opt for multiple 2 x 2 chi-squares instead of
-chi-squares larger than 2 x 2?
+<!-- Why is it recommended to opt for multiple 2 x 2 chi-squares instead of -->
+<!-- chi-squares larger than 2 x 2? -->
 
-#### Question 6: Simplying a large contingency table
+<!-- #### Question 6: Simplying a large contingency table -->
 
-How could you 'modify' the contingency table below for chi-square
-analysis to aid subsequent interpretation of the data/results?
+<!-- How could you 'modify' the contingency table below for chi-square -->
+<!-- analysis to aid subsequent interpretation of the data/results? -->
 
-![](files/week6/122_week14_labAc1_q6.png)
+<!-- ![](files/week6/122_week14_labAc1_q6.png) -->
 
 ### Lab activity 3: Reminders through association
 

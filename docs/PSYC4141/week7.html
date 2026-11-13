@@ -106,35 +106,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="https://lu-psy-r.github.io/essentials/index_24.css">
 </head>
@@ -292,17 +263,9 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-4141-w7-lectures" id="toc-sec-4141-w7-lectures" class="nav-link active" data-scroll-target="#sec-4141-w7-lectures">Lectures</a></li>
   <li><a href="#sec-4141-w7-reading" id="toc-sec-4141-w7-reading" class="nav-link" data-scroll-target="#sec-4141-w7-reading">Reading</a></li>
-  <li><a href="#sec-4141-w6-prelab-activities" id="toc-sec-4141-w6-prelab-activities" class="nav-link" data-scroll-target="#sec-4141-w6-prelab-activities">Pre-lab activities</a>
+  <li><a href="#sec-4141-w7-prelab-activities" id="toc-sec-4141-w7-prelab-activities" class="nav-link" data-scroll-target="#sec-4141-w7-prelab-activities">Pre-lab activities</a></li>
+  <li><a href="#sec-4141-w7-lab-activities" id="toc-sec-4141-w7-lab-activities" class="nav-link" data-scroll-target="#sec-4141-w7-lab-activities">Lab activities</a>
   <ul class="collapse">
-  <li><a href="#pre-lab-activity-1-refine-the-research-question." id="toc-pre-lab-activity-1-refine-the-research-question." class="nav-link" data-scroll-target="#pre-lab-activity-1-refine-the-research-question.">Pre-lab activity 1: Refine the research question.</a></li>
-  <li><a href="#pre-lab-activity-2-calculating-chi-square-by-hand-and-interpreting-the-results" id="toc-pre-lab-activity-2-calculating-chi-square-by-hand-and-interpreting-the-results" class="nav-link" data-scroll-target="#pre-lab-activity-2-calculating-chi-square-by-hand-and-interpreting-the-results">Pre-lab activity 2: Calculating Chi-square by hand and interpreting the results</a></li>
-  <li><a href="#pre-lab-activity-3-data-visualisation---creating-a-bar-chart" id="toc-pre-lab-activity-3-data-visualisation---creating-a-bar-chart" class="nav-link" data-scroll-target="#pre-lab-activity-3-data-visualisation---creating-a-bar-chart">Pre-lab activity 3: Data visualisation - Creating a bar chart</a></li>
-  <li><a href="#pre-lab-activity-4-getting-ready" id="toc-pre-lab-activity-4-getting-ready" class="nav-link" data-scroll-target="#pre-lab-activity-4-getting-ready">Pre-lab activity 4: Getting ready</a></li>
-  </ul></li>
-  <li><a href="#sec-4141-w6-lab-activities" id="toc-sec-4141-w6-lab-activities" class="nav-link" data-scroll-target="#sec-4141-w6-lab-activities">Lab activities</a>
-  <ul class="collapse">
-  <li><a href="#lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check" id="toc-lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check" class="nav-link" data-scroll-target="#lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check">Lab activity 1: Refining your research question – Discuss, agree, swap and check</a></li>
-  <li><a href="#lab-activity-2-understanding-the-application-of-the-chi-square-test" id="toc-lab-activity-2-understanding-the-application-of-the-chi-square-test" class="nav-link" data-scroll-target="#lab-activity-2-understanding-the-application-of-the-chi-square-test">Lab activity 2: Understanding the application of the Chi-square test</a></li>
   <li><a href="#lab-activity-3-reminders-through-association" id="toc-lab-activity-3-reminders-through-association" class="nav-link" data-scroll-target="#lab-activity-3-reminders-through-association">Lab activity 3: Reminders through association</a></li>
   </ul></li>
   <li><a href="#sec-4141-w6-answers" id="toc-sec-4141-w6-answers" class="nav-link" data-scroll-target="#sec-4141-w6-answers">Answers</a></li>
@@ -480,139 +443,106 @@ Easy access to readings
 <li><p>Key readings for the mini research project as outlined <a href="../PSYC4141/project.html#sec-4141-project-reading">here</a> and reading about measuring mind wandering and screen time as outlined <a href="../PSYC4141/project.html#sec-4141-project-measures">here</a>.</p></li>
 </ul>
 </section>
-<section id="sec-4141-w6-prelab-activities" class="level2">
-<h2 class="anchored" data-anchor-id="sec-4141-w6-prelab-activities">Pre-lab activities</h2>
-<p>After having watched the lectures and read the textbook chapter you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.</p>
-<section id="pre-lab-activity-1-refine-the-research-question." class="level3">
-<h3 class="anchored" data-anchor-id="pre-lab-activity-1-refine-the-research-question.">Pre-lab activity 1: Refine the research question.</h3>
-<p>Each group will investigate the following question: <em>Is mind wandering related to screen time?</em> Each group will refine this research question and decide:</p>
-<ul>
-<li>What aspect of mind wandering to focus on and how to measure it</li>
-<li>What aspect of screen time to focus on and how to measure it</li>
-</ul>
-<p>Please read the key readings (<a href="../PSYC4141/project.html#sec-4141-project-reading">more info on the project page here</a>) before the lab session. In your group, you will discuss your ideas about mind wandering and screen time, how to refine the research question, and how to measure each construct.</p>
-</section>
-<section id="pre-lab-activity-2-calculating-chi-square-by-hand-and-interpreting-the-results" class="level3">
-<h3 class="anchored" data-anchor-id="pre-lab-activity-2-calculating-chi-square-by-hand-and-interpreting-the-results">Pre-lab activity 2: Calculating Chi-square by hand and interpreting the results</h3>
-<p>Is there a relationship between the number of people who smoke and the number of people who drink? Please note that the question is the number of people (frequency) and not how much people drink/smoke. Also note that these are fictitious data. You’ll need a table of critical values for Chi-square. This can be found <a href="files/week6/4141_chisquare_cheatsheet_and_table.pdf"><strong>here</strong></a>, and also in the zip-folder you’ll be asked to download in the a later pre-lab activity.</p>
-<p><img src="files/week6/chisquare_dataLabAct1.png" class="img-fluid"></p>
-<p>Pre-lab activity questions:</p>
-<ol type="1">
-<li>Complete the Pearson’s Chi-square test by hand using the data above and fill in the blanks:</li>
-</ol>
-<p><span class="math inline">\(\chi 2\)</span> ( , <em>N</em> = ) = , <em>p</em></p>
-<ol start="2" type="1">
-<li>Can you reject the null hypothesis?</li>
-</ol>
-</section>
-<section id="pre-lab-activity-3-data-visualisation---creating-a-bar-chart" class="level3">
-<h3 class="anchored" data-anchor-id="pre-lab-activity-3-data-visualisation---creating-a-bar-chart">Pre-lab activity 3: Data visualisation - Creating a bar chart</h3>
-<p>We’ve been using the <code>ggplot2</code> package for visualising data. You can read a great overview of the <code>ggplot2</code> package <a href="https://ggplot2.tidyverse.org">here</a>. It also links to a ‘cheatsheet’ that you can download as a .pdf document. Lots of useful info on there!</p>
-<p>With regard to visualising relations between categorical variables, the <code>geom_bar()</code> function is important. The following ‘recipe’ summarises what it does and how to use it.</p>
-<p><code>geom_bar()</code> - create a bar chart - <a href="https://posit.cloud/learn/recipes/visualize/VisualizeA4"><strong>recipe</strong></a></p>
-<blockquote class="blockquote">
-<p>Have a look at the ‘recipe’ and read through it. Try to understand each step. Going through the example is particularly helpful.</p>
-</blockquote>
-<div class="callout callout-style-default callout-tip callout-titled" title="Recipes - how to use them">
+<section id="sec-4141-w7-prelab-activities" class="level2">
+<h2 class="anchored" data-anchor-id="sec-4141-w7-prelab-activities">Pre-lab activities</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Recipes - how to use them
+Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Each ‘recipe’ has the same structure. As an example, let’s have a look at one ( <a href="https://posit.cloud/learn/recipes/basics/ImportA1"><strong>recipe</strong></a>) for a function that you have used each week: <code>read_csv()</code></p>
-<ol type="1">
-<li>First, it summarises what it is that you want to achieve when using that specific function. In the case of <code>read_csv()</code> it says <em>“You want to read a CSV file into your R session, where you can manipulate its contents. The file has the extension .csv. A CSV file is a text file that contains a table whose values are separated by commas, i.e.&nbsp;a Comma Separated Values file.”</em></li>
-<li>Then, it outlines a number of steps that you need to carry out when using this function. For <code>read_csv()</code> it outlines 3 steps: <em>1. Call the function. 2. Give the filepath to your file as a character string. 3. Save teh output to an object.</em></li>
-<li>Finally, there is an example talks you through using the function with some data. For <code>read_csv()</code> it uses an example with data about chickens.</li>
-<li>Additional information appears in extra boxes with a light-bulb icon. If you find those confusing, don’t worry about them at this stage.</li>
-</ol>
+<p>Information about the pre-lab activities will be added as soon as possible.</p>
 </div>
 </div>
+<!-- ### Pre-lab activity 4: Getting ready -->
+<!-- More information and the download links will be shared as soon as -->
+<!-- possible. -->
+<!-- To complete this week's lab activities you will need several files: -->
+<!-- 1.  We'll work with an example script called `4141_wk6_lab.qmd`. This is -->
+<!--     a Quarto document. -->
+<!-- 2.  We'll also need a data file names `RTA_study1.csv`. -->
+<!-- You can download the files here: -->
+<!-- [`4141_wk6_lab.zip`](files/week6/4141_wk6_lab.zip){download="4141_wk6_lab.zip"}. -->
+<!-- Usually they will be saved in your 'Downloads' folder. -->
+<!-- Next, upload the zip-folder as it is to your Files space on the R-server -->
+<!-- (bottom right quadrant; no need to extract the files first). -->
+<!-- Finally, open the example script by clicking on the file called -->
+<!-- `4141_wk6_lab.qmd` in the Files space on the R-server. -->
+<!-- You are now ready to start work on the lab activities. -->
 </section>
-<section id="pre-lab-activity-4-getting-ready" class="level3">
-<h3 class="anchored" data-anchor-id="pre-lab-activity-4-getting-ready">Pre-lab activity 4: Getting ready</h3>
-<p>More information and the download links will be shared as soon as possible.</p>
-<p>To complete this week’s lab activities you will need several files:</p>
-<ol type="1">
-<li>We’ll work with an example script called <code>4141_wk6_lab.qmd</code>. This is a Quarto document.</li>
-<li>We’ll also need a data file names <code>RTA_study1.csv</code>.</li>
-</ol>
-<p>You can download the files here: <a href="files/week6/4141_wk6_lab.zip" download="4141_wk6_lab.zip"><code>4141_wk6_lab.zip</code></a>. Usually they will be saved in your ‘Downloads’ folder.</p>
-<p>Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).</p>
-<p>Finally, open the example script by clicking on the file called <code>4141_wk6_lab.qmd</code> in the Files space on the R-server.</p>
-<p>You are now ready to start work on the lab activities.</p>
-</section>
-</section>
-<section id="sec-4141-w6-lab-activities" class="level2">
-<h2 class="anchored" data-anchor-id="sec-4141-w6-lab-activities">Lab activities</h2>
-<!-- :::{.callout-tip} -->
-<!-- Information about the lab activities will be added as soon as possible -->
-<!-- ::: -->
-<section id="lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check" class="level3">
-<h3 class="anchored" data-anchor-id="lab-activity-1-refining-your-research-question-discuss-agree-swap-and-check">Lab activity 1: Refining your research question – Discuss, agree, swap and check</h3>
-<ol type="1">
-<li><p><strong>Go and sit in your groups.</strong> Take a handout. You need 1 handout for every 2 or 3 people in your group. Write your group’s name or number in the “Author” box.</p></li>
-<li><p><strong>Agree on a question (~10 min).</strong> Discuss ideas and agree on one draft research question for your group. Write it in Section 1, with one line on who or what it’s about. Everyone should be able to explain why you chose it.</p></li>
-<li><p><strong>Pair up across groups (~1 min).</strong> Two (or three) of you from each group will go and join two (or three) people from another group.</p></li>
-<li><p><strong>Swap (~1 min).</strong> In your new foursome, swap handouts with the other pair, so each pair holds the other group’s question.</p></li>
-<li><p><strong>Review (~5 min).</strong> With your partner, read the other group’s question and complete Section 2 on their handout:</p>
-<ul>
-<li>Tick <strong>Yes</strong> or <strong>Unsure</strong> for each check, and add a note where you can.</li>
-<li>Write <strong>one assumption</strong> you can spot in the question.</li>
-<li>Write <strong>one thing you’d need to know</strong> to answer it.</li>
-</ul></li>
-<li><p><strong>Hand back and talk (~4 min).</strong> Return the handout to the group that wrote it. Talk it through in your foursome:</p>
-<ul>
-<li>What surprised each pair?</li>
-<li>How did the reviewers interpret the key terms?</li>
-</ul></li>
-<li><p><strong>Return and feed back (~7 min).</strong> Go back to your original group. Share the feedback with the rest of the group. Use the notes on your handout.</p></li>
-<li><p><strong>Revise together (~8 min).</strong> As a group, rewrite your question with <strong>at least one change</strong> for clarity or specificity. Complete Section 3 to record what you changed and why.</p></li>
-</ol>
-</section>
-<section id="lab-activity-2-understanding-the-application-of-the-chi-square-test" class="level3">
-<h3 class="anchored" data-anchor-id="lab-activity-2-understanding-the-application-of-the-chi-square-test">Lab activity 2: Understanding the application of the Chi-square test</h3>
-<section id="question-1-difference-between-pearsons-chi-square-and-pearsons-correlation" class="level4">
-<h4 class="anchored" data-anchor-id="question-1-difference-between-pearsons-chi-square-and-pearsons-correlation">Question 1: Difference between Pearson’s chi-square and Pearson’s correlation</h4>
-<p>How does Pearson’s chi-square differ from Pearson’s correlation?</p>
-</section>
-<section id="question-2-when-is-chi-square-appropriate" class="level4">
-<h4 class="anchored" data-anchor-id="question-2-when-is-chi-square-appropriate">Question 2: When is Chi-square appropriate?</h4>
-<p>Chi-square test of independence would be appropriate when testing the following questions:</p>
-<ol type="a">
-<li>What is the relationship between gender and soft drink preference? True or False?</li>
-<li>How do males and females compare in terms of wanting to be a psychologist when they leave school? True or False?</li>
-</ol>
-</section>
-<section id="question-3-chi-square-formula" class="level4">
-<h4 class="anchored" data-anchor-id="question-3-chi-square-formula">Question 3: Chi-square formula</h4>
-<p>Write the chi-square formula below.</p>
-</section>
-<section id="question-4-answers-from-pre-lab-activity-2" class="level4">
-<h4 class="anchored" data-anchor-id="question-4-answers-from-pre-lab-activity-2">Question 4: Answers from pre-lab activity 2</h4>
-<p>What were your answers to the pre-lab activity 2 questions? Please compare them with other students at your table.</p>
-<ol type="a">
-<li>Complete the Pearson’s Chi-square test by hand using the data above and fill in the blanks:</li>
-</ol>
-<p><span class="math inline">\(\chi 2\)</span> ( , <em>N</em> = ) = , <em>p</em></p>
-<ol start="2" type="a">
-<li>Can you reject the null hypothesis?</li>
-</ol>
-</section>
-<section id="question-5-large-contingency-tables" class="level4">
-<h4 class="anchored" data-anchor-id="question-5-large-contingency-tables">Question 5: Large contingency tables</h4>
-<p>Why is it recommended to opt for multiple 2 x 2 chi-squares instead of chi-squares larger than 2 x 2?</p>
-</section>
-<section id="question-6-simplying-a-large-contingency-table" class="level4">
-<h4 class="anchored" data-anchor-id="question-6-simplying-a-large-contingency-table">Question 6: Simplying a large contingency table</h4>
-<p>How could you ‘modify’ the contingency table below for chi-square analysis to aid subsequent interpretation of the data/results?</p>
-<p><img src="files/week6/122_week14_labAc1_q6.png" class="img-fluid"></p>
-</section>
-</section>
+<section id="sec-4141-w7-lab-activities" class="level2">
+<h2 class="anchored" data-anchor-id="sec-4141-w7-lab-activities">Lab activities</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Information about the lab activities will be added as soon as possible.</p>
+</div>
+</div>
+<!-- ### Lab activity 1: Refining your research question -- Discuss, agree, swap and check -->
+<!-- 1.  **Go and sit in your groups.** Take a handout. You need 1 handout -->
+<!--     for every 2 or 3 people in your group. Write your group's name or -->
+<!--     number in the "Author" box. -->
+<!-- 2.  **Agree on a question (\~10 min).** Discuss ideas and agree on one -->
+<!--     draft research question for your group. Write it in Section 1, with -->
+<!--     one line on who or what it's about. Everyone should be able to -->
+<!--     explain why you chose it. -->
+<!-- 3.  **Pair up across groups (\~1 min).** Two (or three) of you from each -->
+<!--     group will go and join two (or three) people from another group. -->
+<!-- 4.  **Swap (\~1 min).** In your new foursome, swap handouts with the -->
+<!--     other pair, so each pair holds the other group's question. -->
+<!-- 5.  **Review (\~5 min).** With your partner, read the other group's -->
+<!--     question and complete Section 2 on their handout: -->
+<!--     -   Tick **Yes** or **Unsure** for each check, and add a note where -->
+<!--         you can. -->
+<!--     -   Write **one assumption** you can spot in the question. -->
+<!--     -   Write **one thing you'd need to know** to answer it. -->
+<!-- 6.  **Hand back and talk (\~4 min).** Return the handout to the group -->
+<!--     that wrote it. Talk it through in your foursome: -->
+<!--     -   What surprised each pair? -->
+<!--     -   How did the reviewers interpret the key terms? -->
+<!-- 7.  **Return and feed back (\~7 min).** Go back to your original group. -->
+<!--     Share the feedback with the rest of the group. Use the notes on your -->
+<!--     handout. -->
+<!-- 8.  **Revise together (\~8 min).** As a group, rewrite your question -->
+<!--     with **at least one change** for clarity or specificity. Complete -->
+<!--     Section 3 to record what you changed and why. -->
+<!-- ### Lab activity 2: Understanding the application of the Chi-square test -->
+<!-- #### Question 1: Difference between Pearson's chi-square and Pearson's correlation -->
+<!-- How does Pearson's chi-square differ from Pearson's correlation? -->
+<!-- #### Question 2: When is Chi-square appropriate? -->
+<!-- Chi-square test of independence would be appropriate when testing the -->
+<!-- following questions: -->
+<!-- a.  What is the relationship between gender and soft drink preference? -->
+<!--     True or False? -->
+<!-- b.  How do males and females compare in terms of wanting to be a -->
+<!--     psychologist when they leave school? True or False? -->
+<!-- #### Question 3: Chi-square formula -->
+<!-- Write the chi-square formula below. -->
+<!-- #### Question 4: Answers from pre-lab activity 2 -->
+<!-- What were your answers to the pre-lab activity 2 questions? Please -->
+<!-- compare them with other students at your table. -->
+<!-- a.  Complete the Pearson's Chi-square test by hand using the data above -->
+<!--     and fill in the blanks: -->
+<!-- $\chi 2$ ( , *N* = ) = , *p* -->
+<!-- b.  Can you reject the null hypothesis? -->
+<!-- #### Question 5: Large contingency tables -->
+<!-- Why is it recommended to opt for multiple 2 x 2 chi-squares instead of -->
+<!-- chi-squares larger than 2 x 2? -->
+<!-- #### Question 6: Simplying a large contingency table -->
+<!-- How could you 'modify' the contingency table below for chi-square -->
+<!-- analysis to aid subsequent interpretation of the data/results? -->
+<!-- ![](files/week6/122_week14_labAc1_q6.png) -->
 <section id="lab-activity-3-reminders-through-association" class="level3">
 <h3 class="anchored" data-anchor-id="lab-activity-3-reminders-through-association">Lab activity 3: Reminders through association</h3>
 <p>For this lab, we’re going to use data from <a href="https://journals.sagepub.com/stoken/default+domain/6XgDSfr6ZHSDs47tx5bu/full"><strong>Rogers, T. &amp; Milkman, K. L. (2016). Reminders through association. <em>Psychological Science, 27</em>, 973-986.</strong></a> You can read the full paper online but the short version is that the authors looked at how people remember to follow through with the intention of doing something.</p>
@@ -687,25 +617,6 @@ How to use the Quarto document?
 <p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’.In the code chunk, write code to load the libraries by using the <code>library()</code> function. We need the packages <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. After you’ve written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk).</p>
 </blockquote>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hint
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>We need to load several packages (<code>here</code>, <code>tidyverse</code> and <code>easystats</code>) using the <code>library()</code> function. First, inside the code chunk, write <code>library()</code> and put <code>here</code> inside the brackets. On the next line in the code chunk, write <code>library()</code> and put <code>tidyverse</code> inside the brackets. On a third line in the code chunk, write <code>library()</code> and put <code>easystats</code> inside the brackets. Make sure to run the code chunk by clicking on the green arrow in the top corner of the code chunk.</p>
-</div>
-</div>
-</div>
-<blockquote class="blockquote">
-<p><strong>Step 1.</strong> Add the code to load the relevant libraries in a new code chunk. We need the following ones: <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. If you are unsure, you can look at the ‘Hint’ below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the ‘Code’ section below.</p>
-</blockquote>
-<div class="callout callout-style-default callout-note callout-titled" title="Hint">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -717,12 +628,31 @@ Hint
 </div>
 <div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
+<p>We need to load several packages (<code>here</code>, <code>tidyverse</code> and <code>easystats</code>) using the <code>library()</code> function. First, inside the code chunk, write <code>library()</code> and put <code>here</code> inside the brackets. On the next line in the code chunk, write <code>library()</code> and put <code>tidyverse</code> inside the brackets. On a third line in the code chunk, write <code>library()</code> and put <code>easystats</code> inside the brackets. Make sure to run the code chunk by clicking on the green arrow in the top corner of the code chunk.</p>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Step 1.</strong> Add the code to load the relevant libraries in a new code chunk. We need the following ones: <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. If you are unsure, you can look at the ‘Hint’ below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the ‘Code’ section below.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
 <p>Use the <code>library()</code>function. Remember to put it inside a ‘code chunk’ in your script. The name of the package goes inside the brackets.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -731,7 +661,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below.</p>
 <pre><code>library(here)
@@ -748,7 +678,7 @@ library(easystats)</code></pre>
 <p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’. Inside the chunk, use <code>read_csv()</code> to read in the data file named <code>RTA_study1.csv</code>; tell R where to find the file and what it is called. Make sure you’ve run the code chunk. Then, check that you can see the ‘object’ in the Environment (top right quadrant) for the file you read in. I’ve called the data-frame <code>intent_data</code>. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -757,7 +687,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><code>dataframe &lt;- read_csv(here("filepath to folder", "filename.extension))</code></p>
 <p>Your code should include:</p>
@@ -773,7 +703,7 @@ Hint
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -782,7 +712,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>intent_data<span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"4141_wk6_lab"</span>, <span class="st">"RTA_study1.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -875,7 +805,7 @@ How does <code>filter()</code> work?
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -884,7 +814,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>intent_data <span class="ot">&lt;-</span> <span class="fu">filter</span>(intent_data, intend <span class="sc">==</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -948,7 +878,7 @@ Tip
 <div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> , <span class="fu">aes</span>(<span class="at">x =</span> , <span class="at">fill =</span> )) <span class="sc">+</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-note callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -957,7 +887,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below:</p>
 <pre><code>ggplot(data = intent_data, aes(x = condition, fill = actualdonate)) +
@@ -1065,7 +995,7 @@ results</code></pre>
 <h4 class="anchored" data-anchor-id="step-11-write-up-the-results-following-apa-guidelines.">Step 11: Write up the results following APA guidelines.</h4>
 <p>Using the guidance below, have a go at writing up the results for the Chi-square analysis following APA guidelines.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1074,7 +1004,7 @@ Tip
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The <a href="https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_numbers_statistics.html"><strong>Purdue writing lab website</strong></a> is helpful for guidance on punctuating statistics.</p>
 </div>
