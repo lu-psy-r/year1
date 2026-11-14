@@ -215,174 +215,65 @@ Please make sure to use your university email address (ending in '@lancaster.ac.
 More information and the download links will be shared as soon as
 possible.
 
-<!-- To complete this week's lab activities you will need several files: -->
+To complete this week's lab activity you will need several files:
 
-<!-- 1.  We'll work with an example script called `4141_wk6_lab.qmd`. This is -->
-<!--     a Quarto document. -->
-<!-- 2.  We'll also need a data file names `RTA_study1.csv`. -->
+1.  We'll work with an example script called `4141_wk7_lab.qmd`. This is
+    a Quarto document.
+2.  We'll also need a data file names `study-two-general-participants.csv`.
 
-<!-- You can download the files here: -->
-<!-- [`4141_wk6_lab.zip`](files/week6/4141_wk6_lab.zip){download="4141_wk6_lab.zip"}. -->
-<!-- Usually they will be saved in your 'Downloads' folder. -->
+You can download the files here:
+[`4141_wk7_lab.zip`](files/week7/4141_wk7_lab.zip){download="4141_wk7_lab.zip"}.
+Usually they will be saved in your 'Downloads' folder.
 
-<!-- Next, upload the zip-folder as it is to your Files space on the R-server -->
-<!-- (bottom right quadrant; no need to extract the files first). -->
+Next, upload the zip-folder as it is to your Files space on the R-server
+(bottom right quadrant; no need to extract the files first).
 
-<!-- Finally, open the example script by clicking on the file called -->
-<!-- `4141_wk6_lab.qmd` in the Files space on the R-server. -->
+Finally, open the example script by clicking on the file called
+`4141_wk7_lab.qmd` in the Files space on the R-server.
 
-<!-- You are now ready to start work on the lab activities. -->
+You are now ready to start work on the lab activities.
 
 ## Lab activities {#sec-4141-w7-lab-activities}
 
-:::{.callout-tip}
+<!-- :::{.callout-tip} -->
 
-Information about the lab activities will be added as soon as possible.
+<!-- Information about the lab activities will be added as soon as possible. -->
 
+<!-- ::: -->
+
+### Lab activity 1: What makes it easy or difficult for people to understand written health information?
+
+We will do our practical lab work to develop your skills in the context of the **Clearly Understood** project.
+
+::: callout-important
+The research question we are focussing on today is:
+
+1. What person attributes predict success in understanding health information?
 :::
-
-<!-- ### Lab activity 1: Refining your research question -- Discuss, agree, swap and check -->
-
-<!-- 1.  **Go and sit in your groups.** Take a handout. You need 1 handout -->
-<!--     for every 2 or 3 people in your group. Write your group's name or -->
-<!--     number in the "Author" box. -->
-
-<!-- 2.  **Agree on a question (\~10 min).** Discuss ideas and agree on one -->
-<!--     draft research question for your group. Write it in Section 1, with -->
-<!--     one line on who or what it's about. Everyone should be able to -->
-<!--     explain why you chose it. -->
-
-<!-- 3.  **Pair up across groups (\~1 min).** Two (or three) of you from each -->
-<!--     group will go and join two (or three) people from another group. -->
-
-<!-- 4.  **Swap (\~1 min).** In your new foursome, swap handouts with the -->
-<!--     other pair, so each pair holds the other group's question. -->
-
-<!-- 5.  **Review (\~5 min).** With your partner, read the other group's -->
-<!--     question and complete Section 2 on their handout: -->
-
-<!--     -   Tick **Yes** or **Unsure** for each check, and add a note where -->
-<!--         you can. -->
-<!--     -   Write **one assumption** you can spot in the question. -->
-<!--     -   Write **one thing you'd need to know** to answer it. -->
-
-<!-- 6.  **Hand back and talk (\~4 min).** Return the handout to the group -->
-<!--     that wrote it. Talk it through in your foursome: -->
-
-<!--     -   What surprised each pair? -->
-<!--     -   How did the reviewers interpret the key terms? -->
-
-<!-- 7.  **Return and feed back (\~7 min).** Go back to your original group. -->
-<!--     Share the feedback with the rest of the group. Use the notes on your -->
-<!--     handout. -->
-
-<!-- 8.  **Revise together (\~8 min).** As a group, rewrite your question -->
-<!--     with **at least one change** for clarity or specificity. Complete -->
-<!--     Section 3 to record what you changed and why. -->
-
-<!-- ### Lab activity 2: Understanding the application of the Chi-square test -->
-
-<!-- #### Question 1: Difference between Pearson's chi-square and Pearson's correlation -->
-
-<!-- How does Pearson's chi-square differ from Pearson's correlation? -->
-
-<!-- #### Question 2: When is Chi-square appropriate? -->
-
-<!-- Chi-square test of independence would be appropriate when testing the -->
-<!-- following questions: -->
-
-<!-- a.  What is the relationship between gender and soft drink preference? -->
-<!--     True or False? -->
-<!-- b.  How do males and females compare in terms of wanting to be a -->
-<!--     psychologist when they leave school? True or False? -->
-
-<!-- #### Question 3: Chi-square formula -->
-
-<!-- Write the chi-square formula below. -->
-
-<!-- #### Question 4: Answers from pre-lab activity 2 -->
-
-<!-- What were your answers to the pre-lab activity 2 questions? Please -->
-<!-- compare them with other students at your table. -->
-
-<!-- a.  Complete the Pearson's Chi-square test by hand using the data above -->
-<!--     and fill in the blanks: -->
-
-<!-- $\chi 2$ ( , *N* = ) = , *p* -->
-
-<!-- b.  Can you reject the null hypothesis? -->
-
-<!-- #### Question 5: Large contingency tables -->
-
-<!-- Why is it recommended to opt for multiple 2 x 2 chi-squares instead of -->
-<!-- chi-squares larger than 2 x 2? -->
-
-<!-- #### Question 6: Simplying a large contingency table -->
-
-<!-- How could you 'modify' the contingency table below for chi-square -->
-<!-- analysis to aid subsequent interpretation of the data/results? -->
-
-<!-- ![](files/week6/122_week14_labAc1_q6.png) -->
-
-### Lab activity 3: Reminders through association
-
-For this lab, we're going to use data from [**Rogers, T. & Milkman, K.
-L. (2016). Reminders through association. *Psychological Science, 27*,
-973-986.**](https://journals.sagepub.com/stoken/default+domain/6XgDSfr6ZHSDs47tx5bu/full)
-You can read the full paper online but the short version is that the
-authors looked at how people remember to follow through with the
-intention of doing something.
-
-Although there are lots of potential reasons (e.g., some people may lack
-the self-control resources), Rogers and Milkman (2016) propose that some
-people fail to follow through simply because they forget about their
-good intentions. If this is the case, the authors argue, then having
-visual reminders to follow through on their intentions may help people
-remember to keep them. For example, a person may choose to put a sticker
-for their gym on their car window, so that every time they get in the
-car they remember to go to the gym.
-
-In Study 1 by Rogers and colleagues, participants took part in an
-unrelated experiment but at the start of the task they were asked to
-return a small stack of paper clips to the reception of the building at
-the end of the study and if they did so the researchers would donate \$1
-to a charity. They were then asked if they intended to do this. Those in
-the reminder-through-association (RTA) condition read "Thank you! To
-remind you to pick up a paper clip, an elephant statuette will be
-sitting on the counter as you collect your payment." This message was
-followed by a picture of the elephant statuette. Those in the control
-condition simply read "Thank you!".
-
-What we want to do is to run a chi-square analysis to determine whether
-those in the reminder-through-association condition were more likely to
-remember to return the paper-clips than those in the control condition.
-
-#### Aims of the activity
-
-We are going to:
-
-1.  Setup the appropriate bits and pieces in RStudio
-2.  Read in the data files
-3.  Do some data wrangling using `filter()`
-4.  Do some more data wrangling using `mutate()` and `recode_values()`
-5.  Extract descriptive statistics
-6.  Visualise the data with a bar chart
-7.  Run the chi-square analysis
-8.  Check the assumptions
-9.  Calculate the effect size
-10. Check the adjusted standardised residuals
-11. Write up the results
 
 ::: {.callout-tip title="Where are the download links?"}
 Links to the files to be downloaded are in the **Pre-lab activities
 section** under Getting ready.
 :::
 
+#### Aims of the activity
+
+We are going to:
+
+1.  Setup the appropriate bits and pieces in RStudio -- using `library()`
+2.  Read in the data file -- using `read_csv()`
+3.  Inspect the data -- using `head()` and `summary()`
+4.  Draw histograms to examine the distributions of variables -- using `ggplot()` and `geom_histogram()`
+5.  Practice editing the appearance of a histogram plot step-by-step
+6.  Create scatterplots to examine the association between some variables -- using `ggplot()` and `geom_point()`
+7.  Edit the appearance of *each* plot step-by-step
+8.  Examine the correlations between the outcome variable and predictor variables
+9.  Examine the relation between outcome mean accuracy (`mean.acc`) and each of the potential predictors: `SHIPLEY`, `HLVA` and `AGE`
+10. Use a model we have fitted to plot model predictions
+
 ::: {.callout-important title="How to use the Quarto document?"}
-Following feedback on the way we presented instructions and guidance
-across the handbook pages and the Quarto document, we've made the
-following change: **All instructions and guidance (including hints and
-code snippets) for lab activities are now presented on the handbook
+**All instructions and guidance (including hints and
+code snippets) for lab activities are presented on this handbook
 page.**
 
 The Quarto document is largely empty, only containing a copy of the
@@ -411,78 +302,37 @@ How to complete the lab activity and use the Quarto script:
     GTA or lecturer in the lab session, via the Moodle Q&A forum, during
     Friday's live online Q&A).
 
-This is also demonstrated in this video
+If you'd like to watch a demonstration of this, have a look at the video at the start of Lab activity 3 of Week 5 ([here](week5.qmd#sec-4141-w5-lab-activities)).
 
-```{=html}
-<div style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%">
-    <iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=b1640d97-8b02-4d34-8368-b4f800c041d7&autoplay=false&offerviewer=true&showtitle=false&showbrand=false&captions=true&interactivity=all" style="border: 1px solid #464646; position: absolute; top: 0; left: 0; width: 100%; height: 100%; box-sizing: border-box;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player" aria-description="4141_howto_labactivities"></iframe>
-</div>
-```
-
-\newline
-
--   [How to complete the lab activities -
-    transcript](files/week5/4141_howto_labactivities_transcript.txt)
 :::
 
-#### Step 1: Setup the appropriate bits and pieces in RStudio
+#### Step 1:  Setup the appropriate bits and pieces in RStudio
 
 Before we can do anything, we need tell R what packages we want to use.
-We use the function `library()` to do that. It is useful to have a
-section at the top of your script where you load all the relevant
-libraries.
 
-> Action: Insert a new code chunk by clicking on 'Code' at the top and
-> selecting 'Insert Chunk'.In the code chunk, write code to load the
-> libraries by using the `library()` function. We need the packages
-> `here`, `tidyverse` and `easystats`. After you've written the code,
-> make sure the run the code chunk (click on the green arrow in the top
-> corner of the code chunk).
-
-::: {.callout-note title="Hint" collapse="true"}
-We need to load several packages (`here`, `tidyverse` and `easystats`)
-using the `library()` function. First, inside the code chunk, write
-`library()` and put `here` inside the brackets. On the next line in the
-code chunk, write `library()` and put `tidyverse` inside the brackets.
-On a third line in the code chunk, write `library()` and put `easystats`
-inside the brackets. Make sure to run the code chunk by clicking on the
-green arrow in the top corner of the code chunk.
-:::
-
-> **Step 1.** Add the code to load the relevant libraries in a new code
-> chunk. We need the following ones: `here`, `tidyverse` and
+> Action: In a new code chunk, add the code to load the relevant libraries.
+> We need the following ones: `here`, `tidyverse` and
 > `easystats`. If you are unsure, you can look at the 'Hint' below for a
-> clue by expanding it. After that, if you are still unsure, you can
-> view the code by expanding the 'Code' section below.
+> clue by expanding it.
 
 ::: {.callout-note title="Hint" collapse="true"}
 Use the `library()`function. Remember to put it inside a 'code chunk' in
-your script. The name of the package goes inside the brackets.
+your script. The name of the package goes inside the brackets. Repeat for each package.
 :::
 
-::: {.callout-note title="Code" collapse="true"}
-The code to do this is below.
+#### Step 2: Read in the data file
 
-```         
-library(here)
-library(tidyverse)
-library(easystats)
-```
-:::
+Now we need to read in the data. The data file we need for this lab activity is called: `study-two-general-participants.csv`.
 
-#### Step 2: Reading in the data file
-
-For this lab activity, you'll need the file named `RTA_study1.csv`.
-
-> Action: Insert a new code chunk by clicking on 'Code' at the top and
-> selecting 'Insert Chunk'. Inside the chunk, use `read_csv()` to read
-> in the data file named `RTA_study1.csv`; tell R where to find the file
+> Action: In a new code chunk use `read_csv()` to read
+> in the data file named `study-two-general-participants.csv`. Remeber to tell R where to find the file
 > and what it is called. Make sure you've run the code chunk. Then,
 > check that you can see the 'object' in the Environment (top right
-> quadrant) for the file you read in. I've called the data-frame
-> `intent_data`. If you can't remember how to do this, look at the Hint
-> below. Give it a go. If you are still stuck, look at the Code below.
-> You may have to adapt the filepath to match your setup.
+> quadrant) for the file you read in.
+
+:::{callout-tip}
+When you code this, you can choose your own file name, but be sure to give the data object you create a distinct name e.g. `study.two.gen`.
+:::
 
 ::: {.callout-note title="Hint" collapse="true"}
 `dataframe <- read_csv(here("filepath to folder", "filename.extension))`
@@ -490,7 +340,7 @@ For this lab activity, you'll need the file named `RTA_study1.csv`.
 Your code should include:
 
 -   dataframe: the name of the object you want to save the data in (such
-    as `intent_data`)
+    as `study.two.gen`)
 -   \<- : assignment arrow
 -   read_csv() : the `read_csv()` function
 -   here(): the `here()` function
@@ -502,546 +352,563 @@ Your code should include:
 
 ::: {.callout-note title="Code" collapse="true"}
 ``` r
-intent_data<- read_csv(here("4141_wk6_lab", "RTA_study1.csv"))
+study.two.gen<- read_csv(here("4141_wk7_lab", "study-two-general-participants.csv"))
 ```
 :::
 
-It is a fairly simple data file that contains four variables for 87
-participants:
+#### Step 3: Inspect the data
 
--   `condition`: this variable indicates which condition participants
-    were in (1 = reminder-through-association condition, 2 = control
-    condition)
--   `intend`: this variable indicates whether participants said they
-    were intending to return the paper-clips (1 = yes, 0 = no)
--   `actualdonate`: this variable indicates whether participants
-    actually ended up returning the paper-clips and therefore donating
-    to charity (1 = yes, 0 = no)
--   `id`: this variable indicates the participant ID number
+It is always a good idea to have a look at the data. You can do this by clicking on the object in the Environment quadrant. This will open the file in the Source quadrant.
 
-**Questions Step 2** The numbers in the first row across the four
-columns refer to the responses from participant 1.
+You can see the columns:
 
-a.  What condition were they in?
-b.  Did they intend to return the paper-clips?
-c.  Did they actually return the paper-clips?
+- `participant_ID` participant code;
+- `mean.acc` average accuracy of response to questions testing understanding of health guidance (varies between 0-1);
+- `mean.self` average self-rated accuracy of understanding of health guidance (varies between 1-9);
+- `study` variable coding for what study the data were collected in
+- `AGE` age in years;
+- `HLVA` health literacy test score (varies between 1-16);
+- `SHIPLEY` vocabulary knowledge test score (varies between 0-40);
+- `FACTOR3` reading strategy survey score (varies between 0-80);
+- `GENDER` gender code;
+- `EDUCATION` education level code;
+- `ETHNICITY` ethnicity (Office National Statistics categories) code.
 
-#### Step 3: Some data wrangling - Use `filter()` to keep relevant data
+You can also use code to get an overview:
 
-We need to do a little bit of wrangling to get our data into the format
-we need: First, we need to remove all the participants who said that
-they did not intend to return the paper-clips (intend = 0) as we are
-only interested in whether people follow through on an intention.
+- The `head()` function will show you the first few rows of the data-frame
+- The `tail()` function will show you the last few rows of the data-frame
+- The `summary()` function will give you an overview of the data-frame. What it gives you depends on the type of variable. For numeric variables, it will give you the minimum, maximum, mean, median and quartiles.
 
-> Action: Insert a new code chunk and use `filter()` to remove all
-> participants who said that they did not intend to return the
-> paper-clips. Can a look below for a reminder on how `filter()` works.
+> Action: Insert a new code chunk and use `head()`, `tail()` and `summary()` to get an overview of the data.
 > Give it a go. If you're stuck, have a look at the Code below.
 
-::: {.callout-tip title="How does `filter()` work?"}
-The `filter()` function allows you to select specific rows from a data
-frame based on one or more conditions.
-
-For example, imagine we have a dataset containing information about
-participants in a psychology study, including their age and gender. We
-might want to select only participants who are over 18 years old.
-
-We can do this using:
-
-``` r
-filter(data, age > 18)
-```
-
-Here: - `data` is the name of our data frame. - `age > 18` is the
-condition we want to apply. - note these two bits of information are
-separated within the function by a comma. - only rows where the
-condition is `TRUE` are kept.
-
-We can also apply multiple conditions. For example, to select
-participants who are over 18 **and** identify as a woman:
-
-``` r
-filter(data, age > 18, gender == "Woman")
-```
-
-When we provide multiple conditions separated by commas, `filter()`
-keeps only rows that satisfy **all** of the conditions.
-
-Some useful operators for filtering data include:
-
-| Operator | Meaning                  | Example             |
-|----------|--------------------------|---------------------|
-| `==`     | Equal to                 | `gender == "Woman"` |
-| `!=`     | Not equal to             | `gender != "Woman"` |
-| `>`      | Greater than             | `age > 18`          |
-| `<`      | Less than                | `age < 30`          |
-| `>=`     | Greater than or equal to | `age >= 18`         |
-| `<=`     | Less than or equal to    | `age <= 30`         |
-
-We can also use `&` (AND) and `|` (OR) to combine conditions.
-
-For example:
-
-``` r
-filter(data, age >= 18 & age <= 30)
-```
-
-This selects participants aged between 18 and 30 (inclusive).
-:::
-
 ::: {.callout-note title="Code" collapse="true"}
 ``` r
-intent_data <- filter(intent_data, intend == 1)
+head(study.two.gen)
+tail(study.two.gen)
+summary(study.two.gen)
 ```
 :::
 
-**Question Step 3**
+**Questions Step 3**
 
-a.  How many participants were removed because they didn't intend to
-    return the paper-clips?
+a. Data from how many participants does the data file contain?
+b. What is the maximum age that was recorded for participants in this sample?
+c. On average, are participants in this sample more accurate when tested on their understanding, or when self-rating their understanding of written health information?
 
-#### Step 4: Some more data wrangling - Use `recode_values()` to have text labels
+#### Step 4: Draw histograms to examine the distributions of variables
 
-To make the output easier to read, we’re going to recode the values for
-our key variables (`condition` and `actualdonate`) to have text labels
-rather than numerical values.
+Lets look at the distributions of `mean.acc`, `mean.self` and `AGE`.
 
-For this we can use the functions `mutate()` and `recode_values()`.
+> Action: Insert a new code chunk and use `ggplot()` with `geom_histogram()` to look at the distributions of `mean.acc`, `mean.self` and `age.
 
-> Action: Insert a new code chunk and use `mutate()` and
-> `recode_values()` to change the numerical values for `condition` and
-> `actualdonate` to text labels. The code to do this is below. You can
-> copy it, but have a good look to make sure you understand what each
-> bit does.
+:::{.callout-tip title="Hint" collapse="true"}
+Use `ggplot()` with `geom_histogram()`.
+
+When we create a plot, we take things step-by-step.
 
 ``` r
-intent_data = mutate(
-  intent_data,
-  condition = recode_values(condition, 1 ~ "rta", 2 ~ "control"),
-  actualdonate = recode_values(actualdonate, 1 ~ "donated", 0 ~ "no_donation"))
+ggplot(data = study.two.gen, aes(x = mean.acc)) + 
+  geom_histogram()
 ```
 
-::: callout-tip
-Have a look at the recipe for `mutate()` for more information on this
-function [here](https://posit.cloud/learn/recipes/transform/TransformF).
+These are the steps, set out one at a time:
+
+1. `ggplot(...)` you tell R you want to make a plot using the `ggplot()` function
+2. `ggplot(data = study.two.gen ...)` you tell R you want to make a plot with the
+`study.two.gen` data
+3. `ggplot(..., aes(x = mean.acc))` you tell R that you want to make a plot with 
+the variable `mean.acc` -- here, you specify the aesthetic mapping, `x = mean.acc`
+4. `ggplot(...) + geom_histogram()` you tell R you want to plot values of `mean.acc` 
+as a histogram
+
+Notice that the code works the same whether we have the different bits of code on the same
+line or in a series of lines.
 :::
 
-#### Step 5: Descriptive statistics
+**Questions Step 4**
 
-Next you need to calculate descriptive statistics. For frequency data
-these are simply counts so we can use the function `count()` to do this.
-We want to know how many participants are in each group (rta - donated,
-rta - didn’t donate, control - donated, control - didn’t donate).
+What do you conclude from the histograms in terms of distribution? Do the variables follow a normal distribution or are they skewed? 
 
-> Action: Insert a new code chunk and use `count()` to check how many
-> participants are in each group (rta - donated, rta - didn’t donate,
-> control - donated, control - didn’t donate). You may also want to
-> calculate the percentages of participants in each condition. The code
-> to do this is below. You can copy it, but have a good look to make
-> sure you understand what each bit does.
+a. For the variable `mean.acc`?
+b. For the variable `mean.self`?
+c. For the variable `AGE`?
 
-``` r
-intent_counts <- mutate(
-  count(intent_data, condition, actualdonate),
-  percent = 100 * n / sum(n),
-  .by = condition)
-intent_counts
-```
+#### Step 5: Practice editing the appearance of a histogram plot step-by-step
 
-**Questions Step 5**
+>**Action 0.**: In a new code chunk, use `ggplot()` with `geom_histogram()` to look at the distribution of `SHIPLEY`.
 
-a.  How many participants in the control condition didn’t donate?
-b.  How many participants in the control condition donated?
-c.  How many participants in the RTA condition didn’t donate?
-d.  How many participants in the rta condition donated?
+We are going to revise editing:
 
-#### Step 6: Data visualisation using `geom_bar()`
+1. The appearance of the bars using `binwidth`.
+2. The colour of the background using `theme_bw()`.
+3. The appearance of the labels using `labs().
+4. Setting the x-axis limits to reflect the full range of possible scores 
+on the x-axis variable.
+5. Adding annotation -- here, a vertical line -- indicating the sample average 
+for a variable.
 
-We want to create a simple bar plot of our count data. We'll use
-`ggplot()` for this in combination with the `geom_bar()` function.
+>**Action 1.** Edit the appearance of the bars by specifying a `binwidth` value.
 
-> Action: Insert a new code chunk and use the code template below to
-> create a bar chart. Make sure to fill in the relevant bits.
-
-``` r
-ggplot(data = , aes(x = , fill = )) +
-  geom_bar(position = "dodge")
-```
-
-::: {.callout-note title="Code" collapse="true"}
-The code to do this is below:
-
-```         
-ggplot(data = intent_data, aes(x = condition, fill = actualdonate)) +
-  geom_bar(position = "dodge")
+:::{.callout-tip title="Code" collapse="true"}
+```r
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + 
+  geom_histogram(binwidth = 2)
 ```
 :::
 
-**Questions Step 6**
+>**Action 2.** Then add an edit to the appearance of the background using `theme_bw()`.
 
-a.  What does `position = "dodge"` do? Remove it and rerun the code to
-    find out.
-b.  Describe the pattern in the data in your own words.
-
-As you can see, the plot makes it much easier to get your head around
-what the data mean: Participants in the RTA condition appear to have
-been more likely to remember to donate than those in the control
-condition.
-
-The `ggplot2()` package allows you to customise all aspects of your
-plots, so let’s tidy ours up a little bit. We’re going to do the
-following:
-
--   Edit the labels on the x-axis, y-axis and fill
--   Change the colours of the bars by using `scale_fill_manual()` and
-    specifying the colours we want in the values argument
--   Change the theme of the plot to change how it looks
-
-> Action: Copy the code below to a new code chunk. In your Quarto
-> document, write a comment to describe what each line of code does.
-
-``` r
-ggplot(data = intent_data, aes(x = condition, fill = actualdonate)) +
-  geom_bar(position = "dodge") +
-  scale_x_discrete(name = "Condition", labels = c("Control", "RTA")) +
-  scale_y_continuous(name = "Count") +
-  scale_fill_manual(name = "Behaviour", labels = c("Donated", "Did not donate"), values = c("blue", "grey"))+
-  theme_classic()
-```
-
-There are a few things to note about the code we just added on:
-
--   If you use simple colour names then you are restricted in the
-    options you can choose, however, if you want more flexibility you
-    can use hexadecimal colour codes, see
-    [**here**](http://www.cookbook-r.com/Graphs/Colors_(ggplot2)/).
--   There are multiple themes that you can apply. Have a look at the
-    `ggplot2()` cheatsheet for an overview
-    ([**here**](https://rstudio.github.io/cheatsheets/html/data-visualization.html?_gl=1*7olq9v*_ga*MjEyNjQ2Nzk4MC4xNzA1NTg2MzI1*_ga_2C0WZ1JHG0*MTcwNjM1OTgzMi4xNC4xLjE3MDYzNjA1MjUuMC4wLjA.#themes)).
-    Try out a few and see which one you prefer.
-
-#### Step 7: Run the chi-square analysis
-
-Now let's run that chi-square analysis to see whether our impression
-from the plot holds up and there is a significant association between
-the grouping variables.
-
-> Action: Copy the code snippet below to a new code chunk.
-
-``` r
-results <- chisq.test(x = intent_data$condition,
-y = intent_data$actualdonate,
-correct = FALSE)
-results
-```
-
-::: {.callout-note title="How does `chisq.test()` work?"}
-```         
-results <- chisq.test(x = intent_recode$condition,        # the first grouping variable
-                      y = intent_recode$actualdonate,     # the second grouping variable
-                      correct = FALSE)                    # whether we want to apply the continuity correction (use if any of the expected cell frequencies < 10 in 2 x 2 table)
-results
+:::{.callout-tip title="Code" collapse="true"}
+```r
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + 
+  geom_histogram(binwidth = 2) +
+  theme_bw()
 ```
 :::
 
-**Question Step 7:** What do you conclude from the output?
+>**Action 3.** Then add an edit to the appearance of the labels using `labs()`.
 
-#### Step 8: Check the assumptions
-
-The assumptions for chi-square are as follows:
-
-1)  The data in the cells should be frequencies, or counts of cases
-    rather than percentages.
-2)  The levels (or categories) of the variables are mutually exclusive.
-    That is, a particular participant fits into one and only one group
-    of each of the variables.
-3)  Each participant may contribute data to one and only one cell. If,
-    for example, the same participants are tested over time such that
-    the comparisons are of the same subjects at Time 1, Time 2, Time 3,
-    etc., then Chi-square may not be used.
-4)  The study groups must be independent. This means that a different
-    test must be used if the two groups are related. For example, a
-    different test must be used if the researcher’s data consists of
-    paired samples, such as in studies in which a parent is paired with
-    his or her child.
-5)  There are 2 variables, and both are measured as categories, usually
-    at the nominal level. While Chi-square has no rule about limiting
-    the number of cells (by limiting the number of categories for each
-    variable), a very large number of cells (over 20) can make it
-    difficult to meet assumption #6 below, and to interpret the meaning
-    of the results.
-6)  The expected cell frequencies should be greater than 5.
-
-Assumptions 1) to 5) should be evaluated by reviewing the design of the
-study. The only assumption that we need to check with R is whether all
-expected frequencies are greater than 5. This information is in the
-object in which you stored the results of the Chi-square test, under
-`expected`.
-
-> Action: Copy the code snippet below to a new code chunk.
-
-``` r
-results$expected
+:::{.callout-tip title="Code" collapse="true"}
+```r
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + 
+  geom_histogram(binwidth = 2) +
+  theme_bw() +
+  labs(x = "Vocabulary (SHIPLEY)", y = "Frequency count")
 ```
-
-**Question Step 8:** What do you conclude from the output?
-
-#### Step 9: Calculate the effect size
-
-The last step before writing up the results is to calculate an effect
-size so that we have a standardised measure of how large the association
-between our grouping variables is. The effect size measure for
-chi-square is Cramer’s V. To calculate Cramer’s V we’re going to use the
-function `cramers_v()` from the `easystats` package. The code mirrors
-the code used for the Chi-square test itself.
-
-> Action: Copy the code snippet below to a new code chunk.
-
-``` r
-effect_size <- cramers_v(x = intent_data$condition,     
-                         y = intent_data$actualdonate) 
-effect_size
-```
-
-We can square the effect size (or multiple it by itself) to see how much
-variance in one variable is accounted for by the other variable. Use the
-code snippet below to square the effect size.
-
-``` r
-percentageAccountedFor <- effect_size * effect_size *100
-percentageAccountedFor
-```
-
-**Question Step 9:** How large is the effect and how much variance is
-accounted for?
-
-#### Step 10: Adjusted standardised residuals
-
-To help interpret the relationship, it is useful to look at the adjusted
-standardised residuals. These are z-scores showing how many standard
-deviations each observed count is above or below the count expected if
-the variables were unrelated, so they indicate which cells differ most
-from expectation. Because they approximately follow a standard normal
-distribution, values beyond ±1.96 indicate a difference at *p* \< .05
-(two-tailed), beyond ±2.58 at *p* \< .01, and beyond ±3.29 at *p* \<
-.001.
-
-> Action: Copy the code snippet below to a new code chunk.
-
-``` r
-results$residuals   # check the adjusted standardised residuals
-```
-
-**Question Step 10:** What do you conclude from the output?
-
-#### Step 11: Write up the results following APA guidelines.
-
-Using the guidance below, have a go at writing up the results for the
-Chi-square analysis following APA guidelines.
-
-::: {.callout-tip collapse="true"}
-The [**Purdue writing lab
-website**](https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_numbers_statistics.html)
-is helpful for guidance on punctuating statistics.
 :::
 
-## Answers {#sec-4141-w6-answers}
+>**Action 4.** Now add an edit by setting the x-axis limits using `x.lim()`.
+
+:::{.callout-tip title="Code" collapse="true"}
+
+```r
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + 
+  geom_histogram(binwidth = 2) +
+  theme_bw() +
+  labs(x = "Vocabulary (SHIPLEY)", y = "Frequency count") +
+  xlim(0,40)
+```
+:::
+
+>**Action 5.** Then add an edit to draw a vertical line to show the mean value of 
+the variable you are plotting..
+
+:::{.callout-tip title="Code" collapse="true"}
+
+```r
+ggplot(data = study.two.gen, aes(x = SHIPLEY)) + 
+  geom_histogram(binwidth = 2) +
+  theme_bw() +
+  labs(x = "Vocabulary (SHIPLEY)", y = "frequency count") +
+  xlim(0,40) +
+  geom_vline(xintercept = mean(study.two.gen$SHIPLEY), colour = "red", size = 1.5)
+```
+:::
+
+#### Step 6: Create scatterplots to examine the association between some variables 
+
+Now we are ready to build a scatterplot to visualise the relationship between some variables. Our research questions are:
+
+1. What person attributes predict success in understanding health information?
+2. Can people accurately evaluate whether they correctly understand written health information?
+
+Create three scatterplots to visualise the relationship between (1.) the outcome `mean.acc` and (2.) each of three numeric potential predictor variables `SHIPLEY`, `HLVA` and `AGE`.
+
+> Action: Insert a new code chunk and use `ggplot()` with `geom_point()`) to create a scatterplot. In both research questions, `mean.acc` is the outcome variable, so lets put that on the y-axis. Make several plots, with a different variable on the y-axis each time. If you need more guidance on how to do this, look at the Hint below.
+
+:::{.callout-tip title="Hint" collapse="true"}
+- We are working with `geom_point()` and you need x and y aesthetic mappings.
+- The outcome variable `mean.acc` has to be mapped to the y-axis using `...y = ...`
+
+This is how the target scatterplot code works.
+
+```r
+ggplot(data = data.set, aes(x = predictor.variable, y = outcome.variable)) +
+  geom_point()
+```
+
+The plot code moves through the following steps:
+
+1. `ggplot(...)` make a plot;
+2. `ggplot(data = data.set, ...)` working with the `data.set`, using the name you gave the dataset you are working with;
+3. `ggplot(...aes(x = predictor.variable, y = outcome.variable))` using two aesthetic mappings
+
+- `x = predictor.variable` maps values of the `predictor.variable` (whatever it is called) to x-axis (horizontal, left to right) positions;
+- `y = outcome.variable` maps values of the `outcome.variable`(whatever it is called) to y-axis (vertical, bottom to top) positions;
+
+4. `geom_point()` show the mappings as points.
+:::
+
+#### Step 7: Edit the appearance of *each* plot step-by-step
+
+::: {.callout-tip}
+You may want to use the same plot appearance choices for all plots. Producing plots with a consistent appearance will make it easier for your audience to read your plots.
+:::
+
+::: {.callout-tip}
+You can find more information about all the different parts of `ggplot()` in the [`ggplot()` cheatsheet](https://rstudio.github.io/cheatsheets/html/data-visualization.html)
+:::
+
+>**Action 1.** First, edit the appearance of the points using `alpha`, `size`, `shape`, and `colour`.
+
+:::{.callout-tip title="Code" collapse="true"}
+Check out the example code for each of the scatterplots.
+
+- Notice what changes and what stays the same.
+
+```r
+ggplot(data = study.two.gen, aes(x = SHIPLEY, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')
+
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')
+
+ggplot(data = study.two.gen, aes(x = AGE, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')
+```
+:::
+
+>**Action 2.** Then edit the colour of the background using `theme_bw()`.
+
+:::{.callout-tip title="Code" collapse="true"}
+
+Check out the example code for each of the scatterplots.
+
+- Notice what changes and what stays the same.
+
+```r
+ggplot(data = study.two.gen, aes(x = SHIPLEY, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw()
+
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw()
+
+ggplot(data = study.two.gen, aes(x = AGE, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw()
+```
+:::
+
+>**Action 3.** Then edit the appearance of the labels using `labs()`.
+
+:::{.callout-tip title="Code" collapse="true"}
+Check out the example code for each of the scatterplots.
+
+- Notice what changes and what stays the same.
+
+```r
+ggplot(data = study.two.gen, aes(x = SHIPLEY, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw() +
+  labs(x = "Vocabulary (SHIPLEY)", y = "Mean accuracy")
+
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw() +
+  labs(x = "Health Literacy Test Score", y = "Mean accuracy")
+
+ggplot(data = study.two.gen, aes(x = AGE, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw() +
+  labs(x = "Age (Years)", y = "Mean accuracy")
+```
+:::
+
+>**Action 4.** Then set the x-axis and y-axis limits to the minimum-maximum ranges 
+of the variables you are plotting.
+
+You can set axis limits by adding the `xlim()` and `ylim()` function calls to
+the chunk of code you have written to produce each plot.
+
+- The task, here, is to work out *what* numeric values you should enter inside
+`xlim()` or `ylim()`.
+- The code works if you enter values like this: `xlim(minimum, maximum)` and `ylim(minimum, maximum)`.
+- Where `minimum, maximum` are the numbers representing the smallest possible (minimum) and largest possible (maximum) value for each variable.
+
+:::{.callout-tip title="Hint" collapse="true"}
+
+- For these plots the y-axis limits will be the same because the outcome stays the same.
+- But the x-axis limits will be different for each different predictor variable.
+- Check out the information in the `summary()` you got of the dataset.
+- The minimum values for the variables will often (not always) be 0 e.g. if you are looking at data from ability tests and people who do the tests can get 0 (because none of their responses are correct). However, if you are looking at e.g. ratings data then the minimim value could be 1 (e.g. because people are asked to rate something on a scale from 1-9).
+- The maximum values for the variables is not necessarily the largest value recorded for that variable in the sample data-set you are working with (e.g., because nobody in your sample got all test questions correct). Thus, you need to use information about measurement design as summarised in Step 3.
+:::
+
+:::{.callout-tip title="Code" collapse="true"}
+Check out the example code for each of the scatterplots.
+
+- Notice what changes and what stays the same.
+
+```r
+ggplot(data = study.two.gen, aes(x = SHIPLEY, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw() +
+  labs(x = "Vocabulary (SHIPLEY)", y = "Mean accuracy") +
+  xlim(0, 40) + ylim(0, 1)
+
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw() +
+  labs(x = "Health Literacy Test Score", y = "Mean accuracy") +
+  xlim(0, 16) + ylim(0, 1)
+
+ggplot(data = study.two.gen, aes(x = AGE, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  theme_bw() +
+  labs(x = "Age (Years)", y = "Mean accuracy") +
+  xlim(0, 80) + ylim(0, 1)
+```
+:::
+
+#### Step 8: Examine the correlations between the outcome variable and predictor variables
+
+One of our research questions is:
+
+1. What person attributes predict success in understanding?
+
+> Action: Examine the correlations between the outcome variable and predictor variables by running three separate correlations: 
+1. between mean accuracy and `SHIPLEY`;
+2. between mean accuracy and `HLVA`; 
+3. between mean accuracy and `AGE`.
+Make sure to use 'Bonferroni' to adjust for conducting multiple correlations.
+
+::: {.callout-note title="Hint" icon="false" collapse="true"}
+Use the `correlation`() function we used in earlier week. You need to specify the following information inside the `correlation`() function:
+
+- data: data = `your.data`
+- variables: select = c("variable1", "variable2")
+- method = "pearson" or "spearman"
+- p_adjust = "none" or "Bonferroni"
+:::
+
+:::{.callout-tip title="Code" collapse="true"}
+
+```r
+correlation(study.two.gen,
+            select = c(SHIPLEY, mean.acc),
+            method = "pearson",
+            p_adjust = "bonferroni")
+
+correlation(study.two.gen,
+            select = c(HLVA, mean.acc),
+            method = "pearson",
+            p_adjust = "bonferroni")
+
+correlation(study.two.gen,
+            select = c(AGE, mean.acc),
+            method = "pearson",
+            p_adjust = "bonferroni")
+```
+:::
+
+**Questions Step 8**
+Now use the results from the correlations to answer the following questions:
+
+a. What is `r`, the coefficient for the correlation between `mean.acc` and `SHIPLEY`?
+b. Is the correlation between `mean.acc` and `HLVA`  significant?
+c.  What are the values for t and p for the significance test for the correlation between `mean.acc` and `AGE`?
+d. For which pair of outcome-predictor variables is the correlation the largest?
+e. What is the sign or direction of each of the correlations?
+
+#### Step 9: Examine the relation between outcome mean accuracy (`mean.acc`) and each of the potential predictors: `SHIPLEY`, `HLVA` and `AGE` using the linear model
+
+::: callout-important
+The research question we are focussing on today is:
+
+1. What person attributes predict success in understanding health information?
+:::
+
+> Action: In a new code chunk, write code to examine the relation between outcome mean accuracy (`mean.acc`) and each of the predictors: `SHIPLEY`, `HLVA` and `AGE` using the `lm()` function. Note that you need to run three separate `lm()` analyses:
+1. with mean accuracy as the outcome and `SHIPLEY` as the predictor;
+2. with mean accuracy as the outcome and `HLVA` as the predictor; 
+3. with mean accuracy as the outcome and `AGE` as the predictor.
+Use the information in the 'Hint' to help you. Try to write the code yourself. Compare the code you've written to the code snippet below.
+
+:::{.callout-tip title="How does the `lm()` function work?}
+You need to use `lm()` to do the analyses.
+
+1. Be careful to identify the outcome and predictor variables correctly.
+2. Remember that analysis code is arranged like this:
+
+```r
+lm(outcome.variable ~ predictor.variable, data = data.set)
+```
+
+With:
+
+- `lm()` asking R to do the linear model analysis;
+- `outcome.variable ~ ...` specified on the *left* of the `~`;
+- the `predictor.variable ~ ...` specified on the *right* of the `~`;
+- and `data.set` identifying to R what dataset you are working with.
+
+Notice that R has a general formula syntax: 
+
+`outcome ~ predictor *or* y ~ x`
+
+- and uses the same format across a number of different functions;
+- each time, the left of the tilde symbol `~` is some output or outcome;
+- and the right of the tilde `~` is some input or predictor or set of predictors.
+:::
+
+
+
+:::{.callout-tip title="Code" collapse="true"}
+Check out the example code for each of the models.
+
+```r
+model.1 <- lm(mean.acc ~ SHIPLEY, data = study.two.gen)
+summary(model.1)
+
+model.2 <- lm(mean.acc ~ HLVA, data = study.two.gen)
+summary(model.2)
+
+model.3 <- lm(mean.acc ~ AGE, data = study.two.gen)
+summary(model.3)
+```
+:::
+
+**Questions Step 8**
+
+a. What is *r*, the coefficient for the correlation between `mean.acc` and `SHIPLEY`?
+b. Is the correlation between `mean.acc` and `HLVA`  significant?
+c.  What are the values for t and p for the significance test for the correlation between `mean.acc` and `AGE`?
+d. For which pair of outcome-predictor variables is the correlation the largest?
+e. What is the sign or direction of each of the correlations?
+
+
+#### Step 10: Use a model we have fitted to plot model predictions
+
+We can use the model we have just fitted to plot the model predictions. We are going to draw a scatterplot and add a line. The line will show the model predictions, given the model intercept and effect 
+coefficient estimates.
+
+:::{.callout-tip title="Hint" collapse="true"}
+You can see reference information here:  
+
+<https://ggplot2.tidyverse.org/reference/geom_abline.html>
+:::
+
+> Action 1: In a new code chunk, **first fit a model** and get the summary: model the relationship between `mean.acc` and `HLVA`. Make a note of the following information from the model summary so you can use it next: the coefficient estimate for the intercept and the coefficient estimate for the slope of `HLVA`.
+
+:::{.callout-tip title="Hint" collapse="true"}
+Use the `lm()` function, like you did in Step 9.
+:::
+
+:::{.callout-tip title="Code" collapse="true"}
+```r
+model <- lm(mean.acc ~ HLVA, data = study.two.gen)
+summary(model)
+```
+:::
+
+> Action 2: **Then, draw a prediction plot**, using the `geom_point()` to draw a scatterplot and using the `geom_abline()` function to draw the prediction line representing the association between this outcome and predictor. Check first if you can write the code you need to produce the prediction plot. Then have a look at the code example: compare it to the code you wrote.
+
+:::{.callout-tip title="Code" collapse="true"}
+```r
+ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
+  geom_point(alpha = 0.5, size = 2, colour = "blue", shape = 'square')   +
+  geom_abline(intercept = 0.522016, slope = 0.026207, 
+              colour = "red", linewidth = 1.5) +
+  theme_bw() +
+  labs(x = "HLVA", y = "mean accuracy") +
+  xlim(0, 15) + ylim(0, 1)
+```
+:::
+
+### Lab activity 2: Building the questionnaire study on Gorilla
+
+:::{.callout-tip}
+
+Information about this lab activity will be added as soon as possible.
+
+:::
+
+## Answers {#sec-4141-w7-answers}
 
 ::: callout-tip
 Answers to the questions in lab activities will be shared after the
 final lab session of the week has concluded (Thursday afternoon)
 :::
 
-<!-- ### Lab activity 2 -->
+<!-- ### Lab activity 1:  -->
 
-<!-- #### Question 1:  How does Pearson's Chi-square differ from Pearson's correlation? -->
+<!-- **Questions Step 3** -->
 
-<!-- ::: {.callout-note icon=false title="Question 1: Answer" collapse="true"} -->
+<!-- a. Data from how many participants does the data file contain? -->
+<!-- b. What is the maximum age that was recorded for participants in this sample? -->
+<!-- c. On average, how accurate are participants when tested on their understanding of written health information? -->
 
-<!-- Pearson's Chi-square assesses whether there is a relationship between categorical (or nominal) variables. Pearson's correlation assesses whether there is a relationship between continuous (or interval/ratio) variables. -->
+<!-- :::{.callout-note icon=false title="Questions Step 3: Answer" collapse="true"} -->
 
-<!-- ::: -->
-
-<!-- #### Question 2:  Chi-square test of independence would be appropriate when testing the following questions: -->
-
-<!-- a.  What is the relationship between gender and soft drink preference? -->
-
-<!-- ::: {.callout-note icon=false title="Question 2a: Answer" collapse="true"} -->
-
-<!-- True -->
+<!-- a. The data-frame has 172 rows, the variable `participant_ID` also is 172 items long. Both of these pieces of information suggest that there are 172 participants in the sample. -->
+<!-- b. 76 -->
+<!-- c. The mean for mean.acc (measured understanding) is .7679. -->
 
 <!-- ::: -->
 
-<!-- b.  How do males and females compare in terms of wanting to be a psychologist when they leave school? -->
+<!-- **Questions Step 4** -->
 
-<!-- ::: {.callout-note icon=false title="Question 2b: Answer" collapse="true"} -->
+<!-- What do you conclude from the histograms in terms of distribution? Do the variables follow a normal distribution or are they skewed?  -->
 
-<!-- True -->
+<!-- a. For the variable `mean.acc`? -->
+<!-- b. For the variable `mean.self`? -->
+<!-- c. For the variable `AGE`? -->
 
-<!-- ::: -->
+<!-- :::{.callout-note icon=false title="Questions Step 4: Answer" collapse="true"} -->
 
-<!-- #### Question 3:  Write the chi-square formula below. -->
+<!-- a. The variable `mean.acc` looks somewhat, but not massively, left-skewed (this is also referred to as negative skew). The long tail stretches out to the left. Most values cluster at the high end, with a few unusually low values dragging the tail out. The mean gets pulled down, so it sits to the left of the median (mean < median). -->
 
-<!-- ::: {.callout-note icon=false title="Question 3: Answer" collapse="true"} -->
+<!-- b. The distribution of `mean.self` is similarly left-skewed to that of `mean.acc`. -->
 
-<!-- ![](files/week6/122_week14_chiSquareFormula.png) -->
+<!-- c. The variable `AGE` shows substantial right-skew. The long tail stretches out to the right. Most values cluster at the low end (with most participants being at the younger end), with a few unusually high values pulling the tail out. The mean gets dragged up, so it sits to the right of the median (mean > median). -->
 
-<!-- ::: -->
-
-<!-- #### Question 4:  What were your answers to the pre-lab activity 1 questions? Please compare them with other students at your table. Complete the Pearson's chi-square test by hand using the data above and fill in the blanks: -->
-
-<!-- ::: {.callout-note icon=false title="Question 4: Answer" collapse="true"} -->
-
-<!-- ![](files/week6/chisquare_dataLabAct1_answer.png) -->
-
-<!-- - First determine expected frequencies: **Smoke/drink: (70 x 65) / 110 = 41.36** **Smoke/don't drink (70 x 45) / 110 = 28.63** **Don't smoke/drink (40 x 65) / 110 = 23.63** **Don't smoke/don't drink (40 x 45) / 110 = 16.36** -->
-
-<!-- - Then calculate chi-square:** **Smoke/drink: (50-41.36)2 / 41.36 = 1.80** **Smoke/don't drink: (20-28.63)2 / 28.63 = 2.60** **Don't smoke/drink: (15-23.63)2 / 23.63 = 3.15** **Don't smoke/don't drink: (25-16.36)2 / 16.36 = 4.56** **1.80+2.60+3.15+4.56 = 12.11** -->
-
-<!-- $\chi 2$ (1, *N* = 110) = 12.11, *p* \< .001 -->
-
-<!-- Can you reject the null hypothesis? **Yes** -->
+<!-- A quick way to remember: The skew is named for the direction of the tail, not where the bulk of the data sits. The “hump” goes the opposite way to the label. -->
 
 <!-- ::: -->
 
-<!-- #### Question 5:  Why is it recommended to opt for multiple 2 x 2 chi-squares instead of chi-squares larger than 2 x 2? -->
+<!-- **Questions Step 8** -->
 
-<!-- ::: {.callout-note icon=false title="Question 5: Answer" collapse="true"} -->
+<!-- a. What is *r*, the coefficient for the correlation between `mean.acc` and `SHIPLEY`? -->
+<!-- b. Is the correlation between `mean.acc` and `HLVA`  significant? -->
+<!-- c.  What are the values for t and p for the significance test for the correlation between `mean.acc` and `AGE`? -->
+<!-- d. For which pair of outcome-predictor variables is the correlation the largest? -->
+<!-- e. What is the sign or direction of each of the correlations? -->
 
-<!-- It is easier to interpret and such a design requires a smaller sample size. -->
+<!-- :::{.callout-note icon=false title="Questions Step 8: Answers" collapse="true"} -->
 
-<!-- ::: -->
+<!-- a. *r* = 0.47 -->
 
-<!-- #### Question 6:  How could you 'modify' the contingency table below for chi-square analysis to aid subsequent interpretation of the data/results? -->
+<!-- b. Yes *r* is significant, because the value is p < .05. -->
 
-<!-- ::: {.callout-note icon=false title="Question 6: Answer" collapse="true"} -->
+<!-- c.  *t* = 0.30, *p* = 0.764 -->
 
-<!-- ![](files/week6/122_week14_labAc1_q6.png) -->
+<!-- d. The correlation is the largest between `mean.acc` and `HLVA`. -->
 
-<!-- By combining 'interested' and 'somewhat interested' or by partitioning (doing multiple 2 x 2 chi-squares, while using Bonferroni correction to account for running multiple tests. -->
-
-<!-- ::: -->
-
-<!-- ### Lab activity 3 -->
-
-<!-- #### Questions Step 2 -->
-
-<!-- The numbers in the first row across the four columns refer to the responses from participant 1. -->
-
-<!-- a. What condition were they in? -->
-
-<!-- b. Did they intend to return the paper-clips? -->
-
-<!-- c. Did they actually return the paper-clips? -->
-
-<!-- :::{.callout-note icon=false title="Questions Step 2: Answer" collapse="true"} -->
-
-<!-- condition = 1, intend = 1, actualdonate = 1 and id = 1 shows us that participant 1 was in the 'reminder-through-assocation' condition, reported that they intended to donate and also actually donated. -->
+<!-- e. All the correlations are positive. -->
 
 <!-- ::: -->
 
-<!-- #### Question Step 3 -->
+<!-- **Questions Step 9** -->
 
-<!-- a. How many participants were removed because they didn't intend to return the paper-clips? -->
-
-<!-- :::{.callout-note icon=false title="Question Step 3: Answer" collapse="true"} -->
-
-<!-- 10 participants. The table 'intent_data' contains 87 observations, after we have applied the `filter()` function to include only those participants who did intend to return the paper-clips, the table contains 77 observations. -->
-
-<!-- ::: -->
-
-<!-- #### Questions Step 5 -->
-
-<!-- a. How many participants in the control condition didn’t donate? -->
-
-<!-- b. How many participants in the control condition donated? -->
-
-<!-- c. How many participants in the RTA condition didn’t donate? -->
-
-<!-- d. How many participants in the rta condition donated? -->
-
-<!-- :::{.callout-note icon=false title="Questions Step 5: Answers" collapse="true"} -->
-
-<!-- a. 22 -->
-
-<!-- b. 16 -->
-
-<!-- c. 10 -->
-
-<!-- d. 29 -->
-
-<!-- ::: -->
-
-<!-- #### Questions Step 6 -->
-
-<!-- a. What does `position = "dodge"` do? Remove it and rerun the code to find out. -->
-
-<!-- b. Describe the pattern in the data in your own words. -->
-
-<!-- :::{.callout-note icon=false title="Questions Step 6: Answers" collapse="true"} -->
-
-<!-- a. "dodge" places the bars next to each other, rather than on top of each other. -->
-
-<!-- b. The number of participants in the reminders-through-association condition who donated seems to be substantially higher than participants in that condition who did not donate. Numbers of participants in the control condition who did and did not donate is more similar. -->
-
-<!-- ::: -->
-
-<!-- #### Question Step 7 -->
-
-<!-- What do you conclude from the output? -->
-
-<!-- :::{.callout-note icon=false title="Question Step 7: Answer" collapse="true"} -->
-
-<!-- As *p* is smaller than .005, you can conclude that there is a significant association between the grouping variables. -->
-
-<!-- ::: -->
-
-<!-- #### Question Step 8 -->
-
-<!-- What do you conclude from the output? -->
-
-<!-- :::{.callout-note icon=false title="Question Step 8: Answer" collapse="true"} -->
-
-<!-- The expected frequencies in all cells are greater than 5. The data therefore meet the assumption. -->
-
-<!-- ::: -->
-
-<!-- #### Questions Step 9 -->
-
-<!-- How large is the effect and how much variance is accounted for? -->
+<!-- a. What is the estimate for the coefficient of the effect of the predictor `HLVA` on `mean.acc`? -->
+<!-- b. Is the effect significant? -->
+<!-- c. What are the values for t and p for the significance test for the coefficient? -->
+<!-- d. How would you describe in words the shape or direction of the association between `HLVA` and `mean.acc`? -->
+<!-- e. How how would you describe the relations apparent between the predictor and outcome in all three models? -->
 
 <!-- :::{.callout-note icon=false title="Questions Step 9: Answers" collapse="true"} -->
 
-<!-- The effect size (Cramer's V) = 0.33 and the percentage variance accounted for = 11%. -->
+<!-- a. 0.026207 -->
 
-<!-- ::: -->
+<!-- b. It is significant, *p* < .05 -->
 
-<!-- #### Question Step 10 -->
+<!-- c. *t* = 7.529, *p* = 2.87e-12 -->
 
-<!-- What do you conclude from the output? -->
+<!-- d. The slope coefficient -- and a scatterplot (draw it) -- suggest that as HLVA scores increase so also do mean accuracy scores. -->
 
-<!-- :::{.callout-note icon=false title="Question Step 10: Answer" collapse="true"} -->
-
-<!-- The adjusted standardised residuals show a significant association between condition and donating. Values beyond about ±1.96 indicate a cell that deviates from independence at roughly the .05 level (two-tailed), and ±2.87 is well past that. -->
-
-<!-- The direction is clear: -->
-
-<!-- RTA condition: more people donated than expected under independence (+2.87), and fewer didn’t donate than expected (-2.87). -->
-
-<!-- Control condition: fewer people donated than expected (-2.87), and more didn’t donate than expected (+2.87). -->
-
-<!-- The residuals are identical in magnitude and mirror each other because this is a 2x2 table. With only one degree of freedom, all four cells carry the same information, so you only need to interpret one of them. Don’t treat them as four separate findings. The adjusted standardised residuals would be more informative when interpreting a larger (e.g., 3x2) contingency table. -->
-
-<!-- The residuals tell you where and in which direction the association lies. -->
-
-<!-- ::: -->
-
-<!-- #### Question Step 11 -->
-
-<!-- Write up the results following APA guidelines. -->
-
-<!-- :::{.callout-note icon=false title="Question Step 11: Answer" collapse="true"} -->
-
-<!-- Those in the reminder-through-association condition performed the intended behaviour at a significantly higher rate (74%, 29 out of 39) than did those in the control condition (42%, 16 out of 38)), *χ2*(1, N = 77) = 8.24, *p* = 0.004, *V* = 0.33. The analysis showed that 11% of variance in intended behaviour could be accounted for by condition (reminder-through-association vs. control). -->
+<!-- e. It is possible to see, given coefficient estimates, that the association between predictor and outcome is positive for each model: mean accuracy appears to increase for increasing values of SHIPLEY vocabulary, HLVA health literacy, and age. -->
 
 <!-- ::: -->

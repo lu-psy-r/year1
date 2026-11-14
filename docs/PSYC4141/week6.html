@@ -626,9 +626,9 @@ How to use the Quarto document?
 </section>
 <section id="step-1-setup-the-appropriate-bits-and-pieces-in-rstudio" class="level4">
 <h4 class="anchored" data-anchor-id="step-1-setup-the-appropriate-bits-and-pieces-in-rstudio">Step 1: Setup the appropriate bits and pieces in RStudio</h4>
-<p>Before we can do anything, we need tell R what packages we want to use. We use the function <code>library()</code> to do that. It is useful to have a section at the top of your script where you load all the relevant libraries.</p>
+<p>Before we can do anything, we need tell R what packages we want to use.</p>
 <blockquote class="blockquote">
-<p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’.In the code chunk, write code to load the libraries by using the <code>library()</code> function. We need the packages <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. After you’ve written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk).</p>
+<p>Action: Add the code to load the relevant libraries in a new code chunk. We need the following ones: <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. If you are unsure, you can look at the ‘Hint’ below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the ‘Code’ section below.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
@@ -642,31 +642,12 @@ Hint
 </div>
 <div id="callout-7" class="callout-7-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>We need to load several packages (<code>here</code>, <code>tidyverse</code> and <code>easystats</code>) using the <code>library()</code> function. First, inside the code chunk, write <code>library()</code> and put <code>here</code> inside the brackets. On the next line in the code chunk, write <code>library()</code> and put <code>tidyverse</code> inside the brackets. On a third line in the code chunk, write <code>library()</code> and put <code>easystats</code> inside the brackets. Make sure to run the code chunk by clicking on the green arrow in the top corner of the code chunk.</p>
-</div>
-</div>
-</div>
-<blockquote class="blockquote">
-<p><strong>Step 1.</strong> Add the code to load the relevant libraries in a new code chunk. We need the following ones: <code>here</code>, <code>tidyverse</code> and <code>easystats</code>. If you are unsure, you can look at the ‘Hint’ below for a clue by expanding it. After that, if you are still unsure, you can view the code by expanding the ‘Code’ section below.</p>
-</blockquote>
-<div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hint
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-8" class="callout-8-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
 <p>Use the <code>library()</code>function. Remember to put it inside a ‘code chunk’ in your script. The name of the package goes inside the brackets.</p>
 </div>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -675,7 +656,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below.</p>
 <pre><code>library(here)
@@ -692,7 +673,7 @@ library(easystats)</code></pre>
 <p>Action: Insert a new code chunk by clicking on ‘Code’ at the top and selecting ‘Insert Chunk’. Inside the chunk, use <code>read_csv()</code> to read in the data file named <code>RTA_study1.csv</code>; tell R where to find the file and what it is called. Make sure you’ve run the code chunk. Then, check that you can see the ‘object’ in the Environment (top right quadrant) for the file you read in. I’ve called the data-frame <code>intent_data</code>. If you can’t remember how to do this, look at the Hint below. Give it a go. If you are still stuck, look at the Code below. You may have to adapt the filepath to match your setup.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -701,7 +682,7 @@ Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><code>dataframe &lt;- read_csv(here("filepath to folder", "filename.extension))</code></p>
 <p>Your code should include:</p>
@@ -717,7 +698,7 @@ Hint
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -726,7 +707,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>intent_data<span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"4141_wk6_lab"</span>, <span class="st">"RTA_study1.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -819,7 +800,7 @@ How does <code>filter()</code> work?
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -828,7 +809,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>intent_data <span class="ot">&lt;-</span> <span class="fu">filter</span>(intent_data, intend <span class="sc">==</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -848,8 +829,8 @@ Code
 </blockquote>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>intent_data <span class="ot">=</span> <span class="fu">mutate</span>(</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  intent_data,</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">condition =</span> <span class="fu">recode_values</span>(condition, <span class="dv">1</span> <span class="sc">~</span> <span class="st">"rta"</span>, <span class="dv">2</span> <span class="sc">~</span> <span class="st">"control"</span>),</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">actualdonate =</span> <span class="fu">recode_values</span>(actualdonate, <span class="dv">1</span> <span class="sc">~</span> <span class="st">"donated"</span>, <span class="dv">0</span> <span class="sc">~</span> <span class="st">"no_donation"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">condition =</span> dplyr<span class="sc">::</span><span class="fu">recode_values</span>(condition, <span class="dv">1</span> <span class="sc">~</span> <span class="st">"rta"</span>, <span class="dv">2</span> <span class="sc">~</span> <span class="st">"control"</span>),</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">actualdonate =</span> dplyr<span class="sc">::</span><span class="fu">recode_values</span>(actualdonate, <span class="dv">1</span> <span class="sc">~</span> <span class="st">"donated"</span>, <span class="dv">0</span> <span class="sc">~</span> <span class="st">"no_donation"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -892,7 +873,7 @@ Tip
 <div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> , <span class="fu">aes</span>(<span class="at">x =</span> , <span class="at">fill =</span> )) <span class="sc">+</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="callout callout-style-default callout-note callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-15-contents" aria-controls="callout-15" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -901,7 +882,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-15" class="callout-15-contents callout-collapse collapse">
+<div id="callout-14" class="callout-14-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The code to do this is below:</p>
 <pre><code>ggplot(data = intent_data, aes(x = condition, fill = actualdonate)) +
@@ -1009,7 +990,7 @@ results</code></pre>
 <h4 class="anchored" data-anchor-id="step-11-write-up-the-results-following-apa-guidelines.">Step 11: Write up the results following APA guidelines.</h4>
 <p>Using the guidance below, have a go at writing up the results for the Chi-square analysis following APA guidelines.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1018,7 +999,7 @@ Tip
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-16" class="callout-16-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The <a href="https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_numbers_statistics.html"><strong>Purdue writing lab website</strong></a> is helpful for guidance on punctuating statistics.</p>
 </div>
@@ -1038,7 +1019,7 @@ Tip
 <section id="question-1-how-does-pearsons-chi-square-differ-from-pearsons-correlation" class="level4">
 <h4 class="anchored" data-anchor-id="question-1-how-does-pearsons-chi-square-differ-from-pearsons-correlation">Question 1: How does Pearson’s Chi-square differ from Pearson’s correlation?</h4>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 1: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1047,7 +1028,7 @@ Question 1: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Pearson’s Chi-square assesses whether there is a relationship between categorical (or nominal) variables. Pearson’s correlation assesses whether there is a relationship between continuous (or interval/ratio) variables.</p>
 </div>
@@ -1060,7 +1041,7 @@ Question 1: Answer
 <li>What is the relationship between gender and soft drink preference?</li>
 </ol>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 2a: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1069,7 +1050,7 @@ Question 2a: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>True</p>
 </div>
@@ -1079,7 +1060,7 @@ Question 2a: Answer
 <li>How do males and females compare in terms of wanting to be a psychologist when they leave school?</li>
 </ol>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 2b: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1088,7 +1069,7 @@ Question 2b: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>True</p>
 </div>
@@ -1098,7 +1079,7 @@ Question 2b: Answer
 <section id="question-3-write-the-chi-square-formula-below." class="level4">
 <h4 class="anchored" data-anchor-id="question-3-write-the-chi-square-formula-below.">Question 3: Write the chi-square formula below.</h4>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 3: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1107,7 +1088,7 @@ Question 3: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><img src="files/week6/122_week14_chiSquareFormula.png" class="img-fluid"></p>
 </div>
@@ -1117,7 +1098,7 @@ Question 3: Answer
 <section id="question-4-what-were-your-answers-to-the-pre-lab-activity-1-questions-please-compare-them-with-other-students-at-your-table.-complete-the-pearsons-chi-square-test-by-hand-using-the-data-above-and-fill-in-the-blanks" class="level4">
 <h4 class="anchored" data-anchor-id="question-4-what-were-your-answers-to-the-pre-lab-activity-1-questions-please-compare-them-with-other-students-at-your-table.-complete-the-pearsons-chi-square-test-by-hand-using-the-data-above-and-fill-in-the-blanks">Question 4: What were your answers to the pre-lab activity 1 questions? Please compare them with other students at your table. Complete the Pearson’s chi-square test by hand using the data above and fill in the blanks:</h4>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 4: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1126,7 +1107,7 @@ Question 4: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><img src="files/week6/chisquare_dataLabAct1_answer.png" class="img-fluid"></p>
 <ul>
@@ -1142,7 +1123,7 @@ Question 4: Answer
 <section id="question-5-why-is-it-recommended-to-opt-for-multiple-2-x-2-chi-squares-instead-of-chi-squares-larger-than-2-x-2" class="level4">
 <h4 class="anchored" data-anchor-id="question-5-why-is-it-recommended-to-opt-for-multiple-2-x-2-chi-squares-instead-of-chi-squares-larger-than-2-x-2">Question 5: Why is it recommended to opt for multiple 2 x 2 chi-squares instead of chi-squares larger than 2 x 2?</h4>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 5: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1151,7 +1132,7 @@ Question 5: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>It is easier to interpret and such a design requires a smaller sample size.</p>
 </div>
@@ -1161,7 +1142,7 @@ Question 5: Answer
 <section id="question-6-how-could-you-modify-the-contingency-table-below-for-chi-square-analysis-to-aid-subsequent-interpretation-of-the-dataresults" class="level4">
 <h4 class="anchored" data-anchor-id="question-6-how-could-you-modify-the-contingency-table-below-for-chi-square-analysis-to-aid-subsequent-interpretation-of-the-dataresults">Question 6: How could you ‘modify’ the contingency table below for chi-square analysis to aid subsequent interpretation of the data/results?</h4>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Question 6: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1170,7 +1151,7 @@ Question 6: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><img src="files/week6/122_week14_labAc1_q6.png" class="img-fluid"></p>
 <p>By combining ‘interested’ and ‘somewhat interested’ or by partitioning (doing multiple 2 x 2 chi-squares, while using Bonferroni correction to account for running multiple tests.</p>
@@ -1190,7 +1171,7 @@ Question 6: Answer
 <li><p>Did they actually return the paper-clips?</p></li>
 </ol>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 2: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1199,7 +1180,7 @@ Questions Step 2: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>condition = 1, intend = 1, actualdonate = 1 and id = 1 shows us that participant 1 was in the ‘reminder-through-assocation’ condition, reported that they intended to donate and also actually donated.</p>
 </div>
@@ -1212,7 +1193,7 @@ Questions Step 2: Answer
 <li>How many participants were removed because they didn’t intend to return the paper-clips?</li>
 </ol>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Question Step 3: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1221,7 +1202,7 @@ Question Step 3: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>10 participants. The table ‘intent_data’ contains 87 observations, after we have applied the <code>filter()</code> function to include only those participants who did intend to return the paper-clips, the table contains 77 observations.</p>
 </div>
@@ -1237,7 +1218,7 @@ Question Step 3: Answer
 <li><p>How many participants in the rta condition donated?</p></li>
 </ol>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 5: Answers">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1246,7 +1227,7 @@ Questions Step 5: Answers
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>22</p></li>
@@ -1265,7 +1246,7 @@ Questions Step 5: Answers
 <li><p>Describe the pattern in the data in your own words.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 6: Answers">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1274,7 +1255,7 @@ Questions Step 6: Answers
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div id="callout-27" class="callout-27-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ol type="a">
 <li><p>“dodge” places the bars next to each other, rather than on top of each other.</p></li>
@@ -1288,7 +1269,7 @@ Questions Step 6: Answers
 <h4 class="anchored" data-anchor-id="question-step-7">Question Step 7</h4>
 <p>What do you conclude from the output?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Question Step 7: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1297,7 +1278,7 @@ Question Step 7: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>As <em>p</em> is smaller than .005, you can conclude that there is a significant association between the grouping variables.</p>
 </div>
@@ -1308,7 +1289,7 @@ Question Step 7: Answer
 <h4 class="anchored" data-anchor-id="question-step-8">Question Step 8</h4>
 <p>What do you conclude from the output?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Question Step 8: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1317,7 +1298,7 @@ Question Step 8: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The expected frequencies in all cells are greater than 5. The data therefore meet the assumption.</p>
 </div>
@@ -1328,7 +1309,7 @@ Question Step 8: Answer
 <h4 class="anchored" data-anchor-id="questions-step-9">Questions Step 9</h4>
 <p>How large is the effect and how much variance is accounted for?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 9: Answers">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1337,7 +1318,7 @@ Questions Step 9: Answers
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div id="callout-30" class="callout-30-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The effect size (Cramer’s V) = 0.33 and the percentage variance accounted for = 11%.</p>
 </div>
@@ -1348,7 +1329,7 @@ Questions Step 9: Answers
 <h4 class="anchored" data-anchor-id="question-step-10">Question Step 10</h4>
 <p>What do you conclude from the output?</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Question Step 10: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1357,7 +1338,7 @@ Question Step 10: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The adjusted standardised residuals show a significant association between condition and donating. Values beyond about ±1.96 indicate a cell that deviates from independence at roughly the .05 level (two-tailed), and ±2.87 is well past that.</p>
 <p>The direction is clear:</p>
@@ -1373,7 +1354,7 @@ Question Step 10: Answer
 <h4 class="anchored" data-anchor-id="question-step-11">Question Step 11</h4>
 <p>Write up the results following APA guidelines.</p>
 <div class="callout callout-style-default callout-note no-icon callout-titled" title="Question Step 11: Answer">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -1382,7 +1363,7 @@ Question Step 11: Answer
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Those in the reminder-through-association condition performed the intended behaviour at a significantly higher rate (74%, 29 out of 39) than did those in the control condition (42%, 16 out of 38)), <em>χ2</em>(1, N = 77) = 8.24, <em>p</em> = 0.004, <em>V</em> = 0.33. The analysis showed that 11% of variance in intended behaviour could be accounted for by condition (reminder-through-association vs.&nbsp;control).</p>
 </div>

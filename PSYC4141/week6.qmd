@@ -426,28 +426,8 @@ This is also demonstrated in this video
 #### Step 1: Setup the appropriate bits and pieces in RStudio
 
 Before we can do anything, we need tell R what packages we want to use.
-We use the function `library()` to do that. It is useful to have a
-section at the top of your script where you load all the relevant
-libraries.
 
-> Action: Insert a new code chunk by clicking on 'Code' at the top and
-> selecting 'Insert Chunk'.In the code chunk, write code to load the
-> libraries by using the `library()` function. We need the packages
-> `here`, `tidyverse` and `easystats`. After you've written the code,
-> make sure the run the code chunk (click on the green arrow in the top
-> corner of the code chunk).
-
-::: {.callout-note title="Hint" collapse="true"}
-We need to load several packages (`here`, `tidyverse` and `easystats`)
-using the `library()` function. First, inside the code chunk, write
-`library()` and put `here` inside the brackets. On the next line in the
-code chunk, write `library()` and put `tidyverse` inside the brackets.
-On a third line in the code chunk, write `library()` and put `easystats`
-inside the brackets. Make sure to run the code chunk by clicking on the
-green arrow in the top corner of the code chunk.
-:::
-
-> **Step 1.** Add the code to load the relevant libraries in a new code
+> Action: Add the code to load the relevant libraries in a new code
 > chunk. We need the following ones: `here`, `tidyverse` and
 > `easystats`. If you are unsure, you can look at the 'Hint' below for a
 > clue by expanding it. After that, if you are still unsure, you can
@@ -615,8 +595,8 @@ For this we can use the functions `mutate()` and `recode_values()`.
 ``` r
 intent_data = mutate(
   intent_data,
-  condition = recode_values(condition, 1 ~ "rta", 2 ~ "control"),
-  actualdonate = recode_values(actualdonate, 1 ~ "donated", 0 ~ "no_donation"))
+  condition = dplyr::recode_values(condition, 1 ~ "rta", 2 ~ "control"),
+  actualdonate = dplyr::recode_values(actualdonate, 1 ~ "donated", 0 ~ "no_donation"))
 ```
 
 ::: callout-tip

@@ -1,0 +1,137 @@
+---
+title: "4141-w7-lab"
+editor: source
+---
+
+**IMPORTANT** How to complete the lab activity and use the Quarto script:
+
+1)  Open the handbook pages in a separate window or tab and navigate to *Lab activities*.
+2)  Read the instructions on the handbook page for each step.
+3)  Carry out the actions, by inserting a code chunk in the Quarto document, below each action.
+4)  If there are any questions associated with that step, please try to answer them. You can write your answer in the Quarto document, as plain text. Answers to the questions will be shared after the last lab session has taken place (on Thursday afternoon).
+5)  After having carried out an action, written a code chunk and answered any questions, go back to the handbook page and read the next bit of instruction, until you get to the next action.
+6)  If you are stuck: Have a look at the 'Hints' and 'Code' snippets on the handbook page.
+7)  If you are still stuck: Ask for help (your peers on your table, the GTA or lecturer in the lab session, via the Moodle Q&A forum, during Friday's live online Q&A).
+
+## Lab activity 1: What makes it easy or difficult for people to understand written health information?
+
+#### Step 1:  Setup the appropriate bits and pieces in RStudio
+
+> Action: In a new code chunk, add the code to load the relevant libraries.
+> We need the following ones: `here`, `tidyverse` and
+> `easystats`. If you are unsure, you can look at the 'Hint' below for a
+> clue by expanding it.
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+### Step 2: Reading in the data file
+
+> Action: In a new code chunk use `read_csv()` to read
+> in the data file named `study-two-general-participants.csv`. Remeber to tell R where to find the file
+> and what it is called. Make sure you've run the code chunk. Then,
+> check that you can see the 'object' in the Environment (top right
+> quadrant) for the file you read in.
+
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 3: Inspect the data
+
+> Action: Insert a new code chunk and use `head()`, `tail()` and `summary()` to get an overview of the data.
+> Give it a go. If you're stuck, have a look at the Code below.
+
+**Questions Step 3**
+
+a. Data from how many participants does the data file contain?
+b. What is the maximum age that was recorded for participants in this sample?
+c. On average, are participants in this sample more accurate when tested on their understanding, or when self-rating their understanding of written health information?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+### Step 4: Draw histograms to examine the distributions of variables
+
+> Action: Insert a new code chunk and use `ggplot()` with `geom_histogram()` to look at the distributions of `mean.acc`, `mean.self` and `age.
+
+**Questions Step 4**
+
+What do you conclude from the histograms in terms of distribution? Do the variables follow a normal distribution or are they skewed? 
+
+a. For the variable `mean.acc`?
+b. For the variable `mean.self`?
+c. For the variable `AGE`?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 5: Practice editing the appearance of a histogram plot step-by-step
+
+>**Action 0.**: In a new code chunk, use `ggplot()` with `geom_histogram()` to look at the distribution of `SHIPLEY`.
+
+>**Action 1.** Edit the appearance of the bars by specifying a `binwidth` value.
+
+>**Action 2.** Then add an edit to the appearance of the background using `theme_bw()`.
+
+>**Action 3.** Then add an edit to the appearance of the labels using `labs()`.
+
+>**Action 4.** Now add an edit by setting the x-axis limits using `x.lim()`.
+
+>**Action 5.** Then add an edit to draw a vertical line to show the mean value of 
+the variable you are plotting.
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 6: Create scatterplots to examine the association between some variables
+
+> Action: Insert a new code chunk and use `ggplot()` with `geom_point()`) to create a scatterplot. In both research questions, `mean.acc` is the outcome variable, so lets put that on the y-axis. Make several plots, with a different variable on the y-axis each time. If you need more guidance on how to do this, look at the Hint below.
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 7: Edit the appearance of *each* plot step-by-step
+
+>**Action 1.** First, edit the appearance of the points using `alpha`, `size`, `shape`, and `colour`.
+
+>**Action 2.** Then edit the colour of the background using `theme_bw()`.
+
+>**Action 3.** Then edit the appearance of the labels using `labs()`.
+
+>**Action 4.** Then set the x-axis and y-axis limits to the minimum-maximum ranges 
+of the variables you are plotting.
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 8: Examine the correlations between the outcome variable and predictor variables
+
+> Action: Examine the correlations between the outcome variable and predictor variables by running three separate correlations: 
+1. between mean accuracy and `SHIPLEY`;
+2. between mean accuracy and `HLVA`; 
+3. between mean accuracy and `AGE`.
+Make sure to use 'Bonferroni' to adjust for conducting multiple correlations.
+
+**Questions Step 8**
+Now use the results from the correlations to answer the following questions:
+
+a. What is `r`, the coefficient for the correlation between `mean.acc` and `SHIPLEY`?
+b. Is the correlation between `mean.acc` and `HLVA`  significant?
+c.  What are the values for t and p for the significance test for the correlation between `mean.acc` and `AGE`?
+d. For which pair of outcome-predictor variables is the correlation the largest?
+e. What is the sign or direction of each of the correlations?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 9: Examine the relation between outcome mean accuracy (`mean.acc`) and each of the potential predictors: `SHIPLEY`, `HLVA` and `AGE` using the linear model
+
+> Action: In a new code chunk, write code to examine the relation between outcome mean accuracy (`mean.acc`) and each of the predictors: `SHIPLEY`, `HLVA` and `AGE` using the `lm()` function. Note that you need to run three separate `lm()` analyses:
+1. with mean accuracy as the outcome and `SHIPLEY` as the predictor;
+2. with mean accuracy as the outcome and `HLVA` as the predictor; 
+3. with mean accuracy as the outcome and `AGE` as the predictor.
+Use the information in the 'Hint' to help you. Try to write the code yourself. Compare the code you've written to the code snippet below.
+
+**Questions Step 9**
+
+a. What is the estimate for the coefficient of the effect of the predictor `HLVA` on `mean.acc`?
+b. Is the effect significant?
+c. What are the values for t and p for the significance test for the coefficient?
+d. How would you describe in words the shape or direction of the association between `HLVA` and `mean.acc`?
+e. How how would you describe the relations apparent between the predictor and outcome in all three models?
+
+#### Step 10: Use a model we have fitted to plot model predictions
+
