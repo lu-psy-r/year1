@@ -129,10 +129,10 @@ Key information on what you'll be expected to do, a rough timeline and how it li
 The video discusses why articulating a good research question is important and how to check that you've got one? It also discusses how to write hypotheses to go with your research question. We went over this during the week 6 lab session. You can view this video on the project page [here](project.qmd#sec-4141-project-research-question).
 
 3. **A short introduction on Gorilla** (~7 minutes)
-Gorilla is an online experiment builder. It provides an easy-to-use graphical interface which allows you to create complex studies in an intuitive way. Check out their video introduction to see what's possible. You can access this video via the project page [here](project.qmd#sec-4141-project-gorilla)
+Gorilla is an online experiment builder. It provides an easy-to-use graphical interface which allows you to create complex studies in an intuitive way. Check out their video introduction to see what's possible. You can access this video via the project page [here](project.qmd#sec-4141-project-gorilla).
 
 4. **How to build a questionnaire on Gorilla** (~13 minutes)
-Watch this video on their support pages to learn how to use Gorilla to build a questionnaire. You can access this video via the project page [here](project.qmd#sec-4141-project-gorilla)
+Watch this video on their support pages to learn how to use Gorilla to build a questionnaire. You can access this video via the project page [here](project.qmd#sec-4141-project-gorilla).
 
 ## Reading {#sec-4141-w7-reading}
 
