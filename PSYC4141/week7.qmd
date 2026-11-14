@@ -205,7 +205,7 @@ To prepare for discussion within your group, please read (some of) the papers li
 
 You will build the study on the Gorilla platform. Each student will need to create an account. This is free to do. To create an account, click on [this link](https://app.gorilla.sc/v2/signup?) and follow the instruction.
 
-::: {.callout-important title="Use your Lancaster University email address")
+:::{.callout-important title="Use your Lancaster University email address")
 Please make sure to use your university email address (ending in '@lancaster.ac.uk') to create your Gorilla account.
 :::
 
