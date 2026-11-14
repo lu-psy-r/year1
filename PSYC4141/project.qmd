@@ -173,6 +173,10 @@ Gorilla is an online experiment builder. It provides an easy-to-use graphical in
 
 Check out [their video introduction](https://support.gorilla.sc/support/tools/getting-started#overview) to see what's possible.
 
+**A mental model of how Gorilla works** (~4 minutes)
+
+In [this video](https://support.gorilla.sc/support/tools/getting-started#mentalmodelofgorilla) they explain key principles of how the platform works. 
+
 **How to build a questionnaire on Gorilla** (~13 minutes)
 
 Watch **video number 4 *Create A Demographics Survey*** on their [onboarding page](https://app.gorilla.sc/admin/onboarding-webinar/videos) 
