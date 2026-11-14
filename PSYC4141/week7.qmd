@@ -212,8 +212,8 @@ Please make sure to use your university email address (ending in '@lancaster.ac.
 
 ### Pre-lab activity 4: Getting ready
 
-More information and the download links will be shared as soon as
-possible.
+<!-- More information and the download links will be shared as soon as -->
+<!-- possible. -->
 
 To complete this week's lab activity you will need several files:
 
@@ -350,7 +350,7 @@ Your code should include:
     extension
 :::
 
-::: {.callout-note title="Code" collapse="true"}
+::: {.callout-tip title="Code" collapse="true"}
 ``` r
 study.two.gen<- read_csv(here("4141_wk7_lab", "study-two-general-participants.csv"))
 ```
@@ -383,7 +383,7 @@ You can also use code to get an overview:
 > Action: Insert a new code chunk and use `head()`, `tail()` and `summary()` to get an overview of the data.
 > Give it a go. If you're stuck, have a look at the Code below.
 
-::: {.callout-note title="Code" collapse="true"}
+::: {.callout-tip title="Code" collapse="true"}
 ``` r
 head(study.two.gen)
 tail(study.two.gen)
@@ -401,9 +401,9 @@ c. On average, are participants in this sample more accurate when tested on thei
 
 Lets look at the distributions of `mean.acc`, `mean.self` and `AGE`.
 
-> Action: Insert a new code chunk and use `ggplot()` with `geom_histogram()` to look at the distributions of `mean.acc`, `mean.self` and `age.
+> Action: Insert a new code chunk and use `ggplot()` with `geom_histogram()` to look at the distributions of `mean.acc`, `mean.self` and `age`.
 
-:::{.callout-tip title="Hint" collapse="true"}
+:::{.callout-note title="Hint" collapse="true"}
 Use `ggplot()` with `geom_histogram()`.
 
 When we create a plot, we take things step-by-step.
@@ -518,7 +518,7 @@ Create three scatterplots to visualise the relationship between (1.) the outcome
 
 > Action: Insert a new code chunk and use `ggplot()` with `geom_point()`) to create a scatterplot. In both research questions, `mean.acc` is the outcome variable, so lets put that on the y-axis. Make several plots, with a different variable on the y-axis each time. If you need more guidance on how to do this, look at the Hint below.
 
-:::{.callout-tip title="Hint" collapse="true"}
+:::{.callout-note title="Hint" collapse="true"}
 - We are working with `geom_point()` and you need x and y aesthetic mappings.
 - The outcome variable `mean.acc` has to be mapped to the y-axis using `...y = ...`
 
@@ -629,7 +629,7 @@ the chunk of code you have written to produce each plot.
 - The code works if you enter values like this: `xlim(minimum, maximum)` and `ylim(minimum, maximum)`.
 - Where `minimum, maximum` are the numbers representing the smallest possible (minimum) and largest possible (maximum) value for each variable.
 
-:::{.callout-tip title="Hint" collapse="true"}
+:::{.callout-note title="Hint" collapse="true"}
 
 - For these plots the y-axis limits will be the same because the outcome stays the same.
 - But the x-axis limits will be different for each different predictor variable.
@@ -676,7 +676,7 @@ One of our research questions is:
 3. between mean accuracy and `AGE`.
 Make sure to use 'Bonferroni' to adjust for conducting multiple correlations.
 
-::: {.callout-note title="Hint" icon="false" collapse="true"}
+::: {.callout-note title="Hint" collapse="true"}
 Use the `correlation`() function we used in earlier week. You need to specify the following information inside the `correlation`() function:
 
 - data: data = `your.data`
@@ -728,7 +728,7 @@ The research question we are focussing on today is:
 3. with mean accuracy as the outcome and `AGE` as the predictor.
 Use the information in the 'Hint' to help you. Try to write the code yourself. Compare the code you've written to the code snippet below.
 
-:::{.callout-tip title="How does the `lm()` function work?}
+:::{.callout-note title="How does the `lm()` function work?"}
 You need to use `lm()` to do the analyses.
 
 1. Be careful to identify the outcome and predictor variables correctly.
@@ -753,8 +753,6 @@ Notice that R has a general formula syntax:
 - each time, the left of the tilde symbol `~` is some output or outcome;
 - and the right of the tilde `~` is some input or predictor or set of predictors.
 :::
-
-
 
 :::{.callout-tip title="Code" collapse="true"}
 Check out the example code for each of the models.
@@ -785,7 +783,7 @@ e. What is the sign or direction of each of the correlations?
 We can use the model we have just fitted to plot the model predictions. We are going to draw a scatterplot and add a line. The line will show the model predictions, given the model intercept and effect 
 coefficient estimates.
 
-:::{.callout-tip title="Hint" collapse="true"}
+:::{.callout-note title="Hint" collapse="true"}
 You can see reference information here:  
 
 <https://ggplot2.tidyverse.org/reference/geom_abline.html>
@@ -793,7 +791,7 @@ You can see reference information here:
 
 > Action 1: In a new code chunk, **first fit a model** and get the summary: model the relationship between `mean.acc` and `HLVA`. Make a note of the following information from the model summary so you can use it next: the coefficient estimate for the intercept and the coefficient estimate for the slope of `HLVA`.
 
-:::{.callout-tip title="Hint" collapse="true"}
+:::{.callout-note title="Hint" collapse="true"}
 Use the `lm()` function, like you did in Step 9.
 :::
 

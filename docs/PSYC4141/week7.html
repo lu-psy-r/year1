@@ -493,7 +493,8 @@ Use your Lancaster University email address
 </section>
 <section id="pre-lab-activity-4-getting-ready" class="level3">
 <h3 class="anchored" data-anchor-id="pre-lab-activity-4-getting-ready">Pre-lab activity 4: Getting ready</h3>
-<p>More information and the download links will be shared as soon as possible.</p>
+<!-- More information and the download links will be shared as soon as -->
+<!-- possible. -->
 <p>To complete this week’s lab activity you will need several files:</p>
 <ol type="1">
 <li>We’ll work with an example script called <code>4141_wk7_lab.qmd</code>. This is a Quarto document.</li>
@@ -640,7 +641,7 @@ Hint
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-note callout-titled" title="Code">
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -683,7 +684,7 @@ Code
 <blockquote class="blockquote">
 <p>Action: Insert a new code chunk and use <code>head()</code>, <code>tail()</code> and <code>summary()</code> to get an overview of the data. Give it a go. If you’re stuck, have a look at the Code below.</p>
 </blockquote>
-<div class="callout callout-style-default callout-note callout-titled" title="Code">
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -712,9 +713,9 @@ Code
 <h4 class="anchored" data-anchor-id="step-4-draw-histograms-to-examine-the-distributions-of-variables">Step 4: Draw histograms to examine the distributions of variables</h4>
 <p>Lets look at the distributions of <code>mean.acc</code>, <code>mean.self</code> and <code>AGE</code>.</p>
 <blockquote class="blockquote">
-<p>Action: Insert a new code chunk and use <code>ggplot()</code> with <code>geom_histogram()</code> to look at the distributions of <code>mean.acc</code>, <code>mean.self</code> and `age.</p>
+<p>Action: Insert a new code chunk and use <code>ggplot()</code> with <code>geom_histogram()</code> to look at the distributions of <code>mean.acc</code>, <code>mean.self</code> and <code>age</code>.</p>
 </blockquote>
-<div class="callout callout-style-default callout-tip callout-titled" title="Hint">
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-14-contents" aria-controls="callout-14" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -884,7 +885,7 @@ Code
 <blockquote class="blockquote">
 <p>Action: Insert a new code chunk and use <code>ggplot()</code> with <code>geom_point()</code>) to create a scatterplot. In both research questions, <code>mean.acc</code> is the outcome variable, so lets put that on the y-axis. Make several plots, with a different variable on the y-axis each time. If you need more guidance on how to do this, look at the Hint below.</p>
 </blockquote>
-<div class="callout callout-style-default callout-tip callout-titled" title="Hint">
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1056,7 +1057,7 @@ Code
 <li>The code works if you enter values like this: <code>xlim(minimum, maximum)</code> and <code>ylim(minimum, maximum)</code>.</li>
 <li>Where <code>minimum, maximum</code> are the numbers representing the smallest possible (minimum) and largest possible (maximum) value for each variable.</li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled" title="Hint">
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1124,10 +1125,10 @@ Code
 <blockquote class="blockquote">
 <p>Action: Examine the correlations between the outcome variable and predictor variables by running three separate correlations: 1. between mean accuracy and <code>SHIPLEY</code>; 2. between mean accuracy and <code>HLVA</code>; 3. between mean accuracy and <code>AGE</code>. Make sure to use ‘Bonferroni’ to adjust for conducting multiple correlations.</p>
 </blockquote>
-<div class="callout callout-style-default callout-note no-icon callout-titled" title="Hint">
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
+<i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
 Hint
@@ -1205,7 +1206,17 @@ Important
 <blockquote class="blockquote">
 <p>Action: In a new code chunk, write code to examine the relation between outcome mean accuracy (<code>mean.acc</code>) and each of the predictors: <code>SHIPLEY</code>, <code>HLVA</code> and <code>AGE</code> using the <code>lm()</code> function. Note that you need to run three separate <code>lm()</code> analyses: 1. with mean accuracy as the outcome and <code>SHIPLEY</code> as the predictor; 2. with mean accuracy as the outcome and <code>HLVA</code> as the predictor; 3. with mean accuracy as the outcome and <code>AGE</code> as the predictor. Use the information in the ‘Hint’ to help you. Try to write the code yourself. Compare the code you’ve written to the code snippet below.</p>
 </blockquote>
-<p>:::{.callout-tip title=“How does the <code>lm()</code> function work?} You need to use <code>lm()</code> to do the analyses.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="How does the `lm()` function work?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How does the <code>lm()</code> function work?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You need to use <code>lm()</code> to do the analyses.</p>
 <ol type="1">
 <li>Be careful to identify the outcome and predictor variables correctly.</li>
 <li>Remember that analysis code is arranged like this:</li>
@@ -1223,10 +1234,12 @@ Important
 <ul>
 <li>and uses the same format across a number of different functions;</li>
 <li>each time, the left of the tilde symbol <code>~</code> is some output or outcome;</li>
-<li>and the right of the tilde <code>~</code> is some input or predictor or set of predictors. :::</li>
+<li>and the right of the tilde <code>~</code> is some input or predictor or set of predictors.</li>
 </ul>
+</div>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1235,7 +1248,7 @@ Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Check out the example code for each of the models.</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> SHIPLEY, <span class="at">data =</span> study.two.gen)</span>
@@ -1261,27 +1274,7 @@ Code
 <section id="step-10-use-a-model-we-have-fitted-to-plot-model-predictions" class="level4">
 <h4 class="anchored" data-anchor-id="step-10-use-a-model-we-have-fitted-to-plot-model-predictions">Step 10: Use a model we have fitted to plot model predictions</h4>
 <p>We can use the model we have just fitted to plot the model predictions. We are going to draw a scatterplot and add a line. The line will show the model predictions, given the model intercept and effect coefficient estimates.</p>
-<div class="callout callout-style-default callout-tip callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Hint
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-32" class="callout-32-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<p>You can see reference information here:</p>
-<p><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_abline.html</a></p>
-</div>
-</div>
-</div>
-<blockquote class="blockquote">
-<p>Action 1: In a new code chunk, <strong>first fit a model</strong> and get the summary: model the relationship between <code>mean.acc</code> and <code>HLVA</code>. Make a note of the following information from the model summary so you can use it next: the coefficient estimate for the intercept and the coefficient estimate for the slope of <code>HLVA</code>.</p>
-</blockquote>
-<div class="callout callout-style-default callout-tip callout-titled" title="Hint">
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -1293,30 +1286,30 @@ Hint
 </div>
 <div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Use the <code>lm()</code> function, like you did in Step 9.</p>
+<p>You can see reference information here:</p>
+<p><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html" class="uri">https://ggplot2.tidyverse.org/reference/geom_abline.html</a></p>
 </div>
 </div>
 </div>
-<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<blockquote class="blockquote">
+<p>Action 1: In a new code chunk, <strong>first fit a model</strong> and get the summary: model the relationship between <code>mean.acc</code> and <code>HLVA</code>. Make a note of the following information from the model summary so you can use it next: the coefficient estimate for the intercept and the coefficient estimate for the slope of <code>HLVA</code>.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> HLVA, <span class="at">data =</span> study.two.gen)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Use the <code>lm()</code> function, like you did in Step 9.</p>
 </div>
 </div>
 </div>
-<blockquote class="blockquote">
-<p>Action 2: <strong>Then, draw a prediction plot</strong>, using the <code>geom_point()</code> to draw a scatterplot and using the <code>geom_abline()</code> function to draw the prediction line representing the association between this outcome and predictor. Check first if you can write the code you need to produce the prediction plot. Then have a look at the code example: compare it to the code you wrote.</p>
-</blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-35-contents" aria-controls="callout-35" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1328,6 +1321,26 @@ Code
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-35" class="callout-35-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="sourceCode" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> HLVA, <span class="at">data =</span> study.two.gen)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>Action 2: <strong>Then, draw a prediction plot</strong>, using the <code>geom_point()</code> to draw a scatterplot and using the <code>geom_abline()</code> function to draw the prediction line representing the association between this outcome and predictor. Check first if you can write the code you need to produce the prediction plot. Then have a look at the code example: compare it to the code you wrote.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-36-contents" aria-controls="callout-36" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-36" class="callout-36-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> study.two.gen, <span class="fu">aes</span>(<span class="at">x =</span> HLVA, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">colour =</span> <span class="st">"blue"</span>, <span class="at">shape =</span> <span class="st">'square'</span>)   <span class="sc">+</span></span>
