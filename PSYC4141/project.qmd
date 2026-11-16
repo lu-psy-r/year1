@@ -161,11 +161,11 @@ Marty-Dugas, J., Ralph, B. C., Oakman, J. M., & Smilek, D. (2018). The relation 
 
 > Marty-Dugas et al. (2018) developed two different measures of smartphone use (general and absent-minded) and explore relationships with measures of everyday inattention.
 
-Ohme, J., Araujo, T., de Vreese, C. H., & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. *Mobile Media & Communication, 9*(2), 293-313.
+Ohme, J., Araujo, T., de Vreese, C. H., & Piotrowski, J. T. (2021). Mobile data donations: Assessing self-report accuracy and sample biases with the iOS Screen Time function. *Mobile Media & Communication, 9*(2), 293-313. https://doi.org/10.1177/2050157920959106
 
 > Ohme et al. (2021) present a new methodological approach: mobile data donations using screenshots of the iOS Screen Time function. They assesses its feasibility, sample biases, and the accuracy of self-reported smartphone usage compared to log data in a general population sample of Dutch citizens.
 
-## 5. Using the Gorilla platform to build the questionnaire study {#sec-4141-project-gorilla}
+## 5. Learning about the Gorilla platform {#sec-4141-project-gorilla}
 
 Gorilla is an online experiment builder. It provides an easy-to-use graphical interface which allows you to create complex studies in an intuitive way.
 
@@ -181,4 +181,34 @@ In [this video](https://support.gorilla.sc/support/tools/getting-started#mentalm
 
 Watch **video number 4 *Create A Demographics Survey*** on their [onboarding page](https://app.gorilla.sc/admin/onboarding-webinar/videos) 
 
+## 6. Building the questionnaire study on Gorilla {#sec-4141-project-building}
+
+To build your group's questionnaire study on Gorilla, each group needs to clone an example project and then amend that project. The example project contains the following components:
+
+- Participant information sheet
+- Consent form
+- Debrief sheet
+
+Each group will have to add their own questionnaire measures to measure mind wandering and screen time. Guidance on how to do that can be found in the section above on **Learning about the Gorilla platform** [here](#sec-4141-project-gorilla).
+
+This involves the following steps:
+
+1. One member of your group needs to sign in to Gorilla and carry out assignment 1: Clone the example project and add collaborators. Information on how to clone a project is [here](https://support.gorilla.sc/support/publishing-and-open-science/sharing#cloningaproject).
+
+2. That same group member then needs to add the other group members as collaborators. Information on how to add collaborators is [here](https://support.gorilla.sc/support/publishing-and-open-science/sharing#collaborating).
+
+3. As a group, you need to build your questionnaire measures to measure mind wandering and screen time. Refer to the Gorilla guidance on how to do that:
+
+- A good place to start is watching the videos mentioned in the section above on **Learning about the Gorilla platform** [here](#sec-4141-project-gorilla).
+- The Gorilla reference guide on how to use their Questionnaire builder is [here](https://support.gorilla.sc/support/tools/questionnaire-builder-2).
+
+:::{.callout-tip}
+You can meet up as a group and work on it together, or you can assign individual group members who will work on different parts.
+:::
+
+:::{.callout-important}
+Gorilla uses **Version control**. This means that it keeps a record of all the saved changes to the project. Whenever you have finished editing a component, you will need to commit the changes before a different group member can access that specific component. Have a look at [this page](https://support.gorilla.sc/support/tools/questionnaire-builder-2/step-by-step#commit) for a more detailed explanation. It will ask you to add a 'Commit message'. This is a short description of the changes that you implemented that time. So you'd write something like: Added questions 1 to 4'. Keep it short, but make sure to write an informative message. This will make it easier to go back to a previous version if something goes wrong.
+:::
+
+4. Once all the individual components are in place, build your experiment. Gorilla's Experiment Builder support pages on the Experiment builder [here](https://support.gorilla.sc/support/tools/experiment-builder) provide guidance.
 

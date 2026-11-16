@@ -818,11 +818,13 @@ ggplot(data = study.two.gen, aes(x = HLVA, y = mean.acc)) +
 
 ### Lab activity 2: Building the questionnaire study on Gorilla
 
-:::{.callout-tip}
+<!-- :::{.callout-tip} -->
 
-Information about this lab activity will be added as soon as possible.
+<!-- Information about this lab activity will be added as soon as possible. -->
 
-:::
+<!-- ::: -->
+
+You will build the study on the Gorilla platform. Follow the instructions on the project page in the section **Building the questionnaire study on Gorilla** [here](project.qmd#sec-4141-project-building).
 
 ## Answers {#sec-4141-w7-answers}
 
