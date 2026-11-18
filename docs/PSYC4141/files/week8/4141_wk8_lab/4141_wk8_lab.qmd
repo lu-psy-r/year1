@@ -1,0 +1,139 @@
+---
+title: "4141-w8-lab"
+editor: source
+---
+
+**IMPORTANT** How to complete the lab activity and use the Quarto script:
+
+1)  Open the handbook pages in a separate window or tab and navigate to *Lab activities*.
+2)  Read the instructions on the handbook page for each step.
+3)  Carry out the actions, by inserting a code chunk in the Quarto document, below each action.
+4)  If there are any questions associated with that step, please try to answer them. You can write your answer in the Quarto document, as plain text. Answers to the questions will be shared after the last lab session has taken place (on Thursday afternoon).
+5)  After having carried out an action, written a code chunk and answered any questions, go back to the handbook page and read the next bit of instruction, until you get to the next action.
+6)  If you are stuck: Have a look at the 'Hints' and 'Code' snippets on the handbook page.
+7)  If you are still stuck: Ask for help (your peers on your table, the GTA or lecturer in the lab session, via the Moodle Q&A forum, during Friday's live online Q&A).
+
+## Lab activity 1: What makes it easy or difficult for people to understand written health information?
+
+Steps 1 to 9 are the main lab activity. If you are short of time, skip Step 3 (a recap of Week 7) and come back to it later. Step 10 is an extension: do it if you have time, or after the lab.
+
+#### Step 1: Setup the appropriate bits and pieces in RStudio
+
+> Action: In a new code chunk, add the code to empty the R environment.
+> Then add the code to load the relevant libraries. We need the following ones: `here`, `tidyverse`, `easystats` and `ggeffects`.
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 2: Read in and inspect the data
+
+>**Action 1.** In a new code chunk use `read_csv()` and `here()` to read in the data file `study-two-general-participants.csv`.
+> Give the data object a distinct name, e.g. `study.two.gen`. Check that you can see the object in the Environment (top right quadrant).
+
+>**Action 2.** Use `head()` and `summary()` to get an overview of the data.
+
+**Questions Step 2**
+
+a. Which variables are of class `character`?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 3: Recap -- draw a histogram and a scatterplot
+
+If you are short of time, skip this step.
+
+>**Action 1.** Draw a histogram of `FACTOR3`. Set a `binwidth`, use `theme_bw()`, edit the labels with `labs()`, set the x-axis limits to the possible range of scores (0-80) with `xlim()`, and add a vertical line showing the mean.
+
+>**Action 2.** Draw a scatterplot of the association between `FACTOR3` (x-axis) and `mean.acc` (y-axis), and edit its appearance as you did in Week 7.
+
+**Questions Step 3**
+
+a. What is the direction of the association between `FACTOR3` and `mean.acc`? Does it look strong or weak?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 4: Revise -- fit a linear model with one predictor
+
+> Action: In a new code chunk, use `lm()` to fit a model with `mean.acc` as the outcome and `HLVA` as the predictor. Then get the model summary.
+
+**Questions Step 4**
+
+a. What is the estimate for the coefficient of `HLVA`, and what does it mean in words?
+b. Report the F-statistic (F, the two DF values and the p-value) and the Adjusted R-squared.
+c. Explain in words what this R-squared value indicates.
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 5: Fit a linear model with multiple predictors
+
+> Action: In a new code chunk, use `lm()` to fit a model with `mean.acc` as the outcome and `HLVA`, `SHIPLEY`, `FACTOR3` and `AGE` as the predictors.
+> Give the model a new name. Then get the model summary.
+
+**Questions Step 5**
+
+a. Which predictors have a significant effect on `mean.acc`? Does this match the predictions you wrote down in Pre-lab activity 2?
+b. Compare the `HLVA` estimate with the estimate in Step 4. Why do you think it has changed?
+c. Compare the Adjusted R-squared with the model in Step 4. What does the difference tell you?
+d. Does the `AGE` estimate suggest that older or younger participants were more accurate? Is the effect significant?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 6: Report the results of a linear model with multiple predictors
+
+> Action: Write a short report of the model you fitted in Step 5 below. Write it as plain text, not in a code chunk.
+> Use the example in the lectures and the template in the Hint on the handbook page.
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 7: Plot model predictions
+
+>**Action 1.** Use `ggpredict()` to get the predictions for `HLVA` from the model you fitted in Step 5.
+> Print the predictions by typing the name you gave them, then plot them with `plot()`. Do the same for `SHIPLEY`.
+
+>**Action 2.** Edit the `HLVA` plot using `theme_bw()`, `labs()` and `ylim()`, setting the y-axis to the full possible range of `mean.acc` (0-1).
+
+**Questions Step 7**
+
+a. Use the `HLVA` estimate from Step 5 to work out how much predicted accuracy changes between an `HLVA` score of 4 and a score of 14. Check your answer against the printed predictions.
+b. The estimate for `SHIPLEY` is smaller than the estimate for `HLVA`. Does this mean that vocabulary knowledge matters less than health literacy? Compare the two prediction plots, and check their axes.
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 8: Draw boxplots to compare groups
+
+> Action: In a new code chunk, draw boxplots of `mean.acc` for each level of `EDUCATION`, with each participant's score shown as a point.
+
+**Questions Step 8**
+
+a. Compare the medians of the three groups, and the number of participants in each group. Why might the group sizes matter?
+b. Optional: draw the same plot for `ETHNICITY`. What does it show you about the participant sample?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 9: Fit a linear model with a categorical predictor
+
+>**Action 1.** Fit a model with `mean.acc` as the outcome and `HLVA`, `SHIPLEY`, `FACTOR3`, `AGE` *and* `EDUCATION` as predictors.
+> Give the model a new name. Then get the model summary.
+
+>**Action 2.** Use `ggpredict()` and `plot()` to plot the predicted effect of `EDUCATION`.
+
+**Questions Step 9**
+
+a. Which level of `EDUCATION` is the reference level?
+b. What does the estimate for `EDUCATIONSecondary` mean? Is it significant?
+c. In the plot, which group has the longest whiskers? Why do you think this is?
+d. Stretch question: in the boxplot in Step 8, the `Secondary` group looked noticeably less accurate than the other two groups. Why is the difference estimated in the model smaller?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 10: Extension -- Can people accurately evaluate whether they understand written health information?
+
+>**Action 1.** Fit a model with `mean.self` as the outcome and `mean.acc` as the predictor.
+> Then fit a second model the other way round: `mean.acc` as the outcome and `mean.self` as the predictor.
+> Give each model a different name and get the summaries.
+
+>**Action 2.** Use `ggpredict()` and `plot()` to plot the predictions from each model.
+
+**Questions Step 10**
+
+a. In the model with `mean.self` as the outcome, is `mean.acc` a significant predictor? What does this suggest is the answer to research question 2?
+b. Compare the two models. Why are the slope estimates so different, when the variables and the data are the same? What do you notice about the `t` values, p-values and R-squared values?
