@@ -289,8 +289,8 @@ As you read, make notes on the following questions:
 3.  What did they predict they would find?
 
 ::: callout-tip
-You will be writing a pre-registration for your own group project. Look
-at how this one is set out: it is a useful model for your own.
+You already wrote a pre-registration for your own group project. Look at
+how this one is set out: it is a useful model for your own in future.
 :::
 
 ### Pre-lab activity 2: Predict before you look
@@ -361,7 +361,7 @@ The research question we are focussing on today is:
 :::
 
 In Week 7, we used linear models with *one* predictor at a time. This
-week, we extend the linear model in two ways:
+week (Week 8), we extend the linear model in two ways:
 
 1.  We fit linear models with *multiple* predictors. This is why this
     form of analysis is often called *multiple regression*.
