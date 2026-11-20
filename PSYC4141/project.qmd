@@ -184,7 +184,7 @@ Each group needs to:
 - Write a null hypothesis and an alternative hypothesis.
 - Specify how you are proposing to measure the key constructs.
 
-More information on how to do this, and suggested papers about questionnaires you could use, can be found in the sections [How to write a good research question ... and appropriate hypotheses?](@sec-4141-project-research-question) and [Measuring mind wandering and screen time](@sec-4141-project-measures).
+More information on how to do this, and suggested papers about questionnaires you could use, can be found in the sections [How to write a good research question ... and appropriate hypotheses?](#sec-4141-project-research-question) and [Measuring mind wandering and screen time](#sec-4141-project-measures).
 
 Once you have made these decisions as a group, one of you needs to complete the pre-registration form. **Please check the Moodle announcement for the link to the form and the deadline.**
 
@@ -265,14 +265,14 @@ If you ask participants to log their usage:
 #### Hypotheses: correlational wording, correct logic
 Our design is correlational, so the wording of your hypotheses has to reflect that.
 
-**Do{style="color: green;"}:**
+[**Do:**]{style="color: green;"}
 
 -	State the null hypothesis as: there is no association (correlation) between X and Y.
 -	State the alternative hypothesis as: there is an association between X and Y (non-directional), or there is a positive (as X goes up, Y goes up) or negative (as X goes up, Y goes down) association (directional).
 -	Be specific if you have several measures or aspects of mind wandering: say what you expect for each.
 -	In your report, justify whether your hypothesis is directional or non-directional using studies from the literature.
 
-**Don't{style="color: red;"}:**
+[**Don't:**]{style="color: red;"}
 
 -	Use causal language such as 'effect on', ' more of X increases Y', 'more of X leads to' or 'X causes Y'. With a correlational design, we cannot know whether X causes Y, Y causes X, or something else drives both.
 -	Swap the null and alternative hypotheses. The null states there is no association.
