@@ -1,5 +1,5 @@
 ---
-title: 7. Week 7 - The linear model
+title: 7. Week 7 - Introduction to the linear model
 subtitle: Written by Rob Davies and Margriet Groen
 order: 7 # ensure this is one more than the previous script
 editor: 
