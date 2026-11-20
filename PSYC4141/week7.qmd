@@ -33,9 +33,9 @@ So far, we've looked at measures of association between two variables using corr
 
 When considering one predictor, regression tells us a lot of the same things as correlation does. Regression becomes really useful when we have more than one predictor. We will talk about that in weeks 8 and 9. We will do all this in the context of the **Clearly Understood** project on how easy or difficult people find it to understand written health information.
 
-B.  Research project: Build the questionnaire study on Gorilla
+B.  Research project: Get set up on Gorilla and pre-register your study
 
-We will also continue the group project by focussing on building the study on Gorilla, ready for data collection next week.
+We will also continue the group project by focussing on getting set up on Gorilla, and pre-registering your study.
 
 The materials we have prepared to support your learning are arranged in
 four parts:
@@ -689,17 +689,17 @@ Use the `correlation`() function we used in earlier week. You need to specify th
 
 ```r
 correlation(study.two.gen,
-            select = c(SHIPLEY, mean.acc),
+            select = c("SHIPLEY", "mean.acc"),
             method = "pearson",
             p_adjust = "bonferroni")
 
 correlation(study.two.gen,
-            select = c(HLVA, mean.acc),
+            select = c("HLVA", "mean.acc"),
             method = "pearson",
             p_adjust = "bonferroni")
 
 correlation(study.two.gen,
-            select = c(AGE, mean.acc),
+            select = c("AGE", "mean.acc"),
             method = "pearson",
             p_adjust = "bonferroni")
 ```
@@ -828,87 +828,87 @@ You will build the study on the Gorilla platform. Follow the instructions on the
 
 ## Answers {#sec-4141-w7-answers}
 
-::: callout-tip
-Answers to the questions in lab activities will be shared after the
-final lab session of the week has concluded (Thursday afternoon)
+<!-- ::: callout-tip -->
+<!-- Answers to the questions in lab activities will be shared after the -->
+<!-- final lab session of the week has concluded (Thursday afternoon) -->
+<!-- ::: -->
+
+### Lab activity 1:
+
+**Questions Step 3**
+
+a. Data from how many participants does the data file contain?
+b. What is the maximum age that was recorded for participants in this sample?
+c. On average, how accurate are participants when tested on their understanding of written health information?
+
+:::{.callout-note icon=false title="Questions Step 3: Answer" collapse="true"}
+
+a. The data-frame has 172 rows, the variable `participant_ID` also is 172 items long. Both of these pieces of information suggest that there are 172 participants in the sample.
+b. 76
+c. The mean for mean.acc (measured understanding) is .7679.
+
 :::
 
-<!-- ### Lab activity 1:  -->
+**Questions Step 4**
 
-<!-- **Questions Step 3** -->
+What do you conclude from the histograms in terms of distribution? Do the variables follow a normal distribution or are they skewed?
 
-<!-- a. Data from how many participants does the data file contain? -->
-<!-- b. What is the maximum age that was recorded for participants in this sample? -->
-<!-- c. On average, how accurate are participants when tested on their understanding of written health information? -->
+a. For the variable `mean.acc`?
+b. For the variable `mean.self`?
+c. For the variable `AGE`?
 
-<!-- :::{.callout-note icon=false title="Questions Step 3: Answer" collapse="true"} -->
+:::{.callout-note icon=false title="Questions Step 4: Answer" collapse="true"}
 
-<!-- a. The data-frame has 172 rows, the variable `participant_ID` also is 172 items long. Both of these pieces of information suggest that there are 172 participants in the sample. -->
-<!-- b. 76 -->
-<!-- c. The mean for mean.acc (measured understanding) is .7679. -->
+a. The variable `mean.acc` looks somewhat, but not massively, left-skewed (this is also referred to as negative skew). The long tail stretches out to the left. Most values cluster at the high end, with a few unusually low values dragging the tail out. The mean gets pulled down, so it sits to the left of the median (mean < median).
 
-<!-- ::: -->
+b. The distribution of `mean.self` is similarly left-skewed to that of `mean.acc`.
 
-<!-- **Questions Step 4** -->
+c. The variable `AGE` shows substantial right-skew. The long tail stretches out to the right. Most values cluster at the low end (with most participants being at the younger end), with a few unusually high values pulling the tail out. The mean gets dragged up, so it sits to the right of the median (mean > median).
 
-<!-- What do you conclude from the histograms in terms of distribution? Do the variables follow a normal distribution or are they skewed?  -->
+A quick way to remember: The skew is named for the direction of the tail, not where the bulk of the data sits. The “hump” goes the opposite way to the label.
 
-<!-- a. For the variable `mean.acc`? -->
-<!-- b. For the variable `mean.self`? -->
-<!-- c. For the variable `AGE`? -->
+:::
 
-<!-- :::{.callout-note icon=false title="Questions Step 4: Answer" collapse="true"} -->
+**Questions Step 8**
 
-<!-- a. The variable `mean.acc` looks somewhat, but not massively, left-skewed (this is also referred to as negative skew). The long tail stretches out to the left. Most values cluster at the high end, with a few unusually low values dragging the tail out. The mean gets pulled down, so it sits to the left of the median (mean < median). -->
+a. What is *r*, the coefficient for the correlation between `mean.acc` and `SHIPLEY`?
+b. Is the correlation between `mean.acc` and `HLVA`  significant?
+c.  What are the values for t and p for the significance test for the correlation between `mean.acc` and `AGE`?
+d. For which pair of outcome-predictor variables is the correlation the largest?
+e. What is the sign or direction of each of the correlations?
 
-<!-- b. The distribution of `mean.self` is similarly left-skewed to that of `mean.acc`. -->
+:::{.callout-note icon=false title="Questions Step 8: Answers" collapse="true"}
 
-<!-- c. The variable `AGE` shows substantial right-skew. The long tail stretches out to the right. Most values cluster at the low end (with most participants being at the younger end), with a few unusually high values pulling the tail out. The mean gets dragged up, so it sits to the right of the median (mean > median). -->
+a. *r* = 0.47
 
-<!-- A quick way to remember: The skew is named for the direction of the tail, not where the bulk of the data sits. The “hump” goes the opposite way to the label. -->
+b. Yes *r* is significant, because the value is p < .05.
 
-<!-- ::: -->
+c.  *t* = 0.30, *p* = 0.764
 
-<!-- **Questions Step 8** -->
+d. The correlation is the largest between `mean.acc` and `HLVA`.
 
-<!-- a. What is *r*, the coefficient for the correlation between `mean.acc` and `SHIPLEY`? -->
-<!-- b. Is the correlation between `mean.acc` and `HLVA`  significant? -->
-<!-- c.  What are the values for t and p for the significance test for the correlation between `mean.acc` and `AGE`? -->
-<!-- d. For which pair of outcome-predictor variables is the correlation the largest? -->
-<!-- e. What is the sign or direction of each of the correlations? -->
+e. All the correlations are positive.
 
-<!-- :::{.callout-note icon=false title="Questions Step 8: Answers" collapse="true"} -->
+:::
 
-<!-- a. *r* = 0.47 -->
+**Questions Step 9**
 
-<!-- b. Yes *r* is significant, because the value is p < .05. -->
+a. What is the estimate for the coefficient of the effect of the predictor `HLVA` on `mean.acc`?
+b. Is the effect significant?
+c. What are the values for t and p for the significance test for the coefficient?
+d. How would you describe in words the shape or direction of the association between `HLVA` and `mean.acc`?
+e. How how would you describe the relations apparent between the predictor and outcome in all three models?
 
-<!-- c.  *t* = 0.30, *p* = 0.764 -->
+:::{.callout-note icon=false title="Questions Step 9: Answers" collapse="true"}
 
-<!-- d. The correlation is the largest between `mean.acc` and `HLVA`. -->
+a. 0.026207
 
-<!-- e. All the correlations are positive. -->
+b. It is significant, *p* < .05
 
-<!-- ::: -->
+c. *t* = 7.529, *p* = 2.87e-12
 
-<!-- **Questions Step 9** -->
+d. The slope coefficient -- and a scatterplot (draw it) -- suggest that as HLVA scores increase so also do mean accuracy scores.
 
-<!-- a. What is the estimate for the coefficient of the effect of the predictor `HLVA` on `mean.acc`? -->
-<!-- b. Is the effect significant? -->
-<!-- c. What are the values for t and p for the significance test for the coefficient? -->
-<!-- d. How would you describe in words the shape or direction of the association between `HLVA` and `mean.acc`? -->
-<!-- e. How how would you describe the relations apparent between the predictor and outcome in all three models? -->
+e. It is possible to see, given coefficient estimates, that the association between predictor and outcome is positive for each model: mean accuracy appears to increase for increasing values of SHIPLEY vocabulary, HLVA health literacy, and age.
 
-<!-- :::{.callout-note icon=false title="Questions Step 9: Answers" collapse="true"} -->
-
-<!-- a. 0.026207 -->
-
-<!-- b. It is significant, *p* < .05 -->
-
-<!-- c. *t* = 7.529, *p* = 2.87e-12 -->
-
-<!-- d. The slope coefficient -- and a scatterplot (draw it) -- suggest that as HLVA scores increase so also do mean accuracy scores. -->
-
-<!-- e. It is possible to see, given coefficient estimates, that the association between predictor and outcome is positive for each model: mean accuracy appears to increase for increasing values of SHIPLEY vocabulary, HLVA health literacy, and age. -->
-
-<!-- ::: -->
+:::

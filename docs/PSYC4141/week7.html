@@ -281,7 +281,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#lab-activity-1-what-makes-it-easy-or-difficult-for-people-to-understand-written-health-information" id="toc-lab-activity-1-what-makes-it-easy-or-difficult-for-people-to-understand-written-health-information" class="nav-link" data-scroll-target="#lab-activity-1-what-makes-it-easy-or-difficult-for-people-to-understand-written-health-information">Lab activity 1: What makes it easy or difficult for people to understand written health information?</a></li>
   <li><a href="#lab-activity-2-building-the-questionnaire-study-on-gorilla" id="toc-lab-activity-2-building-the-questionnaire-study-on-gorilla" class="nav-link" data-scroll-target="#lab-activity-2-building-the-questionnaire-study-on-gorilla">Lab activity 2: Building the questionnaire study on Gorilla</a></li>
   </ul></li>
-  <li><a href="#sec-4141-w7-answers" id="toc-sec-4141-w7-answers" class="nav-link" data-scroll-target="#sec-4141-w7-answers">Answers</a></li>
+  <li><a href="#sec-4141-w7-answers" id="toc-sec-4141-w7-answers" class="nav-link" data-scroll-target="#sec-4141-w7-answers">Answers</a>
+  <ul class="collapse">
+  <li><a href="#lab-activity-1" id="toc-lab-activity-1" class="nav-link" data-scroll-target="#lab-activity-1">Lab activity 1:</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -325,9 +328,9 @@ Overview
 <p>So far, we’ve looked at measures of association between two variables using correlation. <strong>This week you will learn about regression and the linear model as a way of predicting one variable from knowledge of one or more other variables.</strong></p>
 <p>When considering one predictor, regression tells us a lot of the same things as correlation does. Regression becomes really useful when we have more than one predictor. We will talk about that in weeks 8 and 9. We will do all this in the context of the <strong>Clearly Understood</strong> project on how easy or difficult people find it to understand written health information.</p>
 <ol start="2" type="A">
-<li>Research project: Build the questionnaire study on Gorilla</li>
+<li>Research project: Get set up on Gorilla and pre-register your study</li>
 </ol>
-<p>We will also continue the group project by focussing on building the study on Gorilla, ready for data collection next week.</p>
+<p>We will also continue the group project by focussing on getting set up on Gorilla, and pre-registering your study.</p>
 <p>The materials we have prepared to support your learning are arranged in four parts:</p>
 <ul>
 <li>Lectures</li>
@@ -1166,17 +1169,17 @@ Code
 <div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <div class="sourceCode" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">correlation</span>(study.two.gen,</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">select =</span> <span class="fu">c</span>(SHIPLEY, mean.acc),</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"SHIPLEY"</span>, <span class="st">"mean.acc"</span>),</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">method =</span> <span class="st">"pearson"</span>,</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">p_adjust =</span> <span class="st">"bonferroni"</span>)</span>
 <span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="fu">correlation</span>(study.two.gen,</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">select =</span> <span class="fu">c</span>(HLVA, mean.acc),</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>            <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"HLVA"</span>, <span class="st">"mean.acc"</span>),</span>
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>            <span class="at">method =</span> <span class="st">"pearson"</span>,</span>
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>            <span class="at">p_adjust =</span> <span class="st">"bonferroni"</span>)</span>
 <span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="fu">correlation</span>(study.two.gen,</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">select =</span> <span class="fu">c</span>(AGE, mean.acc),</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">select =</span> <span class="fu">c</span>(<span class="st">"AGE"</span>, <span class="st">"mean.acc"</span>),</span>
 <span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>            <span class="at">method =</span> <span class="st">"pearson"</span>,</span>
 <span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>            <span class="at">p_adjust =</span> <span class="st">"bonferroni"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1370,68 +1373,129 @@ Code
 </section>
 <section id="sec-4141-w7-answers" class="level2">
 <h2 class="anchored" data-anchor-id="sec-4141-w7-answers">Answers</h2>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
+<!-- ::: callout-tip -->
+<!-- Answers to the questions in lab activities will be shared after the -->
+<!-- final lab session of the week has concluded (Thursday afternoon) -->
+<!-- ::: -->
+<section id="lab-activity-1" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-1">Lab activity 1:</h3>
+<p><strong>Questions Step 3</strong></p>
+<ol type="a">
+<li>Data from how many participants does the data file contain?</li>
+<li>What is the maximum age that was recorded for participants in this sample?</li>
+<li>On average, how accurate are participants when tested on their understanding of written health information?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 3: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Questions Step 3: Answer
 </div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Answers to the questions in lab activities will be shared after the final lab session of the week has concluded (Thursday afternoon)</p>
+<ol type="a">
+<li>The data-frame has 172 rows, the variable <code>participant_ID</code> also is 172 items long. Both of these pieces of information suggest that there are 172 participants in the sample.</li>
+<li>76</li>
+<li>The mean for mean.acc (measured understanding) is .7679.</li>
+</ol>
 </div>
 </div>
-<!-- ### Lab activity 1:  -->
-<!-- **Questions Step 3** -->
-<!-- a. Data from how many participants does the data file contain? -->
-<!-- b. What is the maximum age that was recorded for participants in this sample? -->
-<!-- c. On average, how accurate are participants when tested on their understanding of written health information? -->
-<!-- :::{.callout-note icon=false title="Questions Step 3: Answer" collapse="true"} -->
-<!-- a. The data-frame has 172 rows, the variable `participant_ID` also is 172 items long. Both of these pieces of information suggest that there are 172 participants in the sample. -->
-<!-- b. 76 -->
-<!-- c. The mean for mean.acc (measured understanding) is .7679. -->
-<!-- ::: -->
-<!-- **Questions Step 4** -->
-<!-- What do you conclude from the histograms in terms of distribution? Do the variables follow a normal distribution or are they skewed?  -->
-<!-- a. For the variable `mean.acc`? -->
-<!-- b. For the variable `mean.self`? -->
-<!-- c. For the variable `AGE`? -->
-<!-- :::{.callout-note icon=false title="Questions Step 4: Answer" collapse="true"} -->
-<!-- a. The variable `mean.acc` looks somewhat, but not massively, left-skewed (this is also referred to as negative skew). The long tail stretches out to the left. Most values cluster at the high end, with a few unusually low values dragging the tail out. The mean gets pulled down, so it sits to the left of the median (mean < median). -->
-<!-- b. The distribution of `mean.self` is similarly left-skewed to that of `mean.acc`. -->
-<!-- c. The variable `AGE` shows substantial right-skew. The long tail stretches out to the right. Most values cluster at the low end (with most participants being at the younger end), with a few unusually high values pulling the tail out. The mean gets dragged up, so it sits to the right of the median (mean > median). -->
-<!-- A quick way to remember: The skew is named for the direction of the tail, not where the bulk of the data sits. The “hump” goes the opposite way to the label. -->
-<!-- ::: -->
-<!-- **Questions Step 8** -->
-<!-- a. What is *r*, the coefficient for the correlation between `mean.acc` and `SHIPLEY`? -->
-<!-- b. Is the correlation between `mean.acc` and `HLVA`  significant? -->
-<!-- c.  What are the values for t and p for the significance test for the correlation between `mean.acc` and `AGE`? -->
-<!-- d. For which pair of outcome-predictor variables is the correlation the largest? -->
-<!-- e. What is the sign or direction of each of the correlations? -->
-<!-- :::{.callout-note icon=false title="Questions Step 8: Answers" collapse="true"} -->
-<!-- a. *r* = 0.47 -->
-<!-- b. Yes *r* is significant, because the value is p < .05. -->
-<!-- c.  *t* = 0.30, *p* = 0.764 -->
-<!-- d. The correlation is the largest between `mean.acc` and `HLVA`. -->
-<!-- e. All the correlations are positive. -->
-<!-- ::: -->
-<!-- **Questions Step 9** -->
-<!-- a. What is the estimate for the coefficient of the effect of the predictor `HLVA` on `mean.acc`? -->
-<!-- b. Is the effect significant? -->
-<!-- c. What are the values for t and p for the significance test for the coefficient? -->
-<!-- d. How would you describe in words the shape or direction of the association between `HLVA` and `mean.acc`? -->
-<!-- e. How how would you describe the relations apparent between the predictor and outcome in all three models? -->
-<!-- :::{.callout-note icon=false title="Questions Step 9: Answers" collapse="true"} -->
-<!-- a. 0.026207 -->
-<!-- b. It is significant, *p* < .05 -->
-<!-- c. *t* = 7.529, *p* = 2.87e-12 -->
-<!-- d. The slope coefficient -- and a scatterplot (draw it) -- suggest that as HLVA scores increase so also do mean accuracy scores. -->
-<!-- e. It is possible to see, given coefficient estimates, that the association between predictor and outcome is positive for each model: mean accuracy appears to increase for increasing values of SHIPLEY vocabulary, HLVA health literacy, and age. -->
-<!-- ::: -->
+</div>
+<p><strong>Questions Step 4</strong></p>
+<p>What do you conclude from the histograms in terms of distribution? Do the variables follow a normal distribution or are they skewed?</p>
+<ol type="a">
+<li>For the variable <code>mean.acc</code>?</li>
+<li>For the variable <code>mean.self</code>?</li>
+<li>For the variable <code>AGE</code>?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 4: Answer">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions Step 4: Answer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>The variable <code>mean.acc</code> looks somewhat, but not massively, left-skewed (this is also referred to as negative skew). The long tail stretches out to the left. Most values cluster at the high end, with a few unusually low values dragging the tail out. The mean gets pulled down, so it sits to the left of the median (mean &lt; median).</p></li>
+<li><p>The distribution of <code>mean.self</code> is similarly left-skewed to that of <code>mean.acc</code>.</p></li>
+<li><p>The variable <code>AGE</code> shows substantial right-skew. The long tail stretches out to the right. Most values cluster at the low end (with most participants being at the younger end), with a few unusually high values pulling the tail out. The mean gets dragged up, so it sits to the right of the median (mean &gt; median).</p></li>
+</ol>
+<p>A quick way to remember: The skew is named for the direction of the tail, not where the bulk of the data sits. The “hump” goes the opposite way to the label.</p>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 8</strong></p>
+<ol type="a">
+<li>What is <em>r</em>, the coefficient for the correlation between <code>mean.acc</code> and <code>SHIPLEY</code>?</li>
+<li>Is the correlation between <code>mean.acc</code> and <code>HLVA</code> significant?</li>
+<li>What are the values for t and p for the significance test for the correlation between <code>mean.acc</code> and <code>AGE</code>?</li>
+<li>For which pair of outcome-predictor variables is the correlation the largest?</li>
+<li>What is the sign or direction of each of the correlations?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 8: Answers">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions Step 8: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p><em>r</em> = 0.47</p></li>
+<li><p>Yes <em>r</em> is significant, because the value is p &lt; .05.</p></li>
+<li><p><em>t</em> = 0.30, <em>p</em> = 0.764</p></li>
+<li><p>The correlation is the largest between <code>mean.acc</code> and <code>HLVA</code>.</p></li>
+<li><p>All the correlations are positive.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 9</strong></p>
+<ol type="a">
+<li>What is the estimate for the coefficient of the effect of the predictor <code>HLVA</code> on <code>mean.acc</code>?</li>
+<li>Is the effect significant?</li>
+<li>What are the values for t and p for the significance test for the coefficient?</li>
+<li>How would you describe in words the shape or direction of the association between <code>HLVA</code> and <code>mean.acc</code>?</li>
+<li>How how would you describe the relations apparent between the predictor and outcome in all three models?</li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 9: Answers">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Questions Step 9: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>0.026207</p></li>
+<li><p>It is significant, <em>p</em> &lt; .05</p></li>
+<li><p><em>t</em> = 7.529, <em>p</em> = 2.87e-12</p></li>
+<li><p>The slope coefficient – and a scatterplot (draw it) – suggest that as HLVA scores increase so also do mean accuracy scores.</p></li>
+<li><p>It is possible to see, given coefficient estimates, that the association between predictor and outcome is positive for each model: mean accuracy appears to increase for increasing values of SHIPLEY vocabulary, HLVA health literacy, and age.</p></li>
+</ol>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

@@ -24,7 +24,7 @@ library(tidyverse)
 ```
 
 ::: {.callout-note title="Overview"}
-This week we focus on two strands of learning:
+This week we focus on three strands of learning:
 
 A.  The linear model with multiple predictors
 
@@ -45,10 +45,11 @@ We will do all this in the context of the **Clearly Understood** project
 on how easy or difficult people find it to understand written health
 information.
 
-B.  Research project: How to write a report
+B.  Research project: Building your study on Gorilla
 
-We will also continue the group project by focussing on data collection
-and how to write a report.
+We will also continue the group project by focussing on building your study on Gorilla, and starting data collection
+
+C.  Research project: How to write a report
 
 The materials we have prepared to support your learning are arranged in
 four parts:
@@ -315,14 +316,19 @@ You can use what you found in the Week 7 lab to help you. Keep your
 predictions: you will compare them with the results in Step 5 of the
 lab.
 
-### Pre-lab activity 3: Research project
+### Pre-lab activity 3: Continue work on your study
 
-<!-- PLACEHOLDER for Margriet: Part B pre-lab activities (data collection and report writing). -->
+Thank you for submitting your pre-registrations. The module coordinator has read through your pre-registrations and given each group individual feedback. Many of you made a good start.
 
-::: callout-tip
-Information about the pre-lab activities for the research project will
-be added as soon as possible.
-:::
+**Next steps**
+
+1. Review the [**summary of the most common issues**](project.qmd#sec-4141-project-feedback) with the pre-registrations. The summary includes do's and don'ts and a checklist, that you can check your own project against.
+2. Complete the [**Preparing your study for Gorilla**](project.qmd#sec-4141-project-prep) activity with your group.
+
+<!-- ::: callout-tip -->
+<!-- Information about the pre-lab activities for the research project will -->
+<!-- be added as soon as possible. -->
+<!-- ::: -->
 
 ### Pre-lab activity 4: Getting ready
 
@@ -909,13 +915,38 @@ b.  Compare the two models. Why are the slope estimates so different,
   mean for each of the two variables?
 :::
 
-### Lab activity 2: Research project
+### Lab activity 2: Research project - Build your study
 
-<!-- PLACEHOLDER for Margriet: Part B lab activity (data collection and report writing). -->
+::: {.callout-tip}
+Before you start this lab activity, make sure you've completed the next steps outlined in the Pre-lab activity:
 
-::: callout-tip
-Information about this lab activity will be added as soon as possible.
+1. Review the [**summary of the most common issues**](project.qmd#sec-4141-project-feedback) with the pre-registrations. The summary includes do's and don'ts and a checklist, that you can check your own project against.
+2. Complete the [**Preparing your study for Gorilla**](project.qmd#sec-4141-project-prep) activity with your group.
 :::
+
+Building your study happens in two phases.
+
+First, each group needs to build three questionnaires on Gorilla:
+
+1. One to measure (an aspect of) mind wandering
+2. One to measure (an aspect of) screen time
+3. One to measure relevant demographics.
+
+Second, once you've build the individual questionnaires, you can build your experiment.
+
+You can check that you have all the information you need for each phase by using the two checklists on the project page:
+
+1. Checklist 1: Before you build the individual measures [**here**](project.qmd#sec-4141-project-own)
+2. Checklist 2: Before you put your study together in the Experiment Builder [**here**](project.qmd#sec-4141-project-experiment)
+
+::: {.callout-tip}
+On the project page in the sections on [**Building your own measures**](project.qmd#sec-4141-project-own) and [**Building your experiment**](project.qmd#sec-4141-project-experiment), you'll also find links to relevant Gorilla support pages.
+:::
+
+
+<!-- ::: callout-tip -->
+<!-- Information about this lab activity will be added as soon as possible. -->
+<!-- ::: -->
 
 ## Answers {#sec-4141-w8-answers}
 
