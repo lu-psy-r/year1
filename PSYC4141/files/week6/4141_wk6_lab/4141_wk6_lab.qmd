@@ -19,6 +19,24 @@ editor: visual
 
 > Action: Insert a new code chunk by clicking on 'Code' at the top and selecting 'Insert Chunk'.In the code chunk, write code to load the libraries by using the `library()` function. We need the packages `here`, `tidyverse` and `easystats`. After you've written the code, make sure the run the code chunk (click on the green arrow in the top corner of the code chunk).
 
+
+```{r}
+library(here)
+library(tidyverse)
+library(easystats)
+
+intent_data <- read_csv(here("PSYC4141/files/week6/4141_wk6_lab", "RTA_study1.csv"))
+
+intent_data = mutate(
+  intent_data,
+  condition = dplyr::recode_values(condition, 1 ~ "rta", 2 ~ "control"),
+  actualdonate = dplyr::recode_values(actualdonate, 1 ~ "donated", 0 ~ "no_donation"))
+
+ggplot(data = intent_data, aes(x = condition, fill = actualdonate)) +
+  geom_bar(position = "dodge")
+
+```
+
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
 ### Step 2: Reading in the data file
@@ -45,7 +63,7 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 ### Step 4: Some more data wrangling - Use `recode_values()` to have text labels
 
-> Action: Insert a new code chunk and use `mutate()` and `recode_values()`  to change the numerical values for `condition` and `actualdonate` to text labels. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.
+> Action: Insert a new code chunk and use `mutate()` and `recode_values()` to change the numerical values for `condition` and `actualdonate` to text labels. The code to do this is below. You can copy it, but have a good look to make sure you understand what each bit does.
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
@@ -107,4 +125,4 @@ Make sure to go back to the handbook page and read the next bit of instruction, 
 
 Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
 
-#### Step 11: Write up the results following APA guidelines.
+### Step 11: Write up the results following APA guidelines.
