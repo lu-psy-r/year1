@@ -1,0 +1,209 @@
+---
+title: 13. The Research Report
+author: "Margriet Groen"
+order: 14 # this places it at the bottom
+format:
+  html:
+    toc: true
+    toc-depth: 2
+  # pdf:
+  #   toc: true
+  #   toc-depth: 2
+---
+
+:::{.callout-note title="Overview"}
+Here we summarise everything you need to know about the research report that is part of your assessment on PSYC4141.
+
+We provide:
+
+1. What are you being asked to do?
+2. What is a research report?
+3. What your research report should contain
+4. How is your report marked?
+<!-- 5. Further help and resources -->
+
+You can navigate to each in the side bar on the right.
+:::
+
+<!-- Note: I think it is helpful to have a list of the different sections in a week for cross-referencing. I don't think it helps readability it this is visible to the students (hence I've commented them out) as the outline in the sidebar on the right already provides this info. -->
+<!-- - @sec-4141-report-key-information: -->
+
+## 1. What you are being asked to do? {#sec-4141-report-key-information}
+
+This term your group designed and ran a study on whether mind wandering is related to screen time. Your task now is to write an **individual research report** about that study. The report should read like a short journal article: it tells the story of one question, from the reason for asking it, through how you tested it, to what you found and what it means.
+
+You will use the data your group collected, but the analysis and the writing are your own work.
+
+::: {.callout-important title="Key information"}
+
+**What** do you need to do? Analyse the data from the PSYC4141 research project and write up the results in a research report no longer than 1500 words, plus a 150 word abstract.
+
+**When** is the deadline? **Week 10**
+
+**How** do you submit your coursework? You need to submit 2 documents: 1) Submit your report as a Quarto document (.qmd) and your *Feedback title sheet* as a Word document (.docx) via the submission space on the PSYC4141 Moodle page.
+
+**How** does the report contribute to your module mark? The mark for the report accounts for 35% of your module mark.
+:::
+
+::: {.callout-warning title="Academic integrity"}
+PSYC4141 is a [**RED**]{style="color: red;"} module. This means that you must not use Gen AI tools for any aspect of your work. You will need to confirm that you have not used AI to generate or edit
+your thoughts/content/words using the *AI Transparency Sheet* that is part of the [*Feedback Title sheet*](files/report/Feedback_Titlesheet_Accessibility_2023_KD.docx). For those students with an ILSP that permits the use of AI tools, you will need to indicate that you have used them and complete an AI transparency appendix as outlined for [**AMBER**]{style="color: #FFBF00;"} and [**GREEN**]{style="color: green;"} modules.
+
+Please refer to the general [**Assessment Guidance**](https://modules.lancaster.ac.uk/course/section.php?id=575532) on Moodle including the [**Lancaster University Department of Psychology Academic Integrity Student Guide**](files/report/LU_Psychology_Academic_Integrity_Student_Guide.pdf) for further details.
+:::
+
+## 2. What the report is about: A chain of alignment {#sec-4141-report-alignment}
+
+The most important thing we are looking for is not a surprising result. It is a report in which every part connects to the next one. Think of it as a chain:
+
+| Introduction | Method | Results | Discussion |
+|:---:|:---:|:---:|:---:|
+| **idea → research question → hypothesis** | **methods** | **results** | **critical evaluation → take-home message** |
+
+- Your **introduction** explains the idea behind the study and why it matters, leads the reader to your research question, and states your hypothesis: a specific, testable prediction that answers that question.
+- Your **method** describes how you tested that hypothesis, and you can justify the choices you made.
+- Your **results** report the analysis that tests the hypothesis, and nothing that wanders off it.
+- Your **discussion** first evaluates your study critically (who took part, how things were measured, what limits the conclusions), then gives a take-home message that answers the research question using only what the results can support.
+
+Your **abstract** sits at the start but is written last. It is the whole chain in miniature: a sentence or two on each link, in the same order. If you cannot write it, a link in your report is probably missing.
+
+If one link is weak (for example, a hypothesis that your measures cannot test, or a conclusion that goes beyond your data), the whole report suffers, however well the rest is written. A modest study with a tight chain will score better than an ambitious one with gaps.
+
+## 3. What your report should contain {#sec-4141-report-structure}
+
+Your report follows the structure of a short empirical article:
+
+| Section | What it does |
+|---|---|
+| **Title** | Tells the reader what the study is about |
+| **Abstract** | Summarises the whole study in a short paragraph, following the same chain as the report |
+| **Introduction** | Gives the rationale for the study, ends with your research question and hypothesis |
+| **Method** | Describes participants, measures, procedure and ethics so another researcher could repeat the study |
+| **Results** | Reports the correlation analysis, with a table or figure, and states whether the hypothesis was supported |
+| **Discussion** | Interprets the result, considers who took part and what limits the conclusions, and ends with a clear take-home message |
+| **References** | Lists every source you cite |
+
+Detailed guidance on each section, including why APA asks for things to be done in a particular way, is in the separate *Writing Guidance* document. The *Marking Criteria* show how the report will be judged.
+
+### The analysis
+
+You will test your hypothesis using **correlation**. You will run this analysis yourself in R, inside your Quarto document. You will use the group dataset, but you must run, interpret and report the analysis yourself.
+
+### The Quarto document
+
+You submit a single Quarto document (.qmd). It contains your report text *and* the code that produces your analysis, so that anyone can see exactly how your numbers were produced. A template will be shared soon to get you started.
+
+<!-- You can use this [**template**](files/report/report_template.qmd) to get started. -->
+
+- You write the code for your analysis yourself, using what you have learned in previous weeks. You do not need to learn advanced Quarto features.
+- You type the numbers into your text yourself, reading them from your output. The values you report must come from your output, but you round them as APA requires (the Writing Guidance explains how), so you will not copy every decimal place.
+- Each code block in your document must run without errors.
+
+### Your study and your data
+
+Your group:
+
+- chose how to measure mind wandering and screen time, and submitted a pre-registration with your research question, hypotheses and measures;
+- collected data from about 50 adult participants (recruited from your own networks) through Gorilla.
+
+Your report should be based on your group's pre-registration, plus the changes you made based on the feedback you received. You may reuse wording from your pre-registration.
+
+The data are shared within your group, and it does not matter if the wording you take from your pre-registration overlaps with that of other students in your group. Everything else, including your analysis and how you explain and interpret your results, must be your own work. Reports that are copied from each other beyond this will be treated as an academic integrity issue.
+
+### Word count and formatting
+
+- The limit is **1500 words**. This excludes the title, abstract, figures, tables and reference list. The abstract should be no longer than 150 words.
+- Follow **APA 7** for headings, in-text citations, the reference list, and the presentation of statistics, tables and figures.
+
+### Before you submit, check that:
+
+- each part of your report follows from the part before it;
+- your hypothesis can be tested with the measures you used;
+- the numbers in your text come from your output and are rounded and formatted as APA requires;
+- your conclusions do not go further than your data allow;
+- each code block in your Quarto document runs without errors;
+- you are within the word limit and have cited and referenced in APA style.
+
+## 4. How is your report marked? {#sec-4141-report-marking}
+
+Your report is judged on six criteria. For each one, the marker chooses a category: **Needs work**, **Acceptable**, **Good** or **Outstanding**. Your feedback shows a grid with one tick per criterion, so you can see your profile at a glance, followed by comments on what went well and what to do next time. Your overall mark comes from that profile and the marker's overall judgement (see "From criteria to overall mark" below).
+
+Three things to know:
+
+- **Alignment matters most.** The criteria follow the chain from idea to take-home message, and one criterion looks at whether the chain holds across the whole report, including the abstract.
+- **Your result does not decide your mark.** A weak, zero or unexpected correlation can earn top marks if the report is aligned, honest and well evaluated. A significant result in a report with broken links cannot.
+- **Use the grid before you submit.** Read each criterion, choose the category you think your report reaches, and find the evidence for it in your own text.
+
+### Criterion 1 - Introduction: idea, research question and hypotheses
+
+| Category | What it looks like |
+|:-----------|:------------------------------------------------------------------|
+| **Outstanding** | Explains why the idea matters, using relevant sources, including a theory or mechanism that could explain why screen time and mind wandering might be associated. Narrows step by step to a research question. States both the null and the alternative hypothesis, which follow directly from that argument, name both variables and state the expected relationship. |
+| **Good** | A clear rationale, question, and testable null and alternative hypotheses. The theory or mechanism is relevant but only partly linked to the hypotheses, or the step from rationale to hypotheses could be tighter. |
+| **Acceptable** | The topic is introduced and a question is stated, but the rationale is general or descriptive, and any theory or mechanism is mentioned rather than explained. The hypotheses are vague, only one is stated, or they do not clearly follow. |
+| **Needs work** | The rationale is missing or unclear, with no theory or mechanism. The question or hypotheses are missing, cannot be tested, or do not match the study. |
+
+### Criterion 2 - Method
+
+| Category | What it looks like |
+|:-----------|:------------------------------------------------------------------|
+| **Outstanding** | Another researcher could repeat the study: participants (including the sample size and how they were recruited), measures, procedure and ethics are all clear. Each measure is plainly a measure of a variable in the hypotheses, with a reason for the choice. |
+| **Good** | Complete and clear, including the sample size, with minor gaps. The link between measures and hypotheses is clear but the justification is thin. |
+| **Acceptable** | Most information is there, but gaps would stop someone repeating the study, or the link between measures and hypotheses is left for the reader to work out. |
+| **Needs work** | Key information is missing (such as the sample size), a measure does not match the hypotheses, or the description is too vague to allow replication. |
+
+### Criterion 3 - Results
+
+| Category | What it looks like |
+|:-----------|:------------------------------------------------------------------|
+| **Outstanding** | Presents the data to the reader with descriptive statistics for each variable in the text or a table; a figure helps the reader see the pattern. The correlation analysis suits the data, with the checks taught in the module reported briefly. Statistics are reported correctly in APA format. States whether the null hypothesis is rejected or not rejected (never "accepted") and what this means for the alternative hypothesis. The code runs and produces the reported numbers. |
+| **Good** | Descriptive statistics and a table and/or figure are present, and the analysis is correct, with minor reporting slips. The table or figure could be clearer, or the decision about the null hypothesis is correct but briefly worded. |
+| **Acceptable** | Descriptive statistics are incomplete, or the table and/or figure is missing or hard to follow. The analysis is broadly right, but with errors in reporting or interpretation, or the decision about the null hypothesis is unclear. |
+| **Needs work** | Descriptive statistics are missing or incorrect. The analysis is inappropriate or conducted incorrectly, the numbers in the text do not match the output, there is no decision about the null hypothesis, or the code does not run. |
+
+### Criterion 4 - Discussion: critical evaluation and take-home message
+
+| Category | What it looks like |
+|:-----------|:------------------------------------------------------------------|
+| **Outstanding** | Answers the research question first. Relates the finding to key findings in the literature, saying whether it fits them and what might explain any difference. Evaluates this study specifically: who took part and how they were recruited, how each concept was measured, and why a correlation cannot show cause. Explains how each point affects what can be concluded. Ends with a take-home message that goes no further than the data. |
+| **Good** | Answers the question, relates the finding to the literature and evaluates the study sensibly, but the link to the literature is brief, some points are not linked back to the conclusion, or the take-home message is slightly broad. |
+| **Acceptable** | Mostly restates the results, with little or no link to the literature. Limitations are generic (for example "small sample") and not tied to this study's conclusion. The take-home message is vague or overreaches. |
+| **Needs work** | No real evaluation, no link to the literature, or conclusions the results do not support (for example, claiming screen time causes mind wandering). |
+
+### Criterion 5 - Alignment across the report
+
+This criterion is judged on the report as a whole, including the title and abstract.
+
+| Category | What it looks like |
+|:-----------|:------------------------------------------------------------------|
+| **Outstanding** | Each part follows from the one before: the question fits the idea, the hypotheses answer the question, the methods can test them, the results address them, and the discussion answers the question. The abstract mirrors this chain. A reader could sum up the study in one sentence. |
+| **Good** | The chain holds, with one weak link (for example, a hypothesis that is slightly broader than the measures can test). |
+| **Acceptable** | The chain is visible but has two or more weak links, or one clear mismatch between sections. |
+| **Needs work** | Sections read as separate pieces. The hypotheses, measures, results and conclusion do not address the same question. |
+
+### Criterion 6 - Scientific writing and APA
+
+| Category | What it looks like |
+|:-----------|:------------------------------------------------------------------|
+| **Outstanding** | APA 7 is applied accurately and consistently: heading levels and wording, in-text citations, the reference list, the formatting of numbers and statistics, and the numbering and titling of tables and figures. Writing is clear and concise, in a scientific style. The abstract is self-contained. Within the word limit. |
+| **Good** | APA is mostly accurate with a few inconsistencies. Writing is clear, with occasional wordiness or informality. |
+| **Acceptable** | APA is attempted but with repeated errors. Writing sometimes obscures the meaning. The abstract is missing a part of the story. |
+| **Needs work** | APA is largely absent. Writing makes the report hard to follow. Over the word limit, or no abstract. |
+
+### From criteria to overall mark
+
+The overall mark is a judgement guided by your profile, not an average. As a guide:
+
+| Grade | Typical profile |
+|:-----------|:------------------------------------------------------------------|
+| **A (A+, A, A-)** | Alignment is Outstanding, at least three other criteria are Outstanding, and none is below Good. |
+| **B (B+, B, B-)** | Alignment is Good or better, most criteria are Good with some Outstanding, and none is below Acceptable. |
+| **C (C+, C, C-)** | Mostly Acceptable and Good. Alignment is at least Acceptable. |
+| **D (D+, D, D-)** | Mostly Acceptable, with some Needs work. |
+| **F (F1 to F4)** | Mostly Needs work, or the hypotheses are not tested. F4 is reserved for no attempt made. |
+
+The plus or minus shows how securely the profile fits the grade. Use a plus when the profile sits at the top of the grade (for a B, for example, Alignment is Outstanding or several criteria are Outstanding), a plain letter for a typical fit, and a minus when the profile only just meets the grade (for a B, Alignment is only Good and one criterion is Acceptable).
+
+<!-- ## 5. Further help and resources {#sec-4141-report-resources} -->
+
+<!-- ### Building your rationale -->
