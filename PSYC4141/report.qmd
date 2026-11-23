@@ -1,5 +1,5 @@
 ---
-title: 13. The Research Report
+title: 13. The Report page
 author: "Margriet Groen"
 order: 14 # this places it at the bottom
 format:
@@ -34,7 +34,7 @@ This term your group designed and ran a study on whether mind wandering is relat
 
 You will use the data your group collected, but the analysis and the writing are your own work.
 
-::: {.callout-important title="Key information"}
+::: {.callout-warning title="Key information"}
 
 **What** do you need to do? Analyse the data from the PSYC4141 research project and write up the results in a research report no longer than 1500 words, plus a 150 word abstract.
 
@@ -45,7 +45,7 @@ You will use the data your group collected, but the analysis and the writing are
 **How** does the report contribute to your module mark? The mark for the report accounts for 35% of your module mark.
 :::
 
-::: {.callout-warning title="Academic integrity"}
+::: {.callout-important title="Academic integrity"}
 PSYC4141 is a [**RED**]{style="color: red;"} module. This means that you must not use Gen AI tools for any aspect of your work. You will need to confirm that you have not used AI to generate or edit
 your thoughts/content/words using the *AI Transparency Sheet* that is part of the [*Feedback Title sheet*](files/report/Feedback_Titlesheet_Accessibility_2023_KD.docx). For those students with an ILSP that permits the use of AI tools, you will need to indicate that you have used them and complete an AI transparency appendix as outlined for [**AMBER**]{style="color: #FFBF00;"} and [**GREEN**]{style="color: green;"} modules.
 
