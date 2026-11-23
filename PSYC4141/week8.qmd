@@ -692,7 +692,7 @@ Fill in the gaps `...` using the model summary from Step 5.
 - Report the estimate as *b*. In the lecture slides the estimate is
   written as β. In APA style, β is normally used for *standardised*
   estimates, and the estimates from `lm()` are unstandardised, so we use
-  *b*. See here for [guidance on APA reporting](files/week8/4141-linear-model-develop.html) 
+  *b*. See here for [guidance on APA reporting](https://owl.purdue.edu/owl/research_and_citation/apa6_style/apa_formatting_and_style_guide/apa_tables_and_figures_1.html) 
 - Round `t` and `R-squared` to two decimal places. Our estimates are
   small because `mean.acc` runs from 0 to 1, so give *b* to three
   decimal places (e.g. *b* = 0.003, not 0.00).
