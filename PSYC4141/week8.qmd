@@ -1,6 +1,6 @@
 ---
 title: 8. Week 8 - Developing the linear model
-subtitle: Written by Rob Davies and Samuel Finnerty
+subtitle: Written by Rob Davies, Samuel Finnerty, & Margriet Groen
 order: 8 # ensure this is one more than the previous script
 editor: 
   markdown: 
@@ -47,7 +47,8 @@ information.
 
 B.  Research project: Building your study on Gorilla
 
-We will also continue the group project by focussing on building your study on Gorilla, and starting data collection
+We will also continue the group project by focussing on building your
+study on Gorilla, and starting data collection
 
 C.  Research project: How to write a report
 
@@ -224,7 +225,7 @@ We are always working in the broader context of uncertainty:
 
 There is no lecture content for this part.
 
-**C.  Research project: How to write a report**
+**C. Research project: How to write a report**
 
 Lecture content for this part will be added as soon as possible.
 
@@ -323,16 +324,26 @@ lab.
 
 ### Pre-lab activity 3: Continue work on your study
 
-Thank you for submitting your pre-registrations. The module coordinator has read through your pre-registrations and given each group individual feedback. Many of you made a good start.
+Thank you for submitting your pre-registrations. The module coordinator
+has read through your pre-registrations and given each group individual
+feedback. Many of you made a good start.
 
 **Next steps**
 
-1. Review the [**summary of the most common issues**](project.qmd#sec-4141-project-feedback) with the pre-registrations. The summary includes do's and don'ts and a checklist, that you can check your own project against.
-2. Complete the [**Preparing your study for Gorilla**](project.qmd#sec-4141-project-prep) activity with your group.
+1.  Review the [**summary of the most common
+    issues**](project.qmd#sec-4141-project-feedback) with the
+    pre-registrations. The summary includes do's and don'ts and a
+    checklist, that you can check your own project against.
+2.  Complete the [**Preparing your study for
+    Gorilla**](project.qmd#sec-4141-project-prep) activity with your
+    group.
 
 <!-- ::: callout-tip -->
+
 <!-- Information about the pre-lab activities for the research project will -->
+
 <!-- be added as soon as possible. -->
+
 <!-- ::: -->
 
 ### Pre-lab activity 4: Getting ready
@@ -681,10 +692,15 @@ Fill in the gaps `...` using the model summary from Step 5.
 - Report the estimate as *b*. In the lecture slides the estimate is
   written as β. In APA style, β is normally used for *standardised*
   estimates, and the estimates from `lm()` are unstandardised, so we use
-  *b*.
-- Round estimates, `t` and `R-squared` to two or three decimal places.
-- When R shows a very small p-value (e.g. `2.87e-12`), report it as p \<
-  .001.
+  *b*. See here for [guidance on APA reporting](files/week8/4141-linear-model-develop.html) 
+- Round `t` and `R-squared` to two decimal places. Our estimates are
+  small because `mean.acc` runs from 0 to 1, so give *b* to three
+  decimal places (e.g. *b* = 0.003, not 0.00).
+- Write a leading zero for *b* (e.g. 0.017), but not for p or
+  `R-squared` (e.g. p = .005, R² = .36), because these cannot be larger
+  than 1.
+- When R shows a very small p-value (e.g. `2.87e-12`), report it as
+  p \< .001.
 :::
 
 #### Step 7: Plot model predictions
@@ -922,35 +938,49 @@ b.  Compare the two models. Why are the slope estimates so different,
 
 ### Lab activity 2: Research project - Build your study
 
-::: {.callout-tip}
-Before you start this lab activity, make sure you've completed the next steps outlined in the Pre-lab activity:
+::: callout-tip
+Before you start this lab activity, make sure you've completed the next
+steps outlined in the Pre-lab activity:
 
-1. Review the [**summary of the most common issues**](project.qmd#sec-4141-project-feedback) with the pre-registrations. The summary includes do's and don'ts and a checklist, that you can check your own project against.
-2. Complete the [**Preparing your study for Gorilla**](project.qmd#sec-4141-project-prep) activity with your group.
+1.  Review the [**summary of the most common
+    issues**](project.qmd#sec-4141-project-feedback) with the
+    pre-registrations. The summary includes do's and don'ts and a
+    checklist, that you can check your own project against.
+2.  Complete the [**Preparing your study for
+    Gorilla**](project.qmd#sec-4141-project-prep) activity with your
+    group.
 :::
 
 Building your study happens in two phases.
 
 First, each group needs to build three questionnaires on Gorilla:
 
-1. One to measure (an aspect of) mind wandering
-2. One to measure (an aspect of) screen time
-3. One to measure relevant demographics.
+1.  One to measure (an aspect of) mind wandering
+2.  One to measure (an aspect of) screen time
+3.  One to measure relevant demographics.
 
-Second, once you've build the individual questionnaires, you can build your experiment.
+Second, once you've build the individual questionnaires, you can build
+your experiment.
 
-You can check that you have all the information you need for each phase by using the two checklists on the project page:
+You can check that you have all the information you need for each phase
+by using the two checklists on the project page:
 
-1. Checklist 1: Before you build the individual measures [**here**](project.qmd#sec-4141-project-own)
-2. Checklist 2: Before you put your study together in the Experiment Builder [**here**](project.qmd#sec-4141-project-experiment)
+1.  Checklist 1: Before you build the individual measures
+    [**here**](project.qmd#sec-4141-project-own)
+2.  Checklist 2: Before you put your study together in the Experiment
+    Builder [**here**](project.qmd#sec-4141-project-experiment)
 
-::: {.callout-tip}
-On the project page in the sections on [**Building your own measures**](project.qmd#sec-4141-project-own) and [**Building your experiment**](project.qmd#sec-4141-project-experiment), you'll also find links to relevant Gorilla support pages.
+::: callout-tip
+On the project page in the sections on [**Building your own
+measures**](project.qmd#sec-4141-project-own) and [**Building your
+experiment**](project.qmd#sec-4141-project-experiment), you'll also find
+links to relevant Gorilla support pages.
 :::
 
-
 <!-- ::: callout-tip -->
+
 <!-- Information about this lab activity will be added as soon as possible. -->
+
 <!-- ::: -->
 
 ## Answers {#sec-4141-w8-answers}
