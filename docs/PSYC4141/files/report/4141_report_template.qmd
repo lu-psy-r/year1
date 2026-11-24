@@ -1,0 +1,133 @@
+---
+title: "Your Title Here: Say What the Study Is About"
+author: "Your student ID (not your name)"
+date: today
+abstract: |
+  Write this last. About 150 words, no more, in a single paragraph. One or two sentences on each link of the chain, in order: the idea and why it matters, your research question, your hypotheses, the method (who and how many took part, what you measured), the main result (include the key statistic), and the take-home message. Use the past tense for what you did and found, and the present tense for your conclusion. Delete these instructions and replace them with your abstract.
+execute:
+  echo: true
+---
+
+```{=html}
+<!--
+HOW TO USE THIS TEMPLATE
+- Anything between these arrows is a comment. It does not appear in your report. Delete the comments as you go.
+- Keep the structure below, in this order. Do not add other main headings.
+- Your report is 1500 words, not counting the title, abstract, figures, tables and reference list.
+- Write your own code in code blocks (Insert > Insert Chunk, or type three backticks followed by {r}). The line "echo: true" at the top makes sure your code is shown.
+- Every code block must run without errors, and every number you write in your text must match what your code produces. Check them before you submit.
+- Remember the chain: idea > research question > hypothesis > methods > results > critical evaluation > take-home message. Each part should follow from the one before it.
+
+APA HEADINGS
+- In APA style the introduction has no heading, because the title does that job. So your introduction starts straight after these comments, with no heading above it.
+- Method, Results, Discussion and References are the main headings (APA Level 1). Use one # for these. In a full APA paper they are centred and bold; here, just use # and the correct wording.
+- Participants, Measures and Procedure are subheadings (APA Level 2), written with two ##. In a full APA paper they are flush left and bold.
+- Write headings in title case (capital letters on the main words).
+
+For further guidance on each section, consult the Writing Guide (report.qmd#sec-4141-report-writing-guide)
+-->
+```
+
+```{=html}
+<!--
+INTRODUCTION (no heading)
+
+Explain the idea behind your study and why it matters. Include a theory or mechanism that could explain why screen time and mind wandering might be associated, and cite your sources.
+Narrow down step by step to your research question.
+End with your research question, then your null hypothesis (H0) and your alternative hypothesis (H1). Name both variables and say what relationship you expect.
+
+TENSE
+- Present tense for definitions, theories and established knowledge (Mind wandering is ...).
+- Past tense for specific earlier studies (Smith (2020) found ...) and for your hypotheses (We hypothesised that ...).
+- Your pre-registration was written in the future tense (We will measure ...). Change it to the past tense when you reuse it.
+
+CITING SOURCES IN YOUR TEXT
+- One author: Smith (2020) found ..., or ... (Smith, 2020).
+- Two authors: Smith and Jones (2020) found ..., or ... (Smith & Jones, 2020).
+- Three or more authors: Smith et al. (2020) found ..., or ... (Smith et al., 2020).
+- Put the year, not the page, unless you quote directly. Paraphrase rather than quote.
+
+Delete these comments and write your introduction here.
+-->
+```
+
+# Method
+
+## Participants
+
+```{=html}
+<!--
+How many people took part (give the sample size, for example N = 50), how they were recruited, and who they were (for example, age and gender, as summarised in the data). Mention any exclusions.
+Use the past tense throughout the Method: it records what happened.
+-->
+```
+
+## Measures
+
+```{=html}
+<!--
+Describe how you measured mind wandering and screen time (and any demographic questions). Say why each measure suits the variable in your hypotheses. Say how each is scored and what a higher score means.
+Use digits for scale points, scores, ages and times, even below 10 (for example, a 5-point scale ranging from 1 to 5).
+-->
+```
+
+## Procedure
+
+```{=html}
+<!--
+What participants did, in order, and how long it took. Say that the study ran online on Gorilla and had ethical approval, and how ethical issues were handled (for example, consent, the right to withdraw and debrief).
+-->
+```
+
+# Results
+
+```{=html}
+<!--
+Start by presenting your data. Report descriptive statistics for each variable (in the text or in a table), and include a figure that helps the reader see the pattern.
+
+Then report the correlation that tests your hypothesis, including the checks you were taught. Put your analysis code in code blocks, before or alongside the text that reports it.
+
+State whether you reject or fail to reject the null hypothesis (never "accept"), and what this means for your alternative hypothesis. Do not interpret the finding here; that comes in the Discussion.
+
+Use the past tense for your findings (... was positively correlated with ...) and the present tense when pointing to a table or figure (Table 1 shows ...).
+
+REPORTING NUMBERS AND STATISTICS (APA 7)
+- Put statistical symbols in italics: *M*, *SD*, *N*, *r*, *p*. Use *N* for the whole sample and *n* for a part of it.
+- Put spaces around =, < and >: *r*(48) = -.32. Degrees of freedom go in brackets after the test symbol.
+- No zero before the decimal point for values that cannot be greater than 1, such as *r* and *p*: *r* = .32, *p* = .024. Use a zero for values that can be greater than 1: *M* = 0.85.
+- Round *r* to two and *p* to three decimal places. If *p* is smaller than .001, write *p* < .001. Report the exact *p* otherwise.
+- For means and standard deviations for integer-scale data (e.g., surveys): one decimal, and two decimals for other means and SDs. Use the same number of decimals for the same measure throughout. Your output will show many more digits; do not copy them all.
+- Report a confidence interval with the correlation: 95% CI [.05, .55]. Put both limits inside square brackets.
+- Write numbers below 10 as words (six participants) and 10 and above as numerals (24 participants). Use numerals for statistics, measurements, ages and points on a scale, even below 10, and never start a sentence with a numeral.
+
+TABLES AND FIGURES
+- Number each one (Table 1, Figure 1) and refer to it by number in your text.
+- For a table, put the number in bold on one line, then the title in italics, in title case, on the line below, both above the table. Use as few lines as possible and no vertical lines.
+- For a figure, the number (bold) and title (italics) go above the figure. Label the axes clearly, with units.
+-->
+```
+
+# Discussion
+
+```{=html}
+<!--
+Answer your research question first, in plain words, using your result. Do not repeat statistics to do this, just words.
+Relate your finding to key findings in the literature: does it fit them, and what might explain any difference?
+Evaluate your study critically: who took part and how they were recruited, how each concept was measured, and why a correlation cannot show cause. For each point, say how it affects what you can conclude.
+End with a take-home message that goes no further than your data allow.
+Use the past tense for your findings and those of other studies, and the present tense for interpretation and your take-home message (This suggests ...).
+-->
+```
+
+# References
+
+```{=html}
+<!--
+List every source you cited, in APA 7 format, in alphabetical order by the first author's surname. Every source in your text must be here, and every source here must be cited in your text.
+
+Journal article pattern (an italic line is written between asterisks):
+Author, A. A., & Author, B. B. (Year). Title of the article in sentence case. *Name of the Journal in Title Case*, *volume*(issue), first page-last page. https://doi.org/xxxxx
+
+A hanging indent (every line after the first indented) is part of APA style, but you do not need to make it in this document.
+-->
+```

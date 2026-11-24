@@ -979,7 +979,7 @@ links to relevant Gorilla support pages.
 
 ### Lab activity 3: Research report - Plan your introduction
 
-The same decisions that have gone into building your study on Gorilla, also shape the introduction of your research report, which needs to make an argument for why your study makes sense and why it is designed the way it is. A section of the handbook on the research report will be released soon. This will include an activity on [**Building the rationale for your study**](@sec-4141-project-rationale) to help you plan this.
+The same decisions that have gone into building your study on Gorilla, also shape the introduction of your research report, which needs to make an argument for why your study makes sense and why it is designed the way it is. A section of the handbook on the research report will be released soon. This will include an activity on [**Building the rationale for your study**](report.qmd#sec-4141-report-resources) to help you plan this.
 
 <!-- ::: callout-tip -->
 
