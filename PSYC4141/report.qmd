@@ -216,21 +216,6 @@ Key sections:
 ### Writing Guide {#sec-4141-report-writing-guide}
 This guide takes you through your research report section by section. For each section it explains what the section is for, what to include, and why APA asks you to do things in a particular way. It uses the same criteria your report will be marked against, so you can use it to plan, draft and check your report.
 
-The key facts:
-
-- **Length:** 1500 words, not counting the title, abstract, figures, tables and reference list.
-- **Format:** a single Quarto document with your writing and your analysis code. Every code block must run without errors.
-- **Use the Quarto template:** start from the PSYC4141 report template. It already has the headings and subheadings you need, with short reminders of what goes in each section. This guide gives the full explanation behind those reminders. Put your student ID, not your name, in the author field.
-- **Your own work:** your group collected the data together, but you write the report on your own. You may reuse wording from your group's pre-registration.
-- **No Generative AI:** PSYC4141 is a red module. You must not use Gen AI tools for any part of this work. See box below for more info.
-
-::: {.callout-important title="Academic integrity"}
-PSYC4141 is a [**RED**]{style="color: red;"} module. This means that you must not use Gen AI tools for any aspect of your work. You will need to confirm that you have not used AI to generate or edit
-your thoughts/content/words using the *AI Transparency Sheet* that is part of the [*Feedback Title sheet*](files/report/Feedback_Titlesheet_Accessibility_2023_KD.docx). For those students with an ILSP that permits the use of AI tools, you will need to indicate that you have used them and complete an AI transparency appendix as outlined for [**AMBER**]{style="color: #FFBF00;"} and [**GREEN**]{style="color: green;"} modules.
-
-Please refer to the general [**Assessment Guidance**](https://modules.lancaster.ac.uk/course/section.php?id=575532) on Moodle including the [**Lancaster University Department of Psychology Academic Integrity Student Guide**](files/report/LU_Psychology_Academic_Integrity_Student_Guide.pdf) for further details.
-:::
-
 #### The big idea: alignment {#sec-4141-guide-alignment}
 
 A research report is an argument. Each part leads into the next one, and the parts have to fit together. We call this **alignment**. It is the most important thing in your report, and it has its own marking criterion.
@@ -279,7 +264,7 @@ A good structure moves from broad to narrow:
 **Tense:** use the present tense for definitions, theories and established knowledge ("Mind wandering is…", "Attention is a limited resource…"). Use the past tense for what specific earlier studies did and found ("Smith (2020) found…"). Use the past tense for your own hypotheses, because the study has already been carried out ("We hypothesised that…").
 
 ::: {.callout-tip title="Start from your pre-registration"}
-You don't need to start from a blank page. Your pre-registration, the feedback on it and your responses to the feedback already contain your research question, hypotheses and the reasons for your decisions. See [**Building the rationale for your study**](files/report/Building_the_rationale_for_your_study) for an activity that turns these into a plan for your introduction.
+You don't need to start from a blank page. Your pre-registration, the feedback on it and your responses to the feedback already contain your research question, hypotheses and the reasons for your decisions. See [**Building the rationale for your study**](files/report/Building_the_rationale_for_your_study.docx) for an activity that turns these into a plan for your introduction.
 
 Your pre-registration was written before you collected data, so it is in the future tense ("We will measure…", "We predict…"). Change this to the past tense when you reuse it in your report.
 :::
@@ -365,7 +350,7 @@ The discussion contains the last two links in the chain: **critical evaluation �
 - **Switching tense:** the past tense marks what was observed, and the present tense marks what you are claiming it means. Keeping the two apart lets the reader see where your evidence ends and your interpretation begins, which is the core of critical evaluation.
 :::
 
-::: {.callout-warning title="Common pitfalls}
+::: {.callout-warning title="Common pitfalls"}
 - A generic list of limitations ("the sample was small") with no explanation of why it matters for *this* finding.
 - Causal language ("screen time causes mind wandering") about a correlational study.
 - New results, or ideas that were never introduced, appearing only in the discussion.
@@ -406,7 +391,7 @@ Never start a sentence with a digit. Either write the number in words ("Forty-ei
 | Results | your findings | pointing to tables and figures |
 | Discussion | your findings and those of other studies | interpretation, implications, take-home message |
 
-For more info see the [**APA Style Guide - Tense**](https://apastyle.apa.org/style-grammar-guidelines/grammar/verb-tense)
+For further guidance see the [**APA Style Guide - Tense**](https://apastyle.apa.org/style-grammar-guidelines/grammar/verb-tense)
 
 ::: {.callout-note title="Why APA does it this way"}
 - **Heading levels:** consistent heading levels show the structure of the report at a glance, so readers can find any section in any APA paper.
