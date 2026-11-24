@@ -124,7 +124,7 @@ The data are shared within your group, and it does not matter if the wording you
 
 ## 4. How is your report marked? {#sec-4141-report-marking}
 
-Your report is judged on six criteria. For each one, the marker chooses a category: [**Needs work**]{.needs-work}, [**Acceptable**]{.accepatable}, [**Good**]{.good} or [**Outstanding**]{.outstanding}. Your feedback shows a grid with one tick per criterion, so you can see your profile at a glance, followed by comments on what went well and what to do next time. Your overall mark comes from that profile and the marker's overall judgement (see @sec-4141-report-marking-overall below).
+Your report is judged on six criteria. For each one, the marker chooses a category: [**Needs work**]{.needs-work}, [**Acceptable**]{.acceptable}, [**Good**]{.good} or [**Outstanding**]{.outstanding}. Your feedback shows a grid with one tick per criterion, so you can see your profile at a glance, followed by comments on what went well and what to do next time. Your overall mark comes from that profile and the marker's overall judgement (see @sec-4141-report-marking-overall below).
 
 Three things to know:
 
@@ -133,11 +133,6 @@ Three things to know:
 - **Use the grid before you submit.** Read each criterion, choose the category you think your report reaches, and find the evidence for it in your own text.
 
 ### Criterion 1 - Introduction: idea, research question and hypotheses
-
-[Needs attention]{.needs-work}
-[Acceptable]{.acceptable}
-[Good]{.good}
-[Outstanding]{.outstanding}
 
 | Category | What it looks like |
 |:-----------|:------------------------------------------------------------------|
