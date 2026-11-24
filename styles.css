@@ -1,0 +1,15 @@
+/* Marking category colours */
+.needs-attention,
+.acceptable,
+.good,
+.outstanding {
+  color: #1A1A1A;
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.needs-work      { background-color: #FBD3A0; }
+.acceptable      { background-color: #F2EDD8; }
+.good            { background-color: #B9DDF0; }
+.outstanding     { background-color: #7FB6E0; }

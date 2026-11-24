@@ -4,11 +4,9 @@ author: "Margriet Groen"
 order: 14 # this places it at the bottom
 format:
   html:
+    css: styles.css
     toc: true
     toc-depth: 2
-  # pdf:
-  #   toc: true
-  #   toc-depth: 2
 ---
 
 :::{.callout-note title="Overview"}
@@ -83,7 +81,7 @@ Your report follows the structure of a short empirical article:
 | **Discussion** | Interprets the result, considers who took part and what limits the conclusions, and ends with a clear take-home message |
 | **References** | Lists every source you cite |
 
-Detailed guidance on each section, including why APA asks for things to be done in a particular way, is in the separate @sec-4141-report-writing-guide. The *Marking Criteria* in @sec-4141-report-marking below show how the report will be marked.
+Detailed guidance on each section, including why APA asks for things to be done in a particular way, is in the *Writing Guide* in @sec-4141-report-writing-guide. The *Marking Criteria* in @sec-4141-report-marking below show how the report will be marked.
 
 ### The analysis
 
@@ -126,7 +124,7 @@ The data are shared within your group, and it does not matter if the wording you
 
 ## 4. How is your report marked? {#sec-4141-report-marking}
 
-Your report is judged on six criteria. For each one, the marker chooses a category: **Needs work**, **Acceptable**, **Good** or **Outstanding**. Your feedback shows a grid with one tick per criterion, so you can see your profile at a glance, followed by comments on what went well and what to do next time. Your overall mark comes from that profile and the marker's overall judgement (see @sec-4141-report-marking-overall below).
+Your report is judged on six criteria. For each one, the marker chooses a category: [**Needs work**]{.needs-work}, [**Acceptable**]{.accepatable}, [**Good**]{.good} or [**Outstanding**]{.outstanding}. Your feedback shows a grid with one tick per criterion, so you can see your profile at a glance, followed by comments on what went well and what to do next time. Your overall mark comes from that profile and the marker's overall judgement (see @sec-4141-report-marking-overall below).
 
 Three things to know:
 
@@ -136,39 +134,44 @@ Three things to know:
 
 ### Criterion 1 - Introduction: idea, research question and hypotheses
 
+[Needs attention]{.needs-work}
+[Acceptable]{.acceptable}
+[Good]{.good}
+[Outstanding]{.outstanding}
+
 | Category | What it looks like |
 |:-----------|:------------------------------------------------------------------|
-| **Outstanding** | Explains why the idea matters, using relevant sources, including a theory or mechanism that could explain why screen time and mind wandering might be associated. Narrows step by step to a research question. States both the null and the alternative hypothesis, which follow directly from that argument, name both variables and state the expected relationship. |
-| **Good** | A clear rationale, question, and testable null and alternative hypotheses. The theory or mechanism is relevant but only partly linked to the hypotheses, or the step from rationale to hypotheses could be tighter. |
-| **Acceptable** | The topic is introduced and a question is stated, but the rationale is general or descriptive, and any theory or mechanism is mentioned rather than explained. The hypotheses are vague, only one is stated, or they do not clearly follow. |
-| **Needs work** | The rationale is missing or unclear, with no theory or mechanism. The question or hypotheses are missing, cannot be tested, or do not match the study. |
+| [**Outstanding**]{.outstanding} | Explains why the idea matters, using relevant sources, including a theory or mechanism that could explain why screen time and mind wandering might be associated. Narrows step by step to a research question. States both the null and the alternative hypothesis, which follow directly from that argument, name both variables and state the expected relationship. |
+| [**Good**]{.good} | A clear rationale, question, and testable null and alternative hypotheses. The theory or mechanism is relevant but only partly linked to the hypotheses, or the step from rationale to hypotheses could be tighter. |
+| [**Acceptable**]{.acceptable} | The topic is introduced and a question is stated, but the rationale is general or descriptive, and any theory or mechanism is mentioned rather than explained. The hypotheses are vague, only one is stated, or they do not clearly follow. |
+| [**Needs work**]{.needs-work} | The rationale is missing or unclear, with no theory or mechanism. The question or hypotheses are missing, cannot be tested, or do not match the study. |
 
 ### Criterion 2 - Method
 
 | Category | What it looks like |
 |:-----------|:------------------------------------------------------------------|
-| **Outstanding** | Another researcher could repeat the study: participants (including the sample size and how they were recruited), measures, procedure and ethics are all clear. Each measure is plainly a measure of a variable in the hypotheses, with a reason for the choice. |
-| **Good** | Complete and clear, including the sample size, with minor gaps. The link between measures and hypotheses is clear but the justification is thin. |
-| **Acceptable** | Most information is there, but gaps would stop someone repeating the study, or the link between measures and hypotheses is left for the reader to work out. |
-| **Needs work** | Key information is missing (such as the sample size), a measure does not match the hypotheses, or the description is too vague to allow replication. |
+| [**Outstanding**]{.outstanding} | Another researcher could repeat the study: participants (including the sample size and how they were recruited), measures, procedure and ethics are all clear. Each measure is plainly a measure of a variable in the hypotheses, with a reason for the choice. |
+| [**Good**]{.good} | Complete and clear, including the sample size, with minor gaps. The link between measures and hypotheses is clear but the justification is thin. |
+| [**Acceptable**]{.acceptable} | Most information is there, but gaps would stop someone repeating the study, or the link between measures and hypotheses is left for the reader to work out. |
+| [**Needs work**]{.needs-work} | Key information is missing (such as the sample size), a measure does not match the hypotheses, or the description is too vague to allow replication. |
 
 ### Criterion 3 - Results
 
 | Category | What it looks like |
 |:-----------|:------------------------------------------------------------------|
-| **Outstanding** | Presents the data to the reader with descriptive statistics for each variable in the text or a table; a figure helps the reader see the pattern. The correlation analysis suits the data, with the checks taught in the module reported briefly. Statistics are reported correctly in APA format. States whether the null hypothesis is rejected or not rejected (never "accepted") and what this means for the alternative hypothesis. The code runs and produces the reported numbers. |
-| **Good** | Descriptive statistics and a table and/or figure are present, and the analysis is correct, with minor reporting slips. The table or figure could be clearer, or the decision about the null hypothesis is correct but briefly worded. |
-| **Acceptable** | Descriptive statistics are incomplete, or the table and/or figure is missing or hard to follow. The analysis is broadly right, but with errors in reporting or interpretation, or the decision about the null hypothesis is unclear. |
-| **Needs work** | Descriptive statistics are missing or incorrect. The analysis is inappropriate or conducted incorrectly, the numbers in the text do not match the output, there is no decision about the null hypothesis, or the code does not run. |
+| [**Outstanding**]{.outstanding} | Presents the data to the reader with descriptive statistics for each variable in the text or a table; a figure helps the reader see the pattern. The correlation analysis suits the data, with the checks taught in the module reported briefly. Statistics are reported correctly in APA format. States whether the null hypothesis is rejected or not rejected (never "accepted") and what this means for the alternative hypothesis. The code runs and produces the reported numbers. |
+| [**Good**]{.good} | Descriptive statistics and a table and/or figure are present, and the analysis is correct, with minor reporting slips. The table or figure could be clearer, or the decision about the null hypothesis is correct but briefly worded. |
+| [**Acceptable**]{.acceptable} | Descriptive statistics are incomplete, or the table and/or figure is missing or hard to follow. The analysis is broadly right, but with errors in reporting or interpretation, or the decision about the null hypothesis is unclear. |
+| [**Needs work**]{.needs-work} | Descriptive statistics are missing or incorrect. The analysis is inappropriate or conducted incorrectly, the numbers in the text do not match the output, there is no decision about the null hypothesis, or the code does not run. |
 
 ### Criterion 4 - Discussion: critical evaluation and take-home message
 
 | Category | What it looks like |
 |:-----------|:------------------------------------------------------------------|
-| **Outstanding** | Answers the research question first. Relates the finding to key findings in the literature, saying whether it fits them and what might explain any difference. Evaluates this study specifically: who took part and how they were recruited, how each concept was measured, and why a correlation cannot show cause. Explains how each point affects what can be concluded. Ends with a take-home message that goes no further than the data. |
-| **Good** | Answers the question, relates the finding to the literature and evaluates the study sensibly, but the link to the literature is brief, some points are not linked back to the conclusion, or the take-home message is slightly broad. |
-| **Acceptable** | Mostly restates the results, with little or no link to the literature. Limitations are generic (for example "small sample") and not tied to this study's conclusion. The take-home message is vague or overreaches. |
-| **Needs work** | No real evaluation, no link to the literature, or conclusions the results do not support (for example, claiming screen time causes mind wandering). |
+| [**Outstanding**]{.outstanding} | Answers the research question first. Relates the finding to key findings in the literature, saying whether it fits them and what might explain any difference. Evaluates this study specifically: who took part and how they were recruited, how each concept was measured, and why a correlation cannot show cause. Explains how each point affects what can be concluded. Ends with a take-home message that goes no further than the data. |
+| [**Good**]{.good} | Answers the question, relates the finding to the literature and evaluates the study sensibly, but the link to the literature is brief, some points are not linked back to the conclusion, or the take-home message is slightly broad. |
+| [**Acceptable**]{.acceptable} | Mostly restates the results, with little or no link to the literature. Limitations are generic (for example "small sample") and not tied to this study's conclusion. The take-home message is vague or overreaches. |
+| [**Needs work**]{.needs-work} | No real evaluation, no link to the literature, or conclusions the results do not support (for example, claiming screen time causes mind wandering). |
 
 ### Criterion 5 - Alignment across the report
 
@@ -176,19 +179,19 @@ This criterion is judged on the report as a whole, including the title and abstr
 
 | Category | What it looks like |
 |:-----------|:------------------------------------------------------------------|
-| **Outstanding** | Each part follows from the one before: the question fits the idea, the hypotheses answer the question, the methods can test them, the results address them, and the discussion answers the question. The abstract mirrors this chain. A reader could sum up the study in one sentence. |
-| **Good** | The chain holds, with one weak link (for example, a hypothesis that is slightly broader than the measures can test). |
-| **Acceptable** | The chain is visible but has two or more weak links, or one clear mismatch between sections. |
-| **Needs work** | Sections read as separate pieces. The hypotheses, measures, results and conclusion do not address the same question. |
+| [**Outstanding**]{.outstanding} | Each part follows from the one before: the question fits the idea, the hypotheses answer the question, the methods can test them, the results address them, and the discussion answers the question. The abstract mirrors this chain. A reader could sum up the study in one sentence. |
+| [**Good**]{.good} | The chain holds, with one weak link (for example, a hypothesis that is slightly broader than the measures can test). |
+| [**Acceptable**]{.acceptable} | The chain is visible but has two or more weak links, or one clear mismatch between sections. |
+| [**Needs work**]{.needs-work} | Sections read as separate pieces. The hypotheses, measures, results and conclusion do not address the same question. |
 
 ### Criterion 6 - Scientific writing and APA
 
 | Category | What it looks like |
 |:-----------|:------------------------------------------------------------------|
-| **Outstanding** | APA 7 is applied accurately and consistently: heading levels and wording, in-text citations, the reference list, the formatting of numbers and statistics, and the numbering and titling of tables and figures. Writing is clear and concise, in a scientific style. The abstract is self-contained. Within the word limit. |
-| **Good** | APA 7 is mostly accurate with a few inconsistencies. Writing is clear, with occasional wordiness or informality. |
-| **Acceptable** | APA 7 is attempted but with repeated errors. Writing sometimes obscures the meaning. The abstract is missing a part of the story. |
-| **Needs work** | APA 7 is largely absent. Writing makes the report hard to follow. Over the word limit, or no abstract. |
+| [**Outstanding**]{.outstanding} | APA 7 is applied accurately and consistently: heading levels and wording, in-text citations, the reference list, the formatting of numbers and statistics, and the numbering and titling of tables and figures. Writing is clear and concise, in a scientific style. The abstract is self-contained. Within the word limit. |
+| [**Good**]{.good} | APA 7 is mostly accurate with a few inconsistencies. Writing is clear, with occasional wordiness or informality. |
+| [**Acceptable**]{.acceptable} | APA 7 is attempted but with repeated errors. Writing sometimes obscures the meaning. The abstract is missing a part of the story. |
+| [**Needs work**]{.needs-work} | APA 7 is largely absent. Writing makes the report hard to follow. Over the word limit, or no abstract. |
 
 ### From criteria to overall mark {#sec-4141-report-marking-overall}
 
