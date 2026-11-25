@@ -1,6 +1,6 @@
 ---
 title: 9. Week 9 - The linear model
-subtitle: Written by Rob Davies and Samuel Finnerty
+subtitle: Written by Rob Davies, Samuel Finnerty, & Margriet Groen
 order: 9 # ensure this is one more than the previous script
 editor:
   markdown:
@@ -28,7 +28,7 @@ This week we focus on two strands of learning:
 
 A.  The linear model with interactions
 
-In Weeks 7 and 8 you learned to use the linear model to predict one
+In Weeks 7 and 8 you learned how to use the linear model to predict one
 variable from one or more other variables, including a categorical
 variable.
 
@@ -682,7 +682,7 @@ To include an interaction in a model, we separate the predictors with
 `*` instead of `+`:
 
 ``` r
-lm(outcome ~ predictor.X * predictor.Z, data = data.set)
+lm(outcome ~ predictor.X*predictor.Z, data = data.set)
 ```
 
 This gives a model with the effect of each predictor *and* the
@@ -755,7 +755,7 @@ Interactions with a categorical predictor are coded in the same way.
 
 ::: {.callout-tip title="Code" collapse="true"}
 ``` r
-model.3 <- lm(mean.acc ~ FACTOR3_centered * EDUCATION, data = all.data)
+model.3 <- lm(mean.acc ~ FACTOR3_centered*EDUCATION, data = all.data)
 summary(model.3)
 ```
 :::

@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>9. Week 9 - The linear model – Research Methods and Statistics for Psychologists</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../PSYC4141/sona.html" rel="next">
+<link href="../PSYC4141/week8.html" rel="prev">
+<link href="../Images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a5d6fdbca70fc65d32d26cbabd5849e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>window.onload = function() {document.getElementById("autocomplete-0-input").placeholder = "Search Year 1";};</script>
+<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://lu-psy-r.github.io/essentials/index_24.css">
+</head>
+
+<body class="nav-sidebar floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="https://lu-psy-r.github.io/">
+    <span class="navbar-title">Research Methods and Statistics for Psychologists</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year1/index.html"> 
+<span class="menu-text">Year 1</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year2/index.html"> 
+<span class="menu-text">Year 2</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/year3/index.html"> 
+<span class="menu-text">Year 3</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/MSc/index.html"> 
+<span class="menu-text">MSc</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://lu-psy-r.github.io/more/index.html"> 
+<span class="menu-text">And More…</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC4141/index.html">PSYC4141</a></li><li class="breadcrumb-item"><a href="../PSYC4141/week9.html">9. Week 9 - The linear model</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../PSYC4141/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PSYC4141</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1. Week 1 - Being a scientist, doing a science</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2. Week 2 - Measuring, describing, and visualising psychological concepts</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3. Week 3 - Correlation and ethical research practice</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4. Week 4 - Hypothesis testing, significance testing</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week5.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">5. Week 5 - More on correlation - Assumptions, issues, an alternative and intercorrelation</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6. Week 6 - Chi-Square</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week7.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7. Week 7 - Introduction to the linear model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week8.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">8. Week 8 - Developing the linear model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/week9.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">9. Week 9 - The linear model</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/sona.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11. The SONA page - Everything you need to know about research participation and SONA</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/project.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12. The Project page - Everything you need to know about the group research project</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../PSYC4141/report.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">13. The Report page</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <span class="sidebar-item-text sidebar-link text-start">
+ <span class="menu-text">PSYC4242</span></span>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#sec-4141-w9-lectures" id="toc-sec-4141-w9-lectures" class="nav-link active" data-scroll-target="#sec-4141-w9-lectures">Lectures</a>
+  <ul class="collapse">
+  <li><a href="#sec-4141-w9-lectures-focus" id="toc-sec-4141-w9-lectures-focus" class="nav-link" data-scroll-target="#sec-4141-w9-lectures-focus">The lectures have four main areas of focus</a></li>
+  </ul></li>
+  <li><a href="#sec-4141-w9-reading" id="toc-sec-4141-w9-reading" class="nav-link" data-scroll-target="#sec-4141-w9-reading">Reading</a></li>
+  <li><a href="#sec-4141-w9-prelab-activities" id="toc-sec-4141-w9-prelab-activities" class="nav-link" data-scroll-target="#sec-4141-w9-prelab-activities">Pre-lab activities</a>
+  <ul class="collapse">
+  <li><a href="#pre-lab-activity-1-predict-before-you-look" id="toc-pre-lab-activity-1-predict-before-you-look" class="nav-link" data-scroll-target="#pre-lab-activity-1-predict-before-you-look">Pre-lab activity 1: Predict before you look</a></li>
+  <li><a href="#pre-lab-activity-2-see-how-slope-estimates-vary-between-samples" id="toc-pre-lab-activity-2-see-how-slope-estimates-vary-between-samples" class="nav-link" data-scroll-target="#pre-lab-activity-2-see-how-slope-estimates-vary-between-samples">Pre-lab activity 2: See how slope estimates vary between samples</a></li>
+  <li><a href="#pre-lab-activity-3-research-project" id="toc-pre-lab-activity-3-research-project" class="nav-link" data-scroll-target="#pre-lab-activity-3-research-project">Pre-lab activity 3: Research project</a></li>
+  <li><a href="#pre-lab-activity-4-getting-ready" id="toc-pre-lab-activity-4-getting-ready" class="nav-link" data-scroll-target="#pre-lab-activity-4-getting-ready">Pre-lab activity 4: Getting ready</a></li>
+  </ul></li>
+  <li><a href="#sec-4141-w9-lab-activities" id="toc-sec-4141-w9-lab-activities" class="nav-link" data-scroll-target="#sec-4141-w9-lab-activities">Lab activities</a>
+  <ul class="collapse">
+  <li><a href="#lab-activity-1-what-makes-it-easy-or-difficult-for-people-to-understand-written-health-information" id="toc-lab-activity-1-what-makes-it-easy-or-difficult-for-people-to-understand-written-health-information" class="nav-link" data-scroll-target="#lab-activity-1-what-makes-it-easy-or-difficult-for-people-to-understand-written-health-information">Lab activity 1: What makes it easy or difficult for people to understand written health information?</a></li>
+  <li><a href="#lab-activity-2-research-project" id="toc-lab-activity-2-research-project" class="nav-link" data-scroll-target="#lab-activity-2-research-project">Lab activity 2: Research project</a></li>
+  </ul></li>
+  <li><a href="#sec-4141-w9-answers" id="toc-sec-4141-w9-answers" class="nav-link" data-scroll-target="#sec-4141-w9-answers">Answers</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../PSYC4141/index.html">PSYC4141</a></li><li class="breadcrumb-item"><a href="../PSYC4141/week9.html">9. Week 9 - The linear model</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">9. Week 9 - The linear model</h1>
+<p class="subtitle lead">Written by Rob Davies, Samuel Finnerty, &amp; Margriet Groen</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-default callout-note callout-titled" title="Overview">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Overview
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This week we focus on two strands of learning:</p>
+<ol type="A">
+<li>The linear model with interactions</li>
+</ol>
+<p>In Weeks 7 and 8 you learned how to use the linear model to predict one variable from one or more other variables, including a categorical variable.</p>
+<p><strong>This week you will learn how to test whether the effect of one predictor is different for different values of another predictor. This is called an interaction.</strong></p>
+<p>Psychologists often expect effects to vary between groups of people, or for people with different scores on a third variable. Interactions let us examine this.</p>
+<p>We will do all this in the context of the <strong>Clearly Understood</strong> project on how easy or difficult people find it to understand written health information.</p>
+<ol start="2" type="A">
+<li>Research project</li>
+</ol>
+<!-- PLACEHOLDER: Part B overview for Week 9 (to be decided). -->
+<p>Information about this week’s work on the group project will be added as soon as possible.</p>
+<p>The materials we have prepared to support your learning are arranged in four parts:</p>
+<ul>
+<li>Lectures</li>
+<li>Reading</li>
+<li>Pre-lab activities</li>
+<li>Lab activities</li>
+</ul>
+<p>You can navigate to each in the side bar on the right</p>
+</div>
+</div>
+<!-- Note: I think it is helpful to have a list of the different sections in a week for cross-referencing. I don't think it helps readability it this is visible to the students (hence I've commented them out) as the outline in the sidebar on the right already provides this info. -->
+<!-- - @sec-4141-w9-lectures: Watch these before your lab session -->
+<!-- - @sec-4141-w9-reading: Recommended readings -->
+<!-- - @sec-4141-w9-prelab-activities: Activities to do before you attend your lab session -->
+<!-- - @sec-4141-w9-lab-activities: Activities you do during your lab session -->
+<!-- - @sec-4141-w9-answers: Answers to questions in pre-lab and lab activities -->
+<section id="sec-4141-w9-lectures" class="level2">
+<h2 class="anchored" data-anchor-id="sec-4141-w9-lectures">Lectures</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Please note that Rob may mention a different module code or different week during the lectures. I’ve reviewed the material and the content is entirely relevant to the current module.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In week 9, we aim to further develop skills in <em>analysing</em> and in <em>visualising</em> psychological data. We will do so in the context of the <strong>Clearly Understood</strong> project.</p>
+<p>We will face what the lectures call <em>the real challenge in psychological science</em>:</p>
+<ol type="1">
+<li>People vary</li>
+<li>Effects vary</li>
+<li>Results vary</li>
+</ol>
+<p>Because the effects that interest us can be expected to vary, we need to be able to investigate <em>how</em> they vary. We do this using linear models that include <strong>interaction effects</strong>.</p>
+<ul>
+<li><strong>If</strong> we think that the shape or size of an effect is different in different groups of people, or for different values of a third variable (a <em>moderator</em>),</li>
+<li><strong>then</strong> we are thinking about an <strong>interaction</strong> effect.</li>
+</ul>
+<p>When we report a model that includes an interaction, we still report the model we specified, the model fit statistics (<code>F, R-squared</code>) and the coefficient estimates. We now also need to describe <em>how</em> the effect of one predictor changes, given different values of another predictor. Plots of model predictions help us to do this.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Before you go on to the activities in <a href="#sec-4141-w9-lab-activities" class="quarto-xref">Section&nbsp;4</a>, <strong>watch</strong> the lectures:</p>
+</div>
+</div>
+<p>The lecture for <strong>part A</strong> for this week is presented in four short parts. You can view video recordings of the lectures using Panopto, by clicking on the links shown following.</p>
+<ol type="1">
+<li><strong>Introduction</strong> (9 minutes): The real challenge in psychological science (people vary, effects vary, results vary); variation, uncertainty, and working with the limits of samples.</li>
+</ol>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=00bbc559-eb90-4766-a209-b40100c7ac33&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<ol start="2" type="1">
+<li><strong>The Clearly Understood project – questions and analyses</strong> (11 minutes): Critical thinking – what effects can vary, how effects can vary, and theoretical reasons why effects might vary.</li>
+</ol>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=2aabd1ed-c276-454b-bef8-b40100cc98c9&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<ol start="3" type="1">
+<li><strong>Coding models with interactions</strong> (19 minutes): Revision on linear models; coding models that do or do not include interactions; identifying the key information in the results; and making sense of what we see.</li>
+</ol>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=4767b039-415a-4878-b048-b40100d74247&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<ol start="4" type="1">
+<li><strong>Interactions between numeric variables and factors</strong> (13 minutes): Numeric variables and factors as predictors; coding, plotting, interpreting and reporting interactions between numeric variables and factors. Summary of key lessons.</li>
+</ol>
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=8531b025-7f1e-4ec3-9f67-b40100dd88fd&amp;autoplay=false&amp;offerviewer=true&amp;showtitle=true&amp;showbrand=true&amp;captions=false&amp;interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen="" allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The slides presented in the videos can be downloaded as a web page. You can download the web page <code>.html</code> file and click on it to open it in any browser (e.g., Chrome, Edge or Safari). The slide images are high quality so the file is quite big (13 MB) and may take a few seconds to download.</p>
+</div>
+</div>
+<ul>
+<li><a href="files/week9/4141-linear-model-interactions.html">The slides</a></li>
+</ul>
+<section id="sec-4141-w9-lectures-focus" class="level3">
+<h3 class="anchored" data-anchor-id="sec-4141-w9-lectures-focus">The lectures have four main areas of focus</h3>
+<p><strong>1. The real challenge in psychological science</strong></p>
+<p>We connect (1.) the fact that psychological and social processes vary to (2.) the uncertainties we face when we try to draw conclusions from limited samples.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>What makes psychological science challenging:</p>
+<ol type="1">
+<li>People vary</li>
+<li>Effects vary</li>
+<li>Results vary</li>
+</ol>
+</div>
+</div>
+<p><strong>2. Critical thinking</strong></p>
+<p>So far, we have looked at the impact on understanding of differences between individuals in attributes like vocabulary knowledge. Now, we consider the possibility that the effect of one predictor could itself vary.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We can develop our critical thinking skills by considering:</p>
+<ol type="1">
+<li>What effects can vary</li>
+<li>How effects can vary</li>
+</ol>
+<p>We discuss the kinds of theoretical assumptions that may lead psychologists to hypothesise interaction effects.</p>
+</div>
+</div>
+<p><strong>3. Coding models with interactions</strong></p>
+<p>We build on what we know about coding linear models with multiple predictors to code models that include interaction effects.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>We build skills by looking at:</p>
+<ul>
+<li>the code we use;</li>
+<li>the key information in the results, where to find it, and how to interpret it;</li>
+<li>the different ways in which we can present and interpret interactions.</li>
+</ul>
+</div>
+</div>
+<p><strong>4. Interactions between numeric variables and factors</strong></p>
+<p>The effect of a numeric variable (like reading strategy) can differ depending on another numeric variable (like health literacy). An effect can also differ between groups, which we code using categorical variables (factors) like education level. We look at how to code, interpret and report interactions between numeric variables and factors.</p>
+<p><strong>B. Research project</strong></p>
+<!-- PLACEHOLDER: Part B lecture or video information for Week 9 (to be decided). -->
+<p>Information about this week’s work on the group project will be added as soon as possible.</p>
+</section>
+</section>
+<section id="sec-4141-w9-reading" class="level2">
+<h2 class="anchored" data-anchor-id="sec-4141-w9-reading">Reading</h2>
+<div class="callout callout-style-default callout-tip callout-titled" title="Easy access to readings">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Easy access to readings
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>All reading is accessible via the library. You can go to Moodle -&gt; Library Resources -&gt; Resource List or you can follow <a href="https://lancaster.alma.exlibrisgroup.com/leganto/nui/lists/93496942590001221"><strong>this link</strong></a>. Readings have one of the following tags:</p>
+<ul>
+<li><strong>Essential</strong>: We expect you to be familiar with these reading. You will be assessed on this.</li>
+<li><strong>Recommended</strong>: We highly recommend these readings. They often provide a different perspective, or explain things in a different way.</li>
+<li><strong>Optional</strong>: Further readings for those interested.</li>
+</ul>
+<p>The reading list is divided into multiple sections:</p>
+<ul>
+<li><strong>Reading associated with statistics</strong>: this contains links to readings useful for the development of statistical concepts and skills. The main textbook <em>Fundamental statistics for the behavioral sciences</em> by Howell (Essential) lives here.</li>
+<li><strong>Reading associated with psychological research principles and design</strong>: this contains links to readings that provide a good basis for foundational knowledge around research design.</li>
+<li><strong>Reading associated with Open Science principles and practices</strong>: this contains links to key literature on the Open Science movement.</li>
+<li><strong>Week by week</strong>: these contain links to key reading for that week that are not listed on any of the more general lists above.</li>
+</ul>
+</div>
+</div>
+<p>For <strong>week 9</strong>, the reading is:</p>
+<!-- CHECK: confirm the Week 9 reading. Last year's Week 19 page had no new reading for this topic. -->
+<ul>
+<li><p>There is no new textbook chapter this week. If you have not done so already, read Howell, D. C. (2017). Fundamental statistics for the behavioral sciences (9th ed.). Cengage Learning. Chapter 11 (the Week 8 reading on multiple regression).</p></li>
+<li><p>Key readings for the mini research project as outlined <a href="../PSYC4141/project.html#sec-4141-project-reading">here</a>.</p></li>
+</ul>
+</section>
+<section id="sec-4141-w9-prelab-activities" class="level2">
+<h2 class="anchored" data-anchor-id="sec-4141-w9-prelab-activities">Pre-lab activities</h2>
+<p>After having watched the lectures you’ll be in a good position to try these activities. Completing them before you attend your lab session will help you to consolidate your learning and help move through the lab activities more smoothly.</p>
+<section id="pre-lab-activity-1-predict-before-you-look" class="level3">
+<h3 class="anchored" data-anchor-id="pre-lab-activity-1-predict-before-you-look">Pre-lab activity 1: Predict before you look</h3>
+<p>In the lectures, Rob describes two theories about how the effect of health literacy on understanding might depend on vocabulary knowledge. In the lab, we ask a similar question about reading strategy:</p>
+<blockquote class="blockquote">
+<p>Is the effect of reading strategy (<code>FACTOR3</code>) on accuracy of understanding (<code>mean.acc</code>) different for people with different levels of health literacy (<code>HLVA</code>)?</p>
+</blockquote>
+<p>Here are two possible theories:</p>
+<ul>
+<li><strong>Theory 1</strong>: the effect of reading strategy is <em>larger</em> (the slope is steeper) for people with higher health literacy, <em>because</em> people who know more about health can make more use of a good reading strategy.</li>
+<li><strong>Theory 2</strong>: the effect of reading strategy is <em>smaller</em> (the slope is shallower) for people with higher health literacy, <em>because</em> people who already understand health information well have less room to improve.</li>
+</ul>
+<p>Before the lab, write down your predictions:</p>
+<ol type="1">
+<li>Which theory do you think is more likely? Why?</li>
+<li>Do you expect the effect of reading strategy to be different for people with further education and people with higher education? If so, in which direction?</li>
+</ol>
+<p>Keep your predictions: you will compare them with the results in Steps 5 and 6 of the lab.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the lab, we include education level (<code>EDUCATION</code>) as a categorical predictor, as we did in Week 8. If you need to, look back at Step 9 of the Week 8 lab to remind yourself what a <em>reference level</em> is.</p>
+</div>
+</div>
+</section>
+<section id="pre-lab-activity-2-see-how-slope-estimates-vary-between-samples" class="level3">
+<h3 class="anchored" data-anchor-id="pre-lab-activity-2-see-how-slope-estimates-vary-between-samples">Pre-lab activity 2: See how slope estimates vary between samples</h3>
+<p>Have a look at <a href="https://robayedavies.github.io/teaching-nhst-lm-slope-demo-shiny/"><strong>this app on sampling variation in linear models</strong></a> by Rob Davies.</p>
+<p>The app simulates data for a linear model with one predictor. It shows the slope estimate for one sample, alongside four more samples drawn from the same population, and two piles of 100 simulated studies: one where there is no effect in the population, and one where there is an effect.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The app runs in <strong>Chrome</strong> or <strong>Edge</strong>, not in Safari. The first time you open it, it downloads the software it needs (60-90 MB), which can take up to a minute.</p>
+</div>
+</div>
+<p>Try the following:</p>
+<ol type="1">
+<li>Compare the slope estimates in the different samples from the same population. Click <code>Draw new samples</code> a few times.</li>
+<li>Change <code>N per study</code> to make the samples smaller, then larger, and draw new samples each time.</li>
+<li>Look at the pile of studies where there is no effect in the population.</li>
+</ol>
+<p>Pre-lab activity questions:</p>
+<ol type="1">
+<li>How much do the slope estimates vary between samples drawn from the same population?</li>
+<li>What happens to this variation when the samples are smaller or larger?</li>
+<li>In the pile of studies where there is no effect in the population, do all the slope estimates equal zero?</li>
+</ol>
+<p>Keep your answers in mind for Steps 2 and 8 of the lab. When we look for an interaction, we compare slopes estimated in <em>parts</em> of a sample, so this variation matters.</p>
+</section>
+<section id="pre-lab-activity-3-research-project" class="level3">
+<h3 class="anchored" data-anchor-id="pre-lab-activity-3-research-project">Pre-lab activity 3: Research project</h3>
+<!-- PLACEHOLDER: Part B pre-lab activities for Week 9 (to be decided). -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Information about the pre-lab activities for the research project will be added as soon as possible.</p>
+</div>
+</div>
+</section>
+<section id="pre-lab-activity-4-getting-ready" class="level3">
+<h3 class="anchored" data-anchor-id="pre-lab-activity-4-getting-ready">Pre-lab activity 4: Getting ready</h3>
+<p>To complete this week’s lab activity you will need several files:</p>
+<ol type="1">
+<li>We’ll work with an example script called <code>4141_wk9_lab.qmd</code>. This is a Quarto document.</li>
+<li>We’ll also need a new data file named <code>all.data.csv</code>.</li>
+</ol>
+<p>You can download the files here: <a href="files/week9/4141_wk9_lab.zip" download="4141_wk9_lab.zip"><code>4141_wk9_lab.zip</code></a>. Usually they will be saved in your ‘Downloads’ folder.</p>
+<p>Next, upload the zip-folder as it is to your Files space on the R-server (bottom right quadrant; no need to extract the files first).</p>
+<p>Finally, open the example script by clicking on the file called <code>4141_wk9_lab.qmd</code> in the Files space on the R-server.</p>
+<p>You are now ready to start work on the lab activities.</p>
+</section>
+</section>
+<section id="sec-4141-w9-lab-activities" class="level2">
+<h2 class="anchored" data-anchor-id="sec-4141-w9-lab-activities">Lab activities</h2>
+<section id="lab-activity-1-what-makes-it-easy-or-difficult-for-people-to-understand-written-health-information" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-1-what-makes-it-easy-or-difficult-for-people-to-understand-written-health-information">Lab activity 1: What makes it easy or difficult for people to understand written health information?</h3>
+<p>We will do our practical lab work to develop your skills in the context of the <strong>Clearly Understood</strong> project.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The research questions we are focussing on today are:</p>
+<ol type="1">
+<li>What person attributes predict success in understanding health information?</li>
+<li>How can the effects of person attributes vary, in different groups of people, or for different values of a third variable (a <em>moderator</em>)?</li>
+</ol>
+</div>
+</div>
+<p>This week, we work with a larger dataset. It combines the data from the two studies of adults in the UK, including the study two data you used in Weeks 7 and 8, with data collected from Lancaster first-year psychology students in a previous year. Studying interactions usually needs more data than studying the effect of one predictor.</p>
+<p>We focus on one effect: the effect of reading strategy (<code>FACTOR3</code>) on accuracy of understanding (<code>mean.acc</code>). We ask whether this effect is different:</p>
+<ul>
+<li>for people with different levels of health literacy (<code>HLVA</code>), a numeric variable;</li>
+<li>for people with different levels of education (<code>EDUCATION</code>), a categorical variable.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled" title="Where are the download links?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Where are the download links?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Links to the files to be downloaded are in the <strong>Pre-lab activities section</strong> under Getting ready.</p>
+</div>
+</div>
+<section id="aims-of-the-activity" class="level4">
+<h4 class="anchored" data-anchor-id="aims-of-the-activity">Aims of the activity</h4>
+<p>We are going to:</p>
+<ol type="1">
+<li>Setup the appropriate bits and pieces in RStudio – using <code>rm()</code> and <code>library()</code></li>
+<li>Read in and inspect the data – using <code>read_csv()</code>, <code>summary()</code> and <code>as.factor()</code></li>
+<li>Visualise possible interactions – using <code>geom_smooth()</code>, <code>facet_wrap()</code> and <code>cut_number()</code></li>
+<li>Centre numeric predictors and fit a model without an interaction</li>
+<li>Fit and plot an interaction between two numeric predictors – using <code>lm()</code> with <code>*</code>, and <code>ggpredict()</code></li>
+<li>Fit and plot an interaction between a numeric predictor and a categorical predictor</li>
+<li>Report the results of a linear model with an interaction</li>
+<li>Extension: How robust is the interaction?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Steps 1 to 7 are the main lab activity. Step 8 is an extension: do it if you have time, or after the lab.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled" title="How to use the Quarto document?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>How to use the Quarto document?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>All instructions and guidance (including hints and code snippets) for lab activities are presented on this handbook page.</strong></p>
+<p>The Quarto document is largely empty, only containing a copy of the section headers and the actions to remind you of what you are meant to do. Sometimes there are questions associated with the code you’ve written or the output that follows from it. These can also be found on both the handbook page and in the Quarto document.</p>
+<p>How to complete the lab activity and use the Quarto script:</p>
+<ol type="1">
+<li>Open the handbook pages in a separate window or tab and navigate to <em>Lab activities</em>.</li>
+<li>Read the instructions on the handbook page for each step.</li>
+<li>Carry out the actions, by inserting a code chunk in the Quarto document, below each action.</li>
+<li>If there are any questions associated with that step, please try to answer them. You can write your answer in the Quarto document, as plain text. Answers to the questions will be shared after the last lab session has taken place (on Thursday afternoon).</li>
+<li>After having carried out an action, written a code chunk and answered any questions, go back to the handbook page and read the next bit of instruction, until you get to the next action.</li>
+<li>If you are stuck: Have a look at the ‘Hints’ and ‘Code’ snippets on the handbook page.</li>
+<li>If you are still stuck: Ask for help (your peers on your table, the GTA or lecturer in the lab session, via the Moodle Q&amp;A forum, during Friday’s live online Q&amp;A).</li>
+</ol>
+<p>If you’d like to watch a demonstration of this, have a look at the video at the start of Lab activity 3 of Week 5 (<a href="../PSYC4141/week5.html#sec-4141-w5-lab-activities">here</a>).</p>
+</div>
+</div>
+</section>
+<section id="step-1-setup-the-appropriate-bits-and-pieces-in-rstudio" class="level4">
+<h4 class="anchored" data-anchor-id="step-1-setup-the-appropriate-bits-and-pieces-in-rstudio">Step 1: Setup the appropriate bits and pieces in RStudio</h4>
+<blockquote class="blockquote">
+<p>Action: In a new code chunk, add the code to empty the R environment. Then add the code to load the relevant libraries. We need the following ones: <code>here</code>, <code>tidyverse</code>, <code>easystats</code> and <code>ggeffects</code>.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(easystats)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggeffects)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+</section>
+<section id="step-2-read-in-and-inspect-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="step-2-read-in-and-inspect-the-data">Step 2: Read in and inspect the data</h4>
+<p>The data file for this lab activity is <code>all.data.csv</code>. It has the same columns as the data file we used in Weeks 7 and 8:</p>
+<ul>
+<li><code>participant_ID</code> participant code;</li>
+<li><code>mean.acc</code> average accuracy of response to questions testing understanding of health guidance (varies between 0-1);</li>
+<li><code>mean.self</code> average self-rated accuracy of understanding of health guidance (varies between 1-9);</li>
+<li><code>study</code> variable coding for what study the data were collected in (<code>study.one</code>, <code>study.two</code> or <code>PSYC122</code>, the student data);</li>
+<li><code>AGE</code> age in years;</li>
+<li><code>SHIPLEY</code> vocabulary knowledge test score (varies between 0-40);</li>
+<li><code>HLVA</code> health literacy test score (varies between 1-16);</li>
+<li><code>FACTOR3</code> reading strategy survey score (varies between 0-80);</li>
+<li><code>GENDER</code> gender code (here, <code>Female</code> or <code>Male</code>);</li>
+<li><code>EDUCATION</code> education level code (here, <code>Further</code> or <code>Higher</code>);</li>
+<li><code>ETHNICITY</code> ethnicity (Office National Statistics categories) code.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Action 1.</strong> In a new code chunk use <code>read_csv()</code> and <code>here()</code> to read in the data file. Give the data object a distinct name, e.g. <code>all.data</code>. Then use <code>summary()</code> to get an overview of the data.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>all.data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"4141_wk9_lab"</span>, <span class="st">"all.data.csv"</span>))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(all.data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p>In the summary, <code>EDUCATION</code> is shown as <code>Class: character</code>, so we cannot see how many participants are in each group. If we change it into a <em>factor</em>, <code>summary()</code> will count the participants at each level.</p>
+<blockquote class="blockquote">
+<p><strong>Action 2.</strong> Change <code>EDUCATION</code> into a factor using <code>as.factor()</code>. Then use <code>summary()</code> again.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>EDUCATION <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(all.data<span class="sc">$</span>EDUCATION)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(all.data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>all.data$EDUCATION</code> picks out the <code>EDUCATION</code> column of <code>all.data</code>.</li>
+<li><code>as.factor()</code> changes the variable into a factor, and the assignment arrow <code>&lt;-</code> puts the result back in the same column.</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 2</strong></p>
+<ol type="a">
+<li>How many participants are in the dataset, and how many are in each level of <code>EDUCATION</code>?</li>
+<li>In Weeks 7 and 8 we used data from 172 participants. Why do you think we need a larger dataset to study interactions?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Think about what you saw in the app in Pre-lab activity 2: how did the slope estimates change when the samples were smaller?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="step-3-visualise-possible-interactions" class="level4">
+<h4 class="anchored" data-anchor-id="step-3-visualise-possible-interactions">Step 3: Visualise possible interactions</h4>
+<p>An interaction means that the effect of one predictor (here, the slope of the association between <code>FACTOR3</code> and <code>mean.acc</code>) is different for different values of another variable. We can look for this by drawing the same scatterplot separately for different groups of participants.</p>
+<blockquote class="blockquote">
+<p><strong>Action 1.</strong> Draw a scatterplot of the association between <code>FACTOR3</code> (x-axis) and <code>mean.acc</code> (y-axis), with a separate panel for each level of <code>EDUCATION</code>.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> all.data, <span class="fu">aes</span>(<span class="at">x =</span> FACTOR3, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Reading strategy (FACTOR3)"</span>, <span class="at">y =</span> <span class="st">"Mean accuracy"</span>) <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">80</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> EDUCATION)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>geom_smooth(method = "lm")</code> adds a linear model line (the trend) with its 95% confidence interval as a grey band. R will show the message <code>`geom_smooth()` using formula = 'y ~ x'</code>: this is not an error.</li>
+<li><code>facet_wrap(~ EDUCATION)</code> splits the data by <code>EDUCATION</code> and draws a separate panel for each level. See the <a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html"><code>facet_wrap()</code> reference page</a>.</li>
+</ul>
+</div>
+</div>
+</div>
+<p>To do the same for a numeric variable like <code>HLVA</code>, we first need to split the participants into groups based on their <code>HLVA</code> scores.</p>
+<blockquote class="blockquote">
+<p><strong>Action 2.</strong> Use <code>cut_number()</code> to split the participants into three groups of roughly equal size (low, mid and high <code>HLVA</code> scores). Then draw the scatterplot with a separate panel for each group.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>HLVA_splits <span class="ot">&lt;-</span> <span class="fu">cut_number</span>(all.data<span class="sc">$</span>HLVA, <span class="dv">3</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> all.data, <span class="fu">aes</span>(<span class="at">x =</span> FACTOR3, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Reading strategy (FACTOR3)"</span>, <span class="at">y =</span> <span class="st">"Mean accuracy"</span>) <span class="sc">+</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">80</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> HLVA_splits, <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">labeller =</span> label_both)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>cut_number(all.data$HLVA, 3)</code> orders the participants by their <code>HLVA</code> score and splits them into three groups. The result is stored in a new column, <code>HLVA_splits</code>. See the <a href="https://ggplot2.tidyverse.org/reference/cut_interval.html"><code>cut_number()</code> reference page</a>.</li>
+<li><code>nrow = 1</code> puts the panels side by side, and <code>labeller = label_both</code> shows the variable name as well as the group in each panel label.</li>
+<li>Where the splits fall depends on the scores in the sample.</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 3</strong></p>
+<ol type="a">
+<li>Compare the trend lines for <code>Further</code> and <code>Higher</code> education. Does the effect of reading strategy look different?</li>
+<li>Compare the trend lines for the three <code>HLVA</code> groups. What do the labels at the top of the panels (e.g.&nbsp;<code>[2,8]</code>) tell you, and how does the slope change from low to high <code>HLVA</code>?</li>
+</ol>
+</section>
+<section id="step-4-centre-numeric-predictors-and-fit-a-model-without-an-interaction" class="level4">
+<h4 class="anchored" data-anchor-id="step-4-centre-numeric-predictors-and-fit-a-model-without-an-interaction">Step 4: Centre numeric predictors and fit a model without an interaction</h4>
+<p>Before we fit models with interactions, we <em>centre</em> the numeric predictors. Centring a variable means subtracting the variable’s mean from every score, so that a centred score of 0 is the average score.</p>
+<p>Why do this? In a model with an interaction, the estimate for each predictor on its own is its effect when the <em>other</em> predictor is 0. For our variables, 0 is not a useful value: nobody in the sample scored 0 on <code>FACTOR3</code> (the lowest score is 9) or on <code>HLVA</code> (the lowest is 2). After centring, each estimate shows the effect for a person with an <em>average</em> score on the other predictor. Centring does not change the interaction estimate, its significance, or how well the model fits.</p>
+<blockquote class="blockquote">
+<p><strong>Action 1.</strong> In a new code chunk, create centred versions of <code>FACTOR3</code> and <code>HLVA</code>.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>FACTOR3_centered <span class="ot">&lt;-</span> all.data<span class="sc">$</span>FACTOR3 <span class="sc">-</span> <span class="fu">mean</span>(all.data<span class="sc">$</span>FACTOR3, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>HLVA_centered <span class="ot">&lt;-</span> all.data<span class="sc">$</span>HLVA <span class="sc">-</span> <span class="fu">mean</span>(all.data<span class="sc">$</span>HLVA, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>mean(all.data$FACTOR3, na.rm = TRUE)</code> calculates the mean of <code>FACTOR3</code>. <code>na.rm = TRUE</code> tells R to ignore missing values, if there are any.</li>
+<li>Subtracting the mean from the column gives the centred score for every participant, which we store in a new column.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Action 2.</strong> Fit a model with <code>mean.acc</code> as the outcome and the centred <code>FACTOR3</code> and <code>HLVA</code> as predictors, <em>without</em> an interaction. Then get the model summary.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered <span class="sc">+</span> HLVA_centered, <span class="at">data =</span> all.data)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 4</strong></p>
+<ol type="a">
+<li>What does a <code>FACTOR3_centered</code> score of 0 mean? What does a score of -10 mean?</li>
+<li>What does the intercept estimate mean in this model?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>The intercept is the predicted outcome when all the predictors are 0.</li>
+<li>Optional: fit the same model with the uncentred <code>FACTOR3</code> and <code>HLVA</code> and compare the two summaries. What changes and what stays the same?</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="step-5-fit-and-plot-an-interaction-between-two-numeric-predictors" class="level4">
+<h4 class="anchored" data-anchor-id="step-5-fit-and-plot-an-interaction-between-two-numeric-predictors">Step 5: Fit and plot an interaction between two numeric predictors</h4>
+<p>To include an interaction in a model, we separate the predictors with <code>*</code> instead of <code>+</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(outcome <span class="sc">~</span> predictor.X<span class="sc">*</span>predictor.Z, <span class="at">data =</span> data.set)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>This gives a model with the effect of each predictor <em>and</em> the interaction between them. In the model summary, the interaction is shown as <code>predictor.X:predictor.Z</code>.</p>
+<blockquote class="blockquote">
+<p><strong>Action 1.</strong> In a new code chunk, fit a model with <code>mean.acc</code> as the outcome and the interaction between the centred <code>FACTOR3</code> and <code>HLVA</code>. Then get the model summary.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered <span class="sc">*</span> HLVA_centered, <span class="at">data =</span> all.data)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="What do the estimates mean?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>What do the estimates mean?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><code>FACTOR3_centered</code>: the effect (slope) of reading strategy for a person with an average <code>HLVA</code> score (<code>HLVA_centered</code> = 0).</li>
+<li><code>HLVA_centered</code>: the effect of health literacy for a person with an average <code>FACTOR3</code> score.</li>
+<li><code>FACTOR3_centered:HLVA_centered</code>: the interaction. It shows how much the slope of <code>FACTOR3</code> changes for each one-point increase in <code>HLVA</code>. A positive estimate means the reading strategy slope gets steeper as <code>HLVA</code> increases; a negative estimate means it gets shallower.</li>
+</ul>
+</div>
+</div>
+<p>Interactions are easier to understand if we plot them. We use <code>ggpredict()</code>, as in Week 8, but now name two predictors in <code>terms</code>.</p>
+<blockquote class="blockquote">
+<p><strong>Action 2.</strong> Use <code>ggpredict()</code> and <code>plot()</code> to plot the predictions of the model for <code>FACTOR3_centered</code>, at different values of <code>HLVA_centered</code>.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dat.int<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model<span class="fl">.2</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"FACTOR3_centered"</span>, <span class="st">"HLVA_centered"</span>))</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat.int<span class="fl">.1</span>) <span class="sc">+</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li>The first predictor named in <code>terms</code> goes on the x-axis. The second is the moderator: <code>ggpredict()</code> draws a separate line for three of its values, the mean (0) and one standard deviation below and above the mean (-2.19 and 2.19).</li>
+<li>In the lecture slides, these plots are made with <code>plot_model()</code> from the <code>sjPlot</code> library. <code>plot_model()</code> uses <code>ggpredict()</code> to calculate the predictions, so the plots show the same thing.</li>
+<li>The message <code>Scale for y is already present</code> is not an error: <code>ylim()</code> has replaced the y-axis that <code>plot()</code> set.</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 5</strong></p>
+<ol type="a">
+<li>Which estimate tells you about the interaction? Is the interaction significant?</li>
+<li>What does the sign of the interaction estimate tell you? Check your answer against the plot.</li>
+<li>Do the results support Theory 1 or Theory 2 from Pre-lab activity 1?</li>
+</ol>
+</section>
+<section id="step-6-fit-and-plot-an-interaction-between-a-numeric-predictor-and-a-categorical-predictor" class="level4">
+<h4 class="anchored" data-anchor-id="step-6-fit-and-plot-an-interaction-between-a-numeric-predictor-and-a-categorical-predictor">Step 6: Fit and plot an interaction between a numeric predictor and a categorical predictor</h4>
+<p>Interactions with a categorical predictor are coded in the same way.</p>
+<blockquote class="blockquote">
+<p><strong>Action 1.</strong> Fit a model with <code>mean.acc</code> as the outcome and the interaction between <code>FACTOR3_centered</code> and <code>EDUCATION</code>. Then get the model summary.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.3</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered<span class="sc">*</span>EDUCATION, <span class="at">data =</span> all.data)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled" title="What do the estimates mean?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>What do the estimates mean?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>Further</code> is the reference level (it comes first in the alphabet), so:</p>
+<ul>
+<li><code>FACTOR3_centered</code>: the slope of reading strategy for participants with <code>Further</code> education.</li>
+<li><code>EDUCATIONHigher</code>: the difference in predicted accuracy between <code>Higher</code> and <code>Further</code> education, for a person with an average <code>FACTOR3</code> score.</li>
+<li><code>FACTOR3_centered:EDUCATIONHigher</code>: the interaction. It shows how much steeper (if positive) or shallower (if negative) the reading strategy slope is for <code>Higher</code> compared with <code>Further</code> education.</li>
+</ul>
+</div>
+</div>
+<blockquote class="blockquote">
+<p><strong>Action 2.</strong> Use <code>ggpredict()</code> and <code>plot()</code> to plot the predictions of the model for <code>FACTOR3_centered</code>, for each level of <code>EDUCATION</code>.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>dat.int<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model<span class="fl">.3</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"FACTOR3_centered"</span>, <span class="st">"EDUCATION"</span>))</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat.int<span class="fl">.2</span>) <span class="sc">+</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 6</strong></p>
+<ol type="a">
+<li>Is the interaction significant?</li>
+<li>What is the slope of reading strategy for participants with <code>Further</code> education, and for participants with <code>Higher</code> education? Describe the interaction in words.</li>
+<li>What does the <code>EDUCATIONHigher</code> estimate mean, and is it significant?</li>
+<li>Stretch question: the lecture shows the same model fitted with the <em>uncentred</em> reading strategy scores. There, the <code>EDUCATIONHigher</code> estimate is -0.199 and significant (p = .017). Why is it so different from your estimate?</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ul>
+<li>For question b: the slope for <code>Higher</code> education is the slope for <code>Further</code> education plus the interaction estimate.</li>
+<li>For question d: what value of reading strategy does the <code>EDUCATIONHigher</code> estimate refer to in each model?</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="step-7-report-the-results-of-a-linear-model-with-an-interaction" class="level4">
+<h4 class="anchored" data-anchor-id="step-7-report-the-results-of-a-linear-model-with-an-interaction">Step 7: Report the results of a linear model with an interaction</h4>
+<blockquote class="blockquote">
+<p>Action: In your Quarto document, write a short report of the model you fitted in Step 6. Write it as plain text, not in a code chunk. Use the example in the lectures and the template in the Hint.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled" title="Hint">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Hint
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Fill in the gaps <code>...</code> using the model summary from Step 6.</p>
+<blockquote class="blockquote">
+<p>We fitted a linear model with mean comprehension accuracy as the outcome and reading strategy (FACTOR3, centred on its mean), education level and their interaction as predictors. The model is significant overall, F(…, …) = …, p …, and explains …% of variance (adjusted R² = …). For participants with further education, accuracy increased with higher reading strategy scores (b = …, t = …, p …). At the average reading strategy score, accuracy did … differ between participants with higher and further education (b = …, t = …, p …). A … interaction (b = …, t = …, p …) indicates that the reading strategy effect was … for participants with higher education.</p>
+</blockquote>
+<ul>
+<li>As in Week 8, report the estimates as <em>b</em>.</li>
+<li>In a model with an interaction, describe each estimate for what it is: for example, the <code>FACTOR3_centered</code> estimate is the reading strategy slope for the <em>reference level</em> (<code>Further</code>), not for everyone.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="step-8-extension-how-robust-is-the-interaction" class="level4">
+<h4 class="anchored" data-anchor-id="step-8-extension-how-robust-is-the-interaction">Step 8: Extension – How robust is the interaction?</h4>
+<p>Look again at the <code>Further</code> panel of the first plot in Step 3. One participant has a reading strategy score of 9, far below everyone else (the next lowest score is 29), and high accuracy (0.95). In Week 5, you looked at how unusual data points can affect a correlation. The same can happen in a linear model.</p>
+<blockquote class="blockquote">
+<p>Action: Fit the model from Step 6 again, without this participant. Then get the model summary.</p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled" title="Code">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Code
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>all.data.check <span class="ot">&lt;-</span> <span class="fu">filter</span>(all.data, FACTOR3 <span class="sc">&gt;</span> <span class="dv">9</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.4</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered <span class="sc">*</span> EDUCATION, <span class="at">data =</span> all.data.check)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>filter(all.data, FACTOR3 &gt; 9)</code> keeps only the rows (participants) for whom <code>FACTOR3</code> is greater than 9, and we store the result as a new dataset, <code>all.data.check</code>. The original <code>all.data</code> is not changed.</li>
+</ul>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 8</strong></p>
+<ol type="a">
+<li>Is the interaction still significant without this participant? How has the interaction estimate changed?</li>
+<li>What does this tell you about how much confidence to place in the interaction? Should we remove this participant from the analysis?</li>
+</ol>
+</section>
+</section>
+<section id="lab-activity-2-research-project" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-2-research-project">Lab activity 2: Research project</h3>
+<!-- PLACEHOLDER: Part B lab activity for Week 9 (to be decided). -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Information about this lab activity will be added as soon as possible.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="sec-4141-w9-answers" class="level2">
+<h2 class="anchored" data-anchor-id="sec-4141-w9-answers">Answers</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Answers to the questions in lab activities will be shared after the final lab session of the week has concluded (Thursday afternoon)</p>
+</div>
+</div>
+<!-- ### Lab activity 1:  -->
+<!-- **Questions Step 2** -->
+<!-- a. How many participants are in the dataset, and how many are in each level of `EDUCATION`? -->
+<!-- b. In Weeks 7 and 8 we used data from 172 participants. Why do you think we need a larger dataset to study interactions? -->
+<!-- :::{.callout-note icon=false title="Questions Step 2: Answers" collapse="true"} -->
+<!-- a. There are 478 participants: 224 with `Further` education and 254 with `Higher` education. The dataset includes only participants who reported further or higher education, and who identified as female or male. -->
+<!-- b. An interaction compares the slope of an effect between different groups, or for different values of a moderator. Each slope is estimated from only part of the sample, so it is less precise than a slope estimated from the whole sample, and we need more data to tell whether two slopes really differ. The app in Pre-lab activity 2 shows this: the smaller the sample, the more the slope estimates vary from one sample to the next. -->
+<!-- ::: -->
+<!-- **Questions Step 3** -->
+<!-- a. Compare the trend lines for `Further` and `Higher` education. Does the effect of reading strategy look different? -->
+<!-- b. Compare the trend lines for the three `HLVA` groups. What do the labels at the top of the panels (e.g. `[2,8]`) tell you, and how does the slope change from low to high `HLVA`? -->
+<!-- :::{.callout-note icon=false title="Questions Step 3: Answers" collapse="true"} -->
+<!-- a. Yes. The trend line is steeper for participants with `Higher` education than for participants with `Further` education: reading strategy seems to make more difference to accuracy for people with higher education. -->
+<!-- b. The labels show the range of `HLVA` scores in each group: `[2,8]` means scores from 2 up to and including 8, `(8,10]` means scores above 8 up to and including 10, and `(10,14]` means scores above 10 up to and including 14. The trend lines for the low and mid `HLVA` groups have a similar positive slope, but the line for the high `HLVA` group is almost flat: reading strategy seems to make less difference to accuracy for people with high health literacy. -->
+<!-- ::: -->
+<!-- **Questions Step 4** -->
+<!-- a. What does a `FACTOR3_centered` score of 0 mean? What does a score of -10 mean? -->
+<!-- b. What does the intercept estimate mean in this model? -->
+<!-- :::{.callout-note icon=false title="Questions Step 4: Answers" collapse="true"} -->
+<!-- a. A centred score of 0 means the participant's `FACTOR3` score is exactly the sample mean (49.84). A centred score of -10 means the participant scored 10 points below the mean. -->
+<!-- b. The intercept is 0.807. It is the predicted accuracy for a person with an average reading strategy score and an average health literacy score. If you fit the same model with the uncentred predictors, the slopes, t values and p-values are identical, and only the intercept changes: it becomes the predicted accuracy for a person who scored 0 on both measures, which nobody in the sample did. -->
+<!-- ::: -->
+<!-- **Questions Step 5** -->
+<!-- a. Which estimate tells you about the interaction? Is the interaction significant? -->
+<!-- b. What does the sign of the interaction estimate tell you? Check your answer against the plot. -->
+<!-- c. Do the results support Theory 1 or Theory 2 from Pre-lab activity 1? -->
+<!-- :::{.callout-note icon=false title="Questions Step 5: Answers" collapse="true"} -->
+<!-- a. The `FACTOR3_centered:HLVA_centered` row. The estimate is -0.000571 and the interaction is not significant (t = -1.655, p = .099). -->
+<!-- b. The estimate is negative, so the reading strategy slope gets shallower as `HLVA` increases. The plot shows this: the line for participants one standard deviation above the mean `HLVA` score (2.19) is flatter than the line for participants one standard deviation below the mean (-2.19). -->
+<!-- c. The direction of the estimate, and the plots in Step 3, fit Theory 2: reading strategy makes less difference for people with higher health literacy. But the interaction is not significant, so these data do not give clear evidence for Theory 2 over the possibility that the effect of reading strategy is the same at all levels of health literacy. The difference between the slopes we saw in Step 3 could plausibly have arisen by chance in this sample. -->
+<!-- ::: -->
+<!-- **Questions Step 6** -->
+<!-- a. Is the interaction significant? -->
+<!-- b. What is the slope of reading strategy for participants with `Further` education, and for participants with `Higher` education? Describe the interaction in words. -->
+<!-- c. What does the `EDUCATIONHigher` estimate mean, and is it significant? -->
+<!-- d. Stretch question: the lecture shows the same model fitted with the *uncentred* reading strategy scores. There, the `EDUCATIONHigher` estimate is -0.199 and significant (p = .017). Why is it so different from your estimate? -->
+<!-- :::{.callout-note icon=false title="Questions Step 6: Answers" collapse="true"} -->
+<!-- a. Yes. The `FACTOR3_centered:EDUCATIONHigher` estimate is 0.004104 (t = 2.479, p = .014). -->
+<!-- b. For `Further` education, the slope is 0.0022 (the `FACTOR3_centered` estimate). For `Higher` education, it is 0.0022 + 0.0041 = 0.0063. Reading strategy has a larger effect on accuracy for participants with higher education than for participants with further education: for each extra point on `FACTOR3`, predicted accuracy increases about three times as much. -->
+<!-- c. The estimate is 0.005249. At the average reading strategy score, participants with higher education are predicted to be 0.005 (half a percentage point) more accurate than participants with further education. The difference is not significant (t = 0.467, p = .641). In the plot, the two lines cross close to the average reading strategy score (0 on the x-axis). -->
+<!-- d. In a model with an interaction, the `EDUCATIONHigher` estimate is the difference between the education groups *when reading strategy is 0*. In your model, 0 is the average reading strategy score, so the estimate is the difference for a person with average reading strategy. With uncentred scores, 0 is a reading strategy score of 0, which is below anyone in the sample (the lowest score is 9). Because the lines for the two groups are not parallel, the predicted difference far below the data is large (-0.199). This estimate does not show that people with higher education were less accurate overall. The interaction estimate, its significance, and the model fit are the same in both versions of the model. -->
+<!-- ::: -->
+<!-- **Step 7** -->
+<!-- :::{.callout-note icon=false title="Step 7: Example report" collapse="true"} -->
+<!-- We fitted a linear model with mean comprehension accuracy as the outcome and reading strategy (FACTOR3, centred on its mean), education level and their interaction as predictors. The model is significant overall, F(3, 474) = 10.28, p < .001, and explains 6% of variance (adjusted R² = .06). For participants with further education, accuracy increased with higher reading strategy scores (b = .002, t = 2.01, p = .045). At the average reading strategy score, accuracy did not differ significantly between participants with higher and further education (b = .005, t = 0.47, p = .641). A significant interaction (b = .004, t = 2.48, p = .014) indicates that the reading strategy effect was larger for participants with higher education. -->
+<!-- ::: -->
+<!-- **Questions Step 8** -->
+<!-- a. Is the interaction still significant without this participant? How has the interaction estimate changed? -->
+<!-- b. What does this tell you about how much confidence to place in the interaction? Should we remove this participant from the analysis? -->
+<!-- :::{.callout-note icon=false title="Questions Step 8: Answers" collapse="true"} -->
+<!-- a. No. Without this participant, the interaction estimate falls from 0.004104 to 0.003207 and is no longer significant (t = 1.882, p = .060). The reading strategy slope for `Further` education becomes steeper (from 0.0022 to 0.0031), because this participant had a very low reading strategy score but high accuracy, which flattened the `Further` slope. -->
+<!-- b. Whether the interaction is significant depends on one participant out of 478, so we should be cautious about it. The direction of the effect is the same without the participant, but the evidence is weaker. We should not remove a participant just because doing so changes the result. We could check whether the score is likely to be valid (for example, whether it might be a data entry error), and we can report the analysis with and without the participant so that readers can judge for themselves. A replication with new data would tell us more. This is an example of *results vary*, the theme of this week's lectures, and of the sampling variation you saw in the app in Pre-lab activity 2. -->
+<!-- ::: -->
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../PSYC4141/week8.html" class="pagination-link" aria-label="8. Week 8 - Developing the linear model">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">8. Week 8 - Developing the linear model</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../PSYC4141/sona.html" class="pagination-link" aria-label="11. The SONA page - Everything you need to know about research participation and SONA">
+        <span class="nav-page-text">11. The SONA page - Everything you need to know about research participation and SONA</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>Website developed by Matthew Ivory</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../previous-content/index.html">
+<p>Previous Content</p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
