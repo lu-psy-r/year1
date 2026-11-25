@@ -1,0 +1,113 @@
+---
+title: "4141-w9-lab"
+editor: source
+---
+
+**IMPORTANT** How to complete the lab activity and use the Quarto script:
+
+1)  Open the handbook pages in a separate window or tab and navigate to *Lab activities*.
+2)  Read the instructions on the handbook page for each step.
+3)  Carry out the actions, by inserting a code chunk in the Quarto document, below each action.
+4)  If there are any questions associated with that step, please try to answer them. You can write your answer in the Quarto document, as plain text. Answers to the questions will be shared after the last lab session has taken place (on Thursday afternoon).
+5)  After having carried out an action, written a code chunk and answered any questions, go back to the handbook page and read the next bit of instruction, until you get to the next action.
+6)  If you are stuck: Have a look at the 'Hints' and 'Code' snippets on the handbook page.
+7)  If you are still stuck: Ask for help (your peers on your table, the GTA or lecturer in the lab session, via the Moodle Q&A forum, during Friday's live online Q&A).
+
+## Lab activity 1: What makes it easy or difficult for people to understand written health information?
+
+Steps 1 to 7 are the main lab activity. Step 8 is an extension: do it if you have time, or after the lab.
+
+#### Step 1: Setup the appropriate bits and pieces in RStudio
+
+> Action: In a new code chunk, add the code to empty the R environment.
+> Then add the code to load the relevant libraries. We need the following ones: `here`, `tidyverse`, `easystats` and `ggeffects`.
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 2: Read in and inspect the data
+
+>**Action 1.** In a new code chunk use `read_csv()` and `here()` to read in the data file `all.data.csv`.
+> Give the data object a distinct name, e.g. `all.data`. Then use `summary()` to get an overview of the data.
+
+>**Action 2.** Change `EDUCATION` into a factor using `as.factor()`. Then use `summary()` again.
+
+**Questions Step 2**
+
+a. How many participants are in the dataset, and how many are in each level of `EDUCATION`?
+b. In Weeks 7 and 8 we used data from 172 participants. Why do you think we need a larger dataset to study interactions?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 3: Visualise possible interactions
+
+>**Action 1.** Draw a scatterplot of the association between `FACTOR3` (x-axis) and `mean.acc` (y-axis), with a separate panel for each level of `EDUCATION`.
+
+>**Action 2.** Use `cut_number()` to split the participants into three groups of roughly equal size (low, mid and high `HLVA` scores).
+> Then draw the scatterplot with a separate panel for each group.
+
+**Questions Step 3**
+
+a. Compare the trend lines for `Further` and `Higher` education. Does the effect of reading strategy look different?
+b. Compare the trend lines for the three `HLVA` groups. What do the labels at the top of the panels (e.g. `[2,8]`) tell you, and how does the slope change from low to high `HLVA`?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 4: Centre numeric predictors and fit a model without an interaction
+
+>**Action 1.** In a new code chunk, create centred versions of `FACTOR3` and `HLVA`.
+
+>**Action 2.** Fit a model with `mean.acc` as the outcome and the centred `FACTOR3` and `HLVA` as predictors, *without* an interaction.
+> Then get the model summary.
+
+**Questions Step 4**
+
+a. What does a `FACTOR3_centered` score of 0 mean? What does a score of -10 mean?
+b. What does the intercept estimate mean in this model?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 5: Fit and plot an interaction between two numeric predictors
+
+>**Action 1.** In a new code chunk, fit a model with `mean.acc` as the outcome and the interaction between the centred `FACTOR3` and `HLVA`.
+> Then get the model summary.
+
+>**Action 2.** Use `ggpredict()` and `plot()` to plot the predictions of the model for `FACTOR3_centered`, at different values of `HLVA_centered`.
+
+**Questions Step 5**
+
+a. Which estimate tells you about the interaction? Is the interaction significant?
+b. What does the sign of the interaction estimate tell you? Check your answer against the plot.
+c. Do the results support Theory 1 or Theory 2 from Pre-lab activity 1?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 6: Fit and plot an interaction between a numeric predictor and a categorical predictor
+
+>**Action 1.** Fit a model with `mean.acc` as the outcome and the interaction between `FACTOR3_centered` and `EDUCATION`.
+> Then get the model summary.
+
+>**Action 2.** Use `ggpredict()` and `plot()` to plot the predictions of the model for `FACTOR3_centered`, for each level of `EDUCATION`.
+
+**Questions Step 6**
+
+a. Is the interaction significant?
+b. What is the slope of reading strategy for participants with `Further` education, and for participants with `Higher` education? Describe the interaction in words.
+c. What does the `EDUCATIONHigher` estimate mean, and is it significant?
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 7: Report the results of a linear model with an interaction
+
+> Action: Write a short report of the model you fitted in Step 6 below. Write it as plain text, not in a code chunk.
+> Use the example in the lectures and the template in the Hint on the handbook page.
+
+Make sure to go back to the handbook page and read the next bit of instruction, until you get to the next action.
+
+#### Step 8: Extension -- How robust is the interaction?
+
+> Action: Fit the model from Step 6 again, without the participant with a reading strategy score of 9. Then get the model summary.
+
+**Questions Step 8**
+
+a. Is the interaction still significant without this participant? How has the interaction estimate changed?
+b. What does this tell you about how much confidence to place in the interaction? Should we remove this participant from the analysis?

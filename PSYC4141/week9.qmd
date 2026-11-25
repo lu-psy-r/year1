@@ -1,0 +1,985 @@
+---
+title: 9. Week 9 - The linear model
+subtitle: Written by Rob Davies and Samuel Finnerty
+order: 9 # ensure this is one more than the previous script
+editor:
+  markdown:
+    wrap: 72
+---
+
+```{r}
+#| eval: false
+#| echo: false
+#| warning: false
+#| message: false
+#| copy-code: true
+
+```
+
+```{r}
+#| warning: false
+#| echo: false
+library(kableExtra)
+library(tidyverse)
+```
+
+::: {.callout-note title="Overview"}
+This week we focus on two strands of learning:
+
+A.  The linear model with interactions
+
+In Weeks 7 and 8 you learned to use the linear model to predict one
+variable from one or more other variables, including a categorical
+variable.
+
+**This week you will learn how to test whether the effect of one
+predictor is different for different values of another predictor. This
+is called an interaction.**
+
+Psychologists often expect effects to vary between groups of people, or
+for people with different scores on a third variable. Interactions let
+us examine this.
+
+We will do all this in the context of the **Clearly Understood** project
+on how easy or difficult people find it to understand written health
+information.
+
+B.  Research project
+
+<!-- PLACEHOLDER: Part B overview for Week 9 (to be decided). -->
+
+Information about this week's work on the group project will be added
+as soon as possible.
+
+The materials we have prepared to support your learning are arranged in
+four parts:
+
+- Lectures
+- Reading
+- Pre-lab activities
+- Lab activities
+
+You can navigate to each in the side bar on the right
+:::
+
+<!-- Note: I think it is helpful to have a list of the different sections in a week for cross-referencing. I don't think it helps readability it this is visible to the students (hence I've commented them out) as the outline in the sidebar on the right already provides this info. -->
+
+<!-- - @sec-4141-w9-lectures: Watch these before your lab session -->
+
+<!-- - @sec-4141-w9-reading: Recommended readings -->
+
+<!-- - @sec-4141-w9-prelab-activities: Activities to do before you attend your lab session -->
+
+<!-- - @sec-4141-w9-lab-activities: Activities you do during your lab session -->
+
+<!-- - @sec-4141-w9-answers: Answers to questions in pre-lab and lab activities -->
+
+## Lectures {#sec-4141-w9-lectures}
+
+::: callout-note
+Please note that Rob may mention a different module code or different
+week during the lectures. I've reviewed the material and the content is
+entirely relevant to the current module.
+:::
+
+::: callout-tip
+In week 9, we aim to further develop skills in *analysing* and in
+*visualising* psychological data. We will do so in the context of the
+**Clearly Understood** project.
+
+We will face what the lectures call *the real challenge in psychological
+science*:
+
+1.  People vary
+2.  Effects vary
+3.  Results vary
+
+Because the effects that interest us can be expected to vary, we need to
+be able to investigate *how* they vary. We do this using linear models
+that include **interaction effects**.
+
+- **If** we think that the shape or size of an effect is different in
+  different groups of people, or for different values of a third
+  variable (a *moderator*),
+- **then** we are thinking about an **interaction** effect.
+
+When we report a model that includes an interaction, we still report the
+model we specified, the model fit statistics (`F, R-squared`) and the
+coefficient estimates. We now also need to describe *how* the effect of
+one predictor changes, given different values of another predictor.
+Plots of model predictions help us to do this.
+:::
+
+::: callout-tip
+Before you go on to the activities in @sec-4141-w9-lab-activities,
+**watch** the lectures:
+:::
+
+The lecture for **part A** for this week is presented in four short
+parts. You can view video recordings of the lectures using Panopto, by
+clicking on the links shown following.
+
+1.  **Introduction** (9 minutes): The real challenge in psychological
+    science (people vary, effects vary, results vary); variation,
+    uncertainty, and working with the limits of samples.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=00bbc559-eb90-4766-a209-b40100c7ac33&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+2.  **The Clearly Understood project -- questions and analyses** (11
+    minutes): Critical thinking -- what effects can vary, how effects
+    can vary, and theoretical reasons why effects might vary.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=2aabd1ed-c276-454b-bef8-b40100cc98c9&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+3.  **Coding models with interactions** (19 minutes): Revision on linear
+    models; coding models that do or do not include interactions;
+    identifying the key information in the results; and making sense of
+    what we see.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=4767b039-415a-4878-b048-b40100d74247&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+4.  **Interactions between numeric variables and factors** (13 minutes):
+    Numeric variables and factors as predictors; coding, plotting,
+    interpreting and reporting interactions between numeric variables
+    and factors. Summary of key lessons.
+
+```{=html}
+<iframe src="https://lancaster.cloud.panopto.eu/Panopto/Pages/Embed.aspx?id=8531b025-7f1e-4ec3-9f67-b40100dd88fd&autoplay=false&offerviewer=true&showtitle=true&showbrand=true&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay" aria-label="Panopto Embedded Video Player"></iframe>
+```
+
+::: callout-tip
+The slides presented in the videos can be downloaded as a web page. You
+can download the web page `.html` file and click on it to open it in any
+browser (e.g., Chrome, Edge or Safari). The slide images are high
+quality so the file is quite big (13 MB) and may take a few seconds to
+download.
+:::
+
+- [The slides](files/week9/4141-linear-model-interactions.html)
+
+### The lectures have four main areas of focus {#sec-4141-w9-lectures-focus}
+
+**1. The real challenge in psychological science**
+
+We connect (1.) the fact that psychological and social processes vary
+to (2.) the uncertainties we face when we try to draw conclusions from
+limited samples.
+
+::: callout-tip
+What makes psychological science challenging:
+
+1.  People vary
+2.  Effects vary
+3.  Results vary
+:::
+
+**2. Critical thinking**
+
+So far, we have looked at the impact on understanding of differences
+between individuals in attributes like vocabulary knowledge. Now, we
+consider the possibility that the effect of one predictor could itself
+vary.
+
+::: callout-tip
+We can develop our critical thinking skills by considering:
+
+1.  What effects can vary
+2.  How effects can vary
+
+We discuss the kinds of theoretical assumptions that may lead
+psychologists to hypothesise interaction effects.
+:::
+
+**3. Coding models with interactions**
+
+We build on what we know about coding linear models with multiple
+predictors to code models that include interaction effects.
+
+::: callout-tip
+We build skills by looking at:
+
+- the code we use;
+- the key information in the results, where to find it, and how to
+  interpret it;
+- the different ways in which we can present and interpret
+  interactions.
+:::
+
+**4. Interactions between numeric variables and factors**
+
+The effect of a numeric variable (like reading strategy) can differ
+depending on another numeric variable (like health literacy). An effect
+can also differ between groups, which we code using categorical
+variables (factors) like education level. We look at how to code,
+interpret and report interactions between numeric variables and
+factors.
+
+**B. Research project**
+
+<!-- PLACEHOLDER: Part B lecture or video information for Week 9 (to be decided). -->
+
+Information about this week's work on the group project will be added
+as soon as possible.
+
+## Reading {#sec-4141-w9-reading}
+
+::: {.callout-tip title="Easy access to readings"}
+All reading is accessible via the library. You can go to Moodle -\>
+Library Resources -\> Resource List or you can follow [**this
+link**](https://lancaster.alma.exlibrisgroup.com/leganto/nui/lists/93496942590001221).
+Readings have one of the following tags:
+
+- **Essential**: We expect you to be familiar with these reading. You
+  will be assessed on this.
+- **Recommended**: We highly recommend these readings. They often
+  provide a different perspective, or explain things in a different way.
+- **Optional**: Further readings for those interested.
+
+The reading list is divided into multiple sections:
+
+- **Reading associated with statistics**: this contains links to
+  readings useful for the development of statistical concepts and
+  skills. The main textbook *Fundamental statistics for the behavioral
+  sciences* by Howell (Essential) lives here.
+- **Reading associated with psychological research principles and
+  design**: this contains links to readings that provide a good basis
+  for foundational knowledge around research design.
+- **Reading associated with Open Science principles and practices**:
+  this contains links to key literature on the Open Science movement.
+- **Week by week**: these contain links to key reading for that week
+  that are not listed on any of the more general lists above.
+:::
+
+For **week 9**, the reading is:
+
+<!-- CHECK: confirm the Week 9 reading. Last year's Week 19 page had no new reading for this topic. -->
+
+- There is no new textbook chapter this week. If you have not done so
+  already, read Howell, D. C. (2017). Fundamental statistics for the
+  behavioral sciences (9th ed.). Cengage Learning. Chapter 11 (the Week
+  8 reading on multiple regression).
+
+- Key readings for the mini research project as outlined
+  [here](project.qmd#sec-4141-project-reading).
+
+## Pre-lab activities {#sec-4141-w9-prelab-activities}
+
+After having watched the lectures you'll be in a good position to try
+these activities. Completing them before you attend your lab session
+will help you to consolidate your learning and help move through the lab
+activities more smoothly.
+
+### Pre-lab activity 1: Predict before you look
+
+In the lectures, Rob describes two theories about how the effect of
+health literacy on understanding might depend on vocabulary knowledge.
+In the lab, we ask a similar question about reading strategy:
+
+> Is the effect of reading strategy (`FACTOR3`) on accuracy of
+> understanding (`mean.acc`) different for people with different levels
+> of health literacy (`HLVA`)?
+
+Here are two possible theories:
+
+- **Theory 1**: the effect of reading strategy is *larger* (the slope is
+  steeper) for people with higher health literacy, *because* people who
+  know more about health can make more use of a good reading strategy.
+- **Theory 2**: the effect of reading strategy is *smaller* (the slope
+  is shallower) for people with higher health literacy, *because* people
+  who already understand health information well have less room to
+  improve.
+
+Before the lab, write down your predictions:
+
+1.  Which theory do you think is more likely? Why?
+2.  Do you expect the effect of reading strategy to be different for
+    people with further education and people with higher education? If
+    so, in which direction?
+
+Keep your predictions: you will compare them with the results in Steps 5
+and 6 of the lab.
+
+::: callout-tip
+In the lab, we include education level (`EDUCATION`) as a categorical
+predictor, as we did in Week 8. If you need to, look back at Step 9 of
+the Week 8 lab to remind yourself what a *reference level* is.
+:::
+
+### Pre-lab activity 2: See how slope estimates vary between samples
+
+Have a look at [**this app on sampling variation in linear
+models**](https://robayedavies.github.io/teaching-nhst-lm-slope-demo-shiny/)
+by Rob Davies.
+
+The app simulates data for a linear model with one predictor. It shows
+the slope estimate for one sample, alongside four more samples drawn
+from the same population, and two piles of 100 simulated studies: one
+where there is no effect in the population, and one where there is an
+effect.
+
+::: callout-important
+The app runs in **Chrome** or **Edge**, not in Safari. The first time
+you open it, it downloads the software it needs (60-90 MB), which can
+take up to a minute.
+:::
+
+Try the following:
+
+1.  Compare the slope estimates in the different samples from the same
+    population. Click `Draw new samples` a few times.
+2.  Change `N per study` to make the samples smaller, then larger, and
+    draw new samples each time.
+3.  Look at the pile of studies where there is no effect in the
+    population.
+
+Pre-lab activity questions:
+
+1.  How much do the slope estimates vary between samples drawn from the
+    same population?
+2.  What happens to this variation when the samples are smaller or
+    larger?
+3.  In the pile of studies where there is no effect in the population,
+    do all the slope estimates equal zero?
+
+Keep your answers in mind for Steps 2 and 8 of the lab. When we look for
+an interaction, we compare slopes estimated in *parts* of a sample, so
+this variation matters.
+
+### Pre-lab activity 3: Research project
+
+<!-- PLACEHOLDER: Part B pre-lab activities for Week 9 (to be decided). -->
+
+::: callout-tip
+Information about the pre-lab activities for the research project will
+be added as soon as possible.
+:::
+
+### Pre-lab activity 4: Getting ready
+
+To complete this week's lab activity you will need several files:
+
+1.  We'll work with an example script called `4141_wk9_lab.qmd`. This is
+    a Quarto document.
+2.  We'll also need a new data file named `all.data.csv`.
+
+You can download the files here:
+[`4141_wk9_lab.zip`](files/week9/4141_wk9_lab.zip){download="4141_wk9_lab.zip"}.
+Usually they will be saved in your 'Downloads' folder.
+
+Next, upload the zip-folder as it is to your Files space on the R-server
+(bottom right quadrant; no need to extract the files first).
+
+Finally, open the example script by clicking on the file called
+`4141_wk9_lab.qmd` in the Files space on the R-server.
+
+You are now ready to start work on the lab activities.
+
+## Lab activities {#sec-4141-w9-lab-activities}
+
+### Lab activity 1: What makes it easy or difficult for people to understand written health information?
+
+We will do our practical lab work to develop your skills in the context
+of the **Clearly Understood** project.
+
+::: callout-important
+The research questions we are focussing on today are:
+
+1.  What person attributes predict success in understanding health
+    information?
+2.  How can the effects of person attributes vary, in different groups
+    of people, or for different values of a third variable (a
+    *moderator*)?
+:::
+
+This week, we work with a larger dataset. It combines the data from the
+two studies of adults in the UK, including the study two data you used
+in Weeks 7 and 8, with data collected from Lancaster first-year
+psychology students in a previous year. Studying interactions usually
+needs more data than studying the effect of one predictor.
+
+We focus on one effect: the effect of reading strategy (`FACTOR3`) on
+accuracy of understanding (`mean.acc`). We ask whether this effect is
+different:
+
+- for people with different levels of health literacy (`HLVA`), a
+  numeric variable;
+- for people with different levels of education (`EDUCATION`), a
+  categorical variable.
+
+::: {.callout-tip title="Where are the download links?"}
+Links to the files to be downloaded are in the **Pre-lab activities
+section** under Getting ready.
+:::
+
+#### Aims of the activity
+
+We are going to:
+
+1.  Setup the appropriate bits and pieces in RStudio -- using `rm()`
+    and `library()`
+2.  Read in and inspect the data -- using `read_csv()`, `summary()` and
+    `as.factor()`
+3.  Visualise possible interactions -- using `geom_smooth()`,
+    `facet_wrap()` and `cut_number()`
+4.  Centre numeric predictors and fit a model without an interaction
+5.  Fit and plot an interaction between two numeric predictors -- using
+    `lm()` with `*`, and `ggpredict()`
+6.  Fit and plot an interaction between a numeric predictor and a
+    categorical predictor
+7.  Report the results of a linear model with an interaction
+8.  Extension: How robust is the interaction?
+
+::: callout-tip
+Steps 1 to 7 are the main lab activity. Step 8 is an extension: do it if
+you have time, or after the lab.
+:::
+
+::: {.callout-important title="How to use the Quarto document?"}
+**All instructions and guidance (including hints and code snippets) for
+lab activities are presented on this handbook page.**
+
+The Quarto document is largely empty, only containing a copy of the
+section headers and the actions to remind you of what you are meant to
+do. Sometimes there are questions associated with the code you've
+written or the output that follows from it. These can also be found on
+both the handbook page and in the Quarto document.
+
+How to complete the lab activity and use the Quarto script:
+
+1)  Open the handbook pages in a separate window or tab and navigate to
+    *Lab activities*.
+2)  Read the instructions on the handbook page for each step.
+3)  Carry out the actions, by inserting a code chunk in the Quarto
+    document, below each action.
+4)  If there are any questions associated with that step, please try to
+    answer them. You can write your answer in the Quarto document, as
+    plain text. Answers to the questions will be shared after the last
+    lab session has taken place (on Thursday afternoon).
+5)  After having carried out an action, written a code chunk and
+    answered any questions, go back to the handbook page and read the
+    next bit of instruction, until you get to the next action.
+6)  If you are stuck: Have a look at the 'Hints' and 'Code' snippets on
+    the handbook page.
+7)  If you are still stuck: Ask for help (your peers on your table, the
+    GTA or lecturer in the lab session, via the Moodle Q&A forum, during
+    Friday's live online Q&A).
+
+If you'd like to watch a demonstration of this, have a look at the video
+at the start of Lab activity 3 of Week 5
+([here](week5.qmd#sec-4141-w5-lab-activities)).
+:::
+
+#### Step 1: Setup the appropriate bits and pieces in RStudio
+
+> Action: In a new code chunk, add the code to empty the R environment.
+> Then add the code to load the relevant libraries. We need the
+> following ones: `here`, `tidyverse`, `easystats` and `ggeffects`.
+
+::: {.callout-tip title="Code" collapse="true"}
+``` r
+rm(list=ls())
+
+library(here)
+library(tidyverse)
+library(easystats)
+library(ggeffects)
+```
+:::
+
+#### Step 2: Read in and inspect the data
+
+The data file for this lab activity is `all.data.csv`. It has the same
+columns as the data file we used in Weeks 7 and 8:
+
+- `participant_ID` participant code;
+- `mean.acc` average accuracy of response to questions testing
+  understanding of health guidance (varies between 0-1);
+- `mean.self` average self-rated accuracy of understanding of health
+  guidance (varies between 1-9);
+- `study` variable coding for what study the data were collected in
+  (`study.one`, `study.two` or `PSYC122`, the student data);
+- `AGE` age in years;
+- `SHIPLEY` vocabulary knowledge test score (varies between 0-40);
+- `HLVA` health literacy test score (varies between 1-16);
+- `FACTOR3` reading strategy survey score (varies between 0-80);
+- `GENDER` gender code (here, `Female` or `Male`);
+- `EDUCATION` education level code (here, `Further` or `Higher`);
+- `ETHNICITY` ethnicity (Office National Statistics categories) code.
+
+> **Action 1.** In a new code chunk use `read_csv()` and `here()` to
+> read in the data file. Give the data object a distinct name, e.g.
+> `all.data`. Then use `summary()` to get an overview of the data.
+
+::: {.callout-tip title="Code" collapse="true"}
+``` r
+all.data <- read_csv(here("4141_wk9_lab", "all.data.csv"))
+
+summary(all.data)
+```
+:::
+
+In the summary, `EDUCATION` is shown as `Class: character`, so we cannot
+see how many participants are in each group. If we change it into a
+*factor*, `summary()` will count the participants at each level.
+
+> **Action 2.** Change `EDUCATION` into a factor using `as.factor()`.
+> Then use `summary()` again.
+
+::: {.callout-tip title="Code" collapse="true"}
+``` r
+all.data$EDUCATION <- as.factor(all.data$EDUCATION)
+
+summary(all.data)
+```
+
+- `all.data$EDUCATION` picks out the `EDUCATION` column of `all.data`.
+- `as.factor()` changes the variable into a factor, and the assignment
+  arrow `<-` puts the result back in the same column.
+:::
+
+**Questions Step 2**
+
+a.  How many participants are in the dataset, and how many are in each
+    level of `EDUCATION`?
+b.  In Weeks 7 and 8 we used data from 172 participants. Why do you
+    think we need a larger dataset to study interactions?
+
+::: {.callout-note title="Hint" collapse="true"}
+Think about what you saw in the app in Pre-lab activity 2: how did the
+slope estimates change when the samples were smaller?
+:::
+
+#### Step 3: Visualise possible interactions
+
+An interaction means that the effect of one predictor (here, the slope
+of the association between `FACTOR3` and `mean.acc`) is different for
+different values of another variable. We can look for this by drawing
+the same scatterplot separately for different groups of participants.
+
+> **Action 1.** Draw a scatterplot of the association between `FACTOR3`
+> (x-axis) and `mean.acc` (y-axis), with a separate panel for each level
+> of `EDUCATION`.
+
+::: {.callout-tip title="Code" collapse="true"}
+``` r
+ggplot(data = all.data, aes(x = FACTOR3, y = mean.acc)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm") +
+  theme_bw() +
+  labs(x = "Reading strategy (FACTOR3)", y = "Mean accuracy") +
+  xlim(0, 80) + ylim(0, 1) +
+  facet_wrap(~ EDUCATION)
+```
+
+- `geom_smooth(method = "lm")` adds a linear model line (the trend) with
+  its 95% confidence interval as a grey band. R will show the message
+  `` `geom_smooth()` using formula = 'y ~ x' ``: this is not an error.
+- `facet_wrap(~ EDUCATION)` splits the data by `EDUCATION` and draws a
+  separate panel for each level. See the
+  [`facet_wrap()` reference page](https://ggplot2.tidyverse.org/reference/facet_wrap.html).
+:::
+
+To do the same for a numeric variable like `HLVA`, we first need to split
+the participants into groups based on their `HLVA` scores.
+
+> **Action 2.** Use `cut_number()` to split the participants into three
+> groups of roughly equal size (low, mid and high `HLVA` scores). Then
+> draw the scatterplot with a separate panel for each group.
+
+::: {.callout-tip title="Code" collapse="true"}
+``` r
+all.data$HLVA_splits <- cut_number(all.data$HLVA, 3)
+
+ggplot(data = all.data, aes(x = FACTOR3, y = mean.acc)) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm") +
+  theme_bw() +
+  labs(x = "Reading strategy (FACTOR3)", y = "Mean accuracy") +
+  xlim(0, 80) + ylim(0, 1) +
+  facet_wrap(~ HLVA_splits, nrow = 1, labeller = label_both)
+```
+
+- `cut_number(all.data$HLVA, 3)` orders the participants by their `HLVA`
+  score and splits them into three groups. The result is stored in a new
+  column, `HLVA_splits`. See the
+  [`cut_number()` reference page](https://ggplot2.tidyverse.org/reference/cut_interval.html).
+- `nrow = 1` puts the panels side by side, and
+  `labeller = label_both` shows the variable name as well as the group
+  in each panel label.
+- Where the splits fall depends on the scores in the sample.
+:::
+
+**Questions Step 3**
+
+a.  Compare the trend lines for `Further` and `Higher` education. Does
+    the effect of reading strategy look different?
+b.  Compare the trend lines for the three `HLVA` groups. What do the
+    labels at the top of the panels (e.g. `[2,8]`) tell you, and how
+    does the slope change from low to high `HLVA`?
+
+#### Step 4: Centre numeric predictors and fit a model without an interaction
+
+Before we fit models with interactions, we *centre* the numeric
+predictors. Centring a variable means subtracting the variable's mean
+from every score, so that a centred score of 0 is the average score.
+
+Why do this? In a model with an interaction, the estimate for each
+predictor on its own is its effect when the *other* predictor is 0. For
+our variables, 0 is not a useful value: nobody in the sample scored 0
+on `FACTOR3` (the lowest score is 9) or on `HLVA` (the lowest is 2).
+After centring, each estimate shows the effect for a person with an
+*average* score on the other predictor. Centring does not change the
+interaction estimate, its significance, or how well the model fits.
+
+> **Action 1.** In a new code chunk, create centred versions of
+> `FACTOR3` and `HLVA`.
+
+::: {.callout-tip title="Code" collapse="true"}
+``` r
+all.data$FACTOR3_centered <- all.data$FACTOR3 - mean(all.data$FACTOR3, na.rm = TRUE)
+all.data$HLVA_centered <- all.data$HLVA - mean(all.data$HLVA, na.rm = TRUE)
+```
+
+- `mean(all.data$FACTOR3, na.rm = TRUE)` calculates the mean of
+  `FACTOR3`. `na.rm = TRUE` tells R to ignore missing values, if there
+  are any.
+- Subtracting the mean from the column gives the centred score for every
+  participant, which we store in a new column.
+:::
+
+> **Action 2.** Fit a model with `mean.acc` as the outcome and the
+> centred `FACTOR3` and `HLVA` as predictors, *without* an interaction.
+> Then get the model summary.
+
+::: {.callout-tip title="Code" collapse="true"}
+``` r
+model.1 <- lm(mean.acc ~ FACTOR3_centered + HLVA_centered, data = all.data)
+summary(model.1)
+```
+:::
+
+**Questions Step 4**
+
+a.  What does a `FACTOR3_centered` score of 0 mean? What does a score of
+    -10 mean?
+b.  What does the intercept estimate mean in this model?
+
+::: {.callout-note title="Hint" collapse="true"}
+- The intercept is the predicted outcome when all the predictors are 0.
+- Optional: fit the same model with the uncentred `FACTOR3` and `HLVA`
+  and compare the two summaries. What changes and what stays the same?
+:::
+
+#### Step 5: Fit and plot an interaction between two numeric predictors
+
+To include an interaction in a model, we separate the predictors with
+`*` instead of `+`:
+
+``` r
+lm(outcome ~ predictor.X * predictor.Z, data = data.set)
+```
+
+This gives a model with the effect of each predictor *and* the
+interaction between them. In the model summary, the interaction is shown
+as `predictor.X:predictor.Z`.
+
+> **Action 1.** In a new code chunk, fit a model with `mean.acc` as the
+> outcome and the interaction between the centred `FACTOR3` and `HLVA`.
+> Then get the model summary.
+
+::: {.callout-tip title="Code" collapse="true"}
+``` r
+model.2 <- lm(mean.acc ~ FACTOR3_centered * HLVA_centered, data = all.data)
+summary(model.2)
+```
+:::
+
+::: {.callout-note title="What do the estimates mean?"}
+- `FACTOR3_centered`: the effect (slope) of reading strategy for a
+  person with an average `HLVA` score (`HLVA_centered` = 0).
+- `HLVA_centered`: the effect of health literacy for a person with an
+  average `FACTOR3` score.
+- `FACTOR3_centered:HLVA_centered`: the interaction. It shows how much
+  the slope of `FACTOR3` changes for each one-point increase in `HLVA`.
+  A positive estimate means the reading strategy slope gets steeper as
+  `HLVA` increases; a negative estimate means it gets shallower.
+:::
+
+Interactions are easier to understand if we plot them. We use
+`ggpredict()`, as in Week 8, but now name two predictors in `terms`.
+
+> **Action 2.** Use `ggpredict()` and `plot()` to plot the predictions
+> of the model for `FACTOR3_centered`, at different values of
+> `HLVA_centered`.
+
+::: {.callout-tip title="Code" collapse="true"}
+``` r
+dat.int.1 <- ggpredict(model.2, terms = c("FACTOR3_centered", "HLVA_centered"))
+plot(dat.int.1) +
+  theme_bw() +
+  ylim(0, 1)
+```
+
+- The first predictor named in `terms` goes on the x-axis. The second
+  is the moderator: `ggpredict()` draws a separate line for three of its
+  values, the mean (0) and one standard deviation below and above the
+  mean (-2.19 and 2.19).
+- In the lecture slides, these plots are made with `plot_model()` from
+  the `sjPlot` library. `plot_model()` uses `ggpredict()` to calculate
+  the predictions, so the plots show the same thing.
+- The message `Scale for y is already present` is not an error: `ylim()`
+  has replaced the y-axis that `plot()` set.
+:::
+
+**Questions Step 5**
+
+a.  Which estimate tells you about the interaction? Is the interaction
+    significant?
+b.  What does the sign of the interaction estimate tell you? Check your
+    answer against the plot.
+c.  Do the results support Theory 1 or Theory 2 from Pre-lab activity 1?
+
+#### Step 6: Fit and plot an interaction between a numeric predictor and a categorical predictor
+
+Interactions with a categorical predictor are coded in the same way.
+
+> **Action 1.** Fit a model with `mean.acc` as the outcome and the
+> interaction between `FACTOR3_centered` and `EDUCATION`. Then get the
+> model summary.
+
+::: {.callout-tip title="Code" collapse="true"}
+``` r
+model.3 <- lm(mean.acc ~ FACTOR3_centered * EDUCATION, data = all.data)
+summary(model.3)
+```
+:::
+
+::: {.callout-note title="What do the estimates mean?"}
+`Further` is the reference level (it comes first in the alphabet), so:
+
+- `FACTOR3_centered`: the slope of reading strategy for participants
+  with `Further` education.
+- `EDUCATIONHigher`: the difference in predicted accuracy between
+  `Higher` and `Further` education, for a person with an average
+  `FACTOR3` score.
+- `FACTOR3_centered:EDUCATIONHigher`: the interaction. It shows how much
+  steeper (if positive) or shallower (if negative) the reading strategy
+  slope is for `Higher` compared with `Further` education.
+:::
+
+> **Action 2.** Use `ggpredict()` and `plot()` to plot the predictions
+> of the model for `FACTOR3_centered`, for each level of `EDUCATION`.
+
+::: {.callout-tip title="Code" collapse="true"}
+``` r
+dat.int.2 <- ggpredict(model.3, terms = c("FACTOR3_centered", "EDUCATION"))
+plot(dat.int.2) +
+  theme_bw() +
+  ylim(0, 1)
+```
+:::
+
+**Questions Step 6**
+
+a.  Is the interaction significant?
+b.  What is the slope of reading strategy for participants with
+    `Further` education, and for participants with `Higher` education?
+    Describe the interaction in words.
+c.  What does the `EDUCATIONHigher` estimate mean, and is it
+    significant?
+d.  Stretch question: the lecture shows the same model fitted with the
+    *uncentred* reading strategy scores. There, the `EDUCATIONHigher`
+    estimate is -0.199 and significant (p = .017). Why is it so
+    different from your estimate?
+
+::: {.callout-note title="Hint" collapse="true"}
+- For question b: the slope for `Higher` education is the slope for
+  `Further` education plus the interaction estimate.
+- For question d: what value of reading strategy does the
+  `EDUCATIONHigher` estimate refer to in each model?
+:::
+
+#### Step 7: Report the results of a linear model with an interaction
+
+> Action: In your Quarto document, write a short report of the model you
+> fitted in Step 6. Write it as plain text, not in a code chunk. Use the
+> example in the lectures and the template in the Hint.
+
+::: {.callout-note title="Hint" collapse="true"}
+Fill in the gaps `...` using the model summary from Step 6.
+
+> We fitted a linear model with mean comprehension accuracy as the
+> outcome and reading strategy (FACTOR3, centred on its mean), education
+> level and their interaction as predictors. The model is significant
+> overall, F(..., ...) = ..., p ..., and explains ...% of variance
+> (adjusted R² = ...). For participants with further education, accuracy
+> increased with higher reading strategy scores (b = ..., t = ..., p
+> ...). At the average reading strategy score, accuracy did ... differ
+> between participants with higher and further education (b = ..., t =
+> ..., p ...). A ... interaction (b = ..., t = ..., p ...) indicates that
+> the reading strategy effect was ... for participants with higher
+> education.
+
+- As in Week 8, report the estimates as *b*.
+- In a model with an interaction, describe each estimate for what it
+  is: for example, the `FACTOR3_centered` estimate is the reading
+  strategy slope for the *reference level* (`Further`), not for everyone.
+:::
+
+#### Step 8: Extension -- How robust is the interaction?
+
+Look again at the `Further` panel of the first plot in Step 3. One
+participant has a reading strategy score of 9, far below everyone else
+(the next lowest score is 29), and high accuracy (0.95). In Week 5, you
+looked at how unusual data points can affect a correlation. The same can
+happen in a linear model.
+
+> Action: Fit the model from Step 6 again, without this participant.
+> Then get the model summary.
+
+::: {.callout-tip title="Code" collapse="true"}
+``` r
+all.data.check <- filter(all.data, FACTOR3 > 9)
+
+model.4 <- lm(mean.acc ~ FACTOR3_centered * EDUCATION, data = all.data.check)
+summary(model.4)
+```
+
+- `filter(all.data, FACTOR3 > 9)` keeps only the rows (participants) for
+  whom `FACTOR3` is greater than 9, and we store the result as a new
+  dataset, `all.data.check`. The original `all.data` is not changed.
+:::
+
+**Questions Step 8**
+
+a.  Is the interaction still significant without this participant? How
+    has the interaction estimate changed?
+b.  What does this tell you about how much confidence to place in the
+    interaction? Should we remove this participant from the analysis?
+
+### Lab activity 2: Research project
+
+<!-- PLACEHOLDER: Part B lab activity for Week 9 (to be decided). -->
+
+::: callout-tip
+Information about this lab activity will be added as soon as possible.
+:::
+
+## Answers {#sec-4141-w9-answers}
+
+::: callout-tip
+Answers to the questions in lab activities will be shared after the
+final lab session of the week has concluded (Thursday afternoon)
+:::
+
+<!-- ### Lab activity 1:  -->
+
+<!-- **Questions Step 2** -->
+
+<!-- a. How many participants are in the dataset, and how many are in each level of `EDUCATION`? -->
+
+<!-- b. In Weeks 7 and 8 we used data from 172 participants. Why do you think we need a larger dataset to study interactions? -->
+
+<!-- :::{.callout-note icon=false title="Questions Step 2: Answers" collapse="true"} -->
+
+<!-- a. There are 478 participants: 224 with `Further` education and 254 with `Higher` education. The dataset includes only participants who reported further or higher education, and who identified as female or male. -->
+
+<!-- b. An interaction compares the slope of an effect between different groups, or for different values of a moderator. Each slope is estimated from only part of the sample, so it is less precise than a slope estimated from the whole sample, and we need more data to tell whether two slopes really differ. The app in Pre-lab activity 2 shows this: the smaller the sample, the more the slope estimates vary from one sample to the next. -->
+
+<!-- ::: -->
+
+<!-- **Questions Step 3** -->
+
+<!-- a. Compare the trend lines for `Further` and `Higher` education. Does the effect of reading strategy look different? -->
+
+<!-- b. Compare the trend lines for the three `HLVA` groups. What do the labels at the top of the panels (e.g. `[2,8]`) tell you, and how does the slope change from low to high `HLVA`? -->
+
+<!-- :::{.callout-note icon=false title="Questions Step 3: Answers" collapse="true"} -->
+
+<!-- a. Yes. The trend line is steeper for participants with `Higher` education than for participants with `Further` education: reading strategy seems to make more difference to accuracy for people with higher education. -->
+
+<!-- b. The labels show the range of `HLVA` scores in each group: `[2,8]` means scores from 2 up to and including 8, `(8,10]` means scores above 8 up to and including 10, and `(10,14]` means scores above 10 up to and including 14. The trend lines for the low and mid `HLVA` groups have a similar positive slope, but the line for the high `HLVA` group is almost flat: reading strategy seems to make less difference to accuracy for people with high health literacy. -->
+
+<!-- ::: -->
+
+<!-- **Questions Step 4** -->
+
+<!-- a. What does a `FACTOR3_centered` score of 0 mean? What does a score of -10 mean? -->
+
+<!-- b. What does the intercept estimate mean in this model? -->
+
+<!-- :::{.callout-note icon=false title="Questions Step 4: Answers" collapse="true"} -->
+
+<!-- a. A centred score of 0 means the participant's `FACTOR3` score is exactly the sample mean (49.84). A centred score of -10 means the participant scored 10 points below the mean. -->
+
+<!-- b. The intercept is 0.807. It is the predicted accuracy for a person with an average reading strategy score and an average health literacy score. If you fit the same model with the uncentred predictors, the slopes, t values and p-values are identical, and only the intercept changes: it becomes the predicted accuracy for a person who scored 0 on both measures, which nobody in the sample did. -->
+
+<!-- ::: -->
+
+<!-- **Questions Step 5** -->
+
+<!-- a. Which estimate tells you about the interaction? Is the interaction significant? -->
+
+<!-- b. What does the sign of the interaction estimate tell you? Check your answer against the plot. -->
+
+<!-- c. Do the results support Theory 1 or Theory 2 from Pre-lab activity 1? -->
+
+<!-- :::{.callout-note icon=false title="Questions Step 5: Answers" collapse="true"} -->
+
+<!-- a. The `FACTOR3_centered:HLVA_centered` row. The estimate is -0.000571 and the interaction is not significant (t = -1.655, p = .099). -->
+
+<!-- b. The estimate is negative, so the reading strategy slope gets shallower as `HLVA` increases. The plot shows this: the line for participants one standard deviation above the mean `HLVA` score (2.19) is flatter than the line for participants one standard deviation below the mean (-2.19). -->
+
+<!-- c. The direction of the estimate, and the plots in Step 3, fit Theory 2: reading strategy makes less difference for people with higher health literacy. But the interaction is not significant, so these data do not give clear evidence for Theory 2 over the possibility that the effect of reading strategy is the same at all levels of health literacy. The difference between the slopes we saw in Step 3 could plausibly have arisen by chance in this sample. -->
+
+<!-- ::: -->
+
+<!-- **Questions Step 6** -->
+
+<!-- a. Is the interaction significant? -->
+
+<!-- b. What is the slope of reading strategy for participants with `Further` education, and for participants with `Higher` education? Describe the interaction in words. -->
+
+<!-- c. What does the `EDUCATIONHigher` estimate mean, and is it significant? -->
+
+<!-- d. Stretch question: the lecture shows the same model fitted with the *uncentred* reading strategy scores. There, the `EDUCATIONHigher` estimate is -0.199 and significant (p = .017). Why is it so different from your estimate? -->
+
+<!-- :::{.callout-note icon=false title="Questions Step 6: Answers" collapse="true"} -->
+
+<!-- a. Yes. The `FACTOR3_centered:EDUCATIONHigher` estimate is 0.004104 (t = 2.479, p = .014). -->
+
+<!-- b. For `Further` education, the slope is 0.0022 (the `FACTOR3_centered` estimate). For `Higher` education, it is 0.0022 + 0.0041 = 0.0063. Reading strategy has a larger effect on accuracy for participants with higher education than for participants with further education: for each extra point on `FACTOR3`, predicted accuracy increases about three times as much. -->
+
+<!-- c. The estimate is 0.005249. At the average reading strategy score, participants with higher education are predicted to be 0.005 (half a percentage point) more accurate than participants with further education. The difference is not significant (t = 0.467, p = .641). In the plot, the two lines cross close to the average reading strategy score (0 on the x-axis). -->
+
+<!-- d. In a model with an interaction, the `EDUCATIONHigher` estimate is the difference between the education groups *when reading strategy is 0*. In your model, 0 is the average reading strategy score, so the estimate is the difference for a person with average reading strategy. With uncentred scores, 0 is a reading strategy score of 0, which is below anyone in the sample (the lowest score is 9). Because the lines for the two groups are not parallel, the predicted difference far below the data is large (-0.199). This estimate does not show that people with higher education were less accurate overall. The interaction estimate, its significance, and the model fit are the same in both versions of the model. -->
+
+<!-- ::: -->
+
+<!-- **Step 7** -->
+
+<!-- :::{.callout-note icon=false title="Step 7: Example report" collapse="true"} -->
+
+<!-- We fitted a linear model with mean comprehension accuracy as the outcome and reading strategy (FACTOR3, centred on its mean), education level and their interaction as predictors. The model is significant overall, F(3, 474) = 10.28, p < .001, and explains 6% of variance (adjusted R² = .06). For participants with further education, accuracy increased with higher reading strategy scores (b = .002, t = 2.01, p = .045). At the average reading strategy score, accuracy did not differ significantly between participants with higher and further education (b = .005, t = 0.47, p = .641). A significant interaction (b = .004, t = 2.48, p = .014) indicates that the reading strategy effect was larger for participants with higher education. -->
+
+<!-- ::: -->
+
+<!-- **Questions Step 8** -->
+
+<!-- a. Is the interaction still significant without this participant? How has the interaction estimate changed? -->
+
+<!-- b. What does this tell you about how much confidence to place in the interaction? Should we remove this participant from the analysis? -->
+
+<!-- :::{.callout-note icon=false title="Questions Step 8: Answers" collapse="true"} -->
+
+<!-- a. No. Without this participant, the interaction estimate falls from 0.004104 to 0.003207 and is no longer significant (t = 1.882, p = .060). The reading strategy slope for `Further` education becomes steeper (from 0.0022 to 0.0031), because this participant had a very low reading strategy score but high accuracy, which flattened the `Further` slope. -->
+
+<!-- b. Whether the interaction is significant depends on one participant out of 478, so we should be cautious about it. The direction of the effect is the same without the participant, but the evidence is weaker. We should not remove a participant just because doing so changes the result. We could check whether the score is likely to be valid (for example, whether it might be a data entry error), and we can report the analysis with and without the participant so that readers can judge for themselves. A replication with new data would tell us more. This is an example of *results vary*, the theme of this week's lectures, and of the sampling variation you saw in the app in Pre-lab activity 2. -->
+
+<!-- ::: -->
