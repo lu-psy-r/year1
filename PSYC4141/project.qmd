@@ -355,7 +355,7 @@ The [Preparing your study for Gorilla document](files/project/preparing_your_stu
 
 ### Building your own measures {#sec-4141-project-own}
 
-Once you all have a Gorilla account, have cloned the example project and have added all group memebers as collaborators, and have completed the [**Preparing your study for Gorilla**](@sec-4141-project-prep) activity you are ready to start adding your own measures to measure demographics, mind wandering and screen time.
+Once you all have a Gorilla account, have cloned the example project and have added all group memebers as collaborators, and have completed the **Preparing your study for Gorilla** activity in the @sec-4141-project-prep, you are ready to start adding your own measures to measure demographics, mind wandering and screen time.
 
 ::: {.callout-tip}
 Guidance on how to do that can be found in the section above on **Learning about the Gorilla platform** [here](@sec-4141-project-gorilla).
