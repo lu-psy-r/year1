@@ -44,12 +44,13 @@ We will do all this in the context of the **Clearly Understood** project
 on how easy or difficult people find it to understand written health
 information.
 
-B.  Research project
+B. Research project
 
-<!-- PLACEHOLDER: Part B overview for Week 9 (to be decided). -->
+This week, you will collect your data and start work on your analysis script. Please see under Pre-lab activities for further information.
 
-Information about this week's work on the group project will be added
-as soon as possible.
+C. Research report
+
+Recordings on the research report and on how to use the template will be added here as soon as possible.
 
 The materials we have prepared to support your learning are arranged in
 four parts:
@@ -351,14 +352,16 @@ Keep your answers in mind for Steps 2 and 8 of the lab. When we look for
 an interaction, we compare slopes estimated in *parts* of a sample, so
 this variation matters.
 
-### Pre-lab activity 3: Research project
+### Pre-lab activity 3: Research project {sec-week9-project-launch}
 
-<!-- PLACEHOLDER: Part B pre-lab activities for Week 9 (to be decided). -->
+If you haven't completed building your study, complete that first. Further information is in last week's lab activity [**here**](week8.qmd#sec-week8-project-building).
 
-::: callout-tip
-Information about the pre-lab activities for the research project will
-be added as soon as possible.
-:::
+Once you've built your questionnaire measures and your experiment, you are *almost* ready to launch your study. Before you can start data collection, a few tasks need to be completed. These are explained on [**The Report page, in the section on Launching your study and recruiting participants**](project.qmd#sec-4141-project-launch).
+
+<!-- ::: callout-tip -->
+<!-- Information about the pre-lab activities for the research project will -->
+<!-- be added as soon as possible. -->
+<!-- ::: -->
 
 ### Pre-lab activity 4: Getting ready
 
@@ -865,10 +868,12 @@ b.  What does this tell you about how much confidence to place in the
 
 ### Lab activity 2: Research project
 
-<!-- PLACEHOLDER: Part B lab activity for Week 9 (to be decided). -->
+::: {.callout-important "Have you launched your study and started data collection?"}
+If you haven't launched your study, complete that step first. Further information is in this week's pre-lab activity here @sec-week9-project-launch.
+:::
 
 ::: callout-tip
-Information about this lab activity will be added as soon as possible.
+We will spend time in the lab to develop your analysis script. Further information about this lab activity will be added as soon as possible.
 :::
 
 ## Answers {#sec-4141-w9-answers}

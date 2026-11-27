@@ -443,5 +443,19 @@ You can meet up as a group and work on it together, or you can assign individual
 Gorilla uses **Version control**. This means that it keeps a record of all the saved changes to the project. Whenever you have finished editing a component, you will need to commit the changes before a different group member can access that specific component. Have a look at [this page](https://support.gorilla.sc/support/tools/questionnaire-builder-2/step-by-step#commit) for a more detailed explanation. It will ask you to add a 'Commit message'. This is a short description of the changes that you implemented that time. So you'd write something like: Added questions 1 to 4'. Keep it short, but make sure to write an informative message. This will make it easier to go back to a previous version if something goes wrong.
 :::
 
+## 8. Launching your study and recruiting participants {#sec-4141-project-launch}
 
+Once you've built your questionnaire measures and your experiment, you are almost ready to launch your study. Before you can start data collection, the following tasks need to be completed:
+
+1. One of the group members needs to add the module coordinator to the project as a collaborator using the the following email address: m.groen@lancaster.ac.uk. 'Margriet Groen' will come up twice, it does not matter which one you add, they are both Margriet's account. This will allow Margriet to double-check a few things to ensure the data will be useable in your analyses.
+2. The project owner needs to complete the following actions:
+    a. *Navigate to the 'Recruitment' tab*: Click on the experiment you built. At the top you see 4 tabs: 'Design', 'Recruitment', 'Participants' and 'Data'. Click on the 'Recruitment' tab.
+    b. *Change the recruitment targe*t: Scroll down to the bottom and click on the blue 'Change recruitment target' button in the left bottom corner. Set the recruitment target to 50. This will open a box where you can request 50 tokens from Lancaster University. Please select that option and submit the token request. Once the module coordinator has checked your project, the token request will be approved.
+    c. *Change the recruitment policy*: Scroll back up to the top and click on the blue 'Change recruitment policy button near the top right of the screen. Select 'Link' and then the 'Simple link' option. Gorilla will generate a unique URL. Use this to direct participants to your study. Once generated it is visible just above the 'Change recruitment policy' button. It starts with 'https://research.sc...'. Copy this link into the message you send to participants to invite them to the study.
+    d. *Change the time limit*: On the same page, just underneath 'Change recruitment policy' there is a button 'Change time limit'. Click on it and enter 4 in the 'hours' box. This will automatically reject participants who started, but have not completed the study within 4 hours. Gorilla will then return the token that was provisionally allocated to that participant for use by a new participant.
+3. You are now ready to invite participants to your study. Please send them a polite message with the link (see under 2c.).
+
+::: {.callout-warning title="Getting reading for data collection"}    
+Further guidance on these steps can be found on the Gorilla support pages as part of the [**Experiment Builder How To guide**](https://support.gorilla.sc/support/tools/experiment-builder/how-to#howdoirecruitparticipants).
+:::
 
