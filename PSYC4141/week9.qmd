@@ -1,5 +1,5 @@
 ---
-title: 9. Week 9 - The linear model
+title: 9. Week 9 - The linear model (with interaction)
 subtitle: Written by Rob Davies, Samuel Finnerty, & Margriet Groen
 order: 9 # ensure this is one more than the previous script
 editor:
