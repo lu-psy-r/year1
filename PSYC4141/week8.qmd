@@ -1087,8 +1087,27 @@ b. Optional: draw the same plot for `ETHNICITY`. What does it show you about the
 :::{.callout-note icon=false title="Questions Step 8: Answers" collapse="true"}
 
 a. The medians for `Further` (about 0.77) and `Higher` (about 0.79) are similar, and the median for `Secondary` is lower (about 0.68). The groups are very different in size: 98 participants in `Higher`, 59 in `Further` and only 15 in `Secondary`. With so few participants, we can be much less certain about the typical accuracy of the `Secondary` group: a few unusual scores could change its median a lot.
+You can count the number of participants in each group with `table()`, which counts how many times each value appears in a column:
 
-b. Most participants (145 of 172) are `White`, with very few in the `Asian` (15), `Mixed` (7) and `Black` (5) groups. We should be cautious about whether the results of our models apply to people from ethnic minority groups, or to the wider population.
+``` r
+table(study.two.gen$EDUCATION)
+```
+
+b. Here is the code for the plot, with the code to count the participants in each group:
+
+``` r
+ggplot(data = study.two.gen, aes(x = ETHNICITY, y = mean.acc)) +
+  geom_jitter(width = 0.2, height = 0, alpha = 0.5) +
+  geom_boxplot(outlier.shape = NA, colour = "red", alpha = 0.1) +
+  theme_bw() +
+  labs(x = "Ethnicity", y = "Mean accuracy") +
+  ylim(0, 1)
+
+table(study.two.gen$ETHNICITY)
+```
+
+Most participants (145 of 172) are `White`, with very few in the `Asian` (15), `Mixed` (7) and `Black` (5) groups. We should be cautious about whether the results of our models apply to people from ethnic minority groups, or to the wider population.
+
 
 :::
 
@@ -1106,7 +1125,7 @@ d. Stretch question: in the boxplot in Step 8, the `Secondary` group looked noti
 
 a. `Further` is the reference level, so the summary shows rows for `EDUCATIONHigher` and `EDUCATIONSecondary`.
 
-b. The estimate is -0.044634. Participants with secondary school education are predicted to have `mean.acc` scores about 0.045 (4.5 percentage points) lower than participants with further education, holding health literacy, vocabulary, reading strategy and age constant. The difference is not significant (t = -1.546, p = .124). The difference between `Higher` and `Further` is not significant either (b = 0.001, t = 0.080, p = .936). Adding `EDUCATION` makes almost no difference to how well the model predicts `mean.acc` (adjusted R-squared 0.3658, compared with 0.3626 in Step 5).
+b. The estimate is -0.044634. Participants with secondary school education are predicted to have `mean.acc` scores about 0.045 (4.5 percentage points) lower than participants with further education, holding health literacy, vocabulary, reading strategy and age constant. The difference is not significant (t = -1.546, p = .124). The difference between `Higher` and `Further` is not significant either (b = 0.001, t = 0.08, p = .936). Adding `EDUCATION` makes almost no difference to how well the model predicts `mean.acc` (adjusted R-squared 0.3658, compared with 0.3626 in Step 5).
 
 c. The `Secondary` group has the longest whiskers. There are only 15 participants in that group, so the prediction for that group is much less certain.
 
