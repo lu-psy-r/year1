@@ -2,17 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
 <title>9. Week 9 - The linear model (with interaction) – Research Methods and Statistics for Psychologists</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -21,8 +27,9 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -33,7 +40,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -67,15 +74,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../PSYC4141/sona.html" rel="next">
 <link href="../PSYC4141/week8.html" rel="prev">
 <link href="../Images/favicon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-a5d6fdbca70fc65d32d26cbabd5849e5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -110,7 +118,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="https://lu-psy-r.github.io/essentials/index_24.css">
 </head>
 
-<body class="nav-sidebar floating nav-fixed">
+<body class="nav-sidebar floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -288,7 +296,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#pre-lab-activity-1-predict-before-you-look" id="toc-pre-lab-activity-1-predict-before-you-look" class="nav-link" data-scroll-target="#pre-lab-activity-1-predict-before-you-look">Pre-lab activity 1: Predict before you look</a></li>
   <li><a href="#pre-lab-activity-2-see-how-slope-estimates-vary-between-samples" id="toc-pre-lab-activity-2-see-how-slope-estimates-vary-between-samples" class="nav-link" data-scroll-target="#pre-lab-activity-2-see-how-slope-estimates-vary-between-samples">Pre-lab activity 2: See how slope estimates vary between samples</a></li>
-  <li><a href="#pre-lab-activity-3-research-project-sec-week9-project-launch" id="toc-pre-lab-activity-3-research-project-sec-week9-project-launch" class="nav-link" data-scroll-target="#pre-lab-activity-3-research-project-sec-week9-project-launch">Pre-lab activity 3: Research project {sec-week9-project-launch}</a></li>
+  <li><a href="#pre-lab-activity-3-research-project" id="toc-pre-lab-activity-3-research-project" class="nav-link" data-scroll-target="#pre-lab-activity-3-research-project">Pre-lab activity 3: Research project</a></li>
   <li><a href="#pre-lab-activity-4-getting-ready" id="toc-pre-lab-activity-4-getting-ready" class="nav-link" data-scroll-target="#pre-lab-activity-4-getting-ready">Pre-lab activity 4: Getting ready</a></li>
   </ul></li>
   <li><a href="#sec-4141-w9-lab-activities" id="toc-sec-4141-w9-lab-activities" class="nav-link" data-scroll-target="#sec-4141-w9-lab-activities">Lab activities</a>
@@ -296,7 +304,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#lab-activity-1-what-makes-it-easy-or-difficult-for-people-to-understand-written-health-information" id="toc-lab-activity-1-what-makes-it-easy-or-difficult-for-people-to-understand-written-health-information" class="nav-link" data-scroll-target="#lab-activity-1-what-makes-it-easy-or-difficult-for-people-to-understand-written-health-information">Lab activity 1: What makes it easy or difficult for people to understand written health information?</a></li>
   <li><a href="#lab-activity-2-research-project" id="toc-lab-activity-2-research-project" class="nav-link" data-scroll-target="#lab-activity-2-research-project">Lab activity 2: Research project</a></li>
   </ul></li>
-  <li><a href="#sec-4141-w9-answers" id="toc-sec-4141-w9-answers" class="nav-link" data-scroll-target="#sec-4141-w9-answers">Answers</a></li>
+  <li><a href="#sec-4141-w9-answers" id="toc-sec-4141-w9-answers" class="nav-link" data-scroll-target="#sec-4141-w9-answers">Answers</a>
+  <ul class="collapse">
+  <li><a href="#lab-activity-1" id="toc-lab-activity-1" class="nav-link" data-scroll-target="#lab-activity-1">Lab activity 1:</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -329,7 +340,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Overview
+<span class="screen-reader-only">Note</span>Overview
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -341,10 +352,11 @@ Overview
 <p><strong>This week you will learn how to test whether the effect of one predictor is different for different values of another predictor. This is called an interaction.</strong></p>
 <p>Psychologists often expect effects to vary between groups of people, or for people with different scores on a third variable. Interactions let us examine this.</p>
 <p>We will do all this in the context of the <strong>Clearly Understood</strong> project on how easy or difficult people find it to understand written health information.</p>
-<p>B. Research project</p>
-<p>This week, you will collect your data and start work on your analysis script. Please see under Pre-lab activities for further information.</p>
-<p>C. Research report</p>
-<p>Recordings on the research report and on how to use the template will be added here as soon as possible.</p>
+<ol start="2" type="A">
+<li>Research project</li>
+</ol>
+<!-- PLACEHOLDER: Part B overview for Week 9 (to be decided). -->
+<p>Information about this week’s work on the group project will be added as soon as possible.</p>
 <p>The materials we have prepared to support your learning are arranged in four parts:</p>
 <ul>
 <li>Lectures</li>
@@ -524,7 +536,7 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Easy access to readings
+<span class="screen-reader-only">Tip</span>Easy access to readings
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -615,14 +627,22 @@ Important
 </ol>
 <p>Keep your answers in mind for Steps 2 and 8 of the lab. When we look for an interaction, we compare slopes estimated in <em>parts</em> of a sample, so this variation matters.</p>
 </section>
-<section id="pre-lab-activity-3-research-project-sec-week9-project-launch" class="level3">
-<h3 class="anchored" data-anchor-id="pre-lab-activity-3-research-project-sec-week9-project-launch">Pre-lab activity 3: Research project {sec-week9-project-launch}</h3>
-<p>If you haven’t completed building your study, complete that first. Further information is in last week’s lab activity <a href="../PSYC4141/week8.html#sec-week8-project-building"><strong>here</strong></a>.</p>
-<p>Once you’ve built your questionnaire measures and your experiment, you are <em>almost</em> ready to launch your study. Before you can start data collection, a few tasks need to be completed. These are explained on <a href="../PSYC4141/project.html#sec-4141-project-launch"><strong>The Report page, in the section on Launching your study and recruiting participants</strong></a>.</p>
-<!-- ::: callout-tip -->
-<!-- Information about the pre-lab activities for the research project will -->
-<!-- be added as soon as possible. -->
-<!-- ::: -->
+<section id="pre-lab-activity-3-research-project" class="level3">
+<h3 class="anchored" data-anchor-id="pre-lab-activity-3-research-project">Pre-lab activity 3: Research project</h3>
+<!-- PLACEHOLDER: Part B pre-lab activities for Week 9 (to be decided). -->
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Information about the pre-lab activities for the research project will be added as soon as possible.</p>
+</div>
+</div>
 </section>
 <section id="pre-lab-activity-4-getting-ready" class="level3">
 <h3 class="anchored" data-anchor-id="pre-lab-activity-4-getting-ready">Pre-lab activity 4: Getting ready</h3>
@@ -671,7 +691,7 @@ Important
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Where are the download links?
+<span class="screen-reader-only">Tip</span>Where are the download links?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -710,7 +730,7 @@ Tip
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-How to use the Quarto document?
+<span class="screen-reader-only">Important</span>How to use the Quarto document?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -736,23 +756,23 @@ How to use the Quarto document?
 <p>Action: In a new code chunk, add the code to empty the R environment. Then add the code to load the relevant libraries. We need the following ones: <code>here</code>, <code>tidyverse</code>, <code>easystats</code> and <code>ggeffects</code>.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-16-contents" aria-controls="callout-16" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Tip</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-16" class="callout-16-contents callout-collapse collapse">
+<div id="callout-17" class="callout-17-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list=</span><span class="fu">ls</span>())</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(easystats)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggeffects)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggeffects)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -777,20 +797,20 @@ Code
 <p><strong>Action 1.</strong> In a new code chunk use <code>read_csv()</code> and <code>here()</code> to read in the data file. Give the data object a distinct name, e.g. <code>all.data</code>. Then use <code>summary()</code> to get an overview of the data.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-17-contents" aria-controls="callout-17" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Tip</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-17" class="callout-17-contents callout-collapse collapse">
+<div id="callout-18" class="callout-18-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>all.data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"4141_wk9_lab"</span>, <span class="st">"all.data.csv"</span>))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>all.data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"4141_wk9_lab"</span>, <span class="st">"all.data.csv"</span>))</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(all.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(all.data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -799,20 +819,20 @@ Code
 <p><strong>Action 2.</strong> Change <code>EDUCATION</code> into a factor using <code>as.factor()</code>. Then use <code>summary()</code> again.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-18-contents" aria-controls="callout-18" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Tip</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-18" class="callout-18-contents callout-collapse collapse">
+<div id="callout-19" class="callout-19-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>EDUCATION <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(all.data<span class="sc">$</span>EDUCATION)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>EDUCATION <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(all.data<span class="sc">$</span>EDUCATION)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(all.data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(all.data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><code>all.data$EDUCATION</code> picks out the <code>EDUCATION</code> column of <code>all.data</code>.</li>
 <li><code>as.factor()</code> changes the variable into a factor, and the assignment arrow <code>&lt;-</code> puts the result back in the same column.</li>
@@ -826,16 +846,16 @@ Code
 <li>In Weeks 7 and 8 we used data from 172 participants. Why do you think we need a larger dataset to study interactions?</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-19-contents" aria-controls="callout-19" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Hint
+<span class="screen-reader-only">Note</span>Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-19" class="callout-19-contents callout-collapse collapse">
+<div id="callout-20" class="callout-20-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Think about what you saw in the app in Pre-lab activity 2: how did the slope estimates change when the samples were smaller?</p>
 </div>
@@ -849,24 +869,24 @@ Hint
 <p><strong>Action 1.</strong> Draw a scatterplot of the association between <code>FACTOR3</code> (x-axis) and <code>mean.acc</code> (y-axis), with a separate panel for each level of <code>EDUCATION</code>.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-20-contents" aria-controls="callout-20" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Tip</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-20" class="callout-20-contents callout-collapse collapse">
+<div id="callout-21" class="callout-21-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> all.data, <span class="fu">aes</span>(<span class="at">x =</span> FACTOR3, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> all.data, <span class="fu">aes</span>(<span class="at">x =</span> FACTOR3, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>) <span class="sc">+</span></span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Reading strategy (FACTOR3)"</span>, <span class="at">y =</span> <span class="st">"Mean accuracy"</span>) <span class="sc">+</span></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">80</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> EDUCATION)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> EDUCATION)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><code>geom_smooth(method = "lm")</code> adds a linear model line (the trend) with its 95% confidence interval as a grey band. R will show the message <code>`geom_smooth()` using formula = 'y ~ x'</code>: this is not an error.</li>
 <li><code>facet_wrap(~ EDUCATION)</code> splits the data by <code>EDUCATION</code> and draws a separate panel for each level. See the <a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html"><code>facet_wrap()</code> reference page</a>.</li>
@@ -879,18 +899,18 @@ Code
 <p><strong>Action 2.</strong> Use <code>cut_number()</code> to split the participants into three groups of roughly equal size (low, mid and high <code>HLVA</code> scores). Then draw the scatterplot with a separate panel for each group.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-21-contents" aria-controls="callout-21" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Tip</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-21" class="callout-21-contents callout-collapse collapse">
+<div id="callout-22" class="callout-22-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>HLVA_splits <span class="ot">&lt;-</span> <span class="fu">cut_number</span>(all.data<span class="sc">$</span>HLVA, <span class="dv">3</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>HLVA_splits <span class="ot">&lt;-</span> <span class="fu">cut_number</span>(all.data<span class="sc">$</span>HLVA, <span class="dv">3</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> all.data, <span class="fu">aes</span>(<span class="at">x =</span> FACTOR3, <span class="at">y =</span> mean.acc)) <span class="sc">+</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
@@ -898,7 +918,7 @@ Code
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
 <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Reading strategy (FACTOR3)"</span>, <span class="at">y =</span> <span class="st">"Mean accuracy"</span>) <span class="sc">+</span></span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlim</span>(<span class="dv">0</span>, <span class="dv">80</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> HLVA_splits, <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">labeller =</span> label_both)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> HLVA_splits, <span class="at">nrow =</span> <span class="dv">1</span>, <span class="at">labeller =</span> label_both)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><code>cut_number(all.data$HLVA, 3)</code> orders the participants by their <code>HLVA</code> score and splits them into three groups. The result is stored in a new column, <code>HLVA_splits</code>. See the <a href="https://ggplot2.tidyverse.org/reference/cut_interval.html"><code>cut_number()</code> reference page</a>.</li>
 <li><code>nrow = 1</code> puts the panels side by side, and <code>labeller = label_both</code> shows the variable name as well as the group in each panel label.</li>
@@ -921,19 +941,19 @@ Code
 <p><strong>Action 1.</strong> In a new code chunk, create centred versions of <code>FACTOR3</code> and <code>HLVA</code>.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-22-contents" aria-controls="callout-22" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Tip</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-22" class="callout-22-contents callout-collapse collapse">
+<div id="callout-23" class="callout-23-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>FACTOR3_centered <span class="ot">&lt;-</span> all.data<span class="sc">$</span>FACTOR3 <span class="sc">-</span> <span class="fu">mean</span>(all.data<span class="sc">$</span>FACTOR3, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>HLVA_centered <span class="ot">&lt;-</span> all.data<span class="sc">$</span>HLVA <span class="sc">-</span> <span class="fu">mean</span>(all.data<span class="sc">$</span>HLVA, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>FACTOR3_centered <span class="ot">&lt;-</span> all.data<span class="sc">$</span>FACTOR3 <span class="sc">-</span> <span class="fu">mean</span>(all.data<span class="sc">$</span>FACTOR3, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>all.data<span class="sc">$</span>HLVA_centered <span class="ot">&lt;-</span> all.data<span class="sc">$</span>HLVA <span class="sc">-</span> <span class="fu">mean</span>(all.data<span class="sc">$</span>HLVA, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><code>mean(all.data$FACTOR3, na.rm = TRUE)</code> calculates the mean of <code>FACTOR3</code>. <code>na.rm = TRUE</code> tells R to ignore missing values, if there are any.</li>
 <li>Subtracting the mean from the column gives the centred score for every participant, which we store in a new column.</li>
@@ -945,19 +965,19 @@ Code
 <p><strong>Action 2.</strong> Fit a model with <code>mean.acc</code> as the outcome and the centred <code>FACTOR3</code> and <code>HLVA</code> as predictors, <em>without</em> an interaction. Then get the model summary.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-23-contents" aria-controls="callout-23" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Tip</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-23" class="callout-23-contents callout-collapse collapse">
+<div id="callout-24" class="callout-24-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered <span class="sc">+</span> HLVA_centered, <span class="at">data =</span> all.data)</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered <span class="sc">+</span> HLVA_centered, <span class="at">data =</span> all.data)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -967,16 +987,16 @@ Code
 <li>What does the intercept estimate mean in this model?</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-24-contents" aria-controls="callout-24" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Hint
+<span class="screen-reader-only">Note</span>Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-24" class="callout-24-contents callout-collapse collapse">
+<div id="callout-25" class="callout-25-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>The intercept is the predicted outcome when all the predictors are 0.</li>
@@ -989,25 +1009,25 @@ Hint
 <section id="step-5-fit-and-plot-an-interaction-between-two-numeric-predictors" class="level4">
 <h4 class="anchored" data-anchor-id="step-5-fit-and-plot-an-interaction-between-two-numeric-predictors">Step 5: Fit and plot an interaction between two numeric predictors</h4>
 <p>To include an interaction in a model, we separate the predictors with <code>*</code> instead of <code>+</code>:</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(outcome <span class="sc">~</span> predictor.X<span class="sc">*</span>predictor.Z, <span class="at">data =</span> data.set)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">lm</span>(outcome <span class="sc">~</span> predictor.X<span class="sc">*</span>predictor.Z, <span class="at">data =</span> data.set)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>This gives a model with the effect of each predictor <em>and</em> the interaction between them. In the model summary, the interaction is shown as <code>predictor.X:predictor.Z</code>.</p>
 <blockquote class="blockquote">
 <p><strong>Action 1.</strong> In a new code chunk, fit a model with <code>mean.acc</code> as the outcome and the interaction between the centred <code>FACTOR3</code> and <code>HLVA</code>. Then get the model summary.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-25-contents" aria-controls="callout-25" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-26-contents" aria-controls="callout-26" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Tip</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-25" class="callout-25-contents callout-collapse collapse">
+<div id="callout-26" class="callout-26-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered <span class="sc">*</span> HLVA_centered, <span class="at">data =</span> all.data)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered <span class="sc">*</span> HLVA_centered, <span class="at">data =</span> all.data)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.2</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -1017,7 +1037,7 @@ Code
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-What do the estimates mean?
+<span class="screen-reader-only">Note</span>What do the estimates mean?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1033,21 +1053,21 @@ What do the estimates mean?
 <p><strong>Action 2.</strong> Use <code>ggpredict()</code> and <code>plot()</code> to plot the predictions of the model for <code>FACTOR3_centered</code>, at different values of <code>HLVA_centered</code>.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-27-contents" aria-controls="callout-27" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Tip</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-27" class="callout-27-contents callout-collapse collapse">
+<div id="callout-28" class="callout-28-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dat.int<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model<span class="fl">.2</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"FACTOR3_centered"</span>, <span class="st">"HLVA_centered"</span>))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>dat.int<span class="fl">.1</span> <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model<span class="fl">.2</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"FACTOR3_centered"</span>, <span class="st">"HLVA_centered"</span>))</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat.int<span class="fl">.1</span>) <span class="sc">+</span></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li>The first predictor named in <code>terms</code> goes on the x-axis. The second is the moderator: <code>ggpredict()</code> draws a separate line for three of its values, the mean (0) and one standard deviation below and above the mean (-2.19 and 2.19).</li>
 <li>In the lecture slides, these plots are made with <code>plot_model()</code> from the <code>sjPlot</code> library. <code>plot_model()</code> uses <code>ggpredict()</code> to calculate the predictions, so the plots show the same thing.</li>
@@ -1070,19 +1090,19 @@ Code
 <p><strong>Action 1.</strong> Fit a model with <code>mean.acc</code> as the outcome and the interaction between <code>FACTOR3_centered</code> and <code>EDUCATION</code>. Then get the model summary.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-28-contents" aria-controls="callout-28" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-29-contents" aria-controls="callout-29" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Tip</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-28" class="callout-28-contents callout-collapse collapse">
+<div id="callout-29" class="callout-29-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.3</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered<span class="sc">*</span>EDUCATION, <span class="at">data =</span> all.data)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.3</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered<span class="sc">*</span>EDUCATION, <span class="at">data =</span> all.data)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.3</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -1092,7 +1112,7 @@ Code
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-What do the estimates mean?
+<span class="screen-reader-only">Note</span>What do the estimates mean?
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -1108,21 +1128,21 @@ What do the estimates mean?
 <p><strong>Action 2.</strong> Use <code>ggpredict()</code> and <code>plot()</code> to plot the predictions of the model for <code>FACTOR3_centered</code>, for each level of <code>EDUCATION</code>.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-30-contents" aria-controls="callout-30" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Tip</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-30" class="callout-30-contents callout-collapse collapse">
+<div id="callout-31" class="callout-31-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>dat.int<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model<span class="fl">.3</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"FACTOR3_centered"</span>, <span class="st">"EDUCATION"</span>))</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>dat.int<span class="fl">.2</span> <span class="ot">&lt;-</span> <span class="fu">ggpredict</span>(model<span class="fl">.3</span>, <span class="at">terms =</span> <span class="fu">c</span>(<span class="st">"FACTOR3_centered"</span>, <span class="st">"EDUCATION"</span>))</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dat.int<span class="fl">.2</span>) <span class="sc">+</span></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -1131,19 +1151,18 @@ Code
 <li>Is the interaction significant?</li>
 <li>What is the slope of reading strategy for participants with <code>Further</code> education, and for participants with <code>Higher</code> education? Describe the interaction in words.</li>
 <li>What does the <code>EDUCATIONHigher</code> estimate mean, and is it significant?</li>
-<li>Stretch question: the lecture shows the same model fitted with the <em>uncentred</em> reading strategy scores. There, the <code>EDUCATIONHigher</code> estimate is -0.199 and significant (p = .017). Why is it so different from your estimate?</li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-31-contents" aria-controls="callout-31" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Hint
+<span class="screen-reader-only">Note</span>Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-31" class="callout-31-contents callout-collapse collapse">
+<div id="callout-32" class="callout-32-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <ul>
 <li>For question b: the slope for <code>Higher</code> education is the slope for <code>Further</code> education plus the interaction estimate.</li>
@@ -1159,16 +1178,16 @@ Hint
 <p>Action: In your Quarto document, write a short report of the model you fitted in Step 6. Write it as plain text, not in a code chunk. Use the example in the lectures and the template in the Hint.</p>
 </blockquote>
 <div class="callout callout-style-default callout-note callout-titled" title="Hint">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-32-contents" aria-controls="callout-32" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Hint
+<span class="screen-reader-only">Note</span>Hint
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-32" class="callout-32-contents callout-collapse collapse">
+<div id="callout-33" class="callout-33-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>Fill in the gaps <code>...</code> using the model summary from Step 6.</p>
 <blockquote class="blockquote">
@@ -1189,21 +1208,21 @@ Hint
 <p>Action: Fit the model from Step 6 again, without this participant. Then get the model summary.</p>
 </blockquote>
 <div class="callout callout-style-default callout-tip callout-titled" title="Code">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-33-contents" aria-controls="callout-33" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-34-contents" aria-controls="callout-34" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Code
+<span class="screen-reader-only">Tip</span>Code
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-33" class="callout-33-contents callout-collapse collapse">
+<div id="callout-34" class="callout-34-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>all.data.check <span class="ot">&lt;-</span> <span class="fu">filter</span>(all.data, FACTOR3 <span class="sc">&gt;</span> <span class="dv">9</span>)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>all.data.check <span class="ot">&lt;-</span> <span class="fu">filter</span>(all.data, FACTOR3 <span class="sc">&gt;</span> <span class="dv">9</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>model<span class="fl">.4</span> <span class="ot">&lt;-</span> <span class="fu">lm</span>(mean.acc <span class="sc">~</span> FACTOR3_centered <span class="sc">*</span> EDUCATION, <span class="at">data =</span> all.data.check)</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(model<span class="fl">.4</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <ul>
 <li><code>filter(all.data, FACTOR3 &gt; 9)</code> keeps only the rows (participants) for whom <code>FACTOR3</code> is greater than 9, and we store the result as a new dataset, <code>all.data.check</code>. The original <code>all.data</code> is not changed.</li>
 </ul>
@@ -1219,7 +1238,7 @@ Code
 </section>
 <section id="lab-activity-2-research-project" class="level3">
 <h3 class="anchored" data-anchor-id="lab-activity-2-research-project">Lab activity 2: Research project</h3>
-<p>::: {.callout-important “Have you launched your study and started data collection?”} If you haven’t launched your study, complete that step first. Further information is in this week’s pre-lab activity here <strong>?@sec-week9-project-launch</strong>. :::</p>
+<!-- PLACEHOLDER: Part B lab activity for Week 9 (to be decided). -->
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -1230,7 +1249,7 @@ Tip
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>We will spend time in the lab to develop your analysis script. Further information about this lab activity will be added as soon as possible.</p>
+<p>Information about this lab activity will be added as soon as possible.</p>
 </div>
 </div>
 </section>
@@ -1250,298 +1269,426 @@ Tip
 <p>Answers to the questions in lab activities will be shared after the final lab session of the week has concluded (Thursday afternoon)</p>
 </div>
 </div>
-<!-- ### Lab activity 1:  -->
-<!-- **Questions Step 2** -->
-<!-- a. How many participants are in the dataset, and how many are in each level of `EDUCATION`? -->
-<!-- b. In Weeks 7 and 8 we used data from 172 participants. Why do you think we need a larger dataset to study interactions? -->
-<!-- :::{.callout-note icon=false title="Questions Step 2: Answers" collapse="true"} -->
-<!-- a. There are 478 participants: 224 with `Further` education and 254 with `Higher` education. The dataset includes only participants who reported further or higher education, and who identified as female or male. -->
-<!-- b. An interaction compares the slope of an effect between different groups, or for different values of a moderator. Each slope is estimated from only part of the sample, so it is less precise than a slope estimated from the whole sample, and we need more data to tell whether two slopes really differ. The app in Pre-lab activity 2 shows this: the smaller the sample, the more the slope estimates vary from one sample to the next. -->
-<!-- ::: -->
-<!-- **Questions Step 3** -->
-<!-- a. Compare the trend lines for `Further` and `Higher` education. Does the effect of reading strategy look different? -->
-<!-- b. Compare the trend lines for the three `HLVA` groups. What do the labels at the top of the panels (e.g. `[2,8]`) tell you, and how does the slope change from low to high `HLVA`? -->
-<!-- :::{.callout-note icon=false title="Questions Step 3: Answers" collapse="true"} -->
-<!-- a. Yes. The trend line is steeper for participants with `Higher` education than for participants with `Further` education: reading strategy seems to make more difference to accuracy for people with higher education. -->
-<!-- b. The labels show the range of `HLVA` scores in each group: `[2,8]` means scores from 2 up to and including 8, `(8,10]` means scores above 8 up to and including 10, and `(10,14]` means scores above 10 up to and including 14. The trend lines for the low and mid `HLVA` groups have a similar positive slope, but the line for the high `HLVA` group is almost flat: reading strategy seems to make less difference to accuracy for people with high health literacy. -->
-<!-- ::: -->
-<!-- **Questions Step 4** -->
-<!-- a. What does a `FACTOR3_centered` score of 0 mean? What does a score of -10 mean? -->
-<!-- b. What does the intercept estimate mean in this model? -->
-<!-- :::{.callout-note icon=false title="Questions Step 4: Answers" collapse="true"} -->
-<!-- a. A centred score of 0 means the participant's `FACTOR3` score is exactly the sample mean (49.84). A centred score of -10 means the participant scored 10 points below the mean. -->
-<!-- b. The intercept is 0.807. It is the predicted accuracy for a person with an average reading strategy score and an average health literacy score. If you fit the same model with the uncentred predictors, the slopes, t values and p-values are identical, and only the intercept changes: it becomes the predicted accuracy for a person who scored 0 on both measures, which nobody in the sample did. -->
-<!-- ::: -->
-<!-- **Questions Step 5** -->
-<!-- a. Which estimate tells you about the interaction? Is the interaction significant? -->
-<!-- b. What does the sign of the interaction estimate tell you? Check your answer against the plot. -->
-<!-- c. Do the results support Theory 1 or Theory 2 from Pre-lab activity 1? -->
-<!-- :::{.callout-note icon=false title="Questions Step 5: Answers" collapse="true"} -->
-<!-- a. The `FACTOR3_centered:HLVA_centered` row. The estimate is -0.000571 and the interaction is not significant (t = -1.655, p = .099). -->
-<!-- b. The estimate is negative, so the reading strategy slope gets shallower as `HLVA` increases. The plot shows this: the line for participants one standard deviation above the mean `HLVA` score (2.19) is flatter than the line for participants one standard deviation below the mean (-2.19). -->
-<!-- c. The direction of the estimate, and the plots in Step 3, fit Theory 2: reading strategy makes less difference for people with higher health literacy. But the interaction is not significant, so these data do not give clear evidence for Theory 2 over the possibility that the effect of reading strategy is the same at all levels of health literacy. The difference between the slopes we saw in Step 3 could plausibly have arisen by chance in this sample. -->
-<!-- ::: -->
-<!-- **Questions Step 6** -->
-<!-- a. Is the interaction significant? -->
-<!-- b. What is the slope of reading strategy for participants with `Further` education, and for participants with `Higher` education? Describe the interaction in words. -->
-<!-- c. What does the `EDUCATIONHigher` estimate mean, and is it significant? -->
-<!-- d. Stretch question: the lecture shows the same model fitted with the *uncentred* reading strategy scores. There, the `EDUCATIONHigher` estimate is -0.199 and significant (p = .017). Why is it so different from your estimate? -->
-<!-- :::{.callout-note icon=false title="Questions Step 6: Answers" collapse="true"} -->
-<!-- a. Yes. The `FACTOR3_centered:EDUCATIONHigher` estimate is 0.004104 (t = 2.479, p = .014). -->
-<!-- b. For `Further` education, the slope is 0.0022 (the `FACTOR3_centered` estimate). For `Higher` education, it is 0.0022 + 0.0041 = 0.0063. Reading strategy has a larger effect on accuracy for participants with higher education than for participants with further education: for each extra point on `FACTOR3`, predicted accuracy increases about three times as much. -->
-<!-- c. The estimate is 0.005249. At the average reading strategy score, participants with higher education are predicted to be 0.005 (half a percentage point) more accurate than participants with further education. The difference is not significant (t = 0.467, p = .641). In the plot, the two lines cross close to the average reading strategy score (0 on the x-axis). -->
-<!-- d. In a model with an interaction, the `EDUCATIONHigher` estimate is the difference between the education groups *when reading strategy is 0*. In your model, 0 is the average reading strategy score, so the estimate is the difference for a person with average reading strategy. With uncentred scores, 0 is a reading strategy score of 0, which is below anyone in the sample (the lowest score is 9). Because the lines for the two groups are not parallel, the predicted difference far below the data is large (-0.199). This estimate does not show that people with higher education were less accurate overall. The interaction estimate, its significance, and the model fit are the same in both versions of the model. -->
-<!-- ::: -->
-<!-- **Step 7** -->
-<!-- :::{.callout-note icon=false title="Step 7: Example report" collapse="true"} -->
-<!-- We fitted a linear model with mean comprehension accuracy as the outcome and reading strategy (FACTOR3, centred on its mean), education level and their interaction as predictors. The model is significant overall, F(3, 474) = 10.28, p < .001, and explains 6% of variance (adjusted R² = .06). For participants with further education, accuracy increased with higher reading strategy scores (b = .002, t = 2.01, p = .045). At the average reading strategy score, accuracy did not differ significantly between participants with higher and further education (b = .005, t = 0.47, p = .641). A significant interaction (b = .004, t = 2.48, p = .014) indicates that the reading strategy effect was larger for participants with higher education. -->
-<!-- ::: -->
-<!-- **Questions Step 8** -->
-<!-- a. Is the interaction still significant without this participant? How has the interaction estimate changed? -->
-<!-- b. What does this tell you about how much confidence to place in the interaction? Should we remove this participant from the analysis? -->
-<!-- :::{.callout-note icon=false title="Questions Step 8: Answers" collapse="true"} -->
-<!-- a. No. Without this participant, the interaction estimate falls from 0.004104 to 0.003207 and is no longer significant (t = 1.882, p = .060). The reading strategy slope for `Further` education becomes steeper (from 0.0022 to 0.0031), because this participant had a very low reading strategy score but high accuracy, which flattened the `Further` slope. -->
-<!-- b. Whether the interaction is significant depends on one participant out of 478, so we should be cautious about it. The direction of the effect is the same without the participant, but the evidence is weaker. We should not remove a participant just because doing so changes the result. We could check whether the score is likely to be valid (for example, whether it might be a data entry error), and we can report the analysis with and without the participant so that readers can judge for themselves. A replication with new data would tell us more. This is an example of *results vary*, the theme of this week's lectures, and of the sampling variation you saw in the app in Pre-lab activity 2. -->
-<!-- ::: -->
+<section id="lab-activity-1" class="level3">
+<h3 class="anchored" data-anchor-id="lab-activity-1">Lab activity 1:</h3>
+<p><strong>Questions Step 2</strong></p>
+<ol type="a">
+<li><p>How many participants are in the dataset, and how many are in each level of <code>EDUCATION</code>?</p></li>
+<li><p>In Weeks 7 and 8 we used data from 172 participants. Why do you think we need a larger dataset to study interactions?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 2: Answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-37-contents" aria-controls="callout-37" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Questions Step 2: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-37" class="callout-37-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>There are 478 participants: 224 with <code>Further</code> education and 254 with <code>Higher</code> education.</p></li>
+<li><p>An interaction compares the slope of an effect between different groups, or for different values of a moderator. Each slope is estimated from only part of the sample, so it is less precise than a slope estimated from the whole sample, and we need more data to tell whether two slopes really differ. The app in Pre-lab activity 2 shows this: the smaller the sample, the more the slope estimates vary from one sample to the next.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 3</strong></p>
+<ol type="a">
+<li><p>Compare the trend lines for <code>Further</code> and <code>Higher</code> education. Does the effect of reading strategy look different?</p></li>
+<li><p>Compare the trend lines for the three <code>HLVA</code> groups. What do the labels at the top of the panels (e.g.&nbsp;<code>[2,8]</code>) tell you, and how does the slope change from low to high <code>HLVA</code>?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 3: Answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-38-contents" aria-controls="callout-38" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Questions Step 3: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-38" class="callout-38-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Yes. The trend line is steeper for participants with <code>Higher</code> education than for participants with <code>Further</code> education: reading strategy seems to make more difference to accuracy for people with higher education.</p></li>
+<li><p>The labels show the range of <code>HLVA</code> scores in each group: <code>[2,8]</code> means scores from 2 up to and including 8, <code>(8,10]</code> means scores above 8 up to and including 10, and <code>(10,14]</code> means scores above 10 up to and including 14. The trend lines for the low and mid <code>HLVA</code> groups have a similar positive slope, but the line for the high <code>HLVA</code> group is almost flat: reading strategy seems to make less difference to accuracy for people with high health literacy.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 4</strong></p>
+<ol type="a">
+<li><p>What does a <code>FACTOR3_centered</code> score of 0 mean? What does a score of -10 mean?</p></li>
+<li><p>What does the intercept estimate mean in this model?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 4: Answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-39-contents" aria-controls="callout-39" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Questions Step 4: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-39" class="callout-39-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>A centred score of 0 means the participant’s <code>FACTOR3</code> score is exactly the sample mean (49.84). A centred score of -10 means the participant scored 10 points below the mean.</p></li>
+<li><p>The intercept is 0.807. It is the predicted accuracy for a person with an average reading strategy score and an average health literacy score. If you fit the same model with the uncentred predictors, the slopes, t values and p-values are identical, and only the intercept changes: it becomes the predicted accuracy for a person who scored 0 on both measures, which nobody in the sample did.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 5</strong></p>
+<ol type="a">
+<li><p>Which estimate tells you about the interaction? Is the interaction significant?</p></li>
+<li><p>What does the sign of the interaction estimate tell you? Check your answer against the plot.</p></li>
+<li><p>Do the results support Theory 1 or Theory 2 from Pre-lab activity 1?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 5: Answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-40-contents" aria-controls="callout-40" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Questions Step 5: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-40" class="callout-40-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>The <code>FACTOR3_centered:HLVA_centered</code> row. The estimate is -0.000571 and the interaction is not significant (t = -1.655, p = .099).</p></li>
+<li><ol start="2" type="a">
+<li>The estimate is negative. In this sample, the estimated effect of reading strategy on accuracy gets smaller as health literacy increases: for each one-point increase in HLVA, the slope of FACTOR3 on mean.acc decreases by 0.00057.</li>
+</ol></li>
+<li><p>The direction of the estimate, and the plots in Step 3, fit Theory 2: reading strategy makes less difference for people with higher health literacy. But the interaction is not significant, so these data do not give clear evidence for Theory 2 over the possibility that the effect of reading strategy is the same at all levels of health literacy. The difference between the slopes we saw in Step 3 could plausibly have arisen by chance in this sample.</p></li>
+</ol>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 6</strong></p>
+<ol type="a">
+<li><p>Is the interaction significant?</p></li>
+<li><p>What is the slope of reading strategy for participants with <code>Further</code> education, and for participants with <code>Higher</code> education? Describe the interaction in words.</p></li>
+<li><p>What does the <code>EDUCATIONHigher</code> estimate mean, and is it significant?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 6: Answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-41-contents" aria-controls="callout-41" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Questions Step 6: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-41" class="callout-41-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>Yes. The <code>FACTOR3_centered:EDUCATIONHigher</code> estimate is 0.004104 (t = 2.479, p = .014).</p></li>
+<li><p>The model summary shows the slope for <code>Further</code> education directly, but not the slope for <code>Higher</code> education. This is because <code>Further</code> is the reference level: the <code>FACTOR3_centered</code> estimate is the slope for <code>Further</code> education, and the interaction estimate is the <em>difference</em> between the two slopes, not the slope for <code>Higher</code> education. To get the slope for <code>Higher</code> education, we add the two estimates together:</p></li>
+</ol>
+<ul>
+<li><code>Further</code>: slope = 0.0022 (the <code>FACTOR3_centered</code> estimate)</li>
+<li><code>Higher</code>: slope = 0.0022 + 0.0041 = 0.0063 (the <code>FACTOR3_centered</code> estimate plus the interaction estimate)</li>
+</ul>
+<p>Reading strategy has a larger effect on accuracy for participants with higher education than for participants with further education: for each extra point on <code>FACTOR3</code>, predicted accuracy increases about three times as much.</p>
+<ol start="3" type="a">
+<li>The estimate is 0.005249. At the average reading strategy score, participants with higher education are predicted to be 0.005 (half a percentage point) more accurate than participants with further education. The difference is not significant (t = 0.467, p = .641). In the plot, the two lines cross close to the average reading strategy score (0 on the x-axis).</li>
+</ol>
+</div>
+</div>
+</div>
+<p><strong>Step 7</strong></p>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Step 7: Example report">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-42-contents" aria-controls="callout-42" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Step 7: Example report
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-42" class="callout-42-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We fitted a linear model with mean comprehension accuracy as the outcome and reading strategy (FACTOR3, centred on its mean), education level and their interaction as predictors. The model is significant overall, F(3, 474) = 10.28, p &lt; .001, and explains 5.5% of variance (adjusted R² = .055). For participants with further education, accuracy increased with higher reading strategy scores (b = .002, t = 2.01, p = .045). At the average reading strategy score, accuracy did not differ significantly between participants with higher and further education (b = .005, t = 0.47, p = .641). A significant interaction (b = .004, t = 2.48, p = .014) indicates that the reading strategy effect was larger for participants with higher education.</p>
+</div>
+</div>
+</div>
+<p><strong>Questions Step 8</strong></p>
+<ol type="a">
+<li><p>Is the interaction still significant without this participant? How has the interaction estimate changed?</p></li>
+<li><p>What does this tell you about how much confidence to place in the interaction? Should we remove this participant from the analysis?</p></li>
+</ol>
+<div class="callout callout-style-default callout-note no-icon callout-titled" title="Questions Step 8: Answers">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-43-contents" aria-controls="callout-43" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Questions Step 8: Answers
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-43" class="callout-43-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<ol type="a">
+<li><p>No.&nbsp;Without this participant, the interaction estimate falls from 0.004104 to 0.003207 and is no longer significant (t = 1.882, p = .06). The reading strategy slope for <code>Further</code> education becomes steeper (from 0.0022 to 0.0031), because this participant had a very low reading strategy score but high accuracy, which flattened the <code>Further</code> slope.</p></li>
+<li><p>Whether the interaction is significant depends on one participant out of 478, so we should be cautious about it. The direction of the effect is the same without the participant, but the evidence is weaker. We should not remove a participant just because doing so changes the result. We could check whether the score is likely to be valid (for example, whether it might be a data entry error), and we can report the analysis with and without the participant so that readers can judge for themselves. A replication with new data would tell us more. This is an example of <em>results vary</em>, the theme of this week’s lectures, and of the sampling variation you saw in the app in Pre-lab activity 2.</p></li>
+</ol>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    // For code content inside modals, clipBoardJS needs to be initialized with a container option
-    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -1549,185 +1696,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../PSYC4141/week8.html" class="pagination-link" aria-label="8. Week 8 - Developing the linear model">

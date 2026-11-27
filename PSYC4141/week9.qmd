@@ -44,13 +44,12 @@ We will do all this in the context of the **Clearly Understood** project
 on how easy or difficult people find it to understand written health
 information.
 
-B. Research project
+B.  Research project
 
-This week, you will collect your data and start work on your analysis script. Please see under Pre-lab activities for further information.
+<!-- PLACEHOLDER: Part B overview for Week 9 (to be decided). -->
 
-C. Research report
-
-Recordings on the research report and on how to use the template will be added here as soon as possible.
+Information about this week's work on the group project will be added
+as soon as possible.
 
 The materials we have prepared to support your learning are arranged in
 four parts:
@@ -352,16 +351,14 @@ Keep your answers in mind for Steps 2 and 8 of the lab. When we look for
 an interaction, we compare slopes estimated in *parts* of a sample, so
 this variation matters.
 
-### Pre-lab activity 3: Research project {sec-week9-project-launch}
+### Pre-lab activity 3: Research project
 
-If you haven't completed building your study, complete that first. Further information is in last week's lab activity [**here**](week8.qmd#sec-week8-project-building).
+<!-- PLACEHOLDER: Part B pre-lab activities for Week 9 (to be decided). -->
 
-Once you've built your questionnaire measures and your experiment, you are *almost* ready to launch your study. Before you can start data collection, a few tasks need to be completed. These are explained on [**The Report page, in the section on Launching your study and recruiting participants**](project.qmd#sec-4141-project-launch).
-
-<!-- ::: callout-tip -->
-<!-- Information about the pre-lab activities for the research project will -->
-<!-- be added as soon as possible. -->
-<!-- ::: -->
+::: callout-tip
+Information about the pre-lab activities for the research project will
+be added as soon as possible.
+:::
 
 ### Pre-lab activity 4: Getting ready
 
@@ -796,10 +793,7 @@ b.  What is the slope of reading strategy for participants with
     Describe the interaction in words.
 c.  What does the `EDUCATIONHigher` estimate mean, and is it
     significant?
-d.  Stretch question: the lecture shows the same model fitted with the
-    *uncentred* reading strategy scores. There, the `EDUCATIONHigher`
-    estimate is -0.199 and significant (p = .017). Why is it so
-    different from your estimate?
+
 
 ::: {.callout-note title="Hint" collapse="true"}
 - For question b: the slope for `Higher` education is the slope for
@@ -868,12 +862,10 @@ b.  What does this tell you about how much confidence to place in the
 
 ### Lab activity 2: Research project
 
-::: {.callout-important "Have you launched your study and started data collection?"}
-If you haven't launched your study, complete that step first. Further information is in this week's pre-lab activity here @sec-week9-project-launch.
-:::
+<!-- PLACEHOLDER: Part B lab activity for Week 9 (to be decided). -->
 
 ::: callout-tip
-We will spend time in the lab to develop your analysis script. Further information about this lab activity will be added as soon as possible.
+Information about this lab activity will be added as soon as possible.
 :::
 
 ## Answers {#sec-4141-w9-answers}
@@ -883,108 +875,114 @@ Answers to the questions in lab activities will be shared after the
 final lab session of the week has concluded (Thursday afternoon)
 :::
 
-<!-- ### Lab activity 1:  -->
+:::: {.content-hidden}
+### Lab activity 1:
 
-<!-- **Questions Step 2** -->
+**Questions Step 2**
 
-<!-- a. How many participants are in the dataset, and how many are in each level of `EDUCATION`? -->
+a. How many participants are in the dataset, and how many are in each level of `EDUCATION`?
 
-<!-- b. In Weeks 7 and 8 we used data from 172 participants. Why do you think we need a larger dataset to study interactions? -->
+b. In Weeks 7 and 8 we used data from 172 participants. Why do you think we need a larger dataset to study interactions? 
 
-<!-- :::{.callout-note icon=false title="Questions Step 2: Answers" collapse="true"} -->
+:::{.callout-note icon=false title="Questions Step 2: Answers" collapse="true"} 
 
-<!-- a. There are 478 participants: 224 with `Further` education and 254 with `Higher` education. The dataset includes only participants who reported further or higher education, and who identified as female or male. -->
+a. There are 478 participants: 224 with `Further` education and 254 with `Higher` education. 
 
-<!-- b. An interaction compares the slope of an effect between different groups, or for different values of a moderator. Each slope is estimated from only part of the sample, so it is less precise than a slope estimated from the whole sample, and we need more data to tell whether two slopes really differ. The app in Pre-lab activity 2 shows this: the smaller the sample, the more the slope estimates vary from one sample to the next. -->
+b. An interaction compares the slope of an effect between different groups, or for different values of a moderator. Each slope is estimated from only part of the sample, so it is less precise than a slope estimated from the whole sample, and we need more data to tell whether two slopes really differ. The app in Pre-lab activity 2 shows this: the smaller the sample, the more the slope estimates vary from one sample to the next. 
 
-<!-- ::: -->
+::: 
 
-<!-- **Questions Step 3** -->
+**Questions Step 3** 
 
-<!-- a. Compare the trend lines for `Further` and `Higher` education. Does the effect of reading strategy look different? -->
+a. Compare the trend lines for `Further` and `Higher` education. Does the effect of reading strategy look different? 
 
-<!-- b. Compare the trend lines for the three `HLVA` groups. What do the labels at the top of the panels (e.g. `[2,8]`) tell you, and how does the slope change from low to high `HLVA`? -->
+b. Compare the trend lines for the three `HLVA` groups. What do the labels at the top of the panels (e.g. `[2,8]`) tell you, and how does the slope change from low to high `HLVA`? 
 
-<!-- :::{.callout-note icon=false title="Questions Step 3: Answers" collapse="true"} -->
+:::{.callout-note icon=false title="Questions Step 3: Answers" collapse="true"} 
 
-<!-- a. Yes. The trend line is steeper for participants with `Higher` education than for participants with `Further` education: reading strategy seems to make more difference to accuracy for people with higher education. -->
+a. Yes. The trend line is steeper for participants with `Higher` education than for participants with `Further` education: reading strategy seems to make more difference to accuracy for people with higher education. 
 
-<!-- b. The labels show the range of `HLVA` scores in each group: `[2,8]` means scores from 2 up to and including 8, `(8,10]` means scores above 8 up to and including 10, and `(10,14]` means scores above 10 up to and including 14. The trend lines for the low and mid `HLVA` groups have a similar positive slope, but the line for the high `HLVA` group is almost flat: reading strategy seems to make less difference to accuracy for people with high health literacy. -->
+b. The labels show the range of `HLVA` scores in each group: `[2,8]` means scores from 2 up to and including 8, `(8,10]` means scores above 8 up to and including 10, and `(10,14]` means scores above 10 up to and including 14. The trend lines for the low and mid `HLVA` groups have a similar positive slope, but the line for the high `HLVA` group is almost flat: reading strategy seems to make less difference to accuracy for people with high health literacy. 
 
-<!-- ::: -->
+::: 
 
-<!-- **Questions Step 4** -->
+**Questions Step 4** 
 
-<!-- a. What does a `FACTOR3_centered` score of 0 mean? What does a score of -10 mean? -->
+a. What does a `FACTOR3_centered` score of 0 mean? What does a score of -10 mean? 
 
-<!-- b. What does the intercept estimate mean in this model? -->
+b. What does the intercept estimate mean in this model? 
 
-<!-- :::{.callout-note icon=false title="Questions Step 4: Answers" collapse="true"} -->
+:::{.callout-note icon=false title="Questions Step 4: Answers" collapse="true"} 
 
-<!-- a. A centred score of 0 means the participant's `FACTOR3` score is exactly the sample mean (49.84). A centred score of -10 means the participant scored 10 points below the mean. -->
+a. A centred score of 0 means the participant's `FACTOR3` score is exactly the sample mean (49.84). A centred score of -10 means the participant scored 10 points below the mean. 
 
-<!-- b. The intercept is 0.807. It is the predicted accuracy for a person with an average reading strategy score and an average health literacy score. If you fit the same model with the uncentred predictors, the slopes, t values and p-values are identical, and only the intercept changes: it becomes the predicted accuracy for a person who scored 0 on both measures, which nobody in the sample did. -->
+b. The intercept is 0.807. It is the predicted accuracy for a person with an average reading strategy score and an average health literacy score. If you fit the same model with the uncentred predictors, the slopes, t values and p-values are identical, and only the intercept changes: it becomes the predicted accuracy for a person who scored 0 on both measures, which nobody in the sample did. 
 
-<!-- ::: -->
+::: 
 
-<!-- **Questions Step 5** -->
+**Questions Step 5** 
 
-<!-- a. Which estimate tells you about the interaction? Is the interaction significant? -->
+a. Which estimate tells you about the interaction? Is the interaction significant? 
 
-<!-- b. What does the sign of the interaction estimate tell you? Check your answer against the plot. -->
+b. What does the sign of the interaction estimate tell you? Check your answer against the plot. 
 
-<!-- c. Do the results support Theory 1 or Theory 2 from Pre-lab activity 1? -->
+c. Do the results support Theory 1 or Theory 2 from Pre-lab activity 1? 
 
-<!-- :::{.callout-note icon=false title="Questions Step 5: Answers" collapse="true"} -->
+:::{.callout-note icon=false title="Questions Step 5: Answers" collapse="true"} 
 
-<!-- a. The `FACTOR3_centered:HLVA_centered` row. The estimate is -0.000571 and the interaction is not significant (t = -1.655, p = .099). -->
+a. The `FACTOR3_centered:HLVA_centered` row. The estimate is -0.000571 and the interaction is not significant (t = -1.655, p = .099). 
 
-<!-- b. The estimate is negative, so the reading strategy slope gets shallower as `HLVA` increases. The plot shows this: the line for participants one standard deviation above the mean `HLVA` score (2.19) is flatter than the line for participants one standard deviation below the mean (-2.19). -->
+b. b. The estimate is negative. In this sample, the estimated effect of reading strategy on accuracy gets smaller as health literacy increases: for each one-point increase in HLVA, the slope of FACTOR3 on mean.acc decreases by 0.00057.
 
-<!-- c. The direction of the estimate, and the plots in Step 3, fit Theory 2: reading strategy makes less difference for people with higher health literacy. But the interaction is not significant, so these data do not give clear evidence for Theory 2 over the possibility that the effect of reading strategy is the same at all levels of health literacy. The difference between the slopes we saw in Step 3 could plausibly have arisen by chance in this sample. -->
+c. The direction of the estimate, and the plots in Step 3, fit Theory 2: reading strategy makes less difference for people with higher health literacy. But the interaction is not significant, so these data do not give clear evidence for Theory 2 over the possibility that the effect of reading strategy is the same at all levels of health literacy. The difference between the slopes we saw in Step 3 could plausibly have arisen by chance in this sample. 
 
-<!-- ::: -->
+::: 
 
-<!-- **Questions Step 6** -->
+**Questions Step 6** 
 
-<!-- a. Is the interaction significant? -->
+a. Is the interaction significant? 
 
-<!-- b. What is the slope of reading strategy for participants with `Further` education, and for participants with `Higher` education? Describe the interaction in words. -->
+b. What is the slope of reading strategy for participants with `Further` education, and for participants with `Higher` education? Describe the interaction in words. 
 
-<!-- c. What does the `EDUCATIONHigher` estimate mean, and is it significant? -->
+c. What does the `EDUCATIONHigher` estimate mean, and is it significant? 
 
-<!-- d. Stretch question: the lecture shows the same model fitted with the *uncentred* reading strategy scores. There, the `EDUCATIONHigher` estimate is -0.199 and significant (p = .017). Why is it so different from your estimate? -->
 
-<!-- :::{.callout-note icon=false title="Questions Step 6: Answers" collapse="true"} -->
+:::{.callout-note icon=false title="Questions Step 6: Answers" collapse="true"} 
 
-<!-- a. Yes. The `FACTOR3_centered:EDUCATIONHigher` estimate is 0.004104 (t = 2.479, p = .014). -->
+a. Yes. The `FACTOR3_centered:EDUCATIONHigher` estimate is 0.004104 (t = 2.479, p = .014). 
 
-<!-- b. For `Further` education, the slope is 0.0022 (the `FACTOR3_centered` estimate). For `Higher` education, it is 0.0022 + 0.0041 = 0.0063. Reading strategy has a larger effect on accuracy for participants with higher education than for participants with further education: for each extra point on `FACTOR3`, predicted accuracy increases about three times as much. -->
+b. The model summary shows the slope for `Further` education directly, but not the slope for `Higher` education. This is because `Further` is the reference level: the `FACTOR3_centered` estimate is the slope for `Further` education, and the interaction estimate is the *difference* between the two slopes, not the slope for `Higher` education. To get the slope for `Higher` education, we add the two estimates together:
 
-<!-- c. The estimate is 0.005249. At the average reading strategy score, participants with higher education are predicted to be 0.005 (half a percentage point) more accurate than participants with further education. The difference is not significant (t = 0.467, p = .641). In the plot, the two lines cross close to the average reading strategy score (0 on the x-axis). -->
+- `Further`: slope = 0.0022 (the `FACTOR3_centered` estimate)
+- `Higher`: slope = 0.0022 + 0.0041 = 0.0063 (the `FACTOR3_centered` estimate plus the interaction estimate)
 
-<!-- d. In a model with an interaction, the `EDUCATIONHigher` estimate is the difference between the education groups *when reading strategy is 0*. In your model, 0 is the average reading strategy score, so the estimate is the difference for a person with average reading strategy. With uncentred scores, 0 is a reading strategy score of 0, which is below anyone in the sample (the lowest score is 9). Because the lines for the two groups are not parallel, the predicted difference far below the data is large (-0.199). This estimate does not show that people with higher education were less accurate overall. The interaction estimate, its significance, and the model fit are the same in both versions of the model. -->
+Reading strategy has a larger effect on accuracy for participants with higher education than for participants with further education: for each extra point on `FACTOR3`, predicted accuracy increases about three times as much.
+ 
 
-<!-- ::: -->
+c. The estimate is 0.005249. At the average reading strategy score, participants with higher education are predicted to be 0.005 (half a percentage point) more accurate than participants with further education. The difference is not significant (t = 0.467, p = .641). In the plot, the two lines cross close to the average reading strategy score (0 on the x-axis). 
 
-<!-- **Step 7** -->
 
-<!-- :::{.callout-note icon=false title="Step 7: Example report" collapse="true"} -->
+::: 
 
-<!-- We fitted a linear model with mean comprehension accuracy as the outcome and reading strategy (FACTOR3, centred on its mean), education level and their interaction as predictors. The model is significant overall, F(3, 474) = 10.28, p < .001, and explains 6% of variance (adjusted R² = .06). For participants with further education, accuracy increased with higher reading strategy scores (b = .002, t = 2.01, p = .045). At the average reading strategy score, accuracy did not differ significantly between participants with higher and further education (b = .005, t = 0.47, p = .641). A significant interaction (b = .004, t = 2.48, p = .014) indicates that the reading strategy effect was larger for participants with higher education. -->
+**Step 7** 
 
-<!-- ::: -->
+:::{.callout-note icon=false title="Step 7: Example report" collapse="true"} 
 
-<!-- **Questions Step 8** -->
+We fitted a linear model with mean comprehension accuracy as the outcome and reading strategy (FACTOR3, centred on its mean), education level and their interaction as predictors. The model is significant overall, F(3, 474) = 10.28, p < .001, and explains 5.5% of variance (adjusted R² = .055). For participants with further education, accuracy increased with higher reading strategy scores (b = .002, t = 2.01, p = .045). At the average reading strategy score, accuracy did not differ significantly between participants with higher and further education (b = .005, t = 0.47, p = .641). A significant interaction (b = .004, t = 2.48, p = .014) indicates that the reading strategy effect was larger for participants with higher education. 
 
-<!-- a. Is the interaction still significant without this participant? How has the interaction estimate changed? -->
+::: 
 
-<!-- b. What does this tell you about how much confidence to place in the interaction? Should we remove this participant from the analysis? -->
+**Questions Step 8** 
 
-<!-- :::{.callout-note icon=false title="Questions Step 8: Answers" collapse="true"} -->
+a. Is the interaction still significant without this participant? How has the interaction estimate changed? 
 
-<!-- a. No. Without this participant, the interaction estimate falls from 0.004104 to 0.003207 and is no longer significant (t = 1.882, p = .060). The reading strategy slope for `Further` education becomes steeper (from 0.0022 to 0.0031), because this participant had a very low reading strategy score but high accuracy, which flattened the `Further` slope. -->
+b. What does this tell you about how much confidence to place in the interaction? Should we remove this participant from the analysis? 
 
-<!-- b. Whether the interaction is significant depends on one participant out of 478, so we should be cautious about it. The direction of the effect is the same without the participant, but the evidence is weaker. We should not remove a participant just because doing so changes the result. We could check whether the score is likely to be valid (for example, whether it might be a data entry error), and we can report the analysis with and without the participant so that readers can judge for themselves. A replication with new data would tell us more. This is an example of *results vary*, the theme of this week's lectures, and of the sampling variation you saw in the app in Pre-lab activity 2. -->
+:::{.callout-note icon=false title="Questions Step 8: Answers" collapse="true"} 
 
-<!-- ::: -->
+a. No. Without this participant, the interaction estimate falls from 0.004104 to 0.003207 and is no longer significant (t = 1.882, p = .06). The reading strategy slope for `Further` education becomes steeper (from 0.0022 to 0.0031), because this participant had a very low reading strategy score but high accuracy, which flattened the `Further` slope. 
+
+b. Whether the interaction is significant depends on one participant out of 478, so we should be cautious about it. The direction of the effect is the same without the participant, but the evidence is weaker. We should not remove a participant just because doing so changes the result. We could check whether the score is likely to be valid (for example, whether it might be a data entry error), and we can report the analysis with and without the participant so that readers can judge for themselves. A replication with new data would tell us more. This is an example of *results vary*, the theme of this week's lectures, and of the sampling variation you saw in the app in Pre-lab activity 2. 
+
+::: 
+:::
